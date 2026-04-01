@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #4f46e5;       /* indigo-600 */
+  --color-primary-hover: #4338ca; /* indigo-700 */
+  --color-success: #10b981;       /* emerald-500 */
+  --color-error: #f43f5e;         /* rose-500 */
+  --color-warning: #f59e0b;       /* amber-500 */
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans JP", sans-serif;
+}
+
+/* Base font size: 16px minimum */
+html {
+  font-size: 16px;
+}
+
+/* Japanese characters: larger for readability */
+.text-jp {
+  font-size: 1.25rem; /* 20px */
+  font-family: "Noto Sans JP", sans-serif;
+}
