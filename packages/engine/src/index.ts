@@ -9,3 +9,6 @@ export {
   createMultipleChoice,
   shuffle,
 } from './exercises.js';
+
+export { generatePlacementQuiz, evaluatePlacement } from './placement.js';
+export type { PlacementResult } from './placement.js';

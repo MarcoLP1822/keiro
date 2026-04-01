@@ -9,13 +9,15 @@
   },
   "scripts": {
     "build": "tsc --noEmit",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
   },
   "dependencies": {
-    "@keiro/types": "workspace:*",
-    "@keiro/content": "workspace:*"
+    "@keiro/content": "workspace:*",
+    "@keiro/types": "workspace:*"
   },
   "devDependencies": {
-    "typescript": "^5.5.0"
+    "typescript": "^5.5.0",
+    "vitest": "^4.1.2"
   }
 }
