@@ -50,7 +50,8 @@ export function PlacementQuiz() {
       }
     }
 
-    navigate('/');
+    // Full page reload ensures Dexie live query picks up the new data
+    window.location.href = '/';
   }
 
   function handleExit() {

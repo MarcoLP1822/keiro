@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 interface AnswerOptionsProps {
   options: string[];
   onSelect: (index: number) => void;
@@ -13,6 +15,21 @@ export function AnswerOptions({
   selectedIndex,
   showFeedback,
 }: AnswerOptionsProps) {
+  // Keyboard shortcuts: press 1-4 to select answer options
+  useEffect(() => {
+    if (showFeedback) return;
+
+    function handleKeyDown(e: KeyboardEvent) {
+      const num = parseInt(e.key, 10);
+      if (num >= 1 && num <= options.length) {
+        onSelect(num - 1);
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [showFeedback, options.length, onSelect]);
+
   return (
     <div className="flex flex-col gap-3">
       {options.map((option, index) => {

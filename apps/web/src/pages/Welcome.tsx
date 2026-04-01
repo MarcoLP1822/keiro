@@ -20,7 +20,9 @@ export function Welcome() {
       attempts: 0,
     });
 
-    navigate('/');
+    // Full page reload ensures Dexie picks up the new data on a fresh query.
+    // Client-side navigate('/') can race with the live query subscription.
+    window.location.href = '/';
   }
 
   function handleKnowSome() {
@@ -30,7 +32,7 @@ export function Welcome() {
   return (
     <PageContainer>
       <div className="flex min-h-[80vh] flex-col items-center justify-center text-center">
-        <h1 className="text-4xl font-bold tracking-tight">
+        <h1 className="text-4xl font-bold tracking-tight" data-testid="welcome-title">
           Let's learn Japanese
         </h1>
         <p className="mt-3 text-lg text-gray-500">

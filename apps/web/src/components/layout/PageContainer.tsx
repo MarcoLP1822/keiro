@@ -6,8 +6,8 @@ interface PageContainerProps {
 
 export function PageContainer({ children }: PageContainerProps) {
   return (
-    <div className="max-w-md mx-auto px-4 py-6 overflow-y-auto">
+    <main className="mx-auto px-4 py-6 overflow-y-auto md:max-w-[600px] lg:max-w-[500px]">
       {children}
-    </div>
+    </main>
   );
 }

@@ -183,6 +183,7 @@ function ScoreBar({ value, passed }: { value: number; passed: boolean }) {
       aria-valuenow={clamped}
       aria-valuemin={0}
       aria-valuemax={100}
+      aria-label={`Score: ${clamped}%`}
     >
       <div
         className={`h-full rounded-full transition-all duration-300 ${passed ? 'bg-success' : 'bg-orange-500'}`}

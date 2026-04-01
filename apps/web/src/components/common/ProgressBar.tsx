@@ -7,7 +7,7 @@ export function ProgressBar({ value }: ProgressBarProps) {
   const isComplete = clamped >= 100;
 
   return (
-    <div className="h-3 w-full rounded-full bg-gray-200" role="progressbar" aria-valuenow={clamped} aria-valuemin={0} aria-valuemax={100}>
+    <div className="h-3 w-full rounded-full bg-gray-200" role="progressbar" aria-valuenow={clamped} aria-valuemin={0} aria-valuemax={100} aria-label={`${clamped}% complete`}>
       <div
         className={`h-full rounded-full transition-all duration-300 ${isComplete ? 'bg-success' : 'bg-primary'}`}
         style={{ width: `${clamped}%` }}

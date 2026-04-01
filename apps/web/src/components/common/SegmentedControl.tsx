@@ -11,7 +11,7 @@ interface SegmentedControlProps {
 
 export function SegmentedControl({ options, selected, onChange }: SegmentedControlProps) {
   return (
-    <div className="flex w-full rounded-xl bg-gray-100 p-1" role="radiogroup">
+    <div className="flex w-full rounded-xl bg-gray-100 p-1" role="radiogroup" aria-label="Daily plan size">
       {options.map((option) => {
         const isSelected = option.value === selected;
         return (
