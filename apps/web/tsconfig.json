@@ -1,8 +1,18 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "jsx": "react-jsx",
     "noEmit": true,
-    "jsx": "react-jsx"
+    "declaration": false,
+    "declarationMap": false,
+    "paths": {
+      "@keiro/types": ["../../packages/types/src"],
+      "@keiro/types/*": ["../../packages/types/src/*"],
+      "@keiro/engine": ["../../packages/engine/src"],
+      "@keiro/engine/*": ["../../packages/engine/src/*"],
+      "@keiro/content": ["../../packages/content/src"],
+      "@keiro/content/*": ["../../packages/content/src/*"]
+    }
   },
-  "include": ["src"]
+  "include": ["src/**/*"]
 }
