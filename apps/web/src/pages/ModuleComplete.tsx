@@ -1,24 +1,35 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router';
 import type { ModuleScore } from '@keiro/types';
+import { getCurrentModule } from '@keiro/engine';
 import { getAllModules, getModuleById } from '@keiro/content';
 import { PageContainer } from '../components/layout/PageContainer';
 import { PrimaryButton } from '../components/common/PrimaryButton';
 import { SecondaryButton } from '../components/common/SecondaryButton';
 import { useProgress } from '../hooks/useProgress';
+import { useDailyPlan } from '../hooks/useDailyPlan';
 
 export function ModuleComplete() {
   const { moduleId } = useParams<{ moduleId: string }>();
   const navigate = useNavigate();
   const location = useLocation();
-  const { updateProgress } = useProgress();
+  const { allProgress, updateProgress } = useProgress();
+  const { plan, markComplete } = useDailyPlan();
   const [showMistakes, setShowMistakes] = useState(false);
+  const hasRedirected = useRef(false);
 
   const score = location.state?.score as ModuleScore | undefined;
   const mod = getModuleById(moduleId!);
 
+  // Redirect if no score/module - use useEffect instead of during render
+  useEffect(() => {
+    if ((!score || !mod) && !hasRedirected.current) {
+      hasRedirected.current = true;
+      navigate('/', { replace: true });
+    }
+  }, [score, mod, navigate]);
+
   if (!score || !mod) {
-    navigate('/');
     return null;
   }
 
@@ -26,7 +37,32 @@ export function ModuleComplete() {
   const itemCount = score.totalQuestions;
 
   async function handleMoveOn() {
-    // Mark current module as passed
+    const allModules = getAllModules();
+    const sorted = [...allModules].sort((a, b) => a.order - b.order);
+    const completedIndex = sorted.findIndex((m) => m.id === moduleId);
+
+    // Determine the current position before this completion
+    const progressMap = new Map(allProgress.map((p) => [p.moduleId, p]));
+    const currentModule = getCurrentModule(allModules, progressMap);
+    const currentIndex = currentModule
+      ? sorted.findIndex((m) => m.id === currentModule.id)
+      : sorted.length;
+
+    // Skip-ahead: if the completed module is ahead of current position,
+    // mark all intermediate modules as passed too (UX spec Flow 4, step 4a)
+    if (completedIndex > currentIndex) {
+      for (let i = currentIndex; i < completedIndex; i++) {
+        await updateProgress({
+          moduleId: sorted[i].id,
+          status: 'passed',
+          score: null,
+          completedAt: new Date().toISOString(),
+          attempts: 0,
+        });
+      }
+    }
+
+    // Mark the completed module as passed
     await updateProgress({
       moduleId: moduleId!,
       status: 'passed',
@@ -35,12 +71,8 @@ export function ModuleComplete() {
       attempts: 1,
     });
 
-    // Find and unlock next module by order
-    const allModules = getAllModules();
-    const sorted = [...allModules].sort((a, b) => a.order - b.order);
-    const currentIndex = sorted.findIndex((m) => m.id === moduleId);
-    const nextModule = sorted[currentIndex + 1];
-
+    // Unlock the next module after the completed one
+    const nextModule = sorted[completedIndex + 1];
     if (nextModule) {
       await updateProgress({
         moduleId: nextModule.id,
@@ -49,6 +81,11 @@ export function ModuleComplete() {
         completedAt: null,
         attempts: 0,
       });
+    }
+
+    // Mark daily plan as complete if this module was in it
+    if (plan && plan.modules.includes(moduleId!)) {
+      await markComplete();
     }
 
     navigate('/');
