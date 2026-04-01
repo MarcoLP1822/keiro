@@ -8,9 +8,10 @@ interface ModalProps {
   secondaryLabel: string;
   onPrimary: () => void;
   onSecondary: () => void;
+  variant?: 'default' | 'danger';
 }
 
-export function Modal({ isOpen, title, body, primaryLabel, secondaryLabel, onPrimary, onSecondary }: ModalProps) {
+export function Modal({ isOpen, title, body, primaryLabel, secondaryLabel, onPrimary, onSecondary, variant = 'default' }: ModalProps) {
   const dialogRef = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
@@ -40,7 +41,7 @@ export function Modal({ isOpen, title, body, primaryLabel, secondaryLabel, onPri
       <div className="mt-6 flex flex-col gap-3">
         <button
           onClick={onPrimary}
-          className="min-h-[44px] w-full rounded-xl bg-primary px-4 py-3 font-semibold text-white active:scale-[0.98]"
+          className={`min-h-[44px] w-full rounded-xl px-4 py-3 font-semibold text-white active:scale-[0.98] ${variant === 'danger' ? 'bg-error' : 'bg-primary'}`}
         >
           {primaryLabel}
         </button>
