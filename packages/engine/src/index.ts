@@ -1,2 +1,11 @@
-// @keiro/engine — placeholder, will be populated in Phase 2
-export {};
+export { calculateDailyPlan, getCurrentModule } from './daily-plan.js';
+export type { PlanSize, DailyPlanConfig } from './daily-plan.js';
+
+export { scoreModule, getModuleStatus } from './scoring.js';
+
+export {
+  generateKanaExercises,
+  generateAudioExercises,
+  createMultipleChoice,
+  shuffle,
+} from './exercises.js';
