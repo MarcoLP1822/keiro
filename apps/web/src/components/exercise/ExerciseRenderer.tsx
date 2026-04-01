@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import type { Exercise, Answer } from '@keiro/types';
 import { TopBar } from '../layout/TopBar';
 import { PageContainer } from '../layout/PageContainer';
@@ -6,6 +6,8 @@ import { QuestionDisplay } from './QuestionDisplay';
 import { AnswerOptions } from './AnswerOptions';
 import { FeedbackBar } from './FeedbackBar';
 import { ProgressCounter } from './ProgressCounter';
+import { speak } from '../../services/audio';
+import { useSettings } from '../../hooks/useSettings';
 
 interface ExerciseRendererProps {
   exercises: Exercise[];
@@ -18,8 +20,17 @@ export function ExerciseRenderer({ exercises, onComplete, onExit }: ExerciseRend
   const [answers, setAnswers] = useState<Answer[]>([]);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [showFeedback, setShowFeedback] = useState(false);
+  const { audio } = useSettings();
 
   const exercise = exercises[currentIndex];
+
+  // Auto-play audio when an audio-to-char exercise appears
+  useEffect(() => {
+    if (exercise?.type === 'audio-to-char' && audio) {
+      speak(exercise.question, true);
+    }
+  }, [exercise, audio]);
+
   if (!exercise) return null;
 
   const handleSelect = (index: number) => {
@@ -61,7 +72,7 @@ export function ExerciseRenderer({ exercises, onComplete, onExit }: ExerciseRend
         }
       />
       <PageContainer>
-        <QuestionDisplay exercise={exercise} />
+        <QuestionDisplay exercise={exercise} audioEnabled={audio} />
         <AnswerOptions
           options={exercise.options}
           onSelect={handleSelect}
