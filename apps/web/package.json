@@ -1,0 +1,15 @@
+{
+  "name": "@keiro/web",
+  "version": "0.0.1",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "echo 'web build not configured yet'",
+    "typecheck": "echo 'web typecheck not configured yet'"
+  },
+  "dependencies": {
+    "@keiro/types": "workspace:*",
+    "@keiro/engine": "workspace:*",
+    "@keiro/content": "workspace:*"
+  }
+}
