@@ -1,11 +1,7 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "rootDir": "./src",
-    "outDir": "./dist"
+    "noEmit": true
   },
-  "include": ["src", "kana"],
-  "references": [
-    { "path": "../types" }
-  ]
+  "include": ["src", "kana"]
 }

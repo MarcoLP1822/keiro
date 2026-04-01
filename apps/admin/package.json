@@ -4,8 +4,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "echo 'admin build not configured yet'",
-    "typecheck": "echo 'admin typecheck not configured yet'"
+    "build": "tsc --noEmit",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@keiro/types": "workspace:*",

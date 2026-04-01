@@ -4,8 +4,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "echo 'web build not configured yet'",
-    "typecheck": "echo 'web typecheck not configured yet'"
+    "build": "tsc --noEmit",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@keiro/types": "workspace:*",
