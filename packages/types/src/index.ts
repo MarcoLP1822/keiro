@@ -1,6 +1,9 @@
 export type {
   ModuleIntro,
   KanaItem,
+  VocabItem,
+  GrammarItem,
+  KanjiItem,
   ContentItem,
   ModuleType,
   ModuleLevel,
@@ -9,6 +12,10 @@ export type {
 } from './module.js';
 
 export type {
+  KanaExerciseType,
+  VocabExerciseType,
+  GrammarExerciseType,
+  KanjiExerciseType,
   ExerciseType,
   Exercise,
   AnswerOption,

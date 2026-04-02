@@ -1,4 +1,4 @@
-import type { Module, KanaItem, Exercise, ExerciseType } from '@keiro/types';
+import type { Module, KanaItem, Exercise, KanaExerciseType } from '@keiro/types';
 
 /**
  * Fisher-Yates shuffle. Returns a new shuffled array (does not mutate input).
@@ -17,7 +17,7 @@ export function shuffle<T>(array: T[]): T[] {
  * If the pool has fewer than 4 items, uses whatever is available (no duplicates).
  */
 export function createMultipleChoice(
-  type: ExerciseType,
+  type: KanaExerciseType,
   target: KanaItem,
   pool: KanaItem[],
 ): Exercise {
