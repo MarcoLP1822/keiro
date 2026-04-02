@@ -6,7 +6,10 @@ interface PageContainerProps {
 
 export function PageContainer({ children }: PageContainerProps) {
   return (
-    <main className="mx-auto px-4 py-6 overflow-y-auto md:max-w-[600px] lg:max-w-[500px]">
+    <main
+      className="mx-auto max-w-lg px-4 py-6 overflow-y-auto"
+      style={{ background: 'var(--ios-bg-grouped)' }}
+    >
       {children}
     </main>
   );

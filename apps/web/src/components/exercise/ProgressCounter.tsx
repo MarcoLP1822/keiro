@@ -6,7 +6,8 @@ interface ProgressCounterProps {
 export function ProgressCounter({ current, total }: ProgressCounterProps) {
   return (
     <span
-      className="text-sm font-medium text-gray-600"
+      className="text-[13px] font-medium"
+      style={{ color: 'var(--ios-secondary-label)' }}
       role="status"
       aria-live="polite"
       aria-label={`Question ${current} of ${total}`}

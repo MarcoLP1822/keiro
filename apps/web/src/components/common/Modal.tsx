@@ -21,14 +21,11 @@ export function Modal({ isOpen, title, body, primaryLabel, secondaryLabel, onPri
     if (!dialog) return;
 
     if (isOpen && !dialog.open) {
-      // Remember which element triggered the modal so we can return focus
       triggerRef.current = document.activeElement;
       dialog.showModal();
-      // Move focus into the modal's primary action
       primaryRef.current?.focus();
     } else if (!isOpen && dialog.open) {
       dialog.close();
-      // Return focus to the element that triggered the modal
       if (triggerRef.current instanceof HTMLElement) {
         triggerRef.current.focus();
       }
@@ -41,7 +38,8 @@ export function Modal({ isOpen, title, body, primaryLabel, secondaryLabel, onPri
   return (
     <dialog
       ref={dialogRef}
-      className="m-auto w-[calc(100%-2rem)] max-w-sm rounded-2xl bg-white p-6 shadow-xl backdrop:bg-black/50"
+      className="m-auto w-[270px] rounded-[14px] p-0 shadow-xl backdrop:bg-black/40"
+      style={{ background: 'var(--ios-bg-grouped-secondary)' }}
       aria-labelledby="modal-title"
       aria-describedby="modal-body"
       onCancel={(e) => {
@@ -49,19 +47,43 @@ export function Modal({ isOpen, title, body, primaryLabel, secondaryLabel, onPri
         onSecondary();
       }}
     >
-      <h2 id="modal-title" className="text-lg font-bold">{title}</h2>
-      <p id="modal-body" className="mt-2 text-gray-600">{body}</p>
-      <div className="mt-6 flex flex-col gap-3">
+      <div className="px-4 pt-5 pb-4 text-center">
+        <h2
+          id="modal-title"
+          className="text-[17px] font-semibold"
+          style={{ color: 'var(--ios-label)' }}
+        >
+          {title}
+        </h2>
+        <p
+          id="modal-body"
+          className="mt-1 text-[13px]"
+          style={{ color: 'var(--ios-secondary-label)' }}
+        >
+          {body}
+        </p>
+      </div>
+      <div
+        className="flex flex-col"
+        style={{ borderTop: '0.5px solid var(--ios-separator)' }}
+      >
         <button
           ref={primaryRef}
           onClick={onPrimary}
-          className={`min-h-[44px] w-full rounded-xl px-4 py-3 font-semibold text-white active:scale-[0.98] ${variant === 'danger' ? 'bg-error' : 'bg-primary'}`}
+          className="min-h-[44px] w-full text-[17px] font-semibold active:bg-black/5"
+          style={{
+            color: variant === 'danger' ? 'var(--ios-red)' : 'var(--ios-blue)',
+          }}
         >
           {primaryLabel}
         </button>
         <button
           onClick={onSecondary}
-          className="min-h-[44px] w-full rounded-xl border-2 border-gray-300 px-4 py-3 font-semibold text-gray-700 active:scale-[0.98]"
+          className="min-h-[44px] w-full text-[17px] active:bg-black/5"
+          style={{
+            color: 'var(--ios-blue)',
+            borderTop: '0.5px solid var(--ios-separator)',
+          }}
         >
           {secondaryLabel}
         </button>

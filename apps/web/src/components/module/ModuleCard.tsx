@@ -15,42 +15,62 @@ export function ModuleCard({ module, status, score, onClick }: ModuleCardProps) 
   return (
     <button
       onClick={onClick}
-      className={`flex w-full items-center min-h-[48px] rounded-xl px-4 py-3 text-left transition-all active:scale-[0.98] ${
-        isPassed
-          ? 'bg-white border border-gray-200'
-          : isAvailable
-            ? 'bg-primary/5 border-2 border-primary'
-            : 'bg-gray-50 border border-gray-100'
-      }`}
+      className="flex w-full items-center min-h-[44px] px-4 py-3 text-left transition-all duration-[350ms] ease-[cubic-bezier(0.25,0.1,0.25,1)] active:bg-black/5"
+      style={{
+        background: 'var(--ios-bg-grouped-secondary)',
+        borderBottom: '0.5px solid var(--ios-separator)',
+      }}
       aria-label={`${module.name}, ${isPassed ? `completed, ${score ?? 0}%` : isAvailable ? 'available' : 'locked'}`}
     >
       {/* Status icon */}
-      <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm ${
-        isPassed
-          ? 'bg-success/10 text-success'
-          : isAvailable
-            ? 'bg-primary/10 text-primary'
-            : 'bg-gray-200 text-gray-400'
-      }`}>
+      <span
+        className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm"
+        style={
+          isPassed
+            ? { background: 'rgba(52,199,89,0.12)', color: 'var(--ios-green)' }
+            : isAvailable
+              ? { background: 'rgba(0,122,255,0.12)', color: 'var(--ios-blue)' }
+              : { background: 'var(--ios-gray5)', color: 'var(--ios-gray2)' }
+        }
+      >
         {isPassed ? '\u2713' : isAvailable ? '\u25B6' : '\uD83D\uDD12'}
       </span>
 
       {/* Module name */}
-      <span className={`ml-3 flex-1 truncate font-medium ${
-        isLocked ? 'text-gray-400' : 'text-gray-900'
-      }`}>
+      <span
+        className="ml-3 flex-1 truncate font-medium text-[17px]"
+        style={{ color: isLocked ? 'var(--ios-tertiary-label)' : 'var(--ios-label)' }}
+      >
         {module.name}
       </span>
 
-      {/* Right side: score or indicator */}
-      <span className={`ml-2 shrink-0 text-sm ${
-        isPassed
-          ? 'text-gray-500'
-          : isAvailable
-            ? 'font-medium text-primary'
-            : 'text-gray-300'
-      }`}>
-        {isPassed && score != null ? `${score}%` : isAvailable ? 'Continue' : '\u2014'}
+      {/* Right side: score or chevron */}
+      <span className="ml-2 shrink-0 flex items-center gap-1">
+        {isPassed && score != null && (
+          <span className="text-[15px]" style={{ color: 'var(--ios-green)' }}>
+            {score}%
+          </span>
+        )}
+        {isAvailable && (
+          <span className="text-[15px] font-medium" style={{ color: 'var(--ios-blue)' }}>
+            Continue
+          </span>
+        )}
+        {isLocked && (
+          <span className="text-[15px]" style={{ color: 'var(--ios-gray3)' }}>
+            &mdash;
+          </span>
+        )}
+        <svg
+          className="h-4 w-4 ml-1"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={2.5}
+          stroke="currentColor"
+          style={{ color: 'var(--ios-gray3)' }}
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
       </span>
     </button>
   );
