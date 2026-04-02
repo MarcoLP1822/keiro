@@ -21,7 +21,7 @@ export function ModuleComplete() {
   const score = location.state?.score as ModuleScore | undefined;
   const mod = getModuleById(moduleId!);
 
-  // Redirect if no score/module - use useEffect instead of during render
+  // Redirect if no score/module
   useEffect(() => {
     if ((!score || !mod) && !hasRedirected.current) {
       hasRedirected.current = true;
@@ -41,15 +41,13 @@ export function ModuleComplete() {
     const sorted = [...allModules].sort((a, b) => a.order - b.order);
     const completedIndex = sorted.findIndex((m) => m.id === moduleId);
 
-    // Determine the current position before this completion
     const progressMap = new Map(allProgress.map((p) => [p.moduleId, p]));
     const currentModule = getCurrentModule(allModules, progressMap);
     const currentIndex = currentModule
       ? sorted.findIndex((m) => m.id === currentModule.id)
       : sorted.length;
 
-    // Skip-ahead: if the completed module is ahead of current position,
-    // mark all intermediate modules as passed too (UX spec Flow 4, step 4a)
+    // Skip-ahead: mark intermediate modules as passed (UX spec Flow 4, step 4a)
     if (completedIndex > currentIndex) {
       for (let i = currentIndex; i < completedIndex; i++) {
         await updateProgress({
@@ -62,7 +60,6 @@ export function ModuleComplete() {
       }
     }
 
-    // Mark the completed module as passed
     await updateProgress({
       moduleId: moduleId!,
       status: 'passed',
@@ -71,7 +68,6 @@ export function ModuleComplete() {
       attempts: 1,
     });
 
-    // Unlock the next module after the completed one
     const nextModule = sorted[completedIndex + 1];
     if (nextModule) {
       await updateProgress({
@@ -83,7 +79,6 @@ export function ModuleComplete() {
       });
     }
 
-    // Mark daily plan as complete if this module was in it
     if (plan && plan.modules.includes(moduleId!)) {
       await markComplete();
     }
@@ -107,27 +102,43 @@ export function ModuleComplete() {
   if (showMistakes) {
     return (
       <PageContainer>
-        <h1 className="text-xl font-bold">Review Mistakes</h1>
-        <div className="mt-4 space-y-4">
+        <p
+          className="mb-2 px-4 text-[13px] font-normal uppercase tracking-wide"
+          style={{ color: 'var(--ios-secondary-label)' }}
+        >
+          Review Mistakes
+        </p>
+        <div
+          className="rounded-[10px] overflow-hidden"
+          style={{ background: 'var(--ios-bg-grouped-secondary)' }}
+        >
           {score.mistakes.map((mistake, i) => (
             <div
               key={i}
-              className="rounded-xl border border-gray-200 p-4"
+              className="px-4 py-3"
+              style={{
+                borderBottom: i < score.mistakes.length - 1
+                  ? '0.5px solid var(--ios-separator)'
+                  : 'none',
+              }}
             >
-              <p className="text-lg font-semibold">{mistake.exercise.question}</p>
-              <p className="mt-1 text-error">
+              <p
+                className="text-[17px] font-medium"
+                style={{ color: 'var(--ios-label)' }}
+              >
+                {mistake.exercise.question}
+              </p>
+              <p className="mt-1 text-[15px] text-error">
                 Your answer: {mistake.exercise.options[mistake.selectedIndex]}
               </p>
-              <p className="mt-1 text-success">
+              <p className="mt-1 text-[15px] text-success">
                 Correct: {mistake.exercise.options[mistake.exercise.correctIndex]}
               </p>
             </div>
           ))}
         </div>
-        <div className="mt-6">
+        <div className="mt-8 space-y-3">
           <PrimaryButton onClick={handleTryAgain}>Try again</PrimaryButton>
-        </div>
-        <div className="mt-3">
           <SecondaryButton onClick={() => setShowMistakes(false)}>Back</SecondaryButton>
         </div>
       </PageContainer>
@@ -139,23 +150,37 @@ export function ModuleComplete() {
       <div className="flex min-h-[70vh] flex-col items-center justify-center text-center">
         {/* Large score */}
         <span
-          className="text-6xl font-bold"
+          className="text-[56px] font-bold"
+          style={{ color: 'var(--ios-label)' }}
           aria-label={`Score: ${score.score} percent. ${passed ? 'You passed.' : 'You did not pass.'}`}
         >
           {score.score}%
         </span>
 
-        {/* Score bar */}
+        {/* Thin score bar */}
         <div className="mt-6 w-full">
           <ScoreBar value={score.score} passed={passed} />
         </div>
 
         {/* Module name */}
-        <h1 className="mt-6 text-xl font-semibold">{mod.name}</h1>
-        <p className="mt-1 text-gray-500">{itemCount} items covered</p>
+        <h1
+          className="mt-6 text-[17px] font-medium"
+          style={{ color: 'var(--ios-secondary-label)' }}
+        >
+          {mod.name}
+        </h1>
+        <p
+          className="mt-1 text-[15px]"
+          style={{ color: 'var(--ios-tertiary-label)' }}
+        >
+          {itemCount} items covered
+        </p>
 
-        {/* Action buttons */}
-        <div className="mt-10 w-full space-y-3">
+        {/* Action buttons in card */}
+        <div
+          className="mt-10 w-full rounded-[10px] p-4 space-y-3"
+          style={{ background: 'var(--ios-bg-grouped-secondary)' }}
+        >
           {passed ? (
             <>
               <PrimaryButton onClick={handleMoveOn}>Move on</PrimaryButton>
@@ -178,7 +203,8 @@ function ScoreBar({ value, passed }: { value: number; passed: boolean }) {
 
   return (
     <div
-      className="h-3 w-full rounded-full bg-gray-200"
+      className="h-1 w-full rounded-full"
+      style={{ background: 'var(--ios-gray5)' }}
       role="progressbar"
       aria-valuenow={clamped}
       aria-valuemin={0}
@@ -186,8 +212,11 @@ function ScoreBar({ value, passed }: { value: number; passed: boolean }) {
       aria-label={`Score: ${clamped}%`}
     >
       <div
-        className={`h-full rounded-full transition-all duration-300 ${passed ? 'bg-success' : 'bg-orange-500'}`}
-        style={{ width: `${clamped}%` }}
+        className="h-full rounded-full transition-all duration-300"
+        style={{
+          width: `${clamped}%`,
+          background: passed ? 'var(--ios-green)' : 'var(--ios-orange)',
+        }}
       />
     </div>
   );

@@ -31,11 +31,27 @@ export function Welcome() {
 
   return (
     <PageContainer>
-      <div className="flex min-h-[80vh] flex-col items-center justify-center text-center">
-        <h1 className="text-4xl font-bold tracking-tight" data-testid="welcome-title">
+      <div className="flex min-h-[80vh] flex-col items-center justify-center text-center px-4">
+        {/* Decorative Japanese character */}
+        <span
+          className="text-[72px] leading-none mb-6"
+          style={{ color: 'var(--ios-tertiary-label)' }}
+          aria-hidden="true"
+        >
+          道
+        </span>
+
+        <h1
+          className="text-[34px] font-normal tracking-tight"
+          style={{ color: 'var(--ios-label)' }}
+          data-testid="welcome-title"
+        >
           Let's learn Japanese
         </h1>
-        <p className="mt-3 text-lg text-gray-500">
+        <p
+          className="mt-2 text-[17px]"
+          style={{ color: 'var(--ios-secondary-label)' }}
+        >
           From zero to reading manga
         </p>
 

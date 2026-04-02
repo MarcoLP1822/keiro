@@ -27,29 +27,55 @@ export function Settings() {
     <>
       <TopBar title="Settings" onBack={() => navigate('/')} />
       <PageContainer>
-        {/* Audio toggle */}
-        <div className="flex items-center justify-between py-4">
-          <span className="text-base font-medium">Audio</span>
-          <button
-            role="switch"
-            aria-checked={audio}
-            aria-label="Toggle audio"
-            onClick={() => setAudio(!audio)}
-            className={`relative h-8 w-14 rounded-full transition-colors ${
-              audio ? 'bg-primary' : 'bg-gray-300'
-            }`}
-          >
+        {/* Audio section */}
+        <p
+          className="mb-2 px-4 text-[13px] font-normal uppercase tracking-wide"
+          style={{ color: 'var(--ios-secondary-label)' }}
+        >
+          Audio
+        </p>
+        <div
+          className="rounded-[10px] px-4"
+          style={{ background: 'var(--ios-bg-grouped-secondary)' }}
+        >
+          <div className="flex items-center justify-between py-[11px]">
             <span
-              className={`absolute top-1 left-1 h-6 w-6 rounded-full bg-white shadow transition-transform ${
-                audio ? 'translate-x-6' : 'translate-x-0'
-              }`}
-            />
-          </button>
+              className="text-[17px]"
+              style={{ color: 'var(--ios-label)' }}
+            >
+              Sound Effects
+            </span>
+            <button
+              role="switch"
+              aria-checked={audio}
+              aria-label="Toggle audio"
+              onClick={() => setAudio(!audio)}
+              className="relative h-[31px] w-[51px] rounded-full transition-colors"
+              style={{
+                background: audio ? 'var(--ios-green)' : 'var(--ios-fill)',
+              }}
+            >
+              <span
+                className="absolute top-[2px] left-[2px] h-[27px] w-[27px] rounded-full bg-white shadow-sm transition-transform"
+                style={{
+                  transform: audio ? 'translateX(20px)' : 'translateX(0)',
+                }}
+              />
+            </button>
+          </div>
         </div>
 
-        {/* Daily plan size */}
-        <div className="py-4">
-          <p className="mb-3 text-base font-medium">Daily plan size</p>
+        {/* Daily plan size section */}
+        <p
+          className="mt-8 mb-2 px-4 text-[13px] font-normal uppercase tracking-wide"
+          style={{ color: 'var(--ios-secondary-label)' }}
+        >
+          Daily Plan Size
+        </p>
+        <div
+          className="rounded-[10px] p-4"
+          style={{ background: 'var(--ios-bg-grouped-secondary)' }}
+        >
           <SegmentedControl
             options={planSizeOptions}
             selected={planSize}
@@ -57,16 +83,25 @@ export function Settings() {
           />
         </div>
 
-        {/* Divider */}
-        <hr className="my-4 border-gray-200" />
-
-        {/* Reset all progress */}
-        <button
-          onClick={() => setShowResetModal(true)}
-          className="min-h-[44px] w-full rounded-xl border-2 border-error px-4 py-3 font-semibold text-error active:scale-[0.98]"
+        {/* Reset section */}
+        <p
+          className="mt-8 mb-2 px-4 text-[13px] font-normal uppercase tracking-wide"
+          style={{ color: 'var(--ios-secondary-label)' }}
         >
-          Reset all progress
-        </button>
+          Data
+        </p>
+        <div
+          className="rounded-[10px] overflow-hidden"
+          style={{ background: 'var(--ios-bg-grouped-secondary)' }}
+        >
+          <button
+            onClick={() => setShowResetModal(true)}
+            className="w-full min-h-[44px] px-4 py-[11px] text-left text-[17px] active:opacity-60"
+            style={{ color: 'var(--ios-red)' }}
+          >
+            Reset All Progress
+          </button>
+        </div>
       </PageContainer>
 
       <Modal

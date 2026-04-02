@@ -3,14 +3,13 @@ import { getAllModules } from '@keiro/content';
 import { getCurrentModule } from '@keiro/engine';
 import { PageContainer } from '../components/layout/PageContainer';
 import { PrimaryButton } from '../components/common/PrimaryButton';
-import { SecondaryButton } from '../components/common/SecondaryButton';
 import { ProgressBar } from '../components/common/ProgressBar';
 import { useProgress } from '../hooks/useProgress';
 import { useDailyPlan } from '../hooks/useDailyPlan';
 
 function MapIcon() {
   return (
-    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+    <svg className="h-[22px] w-[22px]" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round" d="M9 6.75V15m6-6v8.25m.503-11.307L12 2.25 8.497 5.693A3.75 3.75 0 006.75 8.25v9a3.75 3.75 0 003.75 3.75h3a3.75 3.75 0 003.75-3.75v-9a3.75 3.75 0 00-1.747-3.057z" />
     </svg>
   );
@@ -18,7 +17,7 @@ function MapIcon() {
 
 function SettingsIcon() {
   return (
-    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+    <svg className="h-[22px] w-[22px]" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87a6.714 6.714 0 01.636.357c.31.212.692.294 1.058.196l1.25-.365a1.14 1.14 0 011.316.505l1.296 2.244a1.14 1.14 0 01-.205 1.435l-1.037.916c-.282.249-.429.625-.414 1.011.009.232.009.463 0 .695-.015.386.132.762.414 1.011l1.037.916c.424.374.53.998.205 1.435l-1.296 2.244a1.14 1.14 0 01-1.316.505l-1.25-.365c-.366-.098-.748-.016-1.058.196a6.714 6.714 0 01-.636.357c-.332.184-.582.496-.645.87l-.213 1.281c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.019-.398-1.11-.94l-.212-1.282c-.063-.373-.313-.685-.645-.869a6.72 6.72 0 01-.636-.357c-.31-.212-.692-.294-1.058-.196l-1.25.365a1.14 1.14 0 01-1.316-.505l-1.296-2.244a1.14 1.14 0 01.205-1.435l1.037-.916c.282-.249.429-.625.414-1.011a6.613 6.613 0 010-.695c.015-.386-.132-.762-.414-1.011l-1.037-.916a1.14 1.14 0 01-.205-1.435l1.296-2.244a1.14 1.14 0 011.316-.505l1.25.365c.366.098.748.016 1.058-.196.2-.13.424-.248.636-.357.332-.184.582-.496.645-.87l.213-1.28z" />
       <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
     </svg>
@@ -47,7 +46,6 @@ export function Home() {
   }
 
   function handleKeepGoing() {
-    // After completing daily plan, start the next available module
     if (currentModule) {
       navigate(`/study/${currentModule.id}/intro`);
     }
@@ -57,17 +55,26 @@ export function Home() {
 
   return (
     <>
-      <header className="sticky top-0 z-10 flex h-12 items-center justify-between bg-white px-4 shadow-sm">
+      {/* iOS large-title navigation bar */}
+      <header
+        className="sticky top-0 z-10 flex h-[44px] items-center justify-between px-4"
+        style={{
+          background: 'var(--ios-bg-grouped)',
+          borderBottom: '0.5px solid var(--ios-separator)',
+        }}
+      >
         <button
           onClick={() => navigate('/path')}
-          className="flex h-11 w-11 items-center justify-center rounded-full active:bg-gray-100"
+          className="flex h-[44px] w-[44px] items-center justify-center active:opacity-60"
+          style={{ color: 'var(--ios-blue)' }}
           aria-label="Path Map"
         >
           <MapIcon />
         </button>
         <button
           onClick={() => navigate('/settings')}
-          className="flex h-11 w-11 items-center justify-center rounded-full active:bg-gray-100"
+          className="flex h-[44px] w-[44px] items-center justify-center active:opacity-60"
+          style={{ color: 'var(--ios-blue)' }}
           aria-label="Settings"
         >
           <SettingsIcon />
@@ -75,9 +82,23 @@ export function Home() {
       </header>
 
       <PageContainer>
-        {/* Overall progress */}
-        <div className="mt-4">
-          <p className="mb-2 text-sm font-medium text-gray-700">
+        {/* Large title */}
+        <h1
+          className="text-[34px] font-bold tracking-tight mb-6"
+          style={{ color: 'var(--ios-label)' }}
+        >
+          Keiro
+        </h1>
+
+        {/* Progress section - white card */}
+        <div
+          className="rounded-[10px] p-4"
+          style={{ background: 'var(--ios-bg-grouped-secondary)' }}
+        >
+          <p
+            className="text-[15px] font-medium mb-3"
+            style={{ color: 'var(--ios-secondary-label)' }}
+          >
             {levelLabel} — {percentComplete}% complete
           </p>
           <ProgressBar value={percentComplete} />
@@ -85,44 +106,95 @@ export function Home() {
 
         {allModulesComplete ? (
           /* All modules complete state */
-          <div className="mt-8 text-center">
-            <p className="text-lg font-semibold">
-              Congratulations! You've completed the entire path. You're ready to read manga. Keep reviewing to stay sharp.
-            </p>
+          <div className="mt-6">
+            <div
+              className="rounded-[10px] p-5 text-center"
+              style={{ background: 'var(--ios-bg-grouped-secondary)' }}
+            >
+              <p
+                className="text-[17px] leading-relaxed"
+                style={{ color: 'var(--ios-label)' }}
+              >
+                Congratulations! You've completed the entire path. You're ready to read manga. Keep reviewing to stay sharp.
+              </p>
+            </div>
             <div className="mt-6">
-              <SecondaryButton onClick={() => navigate('/review')}>
+              <button
+                onClick={() => navigate('/review')}
+                className="w-full py-3 text-[17px] font-normal active:opacity-60"
+                style={{ color: 'var(--ios-blue)' }}
+              >
                 Review
-              </SecondaryButton>
+              </button>
             </div>
           </div>
         ) : isComplete ? (
           /* Daily plan complete state */
-          <div className="mt-8 text-center">
-            <p className="text-lg font-semibold">Today's plan complete!</p>
+          <div className="mt-6">
+            <div
+              className="rounded-[10px] p-5 text-center"
+              style={{ background: 'var(--ios-bg-grouped-secondary)' }}
+            >
+              <p
+                className="text-[17px] font-semibold"
+                style={{ color: 'var(--ios-label)' }}
+              >
+                Today's plan complete!
+              </p>
+            </div>
             <div className="mt-6 space-y-3">
               <PrimaryButton onClick={handleKeepGoing}>
                 Keep going
               </PrimaryButton>
-              <SecondaryButton onClick={() => navigate('/review')}>
+              <button
+                onClick={() => navigate('/review')}
+                className="w-full py-3 text-[17px] font-normal active:opacity-60"
+                style={{ color: 'var(--ios-blue)' }}
+              >
                 Review
-              </SecondaryButton>
+              </button>
             </div>
           </div>
         ) : (
           /* Active daily plan state */
           <>
+            {/* Section header */}
+            <p
+              className="mt-8 mb-2 px-4 text-[13px] font-normal uppercase tracking-wide"
+              style={{ color: 'var(--ios-secondary-label)' }}
+            >
+              Today's Plan
+            </p>
+
             {/* Today's Plan card */}
-            <div className="mt-6 rounded-xl border border-gray-200 bg-gray-50 p-4">
-              <h2 className="text-base font-semibold">Today's Plan</h2>
+            <div
+              className="rounded-[10px] p-4"
+              style={{ background: 'var(--ios-bg-grouped-secondary)' }}
+            >
               {plan ? (
-                <ul className="mt-2 space-y-1 text-sm text-gray-600">
+                <ul className="space-y-2">
                   {plan.newItemCount > 0 && (
-                    <li>&bull; {plan.newItemCount} new kana</li>
+                    <li
+                      className="text-[17px]"
+                      style={{ color: 'var(--ios-label)' }}
+                    >
+                      {plan.newItemCount} new kana
+                    </li>
                   )}
-                  <li>&bull; ~{plan.estimatedMinutes} min session</li>
+                  <li
+                    className="text-[17px]"
+                    style={{ color: 'var(--ios-label)' }}
+                  >
+                    ~{plan.estimatedMinutes} min session
+                  </li>
                 </ul>
               ) : (
-                <p className="mt-2 text-sm text-gray-500">Loading plan...</p>
+                <p
+                  className="text-[17px]"
+                  style={{ color: 'var(--ios-secondary-label)' }}
+                >
+                  Loading plan...
+                </p>
               )}
             </div>
 
@@ -131,9 +203,13 @@ export function Home() {
               <PrimaryButton onClick={handleStart} disabled={!plan}>
                 Start
               </PrimaryButton>
-              <SecondaryButton onClick={() => navigate('/review')}>
+              <button
+                onClick={() => navigate('/review')}
+                className="w-full py-3 text-[17px] font-normal active:opacity-60"
+                style={{ color: 'var(--ios-blue)' }}
+              >
                 Review
-              </SecondaryButton>
+              </button>
             </div>
           </>
         )}

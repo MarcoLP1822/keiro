@@ -22,24 +22,41 @@ export function Review() {
       <TopBar title="Review" onBack={() => navigate('/')} />
       <PageContainer>
         {passedModules.length === 0 ? (
-          <p className="mt-12 text-center text-gray-500">
+          <p
+            className="mt-12 text-center text-[17px] leading-relaxed"
+            style={{ color: 'var(--ios-secondary-label)' }}
+          >
             Nothing to review yet. Complete your first module to unlock review.
           </p>
         ) : (
-          <div className="space-y-2">
-            {passedModules.map((module) => {
-              const progress = getProgress(module.id);
-              return (
-                <ModuleCard
-                  key={module.id}
-                  module={module}
-                  status="passed"
-                  score={progress?.score}
-                  onClick={() => navigate(`/study/${module.id}/exercises?mode=review`)}
-                />
-              );
-            })}
-          </div>
+          <>
+            {/* Section header */}
+            <p
+              className="mb-2 px-4 text-[13px] font-normal uppercase tracking-wide"
+              style={{ color: 'var(--ios-secondary-label)' }}
+            >
+              Completed Modules
+            </p>
+
+            {/* Grouped list card */}
+            <div
+              className="rounded-[10px] overflow-hidden"
+              style={{ background: 'var(--ios-bg-grouped-secondary)' }}
+            >
+              {passedModules.map((module) => {
+                const progress = getProgress(module.id);
+                return (
+                  <ModuleCard
+                    key={module.id}
+                    module={module}
+                    status="passed"
+                    score={progress?.score}
+                    onClick={() => navigate(`/study/${module.id}/exercises?mode=review`)}
+                  />
+                );
+              })}
+            </div>
+          </>
         )}
       </PageContainer>
     </>

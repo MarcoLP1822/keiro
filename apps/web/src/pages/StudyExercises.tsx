@@ -3,7 +3,6 @@ import { useParams, useNavigate, useSearchParams } from 'react-router';
 import { ExerciseRenderer } from '../components/exercise/ExerciseRenderer';
 import { Modal } from '../components/common/Modal';
 import { PrimaryButton } from '../components/common/PrimaryButton';
-import { SecondaryButton } from '../components/common/SecondaryButton';
 import { PageContainer } from '../components/layout/PageContainer';
 import { useStudySession } from '../hooks/useStudySession';
 
@@ -48,15 +47,29 @@ export function StudyExercises() {
     return (
       <PageContainer>
         <div className="flex min-h-[60vh] flex-col items-center justify-center text-center">
-          <h1 className="text-2xl font-bold">Review complete!</h1>
-          <p className="mt-2 text-gray-500">Great job reviewing this module.</p>
+          <h1
+            className="text-[22px] font-bold"
+            style={{ color: 'var(--ios-label)' }}
+          >
+            Review complete!
+          </h1>
+          <p
+            className="mt-2 text-[17px]"
+            style={{ color: 'var(--ios-secondary-label)' }}
+          >
+            Great job reviewing this module.
+          </p>
           <div className="mt-8 w-full space-y-3">
             <PrimaryButton onClick={() => navigate('/review')}>
               Back to Review
             </PrimaryButton>
-            <SecondaryButton onClick={() => navigate('/')}>
+            <button
+              onClick={() => navigate('/')}
+              className="w-full py-3 text-[17px] font-normal active:opacity-60"
+              style={{ color: 'var(--ios-blue)' }}
+            >
               Back to Home
-            </SecondaryButton>
+            </button>
           </div>
         </div>
       </PageContainer>

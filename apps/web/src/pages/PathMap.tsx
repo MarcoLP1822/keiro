@@ -9,6 +9,23 @@ import { Modal } from '../components/common/Modal';
 import { ModuleCard } from '../components/module/ModuleCard';
 import { useProgress } from '../hooks/useProgress';
 
+// Group modules by their level for iOS grouped list sections
+function groupByLevel(modules: Module[]): { level: string; modules: Module[] }[] {
+  const groups: { level: string; modules: Module[] }[] = [];
+  let currentLevel = '';
+
+  for (const mod of modules) {
+    const level = mod.level?.toUpperCase() ?? 'Other';
+    if (level !== currentLevel) {
+      currentLevel = level;
+      groups.push({ level, modules: [] });
+    }
+    groups[groups.length - 1].modules.push(mod);
+  }
+
+  return groups;
+}
+
 export function PathMap() {
   const navigate = useNavigate();
   const { allProgress, getProgress } = useProgress();
@@ -16,6 +33,7 @@ export function PathMap() {
 
   const allModules = getAllModules().sort((a, b) => a.order - b.order);
   const progressMap = new Map(allProgress.map((p) => [p.moduleId, p]));
+  const groups = groupByLevel(allModules);
 
   function handleModuleClick(module: Module) {
     const status = getModuleStatus(module.id, allModules, progressMap);
@@ -25,7 +43,6 @@ export function PathMap() {
     } else if (status === 'available' || status === 'in_progress') {
       navigate(`/study/${module.id}/intro`);
     } else {
-      // locked — show test-out modal
       setTestOutModule(module);
     }
   }
@@ -41,24 +58,44 @@ export function PathMap() {
     <>
       <TopBar title="Learning Path" onBack={() => navigate('/')} />
       <PageContainer>
-        <div className="space-y-2">
-          {allModules.map((module) => {
-            const status = getModuleStatus(module.id, allModules, progressMap);
-            const progress = getProgress(module.id);
-            return (
-              <ModuleCard
-                key={module.id}
-                module={module}
-                status={status}
-                score={progress?.score}
-                onClick={() => handleModuleClick(module)}
-              />
-            );
-          })}
-        </div>
+        {groups.map((group) => (
+          <div key={group.level} className="mb-8">
+            {/* iOS section header */}
+            <p
+              className="mb-2 px-4 text-[13px] font-normal uppercase tracking-wide"
+              style={{ color: 'var(--ios-secondary-label)' }}
+            >
+              {group.level}
+            </p>
 
-        <p className="mt-8 text-center text-sm text-gray-500">
-          {'\uD83C\uDFAF'} Goal: Read Manga
+            {/* White card with grouped list cells */}
+            <div
+              className="rounded-[10px] overflow-hidden"
+              style={{ background: 'var(--ios-bg-grouped-secondary)' }}
+            >
+              {group.modules.map((module) => {
+                const status = getModuleStatus(module.id, allModules, progressMap);
+                const progress = getProgress(module.id);
+                return (
+                  <ModuleCard
+                    key={module.id}
+                    module={module}
+                    status={status}
+                    score={progress?.score}
+                    onClick={() => handleModuleClick(module)}
+                  />
+                );
+              })}
+            </div>
+          </div>
+        ))}
+
+        {/* Goal indicator */}
+        <p
+          className="mt-4 mb-8 text-center text-[15px]"
+          style={{ color: 'var(--ios-secondary-label)' }}
+        >
+          Goal: Read Manga
         </p>
       </PageContainer>
 
