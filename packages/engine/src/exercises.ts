@@ -179,7 +179,60 @@ function createVocabExercise(
 }
 
 /**
+ * Creates a sentence gap-fill exercise for a vocab item.
+ * Replaces the target word in its example sentence with ___.
+ */
+function createGapFillExercise(
+  target: VocabItem,
+  pool: VocabItem[],
+): Exercise | null {
+  if (!target.example) return null;
+
+  const sentence = target.example.japanese;
+  // Replace the word in the sentence with ___
+  const sentenceWithGap = sentence.replace(target.word, '___');
+  // If replacement didn't change anything (word not found literally), skip
+  if (sentenceWithGap === sentence) return null;
+
+  const distractorPool = pool.filter(
+    (item) => item.word !== target.word,
+  );
+  const samePOS = distractorPool.filter((item) => item.partOfSpeech === target.partOfSpeech);
+  const source = samePOS.length >= 3 ? samePOS : distractorPool;
+  const distractors = shuffle(source).slice(0, 3).map((d) => d.word);
+
+  const allOptions = shuffle([target.word, ...distractors]);
+  const correctIndex = allOptions.indexOf(target.word);
+
+  return {
+    type: 'sentence-gap-fill',
+    question: target.meaning,
+    questionDetail: target.example.english,
+    sentenceWithGap,
+    options: allOptions,
+    correctIndex,
+    targetItem: target,
+  };
+}
+
+/**
+ * Creates a typing-meaning exercise: show Japanese word, type English meaning.
+ */
+function createTypingMeaningExercise(target: VocabItem): Exercise {
+  return {
+    type: 'typing-meaning',
+    question: target.word,
+    questionDetail: target.reading !== target.word ? target.reading : undefined,
+    correctAnswer: target.meaning,
+    options: [],
+    correctIndex: -1,
+    targetItem: target,
+  };
+}
+
+/**
  * Generates word-to-meaning and meaning-to-word exercises for each item in a vocab module.
+ * Also generates gap-fill and typing exercises (~30% new types).
  */
 export function generateVocabExercises(
   module: Module,
@@ -190,10 +243,20 @@ export function generateVocabExercises(
 
   const exercises: Exercise[] = [];
   for (const item of items) {
+    // Always generate MC exercises (the core ~70%)
     exercises.push(
       createVocabExercise('word-to-meaning', item, allVocabItems),
       createVocabExercise('meaning-to-word', item, allVocabItems),
     );
+
+    // Add new types for ~30% of items (every ~3rd item)
+    if (Math.random() < 0.3) {
+      const gapFill = createGapFillExercise(item, allVocabItems);
+      if (gapFill) exercises.push(gapFill);
+    }
+    if (Math.random() < 0.3) {
+      exercises.push(createTypingMeaningExercise(item));
+    }
   }
   return shuffle(exercises);
 }
@@ -248,7 +311,25 @@ function createKanjiExercise(
 }
 
 /**
+ * Creates a typing-reading exercise: show kanji, type the hiragana reading.
+ */
+function createTypingReadingExercise(target: KanjiItem): Exercise {
+  const readings = [...target.kunReading, ...target.onReading];
+  const correctAnswer = readings[0] ?? target.kanji;
+
+  return {
+    type: 'typing-reading',
+    question: target.kanji,
+    correctAnswer,
+    options: [],
+    correctIndex: -1,
+    targetItem: target,
+  };
+}
+
+/**
  * Generates kanji-to-meaning and kanji-to-reading exercises for each item in a kanji module.
+ * Also generates typing-reading exercises (~30% of items).
  */
 export function generateKanjiExercises(
   module: Module,
@@ -259,10 +340,16 @@ export function generateKanjiExercises(
 
   const exercises: Exercise[] = [];
   for (const item of items) {
+    // Always generate MC exercises
     exercises.push(
       createKanjiExercise('kanji-to-meaning', item, allKanjiItems),
       createKanjiExercise('kanji-to-reading', item, allKanjiItems),
     );
+
+    // Add typing-reading for ~30% of items
+    if (Math.random() < 0.3) {
+      exercises.push(createTypingReadingExercise(item));
+    }
   }
   return shuffle(exercises);
 }
@@ -270,8 +357,45 @@ export function generateKanjiExercises(
 // --- Grammar exercise generators ---
 
 /**
+ * Creates a sentence-order exercise: split example sentence into words, shuffle them.
+ */
+function createSentenceOrderExercise(
+  item: GrammarItem,
+  exampleIndex: number,
+): Exercise | null {
+  const example = item.examples[exampleIndex];
+  if (!example) return null;
+
+  // Split Japanese sentence into segments by particles and words.
+  // Use a simple character-aware split: split on natural boundaries.
+  // For Japanese, we split on particles and punctuation as separate tokens.
+  const sentence = example.japanese;
+  // Split by common particle boundaries. Use regex to split into meaningful chunks.
+  // A pragmatic approach: split by spaces if present, otherwise split by character groups.
+  const words = sentence.match(/[\u3040-\u309F]+|[\u30A0-\u30FF]+|[\u4E00-\u9FFF]+|[\uFF00-\uFFEF]+|[。、！？]/g);
+  if (!words || words.length < 3) return null;
+
+  // Filter out punctuation for scrambling, keep it for correct order
+  const correctOrder = words.filter((w) => !w.match(/^[。、！？]$/));
+  if (correctOrder.length < 3) return null;
+
+  const scrambledWords = shuffle(correctOrder);
+
+  return {
+    type: 'grammar-sentence-order',
+    question: item.title,
+    questionDetail: example.english,
+    scrambledWords,
+    correctOrder,
+    options: [],
+    correctIndex: -1,
+    targetItem: item,
+  };
+}
+
+/**
  * Generates grammar-pick-correct exercises for each item in a grammar module.
- * Shows a grammar point description, pick the correct example sentence.
+ * Also generates sentence-order exercises (~30% of items).
  */
 export function generateGrammarExercises(
   module: Module,
@@ -307,6 +431,12 @@ export function generateGrammarExercises(
         correctIndex,
         targetItem: item,
       });
+    }
+
+    // Add sentence-order exercise for ~30% of items
+    if (Math.random() < 0.3 && item.examples.length > 0) {
+      const orderExercise = createSentenceOrderExercise(item, 0);
+      if (orderExercise) exercises.push(orderExercise);
     }
   }
 

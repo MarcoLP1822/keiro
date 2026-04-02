@@ -15,6 +15,10 @@ const questionText: Record<string, string> = {
   'kanji-to-meaning': 'What does this kanji mean?',
   'kanji-to-reading': 'How do you read this kanji?',
   'grammar-pick-correct': 'Which sentence uses this grammar correctly?',
+  'sentence-gap-fill': 'Fill in the blank',
+  'grammar-sentence-order': 'Put the words in order',
+  'typing-meaning': 'Type the meaning',
+  'typing-reading': 'Type the reading',
 };
 
 // Exercise types that show large Japanese characters
@@ -23,6 +27,8 @@ const largeJapaneseTypes = new Set([
   'word-to-meaning',
   'kanji-to-meaning',
   'kanji-to-reading',
+  'typing-meaning',
+  'typing-reading',
 ]);
 
 export function QuestionDisplay({ exercise, audioEnabled = true }: QuestionDisplayProps) {
