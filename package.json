@@ -3,9 +3,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "pnpm -r build",
-    "lint": "eslint .",
-    "typecheck": "pnpm -r exec tsc --noEmit"
+    "dev": "pnpm --filter @keiro/web dev",
+    "build": "pnpm --filter @keiro/web build",
+    "test": "pnpm --filter @keiro/engine test",
+    "typecheck": "pnpm -r exec tsc --noEmit",
+    "lint": "pnpm -r lint"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^8.0.0",
