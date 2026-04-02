@@ -29,7 +29,7 @@ export interface GrammarItem {
     japanese: string;
     english: string;
   }[];
-  notes?: string;        // Additional notes
+  notes?: string | null;  // Additional notes
 }
 
 export interface KanjiItem {
@@ -63,5 +63,24 @@ export interface Module {
 /** Shape of the kana JSON files (hiragana.json, katakana.json) */
 export interface KanaContentFile {
   script: string;
+  modules: Module[];
+}
+
+/** Shape of vocab JSON files (e.g., vocabulary/n5.json) */
+export interface VocabContentFile {
+  level: string;
+  modules: Module[];
+}
+
+/** Shape of kanji JSON files (e.g., kanji/n5.json) */
+export interface KanjiContentFile {
+  level: string;
+  modules: Module[];
+}
+
+/** Shape of grammar JSON files (e.g., grammar/n5.json) */
+export interface GrammarContentFile {
+  _attribution?: string;
+  level: string;
   modules: Module[];
 }

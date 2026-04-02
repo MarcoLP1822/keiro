@@ -1,0 +1,1629 @@
+{
+  "level": "n5",
+  "modules": [
+    {
+      "id": "n5-kanji-01",
+      "name": "N5 Kanji 1: Numbers",
+      "type": "kanji",
+      "level": "n5",
+      "order": 61,
+      "intro": {
+        "title": "Kanji - Numbers",
+        "explanation": "Learn the kanji for numbers 1 through 10. These are among the most common and simplest kanji in Japanese.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "一",
+          "meanings": [
+            "One"
+          ],
+          "onReading": [
+            "いち",
+            "いつ"
+          ],
+          "kunReading": [
+            "ひと"
+          ],
+          "strokeCount": 1,
+          "example": {
+            "word": "一つ",
+            "reading": "ひとつ",
+            "meaning": "one (thing)"
+          }
+        },
+        {
+          "kanji": "二",
+          "meanings": [
+            "Two"
+          ],
+          "onReading": [
+            "に"
+          ],
+          "kunReading": [
+            "ふた"
+          ],
+          "strokeCount": 2,
+          "example": {
+            "word": "二つ",
+            "reading": "ふたつ",
+            "meaning": "two (things)"
+          }
+        },
+        {
+          "kanji": "三",
+          "meanings": [
+            "Three"
+          ],
+          "onReading": [
+            "さん"
+          ],
+          "kunReading": [
+            "み"
+          ],
+          "strokeCount": 3,
+          "example": {
+            "word": "三つ",
+            "reading": "みっつ",
+            "meaning": "three (things)"
+          }
+        },
+        {
+          "kanji": "四",
+          "meanings": [
+            "Four"
+          ],
+          "onReading": [
+            "し"
+          ],
+          "kunReading": [
+            "よん",
+            "よ"
+          ],
+          "strokeCount": 5,
+          "example": {
+            "word": "四つ",
+            "reading": "よっつ",
+            "meaning": "four (things)"
+          }
+        },
+        {
+          "kanji": "五",
+          "meanings": [
+            "Five"
+          ],
+          "onReading": [
+            "ご"
+          ],
+          "kunReading": [
+            "いつ"
+          ],
+          "strokeCount": 4,
+          "example": {
+            "word": "五つ",
+            "reading": "いつつ",
+            "meaning": "five (things)"
+          }
+        },
+        {
+          "kanji": "六",
+          "meanings": [
+            "Six"
+          ],
+          "onReading": [
+            "ろく"
+          ],
+          "kunReading": [
+            "む"
+          ],
+          "strokeCount": 4,
+          "example": {
+            "word": "六つ",
+            "reading": "むっつ",
+            "meaning": "six (things)"
+          }
+        },
+        {
+          "kanji": "七",
+          "meanings": [
+            "Seven"
+          ],
+          "onReading": [
+            "しち"
+          ],
+          "kunReading": [
+            "なな",
+            "なの"
+          ],
+          "strokeCount": 2,
+          "example": {
+            "word": "七つ",
+            "reading": "ななつ",
+            "meaning": "seven (things)"
+          }
+        },
+        {
+          "kanji": "八",
+          "meanings": [
+            "Eight"
+          ],
+          "onReading": [
+            "はち"
+          ],
+          "kunReading": [
+            "や",
+            "よう"
+          ],
+          "strokeCount": 2,
+          "example": {
+            "word": "八つ",
+            "reading": "やっつ",
+            "meaning": "eight (things)"
+          }
+        },
+        {
+          "kanji": "九",
+          "meanings": [
+            "Nine"
+          ],
+          "onReading": [
+            "く",
+            "きゅう"
+          ],
+          "kunReading": [
+            "ここの"
+          ],
+          "strokeCount": 2,
+          "example": {
+            "word": "九つ",
+            "reading": "ここのつ",
+            "meaning": "nine (things)"
+          }
+        },
+        {
+          "kanji": "十",
+          "meanings": [
+            "Ten"
+          ],
+          "onReading": [
+            "じゅう"
+          ],
+          "kunReading": [
+            "とお"
+          ],
+          "strokeCount": 2,
+          "example": {
+            "word": "十",
+            "reading": "じゅう",
+            "meaning": "ten"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n5-kanji-02",
+      "name": "N5 Kanji 2: Large Numbers and Money",
+      "type": "kanji",
+      "level": "n5",
+      "order": 62,
+      "intro": {
+        "title": "Kanji - Large Numbers and Money",
+        "explanation": "Kanji for hundred, thousand, ten thousand, and yen. Essential for shopping and daily life in Japan.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "百",
+          "meanings": [
+            "Hundred"
+          ],
+          "onReading": [
+            "ひゃく"
+          ],
+          "kunReading": [
+            "もも"
+          ],
+          "strokeCount": 6,
+          "example": {
+            "word": "百円",
+            "reading": "ひゃくえん",
+            "meaning": "one hundred yen"
+          }
+        },
+        {
+          "kanji": "千",
+          "meanings": [
+            "Thousand"
+          ],
+          "onReading": [
+            "せん"
+          ],
+          "kunReading": [
+            "ち"
+          ],
+          "strokeCount": 3,
+          "example": {
+            "word": "千円",
+            "reading": "せんえん",
+            "meaning": "one thousand yen"
+          }
+        },
+        {
+          "kanji": "万",
+          "meanings": [
+            "Ten Thousand"
+          ],
+          "onReading": [
+            "まん",
+            "ばん"
+          ],
+          "kunReading": [],
+          "strokeCount": 3,
+          "example": {
+            "word": "一万",
+            "reading": "いちまん",
+            "meaning": "ten thousand"
+          }
+        },
+        {
+          "kanji": "円",
+          "meanings": [
+            "Yen",
+            "Round",
+            "Circle"
+          ],
+          "onReading": [
+            "えん"
+          ],
+          "kunReading": [
+            "まる"
+          ],
+          "strokeCount": 4,
+          "example": {
+            "word": "円",
+            "reading": "えん",
+            "meaning": "yen"
+          }
+        },
+        {
+          "kanji": "半",
+          "meanings": [
+            "Half"
+          ],
+          "onReading": [
+            "はん"
+          ],
+          "kunReading": [
+            "なか"
+          ],
+          "strokeCount": 5,
+          "example": {
+            "word": "半分",
+            "reading": "はんぶん",
+            "meaning": "half"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n5-kanji-03",
+      "name": "N5 Kanji 3: People",
+      "type": "kanji",
+      "level": "n5",
+      "order": 63,
+      "intro": {
+        "title": "Kanji - People",
+        "explanation": "Kanji for person, woman, man, child, friend, mother, and father. These appear constantly in everyday Japanese.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "人",
+          "meanings": [
+            "Person"
+          ],
+          "onReading": [
+            "にん",
+            "じん"
+          ],
+          "kunReading": [
+            "ひと",
+            "と"
+          ],
+          "strokeCount": 2,
+          "example": {
+            "word": "日本人",
+            "reading": "にほんじん",
+            "meaning": "Japanese person"
+          }
+        },
+        {
+          "kanji": "女",
+          "meanings": [
+            "Woman"
+          ],
+          "onReading": [
+            "じょ"
+          ],
+          "kunReading": [
+            "おんな",
+            "め"
+          ],
+          "strokeCount": 3,
+          "example": {
+            "word": "女の子",
+            "reading": "おんなのこ",
+            "meaning": "girl"
+          }
+        },
+        {
+          "kanji": "男",
+          "meanings": [
+            "Man"
+          ],
+          "onReading": [
+            "だん"
+          ],
+          "kunReading": [
+            "おとこ"
+          ],
+          "strokeCount": 7,
+          "example": {
+            "word": "男の子",
+            "reading": "おとこのこ",
+            "meaning": "boy"
+          }
+        },
+        {
+          "kanji": "子",
+          "meanings": [
+            "Child",
+            "Kid"
+          ],
+          "onReading": [
+            "し",
+            "す"
+          ],
+          "kunReading": [
+            "こ"
+          ],
+          "strokeCount": 3,
+          "example": {
+            "word": "子供",
+            "reading": "こども",
+            "meaning": "child"
+          }
+        },
+        {
+          "kanji": "友",
+          "meanings": [
+            "Friend"
+          ],
+          "onReading": [
+            "ゆう"
+          ],
+          "kunReading": [
+            "とも"
+          ],
+          "strokeCount": 4,
+          "example": {
+            "word": "友達",
+            "reading": "ともだち",
+            "meaning": "friend"
+          }
+        },
+        {
+          "kanji": "母",
+          "meanings": [
+            "Mother",
+            "Mom",
+            "Mum"
+          ],
+          "onReading": [
+            "ぼ"
+          ],
+          "kunReading": [
+            "はは"
+          ],
+          "strokeCount": 5,
+          "example": {
+            "word": "お母さん",
+            "reading": "おかあさん",
+            "meaning": "mother"
+          }
+        },
+        {
+          "kanji": "父",
+          "meanings": [
+            "Father",
+            "Dad"
+          ],
+          "onReading": [
+            "ふ"
+          ],
+          "kunReading": [
+            "ちち"
+          ],
+          "strokeCount": 4,
+          "example": {
+            "word": "お父さん",
+            "reading": "おとうさん",
+            "meaning": "father"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n5-kanji-04",
+      "name": "N5 Kanji 4: Time and Days",
+      "type": "kanji",
+      "level": "n5",
+      "order": 64,
+      "intro": {
+        "title": "Kanji - Time and Days",
+        "explanation": "Kanji related to time, days, months, and years. You will see these on calendars, schedules, and in daily conversation.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "日",
+          "meanings": [
+            "Sun",
+            "Day"
+          ],
+          "onReading": [
+            "にち",
+            "じつ"
+          ],
+          "kunReading": [
+            "ひ",
+            "か",
+            "び"
+          ],
+          "strokeCount": 4,
+          "example": {
+            "word": "今日",
+            "reading": "きょう",
+            "meaning": "today"
+          }
+        },
+        {
+          "kanji": "月",
+          "meanings": [
+            "Moon",
+            "Month"
+          ],
+          "onReading": [
+            "げつ",
+            "がつ"
+          ],
+          "kunReading": [
+            "つき"
+          ],
+          "strokeCount": 4,
+          "example": {
+            "word": "月曜日",
+            "reading": "げつようび",
+            "meaning": "Monday"
+          }
+        },
+        {
+          "kanji": "年",
+          "meanings": [
+            "Year"
+          ],
+          "onReading": [
+            "ねん"
+          ],
+          "kunReading": [
+            "とし"
+          ],
+          "strokeCount": 6,
+          "example": {
+            "word": "今年",
+            "reading": "ことし",
+            "meaning": "this year"
+          }
+        },
+        {
+          "kanji": "時",
+          "meanings": [
+            "Time",
+            "O'clock",
+            "Hour"
+          ],
+          "onReading": [
+            "じ"
+          ],
+          "kunReading": [
+            "とき"
+          ],
+          "strokeCount": 10,
+          "example": {
+            "word": "時間",
+            "reading": "じかん",
+            "meaning": "time"
+          }
+        },
+        {
+          "kanji": "間",
+          "meanings": [
+            "Interval",
+            "Interval Of Time",
+            "Time Interval"
+          ],
+          "onReading": [
+            "かん",
+            "^けん"
+          ],
+          "kunReading": [
+            "あいだ",
+            "ま"
+          ],
+          "strokeCount": 12,
+          "example": {
+            "word": "時間",
+            "reading": "じかん",
+            "meaning": "time"
+          }
+        },
+        {
+          "kanji": "今",
+          "meanings": [
+            "Now"
+          ],
+          "onReading": [
+            "こん"
+          ],
+          "kunReading": [
+            "いま"
+          ],
+          "strokeCount": 4,
+          "example": {
+            "word": "今日",
+            "reading": "きょう",
+            "meaning": "today"
+          }
+        },
+        {
+          "kanji": "毎",
+          "meanings": [
+            "Every"
+          ],
+          "onReading": [
+            "まい"
+          ],
+          "kunReading": [
+            "ごと"
+          ],
+          "strokeCount": 6,
+          "example": {
+            "word": "毎日",
+            "reading": "まいにち",
+            "meaning": "every day"
+          }
+        },
+        {
+          "kanji": "午",
+          "meanings": [
+            "Noon"
+          ],
+          "onReading": [
+            "ご"
+          ],
+          "kunReading": [],
+          "strokeCount": 4,
+          "example": {
+            "word": "午後",
+            "reading": "ごご",
+            "meaning": "afternoon"
+          }
+        },
+        {
+          "kanji": "前",
+          "meanings": [
+            "Front",
+            "Before"
+          ],
+          "onReading": [
+            "ぜん"
+          ],
+          "kunReading": [
+            "まえ"
+          ],
+          "strokeCount": 9,
+          "example": {
+            "word": "午前",
+            "reading": "ごぜん",
+            "meaning": "morning (AM)"
+          }
+        },
+        {
+          "kanji": "後",
+          "meanings": [
+            "Behind",
+            "After",
+            "Back"
+          ],
+          "onReading": [
+            "ご",
+            "こう"
+          ],
+          "kunReading": [
+            "うし",
+            "あと",
+            "のち"
+          ],
+          "strokeCount": 9,
+          "example": {
+            "word": "午後",
+            "reading": "ごご",
+            "meaning": "afternoon"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n5-kanji-05",
+      "name": "N5 Kanji 5: Position and Direction",
+      "type": "kanji",
+      "level": "n5",
+      "order": 65,
+      "intro": {
+        "title": "Kanji - Position and Direction",
+        "explanation": "Kanji for up, down, middle, right, left, and the four compass directions. Useful for reading signs and giving directions.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "上",
+          "meanings": [
+            "Above",
+            "Up",
+            "Over"
+          ],
+          "onReading": [
+            "じょう"
+          ],
+          "kunReading": [
+            "うえ",
+            "あ",
+            "のぼ",
+            "うわ",
+            "かみ"
+          ],
+          "strokeCount": 3,
+          "example": {
+            "word": "上手",
+            "reading": "じょうず",
+            "meaning": "skillful"
+          }
+        },
+        {
+          "kanji": "下",
+          "meanings": [
+            "Below",
+            "Down",
+            "Under"
+          ],
+          "onReading": [
+            "か",
+            "げ"
+          ],
+          "kunReading": [
+            "した",
+            "さ",
+            "くだ",
+            "お"
+          ],
+          "strokeCount": 3,
+          "example": {
+            "word": "下手",
+            "reading": "へた",
+            "meaning": "unskillful"
+          }
+        },
+        {
+          "kanji": "中",
+          "meanings": [
+            "Middle",
+            "In",
+            "Inside"
+          ],
+          "onReading": [
+            "ちゅう"
+          ],
+          "kunReading": [
+            "なか"
+          ],
+          "strokeCount": 4,
+          "example": {
+            "word": "中学校",
+            "reading": "ちゅうがっこう",
+            "meaning": "middle school"
+          }
+        },
+        {
+          "kanji": "右",
+          "meanings": [
+            "Right"
+          ],
+          "onReading": [
+            "^う",
+            "ゆう"
+          ],
+          "kunReading": [
+            "みぎ"
+          ],
+          "strokeCount": 5,
+          "example": {
+            "word": "右",
+            "reading": "みぎ",
+            "meaning": "right"
+          }
+        },
+        {
+          "kanji": "左",
+          "meanings": [
+            "Left"
+          ],
+          "onReading": [
+            "さ"
+          ],
+          "kunReading": [
+            "ひだり"
+          ],
+          "strokeCount": 5,
+          "example": {
+            "word": "左",
+            "reading": "ひだり",
+            "meaning": "left"
+          }
+        },
+        {
+          "kanji": "東",
+          "meanings": [
+            "East"
+          ],
+          "onReading": [
+            "とう"
+          ],
+          "kunReading": [
+            "ひがし"
+          ],
+          "strokeCount": 8,
+          "example": {
+            "word": "東京",
+            "reading": "とうきょう",
+            "meaning": "Tokyo"
+          }
+        },
+        {
+          "kanji": "西",
+          "meanings": [
+            "West"
+          ],
+          "onReading": [
+            "せい",
+            "さい"
+          ],
+          "kunReading": [
+            "にし"
+          ],
+          "strokeCount": 6,
+          "example": {
+            "word": "西",
+            "reading": "にし",
+            "meaning": "west"
+          }
+        },
+        {
+          "kanji": "南",
+          "meanings": [
+            "South"
+          ],
+          "onReading": [
+            "なん"
+          ],
+          "kunReading": [
+            "みなみ"
+          ],
+          "strokeCount": 9,
+          "example": {
+            "word": "南",
+            "reading": "みなみ",
+            "meaning": "south"
+          }
+        },
+        {
+          "kanji": "北",
+          "meanings": [
+            "North"
+          ],
+          "onReading": [
+            "ほく"
+          ],
+          "kunReading": [
+            "きた"
+          ],
+          "strokeCount": 5,
+          "example": {
+            "word": "北",
+            "reading": "きた",
+            "meaning": "north"
+          }
+        },
+        {
+          "kanji": "外",
+          "meanings": [
+            "Outside"
+          ],
+          "onReading": [
+            "がい"
+          ],
+          "kunReading": [
+            "そと",
+            "はず"
+          ],
+          "strokeCount": 5,
+          "example": {
+            "word": "外国人",
+            "reading": "がいこくじん",
+            "meaning": "foreigner"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n5-kanji-06",
+      "name": "N5 Kanji 6: Nature",
+      "type": "kanji",
+      "level": "n5",
+      "order": 66,
+      "intro": {
+        "title": "Kanji - Nature",
+        "explanation": "Kanji for natural elements like mountain, river, fire, water, rain, sky, and wood. Many of these are pictographic and easy to remember.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "山",
+          "meanings": [
+            "Mountain"
+          ],
+          "onReading": [
+            "さん"
+          ],
+          "kunReading": [
+            "やま"
+          ],
+          "strokeCount": 3,
+          "example": {
+            "word": "山",
+            "reading": "やま",
+            "meaning": "mountain"
+          }
+        },
+        {
+          "kanji": "川",
+          "meanings": [
+            "River"
+          ],
+          "onReading": [
+            "せん"
+          ],
+          "kunReading": [
+            "かわ"
+          ],
+          "strokeCount": 3,
+          "example": {
+            "word": "川",
+            "reading": "かわ",
+            "meaning": "river"
+          }
+        },
+        {
+          "kanji": "火",
+          "meanings": [
+            "Fire"
+          ],
+          "onReading": [
+            "か"
+          ],
+          "kunReading": [
+            "ひ",
+            "ほ"
+          ],
+          "strokeCount": 4,
+          "example": {
+            "word": "火曜日",
+            "reading": "かようび",
+            "meaning": "Tuesday"
+          }
+        },
+        {
+          "kanji": "水",
+          "meanings": [
+            "Water"
+          ],
+          "onReading": [
+            "すい"
+          ],
+          "kunReading": [
+            "みず"
+          ],
+          "strokeCount": 4,
+          "example": {
+            "word": "水曜日",
+            "reading": "すいようび",
+            "meaning": "Wednesday"
+          }
+        },
+        {
+          "kanji": "雨",
+          "meanings": [
+            "Rain"
+          ],
+          "onReading": [
+            "う"
+          ],
+          "kunReading": [
+            "あめ",
+            "あま"
+          ],
+          "strokeCount": 8,
+          "example": {
+            "word": "雨",
+            "reading": "あめ",
+            "meaning": "rain"
+          }
+        },
+        {
+          "kanji": "天",
+          "meanings": [
+            "Heaven"
+          ],
+          "onReading": [
+            "てん"
+          ],
+          "kunReading": [
+            "あま"
+          ],
+          "strokeCount": 4,
+          "example": {
+            "word": "天気",
+            "reading": "てんき",
+            "meaning": "weather"
+          }
+        },
+        {
+          "kanji": "木",
+          "meanings": [
+            "Tree",
+            "Wood"
+          ],
+          "onReading": [
+            "もく",
+            "ぼく"
+          ],
+          "kunReading": [
+            "き",
+            "こ"
+          ],
+          "strokeCount": 4,
+          "example": {
+            "word": "木曜日",
+            "reading": "もくようび",
+            "meaning": "Thursday"
+          }
+        },
+        {
+          "kanji": "土",
+          "meanings": [
+            "Dirt",
+            "Soil",
+            "Earth"
+          ],
+          "onReading": [
+            "ど",
+            "^と"
+          ],
+          "kunReading": [
+            "つち"
+          ],
+          "strokeCount": 3,
+          "example": {
+            "word": "土曜日",
+            "reading": "どようび",
+            "meaning": "Saturday"
+          }
+        },
+        {
+          "kanji": "金",
+          "meanings": [
+            "Gold"
+          ],
+          "onReading": [
+            "きん"
+          ],
+          "kunReading": [
+            "かね"
+          ],
+          "strokeCount": 8,
+          "example": {
+            "word": "金曜日",
+            "reading": "きんようび",
+            "meaning": "Friday"
+          }
+        },
+        {
+          "kanji": "白",
+          "meanings": [
+            "White"
+          ],
+          "onReading": [
+            "はく"
+          ],
+          "kunReading": [
+            "しろ",
+            "しら"
+          ],
+          "strokeCount": 5,
+          "example": {
+            "word": "白い",
+            "reading": "しろい",
+            "meaning": "white"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n5-kanji-07",
+      "name": "N5 Kanji 7: Size, School, and Study",
+      "type": "kanji",
+      "level": "n5",
+      "order": 67,
+      "intro": {
+        "title": "Kanji - Size, School, and Study",
+        "explanation": "Kanji for big, small, tall, long, school, study, life, and learning. Common in academic and everyday contexts.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "大",
+          "meanings": [
+            "Big",
+            "Large"
+          ],
+          "onReading": [
+            "たい",
+            "だい"
+          ],
+          "kunReading": [
+            "おお"
+          ],
+          "strokeCount": 3,
+          "example": {
+            "word": "大きい",
+            "reading": "おおきい",
+            "meaning": "big"
+          }
+        },
+        {
+          "kanji": "小",
+          "meanings": [
+            "Small",
+            "Little"
+          ],
+          "onReading": [
+            "しょう"
+          ],
+          "kunReading": [
+            "ちい",
+            "こ",
+            "お"
+          ],
+          "strokeCount": 3,
+          "example": {
+            "word": "小さい",
+            "reading": "ちいさい",
+            "meaning": "small"
+          }
+        },
+        {
+          "kanji": "高",
+          "meanings": [
+            "Tall",
+            "Expensive",
+            "High"
+          ],
+          "onReading": [
+            "こう"
+          ],
+          "kunReading": [
+            "たか"
+          ],
+          "strokeCount": 10,
+          "example": {
+            "word": "高い",
+            "reading": "たかい",
+            "meaning": "tall, expensive"
+          }
+        },
+        {
+          "kanji": "長",
+          "meanings": [
+            "Long",
+            "Leader"
+          ],
+          "onReading": [
+            "ちょう"
+          ],
+          "kunReading": [
+            "なが"
+          ],
+          "strokeCount": 8,
+          "example": {
+            "word": "長い",
+            "reading": "ながい",
+            "meaning": "long"
+          }
+        },
+        {
+          "kanji": "学",
+          "meanings": [
+            "Study",
+            "Learn",
+            "Learning"
+          ],
+          "onReading": [
+            "がく"
+          ],
+          "kunReading": [
+            "まな"
+          ],
+          "strokeCount": 8,
+          "example": {
+            "word": "学生",
+            "reading": "がくせい",
+            "meaning": "student"
+          }
+        },
+        {
+          "kanji": "校",
+          "meanings": [
+            "School"
+          ],
+          "onReading": [
+            "こう"
+          ],
+          "kunReading": [],
+          "strokeCount": 10,
+          "example": {
+            "word": "学校",
+            "reading": "がっこう",
+            "meaning": "school"
+          }
+        },
+        {
+          "kanji": "生",
+          "meanings": [
+            "Life"
+          ],
+          "onReading": [
+            "せい",
+            "しょう"
+          ],
+          "kunReading": [
+            "い",
+            "なま",
+            "う",
+            "は",
+            "き"
+          ],
+          "strokeCount": 5,
+          "example": {
+            "word": "先生",
+            "reading": "せんせい",
+            "meaning": "teacher"
+          }
+        },
+        {
+          "kanji": "先",
+          "meanings": [
+            "Previous",
+            "Ahead",
+            "Past"
+          ],
+          "onReading": [
+            "せん"
+          ],
+          "kunReading": [
+            "さき",
+            "まず"
+          ],
+          "strokeCount": 6,
+          "example": {
+            "word": "先生",
+            "reading": "せんせい",
+            "meaning": "teacher"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n5-kanji-08",
+      "name": "N5 Kanji 8: Actions and Communication",
+      "type": "kanji",
+      "level": "n5",
+      "order": 68,
+      "intro": {
+        "title": "Kanji - Actions and Communication",
+        "explanation": "Kanji for essential verbs and communication: go, come, see, enter, exit, eat, read, write, hear, speak, rest, and more.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "行",
+          "meanings": [
+            "Go"
+          ],
+          "onReading": [
+            "こう",
+            "ぎょう"
+          ],
+          "kunReading": [
+            "い",
+            "おこな",
+            "ゆ"
+          ],
+          "strokeCount": 6,
+          "example": {
+            "word": "行く",
+            "reading": "いく",
+            "meaning": "to go"
+          }
+        },
+        {
+          "kanji": "来",
+          "meanings": [
+            "Come",
+            "Next"
+          ],
+          "onReading": [
+            "らい"
+          ],
+          "kunReading": [
+            "く"
+          ],
+          "strokeCount": 7,
+          "example": {
+            "word": "来年",
+            "reading": "らいねん",
+            "meaning": "next year"
+          }
+        },
+        {
+          "kanji": "見",
+          "meanings": [
+            "See"
+          ],
+          "onReading": [
+            "けん"
+          ],
+          "kunReading": [
+            "み"
+          ],
+          "strokeCount": 7,
+          "example": {
+            "word": "見る",
+            "reading": "みる",
+            "meaning": "to see"
+          }
+        },
+        {
+          "kanji": "入",
+          "meanings": [
+            "Enter"
+          ],
+          "onReading": [
+            "にゅう"
+          ],
+          "kunReading": [
+            "はい",
+            "い"
+          ],
+          "strokeCount": 2,
+          "example": {
+            "word": "入口",
+            "reading": "いりぐち",
+            "meaning": "entrance"
+          }
+        },
+        {
+          "kanji": "出",
+          "meanings": [
+            "Exit"
+          ],
+          "onReading": [
+            "しゅつ"
+          ],
+          "kunReading": [
+            "で",
+            "だ"
+          ],
+          "strokeCount": 5,
+          "example": {
+            "word": "出口",
+            "reading": "でぐち",
+            "meaning": "exit"
+          }
+        },
+        {
+          "kanji": "食",
+          "meanings": [
+            "Eat",
+            "Meal"
+          ],
+          "onReading": [
+            "しょく"
+          ],
+          "kunReading": [
+            "た",
+            "く"
+          ],
+          "strokeCount": 9,
+          "example": {
+            "word": "食べる",
+            "reading": "たべる",
+            "meaning": "to eat"
+          }
+        },
+        {
+          "kanji": "読",
+          "meanings": [
+            "Read"
+          ],
+          "onReading": [
+            "とう",
+            "どく"
+          ],
+          "kunReading": [
+            "よ"
+          ],
+          "strokeCount": 14,
+          "example": {
+            "word": "読む",
+            "reading": "よむ",
+            "meaning": "to read"
+          }
+        },
+        {
+          "kanji": "書",
+          "meanings": [
+            "Write",
+            "Writing"
+          ],
+          "onReading": [
+            "しょ"
+          ],
+          "kunReading": [
+            "か"
+          ],
+          "strokeCount": 10,
+          "example": {
+            "word": "辞書",
+            "reading": "じしょ",
+            "meaning": "dictionary"
+          }
+        },
+        {
+          "kanji": "聞",
+          "meanings": [
+            "Hear"
+          ],
+          "onReading": [
+            "ぶん",
+            "もん"
+          ],
+          "kunReading": [
+            "き"
+          ],
+          "strokeCount": 14,
+          "example": {
+            "word": "聞く",
+            "reading": "きく",
+            "meaning": "to listen"
+          }
+        },
+        {
+          "kanji": "話",
+          "meanings": [
+            "Talk",
+            "Speak"
+          ],
+          "onReading": [
+            "わ"
+          ],
+          "kunReading": [
+            "はな",
+            "はなし"
+          ],
+          "strokeCount": 13,
+          "example": {
+            "word": "電話",
+            "reading": "でんわ",
+            "meaning": "telephone"
+          }
+        },
+        {
+          "kanji": "休",
+          "meanings": [
+            "Rest"
+          ],
+          "onReading": [
+            "きゅう"
+          ],
+          "kunReading": [
+            "やす"
+          ],
+          "strokeCount": 6,
+          "example": {
+            "word": "休み",
+            "reading": "やすみ",
+            "meaning": "rest, holiday"
+          }
+        },
+        {
+          "kanji": "名",
+          "meanings": [
+            "Name",
+            "Famous"
+          ],
+          "onReading": [
+            "めい",
+            "みょう"
+          ],
+          "kunReading": [
+            "な"
+          ],
+          "strokeCount": 6,
+          "example": {
+            "word": "名前",
+            "reading": "なまえ",
+            "meaning": "name"
+          }
+        },
+        {
+          "kanji": "気",
+          "meanings": [
+            "Energy",
+            "Spirit"
+          ],
+          "onReading": [
+            "き",
+            "け"
+          ],
+          "kunReading": [
+            "いき"
+          ],
+          "strokeCount": 6,
+          "example": {
+            "word": "天気",
+            "reading": "てんき",
+            "meaning": "weather"
+          }
+        },
+        {
+          "kanji": "本",
+          "meanings": [
+            "Book",
+            "Origin",
+            "Real"
+          ],
+          "onReading": [
+            "ほん"
+          ],
+          "kunReading": [
+            "もと"
+          ],
+          "strokeCount": 5,
+          "example": {
+            "word": "日本",
+            "reading": "にほん",
+            "meaning": "Japan"
+          }
+        },
+        {
+          "kanji": "車",
+          "meanings": [
+            "Car"
+          ],
+          "onReading": [
+            "しゃ"
+          ],
+          "kunReading": [
+            "くるま"
+          ],
+          "strokeCount": 7,
+          "example": {
+            "word": "電車",
+            "reading": "でんしゃ",
+            "meaning": "train"
+          }
+        },
+        {
+          "kanji": "電",
+          "meanings": [
+            "Electricity"
+          ],
+          "onReading": [
+            "でん"
+          ],
+          "kunReading": [],
+          "strokeCount": 13,
+          "example": {
+            "word": "電車",
+            "reading": "でんしゃ",
+            "meaning": "train"
+          }
+        },
+        {
+          "kanji": "語",
+          "meanings": [
+            "Language"
+          ],
+          "onReading": [
+            "ご"
+          ],
+          "kunReading": [
+            "かた"
+          ],
+          "strokeCount": 14,
+          "example": {
+            "word": "日本語",
+            "reading": "にほんご",
+            "meaning": "Japanese language"
+          }
+        },
+        {
+          "kanji": "国",
+          "meanings": [
+            "Country"
+          ],
+          "onReading": [
+            "こく"
+          ],
+          "kunReading": [
+            "くに"
+          ],
+          "strokeCount": 8,
+          "example": {
+            "word": "外国",
+            "reading": "がいこく",
+            "meaning": "foreign country"
+          }
+        },
+        {
+          "kanji": "何",
+          "meanings": [
+            "What"
+          ],
+          "onReading": [
+            "か"
+          ],
+          "kunReading": [
+            "なに",
+            "なん"
+          ],
+          "strokeCount": 7,
+          "example": {
+            "word": "何",
+            "reading": "なに",
+            "meaning": "what"
+          }
+        }
+      ]
+    }
+  ]
+}

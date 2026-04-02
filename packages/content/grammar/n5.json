@@ -1,0 +1,3254 @@
+{
+  "_attribution": "Grammar data sourced from hanabira.org (https://github.com/tristcoil/hanabira.org-japanese-content). Licensed under their repository terms.",
+  "level": "n5",
+  "modules": [
+    {
+      "id": "n5-grammar-01",
+      "name": "N5 Grammar 1: Basic Sentences",
+      "type": "grammar",
+      "level": "n5",
+      "order": 71,
+      "intro": {
+        "title": "Basic Sentence Structure",
+        "explanation": "Learn the fundamental particles and sentence patterns that form the backbone of Japanese.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n5-noun-wa",
+          "title": "Noun は～ (Noun wa〜)",
+          "explanation": "Used to mark the topic of a sentence; 'as for', 'speaking of'.",
+          "structure": "Noun + は",
+          "examples": [
+            {
+              "japanese": "私は日本の料理が好きです。",
+              "english": "As for me, I like Japanese cuisine."
+            },
+            {
+              "japanese": "彼は英語が上手です。",
+              "english": "As for him, he is good at English."
+            },
+            {
+              "japanese": "この本は面白いです。",
+              "english": "As for this book, it's interesting."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-noun-wo",
+          "title": "Noun を〜 (Noun wo〜)",
+          "explanation": "Indicates the direct object of a verb.",
+          "structure": "Noun + を + Verb",
+          "examples": [
+            {
+              "japanese": "私は本を読みます。",
+              "english": "I read a book."
+            },
+            {
+              "japanese": "彼はケーキを食べました。",
+              "english": "He ate a cake."
+            },
+            {
+              "japanese": "母はコーヒーを飲むのが好きです。",
+              "english": "My mother likes to drink coffee."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-noun-mo",
+          "title": "Noun も〜 (Noun mo~)",
+          "explanation": "Indicates that the action or state is the same for multiple items or people; 'also', 'as well'.",
+          "structure": "Noun + も",
+          "examples": [
+            {
+              "japanese": "私も日本語を勉強しています。",
+              "english": "I am also studying Japanese."
+            },
+            {
+              "japanese": "彼もケーキが好きです。",
+              "english": "He also likes cake."
+            },
+            {
+              "japanese": "東京も大阪も観光スポットがたくさんあります。",
+              "english": "There are many tourist spots in both Tokyo and Osaka."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-no",
+          "title": "～の (〜no)",
+          "explanation": "Express possession, apposition, or description using 'of' or ''s'.",
+          "structure": "Noun1 + の + Noun2, (Adjective/Clause) + の (nominalized), etc.",
+          "examples": [
+            {
+              "japanese": "これは私の鞄です。",
+              "english": "This is my bag."
+            },
+            {
+              "japanese": "彼女は赤いバッグを持っています。",
+              "english": "She has a red bag."
+            },
+            {
+              "japanese": "彼はきれいな部屋があります。",
+              "english": "He has a clean room."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-ga",
+          "title": "～が (〜ga)",
+          "explanation": "Particle indicating the subject of a sentence or expressing 'but'.",
+          "structure": "Noun + が / い-Adjective + が / な-Adjective + が / Verb + が",
+          "examples": [
+            {
+              "japanese": "私が学生です。",
+              "english": "I am a student."
+            },
+            {
+              "japanese": "このりんごが美味しい。",
+              "english": "This apple is delicious."
+            },
+            {
+              "japanese": "彼は頭がいいが、性格が悪い。",
+              "english": "He is smart but has a bad personality."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n5-grammar-02",
+      "name": "N5 Grammar 2: Existence & Location",
+      "type": "grammar",
+      "level": "n5",
+      "order": 72,
+      "intro": {
+        "title": "Existence and Location",
+        "explanation": "Express what exists and where things are located using あります and います.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n5-arimasu",
+          "title": "～あります (〜arimasu)",
+          "explanation": "Indicate possession or existence of inanimate objects; 'there is', 'there are'.",
+          "structure": "Object + が + あります",
+          "examples": [
+            {
+              "japanese": "教室に机があります。",
+              "english": "There is a desk in the classroom."
+            },
+            {
+              "japanese": "この公園にたくさんの花があります。",
+              "english": "There are many flowers in this park."
+            },
+            {
+              "japanese": "駅の近くにコンビニがあります。",
+              "english": "There is a convenience store near the station."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-basho-ni-ga-arimasu",
+          "title": "～（場所）に～があります (〜basho ni 〜 ga arimasu)",
+          "explanation": "Express the existence or presence of something in a place.",
+          "structure": "Place + に + Object/Thing + が + あります",
+          "examples": [
+            {
+              "japanese": "図書館にたくさんの本があります。",
+              "english": "There are many books in the library."
+            },
+            {
+              "japanese": "公園に池があります。",
+              "english": "There is a pond in the park."
+            },
+            {
+              "japanese": "駅の前にコンビニがあります。",
+              "english": "There is a convenience store in front of the station."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-noun-ni",
+          "title": "Noun に～ (Noun ni～)",
+          "explanation": "Express a specific direction, target or purpose; 'to', 'toward', 'for'.",
+          "structure": "Noun + に",
+          "examples": [
+            {
+              "japanese": "彼女にプレゼントをあげました。",
+              "english": "I gave a present to her."
+            },
+            {
+              "japanese": "日本に行きます。",
+              "english": "I am going to Japan."
+            },
+            {
+              "japanese": "6時に集合しましょう。",
+              "english": "Let's meet at 6 o'clock."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n5-grammar-03",
+      "name": "N5 Grammar 3: Particles - Direction & Means",
+      "type": "grammar",
+      "level": "n5",
+      "order": 73,
+      "intro": {
+        "title": "Particles for Direction and Means",
+        "explanation": "Learn particles that express direction, location of action, and means.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n5-noun-de",
+          "title": "Nounで～ (Noun de ~)",
+          "explanation": "Indicate a place or means for an action or situation; 'at, in, on', 'using', or 'by means of'.",
+          "structure": "Noun + で",
+          "examples": [
+            {
+              "japanese": "図書館で勉強します。",
+              "english": "I study at the library."
+            },
+            {
+              "japanese": "バスで学校に行きます。",
+              "english": "I go to school by bus."
+            },
+            {
+              "japanese": "鉛筆で書きました。",
+              "english": "I wrote it using a pencil."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-noun-ni-ikimasu",
+          "title": "Noun に 行きます (Noun ni ikimasu)",
+          "explanation": "Used to express going to a location.",
+          "structure": "Noun + に + 行きます",
+          "examples": [
+            {
+              "japanese": "学校に行きます。",
+              "english": "I will go to school."
+            },
+            {
+              "japanese": "明日、スーパーに行きます。",
+              "english": "I will go to the supermarket tomorrow."
+            },
+            {
+              "japanese": "週末に映画館に行きます。",
+              "english": "I will go to the movie theater on the weekend."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-noun-ni-kimasu",
+          "title": "Noun に 来ます (Noun ni kimasu)",
+          "explanation": "Used to express coming to a place.",
+          "structure": "Noun + に + 来ます (kimasu)",
+          "examples": [
+            {
+              "japanese": "友達が私の家に来ます。",
+              "english": "My friend will come to my house."
+            },
+            {
+              "japanese": "今晩、父が駅に迎えに来ます。",
+              "english": "Tonight, my father will come to pick me up at the station."
+            },
+            {
+              "japanese": "明日、先生が学校に来ます。",
+              "english": "Tomorrow, the teacher will come to school."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-noun-ni-kaerimasu",
+          "title": "Noun に 帰ります (Noun ni kaerimasu)",
+          "explanation": "Express going back or returning to a place: 'to return to', 'to go back to'.",
+          "structure": "Noun + に + 帰ります",
+          "examples": [
+            {
+              "japanese": "夏休みが終わったら、学校に帰ります。",
+              "english": "When summer vacation ends, I'll go back to school."
+            },
+            {
+              "japanese": "買い物を終えたら、家に帰ります。",
+              "english": "After finishing shopping, I will go back home."
+            },
+            {
+              "japanese": "今週末、実家に帰ります。",
+              "english": "I'm going back to my parents' home this weekend."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-noun-ni-modorimasu",
+          "title": "Noun に 戻ります (Noun ni modorimasu)",
+          "explanation": "Expresses the action of returning to a previous state, place, or condition.",
+          "structure": "Noun + に + 戻ります",
+          "examples": [
+            {
+              "japanese": "冷蔵庫に入れると、溶けたアイスクリームは固体に戻ります。",
+              "english": "When put in the refrigerator, the melted ice cream returns to its solid state."
+            },
+            {
+              "japanese": "休暇が終わったら、仕事に戻ります。",
+              "english": "When the vacation ends, I will return to work."
+            },
+            {
+              "japanese": "リモートワークが終わった後、元のオフィスに戻ります。",
+              "english": "After remote work is over, we will return to our original office."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n5-grammar-04",
+      "name": "N5 Grammar 4: Particles - Range & Listing",
+      "type": "grammar",
+      "level": "n5",
+      "order": 74,
+      "intro": {
+        "title": "Particles for Range and Listing",
+        "explanation": "Express ranges with から/まで and list items with と, や, など.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n5-noun-kara-noun-made",
+          "title": "Noun から Noun まで (Noun kara Noun made)",
+          "explanation": "Expresses a range; 'from...to', 'between...and'.",
+          "structure": "Noun1 + から + Noun2 + まで",
+          "examples": [
+            {
+              "japanese": "朝9時から午後5時まで働きます。",
+              "english": "I work from 9 AM to 5 PM."
+            },
+            {
+              "japanese": "東京から大阪まで電車で行く。",
+              "english": "I will go by train from Tokyo to Osaka."
+            },
+            {
+              "japanese": "地下鉄は午前6時から深夜まで運行しています。",
+              "english": "The subway runs from 6 AM until midnight."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-noun-to",
+          "title": "Noun と～ (Noun to～)",
+          "explanation": "Express 'with', 'and' or 'together with' when connecting nouns.",
+          "structure": "Noun1 + と + Noun2",
+          "examples": [
+            {
+              "japanese": "リンゴとバナナを買いました。",
+              "english": "I bought apples and bananas."
+            },
+            {
+              "japanese": "友達と映画を見に行きます。",
+              "english": "I will go to watch a movie with my friend."
+            },
+            {
+              "japanese": "父と母と一緒に旅行しました。",
+              "english": "I traveled together with my father and mother."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-noun-ya-noun-nado",
+          "title": "Noun や Noun など～ (Noun ya Noun nado)",
+          "explanation": "Lists items or examples but not exhaustively; 'such as', 'like', 'and so on'.",
+          "structure": "Noun1 + や + Noun2 + など",
+          "examples": [
+            {
+              "japanese": "彼は野菜や果物などを食べるのが好きです。",
+              "english": "He likes to eat things like vegetables and fruits."
+            },
+            {
+              "japanese": "日本の都市や東京、大阪などに行きたいです。",
+              "english": "I want to go to Japanese cities such as Tokyo, Osaka, and so on."
+            },
+            {
+              "japanese": "彼女は猫や犬など動物が好きです。",
+              "english": "She likes animals like cats, dogs, and so on."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-noun-ka-noun-ka",
+          "title": "Noun か Noun か～ (Noun ka Noun ka～)",
+          "explanation": "Expresses choice or alternatives; 'either', 'or'.",
+          "structure": "Noun1 + か + Noun2 + か～",
+          "examples": [
+            {
+              "japanese": "今日、映画を見るか、散歩するかどちらにしますか？",
+              "english": "Will we watch a movie or go for a walk today?"
+            },
+            {
+              "japanese": "コーヒーか紅茶か、一つだけ選んでください。",
+              "english": "Please choose only one, either coffee or tea."
+            },
+            {
+              "japanese": "電車かバスを使って、学校に行くつもりです。",
+              "english": "I plan to go to school using either the train or the bus."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n5-grammar-05",
+      "name": "N5 Grammar 5: い-Adjectives",
+      "type": "grammar",
+      "level": "n5",
+      "order": 75,
+      "intro": {
+        "title": "い-Adjective Patterns",
+        "explanation": "Learn how い-adjectives connect to verbs and change form.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n5-i-adjective-ku-verb",
+          "title": "い-Adjective く + Verb (i-Adjective + ku + Verb)",
+          "explanation": "Used to connect an い-adjective to a verb, modifying the verb (adverbial usage).",
+          "structure": "い-Adjective (remove い) + く + Verb",
+          "examples": [
+            {
+              "japanese": "彼は速く走りました。",
+              "english": "He ran quickly."
+            },
+            {
+              "japanese": "この料理は美味しく食べました。",
+              "english": "I enjoyed eating this dish."
+            },
+            {
+              "japanese": "彼女は優しく話します。",
+              "english": "She speaks kindly."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-i-adjective-ku-shimasu",
+          "title": "い-Adjective く します (i-Adjective ku shimasu)",
+          "explanation": "Use an い-adjective to express 'to make' or 'to become'.",
+          "structure": "い-Adjective (remove い) + くします",
+          "examples": [
+            {
+              "japanese": "部屋を明るくします。",
+              "english": "I will make the room brighter."
+            },
+            {
+              "japanese": "友達の気分を楽しくします。",
+              "english": "I will make my friend’s mood more pleasant."
+            },
+            {
+              "japanese": "仕事が簡単になるように、やり方を早くします。",
+              "english": "I will make the way of doing things faster so that the work becomes easier."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-adjective-negative-polite-form",
+          "title": "い-Adjective: Negative Polite Form",
+          "explanation": "Change an い-adjective into a polite negative form with ～くないです (or ～くありません).",
+          "structure": "い-Adjective (remove い) + くないです",
+          "examples": [
+            {
+              "japanese": "このピザは美味しくないです。",
+              "english": "This pizza is not delicious."
+            },
+            {
+              "japanese": "この部屋は広くないです。",
+              "english": "This room is not spacious."
+            },
+            {
+              "japanese": "彼の意見は面白くないです。",
+              "english": "His opinion is not interesting."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-i-adjective-te",
+          "title": "い-Adjective て (i-Adjective + te~)",
+          "explanation": "Used to connect two or more い-adjectives to describe something.",
+          "structure": "い-Adjective (remove い) + くて + い-Adjective",
+          "examples": [
+            {
+              "japanese": "このリンゴは甘くて美味しいです。",
+              "english": "This apple is sweet and delicious."
+            },
+            {
+              "japanese": "彼女は優しくてかわいいです。",
+              "english": "She is kind and cute."
+            },
+            {
+              "japanese": "映画は面白くて感動的でした。",
+              "english": "The movie was interesting and moving."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n5-grammar-06",
+      "name": "N5 Grammar 6: な-Adjectives",
+      "type": "grammar",
+      "level": "n5",
+      "order": 76,
+      "intro": {
+        "title": "な-Adjective Patterns",
+        "explanation": "Learn how な-adjectives connect to verbs and express change.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n5-adjective-verb",
+          "title": "な-Adjective に + Verb",
+          "explanation": "Turn a な-adjective into an adverb by adding に.",
+          "structure": "な-Adjective (remove な) + に + Verb",
+          "examples": [
+            {
+              "japanese": "彼は静かに話す。",
+              "english": "He speaks quietly."
+            },
+            {
+              "japanese": "部屋をきれいに掃除した。",
+              "english": "I cleaned the room neatly."
+            },
+            {
+              "japanese": "彼女は元気に働いています。",
+              "english": "She works energetically."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-na-adjective-de",
+          "title": "な-Adjective で～ (na-Adjective de~)",
+          "explanation": "Usage of で to connect or add information with a な-adjective.",
+          "structure": "な-Adjective + で",
+          "examples": [
+            {
+              "japanese": "彼は綺麗で優しい女性が好きです。",
+              "english": "He likes women who are beautiful and kind."
+            },
+            {
+              "japanese": "この料理は健康的で、元気な気分になります。",
+              "english": "This dish is healthy and makes you feel energetic."
+            },
+            {
+              "japanese": "彼は静かで落ち着いた環境で仕事をしたい。",
+              "english": "He wants to work in a quiet and calm environment."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-na-adjective-ni-shimasu",
+          "title": "な-Adjective に します (na-Adjective ni shimasu)",
+          "explanation": "Expressing a decision or preference with a な-adjective.",
+          "structure": "な-Adjective + に + します",
+          "examples": [
+            {
+              "japanese": "静かにします。",
+              "english": "I will be quiet."
+            },
+            {
+              "japanese": "部屋をきれいにします。",
+              "english": "I will make the room clean."
+            },
+            {
+              "japanese": "明日の会議は簡単にします。",
+              "english": "I will make tomorrow’s meeting simple."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-na-adjective-ni-narimasu",
+          "title": "な-Adjective に なります (na-Adjective ni narimasu)",
+          "explanation": "Express a change or transformation into a state described by the な-adjective.",
+          "structure": "な-Adjective (remove な) + に + なります",
+          "examples": [
+            {
+              "japanese": "この部屋は静かになります。",
+              "english": "This room becomes quiet."
+            },
+            {
+              "japanese": "彼女はきれいになります。",
+              "english": "She becomes beautiful."
+            },
+            {
+              "japanese": "彼は元気になります。",
+              "english": "He becomes energetic."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n5-grammar-07",
+      "name": "N5 Grammar 7: Verb て-form",
+      "type": "grammar",
+      "level": "n5",
+      "order": 77,
+      "intro": {
+        "title": "The て-form",
+        "explanation": "The て-form is one of the most versatile verb forms in Japanese, used for requests, ongoing actions, and connecting sentences.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n5-verb-te",
+          "title": "Verb て～ (Verb + te～)",
+          "explanation": "A verb conjugation that connects actions or states.",
+          "structure": "Verb (Group 1) - Replace last syllable with 〜て, Verb (Group 2) - Replace 'る' with 〜て, Verb (Group 3) - する becomes して, くる becomes きて",
+          "examples": [
+            {
+              "japanese": "コーヒーを飲んで、出かけます。",
+              "english": "After drinking coffee, I will go out."
+            },
+            {
+              "japanese": "買い物をして、家に帰りましょう。",
+              "english": "Let's go shopping and then go home."
+            },
+            {
+              "japanese": "宿題をして、寝ます。",
+              "english": "After doing my homework, I will sleep."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-verb-te-kudasai",
+          "title": "Verb て ください (Verb-te kudasai)",
+          "explanation": "A request or command; 'please do'.",
+          "structure": "Verb-て form + ください",
+          "examples": [
+            {
+              "japanese": "ドアを開けてください。",
+              "english": "Please open the door."
+            },
+            {
+              "japanese": "電話番号を教えてください。",
+              "english": "Please tell me your phone number."
+            },
+            {
+              "japanese": "ゆっくり話してください。",
+              "english": "Please speak slowly."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-naide-kudasai",
+          "title": "Verb ないで ください (〜naide kudasai)",
+          "explanation": "Used to make a polite request for someone not to do something; 'please don't'.",
+          "structure": "Verb-ない-form + で ください",
+          "examples": [
+            {
+              "japanese": "タバコを吸わないでください。",
+              "english": "Please don't smoke."
+            },
+            {
+              "japanese": "ここで走らないでください。",
+              "english": "Please don't run here."
+            },
+            {
+              "japanese": "大きな声で話さないでください。",
+              "english": "Please don't speak loudly."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-verb-te-imasu",
+          "title": "Verb て います (Verb te imasu)",
+          "explanation": "Express ongoing action or state; 'is doing', 'is doing (continuous)', 'has been doing'.",
+          "structure": "Verb て-form + います",
+          "examples": [
+            {
+              "japanese": "彼女は今ピアノを弾いています。",
+              "english": "She is playing the piano now."
+            },
+            {
+              "japanese": "私たちは日本語を勉強しています。",
+              "english": "We are studying Japanese."
+            },
+            {
+              "japanese": "彼は映画を見ています。",
+              "english": "He is watching a movie."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-te-imasu",
+          "title": "～て います (～te imasu)",
+          "explanation": "Expresses the present continuous or ongoing action; 'to be doing', 'currently doing'.",
+          "structure": "Verb て-form + います",
+          "examples": [
+            {
+              "japanese": "今、音楽を聞いています。",
+              "english": "I am listening to music right now."
+            },
+            {
+              "japanese": "父は新聞を読んでいます。",
+              "english": "My father is reading a newspaper."
+            },
+            {
+              "japanese": "彼女は英語を勉強しています。",
+              "english": "She is studying English."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n5-grammar-08",
+      "name": "N5 Grammar 8: Verb Forms - Suggestions & Invitations",
+      "type": "grammar",
+      "level": "n5",
+      "order": 78,
+      "intro": {
+        "title": "Suggestions and Invitations",
+        "explanation": "Learn how to make suggestions, invitations, and proposals in Japanese.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n5-mashou",
+          "title": "Verb ましょう (mashou)",
+          "explanation": "Making a suggestion or invitation; 'let's' or 'shall we'.",
+          "structure": "Verb (ます-stem) + ましょう",
+          "examples": [
+            {
+              "japanese": "一緒に映画を見ましょう。",
+              "english": "Let's watch a movie together."
+            },
+            {
+              "japanese": "散歩しましょう。",
+              "english": "Let's take a walk."
+            },
+            {
+              "japanese": "今晩、食事に行きましょう。",
+              "english": "Let's go out for dinner tonight."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-mashou-ka",
+          "title": "Verb ましょうか。 (〜mashou ka.)",
+          "explanation": "Used to make a polite suggestion or offer help; 'shall we', 'should we', 'do you want me to'.",
+          "structure": "Verb (ます-stem) + ましょうか",
+          "examples": [
+            {
+              "japanese": "一緒に映画を見に行きましょうか。",
+              "english": "Shall we go see a movie together?"
+            },
+            {
+              "japanese": "コーヒーをもう一杯飲みましょうか。",
+              "english": "Should we have another cup of coffee?"
+            },
+            {
+              "japanese": "あなたの荷物を持ちましょうか。",
+              "english": "Do you want me to carry your luggage?"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-verb-masenka",
+          "title": "Verb ませんか。 (Verb-masenka)",
+          "explanation": "An invitation or suggestion; 'won't you', 'why don't you', 'shall we'.",
+          "structure": "Verb (ます-form) + ませんか",
+          "examples": [
+            {
+              "japanese": "一緒に映画を見ませんか。",
+              "english": "Won't you watch a movie together with me?"
+            },
+            {
+              "japanese": "明日のパーティーに参加しませんか。",
+              "english": "Why don't you join tomorrow's party?"
+            },
+            {
+              "japanese": "週末にピクニックに行きませんか。",
+              "english": "Shall we go for a picnic on the weekend?"
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n5-grammar-09",
+      "name": "N5 Grammar 9: Want & Ability",
+      "type": "grammar",
+      "level": "n5",
+      "order": 79,
+      "intro": {
+        "title": "Expressing Want and Ability",
+        "explanation": "Express desires and abilities using たい, ほしい, and できます.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n5-taidesu",
+          "title": "Verb たいです (taidesu)",
+          "explanation": "Express desire or want to do something; 'I want to', 'I would like to'.",
+          "structure": "る-Verb: Remove る and add たいです, う-Verb: Replace the final verb character with the ～い form and add たいです, Exception: する becomes したいです",
+          "examples": [
+            {
+              "japanese": "私は寿司を食べたいです。",
+              "english": "I want to eat sushi."
+            },
+            {
+              "japanese": "彼は日本に行きたいです。",
+              "english": "He wants to go to Japan."
+            },
+            {
+              "japanese": "彼女は英語を勉強したいです。",
+              "english": "She wants to study English."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-ga-hoshii-desu",
+          "title": "Noun がほしいです (〜ga hoshii desu)",
+          "explanation": "Express a desire or wanting something; 'I want', 'I would like'.",
+          "structure": "Noun + が + ほしいです",
+          "examples": [
+            {
+              "japanese": "新しい車がほしいです。",
+              "english": "I want a new car."
+            },
+            {
+              "japanese": "コーヒーがほしいです。",
+              "english": "I would like some coffee."
+            },
+            {
+              "japanese": "彼女は花がほしいです。",
+              "english": "She wants flowers."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-noun-ga-dekimasu",
+          "title": "Noun が できます (Noun ga dekimasu)",
+          "explanation": "Express the ability to do something.",
+          "structure": "Noun + が + できます",
+          "examples": [
+            {
+              "japanese": "英語ができます。",
+              "english": "I can speak English."
+            },
+            {
+              "japanese": "料理ができます。",
+              "english": "I can cook."
+            },
+            {
+              "japanese": "彼は泳ぎができます。",
+              "english": "He can swim."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-ru-koto-ga-dekimasu",
+          "title": "Verb る こと が できます (ru koto ga dekimasu)",
+          "explanation": "Express the potential form, or the ability to do something.",
+          "structure": "Verb (dictionary form) + ことができます",
+          "examples": [
+            {
+              "japanese": "この問題を解くことができます。",
+              "english": "I can solve this problem."
+            },
+            {
+              "japanese": "彼は英語を話すことができます。",
+              "english": "He can speak English."
+            },
+            {
+              "japanese": "私は高い所に登ることができません。",
+              "english": "I can't climb to high places."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-ru-koto-ga-dekiru",
+          "title": "Verb る こと ができる (ru koto ga dekiru)",
+          "explanation": "Expresses the potential form; 'can', 'be able to', 'is possible'.",
+          "structure": "Verb (dictionary form) + ことができる",
+          "examples": [
+            {
+              "japanese": "この問題を解くことができる？",
+              "english": "Can you solve this problem?"
+            },
+            {
+              "japanese": "彼は泳ぐことができます。",
+              "english": "He can swim."
+            },
+            {
+              "japanese": "日本に行くことができて、とても嬉しいです。",
+              "english": "I'm very happy that I can go to Japan."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n5-grammar-10",
+      "name": "N5 Grammar 10: Time & Sequence",
+      "type": "grammar",
+      "level": "n5",
+      "order": 80,
+      "intro": {
+        "title": "Time and Sequence",
+        "explanation": "Express the order of events and timing using before, after, and when.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n5-ta-ato-de",
+          "title": "Verb た あとで (ta ato de)",
+          "explanation": "Indicates an action that takes place after another action.",
+          "structure": "Verb-た form + あとで",
+          "examples": [
+            {
+              "japanese": "宿題をしたあとで、テレビを見ました。",
+              "english": "After doing my homework, I watched TV."
+            },
+            {
+              "japanese": "朝ごはんを食べたあとで、歯を磨きます。",
+              "english": "After eating breakfast, I brush my teeth."
+            },
+            {
+              "japanese": "仕事が終わったあとで、ジムに行く予定です。",
+              "english": "After finishing work, I plan to go to the gym."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-noun-no-atode",
+          "title": "Noun の あとで (Noun no atode)",
+          "explanation": "Expresses the order of events; 'after', 'later than'.",
+          "structure": "Noun + の + あとで",
+          "examples": [
+            {
+              "japanese": "朝ご飯のあとで、歯を磨きます。",
+              "english": "After breakfast, I brush my teeth."
+            },
+            {
+              "japanese": "映画のあとで、レストランで夕食を食べました。",
+              "english": "After the movie, we ate dinner at a restaurant."
+            },
+            {
+              "japanese": "会議のあとで、上司と話し合います。",
+              "english": "I will discuss with my boss after the meeting."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-ru-mae-ni",
+          "title": "Verb る 前に (ru mae ni)",
+          "explanation": "Used to express 'before' in a sense of an action must be done before another action or event.",
+          "structure": "Verb (dictionary form) + 前に",
+          "examples": [
+            {
+              "japanese": "出かける前に、部屋を掃除してください。",
+              "english": "Please clean the room before leaving."
+            },
+            {
+              "japanese": "寝る前に、歯を磨きます。",
+              "english": "I brush my teeth before going to bed."
+            },
+            {
+              "japanese": "雨が降る前に、洗濯物を取り込むこと。",
+              "english": "Take in the laundry before it rains."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-noun-no-mae-ni",
+          "title": "Noun の 前に (Noun no mae ni)",
+          "explanation": "Used to describe a location or position 'in front of' a noun.",
+          "structure": "Noun + の + 前に",
+          "examples": [
+            {
+              "japanese": "駅の前にコンビニがあります。",
+              "english": "There is a convenience store in front of the station."
+            },
+            {
+              "japanese": "家の前に車を止めてください。",
+              "english": "Please park the car in front of the house."
+            },
+            {
+              "japanese": "私の前に彼が立っていました。",
+              "english": "He was standing in front of me."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-te-kara",
+          "title": "Verb てから～ (〜te kara)",
+          "explanation": "Express a sequence of actions or events; 'after', 'since', 'once'.",
+          "structure": "Verb-て形 + から",
+          "examples": [
+            {
+              "japanese": "宿題をしてから、テレビを見ました。",
+              "english": "I watched TV after doing my homework."
+            },
+            {
+              "japanese": "食べてから、歯を磨きましょう。",
+              "english": "Let's brush our teeth after eating."
+            },
+            {
+              "japanese": "仕事が終わってから、友達と飲みに行きます。",
+              "english": "I will go drinking with my friends after work is done."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n5-grammar-11",
+      "name": "N5 Grammar 11: Giving & Receiving",
+      "type": "grammar",
+      "level": "n5",
+      "order": 81,
+      "intro": {
+        "title": "Giving and Receiving",
+        "explanation": "Japanese has distinct verbs for giving and receiving depending on the social relationship.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n5-ni-agemasu",
+          "title": "～に あげます (〜 ni agemasu)",
+          "explanation": "Used to express giving something to someone; 'give', 'offer'.",
+          "structure": "Receiver + に + Object + を + あげます",
+          "examples": [
+            {
+              "japanese": "私は友達に本をあげました。",
+              "english": "I gave a book to my friend."
+            },
+            {
+              "japanese": "彼にプレゼントをあげましょう。",
+              "english": "Let's give him a present."
+            },
+            {
+              "japanese": "先生に花をあげます。",
+              "english": "I will give flowers to the teacher."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-ni-moraimasu",
+          "title": "～に もらいます (〜ni moraimasu)",
+          "explanation": "To receive something or some action from someone; 'to get', 'to receive'.",
+          "structure": "Giver + に + Verb-te form + もらいます / Giver + に + Object + を + もらいます",
+          "examples": [
+            {
+              "japanese": "友達にプレゼントをもらいました。",
+              "english": "I received a gift from my friend."
+            },
+            {
+              "japanese": "先生にアドバイスをもらいました。",
+              "english": "I got advice from my teacher."
+            },
+            {
+              "japanese": "おばあさんに手紙を書いてもらいました。",
+              "english": "I had my grandmother write a letter for me."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-kara-moraimasu",
+          "title": "～から もらいます (〜kara moraimasu)",
+          "explanation": "To receive something or get someone to do something.",
+          "structure": "Noun + から + (Verb-て form) + もらいます",
+          "examples": [
+            {
+              "japanese": "友達からプレゼントをもらいました。",
+              "english": "I received a present from my friend."
+            },
+            {
+              "japanese": "先生に宿題を渡してもらいました。",
+              "english": "I had the teacher hand me the homework."
+            },
+            {
+              "japanese": "お母さんに料理を作ってもらいました。",
+              "english": "I got my mom to cook for me."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-ga-watashi-ni-kuremasu",
+          "title": "～が 私に くれます (〜ga watashi ni kuremasu)",
+          "explanation": "Used to express that someone gives a gift or favor to 'me'; 'someone gives me'.",
+          "structure": "Person + が + (Thing or Action) + 私に + くれます",
+          "examples": [
+            {
+              "japanese": "彼がプレゼントを私にくれました。",
+              "english": "He gave me a present."
+            },
+            {
+              "japanese": "友達が宿題を手伝って私にくれました。",
+              "english": "My friend helped me with my homework."
+            },
+            {
+              "japanese": "お母さんがお弁当を作って私にくれました。",
+              "english": "My mom made me a lunch box."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n5-grammar-12",
+      "name": "N5 Grammar 12: Comparisons",
+      "type": "grammar",
+      "level": "n5",
+      "order": 82,
+      "intro": {
+        "title": "Making Comparisons",
+        "explanation": "Learn to compare two or more things and express superlatives.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n5-a-wa-b-yori",
+          "title": "A は B より～ (A wa B yori～)",
+          "explanation": "Express a comparison between A and B; 'A is more/less than B'.",
+          "structure": "A は B より + Adjective",
+          "examples": [
+            {
+              "japanese": "このジュースはあのジュースより甘いです。",
+              "english": "This juice is sweeter than that juice."
+            },
+            {
+              "japanese": "夏は冬より暑いです。",
+              "english": "Summer is hotter than winter."
+            },
+            {
+              "japanese": "彼女は私より速く走ります。",
+              "english": "She runs faster than me."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-a-yori-b-no-hou-ga",
+          "title": "A より B のほうが～ (A yori B no hou ga ～)",
+          "explanation": "Used to compare two items; 'B is more ～ than A'.",
+          "structure": "A + より + B + のほうが + Adjective",
+          "examples": [
+            {
+              "japanese": "ピザよりハンバーガーのほうが美味しい。",
+              "english": "Hamburgers are more delicious than pizza."
+            },
+            {
+              "japanese": "夏より冬のほうが寒い。",
+              "english": "Winter is colder than summer."
+            },
+            {
+              "japanese": "ここよりそこのほうが静かです。",
+              "english": "There is quieter than here."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-a-to-b-to-dochira",
+          "title": "Aと Bと どちら～ (A to B to dochira~)",
+          "explanation": "Used to ask which of two alternatives is preferred or to compare two things",
+          "structure": "Aと Bと どちら + Verb/Adjective/Noun",
+          "examples": [
+            {
+              "japanese": "りんごとみかんとどちらが好きですか。",
+              "english": "Which do you like, apples or oranges?"
+            },
+            {
+              "japanese": "電車とバスとどちらで行くべきですか。",
+              "english": "Should I go by train or bus?"
+            },
+            {
+              "japanese": "赤いワンピースと青いワンピースとどちらが似合うと思いますか。",
+              "english": "Which do you think suits me better, the red dress or the blue dress?"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-a-to-b-to-docchi",
+          "title": "AとBと どっち〜 (A to B to docchi〜)",
+          "explanation": "Asking which one; 'which', 'A or B'.",
+          "structure": "AとBと どっち + Verb, AかBか どっち + Verb",
+          "examples": [
+            {
+              "japanese": "コーヒーと紅茶とどっちが好き？",
+              "english": "Which do you like, coffee or tea?"
+            },
+            {
+              "japanese": "映画と音楽とどっちを楽しむ？",
+              "english": "Which do you enjoy, movies or music?"
+            },
+            {
+              "japanese": "赤いシャツと青いシャツとどっちを買う？",
+              "english": "Which one will you buy, the red shirt or the blue shirt?"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-a-ga-ichiban",
+          "title": "A が いちばん～ (A ga ichiban～)",
+          "explanation": "Express the superlative degree; 'the most', 'the best', 'the least'.",
+          "structure": "Noun + が + いちばん + Adjective/Verb",
+          "examples": [
+            {
+              "japanese": "この中で、寿司が一番好きです。",
+              "english": "Of all these, I like sushi the most."
+            },
+            {
+              "japanese": "彼女はクラスで一番速く泳げます。",
+              "english": "She can swim the fastest in the class."
+            },
+            {
+              "japanese": "この町では、この公園が一番きれいです。",
+              "english": "In this town, this park is the most beautiful."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n5-grammar-13",
+      "name": "N5 Grammar 13: Question Words - What & Who",
+      "type": "grammar",
+      "level": "n5",
+      "order": 83,
+      "intro": {
+        "title": "Question Words: What and Who",
+        "explanation": "Learn to ask about things and people using なに, だれ, and their variations.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n5-nani",
+          "title": "なに～ (nani~)",
+          "explanation": "Asking about 'what' or 'which' in Japanese",
+          "structure": "Verb + なに, い-Adjective + なに, な-Adjective + なに, Noun + なに",
+          "examples": [
+            {
+              "japanese": "これはなにですか。",
+              "english": "What is this?"
+            },
+            {
+              "japanese": "あの人はなにをしているのですか？",
+              "english": "What is that person doing?"
+            },
+            {
+              "japanese": "なにが好きですか？",
+              "english": "What do you like?"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-nan",
+          "title": "なん～ (nan~)",
+          "explanation": "Used to form interrogative questions and emphasize the question word for 'what', 'how'.",
+          "structure": "なん + Counter / なん + Verb / なん + Adjective",
+          "examples": [
+            {
+              "japanese": "あなたはなん歳ですか？",
+              "english": "How old are you?"
+            },
+            {
+              "japanese": "これはなんですか？",
+              "english": "What is this?"
+            },
+            {
+              "japanese": "彼はなんで来ましたか？",
+              "english": "Why did he come?"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-dare",
+          "title": "だれ～ (dare～)",
+          "explanation": "Asking 'who' in a sentence, used to inquire about someone's identity or to clarify who is being referred to.",
+          "structure": "だれ + appropriate particle (が, は or を)",
+          "examples": [
+            {
+              "japanese": "だれがその本を買いましたか。",
+              "english": "Who bought that book?"
+            },
+            {
+              "japanese": "だれを待っていますか。",
+              "english": "Whom are you waiting for?"
+            },
+            {
+              "japanese": "だれがそのリンゴを食べましたか。",
+              "english": "Who ate that apple?"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-donata",
+          "title": "どなた～ (donata～)",
+          "explanation": "A polite way to ask 'who', used for asking about someone's identity or when seeking information about an unknown person.",
+          "structure": "どなた",
+          "examples": [
+            {
+              "japanese": "すみません、どなたが山田さんですか？",
+              "english": "Excuse me, who is Mr. Yamada?"
+            },
+            {
+              "japanese": "どなたも知っている有名な俳優です。",
+              "english": "He is a famous actor whom everyone knows."
+            },
+            {
+              "japanese": "明日のパーティーにはどなたが来ますか？",
+              "english": "Who is coming to the party tomorrow?"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-nande",
+          "title": "なんで～ (nande～)",
+          "explanation": "Asking the reason or cause; 'why', 'how come'.",
+          "structure": "なんで + [phrase or sentence]",
+          "examples": [
+            {
+              "japanese": "なんで遅れたの？",
+              "english": "Why were you late?"
+            },
+            {
+              "japanese": "なんでこの部屋はこんなに汚いの？",
+              "english": "Why is this room so dirty?"
+            },
+            {
+              "japanese": "なんで彼女は怒っているの？",
+              "english": "Why is she angry?"
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n5-grammar-14",
+      "name": "N5 Grammar 14: Question Words - Where & Which",
+      "type": "grammar",
+      "level": "n5",
+      "order": 84,
+      "intro": {
+        "title": "Question Words: Where and Which",
+        "explanation": "Ask about locations and make selections using どこ, どの, どれ, and どちら.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n5-doko",
+          "title": "どこ～ (doko～)",
+          "explanation": "Express 'where', used with question words for asking about locations.",
+          "structure": "どこ + question particle",
+          "examples": [
+            {
+              "japanese": "駅はどこですか？",
+              "english": "Where is the station?"
+            },
+            {
+              "japanese": "どこで映画を見ましたか？",
+              "english": "Where did you watch the movie?"
+            },
+            {
+              "japanese": "どこに住んでいますか？",
+              "english": "Where do you live?"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-dochira",
+          "title": "どちら～ (dochira～)",
+          "explanation": "Used to ask about two choices or options.",
+          "structure": "どちら + が/を + verb, どちら + が/を + adjective, どちら + が/を + noun",
+          "examples": [
+            {
+              "japanese": "この二つのリンゴ、どちらが美味しいですか？",
+              "english": "Which of these two apples is delicious?"
+            },
+            {
+              "japanese": "どちらのドレスを着たいですか？",
+              "english": "Which dress would you like to wear?"
+            },
+            {
+              "japanese": "この二つの町、どちらに行きたいですか？",
+              "english": "Which of these two towns do you want to go to?"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-dono-noun",
+          "title": "どの Noun (dono Noun)",
+          "explanation": "Expresses 'which'; used to ask about specific items within a group.",
+          "structure": "どの + Noun",
+          "examples": [
+            {
+              "japanese": "どの本が一番面白いですか。",
+              "english": "Which book is the most interesting?"
+            },
+            {
+              "japanese": "どの服を着たいですか。",
+              "english": "Which clothes do you want to wear?"
+            },
+            {
+              "japanese": "どの色が好きですか。",
+              "english": "Which color do you like?"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-donna",
+          "title": "どんな Noun (donna)",
+          "explanation": "Used to ask or describe 'what kind' or 'what type' of something.",
+          "structure": "どんな + Noun",
+          "examples": [
+            {
+              "japanese": "どんな音楽が好きですか？",
+              "english": "What kind of music do you like?"
+            },
+            {
+              "japanese": "彼女はどんな映画が好きだと思う？",
+              "english": "What kind of movies do you think she likes?"
+            },
+            {
+              "japanese": "どんな本が一番面白いですか？",
+              "english": "What kind of books are the most interesting?"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-ikutsu",
+          "title": "いくつ～ (ikutsu~)",
+          "explanation": "Used to express 'how many' or ask for the number of something.",
+          "structure": "いくつ + Noun (optional)",
+          "examples": [
+            {
+              "japanese": "リンゴはいくつありますか？",
+              "english": "How many apples are there?"
+            },
+            {
+              "japanese": "いくつかの問題を解決しなければなりません。",
+              "english": "I have to solve several problems."
+            },
+            {
+              "japanese": "あなたはいくつの言語を話せますか？",
+              "english": "How many languages can you speak?"
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n5-grammar-15",
+      "name": "N5 Grammar 15: Question Words - How",
+      "type": "grammar",
+      "level": "n5",
+      "order": 85,
+      "intro": {
+        "title": "Asking How",
+        "explanation": "Learn different ways to ask 'how' and make suggestions.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n5-dou-desu-ka",
+          "title": "～どうですか。 (〜dou desu ka.)",
+          "explanation": "Asking for opinions or suggestions; 'how about', 'what do you think of'.",
+          "structure": "Noun + は/が + どうですか / Verb-casual + の + どうですか / い-Adjective + どうですか / な-Adjective + な + どうですか",
+          "examples": [
+            {
+              "japanese": "この映画はどうですか？",
+              "english": "How about this movie? / What do you think of this movie?"
+            },
+            {
+              "japanese": "晩ご飯に寿司を食べるのはどうですか？",
+              "english": "How about eating sushi for dinner?"
+            },
+            {
+              "japanese": "この部屋は広いと思いますが、どうですか？",
+              "english": "I think this room is spacious, what do you think?"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-dou-shimasu-ka",
+          "title": "～どう しますか。 (～dou shimasu ka.)",
+          "explanation": "Asking for someone's opinion or decision; 'what will you do?', 'how will you handle it?'.",
+          "structure": "Situation + どうしますか",
+          "examples": [
+            {
+              "japanese": "雨が降っているので、どうしますか？",
+              "english": "It's raining, so what will you do?"
+            },
+            {
+              "japanese": "この問題について、どうしますか？",
+              "english": "What are you going to do about this issue?"
+            },
+            {
+              "japanese": "彼が来なかったら、どうしますか？",
+              "english": "If he doesn't come, what will you do?"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-douyatte",
+          "title": "どうやって～ (douyatte～)",
+          "explanation": "Ask 'how' something is done or how to do something.",
+          "structure": "どうやって + Verb-casual",
+          "examples": [
+            {
+              "japanese": "どうやってお寿司を作りますか？",
+              "english": "How do you make sushi?"
+            },
+            {
+              "japanese": "どうやって日本語を勉強しましたか？",
+              "english": "How did you study Japanese?"
+            },
+            {
+              "japanese": "どうやってこの問題を解決しますか？",
+              "english": "How do you solve this problem?"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-ikaga-desu-ka",
+          "title": "～いかがですか。 (〜ikaga desu ka.)",
+          "explanation": "A polite way to ask someone's thoughts, opinions, or preferences; 'how about', 'how is'.",
+          "structure": "Noun + は + いかがですか / (Verb-て form + は) いかがですか",
+          "examples": [
+            {
+              "japanese": "お茶はいかがですか？",
+              "english": "How about some tea?"
+            },
+            {
+              "japanese": "このドレスはいかがですか？",
+              "english": "How about this dress?"
+            },
+            {
+              "japanese": "ケーキを食べてはいかがですか？",
+              "english": "How about eating some cake?"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-nan-to-iimasu-ka",
+          "title": "～なんと 言いますか。 (〜nan to iimasu ka.)",
+          "explanation": "Asking how something is called or referred to; 'how do you say'",
+          "structure": "Noun + は/が + なんと言いますか",
+          "examples": [
+            {
+              "japanese": "この花はなんと言いますか。",
+              "english": "How do you say this flower?"
+            },
+            {
+              "japanese": "この料理はなんと言いますか。",
+              "english": "What do you call this dish?"
+            },
+            {
+              "japanese": "日本でこれはなんと言いますか。",
+              "english": "How do you say this in Japanese?"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-dou-iimasu-ka",
+          "title": "～どう 言いますか。 (〜dou iimasu ka.)",
+          "explanation": "Asking for the way to say something; 'how do you say'.",
+          "structure": "Word/Phrase + は [language]でどう言いますか / Word/Phrase + をどう言いますか",
+          "examples": [
+            {
+              "japanese": "「ありがとう」は英語でどう言いますか。",
+              "english": "How do you say 'thank you' in English?"
+            },
+            {
+              "japanese": "この言葉を日本語でどう言いますか。",
+              "english": "How do you say this word in Japanese?"
+            },
+            {
+              "japanese": "「すみません」はフランス語でどう言いますか。",
+              "english": "How do you say 'excuse me' in French?"
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n5-grammar-16",
+      "name": "N5 Grammar 16: Indefinite Pronouns - Some",
+      "type": "grammar",
+      "level": "n5",
+      "order": 86,
+      "intro": {
+        "title": "Indefinite Pronouns: Someone, Something, Somewhere",
+        "explanation": "Express indefinite references using か-compounds.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n5-nanika",
+          "title": "なにか～ (nanika～)",
+          "explanation": "Indicates 'something' or 'some kind of'.",
+          "structure": "なにか + Noun",
+          "examples": [
+            {
+              "japanese": "なにか飲み物を持ってきてください。",
+              "english": "Please bring some kind of drink."
+            },
+            {
+              "japanese": "なにか質問があれば、遠慮なく聞いてください。",
+              "english": "If you have any questions, please feel free to ask."
+            },
+            {
+              "japanese": "彼女はなにかプレゼントを持っている。",
+              "english": "She has some kind of present."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-dareka",
+          "title": "だれか〜 (dareka〜)",
+          "explanation": "Indicates 'someone' or something done or possessed by 'someone'.",
+          "structure": "だれか + Verb, だれか + Adjective, だれか + Noun",
+          "examples": [
+            {
+              "japanese": "だれかがドアをノックしました。",
+              "english": "Someone knocked on the door."
+            },
+            {
+              "japanese": "だれかが私の傘を盗みました。",
+              "english": "Someone stole my umbrella."
+            },
+            {
+              "japanese": "だれか助けてください。",
+              "english": "Someone, please help."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-dokoka",
+          "title": "どこか～ (dokoka～)",
+          "explanation": "Expresses 'somewhere', used when the specific location is unknown or uncertain.",
+          "structure": "どこか + (Particle, if needed) + Verb/Noun/Adjective",
+          "examples": [
+            {
+              "japanese": "どこかで財布をなくしました。",
+              "english": "I lost my wallet somewhere."
+            },
+            {
+              "japanese": "今日はどこかに行きたいです。",
+              "english": "I want to go somewhere today."
+            },
+            {
+              "japanese": "どこか安いレストランがありますか？",
+              "english": "Is there a cheap restaurant somewhere?"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-itsuka",
+          "title": "いつか～ (itsuka～)",
+          "explanation": "Indicates an unspecified point in time; 'someday', 'one day', 'at some point'.",
+          "structure": "いつか + sentence",
+          "examples": [
+            {
+              "japanese": "いつか日本に行きたいです。",
+              "english": "I want to go to Japan someday."
+            },
+            {
+              "japanese": "彼はいつか有名な作家になるでしょう。",
+              "english": "He will become a famous writer someday."
+            },
+            {
+              "japanese": "いつかあの山を登りたいと思っています。",
+              "english": "I think I want to climb that mountain someday."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n5-grammar-17",
+      "name": "N5 Grammar 17: Indefinite Pronouns - Every & None",
+      "type": "grammar",
+      "level": "n5",
+      "order": 87,
+      "intro": {
+        "title": "Every and None",
+        "explanation": "Express universal and negative indefinite references.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n5-nandemo",
+          "title": "なんでも～ (nandemo～)",
+          "explanation": "Means 'any', 'anything', 'anyone'.",
+          "structure": "なんでも + Verb / なんでも + Adjective / なんでも + Noun",
+          "examples": [
+            {
+              "japanese": "なんでも食べられるから、何を頼んでも大丈夫です。",
+              "english": "I can eat anything, so it's okay to order whatever you want."
+            },
+            {
+              "japanese": "なんでもよければ、この本をおすすめします。",
+              "english": "If you're okay with anything, I recommend this book."
+            },
+            {
+              "japanese": "なんでもできるスタッフを探しています。",
+              "english": "We are looking for a staff member who can do anything."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-dare-demo",
+          "title": "だれでも～ (dare demo～)",
+          "explanation": "Used to express 'anyone' or 'everyone'; 'no matter who'.",
+          "structure": "だれでも + Verb/Adjective/Noun",
+          "examples": [
+            {
+              "japanese": "だれでもこのゲームができます。",
+              "english": "Anyone can play this game."
+            },
+            {
+              "japanese": "だれでも疲れることがあります。",
+              "english": "Everyone gets tired sometimes."
+            },
+            {
+              "japanese": "だれでも無料でこのイベントに参加できます。",
+              "english": "Anyone can participate in this event for free."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-dokodemo",
+          "title": "どこでも～ (dokodemo～)",
+          "explanation": "Express 'anywhere' or 'everywhere' in Japanese.",
+          "structure": "Simply use the word どこでも in the sentence as an adverb to indicate 'anywhere' or 'everywhere'.",
+          "examples": [
+            {
+              "japanese": "どこでも好きな場所で勉強できます。",
+              "english": "You can study anywhere you like."
+            },
+            {
+              "japanese": "このノートパソコンは便利なので、どこでもインターネットが使えます。",
+              "english": "This laptop is convenient, so you can use the internet anywhere."
+            },
+            {
+              "japanese": "彼はどこでも寝ることができます。",
+              "english": "He can sleep anywhere."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-itsudemo",
+          "title": "いつでも～ (itsudemo～)",
+          "explanation": "Expresses 'anytime', 'always', or 'whenever'.",
+          "structure": "いつでも + (Verb)",
+          "examples": [
+            {
+              "japanese": "いつでも遊びに来てください。",
+              "english": "Please come to play anytime."
+            },
+            {
+              "japanese": "彼女はいつでも笑顔です。",
+              "english": "She is always smiling."
+            },
+            {
+              "japanese": "いつでも電話で連絡できます。",
+              "english": "You can contact me by phone anytime."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-dore-demo",
+          "title": "どれでも～ (dore demo～)",
+          "explanation": "Indicates 'any' or 'whichever' when referring to multiple items.",
+          "structure": "どれ + でも",
+          "examples": [
+            {
+              "japanese": "どれでもいいですか？",
+              "english": "Is any choice okay?"
+            },
+            {
+              "japanese": "どれでも選んでください。",
+              "english": "Please choose whichever you like."
+            },
+            {
+              "japanese": "どれでもおいしいです。",
+              "english": "All of them are delicious."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n5-grammar-18",
+      "name": "N5 Grammar 18: Negative Indefinites",
+      "type": "grammar",
+      "level": "n5",
+      "order": 88,
+      "intro": {
+        "title": "Nobody, Nothing, Nowhere",
+        "explanation": "Express negative indefinites - nobody, nothing, and nowhere.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n5-nani-monai-desu",
+          "title": "なにも～ないです (nani mo~nai desu)",
+          "explanation": "Used to express 'not any' or 'nothing' in a negative sentence.",
+          "structure": "なにも + Verb-negative",
+          "examples": [
+            {
+              "japanese": "彼はなにも言わなかったです。",
+              "english": "He didn't say anything."
+            },
+            {
+              "japanese": "私はなにも食べないです。",
+              "english": "I don't eat anything."
+            },
+            {
+              "japanese": "彼女はなにも持っていないです。",
+              "english": "She doesn't have anything."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-nanimomasen",
+          "title": "なにも～ません (nanimo~masen)",
+          "explanation": "Used to express 'not anything', 'nothing'.",
+          "structure": "なにも + Verb-ます form + ません",
+          "examples": [
+            {
+              "japanese": "昨日はなにも食べませんでした。",
+              "english": "I didn't eat anything yesterday."
+            },
+            {
+              "japanese": "彼はなにも話しません。",
+              "english": "He doesn't say anything."
+            },
+            {
+              "japanese": "この部屋ではなにも見えません。",
+              "english": "I cannot see anything in this room."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-dare-mo-nai-desu",
+          "title": "だれも～ないです (dare mo ~ nai desu)",
+          "explanation": "Express 'nobody' or 'no one' in a negative sentence.",
+          "structure": "だれも + Verb-negative form (ないです), だれも + い-Adjective-negative form (ないです), だれも + な-Adjective-negative form (じゃないです)",
+          "examples": [
+            {
+              "japanese": "だれも知らないです。",
+              "english": "Nobody knows."
+            },
+            {
+              "japanese": "だれも来ないです。",
+              "english": "Nobody is coming."
+            },
+            {
+              "japanese": "彼女はだれも好きじゃないです。",
+              "english": "She doesn't like anyone."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-daremo-masen",
+          "title": "だれも～ません (daremo ~masen)",
+          "explanation": "Express 'nobody' or 'no one' in negative sentences.",
+          "structure": "だれも + Verb-negative (ません)",
+          "examples": [
+            {
+              "japanese": "だれも秘密を知りません。",
+              "english": "No one knows the secret."
+            },
+            {
+              "japanese": "だれもその質問に答えませんでした。",
+              "english": "Nobody answered that question."
+            },
+            {
+              "japanese": "だれも彼を助けてあげません。",
+              "english": "Nobody will help him."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n5-grammar-19",
+      "name": "N5 Grammar 19: Negative Indefinites - Location",
+      "type": "grammar",
+      "level": "n5",
+      "order": 89,
+      "intro": {
+        "title": "Nowhere Patterns",
+        "explanation": "Multiple ways to express 'nowhere' depending on the particle used.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n5-doko-ni-mo-verb-nai-desu",
+          "title": "どこにも + Verb + ないです (doko ni mo + Verb + nai desu)",
+          "explanation": "Express that an action cannot be performed anywhere or something cannot be found anywhere.",
+          "structure": "どこにも + Verb in ない-form + です",
+          "examples": [
+            {
+              "japanese": "どこにも傘が売ってないです。",
+              "english": "Umbrellas are not sold anywhere."
+            },
+            {
+              "japanese": "彼はどこにも見つけられないです。",
+              "english": "He cannot be found anywhere."
+            },
+            {
+              "japanese": "どこにも勉強できる場所がないです。",
+              "english": "There is no place to study anywhere."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-doko-ni-mo-verb-masen",
+          "title": "どこにも + Verb + ません (doko ni mo + Verb + masen)",
+          "explanation": "Express 'not anywhere' or 'nowhere' with a negative verb.",
+          "structure": "どこにも + Verb-negative",
+          "examples": [
+            {
+              "japanese": "どこにもあの猫がいません。",
+              "english": "The cat is not anywhere."
+            },
+            {
+              "japanese": "どこにもお金を置いていません。",
+              "english": "I didn't put the money anywhere."
+            },
+            {
+              "japanese": "この町にはどこにも美味しいラーメン屋がありません。",
+              "english": "There are no delicious ramen shops anywhere in this town."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-doko-e-mo-verb-nai-desu",
+          "title": "どこへも Verb ないです (doko e mo + Verb + nai desu)",
+          "explanation": "Express that an action doesn't take place anywhere; 'nowhere', 'not anywhere'.",
+          "structure": "どこへも + Verb in negative form (ないです)",
+          "examples": [
+            {
+              "japanese": "今週末どこへも行かないです。",
+              "english": "I'm not going anywhere this weekend."
+            },
+            {
+              "japanese": "彼女はどこへも買い物に行きませんでした。",
+              "english": "She didn't go shopping anywhere."
+            },
+            {
+              "japanese": "スーパーはどこへも売らないです。",
+              "english": "It's not sold at any supermarket."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-doko-e-mo-verb-masen",
+          "title": "どこへも Verb ません (doko e mo + Verb + masen)",
+          "explanation": "Nowhere; Not to any place",
+          "structure": "どこへも + Verb-negative",
+          "examples": [
+            {
+              "japanese": "今日はどこへも行きません。",
+              "english": "I won't go anywhere today."
+            },
+            {
+              "japanese": "彼はどこへも走りませんでした。",
+              "english": "He didn't run anywhere."
+            },
+            {
+              "japanese": "どこへも買い物に行きませんでした。",
+              "english": "I didn't go shopping anywhere."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-dokomo-verb-naidesu",
+          "title": "どこも Verb ないです (dokomo + Verb + naidesu)",
+          "explanation": "Express that something cannot be found anywhere or in any place; 'nowhere', 'in no place'.",
+          "structure": "どこも + Verb-negative",
+          "examples": [
+            {
+              "japanese": "どこもうちわがないです。",
+              "english": "I can't find fans anywhere."
+            },
+            {
+              "japanese": "この町ではどこも美味しいラーメンがないです。",
+              "english": "There are no delicious ramen shops anywhere in this town."
+            },
+            {
+              "japanese": "どこも駐車場がないです。",
+              "english": "There is no parking anywhere."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-dokomo-verb-masen",
+          "title": "どこも Verb ません (dokomo + Verb + masen)",
+          "explanation": "Express that 'nowhere' meets the verb action; 'nowhere does/can'.",
+          "structure": "どこも + Verb-ます form + ません",
+          "examples": [
+            {
+              "japanese": "どこも静かじゃありません。",
+              "english": "Nowhere is quiet."
+            },
+            {
+              "japanese": "どこもその本を売っていません。",
+              "english": "Nowhere sells that book."
+            },
+            {
+              "japanese": "この地域では、どこもインターネットに接続できません。",
+              "english": "In this area, nowhere can connect to the internet."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n5-grammar-20",
+      "name": "N5 Grammar 20: Conjunctions - But & However",
+      "type": "grammar",
+      "level": "n5",
+      "order": 90,
+      "intro": {
+        "title": "Conjunctions: Contrast",
+        "explanation": "Connect contrasting ideas using various 'but' and 'however' expressions.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n5-a-keredomo-b",
+          "title": "A。けれども、～B。(A. Keredomo,~ B.)",
+          "explanation": "Used to express a contrast between two statements. It can be translated as 'but' or 'however'.",
+          "structure": "Statement A + けれども、+ Statement B",
+          "examples": [
+            {
+              "japanese": "今日は晴れている。けれども、寒いです。",
+              "english": "It is sunny today. However, it is cold."
+            },
+            {
+              "japanese": "彼女はうるさい。けれども、面白いです。",
+              "english": "She is noisy. But, she is interesting."
+            },
+            {
+              "japanese": "その映画は長かった。けれども、退屈じゃなかった。",
+              "english": "The movie was long. But, it wasn't boring."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-a-shikashi-b",
+          "title": "A。しかし、～B。 (A. Shikashi, ~B.)",
+          "explanation": "Expresses contrast or contradiction between two clauses; 'A, but B', 'A, however B'.",
+          "structure": "Sentence A + しかし + Sentence B.",
+          "examples": [
+            {
+              "japanese": "今日は忙しい。しかし、時間があるなら、コーヒーを飲もう。",
+              "english": "I'm busy today. However, if I have time, let's have coffee."
+            },
+            {
+              "japanese": "その映画は面白かった。しかし、長すぎました。",
+              "english": "The movie was interesting. But, it was too long."
+            },
+            {
+              "japanese": "彼は疲れていた。しかし、宿題を終わらせた。",
+              "english": "He was tired. However, he finished his homework."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-a-demo-b",
+          "title": "A。でも、～B。(A. Demo, ~B)",
+          "explanation": "Used to express contrast between two statements; 'A, but B', 'A, however B'.",
+          "structure": "Clause A + でも + Clause B",
+          "examples": [
+            {
+              "japanese": "昨日は寒かった。でも、今日は暖かいです。",
+              "english": "Yesterday was cold. But today it's warm."
+            },
+            {
+              "japanese": "彼は忙しい。でも、友達と遊ぶ時間がある。",
+              "english": "He is busy. However, he still has time to hang out with friends."
+            },
+            {
+              "japanese": "試験に合格した。でも、まだ勉強を続けています。",
+              "english": "I passed the exam. But I'm still continuing to study."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-ga-20",
+          "title": "～が、～ (〜ga, 〜)",
+          "explanation": "Express a contrast between two sentences; 'but', 'however'.",
+          "structure": "Sentence 1 + が、+ Sentence 2",
+          "examples": [
+            {
+              "japanese": "デザートは美味しいが、カロリーが高い。",
+              "english": "The dessert is delicious, but it is high in calories."
+            },
+            {
+              "japanese": "彼は頭がいいが、少し怠け者だ。",
+              "english": "He is smart, but a bit lazy."
+            },
+            {
+              "japanese": "会社は利益を上げたが、従業員の給与は上がらなかった。",
+              "english": "The company made a profit, however, the employees' salaries did not increase."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-kedo",
+          "title": "～けど、～ (〜kedo、～)",
+          "explanation": "Used to connect two clauses; 'but', 'however', 'although'",
+          "structure": "Verb-casual + けど / い-adjective + けど / な-adjective + だけど / Noun + だけど",
+          "examples": [
+            {
+              "japanese": "授業に出たけど、まだ宿題をしないといけない。",
+              "english": "I attended the class, but I still have to do my homework."
+            },
+            {
+              "japanese": "昨日寒かったけど、今日は暖かいです。",
+              "english": "Yesterday was cold, but today is warm."
+            },
+            {
+              "japanese": "彼は親切だけど、ちょっと怖い。",
+              "english": "He is kind, but a little scary."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-keredo",
+          "title": "～けれど、～ (〜keredo、～)",
+          "explanation": "Expresses a contrast or contradiction; 'but', 'however', 'even though'.",
+          "structure": "Verb-casual + けれど / い-Adjective + けれど / な-Adjective + だけれど / Noun + だけれど",
+          "examples": [
+            {
+              "japanese": "今日は寒いけれど、散歩に行きます。",
+              "english": "Even though it's cold today, I'll go for a walk."
+            },
+            {
+              "japanese": "彼は親切けれど、少し怖いです。",
+              "english": "He is kind, but a little scary."
+            },
+            {
+              "japanese": "この部屋は狭いけれど、明るいです。",
+              "english": "This room is small, but it's bright."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n5-grammar-21",
+      "name": "N5 Grammar 21: Conjunctions - So & Then",
+      "type": "grammar",
+      "level": "n5",
+      "order": 91,
+      "intro": {
+        "title": "Conjunctions: Cause and Sequence",
+        "explanation": "Connect ideas showing cause, result, and sequence.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n5-kara",
+          "title": "～から、～ (〜kara、～)",
+          "explanation": "Expresses reason or cause; 'because', 'since', 'so'.",
+          "structure": "Verb-casual + から / い-Adjective + から / な-Adjective + だから / Noun + だから",
+          "examples": [
+            {
+              "japanese": "明日は試験があるから、今晩勉強しなければなりません。",
+              "english": "Because I have an exam tomorrow, I must study tonight."
+            },
+            {
+              "japanese": "この部屋は狭いから、もっと大きい部屋を探しています。",
+              "english": "Since this room is small, I am looking for a bigger one."
+            },
+            {
+              "japanese": "彼は友達だから、手伝ってくれるでしょう。",
+              "english": "Since he is my friend, he will probably help me."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-kara-desu",
+          "title": "～からです (〜kara desu)",
+          "explanation": "Express the reason or cause; 'because', 'since', 'due to'.",
+          "structure": "Verb-casual + からです / い-Adjective + からです / な-Adjective + だからです / Noun + だからです",
+          "examples": [
+            {
+              "japanese": "寒いからです。コートを着ています。",
+              "english": "It’s because it’s cold. That’s why I’m wearing a coat."
+            },
+            {
+              "japanese": "この店は安いからです。よく来ます。",
+              "english": "It’s because this store is cheap. That’s why I come often."
+            },
+            {
+              "japanese": "彼は親切だからです。みんなに好かれています。",
+              "english": "It’s because he’s kind. Everyone likes him."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-dakara",
+          "title": "だから、～ (dakara、～)",
+          "explanation": "Expresses a reason or cause; 'because', 'so', 'therefore'.",
+          "structure": "Noun + だから / な-Adjective + だから",
+          "examples": [
+            {
+              "japanese": "雨だから、傘を持って行きましょう。",
+              "english": "Because it's raining, let's bring an umbrella."
+            },
+            {
+              "japanese": "このケーキは有名だから、みんなが食べたいです。",
+              "english": "Because this cake is famous, everyone wants to eat it."
+            },
+            {
+              "japanese": "彼は病気だから、学校に行けません。",
+              "english": "Because he is sick, he cannot go to school."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-soshite",
+          "title": "そして、～ (soshite、～)",
+          "explanation": "Used to connect two sentences; 'and then', 'and'.",
+          "structure": "Sentence 1 + そして + Sentence 2",
+          "examples": [
+            {
+              "japanese": "朝起きて、そして宿題をしました。",
+              "english": "I woke up in the morning and then did my homework."
+            },
+            {
+              "japanese": "コーヒーを飲んで、そして新聞を読みました。",
+              "english": "I drank coffee and then read the newspaper."
+            },
+            {
+              "japanese": "家を出発しました。そして、駅へ行きました。",
+              "english": "I left my house and then went to the station."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-sorekara",
+          "title": "それから、～ (sorekara、～)",
+          "explanation": "Meaning 'after that', 'and then' or 'then', indicating sequence of events.",
+          "structure": "Clause 1 + それから + Clause 2",
+          "examples": [
+            {
+              "japanese": "コーヒーを飲んで、それから家を出ました。",
+              "english": "I drank coffee, and then I left the house."
+            },
+            {
+              "japanese": "買い物をして、それから映画を見に行きました。",
+              "english": "I went shopping, and then I went to watch a movie."
+            },
+            {
+              "japanese": "彼女は勉強をして、それから寝ました。",
+              "english": "She studied, and then she went to sleep."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n5-grammar-22",
+      "name": "N5 Grammar 22: Transition Words",
+      "type": "grammar",
+      "level": "n5",
+      "order": 92,
+      "intro": {
+        "title": "Transition Words",
+        "explanation": "Smooth conversation transitions using 'well then' and 'in that case'.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n5-a-ja-b",
+          "title": "A。じゃ、～B。(A. Ja, ~B.)",
+          "explanation": "Indicates a decision or suggestion; 'well then', 'in that case', 'so'.",
+          "structure": "A: Sentence, B: Sentence (A and B can be any sentence type)",
+          "examples": [
+            {
+              "japanese": "映画は時間がない。じゃ、また今度行こう。",
+              "english": "There's no time for a movie. Well then, let's go another time."
+            },
+            {
+              "japanese": "お腹がすいた。じゃ、レストランに行こう。",
+              "english": "I'm hungry. In that case, let's go to a restaurant."
+            },
+            {
+              "japanese": "電車が遅れた。じゃ、バスで行こう。",
+              "english": "The train is late. So, let's go by bus."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-a-sorejab",
+          "title": "A。それじゃ、～B。(A. Soreja,~B.)",
+          "explanation": "Connect two sentences; 'A, so/in that case, B'",
+          "structure": "Sentence A + 。それじゃ、 + Sentence B",
+          "examples": [
+            {
+              "japanese": "今日は休みです。それじゃ、映画を観に行きましょう。",
+              "english": "Today is a day off. In that case, let's go watch a movie."
+            },
+            {
+              "japanese": "電気が切れた。それじゃ、ろうそくを使いましょう。",
+              "english": "The electricity went out. In that case, let's use candles."
+            },
+            {
+              "japanese": "レストランが混んでいます。それじゃ、別の場所で食べましょう。",
+              "english": "The restaurant is crowded. In that case, let's eat somewhere else."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-a-soredewab",
+          "title": "A。それでは、～B。(A. Soredewa,~B.)",
+          "explanation": "Express a change in situation; 'then', 'in that case', 'so'.",
+          "structure": "A (Statement) + 。それでは、 + B (Follow-up action or statement)",
+          "examples": [
+            {
+              "japanese": "今日は休みだ。それでは、映画を見に行こう。",
+              "english": "Today is a day off. In that case, let's go see a movie."
+            },
+            {
+              "japanese": "このパンはもう古いです。それでは、捨てましょう。",
+              "english": "This bread is already old. Then, let's throw it away."
+            },
+            {
+              "japanese": "雨が降ってきた。それでは、室内で遊ぼう。",
+              "english": "It started raining. In that case, let's play indoors."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-a-dewa-b",
+          "title": "A。 では、～B。 (A. Dewa, ~B)",
+          "explanation": "Indicates a contrast or comparison between A and B; 'As for A, ~B'.",
+          "structure": "Noun A + では、 + Subject + Predicate B",
+          "examples": [
+            {
+              "japanese": "果物では、リンゴが一番好きです。",
+              "english": "As for fruits, apples are my favorite."
+            },
+            {
+              "japanese": "スポーツでは、サッカーが一番人気です。",
+              "english": "As for sports, soccer is the most popular."
+            },
+            {
+              "japanese": "今日の天気では、雨が降りそうです。",
+              "english": "As for today's weather, it looks like it will rain."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-kochira",
+          "title": "こちら～ (kochira～)",
+          "explanation": "Refers to a person, place or thing; 'this', 'this one', 'this way', 'here'.",
+          "structure": "こちら / こちら + の + Person/Thing",
+          "examples": [
+            {
+              "japanese": "こちらは田中さんです。",
+              "english": "This is Mr./Ms. Tanaka."
+            },
+            {
+              "japanese": "こちらのレストランは美味しいです。",
+              "english": "This restaurant is delicious."
+            },
+            {
+              "japanese": "こちらへどうぞ。",
+              "english": "Please come this way."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-sochira",
+          "title": "そちら～ (sochira～)",
+          "explanation": "Indicates a direction or person in moderate distance; 'that way', 'that person'.",
+          "structure": "そちら [alone] / そちら + の + Noun",
+          "examples": [
+            {
+              "japanese": "そちらのレストランはどうですか？",
+              "english": "How is that restaurant over there?"
+            },
+            {
+              "japanese": "そちらの方、お名前を教えていただけますか？",
+              "english": "Could you tell me the name of that person over there?"
+            },
+            {
+              "japanese": "そちらに行く途中で駅があります。",
+              "english": "There is a station on the way to that direction."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n5-grammar-23",
+      "name": "N5 Grammar 23: Frequency & Degree Adverbs",
+      "type": "grammar",
+      "level": "n5",
+      "order": 93,
+      "intro": {
+        "title": "Frequency and Degree",
+        "explanation": "Express how often and to what degree things happen.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n5-itsumo",
+          "title": "いつも～ (itsumo～)",
+          "explanation": "Expressing 'always' or 'usually' in a sentence.",
+          "structure": "いつも + Verb / Adjective / Noun",
+          "examples": [
+            {
+              "japanese": "彼はいつも遅刻します。",
+              "english": "He is always late."
+            },
+            {
+              "japanese": "私はいつも優しい犬が好きです。",
+              "english": "I always like gentle dogs."
+            },
+            {
+              "japanese": "彼女はいつも静かな場所で勉強します。",
+              "english": "She always studies in a quiet place."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-taitei",
+          "title": "たいてい～ (taitei～)",
+          "explanation": "Used for expressing 'usually', 'mostly', or 'generally'.",
+          "structure": "たいてい + Verb/い-Adjective/な-Adjective/Noun",
+          "examples": [
+            {
+              "japanese": "たいてい朝８時に起きます。",
+              "english": "I usually wake up at 8 o'clock in the morning."
+            },
+            {
+              "japanese": "彼はたいてい遅刻します。",
+              "english": "He is usually late."
+            },
+            {
+              "japanese": "この店の商品はたいてい安いです。",
+              "english": "The items at this store are usually cheap."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-tokidoki",
+          "title": "ときどき～ (tokidoki～)",
+          "explanation": "Used to indicate the frequency of an event; 'sometimes', 'occasionally', 'now and then'.",
+          "structure": "ときどき + Verb/Adjective/Noun",
+          "examples": [
+            {
+              "japanese": "彼はときどきケーキを作ります。",
+              "english": "He sometimes makes cakes."
+            },
+            {
+              "japanese": "ときどき雨が降るので、傘を持って行ったほうがいいです。",
+              "english": "It occasionally rains, so it's better to bring an umbrella."
+            },
+            {
+              "japanese": "私はときどきこの店で買い物をします。",
+              "english": "I shop at this store now and then."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-yoku",
+          "title": "よく～ (yoku ~)",
+          "explanation": "Often used to express 'doing something well' or 'often'.",
+          "structure": "よく + Verb-casual",
+          "examples": [
+            {
+              "japanese": "彼はよく勉強します。",
+              "english": "He studies often."
+            },
+            {
+              "japanese": "彼女はよく料理を作ります。",
+              "english": "She often cooks."
+            },
+            {
+              "japanese": "昔の友達とよく遊んでいました。",
+              "english": "I used to play a lot with my old friends."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-amari-arimasen",
+          "title": "あまり～ありません (amari ~ arimasen)",
+          "explanation": "Express 'not very', 'not much', or 'not really' when describing a negative state or situation.",
+          "structure": "あまり + Verb-ないform + ありません / あまり + い-Adjective-く ありません / あまり + な-Adjective・Noun じゃありません",
+          "examples": [
+            {
+              "japanese": "彼はあまり疲れていません。",
+              "english": "He is not really tired."
+            },
+            {
+              "japanese": "彼女はあまり早くないですよ。",
+              "english": "She is not very fast."
+            },
+            {
+              "japanese": "私はあまり勉強しないです。",
+              "english": "I don't study very much."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-amari-nai-desu",
+          "title": "あまり～ないです (amari ~ nai desu)",
+          "explanation": "Express 'not really' or 'not very'; used to soften a negative statement.",
+          "structure": "あまり + Verb-ないform + です / あまり + い-Adjective-くない + です / あまり + な-Adjective-じゃない + です",
+          "examples": [
+            {
+              "japanese": "あまり食べないです。",
+              "english": "I don't really eat much."
+            },
+            {
+              "japanese": "この映画はあまり面白くないです。",
+              "english": "This movie is not really interesting."
+            },
+            {
+              "japanese": "彼はあまり親切じゃないです。",
+              "english": "He is not very kind."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n5-grammar-24",
+      "name": "N5 Grammar 24: Degree & Approximation",
+      "type": "grammar",
+      "level": "n5",
+      "order": 94,
+      "intro": {
+        "title": "Degree and Approximation",
+        "explanation": "Express approximate amounts, degrees, and extents.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n5-zenzen",
+          "title": "ぜんぜん～ (zenzen～)",
+          "explanation": "Used to express 'not at all' or 'completely' in negative sentences.",
+          "structure": "ぜんぜん + [Negative verb/adjective]",
+          "examples": [
+            {
+              "japanese": "彼はぜんぜん話さない。",
+              "english": "He doesn't talk at all."
+            },
+            {
+              "japanese": "この部屋はぜんぜん暗くない。",
+              "english": "This room is not dark at all."
+            },
+            {
+              "japanese": "彼女はぜんぜん疲れていない。",
+              "english": "She is not tired at all."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-daitai",
+          "title": "だいたい〜 (daitai〜)",
+          "explanation": "Expresses 'roughly', 'approximately', or 'almost'.",
+          "structure": "だいたい + Number/Amount/Percentage",
+          "examples": [
+            {
+              "japanese": "だいたい１００人がパーティーに参加しました。",
+              "english": "Approximately 100 people attended the party."
+            },
+            {
+              "japanese": "彼女はだいたい２時間でその仕事を終えます。",
+              "english": "She finishes that work in roughly two hours."
+            },
+            {
+              "japanese": "だいたい８０％の生徒が試験に合格しました。",
+              "english": "About 80% of the students passed the exam."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-hotondo",
+          "title": "ほとんど〜 (hotondo〜)",
+          "explanation": "Used to express 'almost', 'nearly', or 'most'.",
+          "structure": "ほとんど + Verb / ほとんど + Noun",
+          "examples": [
+            {
+              "japanese": "彼女はほとんど英語を話せません。",
+              "english": "She can hardly speak English."
+            },
+            {
+              "japanese": "ほとんどの人がパーティーに出席しました。",
+              "english": "Most people attended the party."
+            },
+            {
+              "japanese": "私たちはほとんど勉強しないでテストに合格しました。",
+              "english": "We passed the test with hardly any studying."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-maa-maa",
+          "title": "まあまあ～ (maa maa～)",
+          "explanation": "Expresses something as 'so-so', 'not bad', or 'average'.",
+          "structure": "Used as an adverb or short expression with no special grammar structure.",
+          "examples": [
+            {
+              "japanese": "彼の料理の腕前はまあまあです。",
+              "english": "His cooking skills are so-so."
+            },
+            {
+              "japanese": "今日の天気はまあまあですね。",
+              "english": "The weather today is not bad, huh?"
+            },
+            {
+              "japanese": "あの映画はまあまあ面白かったです。",
+              "english": "That movie was somewhat interesting."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-motto",
+          "title": "もっと〜 (motto〜)",
+          "explanation": "Expresses 'more' or 'even more' when describing a quantity, frequency, or degree.",
+          "structure": "もっと + Verb / い-Adjective / な-Adjective",
+          "examples": [
+            {
+              "japanese": "もっと勉強しなければなりません。",
+              "english": "I have to study more."
+            },
+            {
+              "japanese": "このかばんをもっと大きいサイズに変えたいです。",
+              "english": "I want to change this bag to a larger size."
+            },
+            {
+              "japanese": "もっと静かな場所で働きたいです。",
+              "english": "I want to work in a quieter place."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n5-grammar-25",
+      "name": "N5 Grammar 25: Time Expressions",
+      "type": "grammar",
+      "level": "n5",
+      "order": 95,
+      "intro": {
+        "title": "Time-Related Expressions",
+        "explanation": "Express timing, duration, and temporal relationships.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n5-sakki",
+          "title": "さっき～ (sakki～)",
+          "explanation": "Refers to a short time ago or just now.",
+          "structure": "さっき + verb / さっき + phrase",
+          "examples": [
+            {
+              "japanese": "さっき電話がありました。",
+              "english": "There was a phone call just now."
+            },
+            {
+              "japanese": "さっき部屋を掃除しました。",
+              "english": "I cleaned the room a short while ago."
+            },
+            {
+              "japanese": "さっき彼に会いました。",
+              "english": "I met him just now."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-sugu-ni",
+          "title": "すぐに～ (sugu ni～)",
+          "explanation": "Immediately or right away; used to express promptness or quickness.",
+          "structure": "すぐに + Verb/Adjective",
+          "examples": [
+            {
+              "japanese": "友達が来たら、すぐに電話をかけてください。",
+              "english": "When my friend arrives, please call me right away."
+            },
+            {
+              "japanese": "そのニュースを聞いたら、すぐに会社に行きました。",
+              "english": "Upon hearing that news, I went to the company immediately."
+            },
+            {
+              "japanese": "彼女はすぐに泣き出した。",
+              "english": "She started crying right away."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-mou",
+          "title": "もう～ (mou～)",
+          "explanation": "Expresses 'already', 'anymore', or 'soon'.",
+          "structure": "もう + Verb / もう + Adjective / もう + Noun",
+          "examples": [
+            {
+              "japanese": "もう昼ごはんを食べました。",
+              "english": "I already ate lunch."
+            },
+            {
+              "japanese": "もうここでは働かない。",
+              "english": "I won't work here anymore."
+            },
+            {
+              "japanese": "もうすぐ夏休みですね。",
+              "english": "Summer vacation is coming soon, isn't it?"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-mou-sugu",
+          "title": "もうすぐ〜 (mou sugu~)",
+          "explanation": "Express an action or event happening soon: 'soon', 'in a short while', 'almost'.",
+          "structure": "もうすぐ + Verb (~ます form or 〜る form)",
+          "examples": [
+            {
+              "japanese": "もうすぐ春が来ます。",
+              "english": "Spring is coming soon."
+            },
+            {
+              "japanese": "もうすぐ彼女の誕生日です。",
+              "english": "Her birthday is coming up soon."
+            },
+            {
+              "japanese": "もうすぐ試験が終わる。",
+              "english": "The exam will be over soon."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-mada",
+          "title": "まだ〜 (mada〜)",
+          "explanation": "Indicates something has not yet happened or is still happening; 'still', 'not yet'.",
+          "structure": "まだ + Verb (non-past / negative / te-form), まだ + い-adjective, まだ + な-adjective + じゃない/ではない, まだ + Noun + じゃない/ではない",
+          "examples": [
+            {
+              "japanese": "昼ご飯はまだ食べていません。",
+              "english": "I haven't eaten lunch yet."
+            },
+            {
+              "japanese": "山田さんはまだ来ていません。",
+              "english": "Yamada-san has not arrived yet."
+            },
+            {
+              "japanese": "この部屋はまだ暑いです。",
+              "english": "This room is still hot."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n5-grammar-26",
+      "name": "N5 Grammar 26: Negation Patterns",
+      "type": "grammar",
+      "level": "n5",
+      "order": 96,
+      "intro": {
+        "title": "Negation Patterns",
+        "explanation": "Various ways to express 'not yet' and negative states.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n5-mada-nai-desu",
+          "title": "まだ〜ないです (mada 〜 nai desu)",
+          "explanation": "Expresses that something has not happened or been done yet.",
+          "structure": "まだ + Verb-negative + です",
+          "examples": [
+            {
+              "japanese": "まだ宿題をしていないです。",
+              "english": "I haven't done my homework yet."
+            },
+            {
+              "japanese": "彼はまだ来ないです。",
+              "english": "He hasn't come yet."
+            },
+            {
+              "japanese": "映画はまだ始まっていないです。",
+              "english": "The movie hasn't started yet."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-mada-masen",
+          "title": "まだ～ません (mada ~masen)",
+          "explanation": "Expresses that something has not happened or been done yet (polite form).",
+          "structure": "まだ + Verb-ます form (negative)",
+          "examples": [
+            {
+              "japanese": "昼ご飯をまだ食べていません。",
+              "english": "I have not eaten lunch yet."
+            },
+            {
+              "japanese": "宿題がまだ終わっていません。",
+              "english": "I have not finished my homework yet."
+            },
+            {
+              "japanese": "東京にはまだ行ったことがありません。",
+              "english": "I have not been to Tokyo yet."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-wa-taihen-desu",
+          "title": "～はたいへんです (〜wa taihen desu)",
+          "explanation": "Express that something is difficult or tough.",
+          "structure": "Noun + はたいへんです",
+          "examples": [
+            {
+              "japanese": "漢字を覚えるのはたいへんです。",
+              "english": "It is difficult to remember kanji."
+            },
+            {
+              "japanese": "この仕事はたいへんです。",
+              "english": "This job is tough."
+            },
+            {
+              "japanese": "日本の駅のことを理解するのはたいへんです。",
+              "english": "Understanding Japanese train stations is difficult."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n5-grammar-27",
+      "name": "N5 Grammar 27: Verb Nominalization & More",
+      "type": "grammar",
+      "level": "n5",
+      "order": 97,
+      "intro": {
+        "title": "Verb Nominalization and Miscellaneous Patterns",
+        "explanation": "Turn verbs into nouns and learn additional useful patterns.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n5-ru-koto",
+          "title": "Verb ること～ (〜ru koto)",
+          "explanation": "Express an action or event as a noun; 'the act of', 'doing'.",
+          "structure": "Verb (dictionary form) + こと",
+          "examples": [
+            {
+              "japanese": "泳ぐことが大好きです。",
+              "english": "I love swimming."
+            },
+            {
+              "japanese": "日本語を勉強することは楽しいです。",
+              "english": "Studying Japanese is fun."
+            },
+            {
+              "japanese": "友達と話すことがストレスを軽減します。",
+              "english": "Talking with friends reduces stress."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-verb-ru-no",
+          "title": "Verb る の～ (Verb + ru + no~)",
+          "explanation": "Used to express the purpose or reason in casual speech, or nominalize the verb with の.",
+          "structure": "Verb (dictionary form) + の (casual)",
+          "examples": [
+            {
+              "japanese": "買い物をするために、銀行でお金をおろすの。",
+              "english": "I'm withdrawing money at the bank so I can go shopping."
+            },
+            {
+              "japanese": "友達にプレゼントをあげるので、ケーキを焼くの。",
+              "english": "I'm baking a cake because I'm giving my friend a present."
+            },
+            {
+              "japanese": "ダイエットを始めるので、ジムに入会するの。",
+              "english": "I’m joining a gym since I'm starting a diet."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-dake",
+          "title": "Noun だけ〜 (〜dake)",
+          "explanation": "Indicates 'only', 'just', or 'merely'.",
+          "structure": "Noun + だけ, Verb-casual + だけ, い-Adjective + だけ, な-Adjective-な + だけ",
+          "examples": [
+            {
+              "japanese": "コーヒーだけ飲んで、帰りました。",
+              "english": "I only drank coffee and went home."
+            },
+            {
+              "japanese": "この本は二十ページだけ読んだ。",
+              "english": "I only read twenty pages of this book."
+            },
+            {
+              "japanese": "彼女はとても速いですが、走るだけでなく、考えるのも速いです。",
+              "english": "She is very fast, not only at running but also at thinking."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-noun-kurai",
+          "title": "Noun くらい～ (Noun kurai～)",
+          "explanation": "Express the extent or degree of something; 'about', 'approximately', 'at least'.",
+          "structure": "Noun + くらい",
+          "examples": [
+            {
+              "japanese": "この本は三百ページくらいあります。",
+              "english": "This book has about 300 pages."
+            },
+            {
+              "japanese": "彼の家まで歩いて20分くらいかかります。",
+              "english": "It takes about 20 minutes to walk to his house."
+            },
+            {
+              "japanese": "明日は暑くて、30度くらいになるでしょう。",
+              "english": "Tomorrow will be hot, about 30 degrees."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-noun-gurai",
+          "title": "Noun ぐらい～ (Noun gurai～)",
+          "explanation": "Express an approximate amount or degree; 'about', 'approximately'.",
+          "structure": "Noun + ぐらい",
+          "examples": [
+            {
+              "japanese": "一日中勉強したので、１０時間ぐらい勉強しました。",
+              "english": "I studied all day, so I studied for about 10 hours."
+            },
+            {
+              "japanese": "この本は１００ページぐらいある。",
+              "english": "This book has about 100 pages."
+            },
+            {
+              "japanese": "彼は果物を５個ぐらい食べました。",
+              "english": "He ate about 5 pieces of fruit."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-noun-goro",
+          "title": "Noun ごろ～ (Noun + goro～)",
+          "explanation": "Expresses 'around' or 'about' a certain time or age.",
+          "structure": "Noun + ごろ",
+          "examples": [
+            {
+              "japanese": "昼ごろに電話してください。",
+              "english": "Please call me around noon."
+            },
+            {
+              "japanese": "彼は10歳ごろに日本に来ました。",
+              "english": "He came to Japan around the age of 10."
+            },
+            {
+              "japanese": "午後３時ごろに会いましょう。",
+              "english": "Let's meet around 3 PM."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-toki",
+          "title": "～とき (〜toki)",
+          "explanation": "Expresses the time when something happens, 'when', 'at the time'.",
+          "structure": "Verb-casual + とき / い-Adjective + とき / な-Adjective + なとき / Noun + のとき",
+          "examples": [
+            {
+              "japanese": "公園で遊ぶとき、帽子をかぶりましょう。",
+              "english": "When playing in the park, let's wear a hat."
+            },
+            {
+              "japanese": "このりんごが赤いとき、食べごろです。",
+              "english": "This apple is ready to eat when it is red."
+            },
+            {
+              "japanese": "私が勉強するとき、家族は静かにしてくれます。",
+              "english": "When I am studying, my family keeps quiet for me."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n5-grammar-28",
+      "name": "N5 Grammar 28: Purpose, Decisions & Change",
+      "type": "grammar",
+      "level": "n5",
+      "order": 98,
+      "intro": {
+        "title": "Purpose, Decisions, and Change",
+        "explanation": "Express purpose of going/coming, making decisions, and changes of state.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n5-verb-ni-ikimasu",
+          "title": "Verb に 行きます (Verb ni ikimasu)",
+          "explanation": "To go (somewhere) in order to do an action.",
+          "structure": "Verb (ます-stem) + に + 行きます",
+          "examples": [
+            {
+              "japanese": "公園に遊びに行きます。",
+              "english": "I will go to the park to play."
+            },
+            {
+              "japanese": "図書館に勉強しに行きます。",
+              "english": "I will go to the library to study."
+            },
+            {
+              "japanese": "スーパーに買い物に行きます。",
+              "english": "I will go to the supermarket to do some shopping."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-verb-ni-kimasu",
+          "title": "Verb に 来ます (Verb ni kimasu)",
+          "explanation": "Expresses the purpose of coming to a place; 'come to (do something)'.",
+          "structure": "Verb (ます-stem) + に + 来ます",
+          "examples": [
+            {
+              "japanese": "友達に会いに来ました。",
+              "english": "I came to meet my friend."
+            },
+            {
+              "japanese": "映画を見に来ました。",
+              "english": "I came to watch a movie."
+            },
+            {
+              "japanese": "先生に質問しに来ました。",
+              "english": "I came to ask the teacher a question."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-noun-ni-shimasu",
+          "title": "Noun に します (Noun ni shimasu)",
+          "explanation": "Express a choice or decision; 'choose', 'decide on'.",
+          "structure": "Noun + に します",
+          "examples": [
+            {
+              "japanese": "今日の昼ご飯は寿司にします。",
+              "english": "I'll choose sushi for today's lunch."
+            },
+            {
+              "japanese": "この靴を買うか迷っていますが、赤い色の方にします。",
+              "english": "I was hesitating about which shoes to buy, but I'll go with the red ones."
+            },
+            {
+              "japanese": "休みの日に何をするか決めた。映画館に行くことにします。",
+              "english": "I've decided what to do on my day off. I'll go to the movie theater."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-tari-tari-shimasu",
+          "title": "～たり、～たり します (〜tari, 〜tari shimasu)",
+          "explanation": "Used to list multiple actions or states; 'do things like', 'and'.",
+          "structure": "Verb-casual-past + たり + Verb-casual-past + たり + します",
+          "examples": [
+            {
+              "japanese": "休日には、映画を見たり、友達と遊んだりします。",
+              "english": "On holidays, I do things like watch movies and hang out with friends."
+            },
+            {
+              "japanese": "彼は歌ったり、踊ったり、ピアノを弾いたりします。",
+              "english": "He sings, dances, plays the piano, among other things."
+            },
+            {
+              "japanese": "このレストランでは、寿司を食べたり、刺身を食べたりします。",
+              "english": "At this restaurant, you can eat sushi, sashimi, and so on."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-a-wa-b-ga",
+          "title": "A は B が〜 (A wa B ga〜)",
+          "explanation": "Indicates that there is something unique or different about A and describes what is special about it.",
+          "structure": "A は (Topic) + B が (Characteristic/Feature) + Description/Action",
+          "examples": [
+            {
+              "japanese": "彼女は髪が長いです。",
+              "english": "What's special about her is that she has long hair."
+            },
+            {
+              "japanese": "このレストランは雰囲気が良いです。",
+              "english": "What's great about this restaurant is the atmosphere."
+            },
+            {
+              "japanese": "私は朝ごはんが一番好きです。",
+              "english": "What I like the most is breakfast."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n5-noun-ni-narimasu",
+          "title": "Noun に なります (Noun ni narimasu)",
+          "explanation": "Expresses change or becoming something; 'to become', 'to turn into', 'to be'.",
+          "structure": "Noun + に + なります",
+          "examples": [
+            {
+              "japanese": "彼は医者になります。",
+              "english": "He will become a doctor."
+            },
+            {
+              "japanese": "この茶色の葉が赤になります。",
+              "english": "These brown leaves will turn red."
+            },
+            {
+              "japanese": "料理が冷めたら、美味しくなくなります。",
+              "english": "When the dish cools down, it becomes less delicious."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    }
+  ]
+}

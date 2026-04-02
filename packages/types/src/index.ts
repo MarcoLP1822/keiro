@@ -9,6 +9,9 @@ export type {
   ModuleLevel,
   Module,
   KanaContentFile,
+  VocabContentFile,
+  KanjiContentFile,
+  GrammarContentFile,
 } from './module.js';
 
 export type {

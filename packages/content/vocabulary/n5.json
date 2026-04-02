@@ -1,0 +1,4817 @@
+{
+  "level": "n5",
+  "modules": [
+    {
+      "id": "n5-vocab-01",
+      "name": "N5 Vocab 1: 十〜～人",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 21,
+      "intro": {
+        "title": "N5 Vocabulary — Group 1",
+        "explanation": "Learn N5 vocabulary words 1–20. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "十",
+          "reading": "(〜を) とお",
+          "meaning": "ten (~)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "～円",
+          "reading": "～えん",
+          "meaning": "Yen",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "～回",
+          "reading": "～かい",
+          "meaning": "counter for occurrences (~ times)",
+          "partOfSpeech": "counter"
+        },
+        {
+          "word": "～階",
+          "reading": "～かい",
+          "meaning": "counter for stories (floors) of a building",
+          "partOfSpeech": "counter"
+        },
+        {
+          "word": "～か月",
+          "reading": "～かげつ",
+          "meaning": "(number of) months",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "～月",
+          "reading": "～がつ",
+          "meaning": "month of year",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "～がる",
+          "reading": "～がる",
+          "meaning": "feel",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "～側",
+          "reading": "～がわ",
+          "meaning": "~ side",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "～くらい; ぐらい",
+          "reading": "～くらい; ぐらい",
+          "meaning": "approximate (quantity)",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "～個",
+          "reading": "～こ",
+          "meaning": "counter for small items (e.g.",
+          "partOfSpeech": "counter"
+        },
+        {
+          "word": "～語",
+          "reading": "～ご",
+          "meaning": "word, language",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "～ころ; ～ごろ",
+          "reading": "～ころ; ～ごろ",
+          "meaning": "about, toward, approximately (time)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "～歳",
+          "reading": "～さい",
+          "meaning": "~ years old",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "～冊",
+          "reading": "～さつ",
+          "meaning": "counter for books",
+          "partOfSpeech": "counter"
+        },
+        {
+          "word": "～さん",
+          "reading": "～さん",
+          "meaning": "Mr. ~, Ms. ~",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "～時",
+          "reading": "～じ",
+          "meaning": "~ o'clock (time)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "～時間",
+          "reading": "～じかん",
+          "meaning": "~ hours",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "～中",
+          "reading": "～じゅう",
+          "meaning": "during, while",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "～週間",
+          "reading": "～しゅうかん",
+          "meaning": "~ weeks",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "～人",
+          "reading": "～じん",
+          "meaning": "counter for people",
+          "partOfSpeech": "counter"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-02",
+      "name": "N5 Vocab 2: ～すぎ〜～屋",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 22,
+      "intro": {
+        "title": "N5 Vocabulary — Group 2",
+        "explanation": "Learn N5 vocabulary words 21–40. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "～すぎ",
+          "reading": "～すぎ",
+          "meaning": "past",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "～ずつ",
+          "reading": "～ずつ",
+          "meaning": "at a time",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "～台",
+          "reading": "～だい",
+          "meaning": "counter for vehicles",
+          "partOfSpeech": "counter"
+        },
+        {
+          "word": "～だけ",
+          "reading": "～だけ",
+          "meaning": "only ~, just ~, as ~",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "～たち",
+          "reading": "～たち",
+          "meaning": "plural suffix",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "～中",
+          "reading": "～ちゅう",
+          "meaning": "during, while ~ing",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "～度",
+          "reading": "～ど",
+          "meaning": "counter for occurrences",
+          "partOfSpeech": "counter"
+        },
+        {
+          "word": "～時",
+          "reading": "～とき",
+          "meaning": "at the time of ~",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "～など",
+          "reading": "～など",
+          "meaning": "et cetera",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "～日",
+          "reading": "～にち",
+          "meaning": "~ day of the month, for ~ days",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "～人",
+          "reading": "～にん",
+          "meaning": "counter for people",
+          "partOfSpeech": "counter"
+        },
+        {
+          "word": "～年",
+          "reading": "～ねん",
+          "meaning": "~ years",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "～杯",
+          "reading": "～はい",
+          "meaning": "counter for cupfuls",
+          "partOfSpeech": "counter"
+        },
+        {
+          "word": "～番",
+          "reading": "～ばん",
+          "meaning": "~st",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "～匹",
+          "reading": "～ひき",
+          "meaning": "counter for small animals",
+          "partOfSpeech": "counter"
+        },
+        {
+          "word": "～分",
+          "reading": "～ふん",
+          "meaning": "~ minutes",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "～本",
+          "reading": "～ほん",
+          "meaning": "counter for long cylindrical things",
+          "partOfSpeech": "counter"
+        },
+        {
+          "word": "～枚",
+          "reading": "～まい",
+          "meaning": "counter for flat things",
+          "partOfSpeech": "counter"
+        },
+        {
+          "word": "～前",
+          "reading": "～まえ",
+          "meaning": "in front of ~",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "～屋",
+          "reading": "～や",
+          "meaning": "~ shop",
+          "partOfSpeech": "noun"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-03",
+      "name": "N5 Vocab 3: ああ〜頭",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 23,
+      "intro": {
+        "title": "N5 Vocabulary — Group 3",
+        "explanation": "Learn N5 vocabulary words 41–60. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "ああ",
+          "reading": "ああ",
+          "meaning": "Ah!, Oh!",
+          "partOfSpeech": "expression"
+        },
+        {
+          "word": "会う",
+          "reading": "あう",
+          "meaning": "to meet, to see",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "青",
+          "reading": "あお",
+          "meaning": "blue",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "青い",
+          "reading": "あおい",
+          "meaning": "blue",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "赤",
+          "reading": "あか",
+          "meaning": "red",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "赤い",
+          "reading": "あかい",
+          "meaning": "red",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "明るい",
+          "reading": "あかるい",
+          "meaning": "bright (in reference to personality or weather)",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "秋",
+          "reading": "あき",
+          "meaning": "fall (season)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "開く",
+          "reading": "あく",
+          "meaning": "to open, to become open",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "開ける",
+          "reading": "あける",
+          "meaning": "to open (v.t.)",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "上げる",
+          "reading": "あげる",
+          "meaning": "to raise, to lift",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "朝",
+          "reading": "あさ",
+          "meaning": "morning",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "朝御飯",
+          "reading": "あさごはん",
+          "meaning": "breakfast",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "明後日",
+          "reading": "あさって",
+          "meaning": "day after tomorrow",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "足; 脚",
+          "reading": "あし",
+          "meaning": "foot",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "明日",
+          "reading": "あした",
+          "meaning": "tomorrow",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "あそこ",
+          "reading": "あそこ",
+          "meaning": "there, over there, that place",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "遊ぶ",
+          "reading": "あそぶ",
+          "meaning": "to play",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "暖かい",
+          "reading": "あたたかい",
+          "meaning": "warm",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "頭",
+          "reading": "あたま",
+          "meaning": "head",
+          "partOfSpeech": "noun"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-04",
+      "name": "N5 Vocab 4: 新しい〜在る",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 24,
+      "intro": {
+        "title": "N5 Vocabulary — Group 4",
+        "explanation": "Learn N5 vocabulary words 61–80. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "新しい",
+          "reading": "あたらしい",
+          "meaning": "new",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "あちら",
+          "reading": "あちら",
+          "meaning": "this way (polite)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "暑い",
+          "reading": "あつい",
+          "meaning": "hot (in reference to weather), warm",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "熱い",
+          "reading": "あつい",
+          "meaning": "hot (objects)",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "厚い",
+          "reading": "あつい",
+          "meaning": "kind, warm(hearted), thick, deep",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "あっち",
+          "reading": "あっち",
+          "meaning": "over there",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "後",
+          "reading": "あと",
+          "meaning": "afterwards (later)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "あなた",
+          "reading": "あなた",
+          "meaning": "you",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "兄",
+          "reading": "あに",
+          "meaning": "(my) older brother (humble)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "姉",
+          "reading": "あね",
+          "meaning": "(my) older sister (humble)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "あの",
+          "reading": "あの",
+          "meaning": "that over there",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "アパート",
+          "reading": "アパート",
+          "meaning": "apartment (abbr.)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "浴びる",
+          "reading": "あびる",
+          "meaning": "to bathe, to shower",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "危ない",
+          "reading": "あぶない",
+          "meaning": "dangerous, critical",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "甘い",
+          "reading": "あまい",
+          "meaning": "generous, sweet",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "余り",
+          "reading": "あまり",
+          "meaning": "not very",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "word": "雨",
+          "reading": "あめ",
+          "meaning": "rain",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "飴",
+          "reading": "あめ",
+          "meaning": "(hard) candy",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "洗う",
+          "reading": "あらう",
+          "meaning": "to wash",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "在る",
+          "reading": "ある",
+          "meaning": "to be, to have",
+          "partOfSpeech": "verb"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-05",
+      "name": "N5 Vocab 5: 有る〜いつ",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 25,
+      "intro": {
+        "title": "N5 Vocabulary — Group 5",
+        "explanation": "Learn N5 vocabulary words 81–100. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "有る",
+          "reading": "ある",
+          "meaning": "to be, to have",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "歩く",
+          "reading": "あるく",
+          "meaning": "to walk",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "あれ",
+          "reading": "あれ",
+          "meaning": "that one (over there)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "いい; よい",
+          "reading": "いい; よい",
+          "meaning": "good",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "いいえ",
+          "reading": "いいえ",
+          "meaning": "no, not at all",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "言う",
+          "reading": "いう",
+          "meaning": "to say",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "家",
+          "reading": "いえ",
+          "meaning": "house, home",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "いかが",
+          "reading": "いかが",
+          "meaning": "how, in what way",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "行く",
+          "reading": "いく; ゆく",
+          "meaning": "to go",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "いくつ",
+          "reading": "いくつ",
+          "meaning": "how many, how old",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "いくら",
+          "reading": "いくら",
+          "meaning": "how much, how many",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "池",
+          "reading": "いけ",
+          "meaning": "pond",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "医者",
+          "reading": "いしゃ",
+          "meaning": "doctor",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "椅子",
+          "reading": "いす",
+          "meaning": "chair",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "忙しい",
+          "reading": "いそがしい",
+          "meaning": "busy (people, days)",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "痛い",
+          "reading": "いたい",
+          "meaning": "hurt",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "一",
+          "reading": "いち",
+          "meaning": "one",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "一日",
+          "reading": "いちにち",
+          "meaning": "one day (duration)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "一番",
+          "reading": "いちばん",
+          "meaning": "best (most), first, number one",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "いつ",
+          "reading": "いつ",
+          "meaning": "when",
+          "partOfSpeech": "noun"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-06",
+      "name": "N5 Vocab 6: 五日〜歌う",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 26,
+      "intro": {
+        "title": "N5 Vocabulary — Group 6",
+        "explanation": "Learn N5 vocabulary words 101–120. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "五日",
+          "reading": "いつか",
+          "meaning": "five days",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "一緒",
+          "reading": "いっしょ",
+          "meaning": "together",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "五つ",
+          "reading": "いつつ",
+          "meaning": "five things",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "いつも",
+          "reading": "いつも",
+          "meaning": "always",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "word": "犬",
+          "reading": "いぬ",
+          "meaning": "dog",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "今",
+          "reading": "いま",
+          "meaning": "now",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "意味",
+          "reading": "いみ",
+          "meaning": "meaning, significance",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "妹",
+          "reading": "いもうと",
+          "meaning": "younger sister (humble)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "嫌",
+          "reading": "いや",
+          "meaning": "disagreeable, detestable, unpleasant",
+          "partOfSpeech": "na-adjective"
+        },
+        {
+          "word": "入口",
+          "reading": "いりぐち",
+          "meaning": "entrance",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "居る",
+          "reading": "いる",
+          "meaning": "(humble) to be (animate), to exist",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "要る",
+          "reading": "いる",
+          "meaning": "to need",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "入れる",
+          "reading": "いれる",
+          "meaning": "to put in",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "色",
+          "reading": "いろ",
+          "meaning": "color",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "色々",
+          "reading": "いろいろ",
+          "meaning": "various",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "上",
+          "reading": "うえ",
+          "meaning": "above (up, top, etc.), over, on top of",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "後ろ",
+          "reading": "うしろ",
+          "meaning": "back, behind, rear",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "薄い",
+          "reading": "うすい",
+          "meaning": "thin, weak",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "歌",
+          "reading": "うた",
+          "meaning": "a song",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "歌う",
+          "reading": "うたう",
+          "meaning": "to sing",
+          "partOfSpeech": "verb"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-07",
+      "name": "N5 Vocab 7: うち〜大勢",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 27,
+      "intro": {
+        "title": "N5 Vocabulary — Group 7",
+        "explanation": "Learn N5 vocabulary words 121–140. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "うち",
+          "reading": "うち",
+          "meaning": "home",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "生まれる",
+          "reading": "うまれる",
+          "meaning": "to be born",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "海",
+          "reading": "うみ",
+          "meaning": "sea, beach",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "売る",
+          "reading": "うる",
+          "meaning": "to sell (v.t.)",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "うるさい",
+          "reading": "うるさい",
+          "meaning": "noisy",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "上着",
+          "reading": "うわぎ",
+          "meaning": "coat, jacket",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "絵",
+          "reading": "え",
+          "meaning": "a painting",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "映画",
+          "reading": "えいが",
+          "meaning": "movie, film",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "映画館",
+          "reading": "えいがかん",
+          "meaning": "movie theater, cinema",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "英語",
+          "reading": "えいご",
+          "meaning": "English (language)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "ええ",
+          "reading": "ええ",
+          "meaning": "yes",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "駅",
+          "reading": "えき",
+          "meaning": "station",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "エレベーター",
+          "reading": "エレベーター",
+          "meaning": "elevator",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "鉛筆",
+          "reading": "えんぴつ",
+          "meaning": "pencil",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "お～",
+          "reading": "お～",
+          "meaning": "honorable ~ (honorific)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "美味しい",
+          "reading": "おいしい",
+          "meaning": "delicious, tasty",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "多い",
+          "reading": "おおい",
+          "meaning": "many",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "大きい",
+          "reading": "おおきい",
+          "meaning": "big, large",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "大きな",
+          "reading": "おおきな",
+          "meaning": "big",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "大勢",
+          "reading": "おおぜい",
+          "meaning": "great number of people",
+          "partOfSpeech": "noun"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-08",
+      "name": "N5 Vocab 8: お母さん〜一昨日",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 28,
+      "intro": {
+        "title": "N5 Vocabulary — Group 8",
+        "explanation": "Learn N5 vocabulary words 141–160. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "お母さん",
+          "reading": "おかあさん",
+          "meaning": "mother (formal)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "お菓子",
+          "reading": "おかし",
+          "meaning": "confections, sweets, snack",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "お金",
+          "reading": "おかね",
+          "meaning": "money",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "起きる",
+          "reading": "おきる",
+          "meaning": "to get up (e.g., from sleeping)",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "置く",
+          "reading": "おく",
+          "meaning": "to put",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "奥さん",
+          "reading": "おくさん",
+          "meaning": "(someone else's) wife (hon.)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "お酒",
+          "reading": "おさけ",
+          "meaning": "sake",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "お皿",
+          "reading": "おさら",
+          "meaning": "plate, dish",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "おじいさん",
+          "reading": "おじいさん",
+          "meaning": "grandfather, male senior citizen",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "教える",
+          "reading": "おしえる",
+          "meaning": "to teach, to inform, to instruct",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "伯父; 叔父さん",
+          "reading": "おじさん",
+          "meaning": "uncle, middle-aged man",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "押す",
+          "reading": "おす",
+          "meaning": "to push",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "遅い",
+          "reading": "おそい",
+          "meaning": "slow",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "お茶",
+          "reading": "おちゃ",
+          "meaning": "(green) tea",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "お手洗い",
+          "reading": "おてあらい",
+          "meaning": "toilet",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "お父さん",
+          "reading": "おとうさん",
+          "meaning": "father (formal)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "弟",
+          "reading": "おとうと",
+          "meaning": "younger brother",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "男",
+          "reading": "おとこ",
+          "meaning": "man, male",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "男の子",
+          "reading": "おとこのこ",
+          "meaning": "boy",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "一昨日",
+          "reading": "おととい",
+          "meaning": "the day before yesterday",
+          "partOfSpeech": "noun"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-09",
+      "name": "N5 Vocab 9: おととし〜女の子",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 29,
+      "intro": {
+        "title": "N5 Vocabulary — Group 9",
+        "explanation": "Learn N5 vocabulary words 161–180. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "おととし",
+          "reading": "おととし",
+          "meaning": "year before last",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "大人",
+          "reading": "おとな",
+          "meaning": "adult",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "お腹",
+          "reading": "おなか",
+          "meaning": "stomach",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "同じ",
+          "reading": "おなじ",
+          "meaning": "same, identical",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "お兄さん",
+          "reading": "おにいさん",
+          "meaning": "(someone else's) older brother (formal)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "お姉さん",
+          "reading": "おねえさん",
+          "meaning": "older sister (formal)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "おばあさん",
+          "reading": "おばあさん",
+          "meaning": "grandmother, female senior-citizen",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "伯母さん; 叔母さん",
+          "reading": "おばさん",
+          "meaning": "aunt",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "お風呂",
+          "reading": "おふろ",
+          "meaning": "a bath",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "お弁当",
+          "reading": "おべんとう",
+          "meaning": "a boxed lunch",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "覚える",
+          "reading": "おぼえる",
+          "meaning": "to learn",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "おまわりさん",
+          "reading": "おまわりさん",
+          "meaning": "policeman (friendly term)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "重い",
+          "reading": "おもい",
+          "meaning": "heavy",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "面白い",
+          "reading": "おもしろい",
+          "meaning": "interesting, amusing",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "泳ぐ",
+          "reading": "およぐ",
+          "meaning": "to swim",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "降りる",
+          "reading": "おりる",
+          "meaning": "to get off",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "終る",
+          "reading": "おわる",
+          "meaning": "to finish, to close",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "音楽",
+          "reading": "おんがく",
+          "meaning": "Music",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "女",
+          "reading": "おんな",
+          "meaning": "woman, female",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "女の子",
+          "reading": "おんなのこ",
+          "meaning": "girl",
+          "partOfSpeech": "noun"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-10",
+      "name": "N5 Vocab 10: 外国〜家族",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 30,
+      "intro": {
+        "title": "N5 Vocabulary — Group 10",
+        "explanation": "Learn N5 vocabulary words 181–200. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "外国",
+          "reading": "がいこく",
+          "meaning": "foreign country",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "外国人",
+          "reading": "がいこくじん",
+          "meaning": "foreigner",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "会社",
+          "reading": "かいしゃ",
+          "meaning": "company, corporation",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "階段",
+          "reading": "かいだん",
+          "meaning": "stairs",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "買い物",
+          "reading": "かいもの",
+          "meaning": "shopping",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "買う",
+          "reading": "かう",
+          "meaning": "to buy",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "返す",
+          "reading": "かえす",
+          "meaning": "to return something",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "帰る",
+          "reading": "かえる",
+          "meaning": "to go back, to go home, to return",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "顔",
+          "reading": "かお",
+          "meaning": "face (body part)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "かかる",
+          "reading": "かかる",
+          "meaning": "it takes (amount of time, money) (v.i.)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "鍵",
+          "reading": "かぎ",
+          "meaning": "a lock",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "書く",
+          "reading": "かく",
+          "meaning": "to write",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "学生",
+          "reading": "がくせい",
+          "meaning": "student",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "掛ける",
+          "reading": "かける",
+          "meaning": "to put on (e.g., glasses)",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "かける",
+          "reading": "かける",
+          "meaning": "to dial/call (e.g., phone)",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "傘",
+          "reading": "かさ",
+          "meaning": "umbrella, parasol",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "貸す",
+          "reading": "かす",
+          "meaning": "to lend",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "風",
+          "reading": "かぜ",
+          "meaning": "wind, breeze",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "風邪",
+          "reading": "かぜ",
+          "meaning": "cold, flu",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "家族",
+          "reading": "かぞく",
+          "meaning": "family, members of a family",
+          "partOfSpeech": "noun"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-11",
+      "name": "N5 Vocab 11: 方〜可愛い",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 31,
+      "intro": {
+        "title": "N5 Vocabulary — Group 11",
+        "explanation": "Learn N5 vocabulary words 201–220. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "方",
+          "reading": "かた",
+          "meaning": "-- honorific form for 人 (ひと) --",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "片仮名",
+          "reading": "かたかな",
+          "meaning": "katakana",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "学校",
+          "reading": "がっこう",
+          "meaning": "a school",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "カップ",
+          "reading": "カップ",
+          "meaning": "cup",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "家庭",
+          "reading": "かてい",
+          "meaning": "home",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "角",
+          "reading": "かど",
+          "meaning": "corner (e.g., desk, pavement)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "かばん",
+          "reading": "かばん",
+          "meaning": "bag, basket",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "花瓶",
+          "reading": "かびん",
+          "meaning": "(flower) vase",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "かぶる",
+          "reading": "かぶる",
+          "meaning": "to wear",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "紙",
+          "reading": "かみ",
+          "meaning": "paper",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "カメラ",
+          "reading": "カメラ",
+          "meaning": "camera",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "火曜日",
+          "reading": "かようび",
+          "meaning": "Tuesday",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "辛い",
+          "reading": "からい",
+          "meaning": "hot and spicy",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "体",
+          "reading": "からだ",
+          "meaning": "body",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "借りる",
+          "reading": "かりる",
+          "meaning": "to borrow, to owe",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "軽い",
+          "reading": "かるい",
+          "meaning": "light, non-serious, minor",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "カレー",
+          "reading": "カレー",
+          "meaning": "curry (abbr. for curry and rice)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "カレンダー",
+          "reading": "カレンダー",
+          "meaning": "calendar",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "川; 河",
+          "reading": "かわ",
+          "meaning": "river",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "可愛い",
+          "reading": "かわいい",
+          "meaning": "cute, adorable",
+          "partOfSpeech": "adjective"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-12",
+      "name": "N5 Vocab 12: 漢字〜去年",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 32,
+      "intro": {
+        "title": "N5 Vocabulary — Group 12",
+        "explanation": "Learn N5 vocabulary words 221–240. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "漢字",
+          "reading": "かんじ",
+          "meaning": "kanji",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "木",
+          "reading": "き",
+          "meaning": "tree, wood, timber",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "黄色",
+          "reading": "きいろ",
+          "meaning": "yellow",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "黄色い",
+          "reading": "きいろい",
+          "meaning": "yellow",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "消える",
+          "reading": "きえる",
+          "meaning": "to vanish, to disappear",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "聞く",
+          "reading": "きく",
+          "meaning": "to hear, to listen, to ask",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "北",
+          "reading": "きた",
+          "meaning": "north",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "ギター",
+          "reading": "ギター",
+          "meaning": "guitar",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "汚い",
+          "reading": "きたない",
+          "meaning": "dirty, unclean, filthy",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "喫茶店",
+          "reading": "きっさてん",
+          "meaning": "café",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "切手",
+          "reading": "きって",
+          "meaning": "postal (postage) stamps",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "切符",
+          "reading": "きっぷ",
+          "meaning": "a ticket",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "昨日",
+          "reading": "きのう",
+          "meaning": "yesterday",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "九",
+          "reading": "きゅう",
+          "meaning": "nine",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "牛肉",
+          "reading": "ぎゅうにく",
+          "meaning": "beef",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "牛乳",
+          "reading": "ぎゅうにゅう",
+          "meaning": "milk",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "今日",
+          "reading": "きょう",
+          "meaning": "today, this day",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "教室",
+          "reading": "きょうしつ",
+          "meaning": "classroom",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "兄弟",
+          "reading": "きょうだい",
+          "meaning": "siblings (humble), brothers and sisters",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "去年",
+          "reading": "きょねん",
+          "meaning": "last year",
+          "partOfSpeech": "noun"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-13",
+      "name": "N5 Vocab 13: 嫌い〜クラス",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 33,
+      "intro": {
+        "title": "N5 Vocabulary — Group 13",
+        "explanation": "Learn N5 vocabulary words 241–260. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "嫌い",
+          "reading": "きらい",
+          "meaning": "dislike",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "切る",
+          "reading": "きる",
+          "meaning": "to cut",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "着る",
+          "reading": "きる",
+          "meaning": "to put on (clothes above your waist)",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "綺麗",
+          "reading": "きれい",
+          "meaning": "pretty, clean, tidy",
+          "partOfSpeech": "na-adjective"
+        },
+        {
+          "word": "キロ; キログラム",
+          "reading": "キロ; キログラム",
+          "meaning": "(abbr.) kilo (kilogram)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "キロ; キロメートル",
+          "reading": "キロ; キロメートル",
+          "meaning": "(abbr.) kilo (kilometer)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "銀行",
+          "reading": "ぎんこう",
+          "meaning": "bank",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "金曜日",
+          "reading": "きんようび",
+          "meaning": "Friday",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "九",
+          "reading": "く",
+          "meaning": "nine",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "薬",
+          "reading": "くすり",
+          "meaning": "medicine",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "下さい",
+          "reading": "ください",
+          "meaning": "(with te-form verb) please do for me",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "果物",
+          "reading": "くだもの",
+          "meaning": "fruit",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "口",
+          "reading": "くち",
+          "meaning": "job opening",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "靴",
+          "reading": "くつ",
+          "meaning": "shoes, footwear",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "靴下",
+          "reading": "くつした",
+          "meaning": "socks",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "国",
+          "reading": "くに",
+          "meaning": "country",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "曇り",
+          "reading": "くもり",
+          "meaning": "cloudiness, cloudy weather",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "曇る",
+          "reading": "くもる",
+          "meaning": "to become cloudy, to become dim",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "暗い",
+          "reading": "くらい",
+          "meaning": "dark, gloomy",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "クラス",
+          "reading": "クラス",
+          "meaning": "a class",
+          "partOfSpeech": "noun"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-14",
+      "name": "N5 Vocab 14: グラム〜コート",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 34,
+      "intro": {
+        "title": "N5 Vocabulary — Group 14",
+        "explanation": "Learn N5 vocabulary words 261–280. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "グラム",
+          "reading": "グラム",
+          "meaning": "gram",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "来る",
+          "reading": "くる",
+          "meaning": "to come",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "車",
+          "reading": "くるま",
+          "meaning": "car, vehicle",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "黒",
+          "reading": "くろ",
+          "meaning": "black",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "黒い",
+          "reading": "くろい",
+          "meaning": "black",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "警官",
+          "reading": "けいかん",
+          "meaning": "police officer",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "今朝",
+          "reading": "けさ",
+          "meaning": "this morning",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "消す",
+          "reading": "けす",
+          "meaning": "to erase, to delete, to turn off power",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "結構",
+          "reading": "けっこう",
+          "meaning": "splendid",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "結婚",
+          "reading": "けっこん (する)",
+          "meaning": "marriage (get married)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "月曜日",
+          "reading": "げつようび",
+          "meaning": "Monday",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "玄関",
+          "reading": "げんかん",
+          "meaning": "entrance (to a house or a building)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "元気",
+          "reading": "げんき",
+          "meaning": "health(y), energetic",
+          "partOfSpeech": "na-adjective"
+        },
+        {
+          "word": "五",
+          "reading": "ご",
+          "meaning": "five",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "公園",
+          "reading": "こうえん",
+          "meaning": "a park",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "交差点",
+          "reading": "こうさてん",
+          "meaning": "intersection",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "紅茶",
+          "reading": "こうちゃ",
+          "meaning": "black tea",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "交番",
+          "reading": "こうばん",
+          "meaning": "police box",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "声",
+          "reading": "こえ",
+          "meaning": "voice",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "コート",
+          "reading": "コート",
+          "meaning": "coat",
+          "partOfSpeech": "noun"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-15",
+      "name": "N5 Vocab 15: コーヒー〜今週",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 35,
+      "intro": {
+        "title": "N5 Vocabulary — Group 15",
+        "explanation": "Learn N5 vocabulary words 281–300. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "コーヒー",
+          "reading": "コーヒー",
+          "meaning": "coffee",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "ここ",
+          "reading": "ここ",
+          "meaning": "here, this place",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "午後",
+          "reading": "ごご",
+          "meaning": "afternoon, P.M.",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "九日",
+          "reading": "ここのか",
+          "meaning": "nine days",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "九つ",
+          "reading": "ここのつ",
+          "meaning": "nine things",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "午前",
+          "reading": "ごぜん",
+          "meaning": "morning, A.M.",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "答える",
+          "reading": "こたえる",
+          "meaning": "to answer, to reply",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "こちら",
+          "reading": "こちら",
+          "meaning": "this person (polite)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "こっち",
+          "reading": "こっち",
+          "meaning": "this person",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "コップ",
+          "reading": "コップ",
+          "meaning": "a tumbler",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "今年",
+          "reading": "ことし",
+          "meaning": "this year",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "言葉",
+          "reading": "ことば",
+          "meaning": "language",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "子供",
+          "reading": "こども",
+          "meaning": "child(ren)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "この",
+          "reading": "この",
+          "meaning": "this",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "御飯",
+          "reading": "ごはん",
+          "meaning": "rice (cooked)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "コピーする",
+          "reading": "コピーする",
+          "meaning": "to copy",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "困る",
+          "reading": "こまる",
+          "meaning": "to be bothered, to have difficulty",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "これ",
+          "reading": "これ",
+          "meaning": "this one",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "今月",
+          "reading": "こんげつ",
+          "meaning": "this month",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "今週",
+          "reading": "こんしゅう",
+          "meaning": "this week",
+          "partOfSpeech": "noun"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-16",
+      "name": "N5 Vocab 16: こんな〜仕事",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 36,
+      "intro": {
+        "title": "N5 Vocabulary — Group 16",
+        "explanation": "Learn N5 vocabulary words 301–320. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "こんな",
+          "reading": "こんな",
+          "meaning": "such, like this",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "今晩",
+          "reading": "こんばん",
+          "meaning": "tonight, this evening",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "さあ",
+          "reading": "さあ",
+          "meaning": "come now, well",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "財布",
+          "reading": "さいふ",
+          "meaning": "wallet",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "魚",
+          "reading": "さかな",
+          "meaning": "fish",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "先",
+          "reading": "さき",
+          "meaning": "future",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "咲く",
+          "reading": "さく",
+          "meaning": "to bloom",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "作文",
+          "reading": "さくぶん",
+          "meaning": "essay",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "差す",
+          "reading": "さす",
+          "meaning": "to raise (stretch out) hands",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "雑誌",
+          "reading": "ざっし",
+          "meaning": "magazine, journal",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "砂糖",
+          "reading": "さとう",
+          "meaning": "sugar",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "寒い",
+          "reading": "さむい",
+          "meaning": "cold (in reference to weather)",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "さ来年",
+          "reading": "さらいねん",
+          "meaning": "year after next",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "三",
+          "reading": "さん",
+          "meaning": "three",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "散歩",
+          "reading": "さんぽ (する)",
+          "meaning": "walk, stroll",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "四",
+          "reading": "し",
+          "meaning": "four",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "塩",
+          "reading": "しお",
+          "meaning": "salt",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "しかし",
+          "reading": "しかし",
+          "meaning": "however",
+          "partOfSpeech": "conjunction"
+        },
+        {
+          "word": "時間",
+          "reading": "じかん",
+          "meaning": "time",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "仕事",
+          "reading": "しごと",
+          "meaning": "work, job, occupation, employment",
+          "partOfSpeech": "noun"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-17",
+      "name": "N5 Vocab 17: 辞書〜宿題",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 37,
+      "intro": {
+        "title": "N5 Vocabulary — Group 17",
+        "explanation": "Learn N5 vocabulary words 321–340. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "辞書",
+          "reading": "じしょ",
+          "meaning": "dictionary",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "静か",
+          "reading": "しずか",
+          "meaning": "quiet, calm",
+          "partOfSpeech": "na-adjective"
+        },
+        {
+          "word": "下",
+          "reading": "した",
+          "meaning": "under, below, beneath",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "七",
+          "reading": "しち",
+          "meaning": "seven",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "質問",
+          "reading": "しつもん",
+          "meaning": "question, inquiry",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "自転車",
+          "reading": "じてんしゃ",
+          "meaning": "bicycle",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "自動車",
+          "reading": "じどうしゃ",
+          "meaning": "automobile",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "死ぬ",
+          "reading": "しぬ",
+          "meaning": "to die",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "字引",
+          "reading": "じびき",
+          "meaning": "dictionary",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "自分",
+          "reading": "じぶん",
+          "meaning": "myself, oneself",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "閉まる",
+          "reading": "しまる",
+          "meaning": "to close, to be closed",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "閉める",
+          "reading": "しめる",
+          "meaning": "to close, to shut",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "締める",
+          "reading": "しめる",
+          "meaning": "to tie, to fasten, to tighten",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "じゃ; じゃあ",
+          "reading": "じゃ; じゃあ",
+          "meaning": "well, well then",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "写真",
+          "reading": "しゃしん",
+          "meaning": "a picture",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "シャツ",
+          "reading": "シャツ",
+          "meaning": "shirt",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "シャワー",
+          "reading": "シャワー",
+          "meaning": "shower",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "十",
+          "reading": "じゅう",
+          "meaning": "ten",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "授業",
+          "reading": "じゅぎょう",
+          "meaning": "a class (of school)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "宿題",
+          "reading": "しゅくだい",
+          "meaning": "homework",
+          "partOfSpeech": "noun"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-18",
+      "name": "N5 Vocab 18: 上手〜ズボン",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 38,
+      "intro": {
+        "title": "N5 Vocabulary — Group 18",
+        "explanation": "Learn N5 vocabulary words 341–360. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "上手",
+          "reading": "じょうず",
+          "meaning": "be good at, skillful",
+          "partOfSpeech": "na-adjective"
+        },
+        {
+          "word": "丈夫",
+          "reading": "じょうぶ",
+          "meaning": "strong, solid, durable",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "醤油",
+          "reading": "しょうゆ",
+          "meaning": "soy sauce",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "食堂",
+          "reading": "しょくどう",
+          "meaning": "cafeteria, dining hall",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "知る",
+          "reading": "しる",
+          "meaning": "to know, to understand",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "白",
+          "reading": "しろ",
+          "meaning": "white",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "白い",
+          "reading": "しろい",
+          "meaning": "white",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "新聞",
+          "reading": "しんぶん",
+          "meaning": "newspaper",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "水曜日",
+          "reading": "すいようび",
+          "meaning": "Wednesday",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "吸う",
+          "reading": "すう",
+          "meaning": "to breathe in, to suck",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "スカート",
+          "reading": "スカート",
+          "meaning": "skirt",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "好き",
+          "reading": "すき",
+          "meaning": "liking, fondness, love",
+          "partOfSpeech": "na-adjective"
+        },
+        {
+          "word": "少ない",
+          "reading": "すくない",
+          "meaning": "a little",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "すぐに",
+          "reading": "すぐに",
+          "meaning": "immediately, soon",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "少し",
+          "reading": "すこし",
+          "meaning": "little, few",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "涼しい",
+          "reading": "すずしい",
+          "meaning": "cool",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "ストーブ",
+          "reading": "ストーブ",
+          "meaning": "heater (lit: stove)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "スプーン",
+          "reading": "スプーン",
+          "meaning": "spoon",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "スポーツ",
+          "reading": "スポーツ",
+          "meaning": "sport(s)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "ズボン",
+          "reading": "ズボン",
+          "meaning": "trousers",
+          "partOfSpeech": "noun"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-19",
+      "name": "N5 Vocab 19: 住む〜そこ",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 39,
+      "intro": {
+        "title": "N5 Vocabulary — Group 19",
+        "explanation": "Learn N5 vocabulary words 361–380. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "住む",
+          "reading": "すむ",
+          "meaning": "to reside, to live in",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "する",
+          "reading": "する",
+          "meaning": "to do, to try",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "座る",
+          "reading": "すわる",
+          "meaning": "to sit",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "背",
+          "reading": "せい",
+          "meaning": "(one's) height, stature",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "生徒",
+          "reading": "せいと",
+          "meaning": "student",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "セーター",
+          "reading": "セーター",
+          "meaning": "sweater",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "石鹸",
+          "reading": "せっけん",
+          "meaning": "soap",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "背広",
+          "reading": "せびろ",
+          "meaning": "men's suit",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "狭い",
+          "reading": "せまい",
+          "meaning": "narrow",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "ゼロ",
+          "reading": "ゼロ",
+          "meaning": "zero",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "千",
+          "reading": "せん",
+          "meaning": "thousand",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "先月",
+          "reading": "せんげつ",
+          "meaning": "last month",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "先週",
+          "reading": "せんしゅう",
+          "meaning": "last week",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "先生",
+          "reading": "せんせい",
+          "meaning": "teacher, professor",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "洗濯",
+          "reading": "せんたく",
+          "meaning": "washing, laundry",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "全部",
+          "reading": "ぜんぶ",
+          "meaning": "all, entire, whole",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "そう; そうです",
+          "reading": "そう; そうです",
+          "meaning": "yes",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "掃除",
+          "reading": "そうじ (する)",
+          "meaning": "cleaning, sweeping",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "そうして; そして",
+          "reading": "そうして; そして",
+          "meaning": "and, like that",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "そこ",
+          "reading": "そこ",
+          "meaning": "that place, there",
+          "partOfSpeech": "noun"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-20",
+      "name": "N5 Vocab 20: そちら〜出す",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 40,
+      "intro": {
+        "title": "N5 Vocabulary — Group 20",
+        "explanation": "Learn N5 vocabulary words 381–400. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "そちら",
+          "reading": "そちら",
+          "meaning": "over there",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "そっち",
+          "reading": "そっち",
+          "meaning": "over there",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "外",
+          "reading": "そと",
+          "meaning": "outside, exterior",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "その",
+          "reading": "その",
+          "meaning": "that",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "そば",
+          "reading": "そば",
+          "meaning": "near, close, beside",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "空",
+          "reading": "そら",
+          "meaning": "sky",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "それ",
+          "reading": "それ",
+          "meaning": "that one",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "それから",
+          "reading": "それから",
+          "meaning": "and then, after that",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "それでは",
+          "reading": "それでは",
+          "meaning": "in that situation, well then...",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "大学",
+          "reading": "だいがく",
+          "meaning": "college",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "大使館",
+          "reading": "たいしかん",
+          "meaning": "embassy",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "大丈夫",
+          "reading": "だいじょうぶ",
+          "meaning": "It's ok (all right)",
+          "partOfSpeech": "na-adjective"
+        },
+        {
+          "word": "大好き",
+          "reading": "だいすき",
+          "meaning": "very like-able, like very much",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "word": "大切",
+          "reading": "たいせつ",
+          "meaning": "important",
+          "partOfSpeech": "na-adjective"
+        },
+        {
+          "word": "台所",
+          "reading": "だいどころ",
+          "meaning": "kitchen",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "大変",
+          "reading": "たいへん",
+          "meaning": "very",
+          "partOfSpeech": "na-adjective"
+        },
+        {
+          "word": "高い",
+          "reading": "たかい",
+          "meaning": "tall, high",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "沢山",
+          "reading": "たくさん",
+          "meaning": "many, much",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "タクシー",
+          "reading": "タクシー",
+          "meaning": "taxi",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "出す",
+          "reading": "だす",
+          "meaning": "to take (something) out",
+          "partOfSpeech": "verb"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-21",
+      "name": "N5 Vocab 21: 立つ〜地下鉄",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 41,
+      "intro": {
+        "title": "N5 Vocabulary — Group 21",
+        "explanation": "Learn N5 vocabulary words 401–420. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "立つ",
+          "reading": "たつ",
+          "meaning": "to stand up",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "たて",
+          "reading": "たて",
+          "meaning": "length, height",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "建物",
+          "reading": "たてもの",
+          "meaning": "building",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "楽しい",
+          "reading": "たのしい",
+          "meaning": "enjoyable, fun",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "頼む",
+          "reading": "たのむ",
+          "meaning": "to request, to ask (a favor)",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "たばこ",
+          "reading": "たばこ",
+          "meaning": "tobacco, cigarettes",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "多分",
+          "reading": "たぶん",
+          "meaning": "perhaps, probably, maybe",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "食べ物",
+          "reading": "たべもの",
+          "meaning": "food",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "食べる",
+          "reading": "たべる",
+          "meaning": "to eat",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "卵",
+          "reading": "たまご",
+          "meaning": "egg",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "誰",
+          "reading": "だれ",
+          "meaning": "who",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "誰か",
+          "reading": "だれか",
+          "meaning": "someone",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "誕生日",
+          "reading": "たんじょうび",
+          "meaning": "birthday",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "段々",
+          "reading": "だんだん",
+          "meaning": "gradually, by degrees",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "小さい",
+          "reading": "ちいさい",
+          "meaning": "small, little",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "小さな",
+          "reading": "ちいさな",
+          "meaning": "small, little",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "近い",
+          "reading": "ちかい",
+          "meaning": "near, close by, short",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "違う",
+          "reading": "ちがう",
+          "meaning": "to be different",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "近く",
+          "reading": "ちかく",
+          "meaning": "nearby",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "地下鉄",
+          "reading": "ちかてつ",
+          "meaning": "underground train, subway",
+          "partOfSpeech": "noun"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-22",
+      "name": "N5 Vocab 22: 地図〜テープ",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 42,
+      "intro": {
+        "title": "N5 Vocabulary — Group 22",
+        "explanation": "Learn N5 vocabulary words 421–440. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "地図",
+          "reading": "ちず",
+          "meaning": "a map",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "父",
+          "reading": "ちち",
+          "meaning": "(my) father",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "茶色",
+          "reading": "ちゃいろ",
+          "meaning": "brown",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "茶碗",
+          "reading": "ちゃわん",
+          "meaning": "rice bowl",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "丁度",
+          "reading": "ちょうど",
+          "meaning": "just, right, exactly",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "ちょっと",
+          "reading": "ちょっと",
+          "meaning": "a little, somewhat",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "一日",
+          "reading": "ついたち",
+          "meaning": "one day",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "使う",
+          "reading": "つかう",
+          "meaning": "to use",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "疲れる",
+          "reading": "つかれる",
+          "meaning": "to get (become) tired",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "次",
+          "reading": "つぎ",
+          "meaning": "next",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "着く",
+          "reading": "つく",
+          "meaning": "to arrive at, to reach",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "机",
+          "reading": "つくえ",
+          "meaning": "desk",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "作る",
+          "reading": "つくる",
+          "meaning": "to make, to create",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "つける",
+          "reading": "つける",
+          "meaning": "to turn on (e.g., a light)",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "勤める",
+          "reading": "つとめる",
+          "meaning": "to work (for)",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "つまらない",
+          "reading": "つまらない",
+          "meaning": "boring, dull",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "冷たい",
+          "reading": "つめたい",
+          "meaning": "cold (things, people)",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "強い",
+          "reading": "つよい",
+          "meaning": "strong, powerful",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "手",
+          "reading": "て",
+          "meaning": "hand",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "テープ",
+          "reading": "テープ",
+          "meaning": "tape",
+          "partOfSpeech": "noun"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-23",
+      "name": "N5 Vocab 23: テーブル〜どう",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 43,
+      "intro": {
+        "title": "N5 Vocabulary — Group 23",
+        "explanation": "Learn N5 vocabulary words 441–460. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "テーブル",
+          "reading": "テーブル",
+          "meaning": "table",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "テープレコーダー",
+          "reading": "テープレコーダー",
+          "meaning": "tape recorder",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "出かける",
+          "reading": "でかける",
+          "meaning": "to go out",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "手紙",
+          "reading": "てがみ",
+          "meaning": "letter",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "できる",
+          "reading": "できる",
+          "meaning": "to be able to (to accomplish)",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "出口",
+          "reading": "でぐち",
+          "meaning": "an exit",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "テスト",
+          "reading": "テスト",
+          "meaning": "test",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "では",
+          "reading": "では",
+          "meaning": "then, well, so",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "デパート",
+          "reading": "デパート",
+          "meaning": "(abbr.) department store",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "でも",
+          "reading": "でも",
+          "meaning": "but, however",
+          "partOfSpeech": "conjunction"
+        },
+        {
+          "word": "出る",
+          "reading": "でる",
+          "meaning": "to appear, to leave",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "テレビ",
+          "reading": "テレビ",
+          "meaning": "television, TV",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "天気",
+          "reading": "てんき",
+          "meaning": "weather",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "電気",
+          "reading": "でんき",
+          "meaning": "electricity, (electric) light",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "電車",
+          "reading": "でんしゃ",
+          "meaning": "electric train",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "電話",
+          "reading": "でんわ",
+          "meaning": "a telephone",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "戸",
+          "reading": "と",
+          "meaning": "door (Japanese style)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "ドア",
+          "reading": "ドア",
+          "meaning": "door (Western style)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "トイレ",
+          "reading": "トイレ",
+          "meaning": "bathroom",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "どう",
+          "reading": "どう",
+          "meaning": "how, in what way",
+          "partOfSpeech": "noun"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-24",
+      "name": "N5 Vocab 24: どうして〜止まる",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 44,
+      "intro": {
+        "title": "N5 Vocabulary — Group 24",
+        "explanation": "Learn N5 vocabulary words 461–480. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "どうして",
+          "reading": "どうして",
+          "meaning": "why, for what reason",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "どうぞ",
+          "reading": "どうぞ",
+          "meaning": "please, kindly, by all means",
+          "partOfSpeech": "expression"
+        },
+        {
+          "word": "動物",
+          "reading": "どうぶつ",
+          "meaning": "animal",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "どうも",
+          "reading": "どうも",
+          "meaning": "Thank you",
+          "partOfSpeech": "expression"
+        },
+        {
+          "word": "遠い",
+          "reading": "とおい",
+          "meaning": "far (away), distant",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "十日",
+          "reading": "とおか",
+          "meaning": "ten days",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "時々",
+          "reading": "ときどき",
+          "meaning": "sometimes",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "word": "時計",
+          "reading": "とけい",
+          "meaning": "a watch",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "どこ",
+          "reading": "どこ",
+          "meaning": "where, what place",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "所",
+          "reading": "ところ",
+          "meaning": "place",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "年",
+          "reading": "とし",
+          "meaning": "year, age",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "図書館",
+          "reading": "としょかん",
+          "meaning": "library",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "どちら",
+          "reading": "どちら",
+          "meaning": "which (one) (way)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "どっち",
+          "reading": "どっち",
+          "meaning": "which one, which way",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "とても",
+          "reading": "とても",
+          "meaning": "very (much), greatly, exceedingly",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "word": "どなた",
+          "reading": "どなた",
+          "meaning": "who",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "隣",
+          "reading": "となり",
+          "meaning": "next to, next door to",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "どの",
+          "reading": "どの",
+          "meaning": "which",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "飛ぶ",
+          "reading": "とぶ",
+          "meaning": "to fly, to hop",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "止まる",
+          "reading": "とまる",
+          "meaning": "to come to a halt",
+          "partOfSpeech": "verb"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-25",
+      "name": "N5 Vocab 25: 友達〜名前",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 45,
+      "intro": {
+        "title": "N5 Vocabulary — Group 25",
+        "explanation": "Learn N5 vocabulary words 481–500. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "友達",
+          "reading": "ともだち",
+          "meaning": "friend",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "土曜日",
+          "reading": "どようび",
+          "meaning": "Saturday",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "鳥",
+          "reading": "とり",
+          "meaning": "chicken (lit., bird)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "鶏肉",
+          "reading": "とりにく",
+          "meaning": "chicken meat",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "取る",
+          "reading": "とる",
+          "meaning": "to take (a class)",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "撮る",
+          "reading": "とる",
+          "meaning": "to take (a photo), to make (a film)",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "どれ",
+          "reading": "どれ",
+          "meaning": "which one",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "どんな",
+          "reading": "どんな",
+          "meaning": "what, what kind of",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "ない",
+          "reading": "ない",
+          "meaning": "there isn't, doesn't have",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "ナイフ",
+          "reading": "ナイフ",
+          "meaning": "knife",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "中",
+          "reading": "なか",
+          "meaning": "inside, middle, among",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "長い",
+          "reading": "ながい",
+          "meaning": "long, lengthy",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "鳴く",
+          "reading": "なく",
+          "meaning": "to make sound (animal)",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "無くす",
+          "reading": "なくす",
+          "meaning": "to lose something",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "なぜ",
+          "reading": "なぜ",
+          "meaning": "why (same as どうして)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "夏",
+          "reading": "なつ",
+          "meaning": "summer",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "夏休み",
+          "reading": "なつやすみ",
+          "meaning": "summer vacation",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "七つ",
+          "reading": "ななつ",
+          "meaning": "seven things",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "七日",
+          "reading": "なのか",
+          "meaning": "seven days",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "名前",
+          "reading": "なまえ",
+          "meaning": "name",
+          "partOfSpeech": "noun"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-26",
+      "name": "N5 Vocab 26: 習う〜ノート",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 46,
+      "intro": {
+        "title": "N5 Vocabulary — Group 26",
+        "explanation": "Learn N5 vocabulary words 501–520. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "習う",
+          "reading": "ならう",
+          "meaning": "to learn",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "並ぶ",
+          "reading": "ならぶ",
+          "meaning": "to line up, to stand in a line (v.i.)",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "並べる",
+          "reading": "ならべる",
+          "meaning": "to put (things) side by side",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "なる",
+          "reading": "なる",
+          "meaning": "to become",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "何",
+          "reading": "なん; なに",
+          "meaning": "what",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "何～",
+          "reading": "なん～",
+          "meaning": "what sort of ~",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "二",
+          "reading": "に",
+          "meaning": "two",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "にぎやか",
+          "reading": "にぎやか",
+          "meaning": "bustling, busy",
+          "partOfSpeech": "na-adjective"
+        },
+        {
+          "word": "肉",
+          "reading": "にく",
+          "meaning": "meat",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "西",
+          "reading": "にし",
+          "meaning": "west",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "日曜日",
+          "reading": "にちようび",
+          "meaning": "Sunday",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "荷物",
+          "reading": "にもつ",
+          "meaning": "luggage",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "ニュース",
+          "reading": "ニュース",
+          "meaning": "news",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "庭",
+          "reading": "にわ",
+          "meaning": "garden",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "脱ぐ",
+          "reading": "ぬぐ",
+          "meaning": "to take off (clothes)",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "温い",
+          "reading": "ぬるい",
+          "meaning": "lukewarm",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "ネクタイ",
+          "reading": "ネクタイ",
+          "meaning": "tie, necktie",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "猫",
+          "reading": "ねこ",
+          "meaning": "cat",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "寝る",
+          "reading": "ねる",
+          "meaning": "to sleep",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "ノート",
+          "reading": "ノート",
+          "meaning": "notebook",
+          "partOfSpeech": "noun"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-27",
+      "name": "N5 Vocab 27: 登る〜バター",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 47,
+      "intro": {
+        "title": "N5 Vocabulary — Group 27",
+        "explanation": "Learn N5 vocabulary words 521–540. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "登る",
+          "reading": "のぼる",
+          "meaning": "to climb",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "飲み物",
+          "reading": "のみもの",
+          "meaning": "drink, beverage",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "飲む",
+          "reading": "のむ",
+          "meaning": "to drink",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "乗る",
+          "reading": "のる",
+          "meaning": "to get on, to ride in, to board",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "歯",
+          "reading": "は",
+          "meaning": "tooth",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "パーティー",
+          "reading": "パーティー",
+          "meaning": "a party",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "はい",
+          "reading": "はい",
+          "meaning": "yes",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "灰皿",
+          "reading": "はいざら",
+          "meaning": "ashtray",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "入る",
+          "reading": "はいる",
+          "meaning": "to enter, to contain, to hold",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "葉書",
+          "reading": "はがき",
+          "meaning": "postcard",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "はく",
+          "reading": "はく",
+          "meaning": "to put on (items below your waist)",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "箱",
+          "reading": "はこ",
+          "meaning": "box",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "橋",
+          "reading": "はし",
+          "meaning": "bridge",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "箸",
+          "reading": "はし",
+          "meaning": "chopsticks",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "始まる",
+          "reading": "はじまる",
+          "meaning": "(something) begins",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "初め; 始め",
+          "reading": "はじめ",
+          "meaning": "beginning, start",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "初めて",
+          "reading": "はじめて",
+          "meaning": "for the first time",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "走る",
+          "reading": "はしる",
+          "meaning": "to run",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "バス",
+          "reading": "バス",
+          "meaning": "bus",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "バター",
+          "reading": "バター",
+          "meaning": "butter",
+          "partOfSpeech": "conjunction"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-28",
+      "name": "N5 Vocab 28: 二十歳〜番号",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 48,
+      "intro": {
+        "title": "N5 Vocabulary — Group 28",
+        "explanation": "Learn N5 vocabulary words 541–560. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "二十歳",
+          "reading": "はたち",
+          "meaning": "20 years old",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "働く",
+          "reading": "はたらく",
+          "meaning": "to work",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "八",
+          "reading": "はち",
+          "meaning": "eight",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "二十日",
+          "reading": "はつか",
+          "meaning": "twenty days",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "花",
+          "reading": "はな",
+          "meaning": "flower",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "鼻",
+          "reading": "はな",
+          "meaning": "nose",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "話",
+          "reading": "はなし",
+          "meaning": "talk (chat), story",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "話す",
+          "reading": "はなす",
+          "meaning": "to speak",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "母",
+          "reading": "はは",
+          "meaning": "(my) mother",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "早い",
+          "reading": "はやい",
+          "meaning": "early",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "速い",
+          "reading": "はやい",
+          "meaning": "fast, quick",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "春",
+          "reading": "はる",
+          "meaning": "spring",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "貼る",
+          "reading": "はる",
+          "meaning": "to post",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "晴れ",
+          "reading": "はれ",
+          "meaning": "clear (sunny) weather",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "晴れる",
+          "reading": "はれる",
+          "meaning": "to be sunny",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "半",
+          "reading": "はん",
+          "meaning": "half (e.g., にじはん | half-past two)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "晩",
+          "reading": "ばん",
+          "meaning": "evening",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "パン",
+          "reading": "パン",
+          "meaning": "bread",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "ハンカチ",
+          "reading": "ハンカチ",
+          "meaning": "handkerchief",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "番号",
+          "reading": "ばんごう",
+          "meaning": "number, series of digits",
+          "partOfSpeech": "noun"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-29",
+      "name": "N5 Vocab 29: 晩御飯〜広い",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 49,
+      "intro": {
+        "title": "N5 Vocabulary — Group 29",
+        "explanation": "Learn N5 vocabulary words 561–580. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "晩御飯",
+          "reading": "ばんごはん",
+          "meaning": "dinner, evening meal",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "半分",
+          "reading": "はんぶん",
+          "meaning": "half",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "東",
+          "reading": "ひがし",
+          "meaning": "east",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "引く",
+          "reading": "ひく",
+          "meaning": "to pull, to draw",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "弾く",
+          "reading": "ひく",
+          "meaning": "to play (a string instrument or piano)",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "低い",
+          "reading": "ひくい",
+          "meaning": "short, low",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "飛行機",
+          "reading": "ひこうき",
+          "meaning": "airplane",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "左",
+          "reading": "ひだり",
+          "meaning": "left hand side",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "人",
+          "reading": "ひと",
+          "meaning": "man, person",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "一つ",
+          "reading": "ひとつ",
+          "meaning": "one thing",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "一月",
+          "reading": "ひとつき",
+          "meaning": "one month",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "一人",
+          "reading": "ひとり",
+          "meaning": "one person",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "暇",
+          "reading": "ひま",
+          "meaning": "free time, leisure",
+          "partOfSpeech": "na-adjective"
+        },
+        {
+          "word": "百",
+          "reading": "ひゃく",
+          "meaning": "hundred",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "病院",
+          "reading": "びょういん",
+          "meaning": "hospital",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "病気",
+          "reading": "びょうき",
+          "meaning": "illness",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "平仮名",
+          "reading": "ひらがな",
+          "meaning": "hiragana",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "昼",
+          "reading": "ひる",
+          "meaning": "noon, daytime",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "昼御飯",
+          "reading": "ひるごはん",
+          "meaning": "lunch, midday meal",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "広い",
+          "reading": "ひろい",
+          "meaning": "spacious",
+          "partOfSpeech": "adjective"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-30",
+      "name": "N5 Vocab 30: フィルム〜部屋",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 50,
+      "intro": {
+        "title": "N5 Vocabulary — Group 30",
+        "explanation": "Learn N5 vocabulary words 581–600. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "フィルム",
+          "reading": "フィルム",
+          "meaning": "film (roll of)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "封筒",
+          "reading": "ふうとう",
+          "meaning": "envelope",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "プール",
+          "reading": "プール",
+          "meaning": "swimming pool",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "フォーク",
+          "reading": "フォーク",
+          "meaning": "fork",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "吹く",
+          "reading": "ふく",
+          "meaning": "to blow (wind, etc.)",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "服",
+          "reading": "ふく",
+          "meaning": "clothes",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "二つ",
+          "reading": "ふたつ",
+          "meaning": "two things",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "豚肉",
+          "reading": "ぶたにく",
+          "meaning": "pork",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "二人",
+          "reading": "ふたり",
+          "meaning": "two people",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "二日",
+          "reading": "ふつか",
+          "meaning": "two days",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "太い",
+          "reading": "ふとい",
+          "meaning": "fat, thick",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "冬",
+          "reading": "ふゆ",
+          "meaning": "winter",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "降る",
+          "reading": "ふる",
+          "meaning": "to precipitate",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "古い",
+          "reading": "ふるい",
+          "meaning": "old (in reference to objects",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "文章",
+          "reading": "ぶんしょう",
+          "meaning": "sentence, text",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "ページ",
+          "reading": "ページ",
+          "meaning": "a page",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "下手",
+          "reading": "へた",
+          "meaning": "unskillful, poor",
+          "partOfSpeech": "na-adjective"
+        },
+        {
+          "word": "ベッド",
+          "reading": "ベッド",
+          "meaning": "bed",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "ペット",
+          "reading": "ペット",
+          "meaning": "pet",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "部屋",
+          "reading": "へや",
+          "meaning": "a room",
+          "partOfSpeech": "noun"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-31",
+      "name": "N5 Vocab 31: 辺〜毎日",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 51,
+      "intro": {
+        "title": "N5 Vocabulary — Group 31",
+        "explanation": "Learn N5 vocabulary words 601–620. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "辺",
+          "reading": "へん",
+          "meaning": "area, vicinity",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "ペン",
+          "reading": "ペン",
+          "meaning": "pen",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "勉強",
+          "reading": "べんきょう (する)",
+          "meaning": "study",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "便利",
+          "reading": "べんり",
+          "meaning": "convenient, handy",
+          "partOfSpeech": "na-adjective"
+        },
+        {
+          "word": "帽子",
+          "reading": "ぼうし",
+          "meaning": "hat",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "ボールペン",
+          "reading": "ボールペン",
+          "meaning": "ball-point pen",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "外",
+          "reading": "ほか",
+          "meaning": "other, the rest",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "ポケット",
+          "reading": "ポケット",
+          "meaning": "pocket",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "欲しい",
+          "reading": "ほしい",
+          "meaning": "to want, in need of",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "ポスト",
+          "reading": "ポスト",
+          "meaning": "mailbox",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "細い",
+          "reading": "ほそい",
+          "meaning": "thin, slender, fine",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "ボタン",
+          "reading": "ボタン",
+          "meaning": "button",
+          "partOfSpeech": "conjunction"
+        },
+        {
+          "word": "ホテル",
+          "reading": "ホテル",
+          "meaning": "hotel",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "本",
+          "reading": "ほん",
+          "meaning": "book",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "本棚",
+          "reading": "ほんだな",
+          "meaning": "bookshelf",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "本当",
+          "reading": "ほんとう",
+          "meaning": "real, true",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "毎朝",
+          "reading": "まいあさ",
+          "meaning": "every morning",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "word": "毎月",
+          "reading": "まいげつ; まいつき",
+          "meaning": "every month, monthly",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "word": "毎週",
+          "reading": "まいしゅう",
+          "meaning": "every week",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "word": "毎日",
+          "reading": "まいにち",
+          "meaning": "every day",
+          "partOfSpeech": "adverb"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-32",
+      "name": "N5 Vocab 32: 毎年〜店",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 52,
+      "intro": {
+        "title": "N5 Vocabulary — Group 32",
+        "explanation": "Learn N5 vocabulary words 621–640. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "毎年",
+          "reading": "まいねん; まいとし",
+          "meaning": "every year, yearly, annually",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "word": "毎晩",
+          "reading": "まいばん",
+          "meaning": "every night",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "word": "前",
+          "reading": "まえ",
+          "meaning": "before, in front",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "曲る",
+          "reading": "まがる",
+          "meaning": "to turn, to bend",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "まずい",
+          "reading": "まずい",
+          "meaning": "terrible (in reference to food)",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "また",
+          "reading": "また",
+          "meaning": "and",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "まだ",
+          "reading": "まだ",
+          "meaning": "yet, still, besides",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "町",
+          "reading": "まち",
+          "meaning": "town",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "待つ",
+          "reading": "まつ",
+          "meaning": "to wait",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "まっすぐ",
+          "reading": "まっすぐ",
+          "meaning": "straight (ahead), direct",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "マッチ",
+          "reading": "マッチ",
+          "meaning": "match",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "窓",
+          "reading": "まど",
+          "meaning": "window",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "丸い; 円い",
+          "reading": "まるい",
+          "meaning": "round, circular",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "万",
+          "reading": "まん",
+          "meaning": "ten thousand",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "万年筆",
+          "reading": "まんねんひつ",
+          "meaning": "fountain pen",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "磨く",
+          "reading": "みがく",
+          "meaning": "to brush (teeth)",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "右",
+          "reading": "みぎ",
+          "meaning": "right hand side",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "短い",
+          "reading": "みじかい",
+          "meaning": "short (length)",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "水",
+          "reading": "みず",
+          "meaning": "water",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "店",
+          "reading": "みせ",
+          "meaning": "store, shop",
+          "partOfSpeech": "noun"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-33",
+      "name": "N5 Vocab 33: 見せる〜木曜日",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 53,
+      "intro": {
+        "title": "N5 Vocabulary — Group 33",
+        "explanation": "Learn N5 vocabulary words 641–660. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "見せる",
+          "reading": "みせる",
+          "meaning": "to show, to display",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "道",
+          "reading": "みち",
+          "meaning": "road, street",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "三日",
+          "reading": "みっか",
+          "meaning": "three days, third day of the month",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "三つ",
+          "reading": "みっつ",
+          "meaning": "three things",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "緑",
+          "reading": "みどり",
+          "meaning": "green",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "皆さん",
+          "reading": "みなさん",
+          "meaning": "all of you, everyone",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "word": "南",
+          "reading": "みなみ",
+          "meaning": "South",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "耳",
+          "reading": "みみ",
+          "meaning": "ear",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "見る",
+          "reading": "みる",
+          "meaning": "to see, to look",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "みんな",
+          "reading": "みんな",
+          "meaning": "all, everyone, everybody",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "word": "六日",
+          "reading": "むいか",
+          "meaning": "six days",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "向こう",
+          "reading": "むこう",
+          "meaning": "beyond, over there",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "難しい",
+          "reading": "むずかしい",
+          "meaning": "difficult",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "六つ",
+          "reading": "むっつ",
+          "meaning": "six things",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "村",
+          "reading": "むら",
+          "meaning": "village",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "目",
+          "reading": "め",
+          "meaning": "eye(s)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "メートル",
+          "reading": "メートル",
+          "meaning": "meter",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "眼鏡",
+          "reading": "めがね",
+          "meaning": "eye glasses",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "もう",
+          "reading": "もう",
+          "meaning": "already",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "word": "木曜日",
+          "reading": "もくようび",
+          "meaning": "Thursday",
+          "partOfSpeech": "noun"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-34",
+      "name": "N5 Vocab 34: もしもし〜有名",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 54,
+      "intro": {
+        "title": "N5 Vocabulary — Group 34",
+        "explanation": "Learn N5 vocabulary words 661–680. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "もしもし",
+          "reading": "もしもし",
+          "meaning": "Hello? (used on the phone)",
+          "partOfSpeech": "expression"
+        },
+        {
+          "word": "持つ",
+          "reading": "もつ",
+          "meaning": "to hold, to carry",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "もっと",
+          "reading": "もっと",
+          "meaning": "more",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "物",
+          "reading": "もの",
+          "meaning": "thing (concrete object)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "門",
+          "reading": "もん",
+          "meaning": "gate",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "問題",
+          "reading": "もんだい",
+          "meaning": "a problem",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "八百屋",
+          "reading": "やおや",
+          "meaning": "greengrocer",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "野菜",
+          "reading": "やさい",
+          "meaning": "vegetable",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "易しい",
+          "reading": "やさしい",
+          "meaning": "easy, plain, simple",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "安い",
+          "reading": "やすい",
+          "meaning": "inexpensive",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "休み",
+          "reading": "やすみ",
+          "meaning": "holiday",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "休む",
+          "reading": "やすむ",
+          "meaning": "to rest",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "八つ",
+          "reading": "やっつ",
+          "meaning": "eight things",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "山",
+          "reading": "やま",
+          "meaning": "mountain",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "やる",
+          "reading": "やる",
+          "meaning": "to do",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "夕方",
+          "reading": "ゆうがた",
+          "meaning": "late afternoon (typically just before dinner time)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "夕飯",
+          "reading": "ゆうはん",
+          "meaning": "dinner, supper, evening meal",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "郵便局",
+          "reading": "ゆうびんきょく",
+          "meaning": "post office",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "昨夜",
+          "reading": "ゆうべ",
+          "meaning": "last night",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "有名",
+          "reading": "ゆうめい",
+          "meaning": "famous",
+          "partOfSpeech": "na-adjective"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-35",
+      "name": "N5 Vocab 35: 雪〜両親",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 55,
+      "intro": {
+        "title": "N5 Vocabulary — Group 35",
+        "explanation": "Learn N5 vocabulary words 681–700. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "雪",
+          "reading": "ゆき",
+          "meaning": "snow",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "ゆっくりと",
+          "reading": "ゆっくりと",
+          "meaning": "slowly, at ease",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "八日",
+          "reading": "ようか",
+          "meaning": "eight days",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "洋服",
+          "reading": "ようふく",
+          "meaning": "Western-style clothes",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "よく",
+          "reading": "よく",
+          "meaning": "frequently, often (much)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "横",
+          "reading": "よこ",
+          "meaning": "beside",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "四日",
+          "reading": "よっか",
+          "meaning": "four days",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "四つ",
+          "reading": "よっつ",
+          "meaning": "four things",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "呼ぶ",
+          "reading": "よぶ",
+          "meaning": "to call (one's name)",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "読む",
+          "reading": "よむ",
+          "meaning": "to read",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "夜",
+          "reading": "よる",
+          "meaning": "evening, night",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "弱い",
+          "reading": "よわい",
+          "meaning": "weak",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "来月",
+          "reading": "らいげつ",
+          "meaning": "next month",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "来週",
+          "reading": "らいしゅう",
+          "meaning": "next week",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "来年",
+          "reading": "らいねん",
+          "meaning": "next year",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "ラジオ",
+          "reading": "ラジオ",
+          "meaning": "radio",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "ラジオカセ",
+          "reading": "ラジオカセ",
+          "meaning": "radio cassette player",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "りっぱ",
+          "reading": "りっぱ",
+          "meaning": "splendid, fine",
+          "partOfSpeech": "na-adjective"
+        },
+        {
+          "word": "留学生",
+          "reading": "りゅうがくせい",
+          "meaning": "international student",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "両親",
+          "reading": "りょうしん",
+          "meaning": "parents (lit., both parents)",
+          "partOfSpeech": "noun"
+        }
+      ]
+    },
+    {
+      "id": "n5-vocab-36",
+      "name": "N5 Vocab 36: 料理〜悪い",
+      "type": "vocabulary",
+      "level": "n5",
+      "order": 56,
+      "intro": {
+        "title": "N5 Vocabulary — Group 36",
+        "explanation": "Learn N5 vocabulary words 701–718. These are essential words for the JLPT N5 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "word": "料理",
+          "reading": "りょうり",
+          "meaning": "cooking",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "旅行",
+          "reading": "りょこう",
+          "meaning": "travel, trip",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "零",
+          "reading": "れい",
+          "meaning": "zero, nought",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "冷蔵庫",
+          "reading": "れいぞうこ",
+          "meaning": "refrigerator",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "レコード",
+          "reading": "レコード",
+          "meaning": "record",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "レストラン",
+          "reading": "レストラン",
+          "meaning": "restaurant",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "練習",
+          "reading": "れんしゅう (する)",
+          "meaning": "(to) practice",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "廊下",
+          "reading": "ろうか",
+          "meaning": "corridor",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "六",
+          "reading": "ろく",
+          "meaning": "six",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "ワイシャツ",
+          "reading": "ワイシャツ",
+          "meaning": "shirt (lit: white shirt), business shirt",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "若い",
+          "reading": "わかい",
+          "meaning": "young",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "分かる",
+          "reading": "わかる",
+          "meaning": "to understand",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "忘れる",
+          "reading": "わすれる",
+          "meaning": "to forget",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "私",
+          "reading": "わたくし",
+          "meaning": "I (formal), myself, private affairs",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "私",
+          "reading": "わたし",
+          "meaning": "I, myself",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "渡す",
+          "reading": "わたす",
+          "meaning": "to hand (something) over (v.t.)",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "渡る",
+          "reading": "わたる",
+          "meaning": "to cross over, to go across",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "悪い",
+          "reading": "わるい",
+          "meaning": "bad, sinful",
+          "partOfSpeech": "adjective"
+        }
+      ]
+    }
+  ]
+}
