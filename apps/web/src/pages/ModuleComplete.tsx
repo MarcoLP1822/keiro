@@ -8,6 +8,7 @@ import { PrimaryButton } from '../components/common/PrimaryButton';
 import { SecondaryButton } from '../components/common/SecondaryButton';
 import { useProgress } from '../hooks/useProgress';
 import { useDailyPlan } from '../hooks/useDailyPlan';
+import { events } from '../services/analytics';
 
 export function ModuleComplete() {
   const { moduleId } = useParams<{ moduleId: string }>();
@@ -28,6 +29,13 @@ export function ModuleComplete() {
       navigate('/', { replace: true });
     }
   }, [score, mod, navigate]);
+
+  // Track module completion analytics
+  useEffect(() => {
+    if (score && mod) {
+      events.moduleComplete(mod.id, score.score, score.passed);
+    }
+  }, [score, mod]);
 
   if (!score || !mod) {
     return null;

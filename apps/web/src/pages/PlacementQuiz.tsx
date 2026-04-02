@@ -5,6 +5,7 @@ import { generatePlacementQuiz, evaluatePlacement } from '@keiro/engine';
 import { getAllModules, getKanaItems } from '@keiro/content';
 import { ExerciseRenderer } from '../components/exercise/ExerciseRenderer';
 import { storage } from '../services/storage';
+import { events } from '../services/analytics';
 
 export function PlacementQuiz() {
   const navigate = useNavigate();
@@ -49,6 +50,8 @@ export function PlacementQuiz() {
         });
       }
     }
+
+    events.placementComplete(result.startModuleId);
 
     // Full page reload ensures Dexie live query picks up the new data
     window.location.href = '/';
