@@ -17,11 +17,9 @@ export function FeedbackBar({ isCorrect, correctAnswer, onNext }: FeedbackBarPro
     <div
       role="status"
       aria-live="polite"
-      className="fixed bottom-0 left-0 right-0 flex items-center justify-between px-5 py-4 shadow-[0_-2px_10px_rgba(0,0,0,0.1)]"
+      className="flex items-center justify-between px-5 py-4 mt-6 rounded-[14px]"
       style={{
         background: isCorrect ? 'var(--ios-green)' : 'var(--ios-red)',
-        borderTopLeftRadius: '14px',
-        borderTopRightRadius: '14px',
       }}
     >
       <p className="font-semibold text-[17px] text-white">
