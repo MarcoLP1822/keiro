@@ -23,5 +23,21 @@ export interface PlannedSession {
   modules: string[];
   estimatedMinutes: number;
   newItemCount: number;
+  reviewCount: number;
+  reviewCards: string[];
   isComplete: boolean;
 }
+
+export interface SrsCard {
+  id: string;
+  itemId: string;
+  moduleId: string;
+  contentType: 'kana' | 'vocabulary' | 'grammar' | 'kanji';
+  interval: number;
+  repetitions: number;
+  easeFactor: number;
+  nextReview: string;
+  lastReview: string | null;
+}
+
+export type SrsGrade = 'wrong' | 'hard' | 'easy';

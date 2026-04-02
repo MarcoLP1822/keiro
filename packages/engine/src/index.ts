@@ -15,3 +15,5 @@ export {
 
 export { generatePlacementQuiz, evaluatePlacement } from './placement.js';
 export type { PlacementResult } from './placement.js';
+
+export { gradeSrsCard, createSrsCard, getDueCards } from './srs.js';

@@ -32,4 +32,6 @@ export type {
   DailyPlan,
   Setting,
   PlannedSession,
+  SrsCard,
+  SrsGrade,
 } from './progress.js';

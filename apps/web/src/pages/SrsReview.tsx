@@ -1,0 +1,214 @@
+import { useState, useCallback } from 'react';
+import { useNavigate, useLocation } from 'react-router';
+import type { SrsGrade } from '@keiro/types';
+import { TopBar } from '../components/layout/TopBar';
+import { PageContainer } from '../components/layout/PageContainer';
+import { QuestionDisplay } from '../components/exercise/QuestionDisplay';
+import { AnswerOptions } from '../components/exercise/AnswerOptions';
+import { GapFill } from '../components/exercise/GapFill';
+import { TypingInput } from '../components/exercise/TypingInput';
+import { SentenceOrder } from '../components/exercise/SentenceOrder';
+import { ProgressCounter } from '../components/exercise/ProgressCounter';
+import { SrsGradeButtons } from '../components/exercise/SrsGradeButtons';
+import { PrimaryButton } from '../components/common/PrimaryButton';
+import { Modal } from '../components/common/Modal';
+import { useReviewSession } from '../hooks/useReviewSession';
+import { useSettings } from '../hooks/useSettings';
+import { useDailyPlan } from '../hooks/useDailyPlan';
+
+type ExerciseMode = 'multiple-choice' | 'gap-fill' | 'typing' | 'sentence-order';
+
+function getExerciseMode(type: string): ExerciseMode {
+  switch (type) {
+    case 'sentence-gap-fill':
+      return 'gap-fill';
+    case 'typing-meaning':
+    case 'typing-reading':
+      return 'typing';
+    case 'grammar-sentence-order':
+      return 'sentence-order';
+    default:
+      return 'multiple-choice';
+  }
+}
+
+export function SrsReview() {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { audio } = useSettings();
+  const { plan } = useDailyPlan();
+
+  const cardIds = (location.state?.cardIds as string[]) ?? [];
+  const {
+    currentExercise,
+    currentIndex,
+    totalCount,
+    isReady,
+    isComplete,
+    handleGrade,
+  } = useReviewSession(cardIds);
+
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const [showFeedback, setShowFeedback] = useState(false);
+  const [showExitModal, setShowExitModal] = useState(false);
+
+  const handleSelect = useCallback((index: number) => {
+    if (showFeedback) return;
+    setSelectedIndex(index);
+    setShowFeedback(true);
+  }, [showFeedback]);
+
+  const handleTypingSubmit = useCallback((isCorrect: boolean) => {
+    setShowFeedback(true);
+    setSelectedIndex(isCorrect ? 0 : -1);
+  }, []);
+
+  const handleSentenceOrderSubmit = useCallback((isCorrect: boolean) => {
+    setShowFeedback(true);
+    setSelectedIndex(isCorrect ? 0 : -1);
+  }, []);
+
+  const handleGradeAndAdvance = useCallback(async (grade: SrsGrade) => {
+    await handleGrade(grade);
+    setSelectedIndex(null);
+    setShowFeedback(false);
+  }, [handleGrade]);
+
+  // Review complete screen
+  if (isComplete) {
+    const hasNewModules = plan && plan.modules.length > 0;
+
+    return (
+      <PageContainer>
+        <div className="flex min-h-[60vh] flex-col items-center justify-center text-center">
+          <h1
+            className="text-[22px] font-bold"
+            style={{ color: 'var(--ios-label)' }}
+          >
+            Reviews done!
+          </h1>
+          <p
+            className="mt-2 text-[17px]"
+            style={{ color: 'var(--ios-secondary-label)' }}
+          >
+            You reviewed {totalCount} {totalCount === 1 ? 'item' : 'items'}.
+          </p>
+          <div className="mt-8 w-full space-y-3">
+            {hasNewModules ? (
+              <PrimaryButton onClick={() => navigate(`/study/${plan!.modules[0]}/intro`)}>
+                Continue to new lesson
+              </PrimaryButton>
+            ) : (
+              <PrimaryButton onClick={() => navigate('/')}>
+                Back to Home
+              </PrimaryButton>
+            )}
+            {hasNewModules && (
+              <button
+                onClick={() => navigate('/')}
+                className="w-full py-3 text-[17px] font-normal active:opacity-60"
+                style={{ color: 'var(--ios-blue)' }}
+              >
+                Back to Home
+              </button>
+            )}
+          </div>
+        </div>
+      </PageContainer>
+    );
+  }
+
+  if (!isReady || !currentExercise) return null;
+
+  const mode = getExerciseMode(currentExercise.type);
+
+  const isCorrectForFeedback = mode === 'multiple-choice' || mode === 'gap-fill'
+    ? selectedIndex === currentExercise.correctIndex
+    : selectedIndex === 0;
+
+  return (
+    <>
+      <TopBar
+        onBack={() => setShowExitModal(true)}
+        rightAction={
+          <ProgressCounter current={currentIndex + 1} total={totalCount} />
+        }
+      />
+      <PageContainer>
+        {mode !== 'sentence-order' && (
+          <QuestionDisplay exercise={currentExercise} audioEnabled={audio} />
+        )}
+
+        {mode === 'gap-fill' && currentExercise.sentenceWithGap ? (
+          <GapFill
+            sentence={currentExercise.sentenceWithGap}
+            options={currentExercise.options}
+            correctIndex={currentExercise.correctIndex}
+            selectedIndex={selectedIndex}
+            showFeedback={showFeedback}
+            onSelect={handleSelect}
+          />
+        ) : mode === 'typing' && currentExercise.correctAnswer ? (
+          <TypingInput
+            correctAnswer={currentExercise.correctAnswer}
+            onSubmit={handleTypingSubmit}
+          />
+        ) : mode === 'sentence-order' && currentExercise.scrambledWords && currentExercise.correctOrder ? (
+          <>
+            <QuestionDisplay exercise={currentExercise} audioEnabled={audio} />
+            <SentenceOrder
+              scrambledWords={currentExercise.scrambledWords}
+              correctOrder={currentExercise.correctOrder}
+              onSubmit={handleSentenceOrderSubmit}
+            />
+          </>
+        ) : (
+          <AnswerOptions
+            options={currentExercise.options}
+            onSelect={handleSelect}
+            correctIndex={currentExercise.correctIndex}
+            selectedIndex={selectedIndex}
+            showFeedback={showFeedback}
+          />
+        )}
+
+        {/* After answering, show feedback + SRS grade buttons instead of auto-advance */}
+        {showFeedback && (
+          <>
+            <div
+              role="status"
+              aria-live="polite"
+              className="flex items-center px-5 py-4 mt-6 rounded-[14px]"
+              style={{
+                background: isCorrectForFeedback ? 'var(--ios-green)' : 'var(--ios-red)',
+              }}
+            >
+              <p className="font-semibold text-[17px] text-white">
+                {isCorrectForFeedback
+                  ? 'Correct!'
+                  : `Not quite \u2014 ${
+                      mode === 'typing'
+                        ? currentExercise.correctAnswer ?? ''
+                        : mode === 'sentence-order'
+                          ? currentExercise.correctOrder?.join('') ?? ''
+                          : currentExercise.options[currentExercise.correctIndex]
+                    }`}
+              </p>
+            </div>
+            <SrsGradeButtons onGrade={handleGradeAndAdvance} />
+          </>
+        )}
+      </PageContainer>
+
+      <Modal
+        isOpen={showExitModal}
+        title="Exit review?"
+        body="Your graded cards have already been saved."
+        primaryLabel="Exit"
+        secondaryLabel="Keep reviewing"
+        onPrimary={() => navigate('/')}
+        onSecondary={() => setShowExitModal(false)}
+      />
+    </>
+  );
+}

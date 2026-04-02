@@ -1,4 +1,4 @@
-import type { Module, ModuleProgress, PlannedSession } from '@keiro/types';
+import type { Module, ModuleProgress, PlannedSession, SrsCard } from '@keiro/types';
 
 export type PlanSize = 'small' | 'medium' | 'large';
 
@@ -6,6 +6,7 @@ export interface DailyPlanConfig {
   size: PlanSize;
   progressMap: Map<string, ModuleProgress>;
   allModules: Module[];
+  dueCards?: SrsCard[];
 }
 
 const MAX_EXERCISES: Record<PlanSize, number> = {
@@ -18,6 +19,12 @@ const MAX_NEW_ITEMS: Record<PlanSize, number> = {
   small: 3,
   medium: 5,
   large: 8,
+};
+
+const REVIEW_CAPS: Record<PlanSize, number> = {
+  small: 15,
+  medium: 30,
+  large: 50,
 };
 
 /**
@@ -38,19 +45,28 @@ export function getCurrentModule(
 }
 
 /**
- * Calculates a daily plan based on current progress and plan size.
- * For MVP (no SRS), the plan consists of exercises from the current module.
+ * Calculates a daily plan based on current progress, plan size, and due SRS cards.
+ * Reviews are prioritized: they fill up first, then new items get remaining capacity.
  */
 export function calculateDailyPlan(config: DailyPlanConfig): PlannedSession {
-  const { size, progressMap, allModules } = config;
+  const { size, progressMap, allModules, dueCards = [] } = config;
+
+  // Cap reviews at the session size limit
+  const reviewCap = REVIEW_CAPS[size];
+  const cappedReviews = dueCards.slice(0, reviewCap);
+  const reviewCount = cappedReviews.length;
+  const reviewCardIds = cappedReviews.map((c) => c.id);
 
   const currentModule = getCurrentModule(allModules, progressMap);
 
-  if (!currentModule) {
+  // All modules done and no reviews — nothing to do
+  if (!currentModule && reviewCount === 0) {
     return {
       modules: [],
       estimatedMinutes: 0,
       newItemCount: 0,
+      reviewCount: 0,
+      reviewCards: [],
       isComplete: true,
     };
   }
@@ -58,19 +74,40 @@ export function calculateDailyPlan(config: DailyPlanConfig): PlannedSession {
   const maxExercises = MAX_EXERCISES[size];
   const maxNew = MAX_NEW_ITEMS[size];
 
-  // For MVP: exercises come from the current module
-  // Each kana item produces 2 exercises (char-to-romaji + romaji-to-char)
-  const itemCount = currentModule.items.length;
-  const newItems = Math.min(itemCount, maxNew);
-  const exerciseCount = Math.min(itemCount * 2, maxExercises);
+  // Calculate remaining capacity after reviews
+  const remainingCapacity = Math.max(0, maxExercises - reviewCount);
 
-  // Rough estimate: ~30 seconds per exercise
-  const estimatedMinutes = Math.max(1, Math.round(exerciseCount * 0.5));
+  let newItems = 0;
+  let modules: string[] = [];
+
+  if (currentModule && remainingCapacity > 0) {
+    const itemCount = currentModule.items.length;
+    newItems = Math.min(itemCount, maxNew, remainingCapacity);
+    modules = [currentModule.id];
+  }
+
+  // If nothing to do today (no reviews, no new items)
+  if (reviewCount === 0 && newItems === 0) {
+    return {
+      modules: [],
+      estimatedMinutes: 0,
+      newItemCount: 0,
+      reviewCount: 0,
+      reviewCards: [],
+      isComplete: true,
+    };
+  }
+
+  // Rough estimate: ~30 seconds per exercise/review
+  const totalItems = reviewCount + (newItems > 0 ? newItems * 2 : 0);
+  const estimatedMinutes = Math.max(1, Math.round(totalItems * 0.5));
 
   return {
-    modules: [currentModule.id],
+    modules,
     estimatedMinutes,
     newItemCount: newItems,
+    reviewCount,
+    reviewCards: reviewCardIds,
     isComplete: false,
   };
 }

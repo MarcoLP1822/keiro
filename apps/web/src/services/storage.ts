@@ -1,4 +1,4 @@
-import type { ModuleProgress, DailyPlan, Setting } from '@keiro/types';
+import type { ModuleProgress, DailyPlan, Setting, SrsCard } from '@keiro/types';
 import { db } from './db';
 
 class StorageService {
@@ -31,11 +31,35 @@ class StorageService {
     await db.settings.put({ key, value });
   }
 
+  // --- SRS Card methods ---
+
+  async getSrsCards(): Promise<SrsCard[]> {
+    return db.srsCards.toArray();
+  }
+
+  async getSrsCard(id: string): Promise<SrsCard | undefined> {
+    return db.srsCards.get(id);
+  }
+
+  async saveSrsCard(card: SrsCard): Promise<void> {
+    await db.srsCards.put(card);
+  }
+
+  async saveSrsCards(cards: SrsCard[]): Promise<void> {
+    await db.srsCards.bulkPut(cards);
+  }
+
+  async getDueCards(date?: string): Promise<SrsCard[]> {
+    const today = date || new Date().toISOString().split('T')[0];
+    return db.srsCards.where('nextReview').belowOrEqual(today).toArray();
+  }
+
   async resetAll(): Promise<void> {
-    await db.transaction('rw', db.moduleProgress, db.dailyPlan, db.settings, async () => {
+    await db.transaction('rw', db.moduleProgress, db.dailyPlan, db.settings, db.srsCards, async () => {
       await db.moduleProgress.clear();
       await db.dailyPlan.clear();
       await db.settings.clear();
+      await db.srsCards.clear();
     });
   }
 }

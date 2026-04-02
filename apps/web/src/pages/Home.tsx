@@ -40,7 +40,11 @@ export function Home() {
   const levelLabel = currentModule?.level?.toUpperCase() ?? (totalCount > 0 ? 'Complete' : 'N5');
 
   function handleStart() {
-    if (plan && plan.modules.length > 0) {
+    if (!plan) return;
+    // If there are SRS reviews, go to review session first
+    if (plan.reviewCards.length > 0) {
+      navigate('/review/srs', { state: { cardIds: plan.reviewCards } });
+    } else if (plan.modules.length > 0) {
       navigate(`/study/${plan.modules[0]}/intro`);
     }
   }
@@ -173,12 +177,20 @@ export function Home() {
             >
               {plan ? (
                 <ul className="space-y-2">
+                  {plan.reviewCount > 0 && (
+                    <li
+                      className="text-[17px]"
+                      style={{ color: 'var(--ios-label)' }}
+                    >
+                      {plan.reviewCount} items to review
+                    </li>
+                  )}
                   {plan.newItemCount > 0 && (
                     <li
                       className="text-[17px]"
                       style={{ color: 'var(--ios-label)' }}
                     >
-                      {plan.newItemCount} new kana
+                      {plan.newItemCount} new items
                     </li>
                   )}
                   <li

@@ -1,14 +1,35 @@
 import { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router';
-import type { ModuleScore } from '@keiro/types';
-import { getCurrentModule } from '@keiro/engine';
+import type { ModuleScore, SrsCard } from '@keiro/types';
+import { getCurrentModule, createSrsCard } from '@keiro/engine';
 import { getAllModules, getModuleById } from '@keiro/content';
 import { PageContainer } from '../components/layout/PageContainer';
 import { PrimaryButton } from '../components/common/PrimaryButton';
 import { SecondaryButton } from '../components/common/SecondaryButton';
 import { useProgress } from '../hooks/useProgress';
 import { useDailyPlan } from '../hooks/useDailyPlan';
+import { storage } from '../services/storage';
 import { events } from '../services/analytics';
+
+// Content types that use SRS (kana is too basic)
+const SRS_CONTENT_TYPES = new Set(['vocabulary', 'grammar', 'kanji']);
+
+/**
+ * Extracts a unique item ID from a content item based on module type.
+ */
+function getItemId(item: unknown, moduleType: string): string {
+  const obj = item as Record<string, unknown>;
+  switch (moduleType) {
+    case 'vocabulary':
+      return String(obj.word ?? '');
+    case 'kanji':
+      return String(obj.kanji ?? '');
+    case 'grammar':
+      return String(obj.id ?? '');
+    default:
+      return String(obj.character ?? obj.word ?? obj.id ?? '');
+  }
+}
 
 export function ModuleComplete() {
   const { moduleId } = useParams<{ moduleId: string }>();
@@ -18,6 +39,7 @@ export function ModuleComplete() {
   const { plan, markComplete } = useDailyPlan();
   const [showMistakes, setShowMistakes] = useState(false);
   const hasRedirected = useRef(false);
+  const srsCardsCreated = useRef(false);
 
   const score = location.state?.score as ModuleScore | undefined;
   const mod = getModuleById(moduleId!);
@@ -35,6 +57,37 @@ export function ModuleComplete() {
     if (score && mod) {
       events.moduleComplete(mod.id, score.score, score.passed);
     }
+  }, [score, mod]);
+
+  // Create SRS cards when user passes a module (only for vocab/grammar/kanji)
+  useEffect(() => {
+    if (!score || !mod || !score.passed || srsCardsCreated.current) return;
+    if (!SRS_CONTENT_TYPES.has(mod.type)) return;
+
+    srsCardsCreated.current = true;
+
+    async function createCards() {
+      const contentType = mod!.type as SrsCard['contentType'];
+      const cards: SrsCard[] = [];
+
+      for (const item of mod!.items) {
+        const itemId = getItemId(item, mod!.type);
+        if (!itemId) continue;
+
+        const cardId = `${mod!.id}-${itemId}`;
+        // Check if card already exists to avoid duplicates on retry
+        const existing = await storage.getSrsCard(cardId);
+        if (!existing) {
+          cards.push(createSrsCard(itemId, mod!.id, contentType));
+        }
+      }
+
+      if (cards.length > 0) {
+        await storage.saveSrsCards(cards);
+      }
+    }
+
+    createCards();
   }, [score, mod]);
 
   if (!score || !mod) {

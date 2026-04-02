@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import type { PlannedSession } from '@keiro/types';
-import { calculateDailyPlan } from '@keiro/engine';
+import { calculateDailyPlan, getDueCards } from '@keiro/engine';
 import { getAllModules } from '@keiro/content';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db } from '../services/db';
@@ -20,6 +20,12 @@ export function useDailyPlan() {
     [],
   );
 
+  // Load all SRS cards and compute due cards
+  const allSrsCards = useLiveQuery(
+    () => db.srsCards.toArray(),
+    [],
+  );
+
   const isComplete = todayPlan?.completed ?? false;
 
   const plan: PlannedSession | null = useMemo(() => {
@@ -28,18 +34,20 @@ export function useDailyPlan() {
     );
 
     const allModules = getAllModules();
+    const dueCards = allSrsCards ? getDueCards(allSrsCards) : [];
 
     const session = calculateDailyPlan({
       size: planSize,
       progressMap,
       allModules,
+      dueCards,
     });
 
-    // All modules finished
-    if (session.modules.length === 0) return null;
+    // All modules finished and no reviews
+    if (session.modules.length === 0 && session.reviewCount === 0) return null;
 
     return session;
-  }, [allProgress, planSize]);
+  }, [allProgress, planSize, allSrsCards]);
 
   async function markComplete(): Promise<void> {
     const date = todayString();

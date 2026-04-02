@@ -10,6 +10,7 @@ import { StudyIntro } from './pages/StudyIntro';
 import { StudyExercises } from './pages/StudyExercises';
 import { ModuleComplete } from './pages/ModuleComplete';
 import { Review } from './pages/Review';
+import { SrsReview } from './pages/SrsReview';
 import { Settings } from './pages/Settings';
 
 function AppRoutes() {
@@ -30,6 +31,7 @@ function AppRoutes() {
       <Route path="/study/:moduleId/exercises" element={<StudyExercises />} />
       <Route path="/study/:moduleId/complete" element={<ModuleComplete />} />
       <Route path="/review" element={<Review />} />
+      <Route path="/review/srs" element={<SrsReview />} />
       <Route path="/settings" element={<Settings />} />
     </Routes>
   );
