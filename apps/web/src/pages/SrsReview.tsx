@@ -15,6 +15,8 @@ import { Modal } from '../components/common/Modal';
 import { useReviewSession } from '../hooks/useReviewSession';
 import { useSettings } from '../hooks/useSettings';
 import { useDailyPlan } from '../hooks/useDailyPlan';
+import { playCorrectSound, playIncorrectSound } from '../services/sounds';
+import { vibrateSuccess, vibrateError } from '../services/haptics';
 
 type ExerciseMode = 'multiple-choice' | 'gap-fill' | 'typing' | 'sentence-order';
 
@@ -54,25 +56,51 @@ export function SrsReview() {
 
   const handleSelect = useCallback((index: number) => {
     if (showFeedback) return;
+    if (!currentExercise) return;
+    const isCorrect = index === currentExercise.correctIndex;
+    if (audio) {
+      if (isCorrect) playCorrectSound();
+      else playIncorrectSound();
+    }
+    if (isCorrect) vibrateSuccess();
+    else vibrateError();
     setSelectedIndex(index);
     setShowFeedback(true);
-  }, [showFeedback]);
+  }, [showFeedback, currentExercise, audio]);
 
   const handleTypingSubmit = useCallback((isCorrect: boolean) => {
+    if (audio) {
+      if (isCorrect) playCorrectSound();
+      else playIncorrectSound();
+    }
+    if (isCorrect) vibrateSuccess();
+    else vibrateError();
     setShowFeedback(true);
     setSelectedIndex(isCorrect ? 0 : -1);
-  }, []);
+  }, [audio]);
 
   const handleSentenceOrderSubmit = useCallback((isCorrect: boolean) => {
+    if (audio) {
+      if (isCorrect) playCorrectSound();
+      else playIncorrectSound();
+    }
+    if (isCorrect) vibrateSuccess();
+    else vibrateError();
     setShowFeedback(true);
     setSelectedIndex(isCorrect ? 0 : -1);
-  }, []);
+  }, [audio]);
 
   const handleGradeAndAdvance = useCallback(async (grade: SrsGrade) => {
+    if (audio) {
+      if (grade === 'wrong') playIncorrectSound();
+      else playCorrectSound();
+    }
+    if (grade === 'wrong') vibrateError();
+    else vibrateSuccess();
     await handleGrade(grade);
     setSelectedIndex(null);
     setShowFeedback(false);
-  }, [handleGrade]);
+  }, [handleGrade, audio]);
 
   // Review complete screen
   if (isComplete) {

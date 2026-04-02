@@ -10,6 +10,8 @@ import { SentenceOrder } from './SentenceOrder';
 import { FeedbackBar } from './FeedbackBar';
 import { ProgressCounter } from './ProgressCounter';
 import { speak } from '../../services/audio';
+import { playCorrectSound, playIncorrectSound } from '../../services/sounds';
+import { vibrateSuccess, vibrateError } from '../../services/haptics';
 import { useSettings } from '../../hooks/useSettings';
 
 interface ExerciseRendererProps {
@@ -56,6 +58,13 @@ export function ExerciseRenderer({ exercises, onComplete, onExit }: ExerciseRend
 
   const handleSelect = (index: number) => {
     if (showFeedback) return;
+    const isCorrect = index === exercise.correctIndex;
+    if (audio) {
+      if (isCorrect) playCorrectSound();
+      else playIncorrectSound();
+    }
+    if (isCorrect) vibrateSuccess();
+    else vibrateError();
     setSelectedIndex(index);
     setShowFeedback(true);
   };
@@ -105,15 +114,27 @@ export function ExerciseRenderer({ exercises, onComplete, onExit }: ExerciseRend
 
   // For typing/sentence-order: show feedback bar after submission
   const handleTypingSubmit = useCallback((isCorrect: boolean) => {
+    if (audio) {
+      if (isCorrect) playCorrectSound();
+      else playIncorrectSound();
+    }
+    if (isCorrect) vibrateSuccess();
+    else vibrateError();
     setShowFeedback(true);
     // Store result temporarily to use in handleNext
     setSelectedIndex(isCorrect ? 0 : -1);
-  }, []);
+  }, [audio]);
 
   const handleSentenceOrderSubmit = useCallback((isCorrect: boolean) => {
+    if (audio) {
+      if (isCorrect) playCorrectSound();
+      else playIncorrectSound();
+    }
+    if (isCorrect) vibrateSuccess();
+    else vibrateError();
     setShowFeedback(true);
     setSelectedIndex(isCorrect ? 0 : -1);
-  }, []);
+  }, [audio]);
 
   // For typing/sentence-order, handleNext uses the stored isCorrect
   const handleNonMCNext = useCallback(() => {

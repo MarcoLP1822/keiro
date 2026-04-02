@@ -3,6 +3,7 @@ import { getAllModules } from '@keiro/content';
 import { getCurrentModule } from '@keiro/engine';
 import { PageContainer } from '../components/layout/PageContainer';
 import { PrimaryButton } from '../components/common/PrimaryButton';
+import { SecondaryButton } from '../components/common/SecondaryButton';
 import { ProgressBar } from '../components/common/ProgressBar';
 import { useProgress } from '../hooks/useProgress';
 import { useDailyPlan } from '../hooks/useDailyPlan';
@@ -11,6 +12,14 @@ function MapIcon() {
   return (
     <svg className="h-[22px] w-[22px]" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round" d="M9 6.75V15m6-6v8.25m.503-11.307L12 2.25 8.497 5.693A3.75 3.75 0 006.75 8.25v9a3.75 3.75 0 003.75 3.75h3a3.75 3.75 0 003.75-3.75v-9a3.75 3.75 0 00-1.747-3.057z" />
+    </svg>
+  );
+}
+
+function StatsIcon() {
+  return (
+    <svg className="h-[22px] w-[22px]" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
     </svg>
   );
 }
@@ -75,14 +84,24 @@ export function Home() {
         >
           <MapIcon />
         </button>
-        <button
-          onClick={() => navigate('/settings')}
-          className="flex h-[44px] w-[44px] items-center justify-center active:opacity-60"
-          style={{ color: 'var(--ios-blue)' }}
-          aria-label="Settings"
-        >
-          <SettingsIcon />
-        </button>
+        <div className="flex items-center gap-1">
+          <button
+            onClick={() => navigate('/stats')}
+            className="flex h-[44px] w-[44px] items-center justify-center active:opacity-60"
+            style={{ color: 'var(--ios-blue)' }}
+            aria-label="Statistics"
+          >
+            <StatsIcon />
+          </button>
+          <button
+            onClick={() => navigate('/settings')}
+            className="flex h-[44px] w-[44px] items-center justify-center active:opacity-60"
+            style={{ color: 'var(--ios-blue)' }}
+            aria-label="Settings"
+          >
+            <SettingsIcon />
+          </button>
+        </div>
       </header>
 
       <PageContainer>
@@ -139,6 +158,13 @@ export function Home() {
               className="rounded-[10px] p-5 text-center"
               style={{ background: 'var(--ios-bg-grouped-secondary)' }}
             >
+              <span
+                className="text-[40px] leading-none block mb-2"
+                style={{ color: 'var(--ios-green)' }}
+                aria-hidden="true"
+              >
+                &#10003;
+              </span>
               <p
                 className="text-[17px] font-semibold"
                 style={{ color: 'var(--ios-label)' }}
@@ -147,9 +173,11 @@ export function Home() {
               </p>
             </div>
             <div className="mt-6 space-y-3">
-              <PrimaryButton onClick={handleKeepGoing}>
-                Keep going
-              </PrimaryButton>
+              {currentModule && (
+                <SecondaryButton onClick={handleKeepGoing}>
+                  Keep studying
+                </SecondaryButton>
+              )}
               <button
                 onClick={() => navigate('/review')}
                 className="w-full py-3 text-[17px] font-normal active:opacity-60"

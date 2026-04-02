@@ -1,12 +1,24 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router';
+import { useLiveQuery } from 'dexie-react-hooks';
 import { getAllModules } from '@keiro/content';
 import { PageContainer } from '../components/layout/PageContainer';
 import { PrimaryButton } from '../components/common/PrimaryButton';
 import { SecondaryButton } from '../components/common/SecondaryButton';
+import { Onboarding } from '../components/Onboarding';
+import { db } from '../services/db';
 import { storage } from '../services/storage';
 
 export function Welcome() {
   const navigate = useNavigate();
+  const [onboardingDismissed, setOnboardingDismissed] = useState(false);
+
+  const onboardingSetting = useLiveQuery(
+    () => db.settings.get('onboardingComplete'),
+    [],
+  );
+
+  const showOnboarding = !onboardingDismissed && onboardingSetting?.value !== true;
 
   async function handleStartFromZero() {
     const modules = getAllModules();
@@ -27,6 +39,10 @@ export function Welcome() {
 
   function handleKnowSome() {
     navigate('/placement');
+  }
+
+  if (showOnboarding) {
+    return <Onboarding onComplete={() => setOnboardingDismissed(true)} />;
   }
 
   return (
