@@ -6,6 +6,9 @@ export { scoreModule, getModuleStatus } from './scoring.js';
 export {
   generateKanaExercises,
   generateAudioExercises,
+  generateVocabExercises,
+  generateKanjiExercises,
+  generateGrammarExercises,
   createMultipleChoice,
   shuffle,
 } from './exercises.js';

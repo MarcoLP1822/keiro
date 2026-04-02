@@ -10,11 +10,26 @@ const questionText: Record<string, string> = {
   'char-to-romaji': 'What does this mean?',
   'romaji-to-char': 'Which character is this?',
   'audio-to-char': 'What character do you hear?',
+  'word-to-meaning': 'What does this word mean?',
+  'meaning-to-word': 'Which word means this?',
+  'kanji-to-meaning': 'What does this kanji mean?',
+  'kanji-to-reading': 'How do you read this kanji?',
+  'grammar-pick-correct': 'Which sentence uses this grammar correctly?',
 };
+
+// Exercise types that show large Japanese characters
+const largeJapaneseTypes = new Set([
+  'char-to-romaji',
+  'word-to-meaning',
+  'kanji-to-meaning',
+  'kanji-to-reading',
+]);
 
 export function QuestionDisplay({ exercise, audioEnabled = true }: QuestionDisplayProps) {
   const prompt = questionText[exercise.type] ?? 'What is this?';
   const isAudio = exercise.type === 'audio-to-char';
+  const isLargeJapanese = largeJapaneseTypes.has(exercise.type);
+  const isGrammar = exercise.type === 'grammar-pick-correct';
 
   const handlePlayAudio = () => {
     speak(exercise.question, audioEnabled);
@@ -46,17 +61,44 @@ export function QuestionDisplay({ exercise, audioEnabled = true }: QuestionDispl
             <path d="M11.26 3.691A1.2 1.2 0 0 1 12 4.8v14.4a1.2 1.2 0 0 1-2.05.849L5.1 15.6H2.4A1.2 1.2 0 0 1 1.2 14.4V9.6a1.2 1.2 0 0 1 1.2-1.2h2.7l4.85-4.449a1.2 1.2 0 0 1 1.31-.26ZM15.53 7.47a.75.75 0 0 1 1.06 0 6.75 6.75 0 0 1 0 9.06.75.75 0 0 1-1.06-1.06 5.25 5.25 0 0 0 0-6.94.75.75 0 0 1 0-1.06ZM18.36 4.64a.75.75 0 0 1 1.06 0c3.808 3.807 3.808 9.983 0 13.79a.75.75 0 1 1-1.06-1.06 8.25 8.25 0 0 0 0-11.67.75.75 0 0 1 0-1.06Z"/>
           </svg>
         </button>
+      ) : isGrammar ? (
+        <div className="flex flex-col items-center gap-1">
+          <p
+            className="text-2xl font-semibold"
+            style={{ color: 'var(--ios-label)' }}
+          >
+            {exercise.question}
+          </p>
+          {exercise.questionDetail && (
+            <p
+              className="text-[15px]"
+              style={{ color: 'var(--ios-secondary-label)' }}
+            >
+              {exercise.questionDetail}
+            </p>
+          )}
+        </div>
       ) : (
-        <p
-          className={
-            exercise.type === 'char-to-romaji'
-              ? 'text-[56px] leading-tight font-bold'
-              : 'text-2xl font-semibold'
-          }
-          style={{ color: 'var(--ios-label)' }}
-        >
-          {exercise.question}
-        </p>
+        <div className="flex flex-col items-center gap-1">
+          <p
+            className={
+              isLargeJapanese
+                ? 'text-[56px] leading-tight font-bold'
+                : 'text-2xl font-semibold'
+            }
+            style={{ color: 'var(--ios-label)' }}
+          >
+            {exercise.question}
+          </p>
+          {exercise.questionDetail && (
+            <p
+              className="text-[15px]"
+              style={{ color: 'var(--ios-secondary-label)' }}
+            >
+              {exercise.questionDetail}
+            </p>
+          )}
+        </div>
       )}
     </div>
   );

@@ -1,7 +1,21 @@
 import { useState, useEffect, useCallback } from 'react';
 import type { Exercise, Answer, ModuleScore } from '@keiro/types';
-import { generateKanaExercises, generateAudioExercises, scoreModule, shuffle } from '@keiro/engine';
-import { getModuleById, getKanaItems } from '@keiro/content';
+import {
+  generateKanaExercises,
+  generateAudioExercises,
+  generateVocabExercises,
+  generateKanjiExercises,
+  generateGrammarExercises,
+  scoreModule,
+  shuffle,
+} from '@keiro/engine';
+import {
+  getModuleById,
+  getKanaItems,
+  getVocabItems,
+  getKanjiItems,
+  getGrammarItems,
+} from '@keiro/content';
 import { useSettings } from './useSettings';
 
 export function useStudySession(moduleId: string, mode: 'study' | 'review') {
@@ -13,12 +27,33 @@ export function useStudySession(moduleId: string, mode: 'study' | 'review') {
     const mod = getModuleById(moduleId);
     if (!mod) return;
 
-    const allKana = getKanaItems();
-    let generated = generateKanaExercises(mod, allKana);
+    let generated: Exercise[] = [];
 
-    if (audio) {
-      const audioExercises = generateAudioExercises(mod, allKana);
-      generated = shuffle([...generated, ...audioExercises]);
+    switch (mod.type) {
+      case 'kana': {
+        const allKana = getKanaItems();
+        generated = generateKanaExercises(mod, allKana);
+        if (audio) {
+          const audioExercises = generateAudioExercises(mod, allKana);
+          generated = shuffle([...generated, ...audioExercises]);
+        }
+        break;
+      }
+      case 'vocabulary': {
+        const allVocab = getVocabItems();
+        generated = generateVocabExercises(mod, allVocab);
+        break;
+      }
+      case 'kanji': {
+        const allKanji = getKanjiItems();
+        generated = generateKanjiExercises(mod, allKanji);
+        break;
+      }
+      case 'grammar': {
+        const allGrammar = getGrammarItems();
+        generated = generateGrammarExercises(mod, allGrammar);
+        break;
+      }
     }
 
     setExercises(generated);

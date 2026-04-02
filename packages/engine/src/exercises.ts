@@ -1,4 +1,14 @@
-import type { Module, KanaItem, Exercise, KanaExerciseType } from '@keiro/types';
+import type {
+  Module,
+  KanaItem,
+  VocabItem,
+  KanjiItem,
+  GrammarItem,
+  Exercise,
+  KanaExerciseType,
+  VocabExerciseType,
+  KanjiExerciseType,
+} from '@keiro/types';
 
 /**
  * Fisher-Yates shuffle. Returns a new shuffled array (does not mutate input).
@@ -109,6 +119,195 @@ export function generateAudioExercises(
 
   for (const item of items) {
     exercises.push(createMultipleChoice('audio-to-char', item, allKanaItems));
+  }
+
+  return shuffle(exercises);
+}
+
+// --- Vocab exercise generators ---
+
+function createVocabExercise(
+  type: VocabExerciseType,
+  target: VocabItem,
+  pool: VocabItem[],
+): Exercise {
+  const distractorPool = pool.filter(
+    (item) => item.word !== target.word || item.meaning !== target.meaning,
+  );
+
+  // Prefer same part of speech for distractors, fall back to full pool
+  const samePOS = distractorPool.filter((item) => item.partOfSpeech === target.partOfSpeech);
+  const source = samePOS.length >= 3 ? samePOS : distractorPool;
+
+  const distractorCount = Math.min(3, source.length);
+  const distractors = shuffle(source).slice(0, distractorCount);
+
+  let question: string;
+  let questionDetail: string | undefined;
+  let correctOption: string;
+  let distractorOptions: string[];
+
+  switch (type) {
+    case 'word-to-meaning':
+      question = target.word;
+      questionDetail = target.reading !== target.word ? target.reading : undefined;
+      correctOption = target.meaning;
+      distractorOptions = distractors.map((d) => d.meaning);
+      break;
+    case 'meaning-to-word':
+      question = target.meaning;
+      correctOption = target.word;
+      distractorOptions = distractors.map((d) => d.word);
+      break;
+    default:
+      question = target.word;
+      correctOption = target.meaning;
+      distractorOptions = distractors.map((d) => d.meaning);
+  }
+
+  const allOptions = shuffle([correctOption, ...distractorOptions]);
+  const correctIndex = allOptions.indexOf(correctOption);
+
+  return {
+    type,
+    question,
+    ...(questionDetail && { questionDetail }),
+    options: allOptions,
+    correctIndex,
+    targetItem: target,
+  };
+}
+
+/**
+ * Generates word-to-meaning and meaning-to-word exercises for each item in a vocab module.
+ */
+export function generateVocabExercises(
+  module: Module,
+  allVocabItems: VocabItem[],
+): Exercise[] {
+  const items = module.items as VocabItem[];
+  if (items.length === 0) return [];
+
+  const exercises: Exercise[] = [];
+  for (const item of items) {
+    exercises.push(
+      createVocabExercise('word-to-meaning', item, allVocabItems),
+      createVocabExercise('meaning-to-word', item, allVocabItems),
+    );
+  }
+  return shuffle(exercises);
+}
+
+// --- Kanji exercise generators ---
+
+function createKanjiExercise(
+  type: KanjiExerciseType,
+  target: KanjiItem,
+  pool: KanjiItem[],
+): Exercise {
+  const distractorPool = pool.filter((item) => item.kanji !== target.kanji);
+  const distractorCount = Math.min(3, distractorPool.length);
+  const distractors = shuffle(distractorPool).slice(0, distractorCount);
+
+  let question: string;
+  let correctOption: string;
+  let distractorOptions: string[];
+
+  switch (type) {
+    case 'kanji-to-meaning':
+      question = target.kanji;
+      correctOption = target.meanings[0];
+      distractorOptions = distractors.map((d) => d.meanings[0]);
+      break;
+    case 'kanji-to-reading': {
+      question = target.kanji;
+      const targetReadings = [...target.kunReading, ...target.onReading];
+      correctOption = targetReadings[0] ?? target.kanji;
+      distractorOptions = distractors.map((d) => {
+        const readings = [...d.kunReading, ...d.onReading];
+        return readings[0] ?? d.kanji;
+      });
+      break;
+    }
+    default:
+      question = target.kanji;
+      correctOption = target.meanings[0];
+      distractorOptions = distractors.map((d) => d.meanings[0]);
+  }
+
+  const allOptions = shuffle([correctOption, ...distractorOptions]);
+  const correctIndex = allOptions.indexOf(correctOption);
+
+  return {
+    type,
+    question,
+    options: allOptions,
+    correctIndex,
+    targetItem: target,
+  };
+}
+
+/**
+ * Generates kanji-to-meaning and kanji-to-reading exercises for each item in a kanji module.
+ */
+export function generateKanjiExercises(
+  module: Module,
+  allKanjiItems: KanjiItem[],
+): Exercise[] {
+  const items = module.items as KanjiItem[];
+  if (items.length === 0) return [];
+
+  const exercises: Exercise[] = [];
+  for (const item of items) {
+    exercises.push(
+      createKanjiExercise('kanji-to-meaning', item, allKanjiItems),
+      createKanjiExercise('kanji-to-reading', item, allKanjiItems),
+    );
+  }
+  return shuffle(exercises);
+}
+
+// --- Grammar exercise generators ---
+
+/**
+ * Generates grammar-pick-correct exercises for each item in a grammar module.
+ * Shows a grammar point description, pick the correct example sentence.
+ */
+export function generateGrammarExercises(
+  module: Module,
+  allGrammarItems: GrammarItem[],
+): Exercise[] {
+  const items = module.items as GrammarItem[];
+  if (items.length === 0) return [];
+
+  const exercises: Exercise[] = [];
+
+  for (const item of items) {
+    if (!item.examples || item.examples.length === 0) continue;
+
+    for (let i = 0; i < 2; i++) {
+      const exampleIndex = i % item.examples.length;
+      const correctExample = item.examples[exampleIndex];
+
+      const otherItems = allGrammarItems.filter((g) => g.id !== item.id);
+      const distractorSentences = shuffle(otherItems)
+        .slice(0, 3)
+        .map((g) => g.examples[0]?.japanese)
+        .filter(Boolean) as string[];
+
+      const correctOption = correctExample.japanese;
+      const allOptions = shuffle([correctOption, ...distractorSentences]);
+      const correctIndex = allOptions.indexOf(correctOption);
+
+      exercises.push({
+        type: 'grammar-pick-correct',
+        question: item.title,
+        questionDetail: item.structure,
+        options: allOptions,
+        correctIndex,
+        targetItem: item,
+      });
+    }
   }
 
   return shuffle(exercises);
