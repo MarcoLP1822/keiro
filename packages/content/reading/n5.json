@@ -1,0 +1,367 @@
+{
+  "level": "n5",
+  "modules": [
+    {
+      "id": "n5-reading-01",
+      "name": "N5 Reading 1: Self Introduction",
+      "type": "reading",
+      "level": "n5",
+      "order": 3100,
+      "intro": {
+        "title": "Reading: Self Introduction",
+        "explanation": "Read short self-introductions using vocabulary and grammar you've learned.",
+        "cultureNote": "In Japan, self-introductions (自己紹介) are very important in both social and business settings."
+      },
+      "items": [
+        {
+          "passage": "はじめまして。私はたなかです。日本人です。学生です。よろしくお願いします。",
+          "translation": "Nice to meet you. I am Tanaka. I am Japanese. I am a student. Please treat me well.",
+          "questions": [
+            {
+              "question": "What is the speaker's name?",
+              "options": ["Suzuki", "Tanaka", "Yamada", "Sato"],
+              "correctIndex": 1
+            },
+            {
+              "question": "What does the speaker do?",
+              "options": ["Teacher", "Student", "Doctor", "Office worker"],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "passage": "私はリンです。アメリカ人です。二十さいです。日本語の学生です。",
+          "translation": "I am Lin. I am American. I am 20 years old. I am a Japanese language student.",
+          "questions": [
+            {
+              "question": "Where is Lin from?",
+              "options": ["China", "Japan", "America", "Korea"],
+              "correctIndex": 2
+            },
+            {
+              "question": "How old is Lin?",
+              "options": ["18", "19", "20", "21"],
+              "correctIndex": 2
+            },
+            {
+              "question": "What is Lin studying?",
+              "options": ["English", "Japanese", "Math", "Science"],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "passage": "こんにちは。やまだです。せんせいです。えいごのせんせいです。よろしくお願いします。",
+          "translation": "Hello. I am Yamada. I am a teacher. I am an English teacher. Please treat me well.",
+          "questions": [
+            {
+              "question": "What is Yamada's job?",
+              "options": ["Student", "Doctor", "Teacher", "Engineer"],
+              "correctIndex": 2
+            },
+            {
+              "question": "What subject does Yamada teach?",
+              "options": ["Japanese", "Math", "English", "Science"],
+              "correctIndex": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n5-reading-02",
+      "name": "N5 Reading 2: My Family",
+      "type": "reading",
+      "level": "n5",
+      "order": 3200,
+      "intro": {
+        "title": "Reading: My Family",
+        "explanation": "Read short passages about families using possessives and family vocabulary.",
+        "cultureNote": "Japanese uses different words for family members when talking about your own family versus someone else's family."
+      },
+      "items": [
+        {
+          "passage": "私のかぞくは四人です。父と母と姉と私です。父はかいしゃいんです。母はせんせいです。",
+          "translation": "My family has four people. It's my father, mother, older sister, and me. My father is a company employee. My mother is a teacher.",
+          "questions": [
+            {
+              "question": "How many people are in the family?",
+              "options": ["3", "4", "5", "6"],
+              "correctIndex": 1
+            },
+            {
+              "question": "What does the father do?",
+              "options": ["Teacher", "Doctor", "Company employee", "Student"],
+              "correctIndex": 2
+            },
+            {
+              "question": "What does the mother do?",
+              "options": ["Teacher", "Company employee", "Nurse", "Housewife"],
+              "correctIndex": 0
+            }
+          ]
+        },
+        {
+          "passage": "弟は十さいです。小学生です。まいにちサッカーをします。サッカーがすきです。",
+          "translation": "My younger brother is 10 years old. He is an elementary school student. He plays soccer every day. He likes soccer.",
+          "questions": [
+            {
+              "question": "How old is the younger brother?",
+              "options": ["8", "9", "10", "11"],
+              "correctIndex": 2
+            },
+            {
+              "question": "What does the brother like?",
+              "options": ["Baseball", "Soccer", "Tennis", "Swimming"],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "passage": "姉は大学生です。二十一さいです。えいごとフランスごをべんきょうします。",
+          "translation": "My older sister is a university student. She is 21 years old. She studies English and French.",
+          "questions": [
+            {
+              "question": "What does the older sister study?",
+              "options": ["Japanese and English", "English and French", "French and Chinese", "English and Chinese"],
+              "correctIndex": 1
+            },
+            {
+              "question": "How old is the older sister?",
+              "options": ["19", "20", "21", "22"],
+              "correctIndex": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n5-reading-03",
+      "name": "N5 Reading 3: Daily Routine",
+      "type": "reading",
+      "level": "n5",
+      "order": 3300,
+      "intro": {
+        "title": "Reading: Daily Routine",
+        "explanation": "Read about daily routines using time expressions, verbs, and the particle に.",
+        "cultureNote": "Many Japanese people follow very regular daily schedules. Punctuality is highly valued in Japanese culture."
+      },
+      "items": [
+        {
+          "passage": "まいあさ七じにおきます。八じにあさごはんをたべます。九じにがっこうにいきます。",
+          "translation": "I wake up at 7 every morning. I eat breakfast at 8. I go to school at 9.",
+          "questions": [
+            {
+              "question": "What time does the speaker wake up?",
+              "options": ["6:00", "7:00", "8:00", "9:00"],
+              "correctIndex": 1
+            },
+            {
+              "question": "What does the speaker do at 8 o'clock?",
+              "options": ["Goes to school", "Eats breakfast", "Wakes up", "Studies"],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "passage": "十二じにひるごはんをたべます。ともだちといっしょにたべます。おべんとうをもっていきます。",
+          "translation": "I eat lunch at 12. I eat together with my friend. I bring a boxed lunch.",
+          "questions": [
+            {
+              "question": "Who does the speaker eat lunch with?",
+              "options": ["Alone", "With family", "With a friend", "With a teacher"],
+              "correctIndex": 2
+            },
+            {
+              "question": "What does the speaker bring for lunch?",
+              "options": ["Money", "A boxed lunch", "Rice balls", "Bread"],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "passage": "よるはうちでべんきょうします。十じにおふろにはいります。十一じにねます。",
+          "translation": "In the evening I study at home. I take a bath at 10. I go to sleep at 11.",
+          "questions": [
+            {
+              "question": "Where does the speaker study?",
+              "options": ["At the library", "At school", "At a cafe", "At home"],
+              "correctIndex": 3
+            },
+            {
+              "question": "What time does the speaker go to sleep?",
+              "options": ["9:00", "10:00", "11:00", "12:00"],
+              "correctIndex": 2
+            }
+          ]
+        },
+        {
+          "passage": "にちようびはがっこうにいきません。あさはおそくおきます。テレビをみます。",
+          "translation": "On Sunday I don't go to school. I wake up late in the morning. I watch TV.",
+          "questions": [
+            {
+              "question": "Does the speaker go to school on Sunday?",
+              "options": ["Yes", "No", "Sometimes", "In the afternoon"],
+              "correctIndex": 1
+            },
+            {
+              "question": "What does the speaker do on Sunday morning?",
+              "options": ["Studies", "Exercises", "Wakes up late", "Goes shopping"],
+              "correctIndex": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n5-reading-04",
+      "name": "N5 Reading 4: At the Store",
+      "type": "reading",
+      "level": "n5",
+      "order": 3400,
+      "intro": {
+        "title": "Reading: At the Store",
+        "explanation": "Read short shopping conversations using numbers, counters, and ください.",
+        "cultureNote": "In Japanese stores, staff are very polite. Customers also use polite language when making requests."
+      },
+      "items": [
+        {
+          "passage": "「すみません、このりんごはいくらですか。」「一つ百円です。」「三つください。」「三百円です。」",
+          "translation": "\"Excuse me, how much is this apple?\" \"One is 100 yen.\" \"Three please.\" \"That's 300 yen.\"",
+          "questions": [
+            {
+              "question": "How much is one apple?",
+              "options": ["50 yen", "100 yen", "200 yen", "300 yen"],
+              "correctIndex": 1
+            },
+            {
+              "question": "How many apples does the customer buy?",
+              "options": ["1", "2", "3", "4"],
+              "correctIndex": 2
+            }
+          ]
+        },
+        {
+          "passage": "デパートにいきました。くつをかいました。五千円でした。あたらしいくつはくろいです。",
+          "translation": "I went to the department store. I bought shoes. They were 5,000 yen. The new shoes are black.",
+          "questions": [
+            {
+              "question": "Where did the speaker go?",
+              "options": ["Supermarket", "Convenience store", "Department store", "Bookstore"],
+              "correctIndex": 2
+            },
+            {
+              "question": "What color are the new shoes?",
+              "options": ["White", "Black", "Red", "Blue"],
+              "correctIndex": 1
+            },
+            {
+              "question": "How much were the shoes?",
+              "options": ["3,000 yen", "4,000 yen", "5,000 yen", "6,000 yen"],
+              "correctIndex": 2
+            }
+          ]
+        },
+        {
+          "passage": "スーパーでたまごとぎゅうにゅうをかいます。たまごは二百円です。ぎゅうにゅうは百五十円です。",
+          "translation": "I buy eggs and milk at the supermarket. Eggs are 200 yen. Milk is 150 yen.",
+          "questions": [
+            {
+              "question": "How much are the eggs?",
+              "options": ["100 yen", "150 yen", "200 yen", "250 yen"],
+              "correctIndex": 2
+            },
+            {
+              "question": "What does the speaker buy at the supermarket?",
+              "options": ["Eggs and bread", "Eggs and milk", "Milk and bread", "Rice and milk"],
+              "correctIndex": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n5-reading-05",
+      "name": "N5 Reading 5: Weekend Plans",
+      "type": "reading",
+      "level": "n5",
+      "order": 3500,
+      "intro": {
+        "title": "Reading: Weekend Plans",
+        "explanation": "Read about weekend activities using past tense, future plans, and たい form.",
+        "cultureNote": "Japanese people often spend weekends with family or friends, visiting parks, shopping, or eating out together."
+      },
+      "items": [
+        {
+          "passage": "きのうはともだちとえいがをみました。とてもおもしろかったです。そのあとでレストランでたべました。",
+          "translation": "Yesterday I watched a movie with my friend. It was very interesting. After that we ate at a restaurant.",
+          "questions": [
+            {
+              "question": "What did the speaker do yesterday?",
+              "options": ["Went shopping", "Watched a movie", "Played sports", "Studied"],
+              "correctIndex": 1
+            },
+            {
+              "question": "How was the movie?",
+              "options": ["Boring", "Scary", "Very interesting", "Sad"],
+              "correctIndex": 2
+            }
+          ]
+        },
+        {
+          "passage": "あしたはこうえんにいきたいです。天気がいいですから。おべんとうをつくりたいです。",
+          "translation": "Tomorrow I want to go to the park. Because the weather is good. I want to make a boxed lunch.",
+          "questions": [
+            {
+              "question": "Where does the speaker want to go tomorrow?",
+              "options": ["The beach", "The park", "The mountain", "The store"],
+              "correctIndex": 1
+            },
+            {
+              "question": "Why does the speaker want to go?",
+              "options": ["It's a holiday", "The weather is good", "A friend invited them", "It's free"],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "passage": "どようびにかぞくとかいものにいきました。母はふくをかいました。私はほんをかいました。たのしかったです。",
+          "translation": "On Saturday I went shopping with my family. My mother bought clothes. I bought a book. It was fun.",
+          "questions": [
+            {
+              "question": "Who did the speaker go shopping with?",
+              "options": ["Friends", "Family", "Alone", "Coworkers"],
+              "correctIndex": 1
+            },
+            {
+              "question": "What did the speaker buy?",
+              "options": ["Clothes", "Shoes", "A book", "Food"],
+              "correctIndex": 2
+            },
+            {
+              "question": "How did the speaker feel about the trip?",
+              "options": ["Tired", "It was fun", "Boring", "Hungry"],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "passage": "日よう日はうちにいました。あめでしたから。本をよみました。おんがくもききました。",
+          "translation": "On Sunday I stayed at home. Because it was raining. I read a book. I also listened to music.",
+          "questions": [
+            {
+              "question": "Why did the speaker stay home?",
+              "options": ["Was sick", "Was tired", "It was raining", "Had homework"],
+              "correctIndex": 2
+            },
+            {
+              "question": "What did the speaker do at home?",
+              "options": ["Watched TV and cooked", "Read a book and listened to music", "Played games and slept", "Cleaned and studied"],
+              "correctIndex": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

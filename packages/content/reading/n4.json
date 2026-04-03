@@ -1,0 +1,279 @@
+{
+  "level": "n4",
+  "modules": [
+    {
+      "id": "n4-reading-01",
+      "name": "N4 Reading 1: My Town",
+      "type": "reading",
+      "level": "n4",
+      "order": 5100,
+      "intro": {
+        "title": "Reading: My Town",
+        "explanation": "Read descriptions of towns and neighborhoods using location words and adjectives.",
+        "cultureNote": "Many Japanese towns have a distinct character. People often describe their area by nearby stations, shops, and parks."
+      },
+      "items": [
+        {
+          "passage": "私のまちはしずかです。えきのちかくにスーパーとびょういんがあります。こうえんもあります。こうえんには大きいさくらの木があります。",
+          "translation": "My town is quiet. Near the station there is a supermarket and a hospital. There is also a park. In the park there is a big cherry blossom tree.",
+          "questions": [
+            {
+              "question": "What is the town like?",
+              "options": ["Busy", "Quiet", "Noisy", "Dangerous"],
+              "correctIndex": 1
+            },
+            {
+              "question": "What is near the station?",
+              "options": ["A school and a library", "A supermarket and a hospital", "A restaurant and a cafe", "A bank and a post office"],
+              "correctIndex": 1
+            },
+            {
+              "question": "What is in the park?",
+              "options": ["A fountain", "A playground", "A big cherry blossom tree", "A bench"],
+              "correctIndex": 2
+            }
+          ]
+        },
+        {
+          "passage": "このまちにはレストランがたくさんあります。イタリアりょうりのレストランがいちばんにんきです。やすくておいしいですから。",
+          "translation": "There are many restaurants in this town. The Italian restaurant is the most popular. Because it is cheap and delicious.",
+          "questions": [
+            {
+              "question": "What kind of restaurant is the most popular?",
+              "options": ["Japanese", "Chinese", "Italian", "French"],
+              "correctIndex": 2
+            },
+            {
+              "question": "Why is it popular?",
+              "options": ["It's big", "It's new", "It's cheap and delicious", "It's close to the station"],
+              "correctIndex": 2
+            }
+          ]
+        },
+        {
+          "passage": "私のうちはえきからあるいて十五分です。ちょっととおいですが、しずかなところにあるのですきです。",
+          "translation": "My house is a 15-minute walk from the station. It is a little far, but I like it because it is in a quiet place.",
+          "questions": [
+            {
+              "question": "How far is the house from the station?",
+              "options": ["5-minute walk", "10-minute walk", "15-minute walk", "20-minute walk"],
+              "correctIndex": 2
+            },
+            {
+              "question": "Why does the speaker like the location?",
+              "options": ["It's close to shops", "It's a quiet place", "It's near friends", "It's cheap"],
+              "correctIndex": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n4-reading-02",
+      "name": "N4 Reading 2: Travel",
+      "type": "reading",
+      "level": "n4",
+      "order": 5200,
+      "intro": {
+        "title": "Reading: Travel",
+        "explanation": "Read short travel stories using past tense, te-form, and descriptive expressions.",
+        "cultureNote": "Domestic travel is very popular in Japan. Many people travel during Golden Week, Obon, and New Year holidays."
+      },
+      "items": [
+        {
+          "passage": "先月、京都にりょこうしました。おてらをたくさん見ました。きれいでした。日本のりょうりもたべました。とくに天ぷらがおいしかったです。",
+          "translation": "Last month I traveled to Kyoto. I saw many temples. They were beautiful. I also ate Japanese food. Especially the tempura was delicious.",
+          "questions": [
+            {
+              "question": "When did the speaker travel?",
+              "options": ["Last week", "Last month", "Last year", "Yesterday"],
+              "correctIndex": 1
+            },
+            {
+              "question": "What did the speaker see in Kyoto?",
+              "options": ["Mountains", "Temples", "Beaches", "Castles"],
+              "correctIndex": 1
+            },
+            {
+              "question": "What food did the speaker especially like?",
+              "options": ["Sushi", "Ramen", "Tempura", "Udon"],
+              "correctIndex": 2
+            }
+          ]
+        },
+        {
+          "passage": "来月ともだちと北海道にいくつもりです。飛行機でいきます。スキーをしたいです。ホテルはもうよやくしました。",
+          "translation": "Next month I plan to go to Hokkaido with my friend. We will go by plane. I want to ski. I already reserved a hotel.",
+          "questions": [
+            {
+              "question": "How will they get to Hokkaido?",
+              "options": ["By train", "By car", "By plane", "By bus"],
+              "correctIndex": 2
+            },
+            {
+              "question": "What does the speaker want to do in Hokkaido?",
+              "options": ["Swimming", "Hiking", "Skiing", "Shopping"],
+              "correctIndex": 2
+            }
+          ]
+        },
+        {
+          "passage": "おきなわの海はとてもきれいでした。シュノーケリングをしました。さかなをたくさん見ました。三日間いました。みじかかったです。",
+          "translation": "The sea in Okinawa was very beautiful. I went snorkeling. I saw many fish. I stayed for three days. It was short.",
+          "questions": [
+            {
+              "question": "What did the speaker do in Okinawa?",
+              "options": ["Surfing", "Snorkeling", "Fishing", "Swimming"],
+              "correctIndex": 1
+            },
+            {
+              "question": "How long did the speaker stay?",
+              "options": ["2 days", "3 days", "5 days", "1 week"],
+              "correctIndex": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n4-reading-03",
+      "name": "N4 Reading 3: School Life",
+      "type": "reading",
+      "level": "n4",
+      "order": 5300,
+      "intro": {
+        "title": "Reading: School Life",
+        "explanation": "Read about school activities using conditional forms and expressing reasons.",
+        "cultureNote": "Japanese schools often have club activities (部活動) after classes. Students are very dedicated to their clubs."
+      },
+      "items": [
+        {
+          "passage": "私はまいにち学校でにほんごをべんきょうしています。テストがあるので、たくさんべんきょうしなければなりません。でも、にほんごはおもしろいです。",
+          "translation": "I study Japanese at school every day. Because there is a test, I have to study a lot. But Japanese is interesting.",
+          "questions": [
+            {
+              "question": "Why does the speaker study a lot?",
+              "options": ["Likes studying", "There is a test", "The teacher said so", "Friends are studying"],
+              "correctIndex": 1
+            },
+            {
+              "question": "How does the speaker feel about Japanese?",
+              "options": ["Difficult", "Boring", "Interesting", "Easy"],
+              "correctIndex": 2
+            }
+          ]
+        },
+        {
+          "passage": "ぶかつはテニスぶです。まいにちれんしゅうしています。らいしゅうたいかいがあります。がんばりたいです。",
+          "translation": "My club activity is tennis club. I practice every day. There is a tournament next week. I want to do my best.",
+          "questions": [
+            {
+              "question": "What club is the speaker in?",
+              "options": ["Soccer", "Basketball", "Tennis", "Baseball"],
+              "correctIndex": 2
+            },
+            {
+              "question": "When is the tournament?",
+              "options": ["Tomorrow", "This weekend", "Next week", "Next month"],
+              "correctIndex": 2
+            }
+          ]
+        },
+        {
+          "passage": "きょうのひるごはんはカレーライスでした。がっこうのしょくどうでたべました。やすくてりょうがおおいのですきです。",
+          "translation": "Today's lunch was curry rice. I ate at the school cafeteria. I like it because it's cheap and the portions are big.",
+          "questions": [
+            {
+              "question": "What did the speaker eat for lunch?",
+              "options": ["Ramen", "Udon", "Curry rice", "Sushi"],
+              "correctIndex": 2
+            },
+            {
+              "question": "Why does the speaker like the cafeteria?",
+              "options": ["The food is delicious", "It's cheap and portions are big", "It's close", "Friends eat there"],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "passage": "夏やすみにアルバイトをするつもりです。ほんやではたらきたいです。ほんがすきだからです。",
+          "translation": "I plan to work a part-time job during summer vacation. I want to work at a bookstore. Because I like books.",
+          "questions": [
+            {
+              "question": "When does the speaker plan to work?",
+              "options": ["Spring break", "Summer vacation", "Winter break", "Weekends"],
+              "correctIndex": 1
+            },
+            {
+              "question": "Where does the speaker want to work?",
+              "options": ["Cafe", "Restaurant", "Bookstore", "Convenience store"],
+              "correctIndex": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n4-reading-04",
+      "name": "N4 Reading 4: Health and Weather",
+      "type": "reading",
+      "level": "n4",
+      "order": 5400,
+      "intro": {
+        "title": "Reading: Health and Weather",
+        "explanation": "Read about health, weather, and how they connect using te-form and conditionals.",
+        "cultureNote": "In Japan, wearing a mask when sick is common courtesy. People also take care to dress warmly in cold weather."
+      },
+      "items": [
+        {
+          "passage": "きのうからあたまがいたいです。ねつもあります。きょうは学校をやすみます。くすりをのんでねます。",
+          "translation": "I've had a headache since yesterday. I also have a fever. Today I will be absent from school. I will take medicine and sleep.",
+          "questions": [
+            {
+              "question": "What symptoms does the speaker have?",
+              "options": ["Cough and sore throat", "Headache and fever", "Stomachache", "Cold and runny nose"],
+              "correctIndex": 1
+            },
+            {
+              "question": "What will the speaker do today?",
+              "options": ["Go to the hospital", "Go to school", "Take medicine and sleep", "Go to work"],
+              "correctIndex": 2
+            }
+          ]
+        },
+        {
+          "passage": "きょうはとてもあついです。三十五どです。たくさん水をのんだほうがいいです。外であそばないでください。",
+          "translation": "Today is very hot. It's 35 degrees. You should drink a lot of water. Please don't play outside.",
+          "questions": [
+            {
+              "question": "What is the temperature today?",
+              "options": ["25 degrees", "30 degrees", "35 degrees", "40 degrees"],
+              "correctIndex": 2
+            },
+            {
+              "question": "What advice is given?",
+              "options": ["Stay inside and play games", "Drink a lot of water", "Go swimming", "Wear a hat"],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "passage": "あしたの天気はくもりです。ごごからあめがふるかもしれません。かさをもっていったほうがいいです。",
+          "translation": "Tomorrow's weather is cloudy. It might rain from the afternoon. You should bring an umbrella.",
+          "questions": [
+            {
+              "question": "What is tomorrow's weather?",
+              "options": ["Sunny", "Cloudy", "Rainy", "Snowy"],
+              "correctIndex": 1
+            },
+            {
+              "question": "What should you bring?",
+              "options": ["A jacket", "Sunglasses", "An umbrella", "A hat"],
+              "correctIndex": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

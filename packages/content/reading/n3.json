@@ -1,0 +1,212 @@
+{
+  "level": "n3",
+  "modules": [
+    {
+      "id": "n3-reading-01",
+      "name": "N3 Reading 1: Work and Life",
+      "type": "reading",
+      "level": "n3",
+      "order": 7100,
+      "intro": {
+        "title": "Reading: Work and Life",
+        "explanation": "Read about work situations and daily life using more complex grammar patterns.",
+        "cultureNote": "Work-life balance (ワークライフバランス) has become an important topic in Japan. Many companies are trying to reduce overtime."
+      },
+      "items": [
+        {
+          "passage": "私は去年から東京のかいしゃではたらいています。まいにちでんしゃでつうきんしています。一じかんぐらいかかります。たいへんですが、仕事はおもしろいです。",
+          "translation": "I have been working at a company in Tokyo since last year. I commute by train every day. It takes about one hour. It's tough, but the work is interesting.",
+          "questions": [
+            {
+              "question": "How does the speaker commute?",
+              "options": ["By bus", "By car", "By train", "By bicycle"],
+              "correctIndex": 2
+            },
+            {
+              "question": "How long is the commute?",
+              "options": ["30 minutes", "45 minutes", "1 hour", "1.5 hours"],
+              "correctIndex": 2
+            },
+            {
+              "question": "How does the speaker feel about the job?",
+              "options": ["Boring", "Interesting", "Stressful", "Easy"],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "passage": "先週、かいしゃの人とのみかいがありました。新しいどうりょうがきたので、かんげいかいをしました。にほんりょうりのおみせでおいしいものをたくさんたべました。",
+          "translation": "Last week there was a drinking party with people from the company. Because a new colleague came, we had a welcome party. We ate a lot of delicious food at a Japanese restaurant.",
+          "questions": [
+            {
+              "question": "Why was there a party?",
+              "options": ["Someone's birthday", "A new colleague arrived", "End of the year", "A promotion"],
+              "correctIndex": 1
+            },
+            {
+              "question": "Where did they eat?",
+              "options": ["An Italian restaurant", "A Chinese restaurant", "A Japanese restaurant", "A Korean restaurant"],
+              "correctIndex": 2
+            }
+          ]
+        },
+        {
+          "passage": "さいきん、ざんぎょうがおおくてつかれています。しゅうまつはゆっくりやすみたいです。そして、すきなえいがを見たいです。",
+          "translation": "Recently, I have a lot of overtime and I'm tired. I want to rest slowly on the weekend. And I want to watch a movie I like.",
+          "questions": [
+            {
+              "question": "Why is the speaker tired?",
+              "options": ["Sick", "Too much overtime", "Can't sleep", "Too much exercise"],
+              "correctIndex": 1
+            },
+            {
+              "question": "What does the speaker want to do on the weekend?",
+              "options": ["Go out with friends", "Rest and watch a movie", "Go to the gym", "Clean the house"],
+              "correctIndex": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n3-reading-02",
+      "name": "N3 Reading 2: Culture and Seasons",
+      "type": "reading",
+      "level": "n3",
+      "order": 7200,
+      "intro": {
+        "title": "Reading: Culture and Seasons",
+        "explanation": "Read about Japanese seasonal events and cultural practices.",
+        "cultureNote": "Japan has a strong tradition of seasonal awareness (季節感). Many activities and foods are associated with specific seasons."
+      },
+      "items": [
+        {
+          "passage": "日本のはるはさくらがゆうめいです。三月のおわりから四月のはじめにさきます。日本人はさくらの下でおべんとうをたべたり、おさけをのんだりします。これをおはなみといいます。",
+          "translation": "Spring in Japan is famous for cherry blossoms. They bloom from the end of March to the beginning of April. Japanese people eat lunch boxes and drink sake under the cherry blossoms. This is called ohanami.",
+          "questions": [
+            {
+              "question": "When do cherry blossoms bloom?",
+              "options": ["February to March", "March to April", "April to May", "May to June"],
+              "correctIndex": 1
+            },
+            {
+              "question": "What is ohanami?",
+              "options": ["A flower arrangement", "Viewing cherry blossoms while eating and drinking", "A spring festival", "Planting cherry trees"],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "passage": "日本のなつはとてもあつくてしつどがたかいです。あつさをさけるために、やまやうみにいく人がおおいです。なつまつりでは花火を見ることができます。",
+          "translation": "Japanese summers are very hot and humid. Many people go to the mountains or sea to escape the heat. At summer festivals you can see fireworks.",
+          "questions": [
+            {
+              "question": "What is Japanese summer like?",
+              "options": ["Dry and hot", "Hot and humid", "Mild and pleasant", "Cool and rainy"],
+              "correctIndex": 1
+            },
+            {
+              "question": "What can you see at summer festivals?",
+              "options": ["Cherry blossoms", "Snow", "Fireworks", "Autumn leaves"],
+              "correctIndex": 2
+            }
+          ]
+        },
+        {
+          "passage": "あきになると、こうようがきれいです。きょうとやにっこうはこうようのめいしょとしてゆうめいです。あかやきいろのはっぱがとてもうつくしいです。",
+          "translation": "When autumn comes, the fall foliage is beautiful. Kyoto and Nikko are famous as fall foliage spots. The red and yellow leaves are very beautiful.",
+          "questions": [
+            {
+              "question": "What is beautiful in autumn?",
+              "options": ["Cherry blossoms", "Snow", "Fall foliage", "Flowers"],
+              "correctIndex": 2
+            },
+            {
+              "question": "Which places are famous for fall foliage?",
+              "options": ["Tokyo and Osaka", "Kyoto and Nikko", "Hokkaido and Okinawa", "Nara and Kamakura"],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "passage": "おしょうがつは日本でいちばんたいせつなきゅうじつです。かぞくであつまって、おせちりょうりをたべます。じんじゃにおまいりにいく人もおおいです。",
+          "translation": "New Year's is the most important holiday in Japan. Families gather and eat osechi cuisine. Many people also go to visit shrines.",
+          "questions": [
+            {
+              "question": "What is the most important holiday in Japan?",
+              "options": ["Obon", "Golden Week", "New Year's", "Christmas"],
+              "correctIndex": 2
+            },
+            {
+              "question": "What do families do during New Year's?",
+              "options": ["Travel abroad", "Exchange gifts", "Gather and eat osechi", "Go to the beach"],
+              "correctIndex": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n3-reading-03",
+      "name": "N3 Reading 3: Technology and Communication",
+      "type": "reading",
+      "level": "n3",
+      "order": 7300,
+      "intro": {
+        "title": "Reading: Technology and Communication",
+        "explanation": "Read about technology in daily life and how people communicate.",
+        "cultureNote": "Japan is known for advanced technology, but also maintains many traditional communication customs like sending New Year's cards."
+      },
+      "items": [
+        {
+          "passage": "さいきんはスマートフォンでなんでもできるようになりました。かいものもできるし、でんしゃのじかんもしらべられます。べんりになりましたが、つかいすぎにちゅういしなければなりません。",
+          "translation": "Recently, smartphones have made it possible to do anything. You can shop and check train times. It has become convenient, but you must be careful not to use them too much.",
+          "questions": [
+            {
+              "question": "What can you do with a smartphone according to the passage?",
+              "options": ["Cook and clean", "Shop and check train times", "Drive and fly", "Build and repair"],
+              "correctIndex": 1
+            },
+            {
+              "question": "What warning does the passage give?",
+              "options": ["They are expensive", "Be careful not to use them too much", "They break easily", "They are hard to use"],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "passage": "日本ではLINEというアプリがとてもにんきです。ともだちやかぞくとメッセージをおくったり、でんわをしたりできます。かわいいスタンプもにんきのりゆうのひとつです。",
+          "translation": "In Japan, an app called LINE is very popular. You can send messages and make calls with friends and family. Cute stamps are one reason for its popularity.",
+          "questions": [
+            {
+              "question": "What is LINE?",
+              "options": ["A game", "A messaging app", "A social network", "A video platform"],
+              "correctIndex": 1
+            },
+            {
+              "question": "What is one reason LINE is popular?",
+              "options": ["It's free", "Cute stamps", "Fast delivery", "Good camera"],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "passage": "日本ではまだねんがじょうをおくるしゅうかんがあります。十二月にかいて、一月一日につくようにおくります。さいきんはメールでおくる人もふえています。",
+          "translation": "In Japan, there is still a custom of sending New Year's cards. You write them in December and send them to arrive on January 1st. Recently, more people are sending them by email.",
+          "questions": [
+            {
+              "question": "When should New Year's cards arrive?",
+              "options": ["December 25th", "December 31st", "January 1st", "January 3rd"],
+              "correctIndex": 2
+            },
+            {
+              "question": "What recent change is mentioned?",
+              "options": ["Fewer people send cards", "More people send them by email", "Cards are more expensive", "People send more cards"],
+              "correctIndex": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

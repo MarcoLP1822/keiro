@@ -3,5 +3,5 @@
   "compilerOptions": {
     "noEmit": true
   },
-  "include": ["src", "kana", "vocabulary", "kanji", "grammar"]
+  "include": ["src", "kana", "vocabulary", "kanji", "grammar", "reading"]
 }

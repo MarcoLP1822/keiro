@@ -4,10 +4,12 @@ import type {
   VocabItem,
   KanjiItem,
   GrammarItem,
+  ReadingItem,
   KanaContentFile,
   VocabContentFile,
   KanjiContentFile,
   GrammarContentFile,
+  ReadingContentFile,
 } from '@keiro/types';
 import hiraganaData from '../kana/hiragana.json' with { type: 'json' };
 import katakanaData from '../kana/katakana.json' with { type: 'json' };
@@ -20,6 +22,9 @@ import grammarN4Data from '../grammar/n4.json' with { type: 'json' };
 import vocabN3Data from '../vocabulary/n3.json' with { type: 'json' };
 import kanjiN3Data from '../kanji/n3.json' with { type: 'json' };
 import grammarN3Data from '../grammar/n3.json' with { type: 'json' };
+import readingN5Data from '../reading/n5.json' with { type: 'json' };
+import readingN4Data from '../reading/n4.json' with { type: 'json' };
+import readingN3Data from '../reading/n3.json' with { type: 'json' };
 
 const hiragana = hiraganaData as KanaContentFile;
 const katakana = katakanaData as KanaContentFile;
@@ -32,6 +37,9 @@ const grammarN4 = grammarN4Data as GrammarContentFile;
 const vocabN3 = vocabN3Data as VocabContentFile;
 const kanjiN3 = kanjiN3Data as KanjiContentFile;
 const grammarN3 = grammarN3Data as GrammarContentFile;
+const readingN5 = readingN5Data as ReadingContentFile;
+const readingN4 = readingN4Data as ReadingContentFile;
+const readingN3 = readingN3Data as ReadingContentFile;
 
 const allModules: Module[] = [
   ...hiragana.modules,
@@ -39,12 +47,15 @@ const allModules: Module[] = [
   ...vocabN5.modules,
   ...kanjiN5.modules,
   ...grammarN5.modules,
+  ...readingN5.modules,
   ...vocabN4.modules,
   ...kanjiN4.modules,
   ...grammarN4.modules,
+  ...readingN4.modules,
   ...vocabN3.modules,
   ...kanjiN3.modules,
   ...grammarN3.modules,
+  ...readingN3.modules,
 ].sort((a, b) => a.order - b.order);
 
 /** All modules sorted by order (kana, vocab, kanji, grammar) */
@@ -83,6 +94,13 @@ export function getGrammarItems(): GrammarItem[] {
   return allModules
     .filter((m) => m.type === 'grammar')
     .flatMap((m) => m.items as GrammarItem[]);
+}
+
+/** Flat array of all reading items across all modules */
+export function getReadingItems(): ReadingItem[] {
+  return allModules
+    .filter((m) => m.type === 'reading')
+    .flatMap((m) => m.items as ReadingItem[]);
 }
 
 /** Filter modules by type (e.g., 'kana', 'vocabulary') */
