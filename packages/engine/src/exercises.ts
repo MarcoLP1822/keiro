@@ -4,6 +4,7 @@ import type {
   VocabItem,
   KanjiItem,
   GrammarItem,
+  ReadingItem,
   Exercise,
   KanaExerciseType,
   VocabExerciseType,
@@ -437,6 +438,57 @@ export function generateGrammarExercises(
     if (Math.random() < 0.3 && item.examples.length > 0) {
       const orderExercise = createSentenceOrderExercise(item, 0);
       if (orderExercise) exercises.push(orderExercise);
+    }
+  }
+
+  return shuffle(exercises);
+}
+
+// --- Reading exercise generators ---
+
+/**
+ * Generates reading-comprehension and reading-translation exercises for a reading module.
+ * Each ReadingItem produces one exercise per question (comprehension) plus one translation exercise.
+ */
+export function generateReadingExercises(module: Module): Exercise[] {
+  const items = module.items as ReadingItem[];
+  if (items.length === 0) return [];
+
+  const exercises: Exercise[] = [];
+
+  for (const item of items) {
+    // Generate a reading-comprehension exercise for each question
+    for (const q of item.questions) {
+      exercises.push({
+        type: 'reading-comprehension',
+        question: item.passage,
+        questionDetail: q.question,
+        options: q.options,
+        correctIndex: q.correctIndex,
+        targetItem: item,
+      });
+    }
+
+    // Generate a reading-translation exercise: show the passage, pick the correct full translation
+    // Build 3 distractor translations from other passages in the module
+    const otherItems = items.filter((other) => other.passage !== item.passage);
+    const distractorTranslations = shuffle(otherItems)
+      .slice(0, 3)
+      .map((other) => other.translation);
+
+    // Only generate if we have at least 1 distractor
+    if (distractorTranslations.length > 0) {
+      const allOptions = shuffle([item.translation, ...distractorTranslations]);
+      const correctIndex = allOptions.indexOf(item.translation);
+
+      exercises.push({
+        type: 'reading-translation',
+        question: item.passage,
+        questionDetail: 'Choose the correct translation',
+        options: allOptions,
+        correctIndex,
+        targetItem: item,
+      });
     }
   }
 

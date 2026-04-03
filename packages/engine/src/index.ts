@@ -9,6 +9,7 @@ export {
   generateVocabExercises,
   generateKanjiExercises,
   generateGrammarExercises,
+  generateReadingExercises,
   createMultipleChoice,
   shuffle,
 } from './exercises.js';
@@ -17,3 +18,5 @@ export { generatePlacementQuiz, evaluatePlacement } from './placement.js';
 export type { PlacementResult } from './placement.js';
 
 export { gradeSrsCard, createSrsCard, getDueCards } from './srs.js';
+
+export { updateStreak, createDefaultStreakData } from './streak.js';
