@@ -5,11 +5,14 @@ export type VocabExerciseType = 'word-to-meaning' | 'meaning-to-word' | 'sentenc
 export type GrammarExerciseType = 'grammar-correct-form' | 'grammar-sentence-order' | 'grammar-pick-correct';
 export type KanjiExerciseType = 'kanji-to-meaning' | 'kanji-to-reading' | 'reading-to-kanji' | 'typing-reading';
 
+export type ReadingExerciseType = 'reading-comprehension' | 'reading-translation';
+
 export type ExerciseType =
   | KanaExerciseType
   | VocabExerciseType
   | GrammarExerciseType
-  | KanjiExerciseType;
+  | KanjiExerciseType
+  | ReadingExerciseType;
 
 export interface Exercise {
   type: ExerciseType;

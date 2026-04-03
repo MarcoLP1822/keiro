@@ -4,6 +4,8 @@ export type {
   VocabItem,
   GrammarItem,
   KanjiItem,
+  ReadingQuestion,
+  ReadingItem,
   ContentItem,
   ModuleType,
   ModuleLevel,
@@ -12,6 +14,7 @@ export type {
   VocabContentFile,
   KanjiContentFile,
   GrammarContentFile,
+  ReadingContentFile,
 } from './module.js';
 
 export type {
@@ -19,6 +22,7 @@ export type {
   VocabExerciseType,
   GrammarExerciseType,
   KanjiExerciseType,
+  ReadingExerciseType,
   ExerciseType,
   Exercise,
   AnswerOption,
@@ -34,4 +38,5 @@ export type {
   PlannedSession,
   SrsCard,
   SrsGrade,
+  StreakData,
 } from './progress.js';

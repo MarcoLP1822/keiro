@@ -45,7 +45,19 @@ export interface KanjiItem {
   };
 }
 
-export type ContentItem = KanaItem | VocabItem | GrammarItem | KanjiItem;
+export interface ReadingQuestion {
+  question: string;          // English question about the passage
+  options: string[];         // 4 answer options (English)
+  correctIndex: number;
+}
+
+export interface ReadingItem {
+  passage: string;           // Japanese text
+  translation: string;       // English translation of full passage
+  questions: ReadingQuestion[];
+}
+
+export type ContentItem = KanaItem | VocabItem | GrammarItem | KanjiItem | ReadingItem;
 
 export type ModuleType = 'kana' | 'vocabulary' | 'grammar' | 'kanji' | 'reading';
 export type ModuleLevel = 'beginner' | 'n5' | 'n4' | 'n3';
@@ -81,6 +93,12 @@ export interface KanjiContentFile {
 /** Shape of grammar JSON files (e.g., grammar/n5.json) */
 export interface GrammarContentFile {
   _attribution?: string;
+  level: string;
+  modules: Module[];
+}
+
+/** Shape of reading JSON files (e.g., reading/n5.json) */
+export interface ReadingContentFile {
   level: string;
   modules: Module[];
 }
