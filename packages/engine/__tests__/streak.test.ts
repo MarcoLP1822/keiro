@@ -119,4 +119,93 @@ describe('updateStreak', () => {
     expect(data.freezesAvailable).toBe(3);
     expect(freezeEarned).toBe(false);
   });
+
+  it('multiple freezes used in sequence', () => {
+    // Day 1-5 studied, day 6 missed, day 7 studied (freeze 1), day 8 missed, day 9 studied (freeze 2)
+    let streak = makeStreak({
+      currentStreak: 5,
+      longestStreak: 5,
+      lastStudyDate: '2026-01-05',
+      freezesAvailable: 2,
+    });
+    // Skip day 6, study day 7 -> freeze used
+    const r1 = updateStreak(streak, '2026-01-07');
+    expect(r1.freezeUsed).toBe(true);
+    expect(r1.data.currentStreak).toBe(6);
+    expect(r1.data.freezesAvailable).toBe(1);
+
+    // Skip day 8, study day 9 -> freeze used
+    const r2 = updateStreak(r1.data, '2026-01-09');
+    expect(r2.freezeUsed).toBe(true);
+    expect(r2.data.currentStreak).toBe(7);
+    expect(r2.data.freezesAvailable).toBe(1); // earned one at day 7 milestone
+  });
+
+  it('freeze earned exactly on day 7, 14, 21', () => {
+    // Build up to day 6, then day 7 earns freeze
+    let streak = makeStreak({
+      currentStreak: 6,
+      lastStudyDate: '2026-01-06',
+      freezesAvailable: 0,
+    });
+    const r7 = updateStreak(streak, '2026-01-07');
+    expect(r7.data.currentStreak).toBe(7);
+    expect(r7.freezeEarned).toBe(true);
+    expect(r7.data.freezesAvailable).toBe(1);
+
+    // Build to day 14
+    streak = makeStreak({
+      currentStreak: 13,
+      lastStudyDate: '2026-01-13',
+      freezesAvailable: 1,
+    });
+    const r14 = updateStreak(streak, '2026-01-14');
+    expect(r14.data.currentStreak).toBe(14);
+    expect(r14.freezeEarned).toBe(true);
+    expect(r14.data.freezesAvailable).toBe(2);
+
+    // Build to day 21
+    streak = makeStreak({
+      currentStreak: 20,
+      lastStudyDate: '2026-01-20',
+      freezesAvailable: 2,
+    });
+    const r21 = updateStreak(streak, '2026-01-21');
+    expect(r21.data.currentStreak).toBe(21);
+    expect(r21.freezeEarned).toBe(true);
+    expect(r21.data.freezesAvailable).toBe(3);
+  });
+
+  it('max 3 freezes cap enforced even across multiple milestones', () => {
+    // At day 28 milestone with already 3 freezes
+    const streak = makeStreak({
+      currentStreak: 27,
+      lastStudyDate: '2026-01-27',
+      freezesAvailable: 3,
+    });
+    const result = updateStreak(streak, '2026-01-28');
+    expect(result.data.currentStreak).toBe(28);
+    expect(result.freezeEarned).toBe(false);
+    expect(result.data.freezesAvailable).toBe(3);
+  });
+
+  it('longestStreak updates correctly when current beats it', () => {
+    const streak = makeStreak({
+      currentStreak: 14,
+      longestStreak: 14,
+      lastStudyDate: '2026-01-14',
+    });
+    const r1 = updateStreak(streak, '2026-01-15');
+    expect(r1.data.currentStreak).toBe(15);
+    expect(r1.data.longestStreak).toBe(15);
+
+    const r2 = updateStreak(r1.data, '2026-01-16');
+    expect(r2.data.currentStreak).toBe(16);
+    expect(r2.data.longestStreak).toBe(16);
+
+    // After reset, longestStreak preserved
+    const r3 = updateStreak(r2.data, '2026-01-25');
+    expect(r3.data.currentStreak).toBe(1);
+    expect(r3.data.longestStreak).toBe(16);
+  });
 });

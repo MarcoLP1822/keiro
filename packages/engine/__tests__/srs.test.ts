@@ -198,3 +198,60 @@ describe('getLeechCards', () => {
     expect(getLeechCards(cards)).toEqual([]);
   });
 });
+
+describe('SRS edge cases', () => {
+  it('leech resets on grade easy', () => {
+    const card = makeCard({ lapseCount: 5, isLeech: true, repetitions: 0 });
+    const after = gradeSrsCard(card, 'easy', '2026-01-01');
+    expect(after.isLeech).toBe(false);
+  });
+
+  it('getDueCards returns empty when no cards are due', () => {
+    const cards = [
+      makeCard({ id: 'a', nextReview: '2026-12-31' }),
+      makeCard({ id: 'b', nextReview: '2026-06-15' }),
+    ];
+    const due = getDueCards(cards, '2026-01-01');
+    expect(due).toEqual([]);
+  });
+
+  it('getDueCards sorts by most overdue first, then lowest ease', () => {
+    const cards = [
+      makeCard({ id: 'c', nextReview: '2026-01-05', easeFactor: 2.5 }),
+      makeCard({ id: 'a', nextReview: '2026-01-01', easeFactor: 1.5 }),
+      makeCard({ id: 'b', nextReview: '2026-01-01', easeFactor: 2.0 }),
+      makeCard({ id: 'd', nextReview: '2026-01-05', easeFactor: 1.3 }),
+    ];
+    const due = getDueCards(cards, '2026-01-10');
+    // Sorted: '01-01' before '01-05', then by ease within same date
+    expect(due.map((c) => c.id)).toEqual(['a', 'b', 'd', 'c']);
+  });
+
+  it('card with interval=0 is always due', () => {
+    const card = makeCard({ id: 'new', interval: 0, nextReview: '2026-01-01' });
+    // Due on the same day
+    const due = getDueCards([card], '2026-01-01');
+    expect(due).toHaveLength(1);
+    expect(due[0].id).toBe('new');
+    // Also due on future dates since nextReview is in the past
+    const dueLater = getDueCards([card], '2026-06-15');
+    expect(dueLater).toHaveLength(1);
+  });
+
+  it('multiple lapses: lapseCount increments correctly each time', () => {
+    let card = makeCard({ lapseCount: 0 });
+    card = gradeSrsCard(card, 'wrong', '2026-01-01');
+    expect(card.lapseCount).toBe(1);
+    card = gradeSrsCard(card, 'wrong', '2026-01-02');
+    expect(card.lapseCount).toBe(2);
+    card = gradeSrsCard(card, 'wrong', '2026-01-03');
+    expect(card.lapseCount).toBe(3);
+    expect(card.isLeech).toBe(false);
+    card = gradeSrsCard(card, 'wrong', '2026-01-04');
+    expect(card.lapseCount).toBe(4);
+    expect(card.isLeech).toBe(true);
+    card = gradeSrsCard(card, 'wrong', '2026-01-05');
+    expect(card.lapseCount).toBe(5);
+    expect(card.isLeech).toBe(true);
+  });
+});
