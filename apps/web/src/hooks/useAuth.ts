@@ -35,7 +35,12 @@ export function useAuth(): AuthState {
   const signInWithEmail = useCallback(async (email: string) => {
     if (!supabase) return { error: 'Supabase not configured' };
 
-    const { error } = await supabase.auth.signInWithOtp({ email });
+    const { error } = await supabase.auth.signInWithOtp({
+      email,
+      options: {
+        emailRedirectTo: `${window.location.origin}/settings`,
+      },
+    });
     return { error: error?.message ?? null };
   }, []);
 

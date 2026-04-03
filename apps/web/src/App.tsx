@@ -1,6 +1,9 @@
+import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db } from './services/db';
+import { supabase } from './services/supabase';
+import { storage } from './services/storage';
 
 import { Welcome } from './pages/Welcome';
 import { PlacementQuiz } from './pages/PlacementQuiz';
@@ -41,10 +44,58 @@ function AppRoutes() {
   );
 }
 
+function AuthHandler({ children }: { children: React.ReactNode }) {
+  const [authReady, setAuthReady] = useState(!supabase);
+
+  useEffect(() => {
+    if (!supabase) return;
+
+    // Handle auth code exchange from magic link / OAuth redirects
+    // This MUST happen before React Router processes the URL
+    const params = new URLSearchParams(window.location.search);
+    const hashParams = new URLSearchParams(window.location.hash.replace('#', '?'));
+
+    const hasAuthCode = params.has('code') || hashParams.has('access_token');
+
+    if (hasAuthCode) {
+      // Let Supabase exchange the code for a session
+      supabase.auth.getSession().then(({ data: { session } }) => {
+        if (session) {
+          storage.setUserId(session.user.id);
+        }
+        // Clean up URL
+        window.history.replaceState({}, '', window.location.pathname);
+        setAuthReady(true);
+      });
+    } else {
+      // No auth code in URL, just check existing session
+      supabase.auth.getSession().then(({ data: { session } }) => {
+        if (session) {
+          storage.setUserId(session.user.id);
+        }
+        setAuthReady(true);
+      });
+    }
+
+    // Listen for future auth changes (sign out, token refresh)
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      storage.setUserId(session?.user.id ?? null);
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
+
+  if (!authReady) return null;
+
+  return <>{children}</>;
+}
+
 export function App() {
   return (
-    <BrowserRouter>
-      <AppRoutes />
-    </BrowserRouter>
+    <AuthHandler>
+      <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
+    </AuthHandler>
   );
 }
