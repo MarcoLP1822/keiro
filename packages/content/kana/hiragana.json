@@ -6,18 +6,33 @@
       "name": "Vowels: あいうえお",
       "type": "kana",
       "level": "beginner",
-      "order": 1,
+      "order": 1000,
       "intro": {
         "title": "The 5 Vowels",
         "explanation": "Japanese has exactly 5 vowel sounds. Every other sound in Japanese is built from these.",
         "cultureNote": null
       },
       "items": [
-        { "character": "あ", "romaji": "a" },
-        { "character": "い", "romaji": "i" },
-        { "character": "う", "romaji": "u" },
-        { "character": "え", "romaji": "e" },
-        { "character": "お", "romaji": "o" }
+        {
+          "character": "あ",
+          "romaji": "a"
+        },
+        {
+          "character": "い",
+          "romaji": "i"
+        },
+        {
+          "character": "う",
+          "romaji": "u"
+        },
+        {
+          "character": "え",
+          "romaji": "e"
+        },
+        {
+          "character": "お",
+          "romaji": "o"
+        }
       ]
     },
     {
@@ -25,18 +40,33 @@
       "name": "K-row: かきくけこ",
       "type": "kana",
       "level": "beginner",
-      "order": 2,
+      "order": 1001,
       "intro": {
         "title": "The K Consonant Row",
         "explanation": "The K-row combines the 'k' consonant with each vowel. These are among the most common sounds in Japanese.",
         "cultureNote": null
       },
       "items": [
-        { "character": "か", "romaji": "ka" },
-        { "character": "き", "romaji": "ki" },
-        { "character": "く", "romaji": "ku" },
-        { "character": "け", "romaji": "ke" },
-        { "character": "こ", "romaji": "ko" }
+        {
+          "character": "か",
+          "romaji": "ka"
+        },
+        {
+          "character": "き",
+          "romaji": "ki"
+        },
+        {
+          "character": "く",
+          "romaji": "ku"
+        },
+        {
+          "character": "け",
+          "romaji": "ke"
+        },
+        {
+          "character": "こ",
+          "romaji": "ko"
+        }
       ]
     },
     {
@@ -44,18 +74,33 @@
       "name": "S-row: さしすせそ",
       "type": "kana",
       "level": "beginner",
-      "order": 3,
+      "order": 1002,
       "intro": {
         "title": "The S Consonant Row",
         "explanation": "The S-row has one exception: し is pronounced 'shi' rather than 'si'. This is one of the few irregular readings in hiragana.",
         "cultureNote": null
       },
       "items": [
-        { "character": "さ", "romaji": "sa" },
-        { "character": "し", "romaji": "shi" },
-        { "character": "す", "romaji": "su" },
-        { "character": "せ", "romaji": "se" },
-        { "character": "そ", "romaji": "so" }
+        {
+          "character": "さ",
+          "romaji": "sa"
+        },
+        {
+          "character": "し",
+          "romaji": "shi"
+        },
+        {
+          "character": "す",
+          "romaji": "su"
+        },
+        {
+          "character": "せ",
+          "romaji": "se"
+        },
+        {
+          "character": "そ",
+          "romaji": "so"
+        }
       ]
     },
     {
@@ -63,18 +108,33 @@
       "name": "T-row: たちつてと",
       "type": "kana",
       "level": "beginner",
-      "order": 4,
+      "order": 1003,
       "intro": {
         "title": "The T Consonant Row",
         "explanation": "The T-row has two exceptions: ち is 'chi' and つ is 'tsu'. The つ sound is unique to Japanese and takes practice.",
         "cultureNote": null
       },
       "items": [
-        { "character": "た", "romaji": "ta" },
-        { "character": "ち", "romaji": "chi" },
-        { "character": "つ", "romaji": "tsu" },
-        { "character": "て", "romaji": "te" },
-        { "character": "と", "romaji": "to" }
+        {
+          "character": "た",
+          "romaji": "ta"
+        },
+        {
+          "character": "ち",
+          "romaji": "chi"
+        },
+        {
+          "character": "つ",
+          "romaji": "tsu"
+        },
+        {
+          "character": "て",
+          "romaji": "te"
+        },
+        {
+          "character": "と",
+          "romaji": "to"
+        }
       ]
     },
     {
@@ -82,18 +142,33 @@
       "name": "N-row: なにぬねの",
       "type": "kana",
       "level": "beginner",
-      "order": 5,
+      "order": 1004,
       "intro": {
         "title": "The N Consonant Row",
         "explanation": "The N-row is completely regular — each character combines 'n' with a vowel. The character の is one of the most common in Japanese, used as a possessive particle.",
         "cultureNote": null
       },
       "items": [
-        { "character": "な", "romaji": "na" },
-        { "character": "に", "romaji": "ni" },
-        { "character": "ぬ", "romaji": "nu" },
-        { "character": "ね", "romaji": "ne" },
-        { "character": "の", "romaji": "no" }
+        {
+          "character": "な",
+          "romaji": "na"
+        },
+        {
+          "character": "に",
+          "romaji": "ni"
+        },
+        {
+          "character": "ぬ",
+          "romaji": "nu"
+        },
+        {
+          "character": "ね",
+          "romaji": "ne"
+        },
+        {
+          "character": "の",
+          "romaji": "no"
+        }
       ]
     },
     {
@@ -101,18 +176,33 @@
       "name": "H-row: はひふへほ",
       "type": "kana",
       "level": "beginner",
-      "order": 6,
+      "order": 1005,
       "intro": {
         "title": "The H Consonant Row",
         "explanation": "The H-row has one exception: ふ is pronounced 'fu' (a soft sound between 'f' and 'h'). The character は is also used as the topic particle, where it's pronounced 'wa'.",
         "cultureNote": null
       },
       "items": [
-        { "character": "は", "romaji": "ha" },
-        { "character": "ひ", "romaji": "hi" },
-        { "character": "ふ", "romaji": "fu" },
-        { "character": "へ", "romaji": "he" },
-        { "character": "ほ", "romaji": "ho" }
+        {
+          "character": "は",
+          "romaji": "ha"
+        },
+        {
+          "character": "ひ",
+          "romaji": "hi"
+        },
+        {
+          "character": "ふ",
+          "romaji": "fu"
+        },
+        {
+          "character": "へ",
+          "romaji": "he"
+        },
+        {
+          "character": "ほ",
+          "romaji": "ho"
+        }
       ]
     },
     {
@@ -120,18 +210,33 @@
       "name": "M-row: まみむめも",
       "type": "kana",
       "level": "beginner",
-      "order": 7,
+      "order": 1006,
       "intro": {
         "title": "The M Consonant Row",
         "explanation": "The M-row is completely regular. Each character combines 'm' with a vowel sound.",
         "cultureNote": null
       },
       "items": [
-        { "character": "ま", "romaji": "ma" },
-        { "character": "み", "romaji": "mi" },
-        { "character": "む", "romaji": "mu" },
-        { "character": "め", "romaji": "me" },
-        { "character": "も", "romaji": "mo" }
+        {
+          "character": "ま",
+          "romaji": "ma"
+        },
+        {
+          "character": "み",
+          "romaji": "mi"
+        },
+        {
+          "character": "む",
+          "romaji": "mu"
+        },
+        {
+          "character": "め",
+          "romaji": "me"
+        },
+        {
+          "character": "も",
+          "romaji": "mo"
+        }
       ]
     },
     {
@@ -139,16 +244,25 @@
       "name": "Y-row: やゆよ",
       "type": "kana",
       "level": "beginner",
-      "order": 8,
+      "order": 1007,
       "intro": {
         "title": "The Y Consonant Row",
         "explanation": "The Y-row has only 3 characters (yi and ye are not used in modern Japanese). These characters also combine with other consonants to form compound sounds.",
         "cultureNote": null
       },
       "items": [
-        { "character": "や", "romaji": "ya" },
-        { "character": "ゆ", "romaji": "yu" },
-        { "character": "よ", "romaji": "yo" }
+        {
+          "character": "や",
+          "romaji": "ya"
+        },
+        {
+          "character": "ゆ",
+          "romaji": "yu"
+        },
+        {
+          "character": "よ",
+          "romaji": "yo"
+        }
       ]
     },
     {
@@ -156,18 +270,33 @@
       "name": "R-row: らりるれろ",
       "type": "kana",
       "level": "beginner",
-      "order": 9,
+      "order": 1008,
       "intro": {
         "title": "The R Consonant Row",
         "explanation": "The Japanese 'r' sound is unlike English 'r' or 'l'. It's a light tap of the tongue against the roof of the mouth, similar to the 'd' in 'ladder'.",
         "cultureNote": null
       },
       "items": [
-        { "character": "ら", "romaji": "ra" },
-        { "character": "り", "romaji": "ri" },
-        { "character": "る", "romaji": "ru" },
-        { "character": "れ", "romaji": "re" },
-        { "character": "ろ", "romaji": "ro" }
+        {
+          "character": "ら",
+          "romaji": "ra"
+        },
+        {
+          "character": "り",
+          "romaji": "ri"
+        },
+        {
+          "character": "る",
+          "romaji": "ru"
+        },
+        {
+          "character": "れ",
+          "romaji": "re"
+        },
+        {
+          "character": "ろ",
+          "romaji": "ro"
+        }
       ]
     },
     {
@@ -175,16 +304,25 @@
       "name": "W-row + N: わをん",
       "type": "kana",
       "level": "beginner",
-      "order": 10,
+      "order": 1009,
       "intro": {
         "title": "The W-row and N",
         "explanation": "The final group includes わ (wa), the particle を (wo, usually pronounced 'o'), and ん (n) — the only consonant that stands alone without a vowel.",
         "cultureNote": null
       },
       "items": [
-        { "character": "わ", "romaji": "wa" },
-        { "character": "を", "romaji": "wo" },
-        { "character": "ん", "romaji": "n" }
+        {
+          "character": "わ",
+          "romaji": "wa"
+        },
+        {
+          "character": "を",
+          "romaji": "wo"
+        },
+        {
+          "character": "ん",
+          "romaji": "n"
+        }
       ]
     }
   ]

@@ -6,7 +6,7 @@
       "name": "N4 Vocab 1: ～(て) しまう〜～ちゃん",
       "type": "vocabulary",
       "level": "n4",
-      "order": 101,
+      "order": 4000,
       "intro": {
         "title": "N4 Vocabulary — Group 1",
         "explanation": "Learn N4 vocabulary words 1–20. These are essential words for the JLPT N4 level.",
@@ -140,7 +140,7 @@
       "name": "N4 Vocab 2: ～町〜浅い",
       "type": "vocabulary",
       "level": "n4",
-      "order": 102,
+      "order": 4001,
       "intro": {
         "title": "N4 Vocabulary — Group 2",
         "explanation": "Learn N4 vocabulary words 21–40. These are essential words for the JLPT N4 level.",
@@ -274,7 +274,7 @@
       "name": "N4 Vocab 3: 味〜生きる",
       "type": "vocabulary",
       "level": "n4",
-      "order": 103,
+      "order": 4002,
       "intro": {
         "title": "N4 Vocabulary — Group 3",
         "explanation": "Learn N4 vocabulary words 41–60. These are essential words for the JLPT N4 level.",
@@ -408,7 +408,7 @@
       "name": "N4 Vocab 4: いくら～ても〜受ける",
       "type": "vocabulary",
       "level": "n4",
-      "order": 104,
+      "order": 4003,
       "intro": {
         "title": "N4 Vocabulary — Group 4",
         "explanation": "Learn N4 vocabulary words 61–80. These are essential words for the JLPT N4 level.",
@@ -542,7 +542,7 @@
       "name": "N4 Vocab 5: 動く〜遠慮",
       "type": "vocabulary",
       "level": "n4",
-      "order": 105,
+      "order": 4004,
       "intro": {
         "title": "N4 Vocabulary — Group 5",
         "explanation": "Learn N4 vocabulary words 81–100. These are essential words for the JLPT N4 level.",
@@ -676,7 +676,7 @@
       "name": "N4 Vocab 6: おいでになる〜おっしゃる",
       "type": "vocabulary",
       "level": "n4",
-      "order": 106,
+      "order": 4005,
       "intro": {
         "title": "N4 Vocabulary — Group 6",
         "explanation": "Learn N4 vocabulary words 101–120. These are essential words for the JLPT N4 level.",
@@ -810,7 +810,7 @@
       "name": "N4 Vocab 7: 夫〜折れる",
       "type": "vocabulary",
       "level": "n4",
-      "order": 107,
+      "order": 4006,
       "intro": {
         "title": "N4 Vocabulary — Group 7",
         "explanation": "Learn N4 vocabulary words 121–140. These are essential words for the JLPT N4 level.",
@@ -944,7 +944,7 @@
       "name": "N4 Vocab 8: 終わり〜課長",
       "type": "vocabulary",
       "level": "n4",
-      "order": 108,
+      "order": 4007,
       "intro": {
         "title": "N4 Vocabulary — Group 8",
         "explanation": "Learn N4 vocabulary words 141–160. These are essential words for the JLPT N4 level.",
@@ -1078,7 +1078,7 @@
       "name": "N4 Vocab 9: 勝つ〜看護婦",
       "type": "vocabulary",
       "level": "n4",
-      "order": 109,
+      "order": 4008,
       "intro": {
         "title": "N4 Vocabulary — Group 9",
         "explanation": "Learn N4 vocabulary words 161–180. These are essential words for the JLPT N4 level.",
@@ -1212,7 +1212,7 @@
       "name": "N4 Vocab 10: 簡単〜客",
       "type": "vocabulary",
       "level": "n4",
-      "order": 110,
+      "order": 4009,
       "intro": {
         "title": "N4 Vocabulary — Group 10",
         "explanation": "Learn N4 vocabulary words 181–200. These are essential words for the JLPT N4 level.",
@@ -1346,7 +1346,7 @@
       "name": "N4 Vocab 11: 急〜経験",
       "type": "vocabulary",
       "level": "n4",
-      "order": 111,
+      "order": 4010,
       "intro": {
         "title": "N4 Vocabulary — Group 11",
         "explanation": "Learn N4 vocabulary words 201–220. These are essential words for the JLPT N4 level.",
@@ -1480,7 +1480,7 @@
       "name": "N4 Vocab 12: 経済〜工業",
       "type": "vocabulary",
       "level": "n4",
-      "order": 112,
+      "order": 4011,
       "intro": {
         "title": "N4 Vocabulary — Group 12",
         "explanation": "Learn N4 vocabulary words 221–240. These are essential words for the JLPT N4 level.",
@@ -1614,7 +1614,7 @@
       "name": "N4 Vocab 13: 高校; 高等学校〜ごみ",
       "type": "vocabulary",
       "level": "n4",
-      "order": 113,
+      "order": 4012,
       "intro": {
         "title": "N4 Vocabulary — Group 13",
         "explanation": "Learn N4 vocabulary words 241–260. These are essential words for the JLPT N4 level.",
@@ -1748,7 +1748,7 @@
       "name": "N4 Vocab 14: 込む〜さっき",
       "type": "vocabulary",
       "level": "n4",
-      "order": 114,
+      "order": 4013,
       "intro": {
         "title": "N4 Vocabulary — Group 14",
         "explanation": "Learn N4 vocabulary words 261–280. These are essential words for the JLPT N4 level.",
@@ -1882,7 +1882,7 @@
       "name": "N4 Vocab 15: 寂しい〜下着",
       "type": "vocabulary",
       "level": "n4",
-      "order": 115,
+      "order": 4014,
       "intro": {
         "title": "N4 Vocabulary — Group 15",
         "explanation": "Learn N4 vocabulary words 281–300. These are essential words for the JLPT N4 level.",
@@ -2016,7 +2016,7 @@
       "name": "N4 Vocab 16: 支度〜出席",
       "type": "vocabulary",
       "level": "n4",
-      "order": 116,
+      "order": 4015,
       "intro": {
         "title": "N4 Vocabulary — Group 16",
         "explanation": "Learn N4 vocabulary words 301–320. These are essential words for the JLPT N4 level.",
@@ -2150,7 +2150,7 @@
       "name": "N4 Vocab 17: 出発〜新聞社",
       "type": "vocabulary",
       "level": "n4",
-      "order": 117,
+      "order": 4016,
       "intro": {
         "title": "N4 Vocabulary — Group 17",
         "explanation": "Learn N4 vocabulary words 321–340. These are essential words for the JLPT N4 level.",
@@ -2284,7 +2284,7 @@
       "name": "N4 Vocab 18: 水泳〜滑る",
       "type": "vocabulary",
       "level": "n4",
-      "order": 118,
+      "order": 4017,
       "intro": {
         "title": "N4 Vocabulary — Group 18",
         "explanation": "Learn N4 vocabulary words 341–360. These are essential words for the JLPT N4 level.",
@@ -2418,7 +2418,7 @@
       "name": "N4 Vocab 19: 隅〜そう",
       "type": "vocabulary",
       "level": "n4",
-      "order": 119,
+      "order": 4018,
       "intro": {
         "title": "N4 Vocabulary — Group 19",
         "explanation": "Learn N4 vocabulary words 361–380. These are essential words for the JLPT N4 level.",
@@ -2552,7 +2552,7 @@
       "name": "N4 Vocab 20: 相談〜台風",
       "type": "vocabulary",
       "level": "n4",
-      "order": 120,
+      "order": 4019,
       "intro": {
         "title": "N4 Vocabulary — Group 20",
         "explanation": "Learn N4 vocabulary words 381–400. These are essential words for the JLPT N4 level.",
@@ -2686,7 +2686,7 @@
       "name": "N4 Vocab 21: 倒れる〜暖房",
       "type": "vocabulary",
       "level": "n4",
-      "order": 121,
+      "order": 4020,
       "intro": {
         "title": "N4 Vocabulary — Group 21",
         "explanation": "Learn N4 vocabulary words 401–420. These are essential words for the JLPT N4 level.",
@@ -2820,7 +2820,7 @@
       "name": "N4 Vocab 22: 血〜つもり",
       "type": "vocabulary",
       "level": "n4",
-      "order": 122,
+      "order": 4021,
       "intro": {
         "title": "N4 Vocabulary — Group 22",
         "explanation": "Learn N4 vocabulary words 421–440. These are essential words for the JLPT N4 level.",
@@ -2954,7 +2954,7 @@
       "name": "N4 Vocab 23: 釣る〜動物園",
       "type": "vocabulary",
       "level": "n4",
-      "order": 123,
+      "order": 4022,
       "intro": {
         "title": "N4 Vocabulary — Group 23",
         "explanation": "Learn N4 vocabulary words 441–460. These are essential words for the JLPT N4 level.",
@@ -3088,7 +3088,7 @@
       "name": "N4 Vocab 24: 遠く〜無くなる",
       "type": "vocabulary",
       "level": "n4",
-      "order": 124,
+      "order": 4023,
       "intro": {
         "title": "N4 Vocabulary — Group 24",
         "explanation": "Learn N4 vocabulary words 461–480. These are essential words for the JLPT N4 level.",
@@ -3222,7 +3222,7 @@
       "name": "N4 Vocab 25: 亡くなる〜熱",
       "type": "vocabulary",
       "level": "n4",
-      "order": 125,
+      "order": 4024,
       "intro": {
         "title": "N4 Vocabulary — Group 25",
         "explanation": "Learn N4 vocabulary words 481–500. These are essential words for the JLPT N4 level.",
@@ -3356,7 +3356,7 @@
       "name": "N4 Vocab 26: 熱心〜パソコン",
       "type": "vocabulary",
       "level": "n4",
-      "order": 126,
+      "order": 4025,
       "intro": {
         "title": "N4 Vocabulary — Group 26",
         "explanation": "Learn N4 vocabulary words 501–520. These are essential words for the JLPT N4 level.",
@@ -3490,7 +3490,7 @@
       "name": "N4 Vocab 27: 発音〜美術館",
       "type": "vocabulary",
       "level": "n4",
-      "order": 127,
+      "order": 4026,
       "intro": {
         "title": "N4 Vocabulary — Group 27",
         "explanation": "Learn N4 vocabulary words 521–540. These are essential words for the JLPT N4 level.",
@@ -3624,7 +3624,7 @@
       "name": "N4 Vocab 28: 非常に〜布団",
       "type": "vocabulary",
       "level": "n4",
-      "order": 128,
+      "order": 4027,
       "intro": {
         "title": "N4 Vocabulary — Group 28",
         "explanation": "Learn N4 vocabulary words 541–560. These are essential words for the JLPT N4 level.",
@@ -3758,7 +3758,7 @@
       "name": "N4 Vocab 29: 舟〜翻訳",
       "type": "vocabulary",
       "level": "n4",
-      "order": 129,
+      "order": 4028,
       "intro": {
         "title": "N4 Vocabulary — Group 29",
         "explanation": "Learn N4 vocabulary words 561–580. These are essential words for the JLPT N4 level.",
@@ -3892,7 +3892,7 @@
       "name": "N4 Vocab 30: 参る〜迎える",
       "type": "vocabulary",
       "level": "n4",
-      "order": 130,
+      "order": 4029,
       "intro": {
         "title": "N4 Vocabulary — Group 30",
         "explanation": "Learn N4 vocabulary words 581–600. These are essential words for the JLPT N4 level.",
@@ -4026,7 +4026,7 @@
       "name": "N4 Vocab 31: 昔〜役に立つ",
       "type": "vocabulary",
       "level": "n4",
-      "order": 131,
+      "order": 4030,
       "intro": {
         "title": "N4 Vocabulary — Group 31",
         "explanation": "Learn N4 vocabulary words 601–620. These are essential words for the JLPT N4 level.",
@@ -4160,7 +4160,7 @@
       "name": "N4 Vocab 32: 焼ける〜汚れる",
       "type": "vocabulary",
       "level": "n4",
-      "order": 132,
+      "order": 4031,
       "intro": {
         "title": "N4 Vocabulary — Group 32",
         "explanation": "Learn N4 vocabulary words 621–640. These are essential words for the JLPT N4 level.",
@@ -4294,7 +4294,7 @@
       "name": "N4 Vocab 33: 予習〜沸く",
       "type": "vocabulary",
       "level": "n4",
-      "order": 133,
+      "order": 4032,
       "intro": {
         "title": "N4 Vocabulary — Group 33",
         "explanation": "Learn N4 vocabulary words 641–660. These are essential words for the JLPT N4 level.",
@@ -4428,7 +4428,7 @@
       "name": "N4 Vocab 34: 訳〜いただく",
       "type": "vocabulary",
       "level": "n4",
-      "order": 134,
+      "order": 4033,
       "intro": {
         "title": "N4 Vocabulary — Group 34",
         "explanation": "Learn N4 vocabulary words 661–666. These are essential words for the JLPT N4 level.",

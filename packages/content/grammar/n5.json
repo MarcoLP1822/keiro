@@ -7,7 +7,7 @@
       "name": "N5 Grammar 1: Basic Sentences",
       "type": "grammar",
       "level": "n5",
-      "order": 71,
+      "order": 3000,
       "intro": {
         "title": "Basic Sentence Structure",
         "explanation": "Learn the fundamental particles and sentence patterns that form the backbone of Japanese.",
@@ -126,7 +126,7 @@
       "name": "N5 Grammar 2: Existence & Location",
       "type": "grammar",
       "level": "n5",
-      "order": 72,
+      "order": 3001,
       "intro": {
         "title": "Existence and Location",
         "explanation": "Express what exists and where things are located using あります and います.",
@@ -203,7 +203,7 @@
       "name": "N5 Grammar 3: Particles - Direction & Means",
       "type": "grammar",
       "level": "n5",
-      "order": 73,
+      "order": 3002,
       "intro": {
         "title": "Particles for Direction and Means",
         "explanation": "Learn particles that express direction, location of action, and means.",
@@ -322,7 +322,7 @@
       "name": "N5 Grammar 4: Particles - Range & Listing",
       "type": "grammar",
       "level": "n5",
-      "order": 74,
+      "order": 3003,
       "intro": {
         "title": "Particles for Range and Listing",
         "explanation": "Express ranges with から/まで and list items with と, や, など.",
@@ -420,7 +420,7 @@
       "name": "N5 Grammar 5: い-Adjectives",
       "type": "grammar",
       "level": "n5",
-      "order": 75,
+      "order": 3004,
       "intro": {
         "title": "い-Adjective Patterns",
         "explanation": "Learn how い-adjectives connect to verbs and change form.",
@@ -518,7 +518,7 @@
       "name": "N5 Grammar 6: な-Adjectives",
       "type": "grammar",
       "level": "n5",
-      "order": 76,
+      "order": 3005,
       "intro": {
         "title": "な-Adjective Patterns",
         "explanation": "Learn how な-adjectives connect to verbs and express change.",
@@ -616,7 +616,7 @@
       "name": "N5 Grammar 7: Verb て-form",
       "type": "grammar",
       "level": "n5",
-      "order": 77,
+      "order": 3006,
       "intro": {
         "title": "The て-form",
         "explanation": "The て-form is one of the most versatile verb forms in Japanese, used for requests, ongoing actions, and connecting sentences.",
@@ -735,7 +735,7 @@
       "name": "N5 Grammar 8: Verb Forms - Suggestions & Invitations",
       "type": "grammar",
       "level": "n5",
-      "order": 78,
+      "order": 3007,
       "intro": {
         "title": "Suggestions and Invitations",
         "explanation": "Learn how to make suggestions, invitations, and proposals in Japanese.",
@@ -812,7 +812,7 @@
       "name": "N5 Grammar 9: Want & Ability",
       "type": "grammar",
       "level": "n5",
-      "order": 79,
+      "order": 3008,
       "intro": {
         "title": "Expressing Want and Ability",
         "explanation": "Express desires and abilities using たい, ほしい, and できます.",
@@ -931,7 +931,7 @@
       "name": "N5 Grammar 10: Time & Sequence",
       "type": "grammar",
       "level": "n5",
-      "order": 80,
+      "order": 3009,
       "intro": {
         "title": "Time and Sequence",
         "explanation": "Express the order of events and timing using before, after, and when.",
@@ -1050,7 +1050,7 @@
       "name": "N5 Grammar 11: Giving & Receiving",
       "type": "grammar",
       "level": "n5",
-      "order": 81,
+      "order": 3010,
       "intro": {
         "title": "Giving and Receiving",
         "explanation": "Japanese has distinct verbs for giving and receiving depending on the social relationship.",
@@ -1148,7 +1148,7 @@
       "name": "N5 Grammar 12: Comparisons",
       "type": "grammar",
       "level": "n5",
-      "order": 82,
+      "order": 3011,
       "intro": {
         "title": "Making Comparisons",
         "explanation": "Learn to compare two or more things and express superlatives.",
@@ -1267,7 +1267,7 @@
       "name": "N5 Grammar 13: Question Words - What & Who",
       "type": "grammar",
       "level": "n5",
-      "order": 83,
+      "order": 3012,
       "intro": {
         "title": "Question Words: What and Who",
         "explanation": "Learn to ask about things and people using なに, だれ, and their variations.",
@@ -1386,7 +1386,7 @@
       "name": "N5 Grammar 14: Question Words - Where & Which",
       "type": "grammar",
       "level": "n5",
-      "order": 84,
+      "order": 3013,
       "intro": {
         "title": "Question Words: Where and Which",
         "explanation": "Ask about locations and make selections using どこ, どの, どれ, and どちら.",
@@ -1505,7 +1505,7 @@
       "name": "N5 Grammar 15: Question Words - How",
       "type": "grammar",
       "level": "n5",
-      "order": 85,
+      "order": 3014,
       "intro": {
         "title": "Asking How",
         "explanation": "Learn different ways to ask 'how' and make suggestions.",
@@ -1645,7 +1645,7 @@
       "name": "N5 Grammar 16: Indefinite Pronouns - Some",
       "type": "grammar",
       "level": "n5",
-      "order": 86,
+      "order": 3015,
       "intro": {
         "title": "Indefinite Pronouns: Someone, Something, Somewhere",
         "explanation": "Express indefinite references using か-compounds.",
@@ -1743,7 +1743,7 @@
       "name": "N5 Grammar 17: Indefinite Pronouns - Every & None",
       "type": "grammar",
       "level": "n5",
-      "order": 87,
+      "order": 3016,
       "intro": {
         "title": "Every and None",
         "explanation": "Express universal and negative indefinite references.",
@@ -1862,7 +1862,7 @@
       "name": "N5 Grammar 18: Negative Indefinites",
       "type": "grammar",
       "level": "n5",
-      "order": 88,
+      "order": 3017,
       "intro": {
         "title": "Nobody, Nothing, Nowhere",
         "explanation": "Express negative indefinites - nobody, nothing, and nowhere.",
@@ -1960,7 +1960,7 @@
       "name": "N5 Grammar 19: Negative Indefinites - Location",
       "type": "grammar",
       "level": "n5",
-      "order": 89,
+      "order": 3018,
       "intro": {
         "title": "Nowhere Patterns",
         "explanation": "Multiple ways to express 'nowhere' depending on the particle used.",
@@ -2100,7 +2100,7 @@
       "name": "N5 Grammar 20: Conjunctions - But & However",
       "type": "grammar",
       "level": "n5",
-      "order": 90,
+      "order": 3019,
       "intro": {
         "title": "Conjunctions: Contrast",
         "explanation": "Connect contrasting ideas using various 'but' and 'however' expressions.",
@@ -2240,7 +2240,7 @@
       "name": "N5 Grammar 21: Conjunctions - So & Then",
       "type": "grammar",
       "level": "n5",
-      "order": 91,
+      "order": 3020,
       "intro": {
         "title": "Conjunctions: Cause and Sequence",
         "explanation": "Connect ideas showing cause, result, and sequence.",
@@ -2359,7 +2359,7 @@
       "name": "N5 Grammar 22: Transition Words",
       "type": "grammar",
       "level": "n5",
-      "order": 92,
+      "order": 3021,
       "intro": {
         "title": "Transition Words",
         "explanation": "Smooth conversation transitions using 'well then' and 'in that case'.",
@@ -2499,7 +2499,7 @@
       "name": "N5 Grammar 23: Frequency & Degree Adverbs",
       "type": "grammar",
       "level": "n5",
-      "order": 93,
+      "order": 3022,
       "intro": {
         "title": "Frequency and Degree",
         "explanation": "Express how often and to what degree things happen.",
@@ -2639,7 +2639,7 @@
       "name": "N5 Grammar 24: Degree & Approximation",
       "type": "grammar",
       "level": "n5",
-      "order": 94,
+      "order": 3023,
       "intro": {
         "title": "Degree and Approximation",
         "explanation": "Express approximate amounts, degrees, and extents.",
@@ -2758,7 +2758,7 @@
       "name": "N5 Grammar 25: Time Expressions",
       "type": "grammar",
       "level": "n5",
-      "order": 95,
+      "order": 3024,
       "intro": {
         "title": "Time-Related Expressions",
         "explanation": "Express timing, duration, and temporal relationships.",
@@ -2877,7 +2877,7 @@
       "name": "N5 Grammar 26: Negation Patterns",
       "type": "grammar",
       "level": "n5",
-      "order": 96,
+      "order": 3025,
       "intro": {
         "title": "Negation Patterns",
         "explanation": "Various ways to express 'not yet' and negative states.",
@@ -2954,7 +2954,7 @@
       "name": "N5 Grammar 27: Verb Nominalization & More",
       "type": "grammar",
       "level": "n5",
-      "order": 97,
+      "order": 3026,
       "intro": {
         "title": "Verb Nominalization and Miscellaneous Patterns",
         "explanation": "Turn verbs into nouns and learn additional useful patterns.",
@@ -3115,7 +3115,7 @@
       "name": "N5 Grammar 28: Purpose, Decisions & Change",
       "type": "grammar",
       "level": "n5",
-      "order": 98,
+      "order": 3027,
       "intro": {
         "title": "Purpose, Decisions, and Change",
         "explanation": "Express purpose of going/coming, making decisions, and changes of state.",

@@ -1,0 +1,5423 @@
+{
+  "level": "n3",
+  "modules": [
+    {
+      "id": "n3-kanji-01",
+      "name": "N3 Kanji 1: 与〜夫",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6500,
+      "intro": {
+        "title": "N3 Kanji — Group 1",
+        "explanation": "Learn N3 kanji 1–10. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "与",
+          "meanings": [
+            "Give"
+          ],
+          "onReading": [
+            "よ"
+          ],
+          "kunReading": [
+            "あた"
+          ],
+          "strokeCount": 3
+        },
+        {
+          "kanji": "亡",
+          "meanings": [
+            "Death",
+            "Deceased"
+          ],
+          "onReading": [
+            "ぼう"
+          ],
+          "kunReading": [
+            "な"
+          ],
+          "strokeCount": 3
+        },
+        {
+          "kanji": "才",
+          "meanings": [
+            "Genius"
+          ],
+          "onReading": [
+            "さい"
+          ],
+          "kunReading": [],
+          "strokeCount": 3
+        },
+        {
+          "kanji": "内",
+          "meanings": [
+            "Inside",
+            "Within"
+          ],
+          "onReading": [
+            "ない"
+          ],
+          "kunReading": [
+            "うち"
+          ],
+          "strokeCount": 4
+        },
+        {
+          "kanji": "化",
+          "meanings": [
+            "Change"
+          ],
+          "onReading": [
+            "か"
+          ],
+          "kunReading": [
+            "ば"
+          ],
+          "strokeCount": 4
+        },
+        {
+          "kanji": "支",
+          "meanings": [
+            "Support",
+            "Branch"
+          ],
+          "onReading": [
+            "し"
+          ],
+          "kunReading": [
+            "ささ"
+          ],
+          "strokeCount": 4
+        },
+        {
+          "kanji": "予",
+          "meanings": [
+            "Beforehand"
+          ],
+          "onReading": [
+            "よ"
+          ],
+          "kunReading": [
+            "あらかじ"
+          ],
+          "strokeCount": 4
+        },
+        {
+          "kanji": "反",
+          "meanings": [
+            "Anti"
+          ],
+          "onReading": [
+            "はん"
+          ],
+          "kunReading": [],
+          "strokeCount": 4
+        },
+        {
+          "kanji": "引",
+          "meanings": [
+            "Pull"
+          ],
+          "onReading": [
+            "いん"
+          ],
+          "kunReading": [
+            "ひ"
+          ],
+          "strokeCount": 4
+        },
+        {
+          "kanji": "夫",
+          "meanings": [
+            "Husband"
+          ],
+          "onReading": [
+            "ふう",
+            "ふ"
+          ],
+          "kunReading": [
+            "おっと"
+          ],
+          "strokeCount": 4
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-02",
+      "name": "N3 Kanji 2: 収〜示",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6501,
+      "intro": {
+        "title": "N3 Kanji — Group 2",
+        "explanation": "Learn N3 kanji 11–20. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "収",
+          "meanings": [
+            "Obtain"
+          ],
+          "onReading": [
+            "しゅう"
+          ],
+          "kunReading": [
+            "おさ"
+          ],
+          "strokeCount": 4
+        },
+        {
+          "kanji": "太",
+          "meanings": [
+            "Fat"
+          ],
+          "onReading": [
+            "たい",
+            "た"
+          ],
+          "kunReading": [
+            "ふと"
+          ],
+          "strokeCount": 4
+        },
+        {
+          "kanji": "王",
+          "meanings": [
+            "King"
+          ],
+          "onReading": [
+            "おう"
+          ],
+          "kunReading": [],
+          "strokeCount": 4
+        },
+        {
+          "kanji": "欠",
+          "meanings": [
+            "Lack"
+          ],
+          "onReading": [
+            "けつ"
+          ],
+          "kunReading": [
+            "か"
+          ],
+          "strokeCount": 4
+        },
+        {
+          "kanji": "互",
+          "meanings": [
+            "Mutual"
+          ],
+          "onReading": [
+            "ご"
+          ],
+          "kunReading": [
+            "たが"
+          ],
+          "strokeCount": 4
+        },
+        {
+          "kanji": "民",
+          "meanings": [
+            "Peoples",
+            "People",
+            "Nation"
+          ],
+          "onReading": [
+            "みん"
+          ],
+          "kunReading": [
+            "たみ"
+          ],
+          "strokeCount": 5
+        },
+        {
+          "kanji": "市",
+          "meanings": [
+            "City"
+          ],
+          "onReading": [
+            "し"
+          ],
+          "kunReading": [
+            "いち"
+          ],
+          "strokeCount": 5
+        },
+        {
+          "kanji": "平",
+          "meanings": [
+            "Flat",
+            "Peace"
+          ],
+          "onReading": [
+            "へい",
+            "^ひょう",
+            "^びょう"
+          ],
+          "kunReading": [
+            "たいら",
+            "ひら"
+          ],
+          "strokeCount": 5
+        },
+        {
+          "kanji": "加",
+          "meanings": [
+            "Add"
+          ],
+          "onReading": [
+            "か"
+          ],
+          "kunReading": [
+            "くわ"
+          ],
+          "strokeCount": 5
+        },
+        {
+          "kanji": "示",
+          "meanings": [
+            "Indicate",
+            "Show"
+          ],
+          "onReading": [
+            "じ",
+            "し"
+          ],
+          "kunReading": [
+            "しめ"
+          ],
+          "strokeCount": 5
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-03",
+      "name": "N3 Kanji 3: 打〜処",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6502,
+      "intro": {
+        "title": "N3 Kanji — Group 3",
+        "explanation": "Learn N3 kanji 21–30. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "打",
+          "meanings": [
+            "Hit"
+          ],
+          "onReading": [
+            "だ"
+          ],
+          "kunReading": [
+            "う",
+            "ぶ"
+          ],
+          "strokeCount": 5
+        },
+        {
+          "kanji": "必",
+          "meanings": [
+            "Certain"
+          ],
+          "onReading": [
+            "ひつ"
+          ],
+          "kunReading": [
+            "かなら"
+          ],
+          "strokeCount": 5
+        },
+        {
+          "kanji": "付",
+          "meanings": [
+            "Attach"
+          ],
+          "onReading": [
+            "ふ"
+          ],
+          "kunReading": [
+            "つ"
+          ],
+          "strokeCount": 5
+        },
+        {
+          "kanji": "由",
+          "meanings": [
+            "Reason"
+          ],
+          "onReading": [
+            "ゆう"
+          ],
+          "kunReading": [
+            "よし",
+            "よ"
+          ],
+          "strokeCount": 5
+        },
+        {
+          "kanji": "石",
+          "meanings": [
+            "Stone"
+          ],
+          "onReading": [
+            "せき"
+          ],
+          "kunReading": [
+            "いし"
+          ],
+          "strokeCount": 5
+        },
+        {
+          "kanji": "失",
+          "meanings": [
+            "Fault"
+          ],
+          "onReading": [
+            "しつ"
+          ],
+          "kunReading": [
+            "うしな"
+          ],
+          "strokeCount": 5
+        },
+        {
+          "kanji": "末",
+          "meanings": [
+            "End"
+          ],
+          "onReading": [
+            "まつ"
+          ],
+          "kunReading": [
+            "すえ"
+          ],
+          "strokeCount": 5
+        },
+        {
+          "kanji": "申",
+          "meanings": [
+            "Say Humbly",
+            "Say",
+            "Humbly Say"
+          ],
+          "onReading": [
+            "しん"
+          ],
+          "kunReading": [
+            "もう"
+          ],
+          "strokeCount": 5
+        },
+        {
+          "kanji": "他",
+          "meanings": [
+            "Other"
+          ],
+          "onReading": [
+            "た"
+          ],
+          "kunReading": [
+            "ほか"
+          ],
+          "strokeCount": 5
+        },
+        {
+          "kanji": "処",
+          "meanings": [
+            "Deal With"
+          ],
+          "onReading": [
+            "しょ"
+          ],
+          "kunReading": [
+            "ところ"
+          ],
+          "strokeCount": 5
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-04",
+      "name": "N3 Kanji 4: 号〜全",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6503,
+      "intro": {
+        "title": "N3 Kanji — Group 4",
+        "explanation": "Learn N3 kanji 31–40. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "号",
+          "meanings": [
+            "Number"
+          ],
+          "onReading": [
+            "ごう"
+          ],
+          "kunReading": [],
+          "strokeCount": 5
+        },
+        {
+          "kanji": "未",
+          "meanings": [
+            "Not Yet"
+          ],
+          "onReading": [
+            "み"
+          ],
+          "kunReading": [
+            "ま",
+            "いま",
+            "ひつじ"
+          ],
+          "strokeCount": 5
+        },
+        {
+          "kanji": "込",
+          "meanings": [
+            "Crowded"
+          ],
+          "onReading": [],
+          "kunReading": [
+            "こ"
+          ],
+          "strokeCount": 5
+        },
+        {
+          "kanji": "払",
+          "meanings": [
+            "Pay"
+          ],
+          "onReading": [
+            "ふつ"
+          ],
+          "kunReading": [
+            "はら"
+          ],
+          "strokeCount": 5
+        },
+        {
+          "kanji": "犯",
+          "meanings": [
+            "Crime"
+          ],
+          "onReading": [
+            "はん"
+          ],
+          "kunReading": [
+            "おか"
+          ],
+          "strokeCount": 5
+        },
+        {
+          "kanji": "礼",
+          "meanings": [
+            "Thanks"
+          ],
+          "onReading": [
+            "れい"
+          ],
+          "kunReading": [],
+          "strokeCount": 5
+        },
+        {
+          "kanji": "合",
+          "meanings": [
+            "Suit",
+            "Fit",
+            "Join"
+          ],
+          "onReading": [
+            "ごう",
+            "がっ"
+          ],
+          "kunReading": [
+            "あ",
+            "あい"
+          ],
+          "strokeCount": 6
+        },
+        {
+          "kanji": "回",
+          "meanings": [
+            "Times",
+            "Revolve"
+          ],
+          "onReading": [
+            "かい"
+          ],
+          "kunReading": [
+            "まわ"
+          ],
+          "strokeCount": 6
+        },
+        {
+          "kanji": "米",
+          "meanings": [
+            "Rice",
+            "America"
+          ],
+          "onReading": [
+            "べい",
+            "まい"
+          ],
+          "kunReading": [
+            "こめ"
+          ],
+          "strokeCount": 6
+        },
+        {
+          "kanji": "全",
+          "meanings": [
+            "All",
+            "Whole"
+          ],
+          "onReading": [
+            "ぜん"
+          ],
+          "kunReading": [
+            "すべ",
+            "まった"
+          ],
+          "strokeCount": 6
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-05",
+      "name": "N3 Kanji 5: 当〜両",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6504,
+      "intro": {
+        "title": "N3 Kanji — Group 5",
+        "explanation": "Learn N3 kanji 41–50. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "当",
+          "meanings": [
+            "Correct",
+            "Right",
+            "Success"
+          ],
+          "onReading": [
+            "とう"
+          ],
+          "kunReading": [
+            "あ"
+          ],
+          "strokeCount": 6
+        },
+        {
+          "kanji": "成",
+          "meanings": [
+            "Become"
+          ],
+          "onReading": [
+            "せい"
+          ],
+          "kunReading": [
+            "な"
+          ],
+          "strokeCount": 6
+        },
+        {
+          "kanji": "共",
+          "meanings": [
+            "Together"
+          ],
+          "onReading": [
+            "きょう"
+          ],
+          "kunReading": [
+            "とも"
+          ],
+          "strokeCount": 6
+        },
+        {
+          "kanji": "交",
+          "meanings": [
+            "Mix",
+            "Mingle"
+          ],
+          "onReading": [
+            "こう"
+          ],
+          "kunReading": [
+            "まじ",
+            "ま",
+            "か"
+          ],
+          "strokeCount": 6
+        },
+        {
+          "kanji": "向",
+          "meanings": [
+            "Yonder",
+            "Facing"
+          ],
+          "onReading": [
+            "こう"
+          ],
+          "kunReading": [
+            "む"
+          ],
+          "strokeCount": 6
+        },
+        {
+          "kanji": "在",
+          "meanings": [
+            "Exist"
+          ],
+          "onReading": [
+            "ざい"
+          ],
+          "kunReading": [],
+          "strokeCount": 6
+        },
+        {
+          "kanji": "件",
+          "meanings": [
+            "Matter",
+            "Affair"
+          ],
+          "onReading": [
+            "けん"
+          ],
+          "kunReading": [],
+          "strokeCount": 6
+        },
+        {
+          "kanji": "任",
+          "meanings": [
+            "Duty"
+          ],
+          "onReading": [
+            "にん"
+          ],
+          "kunReading": [
+            "まか"
+          ],
+          "strokeCount": 6
+        },
+        {
+          "kanji": "次",
+          "meanings": [
+            "Next"
+          ],
+          "onReading": [
+            "じ"
+          ],
+          "kunReading": [
+            "つぎ"
+          ],
+          "strokeCount": 6
+        },
+        {
+          "kanji": "両",
+          "meanings": [
+            "Both"
+          ],
+          "onReading": [
+            "りょう"
+          ],
+          "kunReading": [],
+          "strokeCount": 6
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-06",
+      "name": "N3 Kanji 6: 式〜因",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6505,
+      "intro": {
+        "title": "N3 Kanji — Group 6",
+        "explanation": "Learn N3 kanji 51–60. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "式",
+          "meanings": [
+            "Ritual",
+            "Ceremony",
+            "Equation"
+          ],
+          "onReading": [
+            "しき"
+          ],
+          "kunReading": [],
+          "strokeCount": 6
+        },
+        {
+          "kanji": "争",
+          "meanings": [
+            "Conflict"
+          ],
+          "onReading": [
+            "そう"
+          ],
+          "kunReading": [
+            "あらそ"
+          ],
+          "strokeCount": 6
+        },
+        {
+          "kanji": "宅",
+          "meanings": [
+            "House",
+            "Home"
+          ],
+          "onReading": [
+            "たく"
+          ],
+          "kunReading": [],
+          "strokeCount": 6
+        },
+        {
+          "kanji": "伝",
+          "meanings": [
+            "Transmit",
+            "Tell"
+          ],
+          "onReading": [
+            "でん"
+          ],
+          "kunReading": [
+            "つた",
+            "つて"
+          ],
+          "strokeCount": 6
+        },
+        {
+          "kanji": "好",
+          "meanings": [
+            "Like"
+          ],
+          "onReading": [
+            "こう"
+          ],
+          "kunReading": [
+            "す",
+            "この"
+          ],
+          "strokeCount": 6
+        },
+        {
+          "kanji": "守",
+          "meanings": [
+            "Protect"
+          ],
+          "onReading": [
+            "す",
+            "^しゅ"
+          ],
+          "kunReading": [
+            "まも",
+            "もり"
+          ],
+          "strokeCount": 6
+        },
+        {
+          "kanji": "光",
+          "meanings": [
+            "Sunlight",
+            "Light"
+          ],
+          "onReading": [
+            "こう"
+          ],
+          "kunReading": [
+            "ひかり",
+            "ひか"
+          ],
+          "strokeCount": 6
+        },
+        {
+          "kanji": "存",
+          "meanings": [
+            "Exist",
+            "Suppose"
+          ],
+          "onReading": [
+            "そん",
+            "ぞん"
+          ],
+          "kunReading": [],
+          "strokeCount": 6
+        },
+        {
+          "kanji": "危",
+          "meanings": [
+            "Dangerous"
+          ],
+          "onReading": [
+            "き"
+          ],
+          "kunReading": [
+            "あぶ",
+            "あや"
+          ],
+          "strokeCount": 6
+        },
+        {
+          "kanji": "因",
+          "meanings": [
+            "Cause"
+          ],
+          "onReading": [
+            "いん"
+          ],
+          "kunReading": [
+            "よ"
+          ],
+          "strokeCount": 6
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-07",
+      "name": "N3 Kanji 7: 老〜告",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6506,
+      "intro": {
+        "title": "N3 Kanji — Group 7",
+        "explanation": "Learn N3 kanji 61–70. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "老",
+          "meanings": [
+            "Elderly"
+          ],
+          "onReading": [
+            "ろう"
+          ],
+          "kunReading": [],
+          "strokeCount": 6
+        },
+        {
+          "kanji": "曲",
+          "meanings": [
+            "Music",
+            "Bend"
+          ],
+          "onReading": [
+            "きょく"
+          ],
+          "kunReading": [
+            "ま"
+          ],
+          "strokeCount": 6
+        },
+        {
+          "kanji": "列",
+          "meanings": [
+            "Row"
+          ],
+          "onReading": [
+            "れつ"
+          ],
+          "kunReading": [],
+          "strokeCount": 6
+        },
+        {
+          "kanji": "吸",
+          "meanings": [
+            "Suck",
+            "Inhale"
+          ],
+          "onReading": [
+            "きゅう"
+          ],
+          "kunReading": [
+            "す"
+          ],
+          "strokeCount": 6
+        },
+        {
+          "kanji": "耳",
+          "meanings": [
+            "Ear"
+          ],
+          "onReading": [
+            "じ"
+          ],
+          "kunReading": [
+            "みみ"
+          ],
+          "strokeCount": 6
+        },
+        {
+          "kanji": "忙",
+          "meanings": [
+            "Busy"
+          ],
+          "onReading": [
+            "ぼう"
+          ],
+          "kunReading": [
+            "いそが"
+          ],
+          "strokeCount": 6
+        },
+        {
+          "kanji": "対",
+          "meanings": [
+            "Versus",
+            "Opposite"
+          ],
+          "onReading": [
+            "たい"
+          ],
+          "kunReading": [],
+          "strokeCount": 7
+        },
+        {
+          "kanji": "決",
+          "meanings": [
+            "Decide",
+            "Decision"
+          ],
+          "onReading": [
+            "けつ"
+          ],
+          "kunReading": [
+            "き"
+          ],
+          "strokeCount": 7
+        },
+        {
+          "kanji": "初",
+          "meanings": [
+            "First"
+          ],
+          "onReading": [
+            "しょ"
+          ],
+          "kunReading": [
+            "はじ",
+            "はつ",
+            "そ",
+            "ぞ"
+          ],
+          "strokeCount": 7
+        },
+        {
+          "kanji": "告",
+          "meanings": [
+            "Announce"
+          ],
+          "onReading": [
+            "こく"
+          ],
+          "kunReading": [
+            "つ"
+          ],
+          "strokeCount": 7
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-08",
+      "name": "N3 Kanji 8: 判〜助",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6507,
+      "intro": {
+        "title": "N3 Kanji — Group 8",
+        "explanation": "Learn N3 kanji 71–80. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "判",
+          "meanings": [
+            "Judge"
+          ],
+          "onReading": [
+            "はん"
+          ],
+          "kunReading": [],
+          "strokeCount": 7
+        },
+        {
+          "kanji": "利",
+          "meanings": [
+            "Profit",
+            "Benefit",
+            "Advantage"
+          ],
+          "onReading": [
+            "り"
+          ],
+          "kunReading": [
+            "き"
+          ],
+          "strokeCount": 7
+        },
+        {
+          "kanji": "求",
+          "meanings": [
+            "Request"
+          ],
+          "onReading": [
+            "きゅう"
+          ],
+          "kunReading": [
+            "もと"
+          ],
+          "strokeCount": 7
+        },
+        {
+          "kanji": "投",
+          "meanings": [
+            "Throw"
+          ],
+          "onReading": [
+            "とう"
+          ],
+          "kunReading": [
+            "な"
+          ],
+          "strokeCount": 7
+        },
+        {
+          "kanji": "位",
+          "meanings": [
+            "Rank"
+          ],
+          "onReading": [
+            "い"
+          ],
+          "kunReading": [
+            "くらい"
+          ],
+          "strokeCount": 7
+        },
+        {
+          "kanji": "局",
+          "meanings": [
+            "Bureau",
+            "Department"
+          ],
+          "onReading": [
+            "きょく"
+          ],
+          "kunReading": [],
+          "strokeCount": 7
+        },
+        {
+          "kanji": "状",
+          "meanings": [
+            "Condition"
+          ],
+          "onReading": [
+            "じょう"
+          ],
+          "kunReading": [],
+          "strokeCount": 7
+        },
+        {
+          "kanji": "役",
+          "meanings": [
+            "Service",
+            "Duty"
+          ],
+          "onReading": [
+            "やく"
+          ],
+          "kunReading": [],
+          "strokeCount": 7
+        },
+        {
+          "kanji": "声",
+          "meanings": [
+            "Voice"
+          ],
+          "onReading": [
+            "せい"
+          ],
+          "kunReading": [
+            "こえ"
+          ],
+          "strokeCount": 7
+        },
+        {
+          "kanji": "助",
+          "meanings": [
+            "Help"
+          ],
+          "onReading": [
+            "じょ"
+          ],
+          "kunReading": [
+            "たす",
+            "すけ"
+          ],
+          "strokeCount": 7
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-09",
+      "name": "N3 Kanji 9: 労〜抜",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6508,
+      "intro": {
+        "title": "N3 Kanji — Group 9",
+        "explanation": "Learn N3 kanji 81–90. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "労",
+          "meanings": [
+            "Labor"
+          ],
+          "onReading": [
+            "ろう"
+          ],
+          "kunReading": [
+            "いたわ"
+          ],
+          "strokeCount": 7
+        },
+        {
+          "kanji": "形",
+          "meanings": [
+            "Shape",
+            "Form",
+            "Appearance"
+          ],
+          "onReading": [
+            "けい",
+            "^ぎょう"
+          ],
+          "kunReading": [
+            "かた",
+            "かたち"
+          ],
+          "strokeCount": 7
+        },
+        {
+          "kanji": "良",
+          "meanings": [
+            "Good"
+          ],
+          "onReading": [
+            "りょう"
+          ],
+          "kunReading": [
+            "よ",
+            "い"
+          ],
+          "strokeCount": 7
+        },
+        {
+          "kanji": "否",
+          "meanings": [
+            "No"
+          ],
+          "onReading": [
+            "ひ"
+          ],
+          "kunReading": [
+            "いな",
+            "いや"
+          ],
+          "strokeCount": 7
+        },
+        {
+          "kanji": "完",
+          "meanings": [
+            "Perfect"
+          ],
+          "onReading": [
+            "かん"
+          ],
+          "kunReading": [],
+          "strokeCount": 7
+        },
+        {
+          "kanji": "迎",
+          "meanings": [
+            "Welcome"
+          ],
+          "onReading": [
+            "げい"
+          ],
+          "kunReading": [
+            "むか"
+          ],
+          "strokeCount": 7
+        },
+        {
+          "kanji": "冷",
+          "meanings": [
+            "Cool",
+            "Cold"
+          ],
+          "onReading": [
+            "れい"
+          ],
+          "kunReading": [
+            "つめ",
+            "ひ",
+            "さ"
+          ],
+          "strokeCount": 7
+        },
+        {
+          "kanji": "余",
+          "meanings": [
+            "Surplus",
+            "Excess"
+          ],
+          "onReading": [
+            "よ"
+          ],
+          "kunReading": [
+            "あま"
+          ],
+          "strokeCount": 7
+        },
+        {
+          "kanji": "返",
+          "meanings": [
+            "Return"
+          ],
+          "onReading": [
+            "へん"
+          ],
+          "kunReading": [
+            "かえ"
+          ],
+          "strokeCount": 7
+        },
+        {
+          "kanji": "抜",
+          "meanings": [
+            "Extract"
+          ],
+          "onReading": [
+            "ばつ",
+            "はつ",
+            "はい"
+          ],
+          "kunReading": [
+            "ぬ"
+          ],
+          "strokeCount": 7
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-10",
+      "name": "N3 Kanji 10: 努〜吹",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6509,
+      "intro": {
+        "title": "N3 Kanji — Group 10",
+        "explanation": "Learn N3 kanji 91–100. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "努",
+          "meanings": [
+            "Toil"
+          ],
+          "onReading": [
+            "ど"
+          ],
+          "kunReading": [
+            "つと"
+          ],
+          "strokeCount": 7
+        },
+        {
+          "kanji": "困",
+          "meanings": [
+            "Distressed",
+            "Troubled"
+          ],
+          "onReading": [
+            "こん"
+          ],
+          "kunReading": [
+            "こま"
+          ],
+          "strokeCount": 7
+        },
+        {
+          "kanji": "更",
+          "meanings": [
+            "Again",
+            "Renew"
+          ],
+          "onReading": [
+            "こう"
+          ],
+          "kunReading": [
+            "さら",
+            "ふ"
+          ],
+          "strokeCount": 7
+        },
+        {
+          "kanji": "戻",
+          "meanings": [
+            "Return"
+          ],
+          "onReading": [
+            "れい"
+          ],
+          "kunReading": [
+            "もど"
+          ],
+          "strokeCount": 7
+        },
+        {
+          "kanji": "束",
+          "meanings": [
+            "Bundle"
+          ],
+          "onReading": [
+            "そく"
+          ],
+          "kunReading": [
+            "たば"
+          ],
+          "strokeCount": 7
+        },
+        {
+          "kanji": "似",
+          "meanings": [
+            "Resemble"
+          ],
+          "onReading": [
+            "ね",
+            "じ"
+          ],
+          "kunReading": [
+            "に"
+          ],
+          "strokeCount": 7
+        },
+        {
+          "kanji": "君",
+          "meanings": [
+            "Buddy"
+          ],
+          "onReading": [
+            "くん"
+          ],
+          "kunReading": [
+            "きみ"
+          ],
+          "strokeCount": 7
+        },
+        {
+          "kanji": "折",
+          "meanings": [
+            "Fold",
+            "Bend"
+          ],
+          "onReading": [
+            "せつ"
+          ],
+          "kunReading": [
+            "お"
+          ],
+          "strokeCount": 7
+        },
+        {
+          "kanji": "忘",
+          "meanings": [
+            "Forget"
+          ],
+          "onReading": [
+            "ぼう"
+          ],
+          "kunReading": [
+            "わす"
+          ],
+          "strokeCount": 7
+        },
+        {
+          "kanji": "吹",
+          "meanings": [
+            "Blow"
+          ],
+          "onReading": [
+            "すい"
+          ],
+          "kunReading": [
+            "ふ"
+          ],
+          "strokeCount": 7
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-11",
+      "name": "N3 Kanji 11: 定〜受",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6510,
+      "intro": {
+        "title": "N3 Kanji — Group 11",
+        "explanation": "Learn N3 kanji 101–110. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "定",
+          "meanings": [
+            "Determine"
+          ],
+          "onReading": [
+            "てい",
+            "^じょう"
+          ],
+          "kunReading": [
+            "さだ"
+          ],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "実",
+          "meanings": [
+            "Truth",
+            "Reality"
+          ],
+          "onReading": [
+            "じつ"
+          ],
+          "kunReading": [
+            "み"
+          ],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "表",
+          "meanings": [
+            "Express"
+          ],
+          "onReading": [
+            "ひょう"
+          ],
+          "kunReading": [
+            "あらわ",
+            "おもて"
+          ],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "法",
+          "meanings": [
+            "Method",
+            "Law"
+          ],
+          "onReading": [
+            "ほう"
+          ],
+          "kunReading": [],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "性",
+          "meanings": [
+            "Gender",
+            "Nature",
+            "Sex"
+          ],
+          "onReading": [
+            "せい",
+            "しょう"
+          ],
+          "kunReading": [],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "制",
+          "meanings": [
+            "Control",
+            "System"
+          ],
+          "onReading": [
+            "せい"
+          ],
+          "kunReading": [],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "治",
+          "meanings": [
+            "Cure",
+            "Heal",
+            "Reign"
+          ],
+          "onReading": [
+            "じ",
+            "ち"
+          ],
+          "kunReading": [
+            "なお"
+          ],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "取",
+          "meanings": [
+            "Take"
+          ],
+          "onReading": [
+            "しゅ"
+          ],
+          "kunReading": [
+            "と"
+          ],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "和",
+          "meanings": [
+            "Peace",
+            "Japanese Style"
+          ],
+          "onReading": [
+            "わ",
+            "^お"
+          ],
+          "kunReading": [
+            "なご",
+            "やわ"
+          ],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "受",
+          "meanings": [
+            "Accept",
+            "Receive"
+          ],
+          "onReading": [
+            "じゅ"
+          ],
+          "kunReading": [
+            "う"
+          ],
+          "strokeCount": 8
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-12",
+      "name": "N3 Kanji 12: 参〜例",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6511,
+      "intro": {
+        "title": "N3 Kanji — Group 12",
+        "explanation": "Learn N3 kanji 111–120. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "参",
+          "meanings": [
+            "Participate"
+          ],
+          "onReading": [
+            "さん",
+            "^しん"
+          ],
+          "kunReading": [
+            "まい"
+          ],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "所",
+          "meanings": [
+            "Place"
+          ],
+          "onReading": [
+            "しょ"
+          ],
+          "kunReading": [
+            "ところ"
+          ],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "官",
+          "meanings": [
+            "Government"
+          ],
+          "onReading": [
+            "かん"
+          ],
+          "kunReading": [],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "直",
+          "meanings": [
+            "Fix",
+            "Direct"
+          ],
+          "onReading": [
+            "ちょく",
+            "じき"
+          ],
+          "kunReading": [
+            "なお"
+          ],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "果",
+          "meanings": [
+            "Fruit"
+          ],
+          "onReading": [
+            "か"
+          ],
+          "kunReading": [
+            "くだ",
+            "は"
+          ],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "放",
+          "meanings": [
+            "Release"
+          ],
+          "onReading": [
+            "ほう"
+          ],
+          "kunReading": [
+            "はな",
+            "ほう"
+          ],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "供",
+          "meanings": [
+            "Servant",
+            "Companion"
+          ],
+          "onReading": [
+            "きょう"
+          ],
+          "kunReading": [
+            "とも",
+            "そな"
+          ],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "育",
+          "meanings": [
+            "Nurture",
+            "Raise"
+          ],
+          "onReading": [
+            "いく"
+          ],
+          "kunReading": [
+            "そだ",
+            "はぐく"
+          ],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "念",
+          "meanings": [
+            "Thought"
+          ],
+          "onReading": [
+            "ねん"
+          ],
+          "kunReading": [],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "例",
+          "meanings": [
+            "Example"
+          ],
+          "onReading": [
+            "れい"
+          ],
+          "kunReading": [
+            "たと"
+          ],
+          "strokeCount": 8
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-13",
+      "name": "N3 Kanji 13: 若〜妻",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6512,
+      "intro": {
+        "title": "N3 Kanji — Group 13",
+        "explanation": "Learn N3 kanji 121–130. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "若",
+          "meanings": [
+            "Young"
+          ],
+          "onReading": [
+            "じゃく"
+          ],
+          "kunReading": [
+            "わか",
+            "^も"
+          ],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "命",
+          "meanings": [
+            "Fate"
+          ],
+          "onReading": [
+            "めい",
+            "みょう"
+          ],
+          "kunReading": [
+            "いのち"
+          ],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "非",
+          "meanings": [
+            "Injustice",
+            "Negative",
+            "Mistake"
+          ],
+          "onReading": [
+            "ひ"
+          ],
+          "kunReading": [],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "呼",
+          "meanings": [
+            "Call"
+          ],
+          "onReading": [
+            "こ"
+          ],
+          "kunReading": [
+            "よ"
+          ],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "突",
+          "meanings": [
+            "Stab",
+            "Thrust"
+          ],
+          "onReading": [
+            "とつ"
+          ],
+          "kunReading": [
+            "つ"
+          ],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "易",
+          "meanings": [
+            "Easy"
+          ],
+          "onReading": [
+            "い",
+            "^えき"
+          ],
+          "kunReading": [
+            "やさ"
+          ],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "苦",
+          "meanings": [
+            "Suffering"
+          ],
+          "onReading": [
+            "く"
+          ],
+          "kunReading": [
+            "くる",
+            "にが"
+          ],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "具",
+          "meanings": [
+            "Tool"
+          ],
+          "onReading": [
+            "ぐ"
+          ],
+          "kunReading": [],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "彼",
+          "meanings": [
+            "He"
+          ],
+          "onReading": [
+            "ひ"
+          ],
+          "kunReading": [
+            "かれ",
+            "かの"
+          ],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "妻",
+          "meanings": [
+            "Wife"
+          ],
+          "onReading": [
+            "さい"
+          ],
+          "kunReading": [
+            "つま"
+          ],
+          "strokeCount": 8
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-14",
+      "name": "N3 Kanji 14: 幸〜杯",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6513,
+      "intro": {
+        "title": "N3 Kanji — Group 14",
+        "explanation": "Learn N3 kanji 131–140. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "幸",
+          "meanings": [
+            "Happiness"
+          ],
+          "onReading": [
+            "こう"
+          ],
+          "kunReading": [
+            "しあわ",
+            "さいわ",
+            "さち"
+          ],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "押",
+          "meanings": [
+            "Push"
+          ],
+          "onReading": [
+            "おう"
+          ],
+          "kunReading": [
+            "お"
+          ],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "居",
+          "meanings": [
+            "Alive"
+          ],
+          "onReading": [
+            "きょ"
+          ],
+          "kunReading": [
+            "い"
+          ],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "招",
+          "meanings": [
+            "Beckon"
+          ],
+          "onReading": [
+            "しょう"
+          ],
+          "kunReading": [
+            "まね"
+          ],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "刻",
+          "meanings": [
+            "Carve"
+          ],
+          "onReading": [
+            "こく"
+          ],
+          "kunReading": [
+            "きざ"
+          ],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "抱",
+          "meanings": [
+            "Hug"
+          ],
+          "onReading": [
+            "ほう"
+          ],
+          "kunReading": [
+            "だ",
+            "^かか",
+            "^いだ"
+          ],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "到",
+          "meanings": [
+            "Arrival"
+          ],
+          "onReading": [
+            "とう"
+          ],
+          "kunReading": [],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "昔",
+          "meanings": [
+            "Long Ago",
+            "Long Time Ago"
+          ],
+          "onReading": [],
+          "kunReading": [
+            "むかし"
+          ],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "泳",
+          "meanings": [
+            "Swim"
+          ],
+          "onReading": [
+            "えい"
+          ],
+          "kunReading": [
+            "およ"
+          ],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "杯",
+          "meanings": [
+            "Cup Of Liquid",
+            "Counter For Cups"
+          ],
+          "onReading": [
+            "はい"
+          ],
+          "kunReading": [],
+          "strokeCount": 8
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-15",
+      "name": "N3 Kanji 15: 怖〜面",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6514,
+      "intro": {
+        "title": "N3 Kanji — Group 15",
+        "explanation": "Learn N3 kanji 141–150. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "怖",
+          "meanings": [
+            "Scary"
+          ],
+          "onReading": [
+            "ふ"
+          ],
+          "kunReading": [
+            "こわ"
+          ],
+          "strokeCount": 8
+        },
+        {
+          "kanji": "政",
+          "meanings": [
+            "Politics",
+            "Government"
+          ],
+          "onReading": [
+            "せい"
+          ],
+          "kunReading": [],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "相",
+          "meanings": [
+            "Mutual"
+          ],
+          "onReading": [
+            "そう",
+            "しょう"
+          ],
+          "kunReading": [
+            "あい"
+          ],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "約",
+          "meanings": [
+            "Promise"
+          ],
+          "onReading": [
+            "やく"
+          ],
+          "kunReading": [],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "首",
+          "meanings": [
+            "Neck"
+          ],
+          "onReading": [
+            "しゅ"
+          ],
+          "kunReading": [
+            "くび"
+          ],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "要",
+          "meanings": [
+            "Need"
+          ],
+          "onReading": [
+            "よう"
+          ],
+          "kunReading": [
+            "い",
+            "かなめ"
+          ],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "指",
+          "meanings": [
+            "Finger"
+          ],
+          "onReading": [
+            "し"
+          ],
+          "kunReading": [
+            "ゆび",
+            "さ"
+          ],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "点",
+          "meanings": [
+            "Point",
+            "Decimal",
+            "Decimal Point"
+          ],
+          "onReading": [
+            "てん"
+          ],
+          "kunReading": [
+            "つ"
+          ],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "活",
+          "meanings": [
+            "Lively"
+          ],
+          "onReading": [
+            "かつ"
+          ],
+          "kunReading": [
+            "い"
+          ],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "面",
+          "meanings": [
+            "Face",
+            "Surface"
+          ],
+          "onReading": [
+            "めん"
+          ],
+          "kunReading": [
+            "おも",
+            "おもて"
+          ],
+          "strokeCount": 9
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-16",
+      "name": "N3 Kanji 16: 信〜負",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6515,
+      "intro": {
+        "title": "N3 Kanji — Group 16",
+        "explanation": "Learn N3 kanji 151–160. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "信",
+          "meanings": [
+            "Believe",
+            "Trust"
+          ],
+          "onReading": [
+            "しん"
+          ],
+          "kunReading": [],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "昨",
+          "meanings": [
+            "Previous",
+            "Yesterday"
+          ],
+          "onReading": [
+            "さく"
+          ],
+          "kunReading": [],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "係",
+          "meanings": [
+            "Connection"
+          ],
+          "onReading": [
+            "けい"
+          ],
+          "kunReading": [
+            "かか",
+            "かかり"
+          ],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "変",
+          "meanings": [
+            "Change",
+            "Strange"
+          ],
+          "onReading": [
+            "へん"
+          ],
+          "kunReading": [
+            "か"
+          ],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "神",
+          "meanings": [
+            "God"
+          ],
+          "onReading": [
+            "しん"
+          ],
+          "kunReading": [
+            "かみ"
+          ],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "乗",
+          "meanings": [
+            "Ride"
+          ],
+          "onReading": [
+            "じょう"
+          ],
+          "kunReading": [
+            "の"
+          ],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "限",
+          "meanings": [
+            "Limit"
+          ],
+          "onReading": [
+            "げん"
+          ],
+          "kunReading": [
+            "かぎ"
+          ],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "追",
+          "meanings": [
+            "Follow",
+            "Chase"
+          ],
+          "onReading": [
+            "つい"
+          ],
+          "kunReading": [
+            "お"
+          ],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "退",
+          "meanings": [
+            "Retreat",
+            "Reject"
+          ],
+          "onReading": [
+            "たい"
+          ],
+          "kunReading": [
+            "しりぞ",
+            "ひ",
+            "ど",
+            "の"
+          ],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "負",
+          "meanings": [
+            "Lose"
+          ],
+          "onReading": [
+            "ふ"
+          ],
+          "kunReading": [
+            "ま",
+            "お"
+          ],
+          "strokeCount": 9
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-17",
+      "name": "N3 Kanji 17: 美〜迷",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6516,
+      "intro": {
+        "title": "N3 Kanji — Group 17",
+        "explanation": "Learn N3 kanji 161–170. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "美",
+          "meanings": [
+            "Beauty",
+            "Beautiful"
+          ],
+          "onReading": [
+            "び",
+            "み"
+          ],
+          "kunReading": [
+            "うつく"
+          ],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "段",
+          "meanings": [
+            "Steps",
+            "Stairs"
+          ],
+          "onReading": [
+            "だん"
+          ],
+          "kunReading": [],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "科",
+          "meanings": [
+            "Course",
+            "Science",
+            "Department"
+          ],
+          "onReading": [
+            "か"
+          ],
+          "kunReading": [],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "客",
+          "meanings": [
+            "Guest",
+            "Customer"
+          ],
+          "onReading": [
+            "きゃく"
+          ],
+          "kunReading": [],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "飛",
+          "meanings": [
+            "Fly"
+          ],
+          "onReading": [
+            "ひ"
+          ],
+          "kunReading": [
+            "と"
+          ],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "単",
+          "meanings": [
+            "Simple"
+          ],
+          "onReading": [
+            "たん"
+          ],
+          "kunReading": [],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "背",
+          "meanings": [
+            "Back",
+            "Height"
+          ],
+          "onReading": [
+            "はい"
+          ],
+          "kunReading": [
+            "せ",
+            "そむ"
+          ],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "便",
+          "meanings": [
+            "Convenience",
+            "Convenient"
+          ],
+          "onReading": [
+            "べん",
+            "びん"
+          ],
+          "kunReading": [
+            "たよ"
+          ],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "逃",
+          "meanings": [
+            "Escape"
+          ],
+          "onReading": [
+            "とう"
+          ],
+          "kunReading": [
+            "に",
+            "のが",
+            "の"
+          ],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "迷",
+          "meanings": [
+            "Astray",
+            "Lost"
+          ],
+          "onReading": [
+            "めい"
+          ],
+          "kunReading": [
+            "まよ"
+          ],
+          "strokeCount": 9
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-18",
+      "name": "N3 Kanji 18: 草〜能",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6517,
+      "intro": {
+        "title": "N3 Kanji — Group 18",
+        "explanation": "Learn N3 kanji 171–180. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "草",
+          "meanings": [
+            "Grass",
+            "Weed"
+          ],
+          "onReading": [
+            "そう"
+          ],
+          "kunReading": [
+            "くさ"
+          ],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "洗",
+          "meanings": [
+            "Wash"
+          ],
+          "onReading": [
+            "せん"
+          ],
+          "kunReading": [
+            "あら"
+          ],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "怒",
+          "meanings": [
+            "Angry",
+            "Anger"
+          ],
+          "onReading": [
+            "ど"
+          ],
+          "kunReading": [
+            "おこ",
+            "いか"
+          ],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "祖",
+          "meanings": [
+            "Ancestor"
+          ],
+          "onReading": [
+            "そ"
+          ],
+          "kunReading": [],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "皆",
+          "meanings": [
+            "All",
+            "Everyone",
+            "Everything"
+          ],
+          "onReading": [
+            "かい"
+          ],
+          "kunReading": [
+            "みな",
+            "みんな"
+          ],
+          "strokeCount": 9
+        },
+        {
+          "kanji": "連",
+          "meanings": [
+            "Take Along"
+          ],
+          "onReading": [
+            "れん"
+          ],
+          "kunReading": [
+            "つ",
+            "つら"
+          ],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "記",
+          "meanings": [
+            "Write Down",
+            "Record"
+          ],
+          "onReading": [
+            "き"
+          ],
+          "kunReading": [
+            "しる"
+          ],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "原",
+          "meanings": [
+            "Original",
+            "Fundamental",
+            "Field"
+          ],
+          "onReading": [
+            "げん"
+          ],
+          "kunReading": [
+            "はら"
+          ],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "容",
+          "meanings": [
+            "Form",
+            "Appearance",
+            "Shape"
+          ],
+          "onReading": [
+            "よう"
+          ],
+          "kunReading": [],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "能",
+          "meanings": [
+            "Ability"
+          ],
+          "onReading": [
+            "のう"
+          ],
+          "kunReading": [],
+          "strokeCount": 10
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-19",
+      "name": "N3 Kanji 19: 流〜候",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6518,
+      "intro": {
+        "title": "N3 Kanji — Group 19",
+        "explanation": "Learn N3 kanji 181–190. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "流",
+          "meanings": [
+            "Stream"
+          ],
+          "onReading": [
+            "りゅう",
+            "^る"
+          ],
+          "kunReading": [
+            "なが"
+          ],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "格",
+          "meanings": [
+            "Status"
+          ],
+          "onReading": [
+            "かく"
+          ],
+          "kunReading": [],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "消",
+          "meanings": [
+            "Extinguish"
+          ],
+          "onReading": [
+            "しょう"
+          ],
+          "kunReading": [
+            "き",
+            "け"
+          ],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "害",
+          "meanings": [
+            "Damage",
+            "Injury",
+            "Harm"
+          ],
+          "onReading": [
+            "がい"
+          ],
+          "kunReading": [],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "配",
+          "meanings": [
+            "Distribute"
+          ],
+          "onReading": [
+            "はい"
+          ],
+          "kunReading": [
+            "くば"
+          ],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "席",
+          "meanings": [
+            "Seat"
+          ],
+          "onReading": [
+            "せき"
+          ],
+          "kunReading": [],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "残",
+          "meanings": [
+            "Remainder"
+          ],
+          "onReading": [
+            "ざん"
+          ],
+          "kunReading": [
+            "のこ"
+          ],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "差",
+          "meanings": [
+            "Distinction"
+          ],
+          "onReading": [
+            "さ"
+          ],
+          "kunReading": [
+            "さ"
+          ],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "財",
+          "meanings": [
+            "Wealth"
+          ],
+          "onReading": [
+            "さい",
+            "ざい"
+          ],
+          "kunReading": [],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "候",
+          "meanings": [
+            "Climate",
+            "Weather",
+            "Candidate"
+          ],
+          "onReading": [
+            "こう"
+          ],
+          "kunReading": [],
+          "strokeCount": 10
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-20",
+      "name": "N3 Kanji 20: 値〜馬",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6519,
+      "intro": {
+        "title": "N3 Kanji — Group 20",
+        "explanation": "Learn N3 kanji 191–200. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "値",
+          "meanings": [
+            "Value",
+            "Price"
+          ],
+          "onReading": [
+            "ち"
+          ],
+          "kunReading": [
+            "ね",
+            "あたい"
+          ],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "師",
+          "meanings": [
+            "Teacher",
+            "Expert",
+            "Master"
+          ],
+          "onReading": [
+            "し"
+          ],
+          "kunReading": [],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "速",
+          "meanings": [
+            "Fast"
+          ],
+          "onReading": [
+            "そく"
+          ],
+          "kunReading": [
+            "はや"
+          ],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "殺",
+          "meanings": [
+            "Kill"
+          ],
+          "onReading": [
+            "さつ"
+          ],
+          "kunReading": [
+            "ころ"
+          ],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "座",
+          "meanings": [
+            "Sit",
+            "Seat"
+          ],
+          "onReading": [
+            "ざ"
+          ],
+          "kunReading": [
+            "すわ"
+          ],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "破",
+          "meanings": [
+            "Tear"
+          ],
+          "onReading": [
+            "は"
+          ],
+          "kunReading": [
+            "やぶ"
+          ],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "除",
+          "meanings": [
+            "Exclude",
+            "Remove"
+          ],
+          "onReading": [
+            "じょ",
+            "^じ"
+          ],
+          "kunReading": [
+            "のぞ"
+          ],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "降",
+          "meanings": [
+            "Descend"
+          ],
+          "onReading": [
+            "こう"
+          ],
+          "kunReading": [
+            "お",
+            "ふ"
+          ],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "捕",
+          "meanings": [
+            "Catch"
+          ],
+          "onReading": [
+            "ほ"
+          ],
+          "kunReading": [
+            "つか",
+            "とら"
+          ],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "馬",
+          "meanings": [
+            "Horse"
+          ],
+          "onReading": [
+            "ば"
+          ],
+          "kunReading": [
+            "うま"
+          ],
+          "strokeCount": 10
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-21",
+      "name": "N3 Kanji 21: 途〜酒",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6520,
+      "intro": {
+        "title": "N3 Kanji — Group 21",
+        "explanation": "Learn N3 kanji 201–210. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "途",
+          "meanings": [
+            "Route"
+          ],
+          "onReading": [
+            "と"
+          ],
+          "kunReading": [],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "留",
+          "meanings": [
+            "Detain"
+          ],
+          "onReading": [
+            "る",
+            "りゅう"
+          ],
+          "kunReading": [
+            "と"
+          ],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "浮",
+          "meanings": [
+            "Float"
+          ],
+          "onReading": [
+            "ふ"
+          ],
+          "kunReading": [
+            "う",
+            "うわ"
+          ],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "倒",
+          "meanings": [
+            "Overthrow",
+            "Collapse"
+          ],
+          "onReading": [
+            "とう"
+          ],
+          "kunReading": [
+            "たお"
+          ],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "庭",
+          "meanings": [
+            "Garden"
+          ],
+          "onReading": [
+            "てい"
+          ],
+          "kunReading": [
+            "にわ"
+          ],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "徒",
+          "meanings": [
+            "Junior",
+            "Follower"
+          ],
+          "onReading": [
+            "と"
+          ],
+          "kunReading": [],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "恐",
+          "meanings": [
+            "Fear"
+          ],
+          "onReading": [
+            "きょう"
+          ],
+          "kunReading": [
+            "おそ",
+            "こわ"
+          ],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "息",
+          "meanings": [
+            "Breath"
+          ],
+          "onReading": [
+            "そく"
+          ],
+          "kunReading": [
+            "いき"
+          ],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "笑",
+          "meanings": [
+            "Laugh"
+          ],
+          "onReading": [
+            "しょう"
+          ],
+          "kunReading": [
+            "わら",
+            "え"
+          ],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "酒",
+          "meanings": [
+            "Alcohol"
+          ],
+          "onReading": [
+            "しゅ"
+          ],
+          "kunReading": [
+            "さけ",
+            "さか"
+          ],
+          "strokeCount": 10
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-22",
+      "name": "N3 Kanji 22: 娘〜進",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6521,
+      "intro": {
+        "title": "N3 Kanji — Group 22",
+        "explanation": "Learn N3 kanji 211–220. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "娘",
+          "meanings": [
+            "Daughter"
+          ],
+          "onReading": [],
+          "kunReading": [
+            "むすめ"
+          ],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "疲",
+          "meanings": [
+            "Exhausted"
+          ],
+          "onReading": [
+            "ひ"
+          ],
+          "kunReading": [
+            "つか"
+          ],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "眠",
+          "meanings": [
+            "Sleep"
+          ],
+          "onReading": [
+            "みん"
+          ],
+          "kunReading": [
+            "ねむ"
+          ],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "恥",
+          "meanings": [
+            "Shame"
+          ],
+          "onReading": [
+            "ち"
+          ],
+          "kunReading": [
+            "は",
+            "はじ"
+          ],
+          "strokeCount": 10
+        },
+        {
+          "kanji": "部",
+          "meanings": [
+            "Part",
+            "Department",
+            "Club"
+          ],
+          "onReading": [
+            "ぶ"
+          ],
+          "kunReading": [
+            "へ"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "経",
+          "meanings": [
+            "Passage of Time",
+            "Pass Through",
+            "Manage"
+          ],
+          "onReading": [
+            "けい"
+          ],
+          "kunReading": [
+            "た",
+            "へ"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "現",
+          "meanings": [
+            "Present Time",
+            "Present"
+          ],
+          "onReading": [
+            "げん"
+          ],
+          "kunReading": [
+            "あらわ"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "務",
+          "meanings": [
+            "Task"
+          ],
+          "onReading": [
+            "む"
+          ],
+          "kunReading": [
+            "つと"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "都",
+          "meanings": [
+            "Metropolis"
+          ],
+          "onReading": [
+            "と",
+            "^つ"
+          ],
+          "kunReading": [
+            "みやこ"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "進",
+          "meanings": [
+            "Advance"
+          ],
+          "onReading": [
+            "しん"
+          ],
+          "kunReading": [
+            "すす"
+          ],
+          "strokeCount": 11
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-23",
+      "name": "N3 Kanji 23: 産〜規",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6522,
+      "intro": {
+        "title": "N3 Kanji — Group 23",
+        "explanation": "Learn N3 kanji 221–230. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "産",
+          "meanings": [
+            "Give Birth",
+            "Birth"
+          ],
+          "onReading": [
+            "さん"
+          ],
+          "kunReading": [
+            "う"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "済",
+          "meanings": [
+            "Come To An End"
+          ],
+          "onReading": [
+            "さい"
+          ],
+          "kunReading": [
+            "す"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "得",
+          "meanings": [
+            "Acquire"
+          ],
+          "onReading": [
+            "とく"
+          ],
+          "kunReading": [
+            "え",
+            "う"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "組",
+          "meanings": [
+            "Group",
+            "Association",
+            "Team"
+          ],
+          "onReading": [
+            "そ"
+          ],
+          "kunReading": [
+            "くみ"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "側",
+          "meanings": [
+            "Side"
+          ],
+          "onReading": [
+            "そく"
+          ],
+          "kunReading": [
+            "がわ",
+            "^そば"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "情",
+          "meanings": [
+            "Feeling",
+            "Emotion"
+          ],
+          "onReading": [
+            "じょう"
+          ],
+          "kunReading": [
+            "なさけ"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "常",
+          "meanings": [
+            "Ordinary",
+            "Normal",
+            "Usual"
+          ],
+          "onReading": [
+            "じょう"
+          ],
+          "kunReading": [
+            "つね"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "球",
+          "meanings": [
+            "Sphere",
+            "Ball"
+          ],
+          "onReading": [
+            "きゅう"
+          ],
+          "kunReading": [
+            "たま"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "断",
+          "meanings": [
+            "Cut Off"
+          ],
+          "onReading": [
+            "だん"
+          ],
+          "kunReading": [
+            "ことわ",
+            "た"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "規",
+          "meanings": [
+            "Standard"
+          ],
+          "onReading": [
+            "き"
+          ],
+          "kunReading": [],
+          "strokeCount": 11
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-24",
+      "name": "N3 Kanji 24: 術〜宿",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6523,
+      "intro": {
+        "title": "N3 Kanji — Group 24",
+        "explanation": "Learn N3 kanji 231–240. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "術",
+          "meanings": [
+            "Art"
+          ],
+          "onReading": [
+            "じゅつ"
+          ],
+          "kunReading": [],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "訪",
+          "meanings": [
+            "Visit"
+          ],
+          "onReading": [
+            "ほう"
+          ],
+          "kunReading": [
+            "たず",
+            "おとず"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "商",
+          "meanings": [
+            "Merchandise"
+          ],
+          "onReading": [
+            "しょう"
+          ],
+          "kunReading": [
+            "あきな"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "望",
+          "meanings": [
+            "Hope"
+          ],
+          "onReading": [
+            "ぼう"
+          ],
+          "kunReading": [
+            "のぞ"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "深",
+          "meanings": [
+            "Deep"
+          ],
+          "onReading": [
+            "しん"
+          ],
+          "kunReading": [
+            "ふか"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "敗",
+          "meanings": [
+            "Failure",
+            "Fail"
+          ],
+          "onReading": [
+            "はい"
+          ],
+          "kunReading": [
+            "やぶ"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "責",
+          "meanings": [
+            "Blame"
+          ],
+          "onReading": [
+            "せき"
+          ],
+          "kunReading": [
+            "せ"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "婦",
+          "meanings": [
+            "Wife"
+          ],
+          "onReading": [
+            "ふ"
+          ],
+          "kunReading": [],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "寄",
+          "meanings": [
+            "Approach"
+          ],
+          "onReading": [
+            "き"
+          ],
+          "kunReading": [
+            "よ"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "宿",
+          "meanings": [
+            "Lodge"
+          ],
+          "onReading": [
+            "しゅく"
+          ],
+          "kunReading": [
+            "やど"
+          ],
+          "strokeCount": 11
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-25",
+      "name": "N3 Kanji 25: 険〜雪",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6524,
+      "intro": {
+        "title": "N3 Kanji — Group 25",
+        "explanation": "Learn N3 kanji 241–250. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "険",
+          "meanings": [
+            "Risky",
+            "Steep"
+          ],
+          "onReading": [
+            "けん"
+          ],
+          "kunReading": [
+            "けわ"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "船",
+          "meanings": [
+            "Boat",
+            "Ship"
+          ],
+          "onReading": [
+            "せん"
+          ],
+          "kunReading": [
+            "ふね"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "許",
+          "meanings": [
+            "Permit",
+            "Allow"
+          ],
+          "onReading": [
+            "きょ"
+          ],
+          "kunReading": [
+            "ゆる"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "婚",
+          "meanings": [
+            "Marriage"
+          ],
+          "onReading": [
+            "こん"
+          ],
+          "kunReading": [],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "欲",
+          "meanings": [
+            "Want"
+          ],
+          "onReading": [
+            "よく"
+          ],
+          "kunReading": [
+            "ほ"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "探",
+          "meanings": [
+            "Look For",
+            "Search For"
+          ],
+          "onReading": [
+            "たん"
+          ],
+          "kunReading": [
+            "さが",
+            "さぐ"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "閉",
+          "meanings": [
+            "Closed",
+            "Close",
+            "Closure"
+          ],
+          "onReading": [
+            "へい"
+          ],
+          "kunReading": [
+            "し",
+            "と"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "掛",
+          "meanings": [
+            "Hang"
+          ],
+          "onReading": [
+            "がい"
+          ],
+          "kunReading": [
+            "か"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "盗",
+          "meanings": [
+            "Steal"
+          ],
+          "onReading": [
+            "とう"
+          ],
+          "kunReading": [
+            "ぬす"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "雪",
+          "meanings": [
+            "Snow"
+          ],
+          "onReading": [
+            "せつ"
+          ],
+          "kunReading": [
+            "ゆき"
+          ],
+          "strokeCount": 11
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-26",
+      "name": "N3 Kanji 26: 窓〜過",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6525,
+      "intro": {
+        "title": "N3 Kanji — Group 26",
+        "explanation": "Learn N3 kanji 251–260. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "窓",
+          "meanings": [
+            "Window"
+          ],
+          "onReading": [
+            "そう"
+          ],
+          "kunReading": [
+            "まど"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "貧",
+          "meanings": [
+            "Poor"
+          ],
+          "onReading": [
+            "びん",
+            "^ひん"
+          ],
+          "kunReading": [
+            "まず"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "頂",
+          "meanings": [
+            "Summit",
+            "Humbly"
+          ],
+          "onReading": [
+            "ちょう"
+          ],
+          "kunReading": [
+            "いただき",
+            "いただ"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "偶",
+          "meanings": [
+            "Accidentally"
+          ],
+          "onReading": [
+            "ぐう"
+          ],
+          "kunReading": [
+            "たま"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "猫",
+          "meanings": [
+            "Cat"
+          ],
+          "onReading": [],
+          "kunReading": [
+            "ねこ"
+          ],
+          "strokeCount": 11
+        },
+        {
+          "kanji": "最",
+          "meanings": [
+            "Most"
+          ],
+          "onReading": [
+            "さい"
+          ],
+          "kunReading": [
+            "もっと"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "期",
+          "meanings": [
+            "Period Of Time",
+            "Time Period"
+          ],
+          "onReading": [
+            "き"
+          ],
+          "kunReading": [],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "報",
+          "meanings": [
+            "News",
+            "Report"
+          ],
+          "onReading": [
+            "ほう"
+          ],
+          "kunReading": [
+            "むく"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "勝",
+          "meanings": [
+            "Win"
+          ],
+          "onReading": [
+            "しょう"
+          ],
+          "kunReading": [
+            "か"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "過",
+          "meanings": [
+            "Surpass"
+          ],
+          "onReading": [
+            "か"
+          ],
+          "kunReading": [
+            "す",
+            "あやま"
+          ],
+          "strokeCount": 12
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-27",
+      "name": "N3 Kanji 27: 割〜港",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6526,
+      "intro": {
+        "title": "N3 Kanji — Group 27",
+        "explanation": "Learn N3 kanji 261–270. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "割",
+          "meanings": [
+            "Divide"
+          ],
+          "onReading": [
+            "かつ"
+          ],
+          "kunReading": [
+            "わり",
+            "わ"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "費",
+          "meanings": [
+            "Expense",
+            "Cost"
+          ],
+          "onReading": [
+            "ひ"
+          ],
+          "kunReading": [
+            "つい"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "番",
+          "meanings": [
+            "Number In A Series",
+            "Turn",
+            "Ordinal Number"
+          ],
+          "onReading": [
+            "ばん"
+          ],
+          "kunReading": [],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "備",
+          "meanings": [
+            "Provide",
+            "Equip"
+          ],
+          "onReading": [
+            "び"
+          ],
+          "kunReading": [
+            "そな"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "然",
+          "meanings": [
+            "Nature"
+          ],
+          "onReading": [
+            "ぜん",
+            "^ねん"
+          ],
+          "kunReading": [
+            "しか",
+            "さ"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "葉",
+          "meanings": [
+            "Leaf",
+            "Leaves"
+          ],
+          "onReading": [
+            "よう"
+          ],
+          "kunReading": [
+            "は",
+            "^ば"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "景",
+          "meanings": [
+            "Scene"
+          ],
+          "onReading": [
+            "けい"
+          ],
+          "kunReading": [],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "落",
+          "meanings": [
+            "Fall"
+          ],
+          "onReading": [
+            "らく"
+          ],
+          "kunReading": [
+            "お"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "渡",
+          "meanings": [
+            "Transit"
+          ],
+          "onReading": [
+            "と"
+          ],
+          "kunReading": [
+            "わた"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "港",
+          "meanings": [
+            "Harbor",
+            "Port",
+            "Harbour"
+          ],
+          "onReading": [
+            "こう"
+          ],
+          "kunReading": [
+            "みなと"
+          ],
+          "strokeCount": 12
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-28",
+      "name": "N3 Kanji 28: 達〜絶",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6527,
+      "intro": {
+        "title": "N3 Kanji — Group 28",
+        "explanation": "Learn N3 kanji 271–280. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "達",
+          "meanings": [
+            "Attain",
+            "Plural"
+          ],
+          "onReading": [
+            "たつ"
+          ],
+          "kunReading": [
+            "たち"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "程",
+          "meanings": [
+            "Extent"
+          ],
+          "onReading": [
+            "てい"
+          ],
+          "kunReading": [
+            "ほど"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "満",
+          "meanings": [
+            "Full"
+          ],
+          "onReading": [
+            "まん"
+          ],
+          "kunReading": [
+            "み"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "登",
+          "meanings": [
+            "Climb"
+          ],
+          "onReading": [
+            "とう",
+            "と"
+          ],
+          "kunReading": [
+            "のぼ"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "給",
+          "meanings": [
+            "Salary"
+          ],
+          "onReading": [
+            "きゅう"
+          ],
+          "kunReading": [
+            "たま"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "富",
+          "meanings": [
+            "Rich"
+          ],
+          "onReading": [
+            "ふ"
+          ],
+          "kunReading": [
+            "と",
+            "とみ"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "覚",
+          "meanings": [
+            "Memorize",
+            "Awake"
+          ],
+          "onReading": [
+            "かく"
+          ],
+          "kunReading": [
+            "おぼ",
+            "さ"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "散",
+          "meanings": [
+            "Scatter"
+          ],
+          "onReading": [
+            "さん"
+          ],
+          "kunReading": [
+            "ち"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "喜",
+          "meanings": [
+            "Rejoice",
+            "Delighted",
+            "Pleased"
+          ],
+          "onReading": [
+            "き"
+          ],
+          "kunReading": [
+            "よろこ"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "絶",
+          "meanings": [
+            "Extinction",
+            "Die Out"
+          ],
+          "onReading": [
+            "ぜつ"
+          ],
+          "kunReading": [
+            "た"
+          ],
+          "strokeCount": 12
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-29",
+      "name": "N3 Kanji 29: 等〜陽",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6528,
+      "intro": {
+        "title": "N3 Kanji — Group 29",
+        "explanation": "Learn N3 kanji 281–290. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "等",
+          "meanings": [
+            "Equal"
+          ],
+          "onReading": [
+            "とう"
+          ],
+          "kunReading": [
+            "ひと",
+            "など"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "勤",
+          "meanings": [
+            "Work"
+          ],
+          "onReading": [
+            "きん"
+          ],
+          "kunReading": [
+            "つと"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "遅",
+          "meanings": [
+            "Slow"
+          ],
+          "onReading": [
+            "ち"
+          ],
+          "kunReading": [
+            "おそ",
+            "おく"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "絵",
+          "meanings": [
+            "Drawing",
+            "Painting"
+          ],
+          "onReading": [
+            "え"
+          ],
+          "kunReading": [],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "越",
+          "meanings": [
+            "Go Beyond"
+          ],
+          "onReading": [
+            "えつ"
+          ],
+          "kunReading": [
+            "こ"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "痛",
+          "meanings": [
+            "Pain"
+          ],
+          "onReading": [
+            "つう"
+          ],
+          "kunReading": [
+            "いた"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "遊",
+          "meanings": [
+            "Play"
+          ],
+          "onReading": [
+            "ゆう"
+          ],
+          "kunReading": [
+            "あそ"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "悲",
+          "meanings": [
+            "Sad"
+          ],
+          "onReading": [
+            "ひ"
+          ],
+          "kunReading": [
+            "かな"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "晴",
+          "meanings": [
+            "Clear Up"
+          ],
+          "onReading": [
+            "せい"
+          ],
+          "kunReading": [
+            "は"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "陽",
+          "meanings": [
+            "Sunshine",
+            "Sunlight"
+          ],
+          "onReading": [
+            "よう"
+          ],
+          "kunReading": [
+            "ひ"
+          ],
+          "strokeCount": 12
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-30",
+      "name": "N3 Kanji 30: 御〜解",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6529,
+      "intro": {
+        "title": "N3 Kanji — Group 30",
+        "explanation": "Learn N3 kanji 291–300. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "御",
+          "meanings": [
+            "Honorable"
+          ],
+          "onReading": [
+            "ご"
+          ],
+          "kunReading": [
+            "お"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "歯",
+          "meanings": [
+            "Tooth",
+            "Teeth"
+          ],
+          "onReading": [
+            "し"
+          ],
+          "kunReading": [
+            "は"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "晩",
+          "meanings": [
+            "Night",
+            "Evening"
+          ],
+          "onReading": [
+            "ばん"
+          ],
+          "kunReading": [],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "寒",
+          "meanings": [
+            "Cold"
+          ],
+          "onReading": [
+            "かん"
+          ],
+          "kunReading": [
+            "さむ"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "偉",
+          "meanings": [
+            "Greatness"
+          ],
+          "onReading": [
+            "い"
+          ],
+          "kunReading": [
+            "えら"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "幾",
+          "meanings": [
+            "How Many",
+            "How Much"
+          ],
+          "onReading": [
+            "き"
+          ],
+          "kunReading": [
+            "いく"
+          ],
+          "strokeCount": 12
+        },
+        {
+          "kanji": "戦",
+          "meanings": [
+            "War",
+            "Battle"
+          ],
+          "onReading": [
+            "せん"
+          ],
+          "kunReading": [
+            "たたか"
+          ],
+          "strokeCount": 13
+        },
+        {
+          "kanji": "続",
+          "meanings": [
+            "Continue"
+          ],
+          "onReading": [
+            "ぞく"
+          ],
+          "kunReading": [
+            "つづ"
+          ],
+          "strokeCount": 13
+        },
+        {
+          "kanji": "数",
+          "meanings": [
+            "Count",
+            "Number",
+            "Amount"
+          ],
+          "onReading": [
+            "すう"
+          ],
+          "kunReading": [
+            "かぞ",
+            "かず"
+          ],
+          "strokeCount": 13
+        },
+        {
+          "kanji": "解",
+          "meanings": [
+            "Untie",
+            "Solve"
+          ],
+          "onReading": [
+            "かい"
+          ],
+          "kunReading": [
+            "と"
+          ],
+          "strokeCount": 13
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-31",
+      "name": "N3 Kanji 31: 資〜園",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6530,
+      "intro": {
+        "title": "N3 Kanji — Group 31",
+        "explanation": "Learn N3 kanji 301–310. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "資",
+          "meanings": [
+            "Resources"
+          ],
+          "onReading": [
+            "し"
+          ],
+          "kunReading": [],
+          "strokeCount": 13
+        },
+        {
+          "kanji": "感",
+          "meanings": [
+            "Feeling"
+          ],
+          "onReading": [
+            "かん"
+          ],
+          "kunReading": [],
+          "strokeCount": 13
+        },
+        {
+          "kanji": "歳",
+          "meanings": [
+            "Years Old"
+          ],
+          "onReading": [
+            "さい",
+            "せい"
+          ],
+          "kunReading": [],
+          "strokeCount": 13
+        },
+        {
+          "kanji": "置",
+          "meanings": [
+            "Put"
+          ],
+          "onReading": [
+            "ち"
+          ],
+          "kunReading": [
+            "お"
+          ],
+          "strokeCount": 13
+        },
+        {
+          "kanji": "違",
+          "meanings": [
+            "Different"
+          ],
+          "onReading": [
+            "い"
+          ],
+          "kunReading": [
+            "ちが"
+          ],
+          "strokeCount": 13
+        },
+        {
+          "kanji": "想",
+          "meanings": [
+            "Concept"
+          ],
+          "onReading": [
+            "そう"
+          ],
+          "kunReading": [],
+          "strokeCount": 13
+        },
+        {
+          "kanji": "働",
+          "meanings": [
+            "Work",
+            "Labor"
+          ],
+          "onReading": [
+            "どう"
+          ],
+          "kunReading": [
+            "はたら"
+          ],
+          "strokeCount": 13
+        },
+        {
+          "kanji": "福",
+          "meanings": [
+            "Luck",
+            "Fortune"
+          ],
+          "onReading": [
+            "ふく"
+          ],
+          "kunReading": [],
+          "strokeCount": 13
+        },
+        {
+          "kanji": "路",
+          "meanings": [
+            "Road"
+          ],
+          "onReading": [
+            "ろ"
+          ],
+          "kunReading": [
+            "じ",
+            "みち"
+          ],
+          "strokeCount": 13
+        },
+        {
+          "kanji": "園",
+          "meanings": [
+            "Garden",
+            "Park"
+          ],
+          "onReading": [
+            "えん"
+          ],
+          "kunReading": [],
+          "strokeCount": 13
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-32",
+      "name": "N3 Kanji 32: 辞〜靴",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6531,
+      "intro": {
+        "title": "N3 Kanji — Group 32",
+        "explanation": "Learn N3 kanji 311–320. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "辞",
+          "meanings": [
+            "Quit",
+            "Word"
+          ],
+          "onReading": [
+            "じ"
+          ],
+          "kunReading": [
+            "や"
+          ],
+          "strokeCount": 13
+        },
+        {
+          "kanji": "愛",
+          "meanings": [
+            "Love"
+          ],
+          "onReading": [
+            "あい"
+          ],
+          "kunReading": [
+            "まな"
+          ],
+          "strokeCount": 13
+        },
+        {
+          "kanji": "罪",
+          "meanings": [
+            "Guilt"
+          ],
+          "onReading": [
+            "ざい"
+          ],
+          "kunReading": [
+            "つみ"
+          ],
+          "strokeCount": 13
+        },
+        {
+          "kanji": "遠",
+          "meanings": [
+            "Far"
+          ],
+          "onReading": [
+            "えん"
+          ],
+          "kunReading": [
+            "とお"
+          ],
+          "strokeCount": 13
+        },
+        {
+          "kanji": "夢",
+          "meanings": [
+            "Dream"
+          ],
+          "onReading": [
+            "む"
+          ],
+          "kunReading": [
+            "ゆめ"
+          ],
+          "strokeCount": 13
+        },
+        {
+          "kanji": "寝",
+          "meanings": [
+            "Lie Down",
+            "Lay Down",
+            "Sleep"
+          ],
+          "onReading": [
+            "しん"
+          ],
+          "kunReading": [
+            "ね"
+          ],
+          "strokeCount": 13
+        },
+        {
+          "kanji": "暗",
+          "meanings": [
+            "Dark"
+          ],
+          "onReading": [
+            "あん"
+          ],
+          "kunReading": [
+            "くら",
+            "くれ"
+          ],
+          "strokeCount": 13
+        },
+        {
+          "kanji": "腹",
+          "meanings": [
+            "Belly",
+            "Abdomen",
+            "Stomach"
+          ],
+          "onReading": [
+            "ふく"
+          ],
+          "kunReading": [
+            "はら",
+            "なか"
+          ],
+          "strokeCount": 13
+        },
+        {
+          "kanji": "煙",
+          "meanings": [
+            "Smoke"
+          ],
+          "onReading": [
+            "えん"
+          ],
+          "kunReading": [
+            "けむ",
+            "けむり"
+          ],
+          "strokeCount": 13
+        },
+        {
+          "kanji": "靴",
+          "meanings": [
+            "Shoes"
+          ],
+          "onReading": [
+            "か"
+          ],
+          "kunReading": [
+            "くつ"
+          ],
+          "strokeCount": 13
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-33",
+      "name": "N3 Kanji 33: 関〜察",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6532,
+      "intro": {
+        "title": "N3 Kanji — Group 33",
+        "explanation": "Learn N3 kanji 321–330. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "関",
+          "meanings": [
+            "Related",
+            "Connected"
+          ],
+          "onReading": [
+            "かん"
+          ],
+          "kunReading": [
+            "かか",
+            "せき"
+          ],
+          "strokeCount": 14
+        },
+        {
+          "kanji": "際",
+          "meanings": [
+            "Occasion"
+          ],
+          "onReading": [
+            "さい"
+          ],
+          "kunReading": [
+            "きわ"
+          ],
+          "strokeCount": 14
+        },
+        {
+          "kanji": "認",
+          "meanings": [
+            "Recognize"
+          ],
+          "onReading": [
+            "にん"
+          ],
+          "kunReading": [
+            "みと"
+          ],
+          "strokeCount": 14
+        },
+        {
+          "kanji": "増",
+          "meanings": [
+            "Increase"
+          ],
+          "onReading": [
+            "ぞう"
+          ],
+          "kunReading": [
+            "ふ",
+            "ま"
+          ],
+          "strokeCount": 14
+        },
+        {
+          "kanji": "演",
+          "meanings": [
+            "Perform",
+            "Performance"
+          ],
+          "onReading": [
+            "えん"
+          ],
+          "kunReading": [],
+          "strokeCount": 14
+        },
+        {
+          "kanji": "疑",
+          "meanings": [
+            "Doubt"
+          ],
+          "onReading": [
+            "ぎ"
+          ],
+          "kunReading": [
+            "うたが"
+          ],
+          "strokeCount": 14
+        },
+        {
+          "kanji": "構",
+          "meanings": [
+            "Set Up",
+            "Care"
+          ],
+          "onReading": [
+            "こう"
+          ],
+          "kunReading": [
+            "かま"
+          ],
+          "strokeCount": 14
+        },
+        {
+          "kanji": "説",
+          "meanings": [
+            "Theory"
+          ],
+          "onReading": [
+            "せつ"
+          ],
+          "kunReading": [
+            "と"
+          ],
+          "strokeCount": 14
+        },
+        {
+          "kanji": "種",
+          "meanings": [
+            "Kind",
+            "Type"
+          ],
+          "onReading": [
+            "しゅ"
+          ],
+          "kunReading": [
+            "たね",
+            "ぐさ"
+          ],
+          "strokeCount": 14
+        },
+        {
+          "kanji": "察",
+          "meanings": [
+            "Guess"
+          ],
+          "onReading": [
+            "さつ"
+          ],
+          "kunReading": [
+            "さっ"
+          ],
+          "strokeCount": 14
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-34",
+      "name": "N3 Kanji 34: 様〜鳴",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6533,
+      "intro": {
+        "title": "N3 Kanji — Group 34",
+        "explanation": "Learn N3 kanji 331–340. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "様",
+          "meanings": [
+            "Formal Name Title",
+            "Formal Name Ender",
+            "Manner"
+          ],
+          "onReading": [
+            "よう"
+          ],
+          "kunReading": [
+            "さま"
+          ],
+          "strokeCount": 14
+        },
+        {
+          "kanji": "適",
+          "meanings": [
+            "Suitable"
+          ],
+          "onReading": [
+            "てき"
+          ],
+          "kunReading": [],
+          "strokeCount": 14
+        },
+        {
+          "kanji": "精",
+          "meanings": [
+            "Spirit"
+          ],
+          "onReading": [
+            "せい"
+          ],
+          "kunReading": [],
+          "strokeCount": 14
+        },
+        {
+          "kanji": "静",
+          "meanings": [
+            "Quiet"
+          ],
+          "onReading": [
+            "せい"
+          ],
+          "kunReading": [
+            "しず"
+          ],
+          "strokeCount": 14
+        },
+        {
+          "kanji": "雑",
+          "meanings": [
+            "Random",
+            "Miscellaneous"
+          ],
+          "onReading": [
+            "ざつ",
+            "ぞう"
+          ],
+          "kunReading": [],
+          "strokeCount": 14
+        },
+        {
+          "kanji": "緒",
+          "meanings": [
+            "Together"
+          ],
+          "onReading": [
+            "しょ"
+          ],
+          "kunReading": [
+            "お"
+          ],
+          "strokeCount": 14
+        },
+        {
+          "kanji": "暮",
+          "meanings": [
+            "Livelihood"
+          ],
+          "onReading": [
+            "ぼ"
+          ],
+          "kunReading": [
+            "く"
+          ],
+          "strokeCount": 14
+        },
+        {
+          "kanji": "誤",
+          "meanings": [
+            "Mistake"
+          ],
+          "onReading": [
+            "ご"
+          ],
+          "kunReading": [
+            "あやま"
+          ],
+          "strokeCount": 14
+        },
+        {
+          "kanji": "慣",
+          "meanings": [
+            "Accustomed"
+          ],
+          "onReading": [
+            "かん"
+          ],
+          "kunReading": [
+            "な"
+          ],
+          "strokeCount": 14
+        },
+        {
+          "kanji": "鳴",
+          "meanings": [
+            "Chirp"
+          ],
+          "onReading": [
+            "めい"
+          ],
+          "kunReading": [
+            "な"
+          ],
+          "strokeCount": 14
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-35",
+      "name": "N3 Kanji 35: 髪〜熱",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6534,
+      "intro": {
+        "title": "N3 Kanji — Group 35",
+        "explanation": "Learn N3 kanji 341–350. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "髪",
+          "meanings": [
+            "Hair"
+          ],
+          "onReading": [
+            "はつ"
+          ],
+          "kunReading": [
+            "かみ"
+          ],
+          "strokeCount": 14
+        },
+        {
+          "kanji": "選",
+          "meanings": [
+            "Choose"
+          ],
+          "onReading": [
+            "せん"
+          ],
+          "kunReading": [
+            "えら"
+          ],
+          "strokeCount": 15
+        },
+        {
+          "kanji": "調",
+          "meanings": [
+            "Investigate",
+            "Tone"
+          ],
+          "onReading": [
+            "ちょう"
+          ],
+          "kunReading": [
+            "しら"
+          ],
+          "strokeCount": 15
+        },
+        {
+          "kanji": "権",
+          "meanings": [
+            "Rights"
+          ],
+          "onReading": [
+            "けん"
+          ],
+          "kunReading": [],
+          "strokeCount": 15
+        },
+        {
+          "kanji": "論",
+          "meanings": [
+            "Theory"
+          ],
+          "onReading": [
+            "ろん"
+          ],
+          "kunReading": [],
+          "strokeCount": 15
+        },
+        {
+          "kanji": "確",
+          "meanings": [
+            "Certain"
+          ],
+          "onReading": [
+            "かく"
+          ],
+          "kunReading": [
+            "たし"
+          ],
+          "strokeCount": 15
+        },
+        {
+          "kanji": "談",
+          "meanings": [
+            "Discuss"
+          ],
+          "onReading": [
+            "だん"
+          ],
+          "kunReading": [],
+          "strokeCount": 15
+        },
+        {
+          "kanji": "横",
+          "meanings": [
+            "Side",
+            "Horizontal"
+          ],
+          "onReading": [
+            "おう"
+          ],
+          "kunReading": [
+            "よこ"
+          ],
+          "strokeCount": 15
+        },
+        {
+          "kanji": "舞",
+          "meanings": [
+            "Dance"
+          ],
+          "onReading": [
+            "ぶ"
+          ],
+          "kunReading": [
+            "まい",
+            "ま"
+          ],
+          "strokeCount": 15
+        },
+        {
+          "kanji": "熱",
+          "meanings": [
+            "Heat",
+            "Fever"
+          ],
+          "onReading": [
+            "ねつ"
+          ],
+          "kunReading": [
+            "あつ"
+          ],
+          "strokeCount": 15
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-36",
+      "name": "N3 Kanji 36: 賛〜難",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6535,
+      "intro": {
+        "title": "N3 Kanji — Group 36",
+        "explanation": "Learn N3 kanji 351–360. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "賛",
+          "meanings": [
+            "Agree"
+          ],
+          "onReading": [
+            "さん"
+          ],
+          "kunReading": [],
+          "strokeCount": 15
+        },
+        {
+          "kanji": "箱",
+          "meanings": [
+            "Box"
+          ],
+          "onReading": [],
+          "kunReading": [
+            "はこ"
+          ],
+          "strokeCount": 15
+        },
+        {
+          "kanji": "機",
+          "meanings": [
+            "Machine"
+          ],
+          "onReading": [
+            "き"
+          ],
+          "kunReading": [
+            "はた"
+          ],
+          "strokeCount": 16
+        },
+        {
+          "kanji": "頭",
+          "meanings": [
+            "Head"
+          ],
+          "onReading": [
+            "ず",
+            "とう"
+          ],
+          "kunReading": [
+            "あたま"
+          ],
+          "strokeCount": 16
+        },
+        {
+          "kanji": "積",
+          "meanings": [
+            "Accumulate"
+          ],
+          "onReading": [
+            "せき"
+          ],
+          "kunReading": [
+            "つ"
+          ],
+          "strokeCount": 16
+        },
+        {
+          "kanji": "薬",
+          "meanings": [
+            "Medicine",
+            "Drug",
+            "Drugs"
+          ],
+          "onReading": [
+            "やく"
+          ],
+          "kunReading": [
+            "くすり"
+          ],
+          "strokeCount": 16
+        },
+        {
+          "kanji": "頼",
+          "meanings": [
+            "Trust"
+          ],
+          "onReading": [
+            "らい"
+          ],
+          "kunReading": [
+            "たの",
+            "たよ"
+          ],
+          "strokeCount": 16
+        },
+        {
+          "kanji": "優",
+          "meanings": [
+            "Superior",
+            "Gentle"
+          ],
+          "onReading": [
+            "ゆう"
+          ],
+          "kunReading": [
+            "やさ",
+            "すぐ"
+          ],
+          "strokeCount": 17
+        },
+        {
+          "kanji": "職",
+          "meanings": [
+            "Employment"
+          ],
+          "onReading": [
+            "しょく"
+          ],
+          "kunReading": [],
+          "strokeCount": 18
+        },
+        {
+          "kanji": "難",
+          "meanings": [
+            "Difficult"
+          ],
+          "onReading": [
+            "なん"
+          ],
+          "kunReading": [
+            "むずか"
+          ],
+          "strokeCount": 18
+        }
+      ]
+    },
+    {
+      "id": "n3-kanji-37",
+      "name": "N3 Kanji 37: 観〜議",
+      "type": "kanji",
+      "level": "n3",
+      "order": 6536,
+      "intro": {
+        "title": "N3 Kanji — Group 37",
+        "explanation": "Learn N3 kanji 361–367. These intermediate kanji are essential for the JLPT N3 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "kanji": "観",
+          "meanings": [
+            "View"
+          ],
+          "onReading": [
+            "かん"
+          ],
+          "kunReading": [
+            "み"
+          ],
+          "strokeCount": 18
+        },
+        {
+          "kanji": "顔",
+          "meanings": [
+            "Face"
+          ],
+          "onReading": [
+            "がん"
+          ],
+          "kunReading": [
+            "かお"
+          ],
+          "strokeCount": 18
+        },
+        {
+          "kanji": "類",
+          "meanings": [
+            "Type",
+            "Category",
+            "Kind"
+          ],
+          "onReading": [
+            "るい"
+          ],
+          "kunReading": [
+            "たぐ"
+          ],
+          "strokeCount": 18
+        },
+        {
+          "kanji": "警",
+          "meanings": [
+            "Warn",
+            "Admonish"
+          ],
+          "onReading": [
+            "けい"
+          ],
+          "kunReading": [],
+          "strokeCount": 19
+        },
+        {
+          "kanji": "識",
+          "meanings": [
+            "Discerning",
+            "Discriminating",
+            "Know"
+          ],
+          "onReading": [
+            "しき"
+          ],
+          "kunReading": [],
+          "strokeCount": 19
+        },
+        {
+          "kanji": "願",
+          "meanings": [
+            "Request"
+          ],
+          "onReading": [
+            "がん"
+          ],
+          "kunReading": [
+            "ねが",
+            "ねがい"
+          ],
+          "strokeCount": 19
+        },
+        {
+          "kanji": "議",
+          "meanings": [
+            "Deliberation",
+            "Discussion"
+          ],
+          "onReading": [
+            "ぎ"
+          ],
+          "kunReading": [],
+          "strokeCount": 20
+        }
+      ]
+    }
+  ]
+}

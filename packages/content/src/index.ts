@@ -17,6 +17,9 @@ import grammarN5Data from '../grammar/n5.json' with { type: 'json' };
 import vocabN4Data from '../vocabulary/n4.json' with { type: 'json' };
 import kanjiN4Data from '../kanji/n4.json' with { type: 'json' };
 import grammarN4Data from '../grammar/n4.json' with { type: 'json' };
+import vocabN3Data from '../vocabulary/n3.json' with { type: 'json' };
+import kanjiN3Data from '../kanji/n3.json' with { type: 'json' };
+import grammarN3Data from '../grammar/n3.json' with { type: 'json' };
 
 const hiragana = hiraganaData as KanaContentFile;
 const katakana = katakanaData as KanaContentFile;
@@ -26,6 +29,9 @@ const grammarN5 = grammarN5Data as GrammarContentFile;
 const vocabN4 = vocabN4Data as VocabContentFile;
 const kanjiN4 = kanjiN4Data as KanjiContentFile;
 const grammarN4 = grammarN4Data as GrammarContentFile;
+const vocabN3 = vocabN3Data as VocabContentFile;
+const kanjiN3 = kanjiN3Data as KanjiContentFile;
+const grammarN3 = grammarN3Data as GrammarContentFile;
 
 const allModules: Module[] = [
   ...hiragana.modules,
@@ -36,6 +42,9 @@ const allModules: Module[] = [
   ...vocabN4.modules,
   ...kanjiN4.modules,
   ...grammarN4.modules,
+  ...vocabN3.modules,
+  ...kanjiN3.modules,
+  ...grammarN3.modules,
 ].sort((a, b) => a.order - b.order);
 
 /** All modules sorted by order (kana, vocab, kanji, grammar) */

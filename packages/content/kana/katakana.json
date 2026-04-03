@@ -6,18 +6,33 @@
       "name": "Vowels: アイウエオ",
       "type": "kana",
       "level": "beginner",
-      "order": 11,
+      "order": 1100,
       "intro": {
         "title": "Katakana Vowels",
         "explanation": "Katakana uses the same 5 vowel sounds as hiragana. These characters are used mainly for foreign words, onomatopoeia, and emphasis.",
         "cultureNote": null
       },
       "items": [
-        { "character": "ア", "romaji": "a" },
-        { "character": "イ", "romaji": "i" },
-        { "character": "ウ", "romaji": "u" },
-        { "character": "エ", "romaji": "e" },
-        { "character": "オ", "romaji": "o" }
+        {
+          "character": "ア",
+          "romaji": "a"
+        },
+        {
+          "character": "イ",
+          "romaji": "i"
+        },
+        {
+          "character": "ウ",
+          "romaji": "u"
+        },
+        {
+          "character": "エ",
+          "romaji": "e"
+        },
+        {
+          "character": "オ",
+          "romaji": "o"
+        }
       ]
     },
     {
@@ -25,18 +40,33 @@
       "name": "K-row: カキクケコ",
       "type": "kana",
       "level": "beginner",
-      "order": 12,
+      "order": 1101,
       "intro": {
         "title": "Katakana K Consonant Row",
         "explanation": "The katakana K-row mirrors hiragana but with angular strokes. Katakana characters tend to have sharper, more geometric shapes.",
         "cultureNote": null
       },
       "items": [
-        { "character": "カ", "romaji": "ka" },
-        { "character": "キ", "romaji": "ki" },
-        { "character": "ク", "romaji": "ku" },
-        { "character": "ケ", "romaji": "ke" },
-        { "character": "コ", "romaji": "ko" }
+        {
+          "character": "カ",
+          "romaji": "ka"
+        },
+        {
+          "character": "キ",
+          "romaji": "ki"
+        },
+        {
+          "character": "ク",
+          "romaji": "ku"
+        },
+        {
+          "character": "ケ",
+          "romaji": "ke"
+        },
+        {
+          "character": "コ",
+          "romaji": "ko"
+        }
       ]
     },
     {
@@ -44,18 +74,33 @@
       "name": "S-row: サシスセソ",
       "type": "kana",
       "level": "beginner",
-      "order": 13,
+      "order": 1102,
       "intro": {
         "title": "Katakana S Consonant Row",
         "explanation": "Like hiragana, シ is pronounced 'shi'. In katakana, シ and ツ look similar — pay attention to the stroke direction.",
         "cultureNote": null
       },
       "items": [
-        { "character": "サ", "romaji": "sa" },
-        { "character": "シ", "romaji": "shi" },
-        { "character": "ス", "romaji": "su" },
-        { "character": "セ", "romaji": "se" },
-        { "character": "ソ", "romaji": "so" }
+        {
+          "character": "サ",
+          "romaji": "sa"
+        },
+        {
+          "character": "シ",
+          "romaji": "shi"
+        },
+        {
+          "character": "ス",
+          "romaji": "su"
+        },
+        {
+          "character": "セ",
+          "romaji": "se"
+        },
+        {
+          "character": "ソ",
+          "romaji": "so"
+        }
       ]
     },
     {
@@ -63,18 +108,33 @@
       "name": "T-row: タチツテト",
       "type": "kana",
       "level": "beginner",
-      "order": 14,
+      "order": 1103,
       "intro": {
         "title": "Katakana T Consonant Row",
         "explanation": "Like hiragana, チ is 'chi' and ツ is 'tsu'. Watch out: ツ and シ are commonly confused — ツ has more vertical strokes.",
         "cultureNote": null
       },
       "items": [
-        { "character": "タ", "romaji": "ta" },
-        { "character": "チ", "romaji": "chi" },
-        { "character": "ツ", "romaji": "tsu" },
-        { "character": "テ", "romaji": "te" },
-        { "character": "ト", "romaji": "to" }
+        {
+          "character": "タ",
+          "romaji": "ta"
+        },
+        {
+          "character": "チ",
+          "romaji": "chi"
+        },
+        {
+          "character": "ツ",
+          "romaji": "tsu"
+        },
+        {
+          "character": "テ",
+          "romaji": "te"
+        },
+        {
+          "character": "ト",
+          "romaji": "to"
+        }
       ]
     },
     {
@@ -82,18 +142,33 @@
       "name": "N-row: ナニヌネノ",
       "type": "kana",
       "level": "beginner",
-      "order": 15,
+      "order": 1104,
       "intro": {
         "title": "Katakana N Consonant Row",
         "explanation": "The katakana N-row is regular, just like its hiragana counterpart.",
         "cultureNote": null
       },
       "items": [
-        { "character": "ナ", "romaji": "na" },
-        { "character": "ニ", "romaji": "ni" },
-        { "character": "ヌ", "romaji": "nu" },
-        { "character": "ネ", "romaji": "ne" },
-        { "character": "ノ", "romaji": "no" }
+        {
+          "character": "ナ",
+          "romaji": "na"
+        },
+        {
+          "character": "ニ",
+          "romaji": "ni"
+        },
+        {
+          "character": "ヌ",
+          "romaji": "nu"
+        },
+        {
+          "character": "ネ",
+          "romaji": "ne"
+        },
+        {
+          "character": "ノ",
+          "romaji": "no"
+        }
       ]
     },
     {
@@ -101,18 +176,33 @@
       "name": "H-row: ハヒフヘホ",
       "type": "kana",
       "level": "beginner",
-      "order": 16,
+      "order": 1105,
       "intro": {
         "title": "Katakana H Consonant Row",
         "explanation": "Like hiragana, フ is pronounced 'fu'. Katakana フ is one of the most frequently used characters since many foreign words contain this sound.",
         "cultureNote": null
       },
       "items": [
-        { "character": "ハ", "romaji": "ha" },
-        { "character": "ヒ", "romaji": "hi" },
-        { "character": "フ", "romaji": "fu" },
-        { "character": "ヘ", "romaji": "he" },
-        { "character": "ホ", "romaji": "ho" }
+        {
+          "character": "ハ",
+          "romaji": "ha"
+        },
+        {
+          "character": "ヒ",
+          "romaji": "hi"
+        },
+        {
+          "character": "フ",
+          "romaji": "fu"
+        },
+        {
+          "character": "ヘ",
+          "romaji": "he"
+        },
+        {
+          "character": "ホ",
+          "romaji": "ho"
+        }
       ]
     },
     {
@@ -120,18 +210,33 @@
       "name": "M-row: マミムメモ",
       "type": "kana",
       "level": "beginner",
-      "order": 17,
+      "order": 1106,
       "intro": {
         "title": "Katakana M Consonant Row",
         "explanation": "The katakana M-row is regular. Each character combines 'm' with a vowel.",
         "cultureNote": null
       },
       "items": [
-        { "character": "マ", "romaji": "ma" },
-        { "character": "ミ", "romaji": "mi" },
-        { "character": "ム", "romaji": "mu" },
-        { "character": "メ", "romaji": "me" },
-        { "character": "モ", "romaji": "mo" }
+        {
+          "character": "マ",
+          "romaji": "ma"
+        },
+        {
+          "character": "ミ",
+          "romaji": "mi"
+        },
+        {
+          "character": "ム",
+          "romaji": "mu"
+        },
+        {
+          "character": "メ",
+          "romaji": "me"
+        },
+        {
+          "character": "モ",
+          "romaji": "mo"
+        }
       ]
     },
     {
@@ -139,16 +244,25 @@
       "name": "Y-row: ヤユヨ",
       "type": "kana",
       "level": "beginner",
-      "order": 18,
+      "order": 1107,
       "intro": {
         "title": "Katakana Y Consonant Row",
         "explanation": "Like hiragana, only 3 characters in the Y-row. These are also used in combination characters for foreign sounds.",
         "cultureNote": null
       },
       "items": [
-        { "character": "ヤ", "romaji": "ya" },
-        { "character": "ユ", "romaji": "yu" },
-        { "character": "ヨ", "romaji": "yo" }
+        {
+          "character": "ヤ",
+          "romaji": "ya"
+        },
+        {
+          "character": "ユ",
+          "romaji": "yu"
+        },
+        {
+          "character": "ヨ",
+          "romaji": "yo"
+        }
       ]
     },
     {
@@ -156,18 +270,33 @@
       "name": "R-row: ラリルレロ",
       "type": "kana",
       "level": "beginner",
-      "order": 19,
+      "order": 1108,
       "intro": {
         "title": "Katakana R Consonant Row",
         "explanation": "Same light tongue-tap 'r' sound as hiragana. The katakana R-row characters have distinctive angular shapes.",
         "cultureNote": null
       },
       "items": [
-        { "character": "ラ", "romaji": "ra" },
-        { "character": "リ", "romaji": "ri" },
-        { "character": "ル", "romaji": "ru" },
-        { "character": "レ", "romaji": "re" },
-        { "character": "ロ", "romaji": "ro" }
+        {
+          "character": "ラ",
+          "romaji": "ra"
+        },
+        {
+          "character": "リ",
+          "romaji": "ri"
+        },
+        {
+          "character": "ル",
+          "romaji": "ru"
+        },
+        {
+          "character": "レ",
+          "romaji": "re"
+        },
+        {
+          "character": "ロ",
+          "romaji": "ro"
+        }
       ]
     },
     {
@@ -175,16 +304,25 @@
       "name": "W-row + N: ワヲン",
       "type": "kana",
       "level": "beginner",
-      "order": 20,
+      "order": 1109,
       "intro": {
         "title": "Katakana W-row and N",
         "explanation": "The final katakana group. ヲ is rarely used in modern Japanese. ン is the standalone consonant, same as hiragana ん.",
         "cultureNote": null
       },
       "items": [
-        { "character": "ワ", "romaji": "wa" },
-        { "character": "ヲ", "romaji": "wo" },
-        { "character": "ン", "romaji": "n" }
+        {
+          "character": "ワ",
+          "romaji": "wa"
+        },
+        {
+          "character": "ヲ",
+          "romaji": "wo"
+        },
+        {
+          "character": "ン",
+          "romaji": "n"
+        }
       ]
     }
   ]

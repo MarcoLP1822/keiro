@@ -6,7 +6,7 @@
       "name": "N4 Kanji 1: Body & Self",
       "type": "kanji",
       "level": "n4",
-      "order": 161,
+      "order": 4500,
       "intro": {
         "title": "Kanji - Body and Self",
         "explanation": "Learn kanji for body parts and self: eyes, hands, feet, heart, body, and more.",
@@ -208,7 +208,7 @@
       "name": "N4 Kanji 2: Family",
       "type": "kanji",
       "level": "n4",
-      "order": 162,
+      "order": 4501,
       "intro": {
         "title": "Kanji - Family Members",
         "explanation": "Kanji for family relationships: parents, siblings, master, and clan.",
@@ -414,7 +414,7 @@
       "name": "N4 Kanji 3: Nature & Seasons",
       "type": "kanji",
       "level": "n4",
-      "order": 163,
+      "order": 4502,
       "intro": {
         "title": "Kanji - Nature and Seasons",
         "explanation": "Kanji for the four seasons, flowers, sea, sky, and wind.",
@@ -616,7 +616,7 @@
       "name": "N4 Kanji 4: Colors & Appearance",
       "type": "kanji",
       "level": "n4",
-      "order": 164,
+      "order": 4503,
       "intro": {
         "title": "Kanji - Colors and Appearance",
         "explanation": "Kanji for colors, brightness, construction, and living.",
@@ -818,7 +818,7 @@
       "name": "N4 Kanji 5: Time",
       "type": "kanji",
       "level": "n4",
-      "order": 165,
+      "order": 4504,
       "intro": {
         "title": "Kanji - Time Concepts",
         "explanation": "Kanji for morning, noon, evening, night, and related time concepts.",
@@ -1019,7 +1019,7 @@
       "name": "N4 Kanji 6: Places & Buildings",
       "type": "kanji",
       "level": "n4",
-      "order": 166,
+      "order": 4505,
       "intro": {
         "title": "Kanji - Places and Buildings",
         "explanation": "Kanji for houses, stores, stations, roads, and rooms.",
@@ -1220,7 +1220,7 @@
       "name": "N4 Kanji 7: Geography",
       "type": "kanji",
       "level": "n4",
-      "order": 167,
+      "order": 4506,
       "intro": {
         "title": "Kanji - Geography and Regions",
         "explanation": "Kanji for cities, fields, and direction concepts.",
@@ -1418,7 +1418,7 @@
       "name": "N4 Kanji 8: Movement",
       "type": "kanji",
       "level": "n4",
-      "order": 168,
+      "order": 4507,
       "intro": {
         "title": "Kanji - Movement Verbs",
         "explanation": "Kanji for walking, running, stopping, sending, and transport.",
@@ -1618,7 +1618,7 @@
       "name": "N4 Kanji 9: Actions - Daily",
       "type": "kanji",
       "level": "n4",
-      "order": 169,
+      "order": 4508,
       "intro": {
         "title": "Kanji - Daily Actions",
         "explanation": "Kanji for everyday actions: use, hold, wait, stand, open, cut.",
@@ -1819,7 +1819,7 @@
       "name": "N4 Kanji 10: Actions - Exchange",
       "type": "kanji",
       "level": "n4",
-      "order": 170,
+      "order": 4509,
       "intro": {
         "title": "Kanji - Commerce and Exchange",
         "explanation": "Kanji for buying, selling, meeting, wearing, borrowing, and lending.",
@@ -2011,7 +2011,7 @@
       "name": "N4 Kanji 11: Study & Thought",
       "type": "kanji",
       "level": "n4",
-      "order": 171,
+      "order": 4510,
       "intro": {
         "title": "Kanji - Study and Thought",
         "explanation": "Kanji for teaching, learning, studying, thinking, and knowing.",
@@ -2208,7 +2208,7 @@
       "name": "N4 Kanji 12: Tests & Work",
       "type": "kanji",
       "level": "n4",
-      "order": 172,
+      "order": 4511,
       "intro": {
         "title": "Kanji - Tests and Work",
         "explanation": "Kanji related to exams, quality, work, business, and industry.",
@@ -2407,7 +2407,7 @@
       "name": "N4 Kanji 13: Writing & Arts",
       "type": "kanji",
       "level": "n4",
-      "order": 173,
+      "order": 4512,
       "intro": {
         "title": "Kanji - Writing and Arts",
         "explanation": "Kanji for characters, paper, pictures, photos, music, and songs.",
@@ -2609,7 +2609,7 @@
       "name": "N4 Kanji 14: Food & Animals",
       "type": "kanji",
       "level": "n4",
-      "order": 174,
+      "order": 4513,
       "intro": {
         "title": "Kanji - Food and Animals",
         "explanation": "Kanji for animals, meat, cooking, taste, and meals.",
@@ -2803,7 +2803,7 @@
       "name": "N4 Kanji 15: Health & Safety",
       "type": "kanji",
       "level": "n4",
-      "order": 175,
+      "order": 4514,
       "intro": {
         "title": "Kanji - Health and Safety",
         "explanation": "Kanji for doctors, hospitals, illness, death, and safety.",
@@ -2995,7 +2995,7 @@
       "name": "N4 Kanji 16: Adjectives",
       "type": "kanji",
       "level": "n4",
-      "order": 176,
+      "order": 4515,
       "intro": {
         "title": "Kanji - Descriptive Kanji",
         "explanation": "Kanji for opposites: new/old, many/few, same/different, good/bad.",
@@ -3195,7 +3195,7 @@
       "name": "N4 Kanji 17: Communication & Travel",
       "type": "kanji",
       "level": "n4",
-      "order": 177,
+      "order": 4516,
       "intro": {
         "title": "Kanji - Communication and Travel",
         "explanation": "Kanji for language, speech, travel, movies, silver, and English.",

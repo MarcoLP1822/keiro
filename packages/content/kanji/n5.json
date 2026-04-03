@@ -6,7 +6,7 @@
       "name": "N5 Kanji 1: Numbers",
       "type": "kanji",
       "level": "n5",
-      "order": 61,
+      "order": 2500,
       "intro": {
         "title": "Kanji - Numbers",
         "explanation": "Learn the kanji for numbers 1 through 10. These are among the most common and simplest kanji in Japanese.",
@@ -205,7 +205,7 @@
       "name": "N5 Kanji 2: Large Numbers and Money",
       "type": "kanji",
       "level": "n5",
-      "order": 62,
+      "order": 2501,
       "intro": {
         "title": "Kanji - Large Numbers and Money",
         "explanation": "Kanji for hundred, thousand, ten thousand, and yen. Essential for shopping and daily life in Japan.",
@@ -310,7 +310,7 @@
       "name": "N5 Kanji 3: People",
       "type": "kanji",
       "level": "n5",
-      "order": 63,
+      "order": 2502,
       "intro": {
         "title": "Kanji - People",
         "explanation": "Kanji for person, woman, man, child, friend, mother, and father. These appear constantly in everyday Japanese.",
@@ -458,7 +458,7 @@
       "name": "N5 Kanji 4: Time and Days",
       "type": "kanji",
       "level": "n5",
-      "order": 64,
+      "order": 2503,
       "intro": {
         "title": "Kanji - Time and Days",
         "explanation": "Kanji related to time, days, months, and years. You will see these on calendars, schedules, and in daily conversation.",
@@ -668,7 +668,7 @@
       "name": "N5 Kanji 5: Position and Direction",
       "type": "kanji",
       "level": "n5",
-      "order": 65,
+      "order": 2504,
       "intro": {
         "title": "Kanji - Position and Direction",
         "explanation": "Kanji for up, down, middle, right, left, and the four compass directions. Useful for reading signs and giving directions.",
@@ -879,7 +879,7 @@
       "name": "N5 Kanji 6: Nature",
       "type": "kanji",
       "level": "n5",
-      "order": 66,
+      "order": 2505,
       "intro": {
         "title": "Kanji - Nature",
         "explanation": "Kanji for natural elements like mountain, river, fire, water, rain, sky, and wood. Many of these are pictographic and easy to remember.",
@@ -1082,7 +1082,7 @@
       "name": "N5 Kanji 7: Size, School, and Study",
       "type": "kanji",
       "level": "n5",
-      "order": 67,
+      "order": 2506,
       "intro": {
         "title": "Kanji - Size, School, and Study",
         "explanation": "Kanji for big, small, tall, long, school, study, life, and learning. Common in academic and everyday contexts.",
@@ -1256,7 +1256,7 @@
       "name": "N5 Kanji 8: Actions and Communication",
       "type": "kanji",
       "level": "n5",
-      "order": 68,
+      "order": 2507,
       "intro": {
         "title": "Kanji - Actions and Communication",
         "explanation": "Kanji for essential verbs and communication: go, come, see, enter, exit, eat, read, write, hear, speak, rest, and more.",
