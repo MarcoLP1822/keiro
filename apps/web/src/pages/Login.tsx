@@ -110,7 +110,7 @@ export function Login() {
                 className="text-[15px]"
                 style={{ color: 'var(--ios-secondary-label)' }}
               >
-                We sent a 6-digit code to
+                We sent a verification code to
               </p>
               <p
                 className="text-[17px] font-semibold mt-1"
@@ -130,14 +130,14 @@ export function Login() {
                   inputMode="numeric"
                   autoComplete="one-time-code"
                   value={otpCode}
-                  onChange={(e) => setOtpCode(e.target.value.replace(/\D/g, '').slice(0, 6))}
-                  placeholder="Enter 6-digit code"
+                  onChange={(e) => setOtpCode(e.target.value.replace(/\D/g, '').slice(0, 8))}
+                  placeholder="Enter verification code"
                   className="w-full py-[11px] text-[17px] text-center tracking-[0.5em] bg-transparent outline-none"
                   style={{ color: 'var(--ios-label)' }}
-                  maxLength={6}
+                  maxLength={8}
                 />
               </div>
-              <PrimaryButton type="submit" loading={verifying} disabled={otpCode.length !== 6}>
+              <PrimaryButton type="submit" loading={verifying} disabled={otpCode.length < 6}>
                 Verify
               </PrimaryButton>
             </form>
