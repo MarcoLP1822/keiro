@@ -7,6 +7,7 @@ import { AnswerOptions } from './AnswerOptions';
 import { GapFill } from './GapFill';
 import { TypingInput } from './TypingInput';
 import { SentenceOrder } from './SentenceOrder';
+import { ReadingPassage } from './ReadingPassage';
 import { FeedbackBar } from './FeedbackBar';
 import { ProgressCounter } from './ProgressCounter';
 import { speak } from '../../services/audio';
@@ -20,7 +21,7 @@ interface ExerciseRendererProps {
   onExit?: () => void;
 }
 
-type ExerciseMode = 'multiple-choice' | 'gap-fill' | 'typing' | 'sentence-order';
+type ExerciseMode = 'multiple-choice' | 'gap-fill' | 'typing' | 'sentence-order' | 'reading';
 
 function getExerciseMode(type: string): ExerciseMode {
   switch (type) {
@@ -31,6 +32,9 @@ function getExerciseMode(type: string): ExerciseMode {
       return 'typing';
     case 'grammar-sentence-order':
       return 'sentence-order';
+    case 'reading-comprehension':
+    case 'reading-translation':
+      return 'reading';
     default:
       return 'multiple-choice';
   }
@@ -162,8 +166,8 @@ export function ExerciseRenderer({ exercises, onComplete, onExit }: ExerciseRend
         }
       />
       <PageContainer>
-        {/* Question display for all types except sentence-order (which has its own layout) */}
-        {mode !== 'sentence-order' && (
+        {/* Question display for all types except sentence-order and reading (which have their own layout) */}
+        {mode !== 'sentence-order' && mode !== 'reading' && (
           <QuestionDisplay exercise={exercise} audioEnabled={audio} />
         )}
 
@@ -182,6 +186,17 @@ export function ExerciseRenderer({ exercises, onComplete, onExit }: ExerciseRend
             correctAnswer={exercise.correctAnswer}
             onSubmit={handleTypingSubmit}
           />
+        ) : mode === 'reading' ? (
+          <>
+            <ReadingPassage exercise={exercise} />
+            <AnswerOptions
+              options={exercise.options}
+              onSelect={handleSelect}
+              correctIndex={exercise.correctIndex}
+              selectedIndex={selectedIndex}
+              showFeedback={showFeedback}
+            />
+          </>
         ) : mode === 'sentence-order' && exercise.scrambledWords && exercise.correctOrder ? (
           <>
             <QuestionDisplay exercise={exercise} audioEnabled={audio} />
@@ -205,7 +220,7 @@ export function ExerciseRenderer({ exercises, onComplete, onExit }: ExerciseRend
           <FeedbackBar
             isCorrect={isCorrectForFeedback}
             correctAnswer={correctAnswer}
-            onNext={mode === 'multiple-choice' || mode === 'gap-fill' ? handleNext : handleNonMCNext}
+            onNext={mode === 'multiple-choice' || mode === 'gap-fill' || mode === 'reading' ? handleNext : handleNonMCNext}
           />
         )}
       </PageContainer>

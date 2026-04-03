@@ -6,6 +6,7 @@ import {
   generateVocabExercises,
   generateKanjiExercises,
   generateGrammarExercises,
+  generateReadingExercises,
   scoreModule,
   shuffle,
 } from '@keiro/engine';
@@ -52,6 +53,10 @@ export function useStudySession(moduleId: string, mode: 'study' | 'review') {
       case 'grammar': {
         const allGrammar = getGrammarItems();
         generated = generateGrammarExercises(mod, allGrammar);
+        break;
+      }
+      case 'reading': {
+        generated = generateReadingExercises(mod);
         break;
       }
     }
