@@ -1,8 +1,11 @@
 import { useNavigate } from 'react-router';
+import { useLiveQuery } from 'dexie-react-hooks';
 import { TopBar } from '../components/layout/TopBar';
 import { PageContainer } from '../components/layout/PageContainer';
 import { ProgressBar } from '../components/common/ProgressBar';
 import { useStats } from '../hooks/useStats';
+import { useStreak } from '../hooks/useStreak';
+import { db } from '../services/db';
 
 function StatPill({ label, count, color }: { label: string; count: number; color: string }) {
   return (
@@ -15,9 +18,56 @@ function StatPill({ label, count, color }: { label: string; count: number; color
   );
 }
 
+function CalendarHeatmap({
+  studiedDates,
+  freezeDates,
+}: {
+  studiedDates: Set<string>;
+  freezeDates: Set<string>;
+}) {
+  // Build the last 35 days (5 rows x 7 columns), ending today
+  const days: { date: string; status: 'studied' | 'freeze' | 'missed' }[] = [];
+  const today = new Date();
+  for (let i = 34; i >= 0; i--) {
+    const d = new Date(today);
+    d.setDate(d.getDate() - i);
+    const dateStr = d.toISOString().slice(0, 10);
+    const status = studiedDates.has(dateStr)
+      ? 'studied'
+      : freezeDates.has(dateStr)
+        ? 'freeze'
+        : 'missed';
+    days.push({ date: dateStr, status });
+  }
+
+  const colorMap = {
+    studied: 'var(--ios-green)',
+    freeze: 'var(--ios-blue)',
+    missed: 'var(--ios-gray5)',
+  };
+
+  return (
+    <div className="grid grid-cols-7 gap-[6px]">
+      {days.map(({ date, status }) => (
+        <div
+          key={date}
+          className="w-full aspect-square rounded-full"
+          style={{ background: colorMap[status] }}
+          title={date}
+          aria-label={`${date}: ${status}`}
+        />
+      ))}
+    </div>
+  );
+}
+
 export function Stats() {
   const navigate = useNavigate();
   const stats = useStats();
+  const { streak, longestStreak, freezesAvailable, freezesUsed } = useStreak();
+
+  // Get all completed daily plans for the calendar heatmap
+  const allPlans = useLiveQuery(() => db.dailyPlan.toArray(), []);
 
   if (!stats) return null;
 
@@ -26,9 +76,13 @@ export function Stats() {
     modulesCompleted,
     totalModules,
     itemsByType,
-    currentStreak,
     srsStats,
   } = stats;
+
+  const studiedDates = new Set(
+    (allPlans ?? []).filter((p) => p.completed).map((p) => p.date),
+  );
+  const freezeDates = new Set(freezesUsed);
 
   // Determine level label
   let levelLabel = 'Beginner';
@@ -122,18 +176,91 @@ export function Stats() {
           className="rounded-[10px] p-4"
           style={{ background: 'var(--ios-bg-grouped-secondary)' }}
         >
+          <div className="flex items-end justify-between mb-4">
+            <div>
+              <p
+                className="text-[44px] font-bold leading-none"
+                style={{ color: 'var(--ios-label)' }}
+              >
+                {streak}
+              </p>
+              <p
+                className="text-[15px] mt-1"
+                style={{ color: 'var(--ios-secondary-label)' }}
+              >
+                {streak === 1 ? 'day' : 'days'} current
+              </p>
+            </div>
+            <div className="text-right">
+              <p
+                className="text-[22px] font-semibold leading-none"
+                style={{ color: 'var(--ios-secondary-label)' }}
+              >
+                {longestStreak}
+              </p>
+              <p
+                className="text-[13px] mt-1"
+                style={{ color: 'var(--ios-secondary-label)' }}
+              >
+                best streak
+              </p>
+            </div>
+          </div>
+
+          {/* Freeze indicators */}
+          <div className="flex items-center gap-1 mb-4">
+            <span
+              className="text-[13px] mr-1"
+              style={{ color: 'var(--ios-secondary-label)' }}
+            >
+              Freezes
+            </span>
+            {[0, 1, 2].map((i) => (
+              <span
+                key={i}
+                className="text-[14px]"
+                style={{ opacity: i < freezesAvailable ? 1 : 0.25 }}
+              >
+                ❄️
+              </span>
+            ))}
+          </div>
+
+          {/* Calendar heatmap */}
+          <div
+            className="h-px mb-4"
+            style={{ background: 'var(--ios-separator)' }}
+          />
           <p
-            className="text-[44px] font-bold leading-none"
-            style={{ color: 'var(--ios-label)' }}
-          >
-            {currentStreak}
-          </p>
-          <p
-            className="text-[15px] mt-1"
+            className="text-[13px] mb-3"
             style={{ color: 'var(--ios-secondary-label)' }}
           >
-            {currentStreak === 1 ? 'day' : 'days'}
+            Last 35 days
           </p>
+          <CalendarHeatmap studiedDates={studiedDates} freezeDates={freezeDates} />
+          <div className="flex items-center gap-4 mt-3">
+            <div className="flex items-center gap-1.5">
+              <div
+                className="w-[10px] h-[10px] rounded-full"
+                style={{ background: 'var(--ios-green)' }}
+              />
+              <span className="text-[11px]" style={{ color: 'var(--ios-secondary-label)' }}>Studied</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <div
+                className="w-[10px] h-[10px] rounded-full"
+                style={{ background: 'var(--ios-blue)' }}
+              />
+              <span className="text-[11px]" style={{ color: 'var(--ios-secondary-label)' }}>Freeze</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <div
+                className="w-[10px] h-[10px] rounded-full"
+                style={{ background: 'var(--ios-gray5)' }}
+              />
+              <span className="text-[11px]" style={{ color: 'var(--ios-secondary-label)' }}>Missed</span>
+            </div>
+          </div>
         </div>
 
         {/* Section 4: SRS Status */}

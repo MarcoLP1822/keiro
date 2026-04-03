@@ -7,6 +7,7 @@ import { SecondaryButton } from '../components/common/SecondaryButton';
 import { ProgressBar } from '../components/common/ProgressBar';
 import { useProgress } from '../hooks/useProgress';
 import { useDailyPlan } from '../hooks/useDailyPlan';
+import { useStreak } from '../hooks/useStreak';
 
 function MapIcon() {
   return (
@@ -33,10 +34,79 @@ function SettingsIcon() {
   );
 }
 
+function getMilestoneMessage(streak: number): string | null {
+  if (streak >= 100) return 'Incredible! 100 days of learning!';
+  if (streak >= 30) return 'Amazing! A full month of study!';
+  if (streak >= 7) return 'Great week of studying!';
+  return null;
+}
+
+function StreakCard({ streak, freezesAvailable }: { streak: number; freezesAvailable: number }) {
+  const milestone = getMilestoneMessage(streak);
+
+  return (
+    <div
+      className="rounded-[10px] p-4 mb-4"
+      style={{ background: 'var(--ios-bg-grouped-secondary)' }}
+    >
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          {streak > 0 ? (
+            <>
+              <span className="text-[28px] leading-none" aria-hidden="true">🔥</span>
+              <span
+                className="text-[22px] font-bold"
+                style={{ color: 'var(--ios-label)' }}
+              >
+                {streak}
+              </span>
+              <span
+                className="text-[15px]"
+                style={{ color: 'var(--ios-secondary-label)' }}
+              >
+                {streak === 1 ? 'day streak' : 'day streak'}
+              </span>
+            </>
+          ) : (
+            <span
+              className="text-[15px] font-medium"
+              style={{ color: 'var(--ios-secondary-label)' }}
+            >
+              Start your streak!
+            </span>
+          )}
+        </div>
+        {/* Freeze dots */}
+        <div className="flex items-center gap-1">
+          {[0, 1, 2].map((i) => (
+            <span
+              key={i}
+              className="text-[14px]"
+              style={{ opacity: i < freezesAvailable ? 1 : 0.25 }}
+              aria-label={i < freezesAvailable ? 'Freeze available' : 'Freeze slot empty'}
+            >
+              ❄️
+            </span>
+          ))}
+        </div>
+      </div>
+      {milestone && (
+        <p
+          className="text-[13px] mt-2"
+          style={{ color: 'var(--ios-orange)' }}
+        >
+          {milestone}
+        </p>
+      )}
+    </div>
+  );
+}
+
 export function Home() {
   const navigate = useNavigate();
   const { allProgress } = useProgress();
   const { plan, isComplete } = useDailyPlan();
+  const { streak, freezesAvailable, lastResult } = useStreak();
 
   const allModules = getAllModules();
   const passedCount = allProgress.filter((p) => p.status === 'passed').length;
@@ -113,6 +183,9 @@ export function Home() {
           Keiro
         </h1>
 
+        {/* Streak card */}
+        <StreakCard streak={streak} freezesAvailable={freezesAvailable} />
+
         {/* Progress section - white card */}
         <div
           className="rounded-[10px] p-4"
@@ -169,8 +242,22 @@ export function Home() {
                 className="text-[17px] font-semibold"
                 style={{ color: 'var(--ios-label)' }}
               >
-                Today's plan complete!
+                Day {streak} complete!
               </p>
+              <p
+                className="text-[15px] mt-1"
+                style={{ color: 'var(--ios-secondary-label)' }}
+              >
+                +1 day added to your streak
+              </p>
+              {lastResult?.freezeEarned && (
+                <p
+                  className="text-[13px] mt-2"
+                  style={{ color: 'var(--ios-blue)' }}
+                >
+                  You earned a streak freeze! ❄️
+                </p>
+              )}
             </div>
             <div className="mt-6 space-y-3">
               {currentModule && (

@@ -1,11 +1,12 @@
 import Dexie, { type Table } from 'dexie';
-import type { ModuleProgress, DailyPlan, Setting, SrsCard } from '@keiro/types';
+import type { ModuleProgress, DailyPlan, Setting, SrsCard, StreakData } from '@keiro/types';
 
 export class KeiroDB extends Dexie {
   moduleProgress!: Table<ModuleProgress>;
   dailyPlan!: Table<DailyPlan>;
   settings!: Table<Setting>;
   srsCards!: Table<SrsCard>;
+  streakData!: Table<StreakData>;
 
   constructor() {
     super('keiro');
@@ -33,6 +34,13 @@ export class KeiroDB extends Dexie {
         tx.table('settings').toCollection().modify({ updatedAt: now, userId: null }),
         tx.table('srsCards').toCollection().modify({ updatedAt: now, userId: null }),
       ]);
+    });
+    this.version(4).stores({
+      moduleProgress: 'moduleId, status, score, completedAt, updatedAt, userId',
+      dailyPlan: 'date, completed, updatedAt, userId',
+      settings: 'key, updatedAt, userId',
+      srsCards: 'id, moduleId, contentType, nextReview, updatedAt, userId',
+      streakData: 'id',
     });
   }
 }

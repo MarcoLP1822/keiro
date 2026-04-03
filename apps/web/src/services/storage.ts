@@ -1,4 +1,4 @@
-import type { ModuleProgress, DailyPlan, Setting, SrsCard } from '@keiro/types';
+import type { ModuleProgress, DailyPlan, Setting, SrsCard, StreakData } from '@keiro/types';
 import { db } from './db';
 import { syncService } from './sync';
 
@@ -91,12 +91,23 @@ class StorageService {
     return db.srsCards.where('nextReview').belowOrEqual(today).toArray();
   }
 
+  // --- Streak methods ---
+
+  async getStreakData(): Promise<StreakData | undefined> {
+    return db.streakData.get('current');
+  }
+
+  async saveStreakData(data: StreakData): Promise<void> {
+    await db.streakData.put(data);
+  }
+
   async resetAll(): Promise<void> {
-    await db.transaction('rw', db.moduleProgress, db.dailyPlan, db.settings, db.srsCards, async () => {
+    await db.transaction('rw', [db.moduleProgress, db.dailyPlan, db.settings, db.srsCards, db.streakData], async () => {
       await db.moduleProgress.clear();
       await db.dailyPlan.clear();
       await db.settings.clear();
       await db.srsCards.clear();
+      await db.streakData.clear();
     });
   }
 }

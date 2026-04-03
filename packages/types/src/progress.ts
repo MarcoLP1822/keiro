@@ -49,3 +49,12 @@ export interface SrsCard {
 }
 
 export type SrsGrade = 'wrong' | 'hard' | 'easy';
+
+export interface StreakData {
+  id: string;                   // always 'current'
+  currentStreak: number;
+  longestStreak: number;
+  lastStudyDate: string | null; // YYYY-MM-DD
+  freezesAvailable: number;     // earned by completing 7-day streaks
+  freezesUsed: string[];        // dates where freeze was auto-applied
+}

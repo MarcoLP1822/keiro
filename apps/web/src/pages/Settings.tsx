@@ -8,6 +8,7 @@ import { useSettings } from '../hooks/useSettings';
 import { useAuth } from '../hooks/useAuth';
 import { storage } from '../services/storage';
 import { syncService } from '../services/sync';
+import { isSupported, getPermissionStatus } from '../services/notifications';
 
 const planSizeOptions = [
   { label: 'Small (~10 min)', value: 'small' },
@@ -17,7 +18,16 @@ const planSizeOptions = [
 
 export function Settings() {
   const navigate = useNavigate();
-  const { audio, planSize, setAudio, setPlanSize } = useSettings();
+  const {
+    audio,
+    planSize,
+    reminderEnabled,
+    reminderTime,
+    setAudio,
+    setPlanSize,
+    setReminderEnabled,
+    setReminderTime,
+  } = useSettings();
   const { user, isLoggedIn, signOut } = useAuth();
   const [showResetModal, setShowResetModal] = useState(false);
   const [syncing, setSyncing] = useState(false);
@@ -144,6 +154,90 @@ export function Settings() {
             </button>
           </div>
         </div>
+
+        {/* Reminders section — only show if Notification API is supported */}
+        {isSupported() && (
+          <>
+            <p
+              className="mt-8 mb-2 px-4 text-[13px] font-normal uppercase tracking-wide"
+              style={{ color: 'var(--ios-secondary-label)' }}
+            >
+              Reminders
+            </p>
+            <div
+              className="rounded-[10px]"
+              style={{ background: 'var(--ios-bg-grouped-secondary)' }}
+            >
+              <div className="flex items-center justify-between px-4 py-[11px]">
+                <span
+                  className="text-[17px]"
+                  style={{ color: 'var(--ios-label)' }}
+                >
+                  Daily Reminder
+                </span>
+                <button
+                  role="switch"
+                  aria-checked={reminderEnabled}
+                  aria-label="Toggle daily reminder"
+                  onClick={() => setReminderEnabled(!reminderEnabled)}
+                  className="relative h-[31px] w-[51px] rounded-full transition-colors"
+                  style={{
+                    background: reminderEnabled
+                      ? 'var(--ios-green)'
+                      : 'var(--ios-fill)',
+                  }}
+                >
+                  <span
+                    className="absolute top-[2px] left-[2px] h-[27px] w-[27px] rounded-full bg-white shadow-sm transition-transform"
+                    style={{
+                      transform: reminderEnabled
+                        ? 'translateX(20px)'
+                        : 'translateX(0)',
+                    }}
+                  />
+                </button>
+              </div>
+              {reminderEnabled && (
+                <div
+                  className="flex items-center justify-between px-4 py-[11px]"
+                  style={{
+                    borderTop: '0.5px solid var(--ios-separator)',
+                  }}
+                >
+                  <span
+                    className="text-[17px]"
+                    style={{ color: 'var(--ios-label)' }}
+                  >
+                    Reminder Time
+                  </span>
+                  <input
+                    type="time"
+                    value={reminderTime}
+                    onChange={(e) => setReminderTime(e.target.value)}
+                    className="text-[17px] bg-transparent border-none outline-none text-right"
+                    style={{ color: 'var(--ios-blue)' }}
+                  />
+                </div>
+              )}
+              {getPermissionStatus() === 'denied' && (
+                <div
+                  className="px-4 py-[11px]"
+                  style={{
+                    borderTop: '0.5px solid var(--ios-separator)',
+                  }}
+                >
+                  <p
+                    className="text-[13px]"
+                    style={{ color: 'var(--ios-secondary-label)' }}
+                  >
+                    Notifications are blocked. Enable them in your browser or
+                    device settings.
+                  </p>
+                </div>
+              )}
+            </div>
+          </>
+        )}
 
         {/* Daily plan size section */}
         <p

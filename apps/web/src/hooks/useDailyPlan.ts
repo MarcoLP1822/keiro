@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import type { PlannedSession } from '@keiro/types';
-import { calculateDailyPlan, getDueCards } from '@keiro/engine';
+import { calculateDailyPlan, getDueCards, updateStreak, createDefaultStreakData } from '@keiro/engine';
 import { getAllModules } from '@keiro/content';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db } from '../services/db';
@@ -56,6 +56,12 @@ export function useDailyPlan() {
       modules: plan?.modules ?? [],
       completed: true,
     });
+
+    // Update streak when daily plan is completed
+    const existing = await db.streakData.get('current');
+    const prev = existing ?? createDefaultStreakData();
+    const { data } = updateStreak(prev, date);
+    await db.streakData.put(data);
   }
 
   return { plan, isComplete, markComplete };
