@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router';
+import { useLiveQuery } from 'dexie-react-hooks';
 import { getAllModules } from '@keiro/content';
 import { getCurrentModule } from '@keiro/engine';
 import { PageContainer } from '../components/layout/PageContainer';
@@ -8,6 +9,7 @@ import { ProgressBar } from '../components/common/ProgressBar';
 import { useProgress } from '../hooks/useProgress';
 import { useDailyPlan } from '../hooks/useDailyPlan';
 import { useStreak } from '../hooks/useStreak';
+import { db } from '../services/db';
 
 function MapIcon() {
   return (
@@ -107,6 +109,10 @@ export function Home() {
   const { allProgress } = useProgress();
   const { plan, isComplete } = useDailyPlan();
   const { streak, freezesAvailable, lastResult } = useStreak();
+  const leechCount = useLiveQuery(
+    () => db.srsCards.where('isLeech').equals(1).count(),
+    [],
+  ) ?? 0;
 
   const allModules = getAllModules();
   const passedCount = allProgress.filter((p) => p.status === 'passed').length;
@@ -185,6 +191,29 @@ export function Home() {
 
         {/* Streak card */}
         <StreakCard streak={streak} freezesAvailable={freezesAvailable} />
+
+        {/* Leech warning */}
+        {leechCount > 0 && (
+          <button
+            onClick={() => navigate('/review/leeches')}
+            className="w-full rounded-[10px] p-4 mb-4 text-left active:opacity-60"
+            style={{ background: 'var(--ios-bg-grouped-secondary)' }}
+          >
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-[15px] font-medium" style={{ color: 'var(--ios-orange)' }}>
+                  {leechCount} difficult {leechCount === 1 ? 'item needs' : 'items need'} extra practice
+                </p>
+                <p className="text-[13px] mt-0.5" style={{ color: 'var(--ios-secondary-label)' }}>
+                  Tap to review
+                </p>
+              </div>
+              <span className="text-[17px]" style={{ color: 'var(--ios-tertiary-label)' }}>
+                ›
+              </span>
+            </div>
+          </button>
+        )}
 
         {/* Progress section - white card */}
         <div

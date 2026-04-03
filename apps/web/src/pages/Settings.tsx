@@ -10,6 +10,12 @@ import { storage } from '../services/storage';
 import { syncService } from '../services/sync';
 import { isSupported, getPermissionStatus } from '../services/notifications';
 
+const themeOptions = [
+  { label: 'System', value: 'system' },
+  { label: 'Light', value: 'light' },
+  { label: 'Dark', value: 'dark' },
+];
+
 const planSizeOptions = [
   { label: 'Small (~10 min)', value: 'small' },
   { label: 'Medium (~20 min)', value: 'medium' },
@@ -23,10 +29,12 @@ export function Settings() {
     planSize,
     reminderEnabled,
     reminderTime,
+    theme,
     setAudio,
     setPlanSize,
     setReminderEnabled,
     setReminderTime,
+    setTheme,
   } = useSettings();
   const { user, isLoggedIn, signOut } = useAuth();
   const [showResetModal, setShowResetModal] = useState(false);
@@ -115,6 +123,24 @@ export function Settings() {
               Sign In
             </button>
           )}
+        </div>
+
+        {/* Appearance section */}
+        <p
+          className="mt-8 mb-2 px-4 text-[13px] font-normal uppercase tracking-wide"
+          style={{ color: 'var(--ios-secondary-label)' }}
+        >
+          Appearance
+        </p>
+        <div
+          className="rounded-[10px] p-4"
+          style={{ background: 'var(--ios-bg-grouped-secondary)' }}
+        >
+          <SegmentedControl
+            options={themeOptions}
+            selected={theme}
+            onChange={(value) => setTheme(value as 'system' | 'light' | 'dark')}
+          />
         </div>
 
         {/* Audio section */}

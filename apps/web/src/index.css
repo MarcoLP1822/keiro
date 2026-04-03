@@ -2,7 +2,7 @@
 
 /* ── Apple Human Interface Guidelines Design System ── */
 
-:root {
+:root, .light {
   --ios-blue: #007AFF;
   --ios-green: #34C759;
   --ios-red: #FF3B30;
@@ -24,8 +24,31 @@
   --ios-fill: rgba(120, 120, 128, 0.2);
 }
 
+.dark {
+  --ios-blue: #0A84FF;
+  --ios-green: #30D158;
+  --ios-red: #FF453A;
+  --ios-orange: #FF9F0A;
+  --ios-gray: #8E8E93;
+  --ios-gray2: #636366;
+  --ios-gray3: #48484A;
+  --ios-gray4: #3A3A3C;
+  --ios-gray5: #2C2C2E;
+  --ios-gray6: #1C1C1E;
+  --ios-bg: #000000;
+  --ios-bg-secondary: #1C1C1E;
+  --ios-bg-grouped: #000000;
+  --ios-bg-grouped-secondary: #1C1C1E;
+  --ios-label: #FFFFFF;
+  --ios-secondary-label: rgba(235, 235, 245, 0.6);
+  --ios-tertiary-label: rgba(235, 235, 245, 0.3);
+  --ios-separator: rgba(84, 84, 88, 0.6);
+  --ios-fill: rgba(120, 120, 128, 0.36);
+}
+
+/* System default: follow OS preference when no class is set */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not(.light):not(.dark) {
     --ios-blue: #0A84FF;
     --ios-green: #30D158;
     --ios-red: #FF453A;

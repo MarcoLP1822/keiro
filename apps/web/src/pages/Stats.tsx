@@ -361,6 +361,28 @@ export function Stats() {
                   {srsStats.mastered}
                 </span>
               </div>
+              {srsStats.leeches > 0 && (
+                <>
+                  <div
+                    className="h-px"
+                    style={{ background: 'var(--ios-separator)' }}
+                  />
+                  <div className="flex items-center justify-between">
+                    <span
+                      className="text-[15px]"
+                      style={{ color: 'var(--ios-secondary-label)' }}
+                    >
+                      Leeches
+                    </span>
+                    <span
+                      className="text-[15px]"
+                      style={{ color: 'var(--ios-red)' }}
+                    >
+                      {srsStats.leeches}
+                    </span>
+                  </div>
+                </>
+              )}
             </div>
           )}
         </div>

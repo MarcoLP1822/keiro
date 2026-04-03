@@ -42,6 +42,18 @@ export class KeiroDB extends Dexie {
       srsCards: 'id, moduleId, contentType, nextReview, updatedAt, userId',
       streakData: 'id',
     });
+    this.version(5).stores({
+      moduleProgress: 'moduleId, status, score, completedAt, updatedAt, userId',
+      dailyPlan: 'date, completed, updatedAt, userId',
+      settings: 'key, updatedAt, userId',
+      srsCards: 'id, moduleId, contentType, nextReview, updatedAt, userId, isLeech',
+      streakData: 'id',
+    }).upgrade(tx => {
+      return tx.table('srsCards').toCollection().modify(card => {
+        if (card.lapseCount === undefined) card.lapseCount = 0;
+        if (card.isLeech === undefined) card.isLeech = false;
+      });
+    });
   }
 }
 

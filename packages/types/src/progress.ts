@@ -44,6 +44,8 @@ export interface SrsCard {
   easeFactor: number;
   nextReview: string;
   lastReview: string | null;
+  lapseCount: number;
+  isLeech: boolean;
   updatedAt?: string;
   userId?: string | null;
 }

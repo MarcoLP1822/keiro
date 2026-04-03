@@ -15,6 +15,7 @@ interface SrsStats {
   learning: number;
   reviewing: number;
   mastered: number;
+  leeches: number;
 }
 
 export interface Stats {
@@ -97,6 +98,7 @@ export function useStats(): Stats | null {
   const learning = allSrsCards.filter((c) => c.interval < 7).length;
   const reviewing = allSrsCards.filter((c) => c.interval >= 7 && c.interval <= 30).length;
   const mastered = allSrsCards.filter((c) => c.interval > 30).length;
+  const leeches = allSrsCards.filter((c) => c.isLeech).length;
 
   return {
     overallProgress,
@@ -104,6 +106,6 @@ export function useStats(): Stats | null {
     totalModules,
     itemsByType,
     currentStreak,
-    srsStats: { total, dueToday, learning, reviewing, mastered },
+    srsStats: { total, dueToday, learning, reviewing, mastered, leeches },
   };
 }

@@ -63,6 +63,8 @@ class SyncService {
           ease_factor: c.easeFactor,
           next_review: c.nextReview,
           last_review: c.lastReview,
+          lapse_count: c.lapseCount ?? 0,
+          is_leech: c.isLeech ?? false,
           updated_at: c.updatedAt ?? new Date().toISOString(),
         }));
         await supabase.from('srs_cards').upsert(rows, {
@@ -164,6 +166,8 @@ class SyncService {
               easeFactor: cc.ease_factor,
               nextReview: cc.next_review,
               lastReview: cc.last_review,
+              lapseCount: cc.lapse_count ?? 0,
+              isLeech: cc.is_leech ?? false,
               updatedAt: cc.updated_at,
               userId: this.userId,
             });

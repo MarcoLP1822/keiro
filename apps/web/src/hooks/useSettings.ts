@@ -16,6 +16,7 @@ export function useSettings() {
   const planSize = getSetting<PlanSize>('planSize', 'medium');
   const reminderEnabled = getSetting<boolean>('reminderEnabled', false);
   const reminderTime = getSetting<string>('reminderTime', '20:00');
+  const theme = getSetting<'system' | 'light' | 'dark'>('theme', 'system');
 
   async function setAudio(value: boolean): Promise<void> {
     await storage.setSetting('audio', value);
@@ -37,14 +38,20 @@ export function useSettings() {
     await storage.setSetting('reminderTime', value);
   }
 
+  async function setTheme(value: 'system' | 'light' | 'dark'): Promise<void> {
+    await storage.setSetting('theme', value);
+  }
+
   return {
     audio,
     planSize,
     reminderEnabled,
     reminderTime,
+    theme,
     setAudio,
     setPlanSize,
     setReminderEnabled,
     setReminderTime,
+    setTheme,
   };
 }

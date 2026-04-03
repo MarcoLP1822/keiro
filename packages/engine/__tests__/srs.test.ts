@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { gradeSrsCard, createSrsCard, getDueCards } from '../src/srs.js';
+import { gradeSrsCard, createSrsCard, getDueCards, getLeechCards } from '../src/srs.js';
 import type { SrsCard } from '@keiro/types';
 
 function makeCard(overrides: Partial<SrsCard> = {}): SrsCard {
@@ -13,6 +13,8 @@ function makeCard(overrides: Partial<SrsCard> = {}): SrsCard {
     easeFactor: 2.5,
     nextReview: '2026-01-01',
     lastReview: null,
+    lapseCount: 0,
+    isLeech: false,
     ...overrides,
   };
 }
@@ -29,6 +31,8 @@ describe('createSrsCard', () => {
     expect(card.easeFactor).toBe(2.5);
     expect(card.nextReview).toBe('2026-03-15');
     expect(card.lastReview).toBeNull();
+    expect(card.lapseCount).toBe(0);
+    expect(card.isLeech).toBe(false);
   });
 });
 
@@ -129,5 +133,68 @@ describe('getDueCards', () => {
     ];
     const due = getDueCards(cards, '2026-01-01');
     expect(due).toHaveLength(2);
+  });
+});
+
+describe('leech detection', () => {
+  it('increments lapseCount on wrong grade', () => {
+    const card = makeCard();
+    const after = gradeSrsCard(card, 'wrong', '2026-01-01');
+    expect(after.lapseCount).toBe(1);
+    expect(after.isLeech).toBe(false);
+  });
+
+  it('flags card as leech after 4 wrong answers', () => {
+    let card = makeCard();
+    for (let i = 0; i < 3; i++) {
+      card = gradeSrsCard(card, 'wrong', '2026-01-01');
+    }
+    expect(card.lapseCount).toBe(3);
+    expect(card.isLeech).toBe(false);
+
+    card = gradeSrsCard(card, 'wrong', '2026-01-01');
+    expect(card.lapseCount).toBe(4);
+    expect(card.isLeech).toBe(true);
+  });
+
+  it('does not increment lapseCount on correct grades', () => {
+    const card = makeCard({ lapseCount: 2 });
+    const afterEasy = gradeSrsCard(card, 'easy', '2026-01-01');
+    expect(afterEasy.lapseCount).toBe(2);
+
+    const afterHard = gradeSrsCard(card, 'hard', '2026-01-01');
+    expect(afterHard.lapseCount).toBe(2);
+  });
+
+  it('clears leech status on easy grade', () => {
+    const card = makeCard({ lapseCount: 5, isLeech: true, repetitions: 0 });
+    const after = gradeSrsCard(card, 'easy', '2026-01-01');
+    expect(after.isLeech).toBe(false);
+    expect(after.lapseCount).toBe(5); // lapseCount is not reset
+  });
+
+  it('does not clear leech status on hard grade', () => {
+    const card = makeCard({ lapseCount: 5, isLeech: true, repetitions: 0 });
+    const after = gradeSrsCard(card, 'hard', '2026-01-01');
+    expect(after.isLeech).toBe(true);
+  });
+});
+
+describe('getLeechCards', () => {
+  it('returns only leech cards', () => {
+    const cards = [
+      makeCard({ id: 'a', isLeech: true }),
+      makeCard({ id: 'b', isLeech: false }),
+      makeCard({ id: 'c', isLeech: true }),
+    ];
+    const leeches = getLeechCards(cards);
+    expect(leeches.map((c) => c.id)).toEqual(['a', 'c']);
+  });
+
+  it('returns empty array when no leeches', () => {
+    const cards = [
+      makeCard({ id: 'a', isLeech: false }),
+    ];
+    expect(getLeechCards(cards)).toEqual([]);
   });
 });

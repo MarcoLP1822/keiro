@@ -5,6 +5,7 @@ import { db } from './services/db';
 import { supabase } from './services/supabase';
 import { storage } from './services/storage';
 import { reminderService } from './services/reminder';
+import { useTheme } from './hooks/useTheme';
 
 import { Welcome } from './pages/Welcome';
 import { PlacementQuiz } from './pages/PlacementQuiz';
@@ -18,6 +19,7 @@ import { SrsReview } from './pages/SrsReview';
 import { Settings } from './pages/Settings';
 import { Stats } from './pages/Stats';
 import { Login } from './pages/Login';
+import { LeechReview } from './pages/LeechReview';
 
 function AppRoutes() {
   const progressCount = useLiveQuery(() => db.moduleProgress.count());
@@ -38,6 +40,7 @@ function AppRoutes() {
       <Route path="/study/:moduleId/complete" element={<ModuleComplete />} />
       <Route path="/review" element={<Review />} />
       <Route path="/review/srs" element={<SrsReview />} />
+      <Route path="/review/leeches" element={<LeechReview />} />
       <Route path="/settings" element={<Settings />} />
       <Route path="/login" element={<Login />} />
       <Route path="/stats" element={<Stats />} />
@@ -46,6 +49,7 @@ function AppRoutes() {
 }
 
 function AuthHandler({ children }: { children: React.ReactNode }) {
+  useTheme();
   const [authReady, setAuthReady] = useState(!supabase);
 
   useEffect(() => {

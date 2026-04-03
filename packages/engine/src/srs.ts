@@ -1,5 +1,8 @@
 import type { SrsCard, SrsGrade } from '@keiro/types';
 
+/** Number of wrong answers before a card is flagged as a leech */
+const LEECH_THRESHOLD = 4;
+
 /**
  * SM-2 spaced repetition algorithm.
  * Grades a card and returns the updated card with new interval, ease factor, and next review date.
@@ -9,6 +12,8 @@ export function gradeSrsCard(card: SrsCard, grade: SrsGrade, today?: string): Sr
   const quality = grade === 'easy' ? 5 : grade === 'hard' ? 3 : 1;
 
   let { interval, repetitions, easeFactor } = card;
+  let lapseCount = card.lapseCount ?? 0;
+  let isLeech = card.isLeech ?? false;
 
   if (quality >= 3) {
     // Correct answer (hard or easy)
@@ -16,10 +21,19 @@ export function gradeSrsCard(card: SrsCard, grade: SrsGrade, today?: string): Sr
     else if (repetitions === 1) interval = 6;
     else interval = Math.round(interval * easeFactor);
     repetitions += 1;
+
+    // Clear leech status on easy grade
+    if (grade === 'easy' && isLeech) {
+      isLeech = false;
+    }
   } else {
     // Wrong — reset to beginning
     repetitions = 0;
     interval = 1;
+    lapseCount += 1;
+    if (lapseCount >= LEECH_THRESHOLD) {
+      isLeech = true;
+    }
   }
 
   // Adjust ease factor using SM-2 formula
@@ -37,6 +51,8 @@ export function gradeSrsCard(card: SrsCard, grade: SrsGrade, today?: string): Sr
     easeFactor: Math.round(easeFactor * 100) / 100,
     nextReview: next.toISOString().split('T')[0],
     lastReview: nowStr,
+    lapseCount,
+    isLeech,
   };
 }
 
@@ -60,7 +76,16 @@ export function createSrsCard(
     easeFactor: 2.5,
     nextReview: todayStr,
     lastReview: null,
+    lapseCount: 0,
+    isLeech: false,
   };
+}
+
+/**
+ * Returns all cards flagged as leeches (items the user keeps getting wrong).
+ */
+export function getLeechCards(cards: SrsCard[]): SrsCard[] {
+  return cards.filter((c) => c.isLeech);
 }
 
 /**

@@ -38,6 +38,9 @@ export default defineConfig({
       '@keiro/content': path.resolve(__dirname, '../../packages/content/src'),
     },
   },
+  build: {
+    chunkSizeWarningLimit: 1500,
+  },
   server: {
     port: 5173,
   },
