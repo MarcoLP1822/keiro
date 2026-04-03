@@ -7,6 +7,7 @@ interface AuthState {
   isLoggedIn: boolean;
   isLoading: boolean;
   signInWithEmail: (email: string) => Promise<{ error: string | null }>;
+  verifyOtp: (email: string, token: string) => Promise<{ error: string | null }>;
   signInWithGoogle: () => Promise<{ error: string | null }>;
   signOut: () => Promise<void>;
 }
@@ -38,8 +39,19 @@ export function useAuth(): AuthState {
     const { error } = await supabase.auth.signInWithOtp({
       email,
       options: {
-        emailRedirectTo: `${window.location.origin}/settings`,
+        shouldCreateUser: true,
       },
+    });
+    return { error: error?.message ?? null };
+  }, []);
+
+  const verifyOtp = useCallback(async (email: string, token: string) => {
+    if (!supabase) return { error: 'Supabase not configured' };
+
+    const { error } = await supabase.auth.verifyOtp({
+      email,
+      token,
+      type: 'email',
     });
     return { error: error?.message ?? null };
   }, []);
@@ -64,6 +76,7 @@ export function useAuth(): AuthState {
     isLoggedIn: !!user,
     isLoading,
     signInWithEmail,
+    verifyOtp,
     signInWithGoogle,
     signOut,
   };

@@ -7,13 +7,21 @@ import { useAuth } from '../hooks/useAuth';
 
 export function Login() {
   const navigate = useNavigate();
-  const { signInWithEmail, signInWithGoogle } = useAuth();
+  const { signInWithEmail, verifyOtp, isLoggedIn } = useAuth();
   const [email, setEmail] = useState('');
+  const [otpCode, setOtpCode] = useState('');
+  const [step, setStep] = useState<'email' | 'otp'>('email');
   const [sending, setSending] = useState(false);
-  const [sent, setSent] = useState(false);
+  const [verifying, setVerifying] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  async function handleSendMagicLink(e: React.FormEvent) {
+  // If already logged in, redirect to settings
+  if (isLoggedIn) {
+    navigate('/settings', { replace: true });
+    return null;
+  }
+
+  async function handleSendCode(e: React.FormEvent) {
     e.preventDefault();
     if (!email.trim()) return;
 
@@ -25,15 +33,23 @@ export function Login() {
     if (result.error) {
       setError(result.error);
     } else {
-      setSent(true);
+      setStep('otp');
     }
   }
 
-  async function handleGoogle() {
+  async function handleVerifyCode(e: React.FormEvent) {
+    e.preventDefault();
+    if (!otpCode.trim()) return;
+
+    setVerifying(true);
     setError(null);
-    const result = await signInWithGoogle();
+    const result = await verifyOtp(email.trim(), otpCode.trim());
+    setVerifying(false);
+
     if (result.error) {
       setError(result.error);
+    } else {
+      navigate('/settings', { replace: true });
     }
   }
 
@@ -64,72 +80,77 @@ export function Login() {
           </p>
         </div>
 
-        {sent ? (
-          <div
-            className="mt-8 rounded-[10px] p-6 text-center"
-            style={{ background: 'var(--ios-bg-grouped-secondary)' }}
-          >
-            <p
-              className="text-[17px] font-semibold"
-              style={{ color: 'var(--ios-label)' }}
+        {step === 'email' ? (
+          <form onSubmit={handleSendCode} className="mt-8 space-y-3">
+            <div
+              className="rounded-[10px] px-4"
+              style={{ background: 'var(--ios-bg-grouped-secondary)' }}
             >
-              Check your email
-            </p>
-            <p
-              className="mt-2 text-[15px]"
-              style={{ color: 'var(--ios-secondary-label)' }}
-            >
-              We sent a magic link to <strong>{email}</strong>. Tap it to sign in.
-            </p>
-          </div>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Email address"
+                autoComplete="email"
+                className="w-full py-[11px] text-[17px] bg-transparent outline-none"
+                style={{ color: 'var(--ios-label)' }}
+              />
+            </div>
+            <PrimaryButton type="submit" loading={sending} disabled={!email.trim()}>
+              Send Verification Code
+            </PrimaryButton>
+          </form>
         ) : (
           <>
-            {/* Email magic link */}
-            <form onSubmit={handleSendMagicLink} className="mt-8 space-y-3">
+            <div
+              className="mt-8 rounded-[10px] p-4 text-center"
+              style={{ background: 'var(--ios-bg-grouped-secondary)' }}
+            >
+              <p
+                className="text-[15px]"
+                style={{ color: 'var(--ios-secondary-label)' }}
+              >
+                We sent a 6-digit code to
+              </p>
+              <p
+                className="text-[17px] font-semibold mt-1"
+                style={{ color: 'var(--ios-label)' }}
+              >
+                {email}
+              </p>
+            </div>
+
+            <form onSubmit={handleVerifyCode} className="mt-4 space-y-3">
               <div
                 className="rounded-[10px] px-4"
                 style={{ background: 'var(--ios-bg-grouped-secondary)' }}
               >
                 <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Email address"
-                  autoComplete="email"
-                  className="w-full py-[11px] text-[17px] bg-transparent outline-none"
+                  type="text"
+                  inputMode="numeric"
+                  autoComplete="one-time-code"
+                  value={otpCode}
+                  onChange={(e) => setOtpCode(e.target.value.replace(/\D/g, '').slice(0, 6))}
+                  placeholder="Enter 6-digit code"
+                  className="w-full py-[11px] text-[17px] text-center tracking-[0.5em] bg-transparent outline-none"
                   style={{ color: 'var(--ios-label)' }}
+                  maxLength={6}
                 />
               </div>
-              <PrimaryButton type="submit" loading={sending} disabled={!email.trim()}>
-                Send Magic Link
+              <PrimaryButton type="submit" loading={verifying} disabled={otpCode.length !== 6}>
+                Verify
               </PrimaryButton>
             </form>
 
-            {/* Divider */}
-            <div className="flex items-center gap-4 my-6">
-              <div className="flex-1 h-px" style={{ background: 'var(--ios-separator)' }} />
-              <span
-                className="text-[13px] uppercase"
-                style={{ color: 'var(--ios-secondary-label)' }}
+            <div className="mt-4 text-center">
+              <button
+                onClick={() => { setStep('email'); setOtpCode(''); setError(null); }}
+                className="text-[15px] active:opacity-60"
+                style={{ color: 'var(--ios-blue)' }}
               >
-                or
-              </span>
-              <div className="flex-1 h-px" style={{ background: 'var(--ios-separator)' }} />
+                Use a different email
+              </button>
             </div>
-
-            {/* Google sign in */}
-            <button
-              onClick={handleGoogle}
-              className="w-full min-h-[50px] rounded-[12px] px-6 py-3 text-[17px] font-semibold
-                transition-all duration-[350ms] active:brightness-90"
-              style={{
-                background: 'var(--ios-bg-grouped-secondary)',
-                color: 'var(--ios-label)',
-                border: '0.5px solid var(--ios-separator)',
-              }}
-            >
-              Continue with Google
-            </button>
           </>
         )}
 
