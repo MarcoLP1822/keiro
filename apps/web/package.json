@@ -15,6 +15,7 @@
     "@keiro/engine": "workspace:*",
     "@keiro/types": "workspace:*",
     "@sentry/react": "^10.47.0",
+    "@supabase/supabase-js": "^2.101.1",
     "@tailwindcss/vite": "^4.2.2",
     "dexie": "^4.4.2",
     "dexie-react-hooks": "^4.4.0",

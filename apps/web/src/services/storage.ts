@@ -1,13 +1,26 @@
 import type { ModuleProgress, DailyPlan, Setting, SrsCard } from '@keiro/types';
 import { db } from './db';
+import { syncService } from './sync';
 
 class StorageService {
+  private userId: string | null = null;
+
+  setUserId(id: string | null) {
+    this.userId = id;
+    syncService.setUserId(id);
+  }
+
   async getModuleProgress(moduleId: string): Promise<ModuleProgress | undefined> {
     return db.moduleProgress.get(moduleId);
   }
 
   async saveModuleProgress(progress: ModuleProgress): Promise<void> {
-    await db.moduleProgress.put(progress);
+    await db.moduleProgress.put({
+      ...progress,
+      updatedAt: new Date().toISOString(),
+      userId: this.userId,
+    });
+    syncService.scheduleSync();
   }
 
   async getAllProgress(): Promise<ModuleProgress[]> {
@@ -19,7 +32,12 @@ class StorageService {
   }
 
   async saveDailyPlan(plan: DailyPlan): Promise<void> {
-    await db.dailyPlan.put(plan);
+    await db.dailyPlan.put({
+      ...plan,
+      updatedAt: new Date().toISOString(),
+      userId: this.userId,
+    });
+    syncService.scheduleSync();
   }
 
   async getSetting(key: string): Promise<Setting['value'] | undefined> {
@@ -28,7 +46,13 @@ class StorageService {
   }
 
   async setSetting(key: string, value: Setting['value']): Promise<void> {
-    await db.settings.put({ key, value });
+    await db.settings.put({
+      key,
+      value,
+      updatedAt: new Date().toISOString(),
+      userId: this.userId,
+    });
+    syncService.scheduleSync();
   }
 
   // --- SRS Card methods ---
@@ -42,11 +66,24 @@ class StorageService {
   }
 
   async saveSrsCard(card: SrsCard): Promise<void> {
-    await db.srsCards.put(card);
+    await db.srsCards.put({
+      ...card,
+      updatedAt: new Date().toISOString(),
+      userId: this.userId,
+    });
+    syncService.scheduleSync();
   }
 
   async saveSrsCards(cards: SrsCard[]): Promise<void> {
-    await db.srsCards.bulkPut(cards);
+    const now = new Date().toISOString();
+    await db.srsCards.bulkPut(
+      cards.map((card) => ({
+        ...card,
+        updatedAt: now,
+        userId: this.userId,
+      })),
+    );
+    syncService.scheduleSync();
   }
 
   async getDueCards(date?: string): Promise<SrsCard[]> {

@@ -20,6 +20,20 @@ export class KeiroDB extends Dexie {
       settings: 'key',
       srsCards: 'id, moduleId, contentType, nextReview',
     });
+    this.version(3).stores({
+      moduleProgress: 'moduleId, status, score, completedAt, updatedAt, userId',
+      dailyPlan: 'date, completed, updatedAt, userId',
+      settings: 'key, updatedAt, userId',
+      srsCards: 'id, moduleId, contentType, nextReview, updatedAt, userId',
+    }).upgrade(tx => {
+      const now = new Date().toISOString();
+      return Promise.all([
+        tx.table('moduleProgress').toCollection().modify({ updatedAt: now, userId: null }),
+        tx.table('dailyPlan').toCollection().modify({ updatedAt: now, userId: null }),
+        tx.table('settings').toCollection().modify({ updatedAt: now, userId: null }),
+        tx.table('srsCards').toCollection().modify({ updatedAt: now, userId: null }),
+      ]);
+    });
   }
 }
 

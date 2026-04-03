@@ -6,17 +6,23 @@ export interface ModuleProgress {
   score: number | null;
   completedAt: string | null;
   attempts: number;
+  updatedAt?: string;
+  userId?: string | null;
 }
 
 export interface DailyPlan {
   date: string; // YYYY-MM-DD
   modules: string[];
   completed: boolean;
+  updatedAt?: string;
+  userId?: string | null;
 }
 
 export interface Setting {
   key: string;
   value: string | number | boolean;
+  updatedAt?: string;
+  userId?: string | null;
 }
 
 export interface PlannedSession {
@@ -38,6 +44,8 @@ export interface SrsCard {
   easeFactor: number;
   nextReview: string;
   lastReview: string | null;
+  updatedAt?: string;
+  userId?: string | null;
 }
 
 export type SrsGrade = 'wrong' | 'hard' | 'easy';

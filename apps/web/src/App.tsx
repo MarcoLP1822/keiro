@@ -13,6 +13,7 @@ import { Review } from './pages/Review';
 import { SrsReview } from './pages/SrsReview';
 import { Settings } from './pages/Settings';
 import { Stats } from './pages/Stats';
+import { Login } from './pages/Login';
 
 function AppRoutes() {
   const progressCount = useLiveQuery(() => db.moduleProgress.count());
@@ -34,6 +35,7 @@ function AppRoutes() {
       <Route path="/review" element={<Review />} />
       <Route path="/review/srs" element={<SrsReview />} />
       <Route path="/settings" element={<Settings />} />
+      <Route path="/login" element={<Login />} />
       <Route path="/stats" element={<Stats />} />
     </Routes>
   );
