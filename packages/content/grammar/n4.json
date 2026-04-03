@@ -1,0 +1,2956 @@
+{
+  "_attribution": "Grammar data sourced from hanabira.org (https://github.com/tristcoil/hanabira.org-japanese-content). Licensed under their repository terms.",
+  "level": "n4",
+  "modules": [
+    {
+      "id": "n4-grammar-01",
+      "name": "N4 Grammar 1",
+      "type": "grammar",
+      "level": "n4",
+      "order": 181,
+      "intro": {
+        "title": "N4 Grammar — Group 1",
+        "explanation": "Learn N4 grammar points 1–5. These patterns are essential for the JLPT N4 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n4-a-b",
+          "title": "A とか B とか",
+          "explanation": "Used to express multiple examples or possibilities; 'such as', 'like', 'for example'.",
+          "structure": "Noun + とか + Noun + とか",
+          "examples": [
+            {
+              "japanese": "週末は映画とか買い物とか楽しいことをしたいです。",
+              "english": "I want to do fun things like watching movies and shopping on the weekend."
+            },
+            {
+              "japanese": "彼女は英語とかフランス語とかいろいろな言葉を話せます。",
+              "english": "She can speak various languages, like English and French."
+            },
+            {
+              "japanese": "この店は寿司とか刺身とか日本料理を提供しています。",
+              "english": "This restaurant offers Japanese dishes such as sushi and sashimi."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-a-wa-b-hodo-arimasen",
+          "title": "A は B ほど～ありません (A wa B hodo ～ arimasen)",
+          "explanation": "Express that A is not as much as B; 'not as... as', 'not... to the extent of'.",
+          "structure": "A は B ほど Verb/adjective ありません",
+          "examples": [
+            {
+              "japanese": "今日は昨日ほど寒くありません。",
+              "english": "Today is not as cold as yesterday."
+            },
+            {
+              "japanese": "彼は私ほど上手に英語を話せません。",
+              "english": "He cannot speak English as well as I can."
+            },
+            {
+              "japanese": "このレストランはあのレストランほど高くありません。",
+              "english": "This restaurant is not as expensive as that restaurant."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-a-wa-b-hodo-nai",
+          "title": "A は B ほど～ない (A wa B hodo ~ nai)",
+          "explanation": "Expressing that A is not as ~ as B; 'not as...as'",
+          "structure": "A は B ほど + い-Adjective stem (without い) + くない, な-Adjective + じゃない, Verb-negative potential form",
+          "examples": [
+            {
+              "japanese": "山田さんは鈴木さんほど背が高くない。",
+              "english": "Yamada is not as tall as Suzuki."
+            },
+            {
+              "japanese": "このリンゴはあのリンゴほど甘くない。",
+              "english": "This apple is not as sweet as that apple."
+            },
+            {
+              "japanese": "彼は私ほど勉強ができない。",
+              "english": "He can't study as well as I can."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-a-yori-b-no-hou-ga",
+          "title": "A より B のほうが〜 (A yori B no hou ga 〜)",
+          "explanation": "Comparing two things; 'B is more ~ than A'.",
+          "structure": "A + より + B + のほうが + Adjective/Verb",
+          "examples": [
+            {
+              "japanese": "田中さんより鈴木さんのほうが背が高いです。",
+              "english": "Suzuki is taller than Tanaka."
+            },
+            {
+              "japanese": "リンゴよりバナナのほうが甘いです。",
+              "english": "Bananas are sweeter than apples."
+            },
+            {
+              "japanese": "冬より夏のほうが暑いです。",
+              "english": "Summer is hotter than winter."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-i-adjective-kusurunaru",
+          "title": "い-Adjective く する/なる (i-Adjective kusuru/naru)",
+          "explanation": "Express a change happening or making something change.",
+          "structure": "い-Adjective (remove い) + く + する/なる",
+          "examples": [
+            {
+              "japanese": "部屋を明るくします。",
+              "english": "I will make the room brighter."
+            },
+            {
+              "japanese": "彼の顔は赤くなりました。",
+              "english": "His face turned red."
+            },
+            {
+              "japanese": "この料理を辛くしてください。",
+              "english": "Please make this dish spicy."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n4-grammar-02",
+      "name": "N4 Grammar 2",
+      "type": "grammar",
+      "level": "n4",
+      "order": 182,
+      "intro": {
+        "title": "N4 Grammar — Group 2",
+        "explanation": "Learn N4 grammar points 6–10. These patterns are essential for the JLPT N4 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n4-adjective",
+          "title": "な-adjective に する/なる",
+          "explanation": "Used to indicate change or decision; 'to become' or 'to make' with na-adjectives.",
+          "structure": "な-Adjective + に + する/なる",
+          "examples": [
+            {
+              "japanese": "部屋をきれいにする。",
+              "english": "To make the room clean."
+            },
+            {
+              "japanese": "彼は元気になりました。",
+              "english": "He became energetic."
+            },
+            {
+              "japanese": "毎日静かにすることが大切です。",
+              "english": "It is important to make it quiet every day."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-noun-shikanai",
+          "title": "Noun しか～ない (Noun shika~nai)",
+          "explanation": "Expresses 'only', 'nothing but', or 'no other'.",
+          "structure": "Noun + しか + Negative Verb",
+          "examples": [
+            {
+              "japanese": "私はリンゴしか食べない。",
+              "english": "I eat only apples."
+            },
+            {
+              "japanese": "電車で行くしかないです。",
+              "english": "There is no other way but to go by train."
+            },
+            {
+              "japanese": "彼は一冊の本しか持っていない。",
+              "english": "He has only one book."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-noun-ni-suru",
+          "title": "Noun に する (Noun ni suru)",
+          "explanation": "Used to indicate a choice or decision, 'to decide on' or 'to choose'.",
+          "structure": "Noun + に + する",
+          "examples": [
+            {
+              "japanese": "メニューからピザにしました。",
+              "english": "I decided on pizza from the menu."
+            },
+            {
+              "japanese": "誕生日プレゼントに時計にするつもりです。",
+              "english": "I plan to choose a watch as a birthday present."
+            },
+            {
+              "japanese": "今日の午後は買い物にすることにしました。",
+              "english": "I decided to go shopping this afternoon."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-noun-ni-naru",
+          "title": "Noun に なる (Noun ni naru)",
+          "explanation": "To become; to change into; to turn into.",
+          "structure": "Noun + に + なる",
+          "examples": [
+            {
+              "japanese": "彼は医者になりました。",
+              "english": "He became a doctor."
+            },
+            {
+              "japanese": "子供の頃、私は先生になりたかったです。",
+              "english": "When I was a child, I wanted to become a teacher."
+            },
+            {
+              "japanese": "彼女は緊張して顔が赤くなりました。",
+              "english": "She got nervous, and her face turned red."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-no-tame-ni",
+          "title": "のために (no tame ni)",
+          "explanation": "Used to express purpose or reason; 'for', 'for the sake of', 'in order to'.",
+          "structure": "Noun + のために",
+          "examples": [
+            {
+              "japanese": "勉強のために、図書館で静かな場所を探しています。",
+              "english": "In order to study, I am looking for a quiet place in the library."
+            },
+            {
+              "japanese": "彼は家族のために、一生懸命働いています。",
+              "english": "He works hard for the sake of his family."
+            },
+            {
+              "japanese": "健康のために、毎日運動をしています。",
+              "english": "I exercise every day for the sake of my health."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n4-grammar-03",
+      "name": "N4 Grammar 3",
+      "type": "grammar",
+      "level": "n4",
+      "order": 183,
+      "intro": {
+        "title": "N4 Grammar — Group 3",
+        "explanation": "Learn N4 grammar points 11–15. These patterns are essential for the JLPT N4 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n4-no-aida-ni",
+          "title": "Noun の 間に (〜no aida ni)",
+          "explanation": "Expresses 'while' or 'during' a specific period or time.",
+          "structure": "Noun + の間に",
+          "examples": [
+            {
+              "japanese": "昼休みの間に銀行に行きます。",
+              "english": "I will go to the bank during lunch break."
+            },
+            {
+              "japanese": "夏休みの間に海外旅行に行く予定です。",
+              "english": "I plan to go on an overseas trip during the summer vacation."
+            },
+            {
+              "japanese": "子供たちが学校の間に買い物に行きました。",
+              "english": "I went shopping while the kids were at school."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-bakari",
+          "title": "Noun ばかり (〜bakari)",
+          "explanation": "Expresses 'only', 'nothing but', 'always', or 'just'.",
+          "structure": "Noun + ばかり, Verb-casual + ばかり, い-Adjective + ばかり, な-Adjective + だ ばかり",
+          "examples": [
+            {
+              "japanese": "彼はお金の話ばかりする。",
+              "english": "He talks about nothing but money."
+            },
+            {
+              "japanese": "彼女は勉強ばかりしている。",
+              "english": "She is always studying."
+            },
+            {
+              "japanese": "デパートには高い商品ばかりだ。",
+              "english": "There are only expensive items in the department store."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-noun-wo-ageru",
+          "title": "Noun を あげる (Noun wo ageru)",
+          "explanation": "To give something to someone; 'give', 'offer', 'present'.",
+          "structure": "Noun + を + あげる",
+          "examples": [
+            {
+              "japanese": "プレゼントをあげる。",
+              "english": "I give a present."
+            },
+            {
+              "japanese": "友達に花をあげた。",
+              "english": "I gave flowers to my friend."
+            },
+            {
+              "japanese": "父に時計をあげます。",
+              "english": "I will give a watch to my father."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-noun-wo-itadaku",
+          "title": "Nounをいただく (Noun wo itadaku)",
+          "explanation": "To receive or accept something politely; 'to receive', 'to get', 'to accept'.",
+          "structure": "Noun + を + いただく",
+          "examples": [
+            {
+              "japanese": "プレゼントをいただきありがとうございます。",
+              "english": "Thank you for the gift that I received."
+            },
+            {
+              "japanese": "先生からアドバイスをいただきました。",
+              "english": "I received advice from my teacher."
+            },
+            {
+              "japanese": "このコーヒーをいただいていいですか？",
+              "english": "May I have this coffee?"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-noun",
+          "title": "Nounをくださる",
+          "explanation": "Used to express someone doing something as a favor or for the benefit of the speaker.",
+          "structure": "Noun + を + くださる",
+          "examples": [
+            {
+              "japanese": "先生が資料をくださった。",
+              "english": "The teacher gave me the materials."
+            },
+            {
+              "japanese": "お母さんがおやつをくださる。",
+              "english": "My mother gives me snacks."
+            },
+            {
+              "japanese": "上司がアドバイスをくださいました。",
+              "english": "My boss gave me advice."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n4-grammar-04",
+      "name": "N4 Grammar 4",
+      "type": "grammar",
+      "level": "n4",
+      "order": 184,
+      "intro": {
+        "title": "N4 Grammar — Group 4",
+        "explanation": "Learn N4 grammar points 16–20. These patterns are essential for the JLPT N4 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n4-noun-wo-kureru",
+          "title": "Noun を くれる (Noun wo kureru)",
+          "explanation": "Expresses that someone gives a thing to the speaker or someone close to the speaker.",
+          "structure": "Giver + が + Receiver + に + Noun + を + くれる",
+          "examples": [
+            {
+              "japanese": "友達が私にプレゼントをくれました。",
+              "english": "My friend gave me a present."
+            },
+            {
+              "japanese": "彼が私に花をくれた。",
+              "english": "He gave me flowers."
+            },
+            {
+              "japanese": "先生が私に本をくれました。",
+              "english": "The teacher gave me a book."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-noun-wo-sashiageru",
+          "title": "Noun を さしあげる (Noun wo sashiageru)",
+          "explanation": "A polite way of expressing to give something.",
+          "structure": "Noun + を + さしあげる",
+          "examples": [
+            {
+              "japanese": "先生に本をさしあげます。",
+              "english": "I will give a book to the teacher."
+            },
+            {
+              "japanese": "お母さんに花をさしあげたいです。",
+              "english": "I want to give flowers to my mother."
+            },
+            {
+              "japanese": "お客様にお茶をさしあげましょう。",
+              "english": "Let's offer tea to the guest."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-noun-wo-morau",
+          "title": "Noun もらう (Noun wo morau)",
+          "explanation": "To receive or get something from someone; 'to receive', 'to get'.",
+          "structure": "Noun + を + もらう",
+          "examples": [
+            {
+              "japanese": "友達からプレゼントをもらいました。",
+              "english": "I received a gift from my friend."
+            },
+            {
+              "japanese": "先生にアドバイスをもらいました。",
+              "english": "I got advice from my teacher."
+            },
+            {
+              "japanese": "お父さんからお小遣いをもらう。",
+              "english": "To receive an allowance from one's father."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-noun-2",
+          "title": "Noun + 中 (Noun + ちゅう)",
+          "explanation": "Express 'in the middle of', 'during', or 'in the process of'.",
+          "structure": "Noun + 中 (ちゅう)",
+          "examples": [
+            {
+              "japanese": "彼は仕事中です。",
+              "english": "He is in the middle of work."
+            },
+            {
+              "japanese": "試験中、携帯電話を使ってはいけません。",
+              "english": "During the exam, you must not use your mobile phone."
+            },
+            {
+              "japanese": "映画を観ている最中に、彼は泣き始めました。",
+              "english": "In the middle of watching the movie, he started to cry."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-verb-saserareru",
+          "title": "Verb させられる (Verb-saserareru)",
+          "explanation": "Express the passive causative form; 'to be made to', 'to be forced to'.",
+          "structure": "Group 1 Verb: Replace ～う with ～わせられる, Group 2 Verb: Replace ～る with ～させられる, Group 3 Verb: する → させられる, くる → こさせられる",
+          "examples": [
+            {
+              "japanese": "子供たちは先生に宿題をやらせられました。",
+              "english": "The children were made to do their homework by the teacher."
+            },
+            {
+              "japanese": "彼は会社にもっと働かせられた。",
+              "english": "He was forced to work more by the company."
+            },
+            {
+              "japanese": "私は友達にその機密を話させられました。",
+              "english": "I was made to reveal that secret by my friend."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n4-grammar-05",
+      "name": "N4 Grammar 5",
+      "type": "grammar",
+      "level": "n4",
+      "order": 185,
+      "intro": {
+        "title": "N4 Grammar — Group 5",
+        "explanation": "Learn N4 grammar points 21–25. These patterns are essential for the JLPT N4 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n4-verb-saseru",
+          "title": "Verb させる (Verb-saseru)",
+          "explanation": "Expresses 'to make someone do something', 'to let someone do something', or 'to cause someone to do something'.",
+          "structure": "Group 1 Verbs: Change the last hiragana to ～せる, Group 2 Verbs: Remove ～る and add ～させる, Group 3 Verbs: する → させる, くる → こさせる",
+          "examples": [
+            {
+              "japanese": "先生が生徒に宿題をさせました。",
+              "english": "The teacher made the students do homework."
+            },
+            {
+              "japanese": "母が私に部屋を掃除させました。",
+              "english": "My mother made me clean my room."
+            },
+            {
+              "japanese": "彼女にピアノを弾かせてあげました。",
+              "english": "I let her play the piano."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-verb-ta-koto-ga-aru",
+          "title": "Verb た ことがある (Verb ta koto ga aru)",
+          "explanation": "Expresses the experience of having done something in the past.",
+          "structure": "Verb-た-form + ことがある",
+          "examples": [
+            {
+              "japanese": "日本に行ったことがあります。",
+              "english": "I have been to Japan before."
+            },
+            {
+              "japanese": "寿司を食べたことがありますか？",
+              "english": "Have you ever eaten sushi before?"
+            },
+            {
+              "japanese": "彼はマラソンを走ったことがあります。",
+              "english": "He has experienced running a marathon."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-verb",
+          "title": "Verb た ときに (Verb た ときに)",
+          "explanation": "Express an action or event that occurred at a specific time in the past; 'when', 'at the time'.",
+          "structure": "Verb-た + ときに",
+          "examples": [
+            {
+              "japanese": "映画を見たときに、泣きました。",
+              "english": "When I watched the movie, I cried."
+            },
+            {
+              "japanese": "彼に初めて会ったときに、遅刻していました。",
+              "english": "When I first met him, he was late."
+            },
+            {
+              "japanese": "日本へ行ったときに、たくさんの写真を撮りました。",
+              "english": "When I went to Japan, I took a lot of photos."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-verb-ta-tokoro",
+          "title": "Verb た ところ (Verb ta tokoro)",
+          "explanation": "Expresses the situation right after an action has taken place.",
+          "structure": "Verb (た form) + ところ",
+          "examples": [
+            {
+              "japanese": "ドアを開けたところ、猫が飛び出してきた。",
+              "english": "When I opened the door, a cat came jumping out."
+            },
+            {
+              "japanese": "電話を切ったところ、また鳴った。",
+              "english": "Right after I hung up the phone, it rang again."
+            },
+            {
+              "japanese": "宿題を終わらせたところで、友達から連絡が来た。",
+              "english": "Just as I finished my homework, I got a message from my friend."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-ta-hou-ga-ii",
+          "title": "Verb たほうがいい (〜ta hou ga ii)",
+          "explanation": "Used to give advice or make a suggestion to someone - 'it's better if...'.",
+          "structure": "Verb (past tense) + ほうがいい",
+          "examples": [
+            {
+              "japanese": "早く寝たほうがいい。",
+              "english": "It's better if you go to bed early."
+            },
+            {
+              "japanese": "もっと勉強したほうがいい。",
+              "english": "You should study more."
+            },
+            {
+              "japanese": "病気の時は、薬を飲んだほうがいい。",
+              "english": "It's a good idea to take medicine when you're sick."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n4-grammar-06",
+      "name": "N4 Grammar 6",
+      "type": "grammar",
+      "level": "n4",
+      "order": 186,
+      "intro": {
+        "title": "N4 Grammar — Group 6",
+        "explanation": "Learn N4 grammar points 26–30. These patterns are essential for the JLPT N4 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n4-tame-ni",
+          "title": "Verb ために (tame ni)",
+          "explanation": "Used to describe the purpose or reason for an action; 'for the sake of', 'in order to', 'because of'.",
+          "structure": "1) Verb (dictionary form) + ために (purpose)\n2) い-Adjective + ために (reason)\n3) な-Adjective + な + ために (reason)\n4) Noun + の + ために (reason)",
+          "examples": [
+            {
+              "japanese": "試験に合格するために、毎日勉強しています。",
+              "english": "I study every day in order to pass the exam."
+            },
+            {
+              "japanese": "健康のために、毎日運動しなければなりません。",
+              "english": "For the sake of health, I must exercise daily."
+            },
+            {
+              "japanese": "仕事が忙しいために、友達と会う時間がありません。",
+              "english": "Because my work is busy, I don't have time to meet friends."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-tsumori",
+          "title": "Verb つもり (〜tsumori)",
+          "explanation": "Express the intention, plan, or determination to do something; 'I intend to', 'I plan to', 'I'm determined to'.",
+          "structure": "Verb-casual + つもり",
+          "examples": [
+            {
+              "japanese": "明日、友達に会うつもりです。",
+              "english": "I plan to meet my friend tomorrow."
+            },
+            {
+              "japanese": "今夜、晩ご飯を作るつもりです。",
+              "english": "I intend to cook dinner tonight."
+            },
+            {
+              "japanese": "来年、留学するつもりです。",
+              "english": "I plan to study abroad next year."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-verb-te-ageru",
+          "title": "Verb てあげる (Verb te ageru)",
+          "explanation": "Used to express doing something for someone; 'do something for someone'.",
+          "structure": "Verb-て form + あげる",
+          "examples": [
+            {
+              "japanese": "友達が疲れていたから、荷物を持ってあげた。",
+              "english": "Since my friend was tired, I carried their luggage for them."
+            },
+            {
+              "japanese": "弟は宿題がわからなかったので、手伝ってあげた。",
+              "english": "My younger brother couldn't understand the homework, so I helped him."
+            },
+            {
+              "japanese": "彼女が遅れそうだったから、駅まで迎えに行ってあげた。",
+              "english": "She was running late, so I went to pick her up at the station."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-verb-te-aru",
+          "title": "Verb て ある (Verb-te aru)",
+          "explanation": "Indicates that an action has been done and its result is still in effect.",
+          "structure": "Verb-て form + ある",
+          "examples": [
+            {
+              "japanese": "窓が開けてある。",
+              "english": "The window has been opened (and remains open)."
+            },
+            {
+              "japanese": "宿題がもう終わってある。",
+              "english": "The homework has already been done (and remains that way)."
+            },
+            {
+              "japanese": "洗濯物が全部干してある。",
+              "english": "The laundry has been hung up to dry (and remains that way)."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-verb-te-iku",
+          "title": "Verb て いく (Verb-te iku)",
+          "explanation": "Expresses an action that continues on into the future or a change that progresses over time.",
+          "structure": "Verb in て-form + いく",
+          "examples": [
+            {
+              "japanese": "このまま練習を続けていくと、上達するでしょう。",
+              "english": "If you keep practicing like this, you will improve."
+            },
+            {
+              "japanese": "彼は成長していくうちに、自立心が強くなった。",
+              "english": "As he grew up, his independence became stronger."
+            },
+            {
+              "japanese": "この会社はこれからも技術革新を行っていくでしょう。",
+              "english": "This company will continue to innovate in technology in the future."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n4-grammar-07",
+      "name": "N4 Grammar 7",
+      "type": "grammar",
+      "level": "n4",
+      "order": 187,
+      "intro": {
+        "title": "N4 Grammar — Group 7",
+        "explanation": "Learn N4 grammar points 31–35. These patterns are essential for the JLPT N4 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n4-te-itadakitai",
+          "title": "Verb ていただきたい (te itadakitai)",
+          "explanation": "Express a polite request or desire that someone does something for you.",
+          "structure": "Verb-て form + いただきたい",
+          "examples": [
+            {
+              "japanese": "資料をコピーしていただきたいです。",
+              "english": "I would like you to make copies of the documents."
+            },
+            {
+              "japanese": "この仕事を手伝っていただきたいのですが。",
+              "english": "I would like to ask for your assistance with this work."
+            },
+            {
+              "japanese": "もしよろしければ、指導していただきたいです。",
+              "english": "If it is not too much trouble, I would like you to guide me."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-te-itadaku",
+          "title": "Verb ていただく (〜te itadaku)",
+          "explanation": "Used to express receiving someone's favor or help; 'to kindly do'.",
+          "structure": "Verb-て form + いただく",
+          "examples": [
+            {
+              "japanese": "メールを送っていただいて、ありがとうございます。",
+              "english": "Thank you for kindly sending the email."
+            },
+            {
+              "japanese": "荷物を運んでいただいて、助かりました。",
+              "english": "You really helped me by carrying the luggage."
+            },
+            {
+              "japanese": "資料をチェックしていただきたいです。",
+              "english": "I would like you to kindly check the documents."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-verb-te-itadakemasen-ka",
+          "title": "Verb て いただけませんか (Verb te itadakemasen ka)",
+          "explanation": "A polite request; 'Could you please...', 'Would you mind...'",
+          "structure": "Verb-て form + いただけませんか",
+          "examples": [
+            {
+              "japanese": "この手紙を投函していただけませんか。",
+              "english": "Could you please mail this letter for me?"
+            },
+            {
+              "japanese": "この荷物を持っていただけませんか。",
+              "english": "Could you please carry this luggage for me?"
+            },
+            {
+              "japanese": "隣の部屋にいる人に静かにしていただけませんか。",
+              "english": "Could you please ask the person next door to be quiet?"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-verb-te-iru",
+          "title": "Verb て いる (Verb-te iru)",
+          "explanation": "Expresses an ongoing action or a state resulting from a past action.",
+          "structure": "Verb (て-form) + いる",
+          "examples": [
+            {
+              "japanese": "今、本を読んでいます。",
+              "english": "I am reading a book now."
+            },
+            {
+              "japanese": "彼は英語を勉強しています。",
+              "english": "He is studying English."
+            },
+            {
+              "japanese": "ケーキが冷蔵庫に入っています。",
+              "english": "The cake is in the refrigerator."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-verb-te-iru-tokoro",
+          "title": "Verb て いる ところ (Verb te iru tokoro)",
+          "explanation": "Describes an action that is currently happening; 'in the middle of', 'in the process of'.",
+          "structure": "Verb-て form + いる ところ",
+          "examples": [
+            {
+              "japanese": "彼は宿題をしているところです。",
+              "english": "He is in the middle of doing his homework."
+            },
+            {
+              "japanese": "私たちは映画を見ているところでした。",
+              "english": "We were in the process of watching a movie."
+            },
+            {
+              "japanese": "子供たちは公園で遊んでいるところです。",
+              "english": "The kids are in the middle of playing in the park."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n4-grammar-08",
+      "name": "N4 Grammar 8",
+      "type": "grammar",
+      "level": "n4",
+      "order": 188,
+      "intro": {
+        "title": "N4 Grammar — Group 8",
+        "explanation": "Learn N4 grammar points 36–40. These patterns are essential for the JLPT N4 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n4-te-iru-aida-ni",
+          "title": "Verb ている間に (te iru aida ni)",
+          "explanation": "Expresses 'while' or 'during the time' something is happening.",
+          "structure": "Verb-て form + いる + 間に",
+          "examples": [
+            {
+              "japanese": "映画を見ている間に、彼は寝てしまった。",
+              "english": "While watching the movie, he fell asleep."
+            },
+            {
+              "japanese": "子供が遊んでいる間に、私は料理を作ります。",
+              "english": "While the children are playing, I'll cook."
+            },
+            {
+              "japanese": "会議が行われている間に、雨が降り始めた。",
+              "english": "While the meeting was being held, it started raining."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-te-oku",
+          "title": "Verb ておく (〜te oku)",
+          "explanation": "Perform an action in preparation for a future situation; 'to do something in advance'.",
+          "structure": "Verb-て form + おく",
+          "examples": [
+            {
+              "japanese": "駅で切符を買っておこう。",
+              "english": "Let's buy the tickets in advance at the station."
+            },
+            {
+              "japanese": "明日早く起きるために、今晩早く寝ておきます。",
+              "english": "I will go to bed early tonight to wake up early tomorrow."
+            },
+            {
+              "japanese": "試験前に勉強しておかないと、失敗するかもしれない。",
+              "english": "If I don't study in advance before the exam, I might fail."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-verb-te-kudasaimasen-ka",
+          "title": "Verb て くださいませんか (Verb-te kudasaimasen ka)",
+          "explanation": "Polite request for asking someone for a favor.",
+          "structure": "Verb in て-form + くださいませんか",
+          "examples": [
+            {
+              "japanese": "コーヒーを飲んでくださいませんか。",
+              "english": "Would you please drink some coffee?"
+            },
+            {
+              "japanese": "ドアを閉めてくださいませんか。",
+              "english": "Would you please close the door?"
+            },
+            {
+              "japanese": "明日お昼に会ってくださいませんか。",
+              "english": "Would you please meet me at lunch tomorrow?"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-verb-te-kudasaru",
+          "title": "Verb て くださる (Verb-te kudasaru)",
+          "explanation": "Expresses gratitude for receiving someone's favor; 'to kindly do'.",
+          "structure": "Verb て-form + くださる",
+          "examples": [
+            {
+              "japanese": "先生が手伝ってくださる。",
+              "english": "The teacher kindly helps."
+            },
+            {
+              "japanese": "お母さんが美味しい料理を作ってくださる。",
+              "english": "My mother kindly cooks delicious meals."
+            },
+            {
+              "japanese": "友達が私を駅まで送ってくださる。",
+              "english": "My friend kindly gives me a ride to the station."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-verb-te-kuru",
+          "title": "Verb て くる (Verb te kuru)",
+          "explanation": "An action that starts in the past and continues to the present or future; 'come to', 'begin to', 'become'.",
+          "structure": "Verb て-form + くる",
+          "examples": [
+            {
+              "japanese": "最近、日本語が分かってくるようになりました。",
+              "english": "Recently, I've come to understand Japanese."
+            },
+            {
+              "japanese": "寒くなってきたので、コートを着ましょう。",
+              "english": "Since it's gotten cold, let's put on a coat."
+            },
+            {
+              "japanese": "雨がやんできました。",
+              "english": "The rain has stopped (and it's cleared up)."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n4-grammar-09",
+      "name": "N4 Grammar 9",
+      "type": "grammar",
+      "level": "n4",
+      "order": 189,
+      "intro": {
+        "title": "N4 Grammar — Group 9",
+        "explanation": "Learn N4 grammar points 41–45. These patterns are essential for the JLPT N4 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n4-te-kuremasen-ka",
+          "title": "Verb てくれませんか (〜te kuremasen ka)",
+          "explanation": "A polite way to request someone to do something for you; 'Could you please', 'Would you please', 'Won't you'.",
+          "structure": "Verb-て form + くれませんか",
+          "examples": [
+            {
+              "japanese": "ドアを開けてくれませんか。",
+              "english": "Could you please open the door?"
+            },
+            {
+              "japanese": "これを見てくれませんか。",
+              "english": "Would you please take a look at this?"
+            },
+            {
+              "japanese": "手伝ってくれませんか。",
+              "english": "Won't you help me?"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-verb-te-kureru",
+          "title": "Verb て くれる (Verb-te kureru)",
+          "explanation": "Expresses that someone does something for the speaker (or another person in speaker's group); 'to do something for me/us'.",
+          "structure": "Verb-te form + くれる",
+          "examples": [
+            {
+              "japanese": "友達が宿題を手伝ってくれました。",
+              "english": "My friend helped me with my homework."
+            },
+            {
+              "japanese": "弟が部屋を掃除してくれた。",
+              "english": "My younger brother cleaned the room for me."
+            },
+            {
+              "japanese": "先生が質問に答えてくれます。",
+              "english": "The teacher answers my questions for me."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-verb-te-sashiageru",
+          "title": "Verb て + さしあげる (Verb TE sashiageru)",
+          "explanation": "A polite way to express giving or doing something for someone.",
+          "structure": "Verb-てform + さしあげる",
+          "examples": [
+            {
+              "japanese": "お茶を入れてさしあげます。",
+              "english": "I will prepare and serve tea (for you)."
+            },
+            {
+              "japanese": "メッセージを送ってさしあげました。",
+              "english": "I have sent the message (for you)."
+            },
+            {
+              "japanese": "荷物を持ってさしあげましょうか。",
+              "english": "Shall I carry the luggage (for you)?"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-te-shimau",
+          "title": "Verb てしまう (〜te shimau)",
+          "explanation": "Expresses unintentional actions or actions with regrettable outcomes; 'to end up doing', 'to accidentally do'.",
+          "structure": "Verb-te form + しまう",
+          "examples": [
+            {
+              "japanese": "ケーキを全部食べてしまった。",
+              "english": "I ended up eating the whole cake."
+            },
+            {
+              "japanese": "宿題を忘れてしまいました。",
+              "english": "I accidentally forgot my homework."
+            },
+            {
+              "japanese": "彼に秘密を言ってしまった。",
+              "english": "I accidentally told him the secret."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-verb-te-hoshii",
+          "title": "Verb て ほしい (Verb-te hoshii)",
+          "explanation": "Express a desire for someone else to do something; 'I want (someone) to'.",
+          "structure": "Verb-て form + ほしい",
+          "examples": [
+            {
+              "japanese": "子供にもっと勉強してほしい。",
+              "english": "I want my child to study more."
+            },
+            {
+              "japanese": "彼にもっと早く来てほしい。",
+              "english": "I want him to come earlier."
+            },
+            {
+              "japanese": "友達にその本を読んでほしい。",
+              "english": "I want my friend to read that book."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n4-grammar-10",
+      "name": "N4 Grammar 10",
+      "type": "grammar",
+      "level": "n4",
+      "order": 190,
+      "intro": {
+        "title": "N4 Grammar — Group 10",
+        "explanation": "Learn N4 grammar points 46–50. These patterns are essential for the JLPT N4 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n4-te-miru",
+          "title": "Verb てみる (〜te miru)",
+          "explanation": "Used to express 'try to' or 'attempt to do'.",
+          "structure": "Verb-て form + みる",
+          "examples": [
+            {
+              "japanese": "この料理を作ってみます。",
+              "english": "I will try to make this dish."
+            },
+            {
+              "japanese": "その服を着てみてください。",
+              "english": "Please try on those clothes."
+            },
+            {
+              "japanese": "新しいレストランに行ってみよう。",
+              "english": "Let's try going to the new restaurant."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-te-moraitai",
+          "title": "Verb てもらいたい (～te moraitai)",
+          "explanation": "Express a desire to receive a favor or service from someone else.",
+          "structure": "Verb-て-form + もらいたい",
+          "examples": [
+            {
+              "japanese": "この荷物を運んでもらいたいです。",
+              "english": "I want you to carry this luggage for me."
+            },
+            {
+              "japanese": "彼にそのニュースを教えてもらいたい。",
+              "english": "I want him to tell me the news."
+            },
+            {
+              "japanese": "友達に日本語を教えてもらいたい。",
+              "english": "I want my friend to teach me Japanese."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-verb-te-morau",
+          "title": "Verb て もらう (Verb-te morau)",
+          "explanation": "Express receiving a favor or action from someone.",
+          "structure": "Verb-て form + もらう",
+          "examples": [
+            {
+              "japanese": "友達に宿題を手伝ってもらった。",
+              "english": "I had my friend help me with my homework."
+            },
+            {
+              "japanese": "母に部屋を掃除してもらいました。",
+              "english": "I had my mother clean my room."
+            },
+            {
+              "japanese": "彼に荷物を持ってもらいたい。",
+              "english": "I want him to carry my luggage for me."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-te-moraemasen-ka",
+          "title": "Verb てもらえませんか (～te moraemasen ka)",
+          "explanation": "A polite way to ask for a favor or request someone to do something.",
+          "structure": "Verb-て form + もらえませんか",
+          "examples": [
+            {
+              "japanese": "この手紙を見てもらえませんか。",
+              "english": "Could you take a look at this letter for me?"
+            },
+            {
+              "japanese": "荷物を持ってもらえませんか。",
+              "english": "Could you carry this luggage for me?"
+            },
+            {
+              "japanese": "部屋を掃除してもらえませんか。",
+              "english": "Could you clean the room for me?"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-verb-nai-koto-ga-aru",
+          "title": "Verb ない ことがある (Verb-nai koto ga aru)",
+          "explanation": "Expresses that something doesn't always happen or there are occasions when it doesn't happen.",
+          "structure": "Verb-negative form + ことがある",
+          "examples": [
+            {
+              "japanese": "彼は会議に出席しないことがある。",
+              "english": "There are times when he doesn't attend meetings."
+            },
+            {
+              "japanese": "この電車は定刻に来ないことがある。",
+              "english": "There are occasions when this train doesn't come on time."
+            },
+            {
+              "japanese": "私は朝食を食べないことがある。",
+              "english": "There are times when I don't eat breakfast."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n4-grammar-11",
+      "name": "N4 Grammar 11",
+      "type": "grammar",
+      "level": "n4",
+      "order": 191,
+      "intro": {
+        "title": "N4 Grammar — Group 11",
+        "explanation": "Learn N4 grammar points 51–55. These patterns are essential for the JLPT N4 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n4-verb-nai-koto-ni-suru",
+          "title": "Verb ない + ことにする (Verb nai koto ni suru)",
+          "explanation": "To decide not to do something.",
+          "structure": "Verb-ない form + ことにする",
+          "examples": [
+            {
+              "japanese": "明日のパーティーに行かないことにする。",
+              "english": "I've decided not to go to tomorrow's party."
+            },
+            {
+              "japanese": "そのケーキを食べないことにします。",
+              "english": "I've decided not to eat that cake."
+            },
+            {
+              "japanese": "今日はジョギングをしないことにする。",
+              "english": "I've decided not to go jogging today."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-verb-nai-koto-ni-naru",
+          "title": "Verb ない ことになる (Verb nai koto ni naru)",
+          "explanation": "Expresses a result; 'end up not', 'it will become that', 'it would mean that'.",
+          "structure": "Verb-negative (ない) + ことになる",
+          "examples": [
+            {
+              "japanese": "今日彼が来ないことになると、私たちの予定はキャンセルされます。",
+              "english": "If he doesn't come today, our plans will be canceled."
+            },
+            {
+              "japanese": "このプロジェクトが進まないことになると、収益が減るでしょう。",
+              "english": "If this project doesn't progress, it would mean that revenue will decrease."
+            },
+            {
+              "japanese": "彼女は試験に合格しないことになると、卒業が遅れます。",
+              "english": "If she ends up not passing the exam, her graduation will be delayed."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-verb-nai-hou-ga-ii",
+          "title": "Verb ないほうがいい (Verb nai hou ga ii)",
+          "explanation": "Expresses the idea that it is better not to do something.",
+          "structure": "Verb-negative form + ほうがいい",
+          "examples": [
+            {
+              "japanese": "この薬は飲まないほうがいいです。",
+              "english": "It's better not to take this medicine."
+            },
+            {
+              "japanese": "急いでいるときは、走らないほうがいい。",
+              "english": "When you're in a hurry, it's better not to run."
+            },
+            {
+              "japanese": "彼に秘密を知られたくなければ、話さないほうがいい。",
+              "english": "If you don't want him to know your secret, it's better not to tell him."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-nagara",
+          "title": "Verb ながら (〜nagara)",
+          "explanation": "Expresses 'while' or 'as' in the sense of doing two things simultaneously.",
+          "structure": "Verb-masu stem + ながら",
+          "examples": [
+            {
+              "japanese": "テレビを見ながら宿題をしました。",
+              "english": "I did my homework while watching television."
+            },
+            {
+              "japanese": "音楽を聞きながら料理をしました。",
+              "english": "I cooked while listening to music."
+            },
+            {
+              "japanese": "歩きながらスマホを見るのは危険です。",
+              "english": "Looking at your smartphone while walking is dangerous."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-nasai",
+          "title": "Verb なさい (〜nasai)",
+          "explanation": "A command form used to give orders or instructions; 'Please do', 'Do this'.",
+          "structure": "Verb-stem + なさい",
+          "examples": [
+            {
+              "japanese": "部屋を掃除しなさい。",
+              "english": "Clean your room."
+            },
+            {
+              "japanese": "勉強しなさい。",
+              "english": "Study."
+            },
+            {
+              "japanese": "早く起きなさい。",
+              "english": "Wake up early."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n4-grammar-12",
+      "name": "N4 Grammar 12",
+      "type": "grammar",
+      "level": "n4",
+      "order": 192,
+      "intro": {
+        "title": "N4 Grammar — Group 12",
+        "explanation": "Learn N4 grammar points 56–60. These patterns are essential for the JLPT N4 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n4-nikui",
+          "title": "Verb にくい (〜nikui)",
+          "explanation": "Express difficulty or complexity; 'hard to', 'difficult to', 'not easily'.",
+          "structure": "Verb-stem + にくい",
+          "examples": [
+            {
+              "japanese": "この字は読みにくいです。",
+              "english": "This character is hard to read."
+            },
+            {
+              "japanese": "このドアは開けにくい。",
+              "english": "This door is difficult to open."
+            },
+            {
+              "japanese": "彼の字は読みにくい。",
+              "english": "His handwriting is hard to read."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-yasui",
+          "title": "Verb やすい (〜yasui)",
+          "explanation": "Indicates that something is easy to do; 'easy to', 'easy for'.",
+          "structure": "Verb-stem + やすい",
+          "examples": [
+            {
+              "japanese": "この本は読みやすいです。",
+              "english": "This book is easy to read."
+            },
+            {
+              "japanese": "このシャツは着やすい。",
+              "english": "This shirt is easy to wear."
+            },
+            {
+              "japanese": "彼は話しやすい人です。",
+              "english": "He is an easy person to talk to."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-verb-you-to-omou",
+          "title": "Verb ようと思う (Verb-you to omou)",
+          "explanation": "Express intention or plan to do something; 'I think I will', 'I plan to', 'I intend to'.",
+          "structure": "Verb-volitional + と思う",
+          "examples": [
+            {
+              "japanese": "明日、映画を見ようと思います。",
+              "english": "I think I will watch a movie tomorrow."
+            },
+            {
+              "japanese": "週末に友達と遊ぼうと思っています。",
+              "english": "I plan to hang out with friends on the weekend."
+            },
+            {
+              "japanese": "勉強をもっと頑張ろうと思う。",
+              "english": "I intend to study harder."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-you-ni",
+          "title": "Verb ように (〜you ni)",
+          "explanation": "Used to express 'like', 'as if', 'in order to', or 'so that'.",
+          "structure": "Examples: Noun + のように / Verb-casual + ように / い-adjective + ように",
+          "examples": [
+            {
+              "japanese": "彼女は鳥のように軽やかに踊る。",
+              "english": "She dances lightly like a bird."
+            },
+            {
+              "japanese": "覚えたことを忘れないように、毎日復習しましょう。",
+              "english": "In order not to forget what you've learned, let's review every day."
+            },
+            {
+              "japanese": "歌手になるように、毎日歌の練習をしています。",
+              "english": "In order to become a singer, I practice singing every day."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-verb-you-ni-suru",
+          "title": "Verb ようにする (Verb ~you ni suru)",
+          "explanation": "Make an effort to; try to; see to it that; ensure that.",
+          "structure": "Verb-dictionary form + ようにする",
+          "examples": [
+            {
+              "japanese": "毎日運動するようにしています。",
+              "english": "I try to exercise every day."
+            },
+            {
+              "japanese": "早く寝るようにしてください。",
+              "english": "Please try to go to bed early."
+            },
+            {
+              "japanese": "約束を守るようにします。",
+              "english": "I will make sure to keep my promise."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n4-grammar-13",
+      "name": "N4 Grammar 13",
+      "type": "grammar",
+      "level": "n4",
+      "order": 193,
+      "intro": {
+        "title": "N4 Grammar — Group 13",
+        "explanation": "Learn N4 grammar points 61–65. These patterns are essential for the JLPT N4 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n4-you-ni-naru",
+          "title": "Verb ようになる (〜you ni naru)",
+          "explanation": "Express a change in ability, situation or state; 'become able to', 'come to', 'begin to'.",
+          "structure": "Verb-dictionary/potential form + ようになる",
+          "examples": [
+            {
+              "japanese": "日本語が話せるようになりました。",
+              "english": "I have become able to speak Japanese."
+            },
+            {
+              "japanese": "最近、早く寝るようになった。",
+              "english": "Recently, I have come to go to bed early."
+            },
+            {
+              "japanese": "彼はピアノを弾けるようになりました。",
+              "english": "He has become able to play the piano."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-verb-you-ni-iu",
+          "title": "Verb ように言う (Verb-you ni iu)",
+          "explanation": "Tell someone to do something; 'tell to do', 'instruct to do'.",
+          "structure": "Verb-casual + ように言う",
+          "examples": [
+            {
+              "japanese": "先生は私たちに宿題をやるように言いました。",
+              "english": "The teacher told us to do our homework."
+            },
+            {
+              "japanese": "母は弟に部屋を片付けるように言いました。",
+              "english": "My mother told my younger brother to clean his room."
+            },
+            {
+              "japanese": "上司は私に報告書を提出するように言いました。",
+              "english": "My boss told me to submit the report."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-rareru",
+          "title": "Verb られる (〜rareru)",
+          "explanation": "Expresses passive voice or potential form for verbs.",
+          "structure": "う-verb (passive): Replace the final う with われる / る-verb (passive & potential): Replace る with られる / Irregular: する → される, くる → こられる",
+          "examples": [
+            {
+              "japanese": "彼は先生に褒められました。",
+              "english": "He was praised by the teacher."
+            },
+            {
+              "japanese": "彼は友達に笑われました。",
+              "english": "He was laughed at by his friends."
+            },
+            {
+              "japanese": "映画は観られましたか？",
+              "english": "Were you able to watch the movie?"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-ru-koto-ga-aru",
+          "title": "Verb る ことがある (〜ru koto ga aru)",
+          "explanation": "Used to express that something happens sometimes or has happened before.",
+          "structure": "Verb-dictionary form + ことがある",
+          "examples": [
+            {
+              "japanese": "彼は遅刻することがあります。",
+              "english": "He is sometimes late."
+            },
+            {
+              "japanese": "私は寝坊することがあります。",
+              "english": "I sometimes oversleep."
+            },
+            {
+              "japanese": "彼女は歌を歌うことがあります。",
+              "english": "She sometimes sings songs."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-ru-koto-ga-dekiru",
+          "title": "Verb ることができる (〜ru koto ga dekiru)",
+          "explanation": "Express ability or possibility of doing an action; 'can', 'be able to', 'is possible'.",
+          "structure": "Verb-る + ことができる",
+          "examples": [
+            {
+              "japanese": "私は日本語を話すことができます。",
+              "english": "I can speak Japanese."
+            },
+            {
+              "japanese": "彼はギターを弾くことができます。",
+              "english": "He can play the guitar."
+            },
+            {
+              "japanese": "この問題を解決することができますか？",
+              "english": "Can you solve this problem?"
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n4-grammar-14",
+      "name": "N4 Grammar 14",
+      "type": "grammar",
+      "level": "n4",
+      "order": 194,
+      "intro": {
+        "title": "N4 Grammar — Group 14",
+        "explanation": "Learn N4 grammar points 66–70. These patterns are essential for the JLPT N4 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n4-ru-koto-ni-suru",
+          "title": "Verb ることにする (〜ru koto ni suru)",
+          "explanation": "Decide to do something, make a decision.",
+          "structure": "Verb-る + ことにする",
+          "examples": [
+            {
+              "japanese": "来週、ジムに行くことにしました。",
+              "english": "I decided to go to the gym next week."
+            },
+            {
+              "japanese": "この靴を買うことにしました。",
+              "english": "I decided to buy these shoes."
+            },
+            {
+              "japanese": "毎日、散歩をすることにしました。",
+              "english": "I decided to take a walk every day."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-ru-koto-ni-naru",
+          "title": "Verb る ことになる (〜ru koto ni naru)",
+          "explanation": "Indicates that something has been decided or arranged; 'it has been decided that', 'it turns out that'.",
+          "structure": "Verb-る + ことになる",
+          "examples": [
+            {
+              "japanese": "今日は会議がなくなることになりました。",
+              "english": "It has been decided that there will be no meeting today."
+            },
+            {
+              "japanese": "来週、友達と旅行することになった。",
+              "english": "It has been arranged that I will travel with my friends next week."
+            },
+            {
+              "japanese": "彼女が今度のプロジェクトのリーダーになることになりました。",
+              "english": "It has been decided that she will be the leader of the next project."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-ru-toki-ni",
+          "title": "Verb るときに (〜ru toki ni)",
+          "explanation": "Describes the time when a certain action takes place; 'when', 'at the time'.",
+          "structure": "Verb-る + ときに",
+          "examples": [
+            {
+              "japanese": "映画を見るときに、ポップコーンを食べます。",
+              "english": "When I watch a movie, I eat popcorn."
+            },
+            {
+              "japanese": "寝るときに、部屋の電気を消します。",
+              "english": "When I go to bed, I turn off the room lights."
+            },
+            {
+              "japanese": "運動するときに、水分補給が大切です。",
+              "english": "When exercising, it's important to stay hydrated."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-verb-ru-tokoro",
+          "title": "Verb る ところ (Verb-ru tokoro)",
+          "explanation": "Expresses the state or moment when an action is about to happen or is happening.",
+          "structure": "Verb-dictionary form + ところ",
+          "examples": [
+            {
+              "japanese": "彼は食べるところです。",
+              "english": "He is in the process of eating."
+            },
+            {
+              "japanese": "私は出かけるところです。",
+              "english": "I am just about to leave."
+            },
+            {
+              "japanese": "彼女は泣くところでした。",
+              "english": "She was on the verge of crying."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-dasu",
+          "title": "Verb 出す (~dasu)",
+          "explanation": "Express the action of taking something out, starting an action, or emphasizing a verb.",
+          "structure": "Verb stem + 出す (~dasu)",
+          "examples": [
+            {
+              "japanese": "本を棚から出してください。",
+              "english": "Please take the book out from the shelf."
+            },
+            {
+              "japanese": "彼は部屋から急いで出ました。",
+              "english": "He rushed out of the room."
+            },
+            {
+              "japanese": "授業が始まる前に宿題を出してください。",
+              "english": "Submit your homework before class starts."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n4-grammar-15",
+      "name": "N4 Grammar 15",
+      "type": "grammar",
+      "level": "n4",
+      "order": 195,
+      "intro": {
+        "title": "N4 Grammar — Group 15",
+        "explanation": "Learn N4 grammar points 71–75. These patterns are essential for the JLPT N4 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n4-hou",
+          "title": "Verb 方 (〜hou)",
+          "explanation": "Indicates the way or method of doing something; often read as '～かた' ('how to', 'the way of').",
+          "structure": "Verb-stem + 方 (read as かた)",
+          "examples": [
+            {
+              "japanese": "誰かがケーキの作り方を知っていますか？",
+              "english": "Does anyone know how to make a cake?"
+            },
+            {
+              "japanese": "彼女は英語の話し方を学んでいます。",
+              "english": "She is learning how to speak English."
+            },
+            {
+              "japanese": "このパソコンの使い方を教えてください。",
+              "english": "Please teach me how to use this computer."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-owaru",
+          "title": "Verb 終わる (〜owaru)",
+          "explanation": "Verbal action is completed; 'to finish', 'to end'.",
+          "structure": "終わる (owaru) is a godan (u-verb)",
+          "examples": [
+            {
+              "japanese": "映画が終わったら、家に帰ります。",
+              "english": "When the movie finishes, I'll go home."
+            },
+            {
+              "japanese": "仕事が終わるまで、待ってください。",
+              "english": "Please wait until the work is finished."
+            },
+            {
+              "japanese": "パーティーはもうすぐ終わります。",
+              "english": "The party will be over soon."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-tsuzukeru",
+          "title": "Verb + 続ける (つづける, tsuzukeru)",
+          "explanation": "To continue doing or to keep doing an action.",
+          "structure": "Verb-masu-stem + 続ける",
+          "examples": [
+            {
+              "japanese": "彼は毎日ジムで運動を続けています。",
+              "english": "He continues to exercise at the gym every day."
+            },
+            {
+              "japanese": "彼女は勉強を続けるために図書館に行きました。",
+              "english": "She went to the library to continue studying."
+            },
+            {
+              "japanese": "私たちは雨にも関わらず散歩を続けました。",
+              "english": "We continued walking despite the rain."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-kashira",
+          "title": "～かしら (〜kashira)",
+          "explanation": "Indicates uncertainty or doubt; 'I wonder', 'I'm not sure'.",
+          "structure": "Verb-casual + かしら, い-Adjective + かしら, な-Adjective + かしら, Noun + かしら",
+          "examples": [
+            {
+              "japanese": "今日は雨が降るかしら？",
+              "english": "I wonder if it will rain today?"
+            },
+            {
+              "japanese": "このケーキは美味しいかしら？",
+              "english": "I wonder if this cake is delicious?"
+            },
+            {
+              "japanese": "彼は病気かしら？",
+              "english": "I wonder if he is sick?"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-ka-dou-ka",
+          "title": "～かどうか (〜ka dou ka)",
+          "explanation": "Used to express 'whether' or 'if' in indirect questions or statements.",
+          "structure": "Verb-casual + かどうか, い-Adjective + かどうか, な-Adjective + (だ)かどうか, Noun + (だ)かどうか",
+          "examples": [
+            {
+              "japanese": "彼が来るかどうか知りません。",
+              "english": "I don't know if he will come or not."
+            },
+            {
+              "japanese": "この本が面白いかどうか教えてください。",
+              "english": "Please tell me if this book is interesting or not."
+            },
+            {
+              "japanese": "彼女が綺麗だかどうかは分かりません。",
+              "english": "I don't know whether she is beautiful or not."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n4-grammar-16",
+      "name": "N4 Grammar 16",
+      "type": "grammar",
+      "level": "n4",
+      "order": 196,
+      "intro": {
+        "title": "N4 Grammar — Group 16",
+        "explanation": "Learn N4 grammar points 76–80. These patterns are essential for the JLPT N4 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n4-kanaa",
+          "title": "～かなあ (〜kanaa)",
+          "explanation": "Expresses uncertainty or wonder; 'I wonder', 'I'm not sure'.",
+          "structure": "Verb-casual + かなあ, い-Adjective + かなあ, (な-Adjective/Noun) + (だ) + かなあ",
+          "examples": [
+            {
+              "japanese": "明日雨が降るかなあ。",
+              "english": "I wonder if it will rain tomorrow."
+            },
+            {
+              "japanese": "このケーキは美味しいかなあ。",
+              "english": "I wonder if this cake is delicious."
+            },
+            {
+              "japanese": "彼は病気かなあ。",
+              "english": "I wonder if he is sick."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-kamoshirenai",
+          "title": "～かもしれない (〜kamoshirenai)",
+          "explanation": "Express uncertainty; 'maybe', 'might', 'possibly'.",
+          "structure": "Verb-casual + かもしれない, い-Adjective + かもしれない, な-Adjective + だかもしれない, Noun + だかもしれない",
+          "examples": [
+            {
+              "japanese": "明日雨が降るかもしれない。",
+              "english": "It might rain tomorrow."
+            },
+            {
+              "japanese": "このケーキは美味しいかもしれない。",
+              "english": "This cake might be delicious."
+            },
+            {
+              "japanese": "彼が病気かもしれない。",
+              "english": "He might be sick."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-kara",
+          "title": "～から (〜kara)",
+          "explanation": "Express a reason or cause; 'because', 'since', 'due to'.",
+          "structure": "Verb-casual + から, い-Adjective + から, な-Adjective + だから, Noun + だから",
+          "examples": [
+            {
+              "japanese": "雨が降るから、傘を持って行ってください。",
+              "english": "Because it's raining, please bring an umbrella."
+            },
+            {
+              "japanese": "このケーキは美味しいから、みんな食べるでしょう。",
+              "english": "Because this cake is delicious, everyone will probably eat it."
+            },
+            {
+              "japanese": "彼は病気だから、学校を休みます。",
+              "english": "He will be absent from school because he is sick."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-keredo",
+          "title": "～けれど (〜keredo)",
+          "explanation": "Indicate a soft contrast or contradiction; 'but', 'however'.",
+          "structure": "Verb-casual + けれど, い-Adjective + けれど, な-Adjective + だけれど, Noun + だけれど",
+          "examples": [
+            {
+              "japanese": "今日は忙しいけれど、明日はもっと時間がある。",
+              "english": "I'm busy today, but I have more time tomorrow."
+            },
+            {
+              "japanese": "このレストランは高いけれど、料理が美味しい。",
+              "english": "This restaurant is expensive, but the food is delicious."
+            },
+            {
+              "japanese": "彼は若いけれど、とても経験豊富だ。",
+              "english": "He is young, but he is very experienced."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-sasete-kudasai",
+          "title": "～させてください (〜sasete kudasai)",
+          "explanation": "Express a polite request to allow or permit someone to do something.",
+          "structure": "Verb-causative form + ください",
+          "examples": [
+            {
+              "japanese": "もう少し考えさせてください。",
+              "english": "Please let me think a little more."
+            },
+            {
+              "japanese": "写真を撮らせてください。",
+              "english": "Please let me take a photo."
+            },
+            {
+              "japanese": "もうちょっと練習させてください。",
+              "english": "Please let me practice a little more."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n4-grammar-17",
+      "name": "N4 Grammar 17",
+      "type": "grammar",
+      "level": "n4",
+      "order": 197,
+      "intro": {
+        "title": "N4 Grammar — Group 17",
+        "explanation": "Learn N4 grammar points 81–85. These patterns are essential for the JLPT N4 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n4-shi-shi",
+          "title": "～し、～し、～ (〜shi, 〜shi, 〜)",
+          "explanation": "Express multiple reasons or characteristics; 'and', 'because', 'since'.",
+          "structure": "Verb-casual + し, い-Adjective + し, な-Adjective + だし, Noun + だし",
+          "examples": [
+            {
+              "japanese": "彼は若いし、元気だし、フレンドリーだし、みんなと仲良くなれると思います。",
+              "english": "He is young, energetic, friendly, and I think he can get along with everyone."
+            },
+            {
+              "japanese": "このレストランは料理が美味しいし、雰囲気がいいし、価格も手頃だからお勧めです。",
+              "english": "I recommend this restaurant because the food is delicious, the atmosphere is nice, and the prices are reasonable."
+            },
+            {
+              "japanese": "彼女は勉強ができるし、スポーツも得意だし、性格もいい。",
+              "english": "She is good at studying, good at sports, and has a good personality."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-sugiru",
+          "title": "～すぎる (〜sugiru)",
+          "explanation": "Expresses that something is excessive or overdone; 'too much', 'too', 'over'.",
+          "structure": "Verb-stem + すぎる, い-Adjective (remove い) + すぎる, な-Adjective + すぎる",
+          "examples": [
+            {
+              "japanese": "この部屋は暑すぎる。",
+              "english": "This room is too hot."
+            },
+            {
+              "japanese": "彼は早く来すぎた。",
+              "english": "He came too early."
+            },
+            {
+              "japanese": "この箱は重すぎて持ち上げられない。",
+              "english": "This box is too heavy to lift."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-zutsu",
+          "title": "～ずつ (〜zutsu)",
+          "explanation": "Indicates equal distribution; 'each', 'per', 'apiece'.",
+          "structure": "Noun + ずつ",
+          "examples": [
+            {
+              "japanese": "りんごを2つずつ配ります。",
+              "english": "I will distribute 2 apples each."
+            },
+            {
+              "japanese": "私たちは週に一度ずつ掃除をします。",
+              "english": "We each clean once per week."
+            },
+            {
+              "japanese": "みんなは同じ距離を一歩ずつ歩いた。",
+              "english": "Everyone walked the same distance, one step at a time."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-sou-da",
+          "title": "～そうだ (〜sou da)",
+          "explanation": "Express the appearance, seeming, or feeling of something; 'looks like', 'seems', 'appears'.",
+          "structure": "Verb-ますstem + そうだ, い-Adjective (without い) + そうだ, な-Adjective + そうだ",
+          "examples": [
+            {
+              "japanese": "その花はとてもきれいそうだ。",
+              "english": "That flower looks very beautiful."
+            },
+            {
+              "japanese": "彼は疲れそうだ。",
+              "english": "He looks tired."
+            },
+            {
+              "japanese": "この本は面白そうだ。",
+              "english": "This book looks interesting."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-sonna",
+          "title": "そんな (sonna) + Noun",
+          "explanation": "Expresses 'that kind/type of'; referring to something near the listener or previously mentioned.",
+          "structure": "そんな + Noun",
+          "examples": [
+            {
+              "japanese": "そんな話、信じられない。",
+              "english": "I can't believe that kind of story."
+            },
+            {
+              "japanese": "そんな映画、見たくない。",
+              "english": "I don't want to watch that kind of movie."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n4-grammar-18",
+      "name": "N4 Grammar 18",
+      "type": "grammar",
+      "level": "n4",
+      "order": 198,
+      "intro": {
+        "title": "N4 Grammar — Group 18",
+        "explanation": "Learn N4 grammar points 86–90. These patterns are essential for the JLPT N4 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n4-sonna-ni",
+          "title": "そんなに～ (sonna ni〜)",
+          "explanation": "Expresses 'not so much', 'not that', or 'not so ~'.",
+          "structure": "そんなに + Verb-negation, そんなに + Adjective-negation",
+          "examples": [
+            {
+              "japanese": "そんなに急がなくてもいいですよ。",
+              "english": "You don't have to hurry that much."
+            },
+            {
+              "japanese": "そんなに難しくない問題だと思います。",
+              "english": "I don't think the problem is that difficult."
+            },
+            {
+              "japanese": "彼女はそんなに背が高くありません。",
+              "english": "She is not that tall."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-tara-ii",
+          "title": "～たらいい (〜tara ii)",
+          "explanation": "Expressing a desire or suggestion for a particular outcome; 'it would be good if', 'should', 'I hope'.",
+          "structure": "Verb-casual-past + たらいい",
+          "examples": [
+            {
+              "japanese": "もっと勉強したらいいですよ。",
+              "english": "It would be good if you studied more."
+            },
+            {
+              "japanese": "雨が止んだらいいな。",
+              "english": "I hope the rain stops."
+            },
+            {
+              "japanese": "早く元気になったらいいですね。",
+              "english": "It would be good if you got well soon."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-tara-ikaga-desu-ka",
+          "title": "～たら いかがですか (〜tara ikaga desu ka)",
+          "explanation": "Making polite suggestions; 'how about if', 'what if', 'it would be good if'.",
+          "structure": "Verb-casual, past + たら いかがですか, い-Adjective + かったら いかがですか, な-Adjective + だったら いかがですか, Noun + だったら いかがですか",
+          "examples": [
+            {
+              "japanese": "図書館に行ったらいかがですか。",
+              "english": "How about going to the library?"
+            },
+            {
+              "japanese": "寒かったらカーディガンを着るのはいかがですか。",
+              "english": "How about wearing a cardigan if it's cold?"
+            },
+            {
+              "japanese": "部屋が暗かったら照明を付けるのはいかがですか。",
+              "english": "What if you turn on the light if the room is dark?"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-tara-doudesuka",
+          "title": "～たら どうですか (〜tara doudesuka)",
+          "explanation": "Express a suggestion or advice; 'what if', 'how about', 'why don't you'.",
+          "structure": "Verb-た form + ら どうですか",
+          "examples": [
+            {
+              "japanese": "スキーに行ったらどうですか？",
+              "english": "How about going skiing?"
+            },
+            {
+              "japanese": "少し休んだらどうですか？",
+              "english": "What if you take a little break?"
+            },
+            {
+              "japanese": "この本を読んだらどうですか？",
+              "english": "Why don't you read this book?"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-tari-tari",
+          "title": "～たり～たり (〜tari 〜tari)",
+          "explanation": "Used to list multiple actions or states; 'doing things like', 'and so on', 'etc.'",
+          "structure": "Verb-ta + り + next verb-ta + り, い-Adjective + かったり + next verb-ta + り, な-Adjective + だったり + next verb-ta + り, Noun + だったり + next verb-ta + り",
+          "examples": [
+            {
+              "japanese": "週末は映画を観たり、本を読んだりする。",
+              "english": "On weekends, I do things like watching movies and reading books."
+            },
+            {
+              "japanese": "彼女は料理が上手だったり、歌がうまかったりする。",
+              "english": "She is good at things like cooking and singing."
+            },
+            {
+              "japanese": "このリゾートではスキーをしたり、温泉に入ったりできる。",
+              "english": "At this resort, you can do things like skiing and going to hot springs."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n4-grammar-19",
+      "name": "N4 Grammar 19",
+      "type": "grammar",
+      "level": "n4",
+      "order": 199,
+      "intro": {
+        "title": "N4 Grammar — Group 19",
+        "explanation": "Learn N4 grammar points 91–95. These patterns are essential for the JLPT N4 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n4-darou",
+          "title": "～だろう (〜darou)",
+          "explanation": "Express probability, likelihood or certainty; 'probably', 'maybe', 'I think'.",
+          "structure": "Verb-casual + だろう, い-Adjective (drop い) + だろう, な-Adjective + だろう, Noun + だろう",
+          "examples": [
+            {
+              "japanese": "明日は晴れるだろう。",
+              "english": "It will probably be sunny tomorrow."
+            },
+            {
+              "japanese": "彼は忙しいだろう。",
+              "english": "He is probably busy."
+            },
+            {
+              "japanese": "この本は面白いだろう。",
+              "english": "This book is probably interesting."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-tte-iu",
+          "title": "～っていう (〜tte iu)",
+          "explanation": "Used to quote, define, or specify a noun.",
+          "structure": "Noun/Adjective/Verb + っていう + Noun",
+          "examples": [
+            {
+              "japanese": "ピザっていう料理が大好きです。",
+              "english": "I love the dish called pizza."
+            },
+            {
+              "japanese": "彼っていう男性はすごく面白いです。",
+              "english": "That man (called ‘kare’) is really interesting."
+            },
+            {
+              "japanese": "この映画っていうのは本当に感動的だよ。",
+              "english": "This movie, I mean, is really touching."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-de",
+          "title": "～で (〜de)",
+          "explanation": "Indicates the means, method, or place.",
+          "structure": "Noun + ～で",
+          "examples": [
+            {
+              "japanese": "私は自転車で学校に行きます。",
+              "english": "I go to school by bicycle."
+            },
+            {
+              "japanese": "彼は日本語で手紙を書いた。",
+              "english": "He wrote a letter in Japanese."
+            },
+            {
+              "japanese": "鉛筆で絵を描きました。",
+              "english": "I drew a picture with a pencil."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-deshou",
+          "title": "～でしょう (〜deshou)",
+          "explanation": "A conjecture or probability; 'probably', 'I think', 'it seems'.",
+          "structure": "Verb-ますstem + でしょう, い-Adjective + でしょう, な-Adjective + でしょう, Noun + でしょう",
+          "examples": [
+            {
+              "japanese": "明日は晴れでしょう。",
+              "english": "It will probably be sunny tomorrow."
+            },
+            {
+              "japanese": "彼は元気でしょう。",
+              "english": "He is probably fine."
+            },
+            {
+              "japanese": "この本は面白いでしょう。",
+              "english": "This book is probably interesting."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-te-wa-ikenai",
+          "title": "～てはいけない (〜te wa ikenai)",
+          "explanation": "Expresses prohibition; 'must not', 'cannot'.",
+          "structure": "Verb-て-form + はいけない",
+          "examples": [
+            {
+              "japanese": "公園でたばこを吸ってはいけない。",
+              "english": "You must not smoke in the park."
+            },
+            {
+              "japanese": "ここで写真を撮ってはいけない。",
+              "english": "You cannot take pictures here."
+            },
+            {
+              "japanese": "図書館で大きな声を出してはいけない。",
+              "english": "You must not speak loudly in the library."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n4-grammar-20",
+      "name": "N4 Grammar 20",
+      "type": "grammar",
+      "level": "n4",
+      "order": 200,
+      "intro": {
+        "title": "N4 Grammar — Group 20",
+        "explanation": "Learn N4 grammar points 96–100. These patterns are essential for the JLPT N4 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n4-temo-ii",
+          "title": "～てもいい (〜temo ii)",
+          "explanation": "To give or ask permission; 'it's okay to', 'may', 'can'.",
+          "structure": "Verb-て form + もいい",
+          "examples": [
+            {
+              "japanese": "ここで写真を撮ってもいいですか。",
+              "english": "Is it okay to take a photo here?"
+            },
+            {
+              "japanese": "このリンゴを食べてもいいですか。",
+              "english": "May I eat this apple?"
+            },
+            {
+              "japanese": "試験が終わったら、帰ってもいいです。",
+              "english": "You can go home after the exam is over."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-te-modemo",
+          "title": "～ても/でも (〜te mo/demo)",
+          "explanation": "Expresses 'even if' or 'even though'; used to convey contradiction or contrast.",
+          "structure": "Verb-て-form + も, い-Adjective (-い) + くても, な-Adjective + でも, Noun + でも",
+          "examples": [
+            {
+              "japanese": "雨が降っても、学校に行きます。",
+              "english": "Even if it rains, I will go to school."
+            },
+            {
+              "japanese": "この部屋が汚くても、掃除しないつもりです。",
+              "english": "Even if this room is dirty, I don't intend to clean it."
+            },
+            {
+              "japanese": "その映画が面白くなくても、見ます。",
+              "english": "Even if that movie is not interesting, I will watch it."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-to-ii",
+          "title": "～といい (〜to ii)",
+          "explanation": "Express a wish or hope; 'I hope', 'it would be good if'.",
+          "structure": "Verb-casual + といい, い-Adjective + といい, な-Adjective + だといい, Noun + だといい",
+          "examples": [
+            {
+              "japanese": "明日晴れるといいね。",
+              "english": "I hope it will be sunny tomorrow."
+            },
+            {
+              "japanese": "この試験に合格するといい。",
+              "english": "I hope to pass this exam."
+            },
+            {
+              "japanese": "彼が元気だといいな。",
+              "english": "I hope he is doing well."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-to-iu",
+          "title": "～という (〜to iu) Noun",
+          "explanation": "Used to define or explain a noun more specifically.",
+          "structure": "Noun + という + Noun, な-Adjective + という + Noun, Adjectival Verb + という + Noun",
+          "examples": [
+            {
+              "japanese": "彼は日本語が流暢なアメリカ人という人です。",
+              "english": "He is an American who speaks fluent Japanese."
+            },
+            {
+              "japanese": "昨日、美味しかったというケーキを食べました。",
+              "english": "Yesterday, I ate a cake that was said to be delicious."
+            },
+            {
+              "japanese": "有名な歌手という彼女は、たくさんのファンがいます。",
+              "english": "She, who is called a famous singer, has many fans."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-dou-iu-noun",
+          "title": "どういう Noun (dou iu Noun)",
+          "explanation": "Asking for clarification or more information about a noun; 'what kind of', 'what sort of'.",
+          "structure": "どういう + Noun",
+          "examples": [
+            {
+              "japanese": "どういう仕事をしていますか？",
+              "english": "What kind of work do you do?"
+            },
+            {
+              "japanese": "どういう映画が好きですか？",
+              "english": "What kind of movies do you like?"
+            },
+            {
+              "japanese": "どういう服を着たいですか？",
+              "english": "What kind of clothes do you want to wear?"
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n4-grammar-21",
+      "name": "N4 Grammar 21",
+      "type": "grammar",
+      "level": "n4",
+      "order": 201,
+      "intro": {
+        "title": "N4 Grammar — Group 21",
+        "explanation": "Learn N4 grammar points 101–105. These patterns are essential for the JLPT N4 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n4-to-omou",
+          "title": "～と思う (〜to omou)",
+          "explanation": "Express one's thoughts or opinions; 'I think', 'I believe'.",
+          "structure": "Verb-casual + と思う, い-Adjective + と思う, な-Adjective + だと思う, Noun + だと思う",
+          "examples": [
+            {
+              "japanese": "明日晴れると思います。",
+              "english": "I think it will be sunny tomorrow."
+            },
+            {
+              "japanese": "この映画は面白いと思う。",
+              "english": "I think this movie is interesting."
+            },
+            {
+              "japanese": "彼は親切だと思います。",
+              "english": "I think he is kind."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-to-iu-2",
+          "title": "～という (〜to iu)",
+          "explanation": "Used to quote, express hearsay or define something.",
+          "structure": "Verb-casual + という, い-Adjective + という, な-Adjective + という, Noun + という",
+          "examples": [
+            {
+              "japanese": "彼は「好きだ」と言った。",
+              "english": "He said 'I like you'."
+            },
+            {
+              "japanese": "その映画は面白いという評判があります。",
+              "english": "The movie has a reputation for being interesting."
+            },
+            {
+              "japanese": "日本には富士山という高い山があります。",
+              "english": "In Japan, there is a tall mountain called Mount Fuji."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-nai-to-ikenai",
+          "title": "～ないといけない (〜nai to ikenai)",
+          "explanation": "Express a necessity; 'must', 'have to', 'need to'.",
+          "structure": "Verb-negative + といけない",
+          "examples": [
+            {
+              "japanese": "明日試験があるから、今夜勉強しないといけない。",
+              "english": "I have an exam tomorrow, so I have to study tonight."
+            },
+            {
+              "japanese": "９時に出発しないといけない。",
+              "english": "We must leave at 9 o'clock."
+            },
+            {
+              "japanese": "風邪をひかないように、手をよく洗わないといけない。",
+              "english": "To avoid catching a cold, we have to wash our hands well."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-nakya-ikenai",
+          "title": "～なきゃいけない (〜nakya ikenai)",
+          "explanation": "Express a necessity or obligation; 'must', 'have to'.",
+          "structure": "Verb-casual (negative form without い) + なきゃいけない",
+          "examples": [
+            {
+              "japanese": "明日までに宿題を終わらなきゃいけない。",
+              "english": "I have to finish my homework by tomorrow."
+            },
+            {
+              "japanese": "もうすぐ出かけるから、急いで準備しなきゃいけない。",
+              "english": "We're leaving soon, so I have to hurry and get ready."
+            },
+            {
+              "japanese": "このプロジェクトは来週提出しなきゃいけない。",
+              "english": "I must submit this project by next week."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-naku-cha-ikenai",
+          "title": "～なくちゃいけない (〜naku cha ikenai)",
+          "explanation": "Express the obligation to do something; 'have to', 'must', 'need to'.",
+          "structure": "Verb-ない form (-ない ending is dropped) + なくちゃいけない",
+          "examples": [
+            {
+              "japanese": "仕事に行かなくちゃいけないので、早起きしなければなりません。",
+              "english": "I have to go to work, so I must wake up early."
+            },
+            {
+              "japanese": "試験があるから、勉強しなくちゃいけません。",
+              "english": "I have a test, so I must study."
+            },
+            {
+              "japanese": "パスポートを更新しなくちゃいけないので、大使館に行かなければ。",
+              "english": "I have to renew my passport, so I need to go to the embassy."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n4-grammar-22",
+      "name": "N4 Grammar 22",
+      "type": "grammar",
+      "level": "n4",
+      "order": 202,
+      "intro": {
+        "title": "N4 Grammar — Group 22",
+        "explanation": "Learn N4 grammar points 106–110. These patterns are essential for the JLPT N4 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n4-nakute-wa-ikenai",
+          "title": "～なくてはいけない (〜nakute wa ikenai)",
+          "explanation": "Expresses the necessity or obligation; 'must', 'have to'.",
+          "structure": "Verb-negative form + なくてはいけない",
+          "examples": [
+            {
+              "japanese": "宿題をしなくてはいけない。",
+              "english": "I have to do my homework."
+            },
+            {
+              "japanese": "この手紙を明日までに出さなくてはいけない。",
+              "english": "I must send this letter by tomorrow."
+            },
+            {
+              "japanese": "食べ物を無駄にしなくてはいけない。",
+              "english": "We must not waste food."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-nakutemo-ii",
+          "title": "～なくてもいい (〜nakutemo ii)",
+          "explanation": "Expresses that something is not necessary to do; 'it's okay if not', 'don't have to'.",
+          "structure": "Verb-ない-form + てもいい",
+          "examples": [
+            {
+              "japanese": "コーヒーは飲まなくてもいいです。",
+              "english": "You don't have to drink the coffee."
+            },
+            {
+              "japanese": "宿題を今日しなくてもいいです。",
+              "english": "It's okay if you don't do your homework today."
+            },
+            {
+              "japanese": "すぐに返事をしなくてもいいですよ。",
+              "english": "You don't have to reply immediately."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-nakereba-naranai",
+          "title": "～なければ ならない (〜nakereba naranai)",
+          "explanation": "Express obligation or necessity; 'must', 'have to', 'need to'.",
+          "structure": "Verb-ない form + なければ ならない",
+          "examples": [
+            {
+              "japanese": "宿題をやらなければならない。",
+              "english": "I have to do my homework."
+            },
+            {
+              "japanese": "明日までにこの本を読まなければならない。",
+              "english": "I have to read this book by tomorrow."
+            },
+            {
+              "japanese": "授業に遅れないように、早く起きなければならない。",
+              "english": "I have to wake up early so I don't be late for class."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-ni",
+          "title": "～に (〜ni)",
+          "explanation": "Indicates direction, destination, purpose, or time.",
+          "structure": "Noun + に",
+          "examples": [
+            {
+              "japanese": "母は私にケーキを作りました。",
+              "english": "My mother made a cake for me."
+            },
+            {
+              "japanese": "彼女は東京に引っ越しました。",
+              "english": "She moved to Tokyo."
+            },
+            {
+              "japanese": "銀行にお金を預けます。",
+              "english": "I deposit money in the bank."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-node",
+          "title": "～ので (〜node)",
+          "explanation": "Express a reason or a cause for something; 'because', 'since', 'so'.",
+          "structure": "Verb-casual + ので, い-Adjective + ので, な-Adjective + なので, Noun + なので",
+          "examples": [
+            {
+              "japanese": "明日試験があるので、今晩勉強します。",
+              "english": "I will study tonight because there is a test tomorrow."
+            },
+            {
+              "japanese": "このドレスが高いので、買わないことにします。",
+              "english": "I will not buy this dress because it is expensive."
+            },
+            {
+              "japanese": "田中さんは病気なので、今日は来ません。",
+              "english": "Tanaka-san will not come today since he is sick."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n4-grammar-23",
+      "name": "N4 Grammar 23",
+      "type": "grammar",
+      "level": "n4",
+      "order": 203,
+      "intro": {
+        "title": "N4 Grammar — Group 23",
+        "explanation": "Learn N4 grammar points 111–115. These patterns are essential for the JLPT N4 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n4-no-desu",
+          "title": "～のです (〜no desu)",
+          "explanation": "Provides an explanation or gives background information; 'the fact is', 'the reason is', 'actually'.",
+          "structure": "Verb-casual + のです, い-Adjective + のです, な-Adjective + なのです, Noun + なのです",
+          "examples": [
+            {
+              "japanese": "この本は難しいのです。",
+              "english": "This book is difficult, you see."
+            },
+            {
+              "japanese": "明日は忙しいのです。",
+              "english": "The fact is, I am busy tomorrow."
+            },
+            {
+              "japanese": "彼女は英語の先生なのです。",
+              "english": "The reason is, she is an English teacher."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-no-ni",
+          "title": "～のに (〜no ni)",
+          "explanation": "Used to express contrast between expectation and reality, or to indicate a purpose for doing something",
+          "structure": "Verb-casual + のに, い-Adjective + のに, な-Adjective + なのに, Noun + なのに",
+          "examples": [
+            {
+              "japanese": "遅刻したのに、先生は怒らなかった。",
+              "english": "Even though I was late, the teacher didn't get angry."
+            },
+            {
+              "japanese": "彼は疲れているのに、まだ働いています。",
+              "english": "Despite being tired, he is still working."
+            },
+            {
+              "japanese": "勉強するのに静かな場所が必要です。",
+              "english": "In order to study, I need a quiet place."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-ba-ii",
+          "title": "～ばいい (〜ba ii)",
+          "explanation": "Express a suggestion or advice; 'should', 'it would be good if'.",
+          "structure": "Verb-ば-form + いい, い-Adjective + ければいい, な-Adjective + であればいい, Noun + であればいい",
+          "examples": [
+            {
+              "japanese": "もっと勉強すればいい。",
+              "english": "You should study more."
+            },
+            {
+              "japanese": "お腹が空いたら、何か食べればいい。",
+              "english": "If you're hungry, you should eat something."
+            },
+            {
+              "japanese": "もっと速く走ればいい。",
+              "english": "You should run faster."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-made",
+          "title": "～まで (〜made)",
+          "explanation": "Indicates extent, 'until', 'up to', 'as far as', 'even'.",
+          "structure": "Verb + まで, い-Adjective + まで, な-Adjective + まで, Noun + まで",
+          "examples": [
+            {
+              "japanese": "仕事が終わるまで待っています。",
+              "english": "I will wait until work is finished."
+            },
+            {
+              "japanese": "ここから駅まで歩いて10分かかります。",
+              "english": "It takes 10 minutes to walk from here to the station."
+            },
+            {
+              "japanese": "私は彼が成功するまで応援します。",
+              "english": "I will support him until he succeeds."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-made-ni",
+          "title": "～までに (〜made ni)",
+          "explanation": "Express 'by' or 'before' a certain time or action.",
+          "structure": "Verb-casual + までに, Noun + までに, Time expression + までに",
+          "examples": [
+            {
+              "japanese": "明日の朝８時までに起きてください。",
+              "english": "Please wake up by 8 a.m. tomorrow."
+            },
+            {
+              "japanese": "来週の金曜日までにレポートを提出してください。",
+              "english": "Please submit the report by next Friday."
+            },
+            {
+              "japanese": "彼が帰るまでに料理を終わらせたい。",
+              "english": "I want to finish cooking before he comes back."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n4-grammar-24",
+      "name": "N4 Grammar 24",
+      "type": "grammar",
+      "level": "n4",
+      "order": 204,
+      "intro": {
+        "title": "N4 Grammar — Group 24",
+        "explanation": "Learn N4 grammar points 116–120. These patterns are essential for the JLPT N4 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n4-mama",
+          "title": "～まま (〜mama)",
+          "explanation": "Express 'as it is', 'while' or 'unchanged state'.",
+          "structure": "Verb-てform + いる+ まま, Adjective (い & な) + まま, Noun + のまま",
+          "examples": [
+            {
+              "japanese": "ドアを開けたまま出かけてしまった。",
+              "english": "I accidentally left with the door open."
+            },
+            {
+              "japanese": "彼は目覚まし時計を止めたまま寝てしまった。",
+              "english": "He fell asleep with the alarm clock stopped."
+            },
+            {
+              "japanese": "その部屋はきれいなままにしておいてください。",
+              "english": "Please keep the room clean."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-mitai-da",
+          "title": "～みたいだ (〜mitai da)",
+          "explanation": "Indicates similarity, resemblance or 'like'; 'it seems', 'appears', 'looks like'.",
+          "structure": "Verb-casual + みたいだ, い-Adjective + みたいだ, な-Adjective + みたいだ, Noun + みたいだ",
+          "examples": [
+            {
+              "japanese": "彼女が病気のみたいだ。",
+              "english": "She seems to be sick."
+            },
+            {
+              "japanese": "このドレスは高いみたいだ。",
+              "english": "This dress seems to be expensive."
+            },
+            {
+              "japanese": "あの人は有名人みたいだ。",
+              "english": "That person looks like a celebrity."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-mo",
+          "title": "～も (〜mo)",
+          "explanation": "Indicates 'also', 'too', or 'as well'.",
+          "structure": "Verb-casual + も, い-Adjective + も, な-Adjective + も, Noun + も",
+          "examples": [
+            {
+              "japanese": "私もお寿司が好きです。",
+              "english": "I also like sushi."
+            },
+            {
+              "japanese": "彼女は英語も日本語も話せます。",
+              "english": "She can speak both English and Japanese."
+            },
+            {
+              "japanese": "その映画は面白いし、彼も見たいと言っています。",
+              "english": "That movie is interesting, and he also said he wants to see it."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-you-da",
+          "title": "～ようだ (〜you da)",
+          "explanation": "Expresses appearance, similarity or inference; 'it seems', 'it looks like', 'it appears'.",
+          "structure": "Verb-て form + ようだ, い-Adjective (drop い) + ようだ, な-Adjective + のようだ, Noun + のようだ",
+          "examples": [
+            {
+              "japanese": "彼は元気がないようだ。",
+              "english": "He seems to be lacking energy."
+            },
+            {
+              "japanese": "この料理は美味しいようだ。",
+              "english": "This dish seems to be delicious."
+            },
+            {
+              "japanese": "彼女は有名人のようだ。",
+              "english": "She seems like a famous person."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-n-desu",
+          "title": "～んです (〜n desu)",
+          "explanation": "Provide an explanation or reason; 'it is that', 'the thing is', 'the reason is'.",
+          "structure": "Verb-casual + んです, い-Adjective + んです, な-Adjective + なんです, Noun + なんです",
+          "examples": [
+            {
+              "japanese": "遅れたんですが、電車が遅れました。",
+              "english": "I was late because the train was delayed."
+            },
+            {
+              "japanese": "疲れたんです。",
+              "english": "I'm tired (that's why)."
+            },
+            {
+              "japanese": "彼は優しいんです。",
+              "english": "The thing is, he is kind."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "n4-grammar-25",
+      "name": "N4 Grammar 25",
+      "type": "grammar",
+      "level": "n4",
+      "order": 205,
+      "intro": {
+        "title": "N4 Grammar — Group 25",
+        "explanation": "Learn N4 grammar points 121–124. These patterns are essential for the JLPT N4 level.",
+        "cultureNote": null
+      },
+      "items": [
+        {
+          "id": "n4-a-b-2",
+          "title": "文A。そのうえ 文B。",
+          "explanation": "Shows additional information; 'furthermore', 'besides', 'in addition'.",
+          "structure": "Sentence A + そのうえ + Sentence B + 。",
+          "examples": [
+            {
+              "japanese": "このソフトウェアは使いやすい。そのうえ、価格も手ごろだ。",
+              "english": "This software is easy to use. Furthermore, the price is reasonable."
+            },
+            {
+              "japanese": "彼女は美人だ。そのうえ、頭もいい。",
+              "english": "She is beautiful. In addition, she is smart."
+            },
+            {
+              "japanese": "この映画は面白い。そのうえ、俳優たちの演技も素晴らしい。",
+              "english": "This movie is interesting. Besides, the actors' performances are also great."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-bun-a-sorede-bun-b",
+          "title": "文A。それで 文B (Bun A. Sorede Bun B)",
+          "explanation": "Used to connect two sentences; 'So', 'That's why', 'Therefore'.",
+          "structure": "Sentence A。それで Sentence B。",
+          "examples": [
+            {
+              "japanese": "今日は暑いです。それで、エアコンをつけました。",
+              "english": "It is hot today. So, I turned on the air conditioner."
+            },
+            {
+              "japanese": "電車が遅れました。それで、仕事に遅れてしまいました。",
+              "english": "The train was delayed. That's why I was late for work."
+            },
+            {
+              "japanese": "彼は疲れている。それで、早く寝ることにした。",
+              "english": "He is tired. Therefore, he decided to go to bed early."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-bun-a-soreni-bun-b",
+          "title": "文A。それに 文B (Bun A. Soreni Bun B)",
+          "explanation": "Express 'in addition to; besides,' used to include additional information.",
+          "structure": "Sentence A + それに + Sentence B",
+          "examples": [
+            {
+              "japanese": "彼は頭がいい。それに、スポーツも得意だ。",
+              "english": "He is smart. In addition, he is good at sports."
+            },
+            {
+              "japanese": "このケーキはおいしい。それに、値段も安い。",
+              "english": "This cake is delicious. Besides, the price is also cheap."
+            },
+            {
+              "japanese": "私は日本語が話せます。それに、韓国語も話せます。",
+              "english": "I can speak Japanese. On top of that, I can also speak Korean."
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "n4-bun-a-dakara-bun-b",
+          "title": "文A。だから 文B (Bun A. Dakara Bun B)",
+          "explanation": "Express reason or cause; 'because', 'so', 'therefore'.",
+          "structure": "Sentence A + だから + Sentence B",
+          "examples": [
+            {
+              "japanese": "明日は試験だ。だから今日勉強しなければならない。",
+              "english": "Tomorrow is the exam, so I have to study today."
+            },
+            {
+              "japanese": "この料理は簡単だ。だから初心者でも作れる。",
+              "english": "This dish is simple, so even beginners can make it."
+            },
+            {
+              "japanese": "彼は病気だ。だから今日学校を休む。",
+              "english": "He is sick, so he will take a day off from school today."
+            }
+          ],
+          "notes": null
+        }
+      ]
+    }
+  ]
+}
