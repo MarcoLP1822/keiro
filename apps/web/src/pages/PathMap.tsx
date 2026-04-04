@@ -240,41 +240,21 @@ export function PathMap() {
     return `${currentModule.level ?? 'beginner'}-${type}`;
   }, [currentModule]);
 
-  // Build initial expanded state: expand section with current module, auto-collapse all-passed sections
-  const initialExpanded = useMemo<Set<string>>(() => {
-    const expanded = new Set<string>();
-    for (const group of groups) {
-      for (const section of group.sections) {
-        const allPassed = section.modules.every(
-          (m) => getModuleStatus(m.id, allModules, progressMap) === 'passed'
-        );
-        // Expand if: it has the current module, or it's not fully passed
-        if (section.sectionId === defaultExpandedSectionId) {
-          expanded.add(section.sectionId);
-        } else if (!allPassed) {
-          // Don't auto-expand everything — only expand the current section
-        }
-      }
-    }
-    // If nothing expanded (e.g. first launch), expand the first section
-    if (expanded.size === 0 && groups.length > 0 && groups[0].sections.length > 0) {
-      expanded.add(groups[0].sections[0].sectionId);
-    }
-    return expanded;
-  }, [groups, defaultExpandedSectionId, allModules, progressMap]);
+  // Only expand the section containing the current module
+  const expandedSectionId = defaultExpandedSectionId;
 
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(initialExpanded);
-  const hasUserToggled = useRef(false);
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
+  const prevExpandedId = useRef<string | null>(null);
 
-  // Sync expanded state when progress data loads (initial render may have stale data)
+  // When current module changes (e.g. progress data loads), expand its section
   useEffect(() => {
-    if (!hasUserToggled.current) {
-      setExpandedSections(initialExpanded);
+    if (expandedSectionId && expandedSectionId !== prevExpandedId.current) {
+      prevExpandedId.current = expandedSectionId;
+      setExpandedSections(new Set([expandedSectionId]));
     }
-  }, [initialExpanded]);
+  }, [expandedSectionId]);
 
   function toggleSection(sectionId: string) {
-    hasUserToggled.current = true;
     setExpandedSections((prev) => {
       const next = new Set(prev);
       if (next.has(sectionId)) {
