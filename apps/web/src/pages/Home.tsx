@@ -11,6 +11,12 @@ import { useDailyPlan } from '../hooks/useDailyPlan';
 import { useStreak } from '../hooks/useStreak';
 import { db } from '../services/db';
 
+function KanaIcon() {
+  return (
+    <span className="text-[18px] font-bold leading-none" style={{ fontFamily: 'system-ui' }}>あ</span>
+  );
+}
+
 function MapIcon() {
   return (
     <svg className="h-[22px] w-[22px]" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -192,6 +198,14 @@ export function Home() {
           <MapIcon />
         </button>
         <div className="flex items-center gap-1">
+          <button
+            onClick={() => navigate('/kana-chart')}
+            className="flex h-[44px] w-[44px] items-center justify-center active:opacity-60"
+            style={{ color: 'var(--ios-blue)' }}
+            aria-label="Kana Chart"
+          >
+            <KanaIcon />
+          </button>
           <button
             onClick={() => navigate('/stats')}
             className="flex h-[44px] w-[44px] items-center justify-center active:opacity-60"
