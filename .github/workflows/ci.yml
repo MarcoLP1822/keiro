@@ -26,7 +26,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: TypeScript check
-        run: pnpm -r exec tsc --noEmit
+        run: pnpm --filter @keiro/types exec tsc --noEmit && pnpm --filter @keiro/engine exec tsc --noEmit && pnpm --filter @keiro/web exec tsc --noEmit
 
       - name: Engine unit tests
         run: pnpm --filter @keiro/engine test
