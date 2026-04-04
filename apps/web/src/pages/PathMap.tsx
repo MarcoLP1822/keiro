@@ -19,9 +19,10 @@ const LEVEL_LABELS: Record<string, string> = {
 };
 
 // Ordered type display names within a level
-const TYPE_ORDER = ['kana', 'vocabulary', 'kanji', 'grammar', 'reading'];
+const TYPE_ORDER = ['hiragana', 'katakana', 'vocabulary', 'kanji', 'grammar', 'reading'];
 const TYPE_LABELS: Record<string, string> = {
-  kana: 'Kana',
+  hiragana: 'Hiragana',
+  katakana: 'Katakana',
   vocabulary: 'Vocabulary',
   kanji: 'Kanji',
   grammar: 'Grammar',
@@ -47,7 +48,11 @@ function buildGroups(modules: Module[]): LevelGroup[] {
 
   for (const mod of modules) {
     const level = mod.level ?? 'beginner';
-    const type = mod.type ?? 'vocabulary';
+    let type: string = mod.type ?? 'vocabulary';
+    // Split kana into hiragana/katakana based on module id
+    if (type === 'kana') {
+      type = mod.id.startsWith('katakana') ? 'katakana' : 'hiragana';
+    }
     if (!levelMap.has(level)) levelMap.set(level, new Map());
     const typeMap = levelMap.get(level)!;
     if (!typeMap.has(type)) typeMap.set(type, []);
@@ -228,7 +233,11 @@ export function PathMap() {
 
   const defaultExpandedSectionId = useMemo(() => {
     if (!currentModule) return null;
-    return `${currentModule.level ?? 'beginner'}-${currentModule.type}`;
+    let type: string = currentModule.type;
+    if (type === 'kana') {
+      type = currentModule.id.startsWith('katakana') ? 'katakana' : 'hiragana';
+    }
+    return `${currentModule.level ?? 'beginner'}-${type}`;
   }, [currentModule]);
 
   // Build initial expanded state: expand section with current module, auto-collapse all-passed sections
