@@ -337,77 +337,30 @@ export function Settings() {
           </button>
         </div>
 
-        {/* Content Sources section */}
+        {/* About section */}
         <p
           className="mt-8 mb-2 px-4 text-[13px] font-normal uppercase tracking-wide"
           style={{ color: 'var(--ios-secondary-label)' }}
         >
-          Content Sources
+          App
         </p>
         <div
           className="rounded-[10px] overflow-hidden"
           style={{ background: 'var(--ios-bg-grouped-secondary)' }}
         >
-          {[
-            {
-              name: 'Vocabulary data',
-              source: 'open-anki-jlpt-decks',
-              license: 'MIT License',
-              url: 'https://github.com/jamsinclair/open-anki-jlpt-decks',
-            },
-            {
-              name: 'Kanji data',
-              source: 'kanji-data by David Gouveia',
-              license: 'MIT License',
-              url: 'https://github.com/davidluzgouveia/kanji-data',
-            },
-            {
-              name: 'Grammar data',
-              source: 'hanabira.org',
-              license: 'CC Attribution',
-              url: 'https://github.com/tristcoil/hanabira.org-japanese-content',
-            },
-            {
-              name: 'Kanji details',
-              source: 'KANJIDIC2 (EDRDG)',
-              license: 'CC BY-SA 4.0',
-              url: 'https://www.edrdg.org/wiki/index.php/KANJIDIC_Project',
-            },
-            {
-              name: 'Kana data',
-              source: 'Japanese-JSON by merwan7',
-              license: 'MIT License',
-              url: 'https://github.com/merwan7/Japanese-JSON',
-            },
-          ].map((item, i, arr) => (
-            <a
-              key={item.name}
-              href={item.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block px-4 py-[11px] min-h-[44px] active:opacity-60"
-              style={{
-                borderBottom: i < arr.length - 1 ? '0.5px solid var(--ios-separator)' : 'none',
-              }}
-            >
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-[17px]" style={{ color: 'var(--ios-label)' }}>
-                    {item.name}
-                  </p>
-                  <p className="text-[13px] mt-0.5" style={{ color: 'var(--ios-secondary-label)' }}>
-                    {item.source} · {item.license}
-                  </p>
-                </div>
-                <span className="text-[17px]" style={{ color: 'var(--ios-tertiary-label)' }}>
-                  ›
-                </span>
-              </div>
-            </a>
-          ))}
+          <button
+            onClick={() => navigate('/about')}
+            className="w-full min-h-[44px] px-4 py-[11px] text-left flex items-center justify-between active:opacity-60"
+          >
+            <span className="text-[17px]" style={{ color: 'var(--ios-label)' }}>
+              About Keiro
+            </span>
+            <span className="text-[17px]" style={{ color: 'var(--ios-tertiary-label)' }}>
+              ›
+            </span>
+          </button>
         </div>
 
-        {/* App info */}
         <p
           className="mt-8 mb-6 text-center text-[13px]"
           style={{ color: 'var(--ios-tertiary-label)' }}

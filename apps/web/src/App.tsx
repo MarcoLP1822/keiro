@@ -22,6 +22,7 @@ import { Settings } from './pages/Settings';
 import { Stats } from './pages/Stats';
 import { Login } from './pages/Login';
 import { LeechReview } from './pages/LeechReview';
+import { About } from './pages/About';
 
 function AppRoutes() {
   const progressCount = useLiveQuery(() => db.moduleProgress.count());
@@ -46,6 +47,7 @@ function AppRoutes() {
       <Route path="/settings" element={<Settings />} />
       <Route path="/login" element={<Login />} />
       <Route path="/stats" element={<Stats />} />
+      <Route path="/about" element={<About />} />
     </Routes>
   );
 }
