@@ -291,16 +291,18 @@ export function PathMap() {
       <PageContainer>
         {groups.map((group) => (
           <div key={group.level} className="mb-8">
-            {/* Level header — uppercase, secondary label color, sticky */}
-            <p
-              className="sticky top-[44px] z-10 mb-2 px-4 py-1 text-[13px] font-normal uppercase tracking-wide"
-              style={{
-                color: 'var(--ios-secondary-label)',
-                background: 'var(--ios-bg-grouped)',
-              }}
-            >
-              {group.label}
-            </p>
+            {/* Level header — skip for beginner (Hiragana/Katakana are self-explanatory) */}
+            {group.level !== 'beginner' && (
+              <p
+                className="sticky top-[44px] z-10 mb-2 px-4 py-1 text-[13px] font-normal uppercase tracking-wide"
+                style={{
+                  color: 'var(--ios-secondary-label)',
+                  background: 'var(--ios-bg-grouped)',
+                }}
+              >
+                {group.label}
+              </p>
+            )}
 
             {/* Type sections */}
             <div className="space-y-3">
