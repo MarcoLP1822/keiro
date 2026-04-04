@@ -10,24 +10,24 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    icon: '\u9053',
-    title: 'Welcome to Keiro',
+    icon: '経',
+    title: 'Welcome to Keiro 経路',
     description: 'Your path from zero to reading manga in Japanese.',
   },
   {
-    icon: '\u6B69',
-    title: 'One step at a time',
-    description: 'Follow the structured path. Each lesson builds on the last.',
+    icon: 'ひ',
+    title: 'Follow the Path',
+    description: 'Start with hiragana, then vocabulary, grammar, and kanji. Each step builds on what you know.',
   },
   {
-    icon: '\u65E5',
-    title: 'Daily practice',
-    description: 'A short daily plan keeps you on track. 5-10 minutes is all you need.',
+    icon: '復',
+    title: 'Smart Reviews',
+    description: "Keiro remembers what you've learned and schedules reviews at the perfect time. No cramming, no overwhelm.",
   },
   {
-    icon: '\u59CB',
-    title: "Let's begin!",
-    description: 'Start with the basics and work your way up.',
+    icon: '始',
+    title: '5 Minutes a Day',
+    description: 'A short daily practice is all you need. Open the app, follow the plan, done.',
   },
 ];
 
@@ -79,6 +79,19 @@ export function Onboarding({ onComplete }: OnboardingProps) {
         >
           {slide.description}
         </p>
+
+        {/* Slide 2: mini path visualization */}
+        {currentSlide === 1 && (
+          <div className="mt-6 flex items-center gap-2 text-[15px]" style={{ color: 'var(--ios-tertiary-label)' }}>
+            <span className="text-[18px]">ひ</span>
+            <span>→</span>
+            <span className="text-[18px]">言葉</span>
+            <span>→</span>
+            <span className="text-[18px]">文法</span>
+            <span>→</span>
+            <span className="text-[18px]">漢字</span>
+          </div>
+        )}
 
         {isLast && (
           <div className="mt-10 w-full" onClick={(e) => e.stopPropagation()}>
