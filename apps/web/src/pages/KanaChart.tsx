@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import { TopBar } from '../components/layout/TopBar';
 import { PageContainer } from '../components/layout/PageContainer';
 import { SegmentedControl } from '../components/common/SegmentedControl';
-import { speak } from '../services/audio';
+import { speak, warmUpSpeech } from '../services/audio';
 import { useSettings } from '../hooks/useSettings';
 
 type Script = 'hiragana' | 'katakana';
@@ -122,6 +122,8 @@ export function KanaChart() {
   const navigate = useNavigate();
   const [script, setScript] = useState<Script>('hiragana');
   const { audio } = useSettings();
+
+  useEffect(() => { warmUpSpeech(); }, []);
 
   return (
     <>
