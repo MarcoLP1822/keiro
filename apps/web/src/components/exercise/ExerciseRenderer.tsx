@@ -153,7 +153,7 @@ export function ExerciseRenderer({ exercises, onComplete, onExit }: ExerciseRend
       ? exercise.correctOrder?.join('') ?? ''
       : exercise.options[exercise.correctIndex];
 
-  const isCorrectForFeedback = mode === 'multiple-choice' || mode === 'gap-fill'
+  const isCorrectForFeedback = mode === 'multiple-choice' || mode === 'gap-fill' || mode === 'reading'
     ? selectedIndex === exercise.correctIndex
     : selectedIndex === 0;
 

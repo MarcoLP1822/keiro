@@ -5,6 +5,7 @@ class SyncService {
   private syncTimeout: ReturnType<typeof setTimeout> | null = null;
   private userId: string | null = null;
   private _lastSyncedAt: string | null = null;
+  private _isBanned = false;
 
   get lastSyncedAt(): string | null {
     return this._lastSyncedAt;
@@ -12,9 +13,21 @@ class SyncService {
 
   setUserId(id: string | null) {
     this.userId = id;
+    this._isBanned = false;
     if (id) {
       this.fullSync();
     }
+  }
+
+  private async checkBan(): Promise<boolean> {
+    if (!supabase || !this.userId) return false;
+    const { data } = await supabase
+      .from('user_bans')
+      .select('user_id')
+      .eq('user_id', this.userId)
+      .maybeSingle();
+    this._isBanned = !!data;
+    return this._isBanned;
   }
 
   scheduleSync() {
@@ -25,6 +38,10 @@ class SyncService {
 
   async pushToCloud(): Promise<void> {
     if (!supabase || !this.userId) return;
+    if (await this.checkBan()) {
+      console.warn('[sync] push blocked: account suspended');
+      return;
+    }
 
     try {
       const [progress, plans, settings, cards] = await Promise.all([
@@ -107,6 +124,10 @@ class SyncService {
 
   async pullFromCloud(): Promise<void> {
     if (!supabase || !this.userId) return;
+    if (this._isBanned) {
+      console.warn('[sync] pull blocked: account suspended');
+      return;
+    }
 
     try {
       const [

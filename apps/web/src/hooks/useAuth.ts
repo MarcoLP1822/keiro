@@ -6,28 +6,55 @@ interface AuthState {
   user: User | null;
   isLoggedIn: boolean;
   isLoading: boolean;
+  isBanned: boolean;
+  banReason: string | null;
   signInWithEmail: (email: string) => Promise<{ error: string | null }>;
   verifyOtp: (email: string, token: string) => Promise<{ error: string | null }>;
   signInWithGoogle: () => Promise<{ error: string | null }>;
   signOut: () => Promise<void>;
 }
 
+async function checkBanStatus(userId: string): Promise<{ banned: boolean; reason: string | null }> {
+  if (!supabase) return { banned: false, reason: null };
+  const { data } = await supabase
+    .from('user_bans')
+    .select('reason')
+    .eq('user_id', userId)
+    .maybeSingle();
+  return data ? { banned: true, reason: data.reason } : { banned: false, reason: null };
+}
+
 export function useAuth(): AuthState {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(!!supabase);
+  const [isBanned, setIsBanned] = useState(false);
+  const [banReason, setBanReason] = useState<string | null>(null);
 
   useEffect(() => {
     if (!supabase) return;
 
     // Get initial session
-    supabase.auth.getSession().then(({ data: { session } }) => {
+    supabase.auth.getSession().then(async ({ data: { session } }) => {
       setUser(session?.user ?? null);
+      if (session?.user) {
+        const ban = await checkBanStatus(session.user.id);
+        setIsBanned(ban.banned);
+        setBanReason(ban.reason);
+      }
       setIsLoading(false);
     });
 
     // Listen for auth changes
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (_event, session) => {
       setUser(session?.user ?? null);
+      if (session?.user) {
+        const ban = await checkBanStatus(session.user.id);
+        setIsBanned(ban.banned);
+        setBanReason(ban.reason);
+      } else {
+        setIsBanned(false);
+        setBanReason(null);
+      }
     });
 
     return () => subscription.unsubscribe();
@@ -75,6 +102,8 @@ export function useAuth(): AuthState {
     user,
     isLoggedIn: !!user,
     isLoading,
+    isBanned,
+    banReason,
     signInWithEmail,
     verifyOtp,
     signInWithGoogle,

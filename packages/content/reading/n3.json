@@ -14,7 +14,7 @@
       },
       "items": [
         {
-          "passage": "私は去年から東京のかいしゃではたらいています。まいにちでんしゃでつうきんしています。一じかんぐらいかかります。たいへんですが、仕事はおもしろいです。",
+          "passage": "私は去年から東京の会社で働いています。毎日電車で通勤しています。一時間ぐらいかかります。大変ですが、仕事は面白いです。",
           "translation": "I have been working at a company in Tokyo since last year. I commute by train every day. It takes about one hour. It's tough, but the work is interesting.",
           "questions": [
             {
@@ -35,7 +35,7 @@
           ]
         },
         {
-          "passage": "先週、かいしゃの人とのみかいがありました。新しいどうりょうがきたので、かんげいかいをしました。にほんりょうりのおみせでおいしいものをたくさんたべました。",
+          "passage": "先週、会社の人と飲み会がありました。新しい同僚が来たので、歓迎会をしました。日本料理のお店でおいしい物をたくさん食べました。",
           "translation": "Last week there was a drinking party with people from the company. Because a new colleague came, we had a welcome party. We ate a lot of delicious food at a Japanese restaurant.",
           "questions": [
             {
@@ -51,7 +51,7 @@
           ]
         },
         {
-          "passage": "さいきん、ざんぎょうがおおくてつかれています。しゅうまつはゆっくりやすみたいです。そして、すきなえいがを見たいです。",
+          "passage": "最近、残業が多くて疲れています。週末はゆっくり休みたいです。そして、好きな映画を見たいです。",
           "translation": "Recently, I have a lot of overtime and I'm tired. I want to rest slowly on the weekend. And I want to watch a movie I like.",
           "questions": [
             {
@@ -81,7 +81,7 @@
       },
       "items": [
         {
-          "passage": "日本のはるはさくらがゆうめいです。三月のおわりから四月のはじめにさきます。日本人はさくらの下でおべんとうをたべたり、おさけをのんだりします。これをおはなみといいます。",
+          "passage": "日本の春は桜が有名です。三月の終わりから四月の初めに咲きます。日本人は桜の下でお弁当を食べたり、お酒を飲んだりします。これをお花見と言います。",
           "translation": "Spring in Japan is famous for cherry blossoms. They bloom from the end of March to the beginning of April. Japanese people eat lunch boxes and drink sake under the cherry blossoms. This is called ohanami.",
           "questions": [
             {
@@ -97,7 +97,7 @@
           ]
         },
         {
-          "passage": "日本のなつはとてもあつくてしつどがたかいです。あつさをさけるために、やまやうみにいく人がおおいです。なつまつりでは花火を見ることができます。",
+          "passage": "日本の夏はとても暑くて湿度が高いです。暑さを避けるために、山や海に行く人が多いです。夏祭りでは花火を見ることができます。",
           "translation": "Japanese summers are very hot and humid. Many people go to the mountains or sea to escape the heat. At summer festivals you can see fireworks.",
           "questions": [
             {
@@ -113,7 +113,7 @@
           ]
         },
         {
-          "passage": "あきになると、こうようがきれいです。きょうとやにっこうはこうようのめいしょとしてゆうめいです。あかやきいろのはっぱがとてもうつくしいです。",
+          "passage": "秋になると、紅葉がきれいです。京都や日光は紅葉の名所として有名です。赤や黄色の葉っぱがとても美しいです。",
           "translation": "When autumn comes, the fall foliage is beautiful. Kyoto and Nikko are famous as fall foliage spots. The red and yellow leaves are very beautiful.",
           "questions": [
             {
@@ -129,7 +129,7 @@
           ]
         },
         {
-          "passage": "おしょうがつは日本でいちばんたいせつなきゅうじつです。かぞくであつまって、おせちりょうりをたべます。じんじゃにおまいりにいく人もおおいです。",
+          "passage": "お正月は日本で一番大切な休日です。家族で集まって、おせち料理を食べます。神社にお参りに行く人も多いです。",
           "translation": "New Year's is the most important holiday in Japan. Families gather and eat osechi cuisine. Many people also go to visit shrines.",
           "questions": [
             {
@@ -159,7 +159,7 @@
       },
       "items": [
         {
-          "passage": "さいきんはスマートフォンでなんでもできるようになりました。かいものもできるし、でんしゃのじかんもしらべられます。べんりになりましたが、つかいすぎにちゅういしなければなりません。",
+          "passage": "最近はスマートフォンで何でもできるようになりました。買い物もできるし、電車の時間も調べられます。便利になりましたが、使い過ぎに注意しなければなりません。",
           "translation": "Recently, smartphones have made it possible to do anything. You can shop and check train times. It has become convenient, but you must be careful not to use them too much.",
           "questions": [
             {
@@ -175,7 +175,7 @@
           ]
         },
         {
-          "passage": "日本ではLINEというアプリがとてもにんきです。ともだちやかぞくとメッセージをおくったり、でんわをしたりできます。かわいいスタンプもにんきのりゆうのひとつです。",
+          "passage": "日本ではLINEというアプリがとても人気です。友達や家族とメッセージを送ったり、電話をしたりできます。かわいいスタンプも人気の理由の一つです。",
           "translation": "In Japan, an app called LINE is very popular. You can send messages and make calls with friends and family. Cute stamps are one reason for its popularity.",
           "questions": [
             {
@@ -191,7 +191,7 @@
           ]
         },
         {
-          "passage": "日本ではまだねんがじょうをおくるしゅうかんがあります。十二月にかいて、一月一日につくようにおくります。さいきんはメールでおくる人もふえています。",
+          "passage": "日本ではまだ年賀状を送る習慣があります。十二月に書いて、一月一日に届くように送ります。最近はメールで送る人も増えています。",
           "translation": "In Japan, there is still a custom of sending New Year's cards. You write them in December and send them to arrive on January 1st. Recently, more people are sending them by email.",
           "questions": [
             {

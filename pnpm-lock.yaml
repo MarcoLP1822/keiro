@@ -35,6 +35,9 @@ importers:
       '@keiro/types':
         specifier: workspace:*
         version: link:../../packages/types
+      '@supabase/supabase-js':
+        specifier: ^2.101.1
+        version: 2.101.1
       '@tailwindcss/vite':
         specifier: ^4.2.2
         version: 4.2.2(vite@6.4.1(@types/node@25.5.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(tsx@4.21.0))

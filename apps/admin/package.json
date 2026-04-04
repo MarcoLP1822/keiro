@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@hono/node-server": "^1.19.12",
+    "@supabase/supabase-js": "^2.101.1",
     "@keiro/content": "workspace:*",
     "@keiro/engine": "workspace:*",
     "@keiro/types": "workspace:*",

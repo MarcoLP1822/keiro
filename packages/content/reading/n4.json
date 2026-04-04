@@ -14,7 +14,7 @@
       },
       "items": [
         {
-          "passage": "私のまちはしずかです。えきのちかくにスーパーとびょういんがあります。こうえんもあります。こうえんには大きいさくらの木があります。",
+          "passage": "私の町は静かです。駅の近くにスーパーと病院があります。公園もあります。公園には大きい桜の木があります。",
           "translation": "My town is quiet. Near the station there is a supermarket and a hospital. There is also a park. In the park there is a big cherry blossom tree.",
           "questions": [
             {
@@ -35,7 +35,7 @@
           ]
         },
         {
-          "passage": "このまちにはレストランがたくさんあります。イタリアりょうりのレストランがいちばんにんきです。やすくておいしいですから。",
+          "passage": "この町にはレストランがたくさんあります。イタリア料理のレストランが一番人気です。安くておいしいですから。",
           "translation": "There are many restaurants in this town. The Italian restaurant is the most popular. Because it is cheap and delicious.",
           "questions": [
             {
@@ -51,7 +51,7 @@
           ]
         },
         {
-          "passage": "私のうちはえきからあるいて十五分です。ちょっととおいですが、しずかなところにあるのですきです。",
+          "passage": "私の家は駅から歩いて十五分です。ちょっと遠いですが、静かな所にあるので好きです。",
           "translation": "My house is a 15-minute walk from the station. It is a little far, but I like it because it is in a quiet place.",
           "questions": [
             {
@@ -81,7 +81,7 @@
       },
       "items": [
         {
-          "passage": "先月、京都にりょこうしました。おてらをたくさん見ました。きれいでした。日本のりょうりもたべました。とくに天ぷらがおいしかったです。",
+          "passage": "先月、京都に旅行しました。お寺をたくさん見ました。きれいでした。日本の料理も食べました。特に天ぷらがおいしかったです。",
           "translation": "Last month I traveled to Kyoto. I saw many temples. They were beautiful. I also ate Japanese food. Especially the tempura was delicious.",
           "questions": [
             {
@@ -102,7 +102,7 @@
           ]
         },
         {
-          "passage": "来月ともだちと北海道にいくつもりです。飛行機でいきます。スキーをしたいです。ホテルはもうよやくしました。",
+          "passage": "来月友達と北海道に行くつもりです。飛行機で行きます。スキーをしたいです。ホテルはもう予約しました。",
           "translation": "Next month I plan to go to Hokkaido with my friend. We will go by plane. I want to ski. I already reserved a hotel.",
           "questions": [
             {
@@ -118,7 +118,7 @@
           ]
         },
         {
-          "passage": "おきなわの海はとてもきれいでした。シュノーケリングをしました。さかなをたくさん見ました。三日間いました。みじかかったです。",
+          "passage": "沖縄の海はとてもきれいでした。シュノーケリングをしました。魚をたくさん見ました。三日間いました。短かったです。",
           "translation": "The sea in Okinawa was very beautiful. I went snorkeling. I saw many fish. I stayed for three days. It was short.",
           "questions": [
             {
@@ -148,7 +148,7 @@
       },
       "items": [
         {
-          "passage": "私はまいにち学校でにほんごをべんきょうしています。テストがあるので、たくさんべんきょうしなければなりません。でも、にほんごはおもしろいです。",
+          "passage": "私は毎日学校で日本語を勉強しています。テストがあるので、たくさん勉強しなければなりません。でも、日本語は面白いです。",
           "translation": "I study Japanese at school every day. Because there is a test, I have to study a lot. But Japanese is interesting.",
           "questions": [
             {
@@ -164,7 +164,7 @@
           ]
         },
         {
-          "passage": "ぶかつはテニスぶです。まいにちれんしゅうしています。らいしゅうたいかいがあります。がんばりたいです。",
+          "passage": "部活はテニス部です。毎日練習しています。来週大会があります。頑張りたいです。",
           "translation": "My club activity is tennis club. I practice every day. There is a tournament next week. I want to do my best.",
           "questions": [
             {
@@ -180,7 +180,7 @@
           ]
         },
         {
-          "passage": "きょうのひるごはんはカレーライスでした。がっこうのしょくどうでたべました。やすくてりょうがおおいのですきです。",
+          "passage": "今日の昼ご飯はカレーライスでした。学校の食堂で食べました。安くて量が多いので好きです。",
           "translation": "Today's lunch was curry rice. I ate at the school cafeteria. I like it because it's cheap and the portions are big.",
           "questions": [
             {
@@ -196,7 +196,7 @@
           ]
         },
         {
-          "passage": "夏やすみにアルバイトをするつもりです。ほんやではたらきたいです。ほんがすきだからです。",
+          "passage": "夏休みにアルバイトをするつもりです。本屋で働きたいです。本が好きだからです。",
           "translation": "I plan to work a part-time job during summer vacation. I want to work at a bookstore. Because I like books.",
           "questions": [
             {
@@ -226,7 +226,7 @@
       },
       "items": [
         {
-          "passage": "きのうからあたまがいたいです。ねつもあります。きょうは学校をやすみます。くすりをのんでねます。",
+          "passage": "昨日から頭が痛いです。熱もあります。今日は学校を休みます。薬を飲んで寝ます。",
           "translation": "I've had a headache since yesterday. I also have a fever. Today I will be absent from school. I will take medicine and sleep.",
           "questions": [
             {
@@ -242,7 +242,7 @@
           ]
         },
         {
-          "passage": "きょうはとてもあついです。三十五どです。たくさん水をのんだほうがいいです。外であそばないでください。",
+          "passage": "今日はとても暑いです。三十五度です。たくさん水を飲んだ方がいいです。外で遊ばないでください。",
           "translation": "Today is very hot. It's 35 degrees. You should drink a lot of water. Please don't play outside.",
           "questions": [
             {
@@ -258,7 +258,7 @@
           ]
         },
         {
-          "passage": "あしたの天気はくもりです。ごごからあめがふるかもしれません。かさをもっていったほうがいいです。",
+          "passage": "明日の天気は曇りです。午後から雨が降るかもしれません。傘を持って行った方がいいです。",
           "translation": "Tomorrow's weather is cloudy. It might rain from the afternoon. You should bring an umbrella.",
           "questions": [
             {

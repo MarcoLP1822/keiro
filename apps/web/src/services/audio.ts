@@ -9,7 +9,7 @@ export function speak(text: string, enabled: boolean): Promise<void> {
   return new Promise((resolve) => {
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'ja-JP';
-    utterance.rate = 0.8;
+    utterance.rate = 0.6;
     utterance.onend = () => resolve();
     utterance.onerror = () => resolve(); // Fail silently — audio is non-critical
     speechSynthesis.speak(utterance);

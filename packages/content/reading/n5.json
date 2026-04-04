@@ -14,7 +14,7 @@
       },
       "items": [
         {
-          "passage": "はじめまして。私はたなかです。日本人です。学生です。よろしくお願いします。",
+          "passage": "はじめまして。私は田中です。日本人です。学生です。よろしくお願いします。",
           "translation": "Nice to meet you. I am Tanaka. I am Japanese. I am a student. Please treat me well.",
           "questions": [
             {
@@ -30,7 +30,7 @@
           ]
         },
         {
-          "passage": "私はリンです。アメリカ人です。二十さいです。日本語の学生です。",
+          "passage": "私はリンです。アメリカ人です。二十歳です。日本語の学生です。",
           "translation": "I am Lin. I am American. I am 20 years old. I am a Japanese language student.",
           "questions": [
             {
@@ -51,7 +51,7 @@
           ]
         },
         {
-          "passage": "こんにちは。やまだです。せんせいです。えいごのせんせいです。よろしくお願いします。",
+          "passage": "こんにちは。山田です。先生です。英語の先生です。よろしくお願いします。",
           "translation": "Hello. I am Yamada. I am a teacher. I am an English teacher. Please treat me well.",
           "questions": [
             {
@@ -81,7 +81,7 @@
       },
       "items": [
         {
-          "passage": "私のかぞくは四人です。父と母と姉と私です。父はかいしゃいんです。母はせんせいです。",
+          "passage": "私の家族は四人です。父と母と姉と私です。父は会社員です。母は先生です。",
           "translation": "My family has four people. It's my father, mother, older sister, and me. My father is a company employee. My mother is a teacher.",
           "questions": [
             {
@@ -102,7 +102,7 @@
           ]
         },
         {
-          "passage": "弟は十さいです。小学生です。まいにちサッカーをします。サッカーがすきです。",
+          "passage": "弟は十歳です。小学生です。毎日サッカーをします。サッカーが好きです。",
           "translation": "My younger brother is 10 years old. He is an elementary school student. He plays soccer every day. He likes soccer.",
           "questions": [
             {
@@ -118,7 +118,7 @@
           ]
         },
         {
-          "passage": "姉は大学生です。二十一さいです。えいごとフランスごをべんきょうします。",
+          "passage": "姉は大学生です。二十一歳です。英語とフランス語を勉強します。",
           "translation": "My older sister is a university student. She is 21 years old. She studies English and French.",
           "questions": [
             {
@@ -148,7 +148,7 @@
       },
       "items": [
         {
-          "passage": "まいあさ七じにおきます。八じにあさごはんをたべます。九じにがっこうにいきます。",
+          "passage": "毎朝七時に起きます。八時に朝ご飯を食べます。九時に学校に行きます。",
           "translation": "I wake up at 7 every morning. I eat breakfast at 8. I go to school at 9.",
           "questions": [
             {
@@ -164,7 +164,7 @@
           ]
         },
         {
-          "passage": "十二じにひるごはんをたべます。ともだちといっしょにたべます。おべんとうをもっていきます。",
+          "passage": "十二時に昼ご飯を食べます。友達と一緒に食べます。お弁当を持って行きます。",
           "translation": "I eat lunch at 12. I eat together with my friend. I bring a boxed lunch.",
           "questions": [
             {
@@ -180,7 +180,7 @@
           ]
         },
         {
-          "passage": "よるはうちでべんきょうします。十じにおふろにはいります。十一じにねます。",
+          "passage": "夜は家で勉強します。十時にお風呂に入ります。十一時に寝ます。",
           "translation": "In the evening I study at home. I take a bath at 10. I go to sleep at 11.",
           "questions": [
             {
@@ -196,7 +196,7 @@
           ]
         },
         {
-          "passage": "にちようびはがっこうにいきません。あさはおそくおきます。テレビをみます。",
+          "passage": "日曜日は学校に行きません。朝は遅く起きます。テレビを見ます。",
           "translation": "On Sunday I don't go to school. I wake up late in the morning. I watch TV.",
           "questions": [
             {
@@ -242,7 +242,7 @@
           ]
         },
         {
-          "passage": "デパートにいきました。くつをかいました。五千円でした。あたらしいくつはくろいです。",
+          "passage": "デパートに行きました。靴を買いました。五千円でした。新しい靴は黒いです。",
           "translation": "I went to the department store. I bought shoes. They were 5,000 yen. The new shoes are black.",
           "questions": [
             {
@@ -263,7 +263,7 @@
           ]
         },
         {
-          "passage": "スーパーでたまごとぎゅうにゅうをかいます。たまごは二百円です。ぎゅうにゅうは百五十円です。",
+          "passage": "スーパーで卵と牛乳を買います。卵は二百円です。牛乳は百五十円です。",
           "translation": "I buy eggs and milk at the supermarket. Eggs are 200 yen. Milk is 150 yen.",
           "questions": [
             {
@@ -293,7 +293,7 @@
       },
       "items": [
         {
-          "passage": "きのうはともだちとえいがをみました。とてもおもしろかったです。そのあとでレストランでたべました。",
+          "passage": "昨日は友達と映画を見ました。とても面白かったです。その後でレストランで食べました。",
           "translation": "Yesterday I watched a movie with my friend. It was very interesting. After that we ate at a restaurant.",
           "questions": [
             {
@@ -309,7 +309,7 @@
           ]
         },
         {
-          "passage": "あしたはこうえんにいきたいです。天気がいいですから。おべんとうをつくりたいです。",
+          "passage": "明日は公園に行きたいです。天気がいいですから。お弁当を作りたいです。",
           "translation": "Tomorrow I want to go to the park. Because the weather is good. I want to make a boxed lunch.",
           "questions": [
             {
@@ -325,7 +325,7 @@
           ]
         },
         {
-          "passage": "どようびにかぞくとかいものにいきました。母はふくをかいました。私はほんをかいました。たのしかったです。",
+          "passage": "土曜日に家族と買い物に行きました。母は服を買いました。私は本を買いました。楽しかったです。",
           "translation": "On Saturday I went shopping with my family. My mother bought clothes. I bought a book. It was fun.",
           "questions": [
             {
@@ -346,7 +346,7 @@
           ]
         },
         {
-          "passage": "日よう日はうちにいました。あめでしたから。本をよみました。おんがくもききました。",
+          "passage": "日曜日は家にいました。雨でしたから。本を読みました。音楽も聞きました。",
           "translation": "On Sunday I stayed at home. Because it was raining. I read a book. I also listened to music.",
           "questions": [
             {

@@ -8,7 +8,8 @@ import { useSettings } from '../hooks/useSettings';
 import { useAuth } from '../hooks/useAuth';
 import { storage } from '../services/storage';
 import { syncService } from '../services/sync';
-import { isSupported, getPermissionStatus } from '../services/notifications';
+import { supabase } from '../services/supabase';
+import { db } from '../services/db';
 
 const themeOptions = [
   { label: 'System', value: 'system' },
@@ -27,20 +28,18 @@ export function Settings() {
   const {
     audio,
     planSize,
-    reminderEnabled,
-    reminderTime,
     theme,
     showFurigana,
     setAudio,
     setPlanSize,
-    setReminderEnabled,
-    setReminderTime,
     setTheme,
     setShowFurigana,
   } = useSettings();
-  const { user, isLoggedIn, signOut } = useAuth();
+  const { user, isLoggedIn, isBanned, banReason, signOut } = useAuth();
   const [showResetModal, setShowResetModal] = useState(false);
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [syncing, setSyncing] = useState(false);
+  const [exporting, setExporting] = useState(false);
 
   async function handleSignOut() {
     await signOut();
@@ -66,6 +65,61 @@ export function Settings() {
     return `${hours} hours ago`;
   }
 
+  async function handleExportData() {
+    if (!supabase || !user) return;
+    setExporting(true);
+    try {
+      const [
+        { data: progress },
+        { data: cards },
+        { data: plans },
+        { data: settings },
+      ] = await Promise.all([
+        supabase.from('module_progress').select('*').eq('user_id', user.id),
+        supabase.from('srs_cards').select('*').eq('user_id', user.id),
+        supabase.from('daily_plans').select('*').eq('user_id', user.id),
+        supabase.from('user_settings').select('*').eq('user_id', user.id),
+      ]);
+
+      const exportData = {
+        exportedAt: new Date().toISOString(),
+        email: user.email,
+        moduleProgress: progress ?? [],
+        srsCards: cards ?? [],
+        dailyPlans: plans ?? [],
+        settings: settings ?? [],
+      };
+
+      const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'keiro-data-export.json';
+      a.click();
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      console.error('Export failed:', err);
+    } finally {
+      setExporting(false);
+    }
+  }
+
+  async function handleDeleteAccount() {
+    if (!supabase || !user) return;
+    try {
+      // Call RPC function that deletes the calling user
+      const { error } = await supabase.rpc('delete_own_account');
+      if (error) throw error;
+
+      // Clear local data
+      await db.delete();
+      await signOut();
+      navigate('/welcome');
+    } catch (err) {
+      console.error('Account deletion failed:', err);
+    }
+  }
+
   async function handleReset() {
     await storage.resetAll();
     navigate('/welcome');
@@ -75,6 +129,19 @@ export function Settings() {
     <>
       <TopBar title="Settings" onBack={() => navigate('/')} />
       <PageContainer>
+        {/* Ban message */}
+        {isBanned && (
+          <div
+            className="mb-4 rounded-[10px] p-4"
+            style={{ background: 'var(--ios-red)', color: 'white' }}
+          >
+            <p className="text-[17px] font-semibold">Account Suspended</p>
+            <p className="text-[15px] mt-1 opacity-90">
+              {banReason || 'Your account has been suspended. Contact support for more information.'}
+            </p>
+          </div>
+        )}
+
         {/* Account section */}
         <p
           className="mb-2 px-4 text-[13px] font-normal uppercase tracking-wide"
@@ -215,90 +282,6 @@ export function Settings() {
           </div>
         </div>
 
-        {/* Reminders section — only show if Notification API is supported */}
-        {isSupported() && (
-          <>
-            <p
-              className="mt-8 mb-2 px-4 text-[13px] font-normal uppercase tracking-wide"
-              style={{ color: 'var(--ios-secondary-label)' }}
-            >
-              Reminders
-            </p>
-            <div
-              className="rounded-[10px]"
-              style={{ background: 'var(--ios-bg-grouped-secondary)' }}
-            >
-              <div className="flex items-center justify-between px-4 py-[11px]">
-                <span
-                  className="text-[17px]"
-                  style={{ color: 'var(--ios-label)' }}
-                >
-                  Daily Reminder
-                </span>
-                <button
-                  role="switch"
-                  aria-checked={reminderEnabled}
-                  aria-label="Toggle daily reminder"
-                  onClick={() => setReminderEnabled(!reminderEnabled)}
-                  className="relative h-[31px] w-[51px] rounded-full transition-colors"
-                  style={{
-                    background: reminderEnabled
-                      ? 'var(--ios-green)'
-                      : 'var(--ios-fill)',
-                  }}
-                >
-                  <span
-                    className="absolute top-[2px] left-[2px] h-[27px] w-[27px] rounded-full bg-white shadow-sm transition-transform"
-                    style={{
-                      transform: reminderEnabled
-                        ? 'translateX(20px)'
-                        : 'translateX(0)',
-                    }}
-                  />
-                </button>
-              </div>
-              {reminderEnabled && (
-                <div
-                  className="flex items-center justify-between px-4 py-[11px]"
-                  style={{
-                    borderTop: '0.5px solid var(--ios-separator)',
-                  }}
-                >
-                  <span
-                    className="text-[17px]"
-                    style={{ color: 'var(--ios-label)' }}
-                  >
-                    Reminder Time
-                  </span>
-                  <input
-                    type="time"
-                    value={reminderTime}
-                    onChange={(e) => setReminderTime(e.target.value)}
-                    className="text-[17px] bg-transparent border-none outline-none text-right"
-                    style={{ color: 'var(--ios-blue)' }}
-                  />
-                </div>
-              )}
-              {getPermissionStatus() === 'denied' && (
-                <div
-                  className="px-4 py-[11px]"
-                  style={{
-                    borderTop: '0.5px solid var(--ios-separator)',
-                  }}
-                >
-                  <p
-                    className="text-[13px]"
-                    style={{ color: 'var(--ios-secondary-label)' }}
-                  >
-                    Notifications are blocked. Enable them in your browser or
-                    device settings.
-                  </p>
-                </div>
-              )}
-            </div>
-          </>
-        )}
-
         {/* Daily plan size section */}
         <p
           className="mt-8 mb-2 px-4 text-[13px] font-normal uppercase tracking-wide"
@@ -317,24 +300,47 @@ export function Settings() {
           />
         </div>
 
-        {/* Reset section */}
+        {/* Data & Privacy section */}
         <p
           className="mt-8 mb-2 px-4 text-[13px] font-normal uppercase tracking-wide"
           style={{ color: 'var(--ios-secondary-label)' }}
         >
-          Data
+          Data & Privacy
         </p>
         <div
           className="rounded-[10px] overflow-hidden"
           style={{ background: 'var(--ios-bg-grouped-secondary)' }}
         >
-          <button
-            onClick={() => setShowResetModal(true)}
-            className="w-full min-h-[44px] px-4 py-[11px] text-left text-[17px] active:opacity-60"
-            style={{ color: 'var(--ios-red)' }}
-          >
-            Reset All Progress
-          </button>
+          {isLoggedIn && (
+            <button
+              onClick={handleExportData}
+              disabled={exporting}
+              className="w-full min-h-[44px] px-4 py-[11px] text-left text-[17px] active:opacity-60 disabled:opacity-50"
+              style={{ color: 'var(--ios-blue)' }}
+            >
+              {exporting ? 'Exporting...' : 'Download My Data'}
+            </button>
+          )}
+          <div style={isLoggedIn ? { borderTop: '0.5px solid var(--ios-separator)' } : undefined}>
+            <button
+              onClick={() => setShowResetModal(true)}
+              className="w-full min-h-[44px] px-4 py-[11px] text-left text-[17px] active:opacity-60"
+              style={{ color: 'var(--ios-red)' }}
+            >
+              Reset All Progress
+            </button>
+          </div>
+          {isLoggedIn && (
+            <div style={{ borderTop: '0.5px solid var(--ios-separator)' }}>
+              <button
+                onClick={() => setShowDeleteModal(true)}
+                className="w-full min-h-[44px] px-4 py-[11px] text-left text-[17px] active:opacity-60"
+                style={{ color: 'var(--ios-red)' }}
+              >
+                Delete My Account
+              </button>
+            </div>
+          )}
         </div>
 
         {/* About section */}
@@ -378,6 +384,17 @@ export function Settings() {
         secondaryLabel="Cancel"
         onPrimary={handleReset}
         onSecondary={() => setShowResetModal(false)}
+      />
+
+      <Modal
+        isOpen={showDeleteModal}
+        variant="danger"
+        title="Delete your account?"
+        body="This will permanently delete your account and all your data from our servers. This cannot be undone."
+        primaryLabel="Delete Account"
+        secondaryLabel="Cancel"
+        onPrimary={handleDeleteAccount}
+        onSecondary={() => setShowDeleteModal(false)}
       />
     </>
   );

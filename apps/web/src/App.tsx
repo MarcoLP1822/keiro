@@ -4,7 +4,6 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import { db } from './services/db';
 import { supabase } from './services/supabase';
 import { storage } from './services/storage';
-import { reminderService } from './services/reminder';
 import { useTheme } from './hooks/useTheme';
 import { LoadingPage } from './components/common/LoadingSpinner';
 import { ErrorBoundary } from './components/common/ErrorBoundary';
@@ -93,12 +92,6 @@ function AuthHandler({ children }: { children: React.ReactNode }) {
 
     return () => subscription.unsubscribe();
   }, []);
-
-  useEffect(() => {
-    if (authReady) {
-      reminderService.checkAndRemind();
-    }
-  }, [authReady]);
 
   if (!authReady) return <LoadingPage />;
 
