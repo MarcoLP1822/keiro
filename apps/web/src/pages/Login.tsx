@@ -131,9 +131,9 @@ export function Login() {
                   autoComplete="one-time-code"
                   value={otpCode}
                   onChange={(e) => setOtpCode(e.target.value.replace(/\D/g, '').slice(0, 8))}
-                  placeholder="Enter verification code"
-                  className="w-full py-[11px] text-[17px] text-center tracking-[0.5em] bg-transparent outline-none"
-                  style={{ color: 'var(--ios-label)' }}
+                  placeholder="Enter code"
+                  className="w-full py-[11px] text-[17px] text-center bg-transparent outline-none placeholder:tracking-normal"
+                  style={{ color: 'var(--ios-label)', letterSpacing: otpCode ? '0.5em' : 'normal' }}
                   maxLength={8}
                 />
               </div>
