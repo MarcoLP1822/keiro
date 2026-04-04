@@ -1,5 +1,6 @@
 import { useState, useCallback } from 'react';
 import { useNavigate, useLocation } from 'react-router';
+import { useLiveQuery } from 'dexie-react-hooks';
 import { LoadingSpinner } from '../components/common/LoadingSpinner';
 import type { SrsGrade } from '@keiro/types';
 import { TopBar } from '../components/layout/TopBar';
@@ -18,6 +19,8 @@ import { useSettings } from '../hooks/useSettings';
 import { useDailyPlan } from '../hooks/useDailyPlan';
 import { playCorrectSound, playIncorrectSound } from '../services/sounds';
 import { vibrateSuccess, vibrateError } from '../services/haptics';
+import { storage } from '../services/storage';
+import { db } from '../services/db';
 
 type ExerciseMode = 'multiple-choice' | 'gap-fill' | 'typing' | 'sentence-order';
 
@@ -54,6 +57,25 @@ export function SrsReview() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [showFeedback, setShowFeedback] = useState(false);
   const [showExitModal, setShowExitModal] = useState(false);
+
+  // useLiveQuery returns undefined while loading. We use null as sentinel for "key not found"
+  const srsExplainerSeenRaw = useLiveQuery(
+    () => db.settings.get('srsExplainerSeen').then((s) => (s ? (s.value as boolean) : null)),
+  );
+  const [explainerDismissed, setExplainerDismissed] = useState(false);
+
+  // srsExplainerSeenRaw === undefined → still loading from Dexie
+  // srsExplainerSeenRaw === null     → key never set (never seen)
+  // srsExplainerSeenRaw === true     → already seen
+  const showExplainer =
+    !explainerDismissed &&
+    srsExplainerSeenRaw !== undefined &&
+    srsExplainerSeenRaw !== true;
+
+  async function dismissExplainer() {
+    setExplainerDismissed(true);
+    await storage.setSetting('srsExplainerSeen', true);
+  }
 
   const handleSelect = useCallback((index: number) => {
     if (showFeedback) return;
@@ -164,6 +186,24 @@ export function SrsReview() {
         }
       />
       <PageContainer>
+        {showExplainer && (
+          <button
+            onClick={dismissExplainer}
+            className="w-full mb-4 text-left rounded-[14px] px-4 py-3 active:opacity-70"
+            style={{ background: 'var(--ios-bg-grouped-secondary)', border: '0.5px solid var(--ios-separator)' }}
+          >
+            <p className="text-[15px] font-semibold mb-0.5" style={{ color: 'var(--ios-label)' }}>
+              How reviews work
+            </p>
+            <p className="text-[13px] leading-relaxed" style={{ color: 'var(--ios-secondary-label)' }}>
+              Rate how well you remembered each item. Keiro uses your rating to schedule the next review at the right time — no cramming needed.
+            </p>
+            <p className="text-[13px] mt-1" style={{ color: 'var(--ios-tertiary-label)' }}>
+              Tap to dismiss
+            </p>
+          </button>
+        )}
+
         {mode !== 'sentence-order' && (
           <QuestionDisplay exercise={currentExercise} audioEnabled={audio} />
         )}
