@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { getAllModules } from '@keiro/content';
-import { getCurrentModule } from '@keiro/engine';
+import { getCurrentModule, getModuleStatus } from '@keiro/engine';
 import { PageContainer } from '../components/layout/PageContainer';
 import { PrimaryButton } from '../components/common/PrimaryButton';
 import { SecondaryButton } from '../components/common/SecondaryButton';
@@ -117,12 +117,43 @@ export function Home() {
   const allModules = getAllModules();
   const passedCount = allProgress.filter((p) => p.status === 'passed').length;
   const totalCount = allModules.length;
-  const percentComplete = totalCount > 0 ? Math.round((passedCount / totalCount) * 100) : 0;
 
-  // Determine current level label from the current module
   const progressMap = new Map(allProgress.map((p) => [p.moduleId, p]));
   const currentModule = getCurrentModule(allModules, progressMap);
-  const levelLabel = currentModule?.level?.toUpperCase() ?? (totalCount > 0 ? 'Complete' : 'N5');
+
+  // Current level: from the active module, or 'complete' if all done
+  const currentLevel = currentModule?.level ?? (totalCount > 0 && passedCount === totalCount ? null : 'beginner');
+  const levelLabel = currentLevel ? (currentLevel === 'beginner' ? 'BEGINNER' : currentLevel.toUpperCase()) : 'COMPLETE';
+
+  // Count modules in the current level
+  const levelModules = currentLevel ? allModules.filter((m) => m.level === currentLevel) : allModules;
+  const levelPassedCount = levelModules.filter(
+    (m) => getModuleStatus(m.id, allModules, progressMap) === 'passed'
+  ).length;
+  const levelTotalCount = levelModules.length;
+  const levelPercent = levelTotalCount > 0 ? Math.round((levelPassedCount / levelTotalCount) * 100) : 0;
+
+  // Find next section after the current module's type
+  const TYPE_ORDER = ['kana', 'vocabulary', 'kanji', 'grammar', 'reading'];
+  const currentType = currentModule?.type;
+  const nextSectionName = (() => {
+    if (!currentModule) return null;
+    // Find next type with modules not yet fully passed in current level
+    const idx = TYPE_ORDER.indexOf(currentType ?? '');
+    for (let i = idx + 1; i < TYPE_ORDER.length; i++) {
+      const t = TYPE_ORDER[i];
+      const hasIncomplete = levelModules.some(
+        (m) => m.type === t && getModuleStatus(m.id, allModules, progressMap) !== 'passed'
+      );
+      if (hasIncomplete) {
+        const label: Record<string, string> = {
+          kana: 'Kana', vocabulary: 'Vocabulary', kanji: 'Kanji', grammar: 'Grammar', reading: 'Reading',
+        };
+        return label[t] ?? t;
+      }
+    }
+    return null;
+  })();
 
   function handleStart() {
     if (!plan) return;
@@ -140,7 +171,7 @@ export function Home() {
     }
   }
 
-  const allModulesComplete = passedCount === totalCount && totalCount > 0;
+  const allModulesComplete = passedCount === totalCount && totalCount > 0 && levelPassedCount === levelTotalCount;
 
   return (
     <>
@@ -215,18 +246,42 @@ export function Home() {
           </button>
         )}
 
-        {/* Progress section - white card */}
+        {/* Level progress card */}
         <div
           className="rounded-[10px] p-4"
           style={{ background: 'var(--ios-bg-grouped-secondary)' }}
         >
-          <p
-            className="text-[15px] font-medium mb-3"
-            style={{ color: 'var(--ios-secondary-label)' }}
-          >
-            {levelLabel} — {percentComplete}% complete
-          </p>
-          <ProgressBar value={percentComplete} />
+          <div className="flex items-center justify-between mb-2">
+            <p
+              className="text-[20px] font-semibold tracking-tight"
+              style={{ color: 'var(--ios-label)' }}
+            >
+              {levelLabel}
+            </p>
+            <p
+              className="text-[15px] font-medium tabular-nums"
+              style={{ color: 'var(--ios-secondary-label)' }}
+            >
+              {levelPercent}%
+            </p>
+          </div>
+          <ProgressBar value={levelPercent} />
+          <div className="mt-3 flex items-center justify-between">
+            <p
+              className="text-[13px]"
+              style={{ color: 'var(--ios-secondary-label)' }}
+            >
+              {levelPassedCount} of {levelTotalCount} modules complete
+            </p>
+            {nextSectionName && (
+              <p
+                className="text-[13px]"
+                style={{ color: 'var(--ios-secondary-label)' }}
+              >
+                Next: {nextSectionName}
+              </p>
+            )}
+          </div>
         </div>
 
         {allModulesComplete ? (
