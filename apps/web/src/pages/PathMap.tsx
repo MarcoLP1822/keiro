@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router';
 import { getAllModules } from '@keiro/content';
 import { getModuleStatus, getCurrentModule } from '@keiro/engine';
@@ -264,8 +264,17 @@ export function PathMap() {
   }, [groups, defaultExpandedSectionId, allModules, progressMap]);
 
   const [expandedSections, setExpandedSections] = useState<Set<string>>(initialExpanded);
+  const hasUserToggled = useRef(false);
+
+  // Sync expanded state when progress data loads (initial render may have stale data)
+  useEffect(() => {
+    if (!hasUserToggled.current) {
+      setExpandedSections(initialExpanded);
+    }
+  }, [initialExpanded]);
 
   function toggleSection(sectionId: string) {
+    hasUserToggled.current = true;
     setExpandedSections((prev) => {
       const next = new Set(prev);
       if (next.has(sectionId)) {
