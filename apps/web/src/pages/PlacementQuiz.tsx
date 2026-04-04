@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import type { Exercise, Answer } from '@keiro/types';
 import { generatePlacementQuiz, evaluatePlacement } from '@keiro/engine';
-import { getAllModules, getKanaItems } from '@keiro/content';
+import { getAllModules, getKanaItems, getVocabItems, getGrammarItems } from '@keiro/content';
 import { ExerciseRenderer } from '../components/exercise/ExerciseRenderer';
 import { storage } from '../services/storage';
 import { events } from '../services/analytics';
@@ -14,7 +14,9 @@ export function PlacementQuiz() {
   useEffect(() => {
     const allModules = getAllModules();
     const allKana = getKanaItems();
-    setExercises(generatePlacementQuiz(allModules, allKana));
+    const allVocab = getVocabItems();
+    const allGrammar = getGrammarItems();
+    setExercises(generatePlacementQuiz(allModules, allKana, allVocab, allGrammar));
   }, []);
 
   async function handleComplete(answers: Answer[]) {

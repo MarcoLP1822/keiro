@@ -157,6 +157,13 @@ export function ExerciseRenderer({ exercises, onComplete, onExit }: ExerciseRend
     ? selectedIndex === exercise.correctIndex
     : selectedIndex === 0;
 
+  // Japanese text to pronounce in the feedback bar when the user gets a vocab/kanji wrong
+  const vocabKanjiAudioTypes = new Set([
+    'word-to-meaning', 'meaning-to-word', 'typing-meaning',
+    'kanji-to-meaning', 'kanji-to-reading', 'typing-reading',
+  ]);
+  const feedbackAudio = vocabKanjiAudioTypes.has(exercise.type) ? exercise.question : undefined;
+
   return (
     <>
       <TopBar
@@ -221,6 +228,8 @@ export function ExerciseRenderer({ exercises, onComplete, onExit }: ExerciseRend
             isCorrect={isCorrectForFeedback}
             correctAnswer={correctAnswer}
             onNext={mode === 'multiple-choice' || mode === 'gap-fill' || mode === 'reading' ? handleNext : handleNonMCNext}
+            correctAnswerAudio={feedbackAudio}
+            audioEnabled={audio}
           />
         )}
       </PageContainer>

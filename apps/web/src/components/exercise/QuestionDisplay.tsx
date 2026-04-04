@@ -33,6 +33,16 @@ const largeJapaneseTypes = new Set([
   'typing-reading',
 ]);
 
+// Exercise types where a small tap-to-hear speaker button should appear
+const tapToHearTypes = new Set([
+  'word-to-meaning',
+  'meaning-to-word',
+  'typing-meaning',
+  'kanji-to-meaning',
+  'kanji-to-reading',
+  'typing-reading',
+]);
+
 function getFuriganaReading(exercise: Exercise): string | undefined {
   const item = exercise.targetItem;
   if ('reading' in item) {
@@ -47,11 +57,42 @@ function getFuriganaReading(exercise: Exercise): string | undefined {
   return undefined;
 }
 
+/** Returns the Japanese text to pronounce for tap-to-hear exercises. */
+function getJapaneseText(exercise: Exercise): string {
+  const item = exercise.targetItem;
+  if ('word' in item) return (item as VocabItem).word;
+  if ('kanji' in item) return (item as KanjiItem).kanji;
+  return exercise.question;
+}
+
+function SpeakerButton({ onPress }: { onPress: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onPress}
+      className="flex items-center justify-center w-8 h-8 rounded-full flex-shrink-0 active:scale-90 transition-transform duration-150"
+      style={{ background: 'rgba(0,122,255,0.1)' }}
+      aria-label="Play pronunciation"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className="w-4 h-4"
+        style={{ color: 'var(--ios-blue)' }}
+      >
+        <path d="M11.26 3.691A1.2 1.2 0 0 1 12 4.8v14.4a1.2 1.2 0 0 1-2.05.849L5.1 15.6H2.4A1.2 1.2 0 0 1 1.2 14.4V9.6a1.2 1.2 0 0 1 1.2-1.2h2.7l4.85-4.449a1.2 1.2 0 0 1 1.31-.26ZM15.53 7.47a.75.75 0 0 1 1.06 0 6.75 6.75 0 0 1 0 9.06.75.75 0 0 1-1.06-1.06 5.25 5.25 0 0 0 0-6.94.75.75 0 0 1 0-1.06ZM18.36 4.64a.75.75 0 0 1 1.06 0c3.808 3.807 3.808 9.983 0 13.79a.75.75 0 1 1-1.06-1.06 8.25 8.25 0 0 0 0-11.67.75.75 0 0 1 0-1.06Z"/>
+      </svg>
+    </button>
+  );
+}
+
 export function QuestionDisplay({ exercise, audioEnabled = true, showFurigana = true }: QuestionDisplayProps) {
   const prompt = questionText[exercise.type] ?? 'What is this?';
   const isAudio = exercise.type === 'audio-to-char';
   const isLargeJapanese = largeJapaneseTypes.has(exercise.type);
   const isGrammar = exercise.type === 'grammar-pick-correct';
+  const showTapToHear = audioEnabled && tapToHearTypes.has(exercise.type);
 
   // Furigana only on vocab/kanji question types showing Japanese text
   // Exclude typing-reading: showing furigana would reveal the answer
@@ -60,6 +101,10 @@ export function QuestionDisplay({ exercise, audioEnabled = true, showFurigana = 
 
   const handlePlayAudio = () => {
     speak(exercise.question, audioEnabled);
+  };
+
+  const handleTapToHear = () => {
+    speak(getJapaneseText(exercise), true);
   };
 
   return (
@@ -107,20 +152,23 @@ export function QuestionDisplay({ exercise, audioEnabled = true, showFurigana = 
         </div>
       ) : (
         <div className="flex flex-col items-center gap-1">
-          <p
-            className={
-              isLargeJapanese
-                ? 'text-[56px] leading-tight font-bold'
-                : 'text-2xl font-semibold'
-            }
-            style={{ color: 'var(--ios-label)' }}
-          >
-            <FuriganaText
-              text={exercise.question}
-              reading={furiganaReading}
-              show={showFurigana}
-            />
-          </p>
+          <div className="flex items-center gap-2">
+            <p
+              className={
+                isLargeJapanese
+                  ? 'text-[56px] leading-tight font-bold'
+                  : 'text-2xl font-semibold'
+              }
+              style={{ color: 'var(--ios-label)' }}
+            >
+              <FuriganaText
+                text={exercise.question}
+                reading={furiganaReading}
+                show={showFurigana}
+              />
+            </p>
+            {showTapToHear && <SpeakerButton onPress={handleTapToHear} />}
+          </div>
           {exercise.questionDetail && (
             <p
               className="text-[15px]"
