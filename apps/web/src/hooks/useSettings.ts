@@ -17,6 +17,7 @@ export function useSettings() {
   const reminderEnabled = getSetting<boolean>('reminderEnabled', false);
   const reminderTime = getSetting<string>('reminderTime', '20:00');
   const theme = getSetting<'system' | 'light' | 'dark'>('theme', 'system');
+  const showFurigana = getSetting<boolean>('showFurigana', true);
 
   async function setAudio(value: boolean): Promise<void> {
     await storage.setSetting('audio', value);
@@ -42,16 +43,22 @@ export function useSettings() {
     await storage.setSetting('theme', value);
   }
 
+  async function setShowFurigana(value: boolean): Promise<void> {
+    await storage.setSetting('showFurigana', value);
+  }
+
   return {
     audio,
     planSize,
     reminderEnabled,
     reminderTime,
     theme,
+    showFurigana,
     setAudio,
     setPlanSize,
     setReminderEnabled,
     setReminderTime,
     setTheme,
+    setShowFurigana,
   };
 }

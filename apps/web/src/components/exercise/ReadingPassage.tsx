@@ -17,6 +17,7 @@ export function ReadingPassage({ exercise }: ReadingPassageProps) {
           boxShadow: '0 1px 3px rgba(0,0,0,0.08)',
         }}
       >
+        {/* TODO: per-word furigana on passages requires a morphological analyzer (e.g., kuromoji) — skip for now */}
         <p
           className="leading-relaxed"
           style={{

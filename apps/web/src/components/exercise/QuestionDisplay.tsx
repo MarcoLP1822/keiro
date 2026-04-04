@@ -1,9 +1,11 @@
-import type { Exercise } from '@keiro/types';
+import type { Exercise, VocabItem, KanjiItem } from '@keiro/types';
 import { speak } from '../../services/audio';
+import { FuriganaText } from '../common/FuriganaText';
 
 interface QuestionDisplayProps {
   exercise: Exercise;
   audioEnabled?: boolean;
+  showFurigana?: boolean;
 }
 
 const questionText: Record<string, string> = {
@@ -31,11 +33,30 @@ const largeJapaneseTypes = new Set([
   'typing-reading',
 ]);
 
-export function QuestionDisplay({ exercise, audioEnabled = true }: QuestionDisplayProps) {
+function getFuriganaReading(exercise: Exercise): string | undefined {
+  const item = exercise.targetItem;
+  if ('reading' in item) {
+    // VocabItem — use its reading field
+    return (item as VocabItem).reading;
+  }
+  if ('onReading' in item) {
+    // KanjiItem — use first kun reading, or first on reading as fallback
+    const kanji = item as KanjiItem;
+    return kanji.kunReading[0] ?? kanji.onReading[0];
+  }
+  return undefined;
+}
+
+export function QuestionDisplay({ exercise, audioEnabled = true, showFurigana = true }: QuestionDisplayProps) {
   const prompt = questionText[exercise.type] ?? 'What is this?';
   const isAudio = exercise.type === 'audio-to-char';
   const isLargeJapanese = largeJapaneseTypes.has(exercise.type);
   const isGrammar = exercise.type === 'grammar-pick-correct';
+
+  // Furigana only on vocab/kanji question types showing Japanese text
+  // Exclude typing-reading: showing furigana would reveal the answer
+  const furiganaTypes = new Set(['word-to-meaning', 'kanji-to-meaning', 'typing-meaning']);
+  const furiganaReading = furiganaTypes.has(exercise.type) ? getFuriganaReading(exercise) : undefined;
 
   const handlePlayAudio = () => {
     speak(exercise.question, audioEnabled);
@@ -94,7 +115,11 @@ export function QuestionDisplay({ exercise, audioEnabled = true }: QuestionDispl
             }
             style={{ color: 'var(--ios-label)' }}
           >
-            {exercise.question}
+            <FuriganaText
+              text={exercise.question}
+              reading={furiganaReading}
+              show={showFurigana}
+            />
           </p>
           {exercise.questionDetail && (
             <p

@@ -45,7 +45,7 @@ export function ExerciseRenderer({ exercises, onComplete, onExit }: ExerciseRend
   const [answers, setAnswers] = useState<Answer[]>([]);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [showFeedback, setShowFeedback] = useState(false);
-  const { audio } = useSettings();
+  const { audio, showFurigana } = useSettings();
 
   const exercise = exercises[currentIndex];
 
@@ -168,7 +168,7 @@ export function ExerciseRenderer({ exercises, onComplete, onExit }: ExerciseRend
       <PageContainer>
         {/* Question display for all types except sentence-order and reading (which have their own layout) */}
         {mode !== 'sentence-order' && mode !== 'reading' && (
-          <QuestionDisplay exercise={exercise} audioEnabled={audio} />
+          <QuestionDisplay exercise={exercise} audioEnabled={audio} showFurigana={showFurigana} />
         )}
 
         {/* Render the appropriate answer interface */}
@@ -199,7 +199,7 @@ export function ExerciseRenderer({ exercises, onComplete, onExit }: ExerciseRend
           </>
         ) : mode === 'sentence-order' && exercise.scrambledWords && exercise.correctOrder ? (
           <>
-            <QuestionDisplay exercise={exercise} audioEnabled={audio} />
+            <QuestionDisplay exercise={exercise} audioEnabled={audio} showFurigana={showFurigana} />
             <SentenceOrder
               scrambledWords={exercise.scrambledWords}
               correctOrder={exercise.correctOrder}

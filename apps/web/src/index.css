@@ -104,3 +104,13 @@ body {
   font-size: 1.25rem;
   font-family: "Noto Sans JP", sans-serif;
 }
+
+/* Furigana (ruby) annotations */
+ruby {
+  ruby-align: center;
+}
+rt {
+  font-size: 0.5em;
+  font-weight: 400;
+  color: var(--ios-secondary-label);
+}

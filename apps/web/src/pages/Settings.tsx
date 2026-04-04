@@ -30,11 +30,13 @@ export function Settings() {
     reminderEnabled,
     reminderTime,
     theme,
+    showFurigana,
     setAudio,
     setPlanSize,
     setReminderEnabled,
     setReminderTime,
     setTheme,
+    setShowFurigana,
   } = useSettings();
   const { user, isLoggedIn, signOut } = useAuth();
   const [showResetModal, setShowResetModal] = useState(false);
@@ -133,14 +135,46 @@ export function Settings() {
           Appearance
         </p>
         <div
-          className="rounded-[10px] p-4"
+          className="rounded-[10px]"
           style={{ background: 'var(--ios-bg-grouped-secondary)' }}
         >
-          <SegmentedControl
-            options={themeOptions}
-            selected={theme}
-            onChange={(value) => setTheme(value as 'system' | 'light' | 'dark')}
-          />
+          <div className="p-4">
+            <SegmentedControl
+              options={themeOptions}
+              selected={theme}
+              onChange={(value) => setTheme(value as 'system' | 'light' | 'dark')}
+            />
+          </div>
+          <div
+            className="flex items-center justify-between px-4 py-[11px]"
+            style={{ borderTop: '0.5px solid var(--ios-separator)' }}
+          >
+            <div>
+              <span className="text-[17px]" style={{ color: 'var(--ios-label)' }}>
+                Show Furigana
+              </span>
+              <p className="text-[13px] mt-0.5" style={{ color: 'var(--ios-secondary-label)' }}>
+                Show reading above kanji in exercises
+              </p>
+            </div>
+            <button
+              role="switch"
+              aria-checked={showFurigana}
+              aria-label="Toggle furigana"
+              onClick={() => setShowFurigana(!showFurigana)}
+              className="relative h-[31px] w-[51px] shrink-0 rounded-full transition-colors"
+              style={{
+                background: showFurigana ? 'var(--ios-green)' : 'var(--ios-fill)',
+              }}
+            >
+              <span
+                className="absolute top-[2px] left-[2px] h-[27px] w-[27px] rounded-full bg-white shadow-sm transition-transform"
+                style={{
+                  transform: showFurigana ? 'translateX(20px)' : 'translateX(0)',
+                }}
+              />
+            </button>
+          </div>
         </div>
 
         {/* Audio section */}
