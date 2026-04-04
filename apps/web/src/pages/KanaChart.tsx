@@ -58,6 +58,14 @@ interface ChartTableProps {
 }
 
 function ChartTable({ rows, script, audioEnabled }: ChartTableProps) {
+  const [speaking, setSpeaking] = useState(false);
+
+  async function handleSpeak(char: string) {
+    setSpeaking(true);
+    await speak(char, audioEnabled);
+    setSpeaking(false);
+  }
+
   return (
     <div className="overflow-x-auto">
       <table className="w-full border-collapse">
@@ -88,8 +96,9 @@ function ChartTable({ rows, script, audioEnabled }: ChartTableProps) {
                 <td key={j} className="p-0.5">
                   {char ? (
                     <button
-                      onClick={() => speak(char, audioEnabled)}
-                      className="w-full rounded-lg py-2 text-center active:opacity-60 transition-colors"
+                      onClick={() => handleSpeak(char)}
+                      disabled={speaking}
+                      className="w-full rounded-lg py-2 text-center active:opacity-60 transition-colors disabled:opacity-50"
                       style={{ background: 'var(--ios-bg-grouped-secondary)' }}
                     >
                       <span
