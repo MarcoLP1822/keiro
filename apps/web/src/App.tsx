@@ -6,6 +6,8 @@ import { supabase } from './services/supabase';
 import { storage } from './services/storage';
 import { reminderService } from './services/reminder';
 import { useTheme } from './hooks/useTheme';
+import { LoadingPage } from './components/common/LoadingSpinner';
+import { ErrorBoundary } from './components/common/ErrorBoundary';
 
 import { Welcome } from './pages/Welcome';
 import { PlacementQuiz } from './pages/PlacementQuiz';
@@ -25,7 +27,7 @@ function AppRoutes() {
   const progressCount = useLiveQuery(() => db.moduleProgress.count());
 
   // Still loading from IndexedDB
-  if (progressCount === undefined) return null;
+  if (progressCount === undefined) return <LoadingPage />;
 
   const isFirstLaunch = progressCount === 0;
 
@@ -96,17 +98,19 @@ function AuthHandler({ children }: { children: React.ReactNode }) {
     }
   }, [authReady]);
 
-  if (!authReady) return null;
+  if (!authReady) return <LoadingPage />;
 
   return <>{children}</>;
 }
 
 export function App() {
   return (
-    <AuthHandler>
-      <BrowserRouter>
-        <AppRoutes />
-      </BrowserRouter>
-    </AuthHandler>
+    <ErrorBoundary>
+      <AuthHandler>
+        <BrowserRouter>
+          <AppRoutes />
+        </BrowserRouter>
+      </AuthHandler>
+    </ErrorBoundary>
   );
 }

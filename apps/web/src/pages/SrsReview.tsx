@@ -1,5 +1,6 @@
 import { useState, useCallback } from 'react';
 import { useNavigate, useLocation } from 'react-router';
+import { LoadingSpinner } from '../components/common/LoadingSpinner';
 import type { SrsGrade } from '@keiro/types';
 import { TopBar } from '../components/layout/TopBar';
 import { PageContainer } from '../components/layout/PageContainer';
@@ -146,7 +147,7 @@ export function SrsReview() {
     );
   }
 
-  if (!isReady || !currentExercise) return null;
+  if (!isReady || !currentExercise) return <LoadingSpinner className="min-h-screen" />;
 
   const mode = getExerciseMode(currentExercise.type);
 

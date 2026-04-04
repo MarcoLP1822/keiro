@@ -3,6 +3,7 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import { TopBar } from '../components/layout/TopBar';
 import { PageContainer } from '../components/layout/PageContainer';
 import { ProgressBar } from '../components/common/ProgressBar';
+import { LoadingSpinner } from '../components/common/LoadingSpinner';
 import { useStats } from '../hooks/useStats';
 import { useStreak } from '../hooks/useStreak';
 import { db } from '../services/db';
@@ -69,7 +70,14 @@ export function Stats() {
   // Get all completed daily plans for the calendar heatmap
   const allPlans = useLiveQuery(() => db.dailyPlan.toArray(), []);
 
-  if (!stats) return null;
+  if (!stats) {
+    return (
+      <>
+        <TopBar title="Statistics" onBack={() => navigate('/')} />
+        <LoadingSpinner className="mt-20" />
+      </>
+    );
+  }
 
   const {
     overallProgress,

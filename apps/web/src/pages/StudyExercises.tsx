@@ -4,6 +4,7 @@ import { ExerciseRenderer } from '../components/exercise/ExerciseRenderer';
 import { Modal } from '../components/common/Modal';
 import { PrimaryButton } from '../components/common/PrimaryButton';
 import { PageContainer } from '../components/layout/PageContainer';
+import { LoadingSpinner } from '../components/common/LoadingSpinner';
 import { useStudySession } from '../hooks/useStudySession';
 
 export function StudyExercises() {
@@ -76,7 +77,7 @@ export function StudyExercises() {
     );
   }
 
-  if (!isReady) return null;
+  if (!isReady) return <LoadingSpinner className="min-h-screen" />;
 
   return (
     <>

@@ -4,6 +4,7 @@ import { getModuleById } from '@keiro/content';
 import { TopBar } from '../components/layout/TopBar';
 import { PageContainer } from '../components/layout/PageContainer';
 import { PrimaryButton } from '../components/common/PrimaryButton';
+import { LoadingSpinner } from '../components/common/LoadingSpinner';
 import { db } from '../services/db';
 
 export function LeechReview() {
@@ -13,7 +14,14 @@ export function LeechReview() {
     [],
   );
 
-  if (!leechCards) return null;
+  if (!leechCards) {
+    return (
+      <>
+        <TopBar title="Difficult Items" onBack={() => navigate('/')} />
+        <LoadingSpinner className="mt-20" />
+      </>
+    );
+  }
 
   function handlePractice() {
     if (!leechCards || leechCards.length === 0) return;
