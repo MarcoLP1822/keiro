@@ -27,13 +27,22 @@ export function shuffle<T>(array: T[]): T[] {
  * Creates a multiple-choice exercise with 1 correct answer and up to 3 distractors.
  * If the pool has fewer than 4 items, uses whatever is available (no duplicates).
  */
+function isKatakana(char: string): boolean {
+  const code = char.charCodeAt(0);
+  return code >= 0x30A0 && code <= 0x30FF;
+}
+
 export function createMultipleChoice(
   type: KanaExerciseType,
   target: KanaItem,
   pool: KanaItem[],
 ): Exercise {
-  // Build distractor pool excluding the target
-  const distractorPool = pool.filter(
+  // Filter pool to same script (hiragana or katakana) then exclude target
+  const targetIsKatakana = isKatakana(target.character);
+  const sameScriptPool = pool.filter(
+    (item) => isKatakana(item.character) === targetIsKatakana,
+  );
+  const distractorPool = sameScriptPool.filter(
     (item) => item.character !== target.character || item.romaji !== target.romaji,
   );
 
