@@ -1,5 +1,5 @@
-import { useState, useCallback } from 'react';
-import { type Module, type KanaItem } from '@keiro/types';
+import { useState, useCallback, useEffect } from 'react';
+import { type KanaItem } from '@keiro/types';
 import { useAdminAuth } from './hooks/useAdminAuth';
 import { AdminNav, type AdminTab } from './components/AdminNav';
 import { Dashboard } from './pages/Dashboard';
@@ -9,14 +9,7 @@ import { AuditLog } from './pages/AuditLog';
 import { ModuleList } from './components/ModuleList';
 import { ModuleEditor } from './components/ModuleEditor';
 import { Preview } from './components/Preview';
-
-const API_BASE = 'http://localhost:3001';
-
-interface FileEntry {
-  filename: string;
-  script: string;
-  modules: Module[];
-}
+import { API_BASE, type FileEntry } from './config';
 
 function LoginForm({ onLogin, onVerify, error }: {
   onLogin: (email: string) => Promise<{ error: string | null }>;
@@ -124,7 +117,7 @@ function ContentEditor() {
     }
   }, []);
 
-  useState(() => { fetchFiles(); });
+  useEffect(() => { fetchFiles(); }, [fetchFiles]);
 
   const currentFile = files.find((f) => f.filename === selectedFile);
   const selectedModule = currentFile?.modules.find((m) => m.id === selectedModuleId);

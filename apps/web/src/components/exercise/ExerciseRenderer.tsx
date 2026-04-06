@@ -91,7 +91,6 @@ export function ExerciseRenderer({ exercises, onComplete, onExit }: ExerciseRend
       setSelectedIndex(null);
       setShowFeedback(false);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentIndex, exercise, answers, exercises.length, onComplete]);
 
   // useCallback to keep a stable reference for the setTimeout in FeedbackBar
@@ -113,7 +112,6 @@ export function ExerciseRenderer({ exercises, onComplete, onExit }: ExerciseRend
       setSelectedIndex(null);
       setShowFeedback(false);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentIndex, selectedIndex, exercise, answers, exercises.length, onComplete]);
 
   // For typing/sentence-order: show feedback bar after submission
@@ -144,7 +142,6 @@ export function ExerciseRenderer({ exercises, onComplete, onExit }: ExerciseRend
   const handleNonMCNext = useCallback(() => {
     const isCorrect = selectedIndex === 0;
     advanceToNext(isCorrect);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedIndex, advanceToNext]);
 
   const correctAnswer = mode === 'typing'

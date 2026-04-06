@@ -25,7 +25,6 @@ export type {
   ReadingExerciseType,
   ExerciseType,
   Exercise,
-  AnswerOption,
   Answer,
   ModuleScore,
 } from './exercise.js';

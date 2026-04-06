@@ -72,7 +72,7 @@ function StreakCard({ streak, freezesAvailable }: { streak: number; freezesAvail
                 className="text-[15px]"
                 style={{ color: 'var(--ios-secondary-label)' }}
               >
-                {streak === 1 ? 'day streak' : 'day streak'}
+                {'day streak'}
               </span>
             </>
           ) : (

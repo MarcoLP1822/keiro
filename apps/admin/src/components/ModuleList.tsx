@@ -1,12 +1,5 @@
 import { type Module, type KanaContentFile } from '@keiro/types';
-
-const API_BASE = 'http://localhost:3001';
-
-interface FileEntry {
-  filename: string;
-  script: string;
-  modules: Module[];
-}
+import { API_BASE, type FileEntry } from '../config';
 
 interface ModuleListProps {
   files: FileEntry[];

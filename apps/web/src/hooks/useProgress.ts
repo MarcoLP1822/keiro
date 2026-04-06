@@ -14,9 +14,5 @@ export function useProgress() {
     await storage.saveModuleProgress(progress);
   }
 
-  async function resetAll(): Promise<void> {
-    await storage.resetAll();
-  }
-
-  return { allProgress, getProgress, updateProgress, resetAll };
+  return { allProgress, getProgress, updateProgress };
 }

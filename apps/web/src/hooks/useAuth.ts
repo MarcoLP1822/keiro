@@ -5,12 +5,10 @@ import { supabase } from '../services/supabase';
 interface AuthState {
   user: User | null;
   isLoggedIn: boolean;
-  isLoading: boolean;
   isBanned: boolean;
   banReason: string | null;
   signInWithEmail: (email: string) => Promise<{ error: string | null }>;
   verifyOtp: (email: string, token: string) => Promise<{ error: string | null }>;
-  signInWithGoogle: () => Promise<{ error: string | null }>;
   signOut: () => Promise<void>;
 }
 
@@ -26,7 +24,6 @@ async function checkBanStatus(userId: string): Promise<{ banned: boolean; reason
 
 export function useAuth(): AuthState {
   const [user, setUser] = useState<User | null>(null);
-  const [isLoading, setIsLoading] = useState(!!supabase);
   const [isBanned, setIsBanned] = useState(false);
   const [banReason, setBanReason] = useState<string | null>(null);
 
@@ -41,7 +38,6 @@ export function useAuth(): AuthState {
         setIsBanned(ban.banned);
         setBanReason(ban.reason);
       }
-      setIsLoading(false);
     });
 
     // Listen for auth changes
@@ -83,16 +79,6 @@ export function useAuth(): AuthState {
     return { error: error?.message ?? null };
   }, []);
 
-  const signInWithGoogle = useCallback(async () => {
-    if (!supabase) return { error: 'Supabase not configured' };
-
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: { redirectTo: window.location.origin },
-    });
-    return { error: error?.message ?? null };
-  }, []);
-
   const signOut = useCallback(async () => {
     if (!supabase) return;
     await supabase.auth.signOut();
@@ -101,12 +87,10 @@ export function useAuth(): AuthState {
   return {
     user,
     isLoggedIn: !!user,
-    isLoading,
     isBanned,
     banReason,
     signInWithEmail,
     verifyOtp,
-    signInWithGoogle,
     signOut,
   };
 }

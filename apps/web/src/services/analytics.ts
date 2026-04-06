@@ -11,13 +11,8 @@ export function trackEvent(name: string, properties?: Record<string, string | nu
 }
 
 export const events = {
-  sessionStart: () => trackEvent('session_start'),
   moduleComplete: (moduleId: string, score: number, passed: boolean) =>
     trackEvent('module_complete', { moduleId, score, passed }),
-  exerciseAnswer: (correct: boolean) =>
-    trackEvent('exercise_answer', { correct }),
-  dailyPlanComplete: () => trackEvent('daily_plan_complete'),
   placementComplete: (startModule: string) =>
     trackEvent('placement_complete', { startModule }),
-  settingsReset: () => trackEvent('settings_reset'),
 };

@@ -25,7 +25,6 @@ export function useReviewSession(cardIds: string[]) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isReady, setIsReady] = useState(false);
   const [isComplete, setIsComplete] = useState(false);
-  const [gradedCount, setGradedCount] = useState(0);
 
   useEffect(() => {
     if (cardIds.length === 0) {
@@ -115,7 +114,6 @@ export function useReviewSession(cardIds: string[]) {
 
     const updatedCard = gradeSrsCard(currentReview.card, grade);
     await storage.saveSrsCard(updatedCard);
-    setGradedCount((prev) => prev + 1);
 
     if (currentIndex + 1 >= reviewExercises.length) {
       setIsComplete(true);
@@ -126,10 +124,8 @@ export function useReviewSession(cardIds: string[]) {
 
   return {
     currentExercise: currentReview?.exercise ?? null,
-    currentCard: currentReview?.card ?? null,
     currentIndex,
     totalCount,
-    gradedCount,
     isReady,
     isComplete,
     handleGrade,

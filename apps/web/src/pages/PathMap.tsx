@@ -240,19 +240,16 @@ export function PathMap() {
     return `${currentModule.level ?? 'beginner'}-${type}`;
   }, [currentModule]);
 
-  // Only expand the section containing the current module
-  const expandedSectionId = defaultExpandedSectionId;
-
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
   const prevExpandedId = useRef<string | null>(null);
 
   // When current module changes (e.g. progress data loads), expand its section
   useEffect(() => {
-    if (expandedSectionId && expandedSectionId !== prevExpandedId.current) {
-      prevExpandedId.current = expandedSectionId;
-      setExpandedSections(new Set([expandedSectionId]));
+    if (defaultExpandedSectionId && defaultExpandedSectionId !== prevExpandedId.current) {
+      prevExpandedId.current = defaultExpandedSectionId;
+      setExpandedSections(new Set([defaultExpandedSectionId]));
     }
-  }, [expandedSectionId]);
+  }, [defaultExpandedSectionId]);
 
   function toggleSection(sectionId: string) {
     setExpandedSections((prev) => {

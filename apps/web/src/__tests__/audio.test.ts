@@ -31,7 +31,7 @@ describe('speak', () => {
     const mockSpeak = vi.fn();
     Object.defineProperty(window, 'speechSynthesis', {
       writable: true,
-      value: { speak: mockSpeak, cancel: () => {} },
+      value: { speak: mockSpeak, cancel: () => {}, speaking: false, getVoices: () => [], addEventListener: () => {} },
     });
 
     speak('あ', true);

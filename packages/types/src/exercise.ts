@@ -2,8 +2,8 @@ import type { ContentItem } from './module.js';
 
 export type KanaExerciseType = 'char-to-romaji' | 'romaji-to-char' | 'audio-to-char';
 export type VocabExerciseType = 'word-to-meaning' | 'meaning-to-word' | 'sentence-gap-fill' | 'typing-meaning';
-export type GrammarExerciseType = 'grammar-correct-form' | 'grammar-sentence-order' | 'grammar-pick-correct';
-export type KanjiExerciseType = 'kanji-to-meaning' | 'kanji-to-reading' | 'reading-to-kanji' | 'typing-reading';
+export type GrammarExerciseType = 'grammar-sentence-order' | 'grammar-pick-correct';
+export type KanjiExerciseType = 'kanji-to-meaning' | 'kanji-to-reading' | 'typing-reading';
 
 export type ReadingExerciseType = 'reading-comprehension' | 'reading-translation';
 
@@ -30,11 +30,6 @@ export interface Exercise {
   sentenceWithGap?: string;   // "私は___を食べます" (gap marked with ___)
   // Reference item
   targetItem: ContentItem;
-}
-
-export interface AnswerOption {
-  label: string;
-  value: string;
 }
 
 export interface Answer {

@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import { type Module, type KanaItem, type KanaContentFile } from '@keiro/types';
 import { SchemaForm } from './SchemaForm';
-
-const API_BASE = 'http://localhost:3001';
+import { API_BASE } from '../config';
 
 interface ModuleEditorProps {
   module: Module;

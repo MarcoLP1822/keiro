@@ -4,7 +4,6 @@ import type {
   VocabItem,
   KanjiItem,
   GrammarItem,
-  ReadingItem,
   KanaContentFile,
   VocabContentFile,
   KanjiContentFile,
@@ -94,21 +93,4 @@ export function getGrammarItems(): GrammarItem[] {
   return allModules
     .filter((m) => m.type === 'grammar')
     .flatMap((m) => m.items as GrammarItem[]);
-}
-
-/** Flat array of all reading items across all modules */
-export function getReadingItems(): ReadingItem[] {
-  return allModules
-    .filter((m) => m.type === 'reading')
-    .flatMap((m) => m.items as ReadingItem[]);
-}
-
-/** Filter modules by type (e.g., 'kana', 'vocabulary') */
-export function getModulesByType(type: string): Module[] {
-  return allModules.filter((m) => m.type === type);
-}
-
-/** Filter modules by level (e.g., 'n5', 'beginner') */
-export function getModulesByLevel(level: string): Module[] {
-  return allModules.filter((m) => m.level === level);
 }
