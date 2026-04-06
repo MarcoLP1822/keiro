@@ -7,8 +7,7 @@ interface AdminAuthState {
   isAdmin: boolean;
   isLoading: boolean;
   error: string | null;
-  login: (email: string) => Promise<{ error: string | null }>;
-  verifyOtp: (email: string, token: string) => Promise<{ error: string | null }>;
+  login: (email: string, password: string) => Promise<{ error: string | null }>;
   logout: () => Promise<void>;
 }
 
@@ -63,20 +62,10 @@ export function useAdminAuth(): AdminAuthState {
     return () => subscription.unsubscribe();
   }, [checkAdminRole]);
 
-  const login = useCallback(async (email: string) => {
+  const login = useCallback(async (email: string, password: string) => {
     if (!supabaseAdmin) return { error: 'Supabase not configured' };
     setError(null);
-    const { error: err } = await supabaseAdmin.auth.signInWithOtp({ email });
-    return { error: err?.message ?? null };
-  }, []);
-
-  const verifyOtp = useCallback(async (email: string, token: string) => {
-    if (!supabaseAdmin) return { error: 'Supabase not configured' };
-    const { error: err } = await supabaseAdmin.auth.verifyOtp({
-      email,
-      token,
-      type: 'email',
-    });
+    const { error: err } = await supabaseAdmin.auth.signInWithPassword({ email, password });
     return { error: err?.message ?? null };
   }, []);
 
@@ -88,5 +77,5 @@ export function useAdminAuth(): AdminAuthState {
     setError(null);
   }, []);
 
-  return { user, isAdmin, isLoading, error, login, verifyOtp, logout };
+  return { user, isAdmin, isLoading, error, login, logout };
 }

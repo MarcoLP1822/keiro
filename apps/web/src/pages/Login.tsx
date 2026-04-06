@@ -7,44 +7,30 @@ import { useAuth } from '../hooks/useAuth';
 
 export function Login() {
   const navigate = useNavigate();
-  const { signInWithEmail, verifyOtp, isLoggedIn } = useAuth();
+  const { signUp, signIn, isLoggedIn } = useAuth();
   const [email, setEmail] = useState('');
-  const [otpCode, setOtpCode] = useState('');
-  const [step, setStep] = useState<'email' | 'otp'>('email');
-  const [sending, setSending] = useState(false);
-  const [verifying, setVerifying] = useState(false);
+  const [password, setPassword] = useState('');
+  const [mode, setMode] = useState<'signin' | 'signup'>('signin');
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // If already logged in, redirect to settings
   if (isLoggedIn) {
     navigate('/settings', { replace: true });
     return null;
   }
 
-  async function handleSendCode(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!email.trim()) return;
+    if (!email.trim() || !password) return;
 
-    setSending(true);
+    setLoading(true);
     setError(null);
-    const result = await signInWithEmail(email.trim());
-    setSending(false);
 
-    if (result.error) {
-      setError(result.error);
-    } else {
-      setStep('otp');
-    }
-  }
+    const result = mode === 'signup'
+      ? await signUp(email.trim(), password)
+      : await signIn(email.trim(), password);
 
-  async function handleVerifyCode(e: React.FormEvent) {
-    e.preventDefault();
-    if (!otpCode.trim()) return;
-
-    setVerifying(true);
-    setError(null);
-    const result = await verifyOtp(email.trim(), otpCode.trim());
-    setVerifying(false);
+    setLoading(false);
 
     if (result.error) {
       setError(result.error);
@@ -55,7 +41,7 @@ export function Login() {
 
   return (
     <>
-      <TopBar title="Sign In" onBack={() => navigate('/settings')} />
+      <TopBar title={mode === 'signin' ? 'Sign In' : 'Create Account'} onBack={() => navigate('/settings')} />
       <PageContainer>
         <div className="flex flex-col items-center pt-8 pb-4">
           <span
@@ -76,16 +62,18 @@ export function Login() {
             className="mt-2 text-[15px] text-center max-w-[280px]"
             style={{ color: 'var(--ios-secondary-label)' }}
           >
-            Sign in to sync your progress across devices
+            {mode === 'signin'
+              ? 'Sign in to sync your progress across devices'
+              : 'Create an account to sync your progress across devices'}
           </p>
         </div>
 
-        {step === 'email' ? (
-          <form onSubmit={handleSendCode} className="mt-8 space-y-3">
-            <div
-              className="rounded-[10px] px-4"
-              style={{ background: 'var(--ios-bg-grouped-secondary)' }}
-            >
+        <form onSubmit={handleSubmit} className="mt-8 space-y-3">
+          <div
+            className="rounded-[10px] overflow-hidden"
+            style={{ background: 'var(--ios-bg-grouped-secondary)' }}
+          >
+            <div className="px-4">
               <input
                 type="email"
                 value={email}
@@ -96,63 +84,35 @@ export function Login() {
                 style={{ color: 'var(--ios-label)' }}
               />
             </div>
-            <PrimaryButton type="submit" loading={sending} disabled={!email.trim()}>
-              Send Verification Code
-            </PrimaryButton>
-          </form>
-        ) : (
-          <>
             <div
-              className="mt-8 rounded-[10px] p-4 text-center"
-              style={{ background: 'var(--ios-bg-grouped-secondary)' }}
+              className="px-4"
+              style={{ borderTop: '0.5px solid var(--ios-separator)' }}
             >
-              <p
-                className="text-[15px]"
-                style={{ color: 'var(--ios-secondary-label)' }}
-              >
-                We sent a verification code to
-              </p>
-              <p
-                className="text-[17px] font-semibold mt-1"
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Password"
+                autoComplete={mode === 'signup' ? 'new-password' : 'current-password'}
+                className="w-full py-[11px] text-[17px] bg-transparent outline-none"
                 style={{ color: 'var(--ios-label)' }}
-              >
-                {email}
-              </p>
+              />
             </div>
+          </div>
 
-            <form onSubmit={handleVerifyCode} className="mt-4 space-y-3">
-              <div
-                className="rounded-[10px] px-4"
-                style={{ background: 'var(--ios-bg-grouped-secondary)' }}
-              >
-                <input
-                  type="text"
-                  inputMode="numeric"
-                  autoComplete="one-time-code"
-                  value={otpCode}
-                  onChange={(e) => setOtpCode(e.target.value.replace(/\D/g, '').slice(0, 8))}
-                  placeholder="Enter code"
-                  className="w-full py-[11px] text-[17px] text-center bg-transparent outline-none placeholder:tracking-normal"
-                  style={{ color: 'var(--ios-label)', letterSpacing: otpCode ? '0.5em' : 'normal' }}
-                  maxLength={8}
-                />
-              </div>
-              <PrimaryButton type="submit" loading={verifying} disabled={otpCode.length < 6}>
-                Verify
-              </PrimaryButton>
-            </form>
+          <PrimaryButton type="submit" loading={loading} disabled={!email.trim() || password.length < 6}>
+            {mode === 'signin' ? 'Sign In' : 'Create Account'}
+          </PrimaryButton>
 
-            <div className="mt-4 text-center">
-              <button
-                onClick={() => { setStep('email'); setOtpCode(''); setError(null); }}
-                className="text-[15px] active:opacity-60"
-                style={{ color: 'var(--ios-blue)' }}
-              >
-                Use a different email
-              </button>
-            </div>
-          </>
-        )}
+          {mode === 'signup' && (
+            <p
+              className="text-center text-[13px]"
+              style={{ color: 'var(--ios-secondary-label)' }}
+            >
+              Password must be at least 6 characters
+            </p>
+          )}
+        </form>
 
         {error && (
           <p
@@ -163,8 +123,17 @@ export function Login() {
           </p>
         )}
 
-        {/* Skip */}
-        <div className="mt-8 text-center">
+        <div className="mt-6 text-center">
+          <button
+            onClick={() => { setMode(mode === 'signin' ? 'signup' : 'signin'); setError(null); }}
+            className="text-[15px] active:opacity-60"
+            style={{ color: 'var(--ios-blue)' }}
+          >
+            {mode === 'signin' ? "Don't have an account? Sign Up" : 'Already have an account? Sign In'}
+          </button>
+        </div>
+
+        <div className="mt-4 text-center">
           <button
             onClick={() => navigate('/settings')}
             className="text-[15px] active:opacity-60"

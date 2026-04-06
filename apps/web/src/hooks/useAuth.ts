@@ -7,8 +7,8 @@ interface AuthState {
   isLoggedIn: boolean;
   isBanned: boolean;
   banReason: string | null;
-  signInWithEmail: (email: string) => Promise<{ error: string | null }>;
-  verifyOtp: (email: string, token: string) => Promise<{ error: string | null }>;
+  signUp: (email: string, password: string) => Promise<{ error: string | null }>;
+  signIn: (email: string, password: string) => Promise<{ error: string | null }>;
   signOut: () => Promise<void>;
 }
 
@@ -30,7 +30,6 @@ export function useAuth(): AuthState {
   useEffect(() => {
     if (!supabase) return;
 
-    // Get initial session
     supabase.auth.getSession().then(async ({ data: { session } }) => {
       setUser(session?.user ?? null);
       if (session?.user) {
@@ -40,7 +39,6 @@ export function useAuth(): AuthState {
       }
     });
 
-    // Listen for auth changes
     const { data: { subscription } } = supabase.auth.onAuthStateChange(async (_event, session) => {
       setUser(session?.user ?? null);
       if (session?.user) {
@@ -56,26 +54,15 @@ export function useAuth(): AuthState {
     return () => subscription.unsubscribe();
   }, []);
 
-  const signInWithEmail = useCallback(async (email: string) => {
+  const signUp = useCallback(async (email: string, password: string) => {
     if (!supabase) return { error: 'Supabase not configured' };
-
-    const { error } = await supabase.auth.signInWithOtp({
-      email,
-      options: {
-        shouldCreateUser: true,
-      },
-    });
+    const { error } = await supabase.auth.signUp({ email, password });
     return { error: error?.message ?? null };
   }, []);
 
-  const verifyOtp = useCallback(async (email: string, token: string) => {
+  const signIn = useCallback(async (email: string, password: string) => {
     if (!supabase) return { error: 'Supabase not configured' };
-
-    const { error } = await supabase.auth.verifyOtp({
-      email,
-      token,
-      type: 'email',
-    });
+    const { error } = await supabase.auth.signInWithPassword({ email, password });
     return { error: error?.message ?? null };
   }, []);
 
@@ -89,8 +76,8 @@ export function useAuth(): AuthState {
     isLoggedIn: !!user,
     isBanned,
     banReason,
-    signInWithEmail,
-    verifyOtp,
+    signUp,
+    signIn,
     signOut,
   };
 }
