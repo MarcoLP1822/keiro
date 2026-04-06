@@ -1,5 +1,5 @@
 import { useState, useEffect, lazy, Suspense } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router';
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db } from './services/db';
 import { supabase } from './services/supabase';
@@ -26,6 +26,12 @@ const About = lazy(() => import('./pages/About').then(m => ({ default: m.About }
 const Privacy = lazy(() => import('./pages/Privacy').then(m => ({ default: m.Privacy })));
 const KanaChart = lazy(() => import('./pages/KanaChart').then(m => ({ default: m.KanaChart })));
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  return null;
+}
+
 function AppRoutes() {
   const progressCount = useLiveQuery(() => db.moduleProgress.count());
 
@@ -35,6 +41,7 @@ function AppRoutes() {
   const isFirstLaunch = progressCount === 0;
 
   return (
+    <ScrollToTop />
     <Suspense fallback={<LoadingPage />}>
     <Routes>
       <Route path="/" element={isFirstLaunch ? <Navigate to="/welcome" replace /> : <Home />} />
