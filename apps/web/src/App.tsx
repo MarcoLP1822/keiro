@@ -41,6 +41,7 @@ function AppRoutes() {
   const isFirstLaunch = progressCount === 0;
 
   return (
+    <>
     <ScrollToTop />
     <Suspense fallback={<LoadingPage />}>
     <Routes>
@@ -62,6 +63,7 @@ function AppRoutes() {
       <Route path="/privacy" element={<Privacy />} />
     </Routes>
     </Suspense>
+    </>
   );
 }
 
