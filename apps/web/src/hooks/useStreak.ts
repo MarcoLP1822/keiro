@@ -15,6 +15,5 @@ export function useStreak() {
     longestStreak: current.longestStreak,
     freezesAvailable: current.freezesAvailable,
     freezesUsed: current.freezesUsed,
-    lastResult: null as { freezeUsed: boolean; freezeEarned: boolean } | null,
   };
 }

@@ -26,6 +26,8 @@ CREATE TABLE srs_cards (
   ease_factor REAL DEFAULT 2.5,
   next_review DATE,
   last_review DATE,
+  lapse_count INTEGER DEFAULT 0,
+  is_leech BOOLEAN DEFAULT FALSE,
   updated_at TIMESTAMPTZ DEFAULT NOW(),
   PRIMARY KEY (user_id, id)
 );

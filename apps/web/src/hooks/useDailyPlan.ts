@@ -51,17 +51,27 @@ export function useDailyPlan() {
 
   async function markComplete(): Promise<void> {
     const date = todayString();
-    await db.dailyPlan.put({
-      date,
-      modules: plan?.modules ?? [],
-      completed: true,
-    });
+    try {
+      await db.dailyPlan.put({
+        date,
+        modules: plan?.modules ?? [],
+        completed: true,
+      });
+    } catch (err) {
+      console.error('[useDailyPlan] Failed to mark daily plan complete:', err);
+      throw err;
+    }
 
     // Update streak when daily plan is completed
-    const existing = await db.streakData.get('current');
-    const prev = existing ?? createDefaultStreakData();
-    const { data } = updateStreak(prev, date);
-    await db.streakData.put(data);
+    try {
+      const existing = await db.streakData.get('current');
+      const prev = existing ?? createDefaultStreakData();
+      const { data } = updateStreak(prev, date);
+      await db.streakData.put(data);
+    } catch (err) {
+      console.error('[useDailyPlan] Failed to update streak after plan completion:', err);
+      throw err;
+    }
   }
 
   return { plan, isComplete, markComplete };

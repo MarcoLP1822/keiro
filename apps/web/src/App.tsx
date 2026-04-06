@@ -89,12 +89,12 @@ function AuthHandler({ children }: { children: React.ReactNode }) {
         if (session) storage.setUserId(session.user.id);
         window.history.replaceState({}, '', window.location.pathname);
         setAuthReady(true);
-      });
+      }).catch(() => setAuthReady(true));
     } else {
       supabase.auth.getSession().then(({ data: { session } }) => {
         if (session) storage.setUserId(session.user.id);
         setAuthReady(true);
-      });
+      }).catch(() => setAuthReady(true));
     }
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {

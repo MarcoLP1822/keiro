@@ -114,7 +114,7 @@ export function Home() {
   const navigate = useNavigate();
   const { allProgress } = useProgress();
   const { plan, isComplete } = useDailyPlan();
-  const { streak, freezesAvailable, lastResult } = useStreak();
+  const { streak, freezesAvailable } = useStreak();
   const leechCount = useLiveQuery(
     () => db.srsCards.where('isLeech').equals(1).count(),
     [],
@@ -348,14 +348,6 @@ export function Home() {
               >
                 +1 day added to your streak
               </p>
-              {lastResult?.freezeEarned && (
-                <p
-                  className="text-[13px] mt-2"
-                  style={{ color: 'var(--ios-blue)' }}
-                >
-                  You earned a streak freeze! ❄️
-                </p>
-              )}
             </div>
             <div className="mt-6 space-y-3">
               {currentModule && (

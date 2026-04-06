@@ -7,3 +7,6 @@ export { FeedbackBar } from './FeedbackBar';
 export { ProgressCounter } from './ProgressCounter';
 export { ExerciseRenderer } from './ExerciseRenderer';
 export { SrsGradeButtons } from './SrsGradeButtons';
+
+export type { ExerciseMode } from './exerciseMode';
+export { getExerciseMode } from './exerciseMode';

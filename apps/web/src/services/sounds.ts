@@ -33,8 +33,8 @@ export function playCorrectSound(): void {
     // Pleasant ascending two-note chime: C5 then E5
     playTone(523.25, 0.1, now, ctx, gain);
     playTone(659.25, 0.1, now + 0.1, ctx, gain);
-  } catch {
-    // Silently skip if audio fails
+  } catch (err) {
+    console.warn('[sounds] playCorrectSound failed:', err);
   }
 }
 
@@ -49,7 +49,7 @@ export function playIncorrectSound(): void {
 
     // Soft low tone: C4
     playTone(261.63, 0.15, ctx.currentTime, ctx, gain);
-  } catch {
-    // Silently skip if audio fails
+  } catch (err) {
+    console.warn('[sounds] playIncorrectSound failed:', err);
   }
 }

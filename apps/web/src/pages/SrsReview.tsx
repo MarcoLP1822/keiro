@@ -12,6 +12,7 @@ import { TypingInput } from '../components/exercise/TypingInput';
 import { SentenceOrder } from '../components/exercise/SentenceOrder';
 import { ProgressCounter } from '../components/exercise/ProgressCounter';
 import { SrsGradeButtons } from '../components/exercise/SrsGradeButtons';
+import { getExerciseMode } from '../components/exercise';
 import { PrimaryButton } from '../components/common/PrimaryButton';
 import { Modal } from '../components/common/Modal';
 import { useReviewSession } from '../hooks/useReviewSession';
@@ -21,22 +22,6 @@ import { playCorrectSound, playIncorrectSound } from '../services/sounds';
 import { vibrateSuccess, vibrateError } from '../services/haptics';
 import { storage } from '../services/storage';
 import { db } from '../services/db';
-
-type ExerciseMode = 'multiple-choice' | 'gap-fill' | 'typing' | 'sentence-order';
-
-function getExerciseMode(type: string): ExerciseMode {
-  switch (type) {
-    case 'sentence-gap-fill':
-      return 'gap-fill';
-    case 'typing-meaning':
-    case 'typing-reading':
-      return 'typing';
-    case 'grammar-sentence-order':
-      return 'sentence-order';
-    default:
-      return 'multiple-choice';
-  }
-}
 
 export function SrsReview() {
   const navigate = useNavigate();

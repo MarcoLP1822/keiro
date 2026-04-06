@@ -10,6 +10,7 @@ import { SentenceOrder } from './SentenceOrder';
 import { ReadingPassage } from './ReadingPassage';
 import { FeedbackBar } from './FeedbackBar';
 import { ProgressCounter } from './ProgressCounter';
+import { getExerciseMode } from './exerciseMode';
 import { speak } from '../../services/audio';
 import { playCorrectSound, playIncorrectSound } from '../../services/sounds';
 import { vibrateSuccess, vibrateError } from '../../services/haptics';
@@ -19,25 +20,6 @@ interface ExerciseRendererProps {
   exercises: Exercise[];
   onComplete: (answers: Answer[]) => void;
   onExit?: () => void;
-}
-
-type ExerciseMode = 'multiple-choice' | 'gap-fill' | 'typing' | 'sentence-order' | 'reading';
-
-function getExerciseMode(type: string): ExerciseMode {
-  switch (type) {
-    case 'sentence-gap-fill':
-      return 'gap-fill';
-    case 'typing-meaning':
-    case 'typing-reading':
-      return 'typing';
-    case 'grammar-sentence-order':
-      return 'sentence-order';
-    case 'reading-comprehension':
-    case 'reading-translation':
-      return 'reading';
-    default:
-      return 'multiple-choice';
-  }
 }
 
 export function ExerciseRenderer({ exercises, onComplete, onExit }: ExerciseRendererProps) {

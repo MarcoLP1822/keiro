@@ -16,6 +16,6 @@ export {
 
 export { generatePlacementQuiz, evaluatePlacement } from './placement.js';
 
-export { gradeSrsCard, createSrsCard, getDueCards } from './srs.js';
+export { gradeSrsCard, createSrsCard, getDueCards, getLeechCards } from './srs.js';
 
 export { updateStreak, createDefaultStreakData } from './streak.js';
