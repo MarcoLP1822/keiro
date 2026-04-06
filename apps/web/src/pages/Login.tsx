@@ -7,12 +7,13 @@ import { useAuth } from '../hooks/useAuth';
 
 export function Login() {
   const navigate = useNavigate();
-  const { signUp, signIn, isLoggedIn } = useAuth();
+  const { signUp, signIn, forgotPassword, isLoggedIn } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [mode, setMode] = useState<'signin' | 'signup'>('signin');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [resetSent, setResetSent] = useState(false);
 
   if (isLoggedIn) {
     navigate('/settings', { replace: true });
@@ -123,9 +124,37 @@ export function Login() {
           </p>
         )}
 
-        <div className="mt-6 text-center">
+        {resetSent && (
+          <p
+            className="mt-4 text-center text-[15px]"
+            style={{ color: 'var(--ios-green)' }}
+          >
+            Password reset email sent. Check your inbox.
+          </p>
+        )}
+
+        {mode === 'signin' && (
+          <div className="mt-4 text-center">
+            <button
+              onClick={async () => {
+                if (!email.trim()) { setError('Enter your email first'); return; }
+                setError(null);
+                setResetSent(false);
+                const result = await forgotPassword(email.trim());
+                if (result.error) setError(result.error);
+                else setResetSent(true);
+              }}
+              className="text-[15px] active:opacity-60"
+              style={{ color: 'var(--ios-blue)' }}
+            >
+              Forgot password?
+            </button>
+          </div>
+        )}
+
+        <div className="mt-4 text-center">
           <button
-            onClick={() => { setMode(mode === 'signin' ? 'signup' : 'signin'); setError(null); }}
+            onClick={() => { setMode(mode === 'signin' ? 'signup' : 'signin'); setError(null); setResetSent(false); }}
             className="text-[15px] active:opacity-60"
             style={{ color: 'var(--ios-blue)' }}
           >

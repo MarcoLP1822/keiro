@@ -9,6 +9,7 @@ interface AuthState {
   banReason: string | null;
   signUp: (email: string, password: string) => Promise<{ error: string | null }>;
   signIn: (email: string, password: string) => Promise<{ error: string | null }>;
+  forgotPassword: (email: string) => Promise<{ error: string | null }>;
   signOut: () => Promise<void>;
 }
 
@@ -66,6 +67,14 @@ export function useAuth(): AuthState {
     return { error: error?.message ?? null };
   }, []);
 
+  const forgotPassword = useCallback(async (email: string) => {
+    if (!supabase) return { error: 'Supabase not configured' };
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: `${window.location.origin}/reset-password`,
+    });
+    return { error: error?.message ?? null };
+  }, []);
+
   const signOut = useCallback(async () => {
     if (!supabase) return;
     await supabase.auth.signOut();
@@ -78,6 +87,7 @@ export function useAuth(): AuthState {
     banReason,
     signUp,
     signIn,
+    forgotPassword,
     signOut,
   };
 }

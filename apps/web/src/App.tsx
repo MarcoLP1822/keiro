@@ -25,6 +25,7 @@ const LeechReview = lazy(() => import('./pages/LeechReview').then(m => ({ defaul
 const About = lazy(() => import('./pages/About').then(m => ({ default: m.About })));
 const Privacy = lazy(() => import('./pages/Privacy').then(m => ({ default: m.Privacy })));
 const KanaChart = lazy(() => import('./pages/KanaChart').then(m => ({ default: m.KanaChart })));
+const ResetPassword = lazy(() => import('./pages/ResetPassword').then(m => ({ default: m.ResetPassword })));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -61,6 +62,7 @@ function AppRoutes() {
       <Route path="/kana-chart" element={<KanaChart />} />
       <Route path="/about" element={<About />} />
       <Route path="/privacy" element={<Privacy />} />
+      <Route path="/reset-password" element={<ResetPassword />} />
     </Routes>
     </Suspense>
     </>
@@ -75,10 +77,25 @@ function AuthHandler({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (!supabase) return;
 
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      if (session) storage.setUserId(session.user.id);
-      setAuthReady(true);
-    });
+    // Supabase recovery/auth links put tokens in the URL hash.
+    // Let Supabase client detect and exchange them before we proceed.
+    const hashParams = new URLSearchParams(window.location.hash.replace('#', '?'));
+    const hasAuthTokens = hashParams.has('access_token');
+
+    if (hasAuthTokens) {
+      // Supabase auto-detects hash tokens via detectSessionInUrl: true.
+      // Just wait for the session to be established, then clean the URL.
+      supabase.auth.getSession().then(({ data: { session } }) => {
+        if (session) storage.setUserId(session.user.id);
+        window.history.replaceState({}, '', window.location.pathname);
+        setAuthReady(true);
+      });
+    } else {
+      supabase.auth.getSession().then(({ data: { session } }) => {
+        if (session) storage.setUserId(session.user.id);
+        setAuthReady(true);
+      });
+    }
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
       storage.setUserId(session?.user.id ?? null);
