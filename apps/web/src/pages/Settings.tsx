@@ -40,6 +40,7 @@ export function Settings() {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [syncing, setSyncing] = useState(false);
   const [exporting, setExporting] = useState(false);
+  const [actionError, setActionError] = useState<string | null>(null);
 
   async function handleSignOut() {
     await signOut();
@@ -67,6 +68,7 @@ export function Settings() {
 
   async function handleExportData() {
     if (!supabase || !user) return;
+    setActionError(null);
     setExporting(true);
     try {
       const [
@@ -99,6 +101,7 @@ export function Settings() {
       URL.revokeObjectURL(url);
     } catch (err) {
       console.error('Export failed:', err);
+      setActionError('Export failed — please try again');
     } finally {
       setExporting(false);
     }
@@ -106,6 +109,7 @@ export function Settings() {
 
   async function handleDeleteAccount() {
     if (!supabase || !user) return;
+    setActionError(null);
     try {
       // Call RPC function that deletes the calling user
       const { error } = await supabase.rpc('delete_own_account');
@@ -117,6 +121,7 @@ export function Settings() {
       navigate('/welcome');
     } catch (err) {
       console.error('Account deletion failed:', err);
+      setActionError('Account deletion failed — please try again');
     }
   }
 
@@ -162,6 +167,11 @@ export function Settings() {
                 <p className="text-[13px] mt-0.5" style={{ color: 'var(--ios-secondary-label)' }}>
                   Last synced: {formatLastSynced()}
                 </p>
+                {syncService.lastError && (
+                  <p className="text-[13px] mt-0.5" style={{ color: 'var(--ios-red)' }}>
+                    {syncService.lastError}
+                  </p>
+                )}
               </div>
               <div style={{ borderTop: '0.5px solid var(--ios-separator)' }}>
                 <button
@@ -307,6 +317,11 @@ export function Settings() {
         >
           Data & Privacy
         </p>
+        {actionError && (
+          <div className="mt-2 rounded-[10px] px-4 py-3" style={{ background: 'var(--ios-red)', color: 'white' }}>
+            <p className="text-[15px]">{actionError}</p>
+          </div>
+        )}
         <div
           className="rounded-[10px] overflow-hidden"
           style={{ background: 'var(--ios-bg-grouped-secondary)' }}

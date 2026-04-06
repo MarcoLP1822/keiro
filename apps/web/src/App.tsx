@@ -1,28 +1,30 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db } from './services/db';
 import { supabase } from './services/supabase';
 import { storage } from './services/storage';
 import { useTheme } from './hooks/useTheme';
+import { useOnline } from './hooks/useOnline';
 import { LoadingPage } from './components/common/LoadingSpinner';
 import { ErrorBoundary } from './components/common/ErrorBoundary';
 
-import { Welcome } from './pages/Welcome';
-import { PlacementQuiz } from './pages/PlacementQuiz';
-import { Home } from './pages/Home';
-import { PathMap } from './pages/PathMap';
-import { StudyIntro } from './pages/StudyIntro';
-import { StudyExercises } from './pages/StudyExercises';
-import { ModuleComplete } from './pages/ModuleComplete';
-import { Review } from './pages/Review';
-import { SrsReview } from './pages/SrsReview';
-import { Settings } from './pages/Settings';
-import { Stats } from './pages/Stats';
-import { Login } from './pages/Login';
-import { LeechReview } from './pages/LeechReview';
-import { About } from './pages/About';
-import { KanaChart } from './pages/KanaChart';
+const Welcome = lazy(() => import('./pages/Welcome').then(m => ({ default: m.Welcome })));
+const PlacementQuiz = lazy(() => import('./pages/PlacementQuiz').then(m => ({ default: m.PlacementQuiz })));
+const Home = lazy(() => import('./pages/Home').then(m => ({ default: m.Home })));
+const PathMap = lazy(() => import('./pages/PathMap').then(m => ({ default: m.PathMap })));
+const StudyIntro = lazy(() => import('./pages/StudyIntro').then(m => ({ default: m.StudyIntro })));
+const StudyExercises = lazy(() => import('./pages/StudyExercises').then(m => ({ default: m.StudyExercises })));
+const ModuleComplete = lazy(() => import('./pages/ModuleComplete').then(m => ({ default: m.ModuleComplete })));
+const Review = lazy(() => import('./pages/Review').then(m => ({ default: m.Review })));
+const SrsReview = lazy(() => import('./pages/SrsReview').then(m => ({ default: m.SrsReview })));
+const Settings = lazy(() => import('./pages/Settings').then(m => ({ default: m.Settings })));
+const Stats = lazy(() => import('./pages/Stats').then(m => ({ default: m.Stats })));
+const Login = lazy(() => import('./pages/Login').then(m => ({ default: m.Login })));
+const LeechReview = lazy(() => import('./pages/LeechReview').then(m => ({ default: m.LeechReview })));
+const About = lazy(() => import('./pages/About').then(m => ({ default: m.About })));
+const Privacy = lazy(() => import('./pages/Privacy').then(m => ({ default: m.Privacy })));
+const KanaChart = lazy(() => import('./pages/KanaChart').then(m => ({ default: m.KanaChart })));
 
 function AppRoutes() {
   const progressCount = useLiveQuery(() => db.moduleProgress.count());
@@ -33,6 +35,7 @@ function AppRoutes() {
   const isFirstLaunch = progressCount === 0;
 
   return (
+    <Suspense fallback={<LoadingPage />}>
     <Routes>
       <Route path="/" element={isFirstLaunch ? <Navigate to="/welcome" replace /> : <Home />} />
       <Route path="/welcome" element={<Welcome />} />
@@ -49,12 +52,15 @@ function AppRoutes() {
       <Route path="/stats" element={<Stats />} />
       <Route path="/kana-chart" element={<KanaChart />} />
       <Route path="/about" element={<About />} />
+      <Route path="/privacy" element={<Privacy />} />
     </Routes>
+    </Suspense>
   );
 }
 
 function AuthHandler({ children }: { children: React.ReactNode }) {
   useTheme();
+  const isOnline = useOnline();
   const [authReady, setAuthReady] = useState(!supabase);
 
   useEffect(() => {
@@ -97,7 +103,19 @@ function AuthHandler({ children }: { children: React.ReactNode }) {
 
   if (!authReady) return <LoadingPage />;
 
-  return <>{children}</>;
+  return (
+    <>
+      {!isOnline && (
+        <div
+          className="sticky top-0 z-50 px-4 py-2 text-center text-[13px] font-medium"
+          style={{ background: 'var(--ios-orange)', color: 'white' }}
+        >
+          You are offline — studying works, but sync is paused
+        </div>
+      )}
+      {children}
+    </>
+  );
 }
 
 export function App() {

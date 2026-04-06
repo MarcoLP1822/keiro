@@ -6,9 +6,14 @@ class SyncService {
   private userId: string | null = null;
   private _lastSyncedAt: string | null = null;
   private _isBanned = false;
+  private _lastError: string | null = null;
 
   get lastSyncedAt(): string | null {
     return this._lastSyncedAt;
+  }
+
+  get lastError(): string | null {
+    return this._lastError;
   }
 
   setUserId(id: string | null) {
@@ -40,6 +45,7 @@ class SyncService {
     if (!supabase || !this.userId) return;
     if (await this.checkBan()) {
       console.warn('[sync] push blocked: account suspended');
+      this._lastError = 'Sync paused: account suspended';
       return;
     }
 
@@ -117,8 +123,10 @@ class SyncService {
       }
 
       this._lastSyncedAt = new Date().toISOString();
+      this._lastError = null;
     } catch (err) {
       console.error('[sync] push failed:', err);
+      this._lastError = 'Sync failed: could not push data';
     }
   }
 
@@ -126,6 +134,7 @@ class SyncService {
     if (!supabase || !this.userId) return;
     if (this._isBanned) {
       console.warn('[sync] pull blocked: account suspended');
+      this._lastError = 'Sync paused: account suspended';
       return;
     }
 
@@ -240,8 +249,10 @@ class SyncService {
       }
 
       this._lastSyncedAt = new Date().toISOString();
+      this._lastError = null;
     } catch (err) {
       console.error('[sync] pull failed:', err);
+      this._lastError = 'Sync failed: could not pull data';
     }
   }
 

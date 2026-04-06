@@ -26,7 +26,7 @@ export default defineConfig({
         icons: [
           { src: '/favicon.svg', sizes: 'any', type: 'image/svg+xml' },
           { src: '/icon-192.png', sizes: '192x192', type: 'image/png' },
-          { src: '/icon-512.png', sizes: '512x512', type: 'image/png' },
+          { src: '/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any maskable' },
         ],
       },
     }),
@@ -39,7 +39,23 @@ export default defineConfig({
     },
   },
   build: {
-    chunkSizeWarningLimit: 1500,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules/react') || id.includes('node_modules/react-dom') || id.includes('node_modules/react-router')) {
+            return 'vendor';
+          }
+          if (id.includes('node_modules/@supabase')) {
+            return 'supabase';
+          }
+          if (id.includes('content/kana')) return 'content-kana';
+          if (id.includes('/n5.json') || id.includes('/n5/')) return 'content-n5';
+          if (id.includes('/n4.json') || id.includes('/n4/')) return 'content-n4';
+          if (id.includes('/n3.json') || id.includes('/n3/')) return 'content-n3';
+          if (id.includes('packages/content')) return 'content-core';
+        },
+      },
+    },
   },
   server: {
     port: 5173,

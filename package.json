@@ -9,12 +9,17 @@
     "test:engine": "pnpm --filter @keiro/engine test",
     "test:web": "pnpm --filter @keiro/web test",
     "typecheck": "pnpm -r exec tsc --noEmit",
-    "lint": "pnpm -r lint"
+    "lint": "pnpm -r lint",
+    "generate-icons": "node scripts/generate-icons.cjs"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["sharp"]
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "eslint": "^9.0.0",
+    "sharp": "^0.34.5",
     "typescript": "^5.5.0"
   }
 }

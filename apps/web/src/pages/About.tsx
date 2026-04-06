@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router';
+import { useNavigate, Link } from 'react-router';
 import { PageContainer } from '../components/layout/PageContainer';
 import { TopBar } from '../components/layout/TopBar';
 
@@ -118,6 +118,32 @@ export function About() {
               </div>
             </a>
           ))}
+        </div>
+
+        {/* Legal section */}
+        <p
+          className="mt-8 mb-2 px-4 text-[13px] font-normal uppercase tracking-wide"
+          style={{ color: 'var(--ios-secondary-label)' }}
+        >
+          Legal
+        </p>
+        <div
+          className="rounded-[10px] overflow-hidden"
+          style={{ background: 'var(--ios-bg-grouped-secondary)' }}
+        >
+          <Link
+            to="/privacy"
+            className="block px-4 py-[11px] min-h-[44px] active:opacity-60"
+          >
+            <div className="flex items-center justify-between">
+              <p className="text-[17px]" style={{ color: 'var(--ios-label)' }}>
+                Privacy Policy
+              </p>
+              <span className="text-[17px]" style={{ color: 'var(--ios-tertiary-label)' }}>
+                ›
+              </span>
+            </div>
+          </Link>
         </div>
 
         <p
