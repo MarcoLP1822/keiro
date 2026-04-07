@@ -27,20 +27,20 @@ describe('AnswerOptions', () => {
     expect(onSelect).toHaveBeenCalledWith(2);
   });
 
-  it('shows green style on correct answer when showFeedback is true', () => {
+  it('shows gradient style on correct answer when showFeedback is true', () => {
     render(
       <AnswerOptions {...defaultProps} selectedIndex={0} showFeedback={true} />
     );
     const correctButton = screen.getByRole('button', { name: 'あ' });
-    expect(correctButton.style.borderColor).toBe('var(--ios-green)');
+    expect(correctButton.className).toContain('bg-silk-gradient');
   });
 
-  it('shows red style on incorrect selected answer when showFeedback is true', () => {
+  it('shows error style on incorrect selected answer when showFeedback is true', () => {
     render(
       <AnswerOptions {...defaultProps} selectedIndex={2} showFeedback={true} />
     );
     const wrongButton = screen.getByRole('button', { name: 'う' });
-    expect(wrongButton.style.borderColor).toBe('var(--ios-red)');
+    expect(wrongButton.style.background).toBe('var(--k-error-container)');
   });
 
   it('disables all options when showFeedback is true', () => {

@@ -7,8 +7,8 @@ interface PageContainerProps {
 export function PageContainer({ children }: PageContainerProps) {
   return (
     <main
-      className="mx-auto max-w-lg px-4 py-6 overflow-y-auto animate-fadeIn"
-      style={{ background: 'var(--ios-bg-grouped)' }}
+      className="mx-auto max-w-2xl px-6 py-8 pb-32 animate-fadeIn"
+      style={{ background: 'var(--k-surface)' }}
     >
       {children}
     </main>

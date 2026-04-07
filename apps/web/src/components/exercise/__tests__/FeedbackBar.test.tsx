@@ -12,9 +12,9 @@ describe('FeedbackBar', () => {
     vi.useRealTimers();
   });
 
-  it('shows "Correct!" when isCorrect is true', () => {
+  it('shows "Excellent!" when isCorrect is true', () => {
     render(<FeedbackBar isCorrect={true} correctAnswer="あ" onNext={vi.fn()} />);
-    expect(screen.getByText('Correct!')).toBeInTheDocument();
+    expect(screen.getByText('Excellent!')).toBeInTheDocument();
   });
 
   it('shows correct answer text when isCorrect is false', () => {
@@ -22,14 +22,14 @@ describe('FeedbackBar', () => {
     expect(screen.getByText(/あ/)).toBeInTheDocument();
   });
 
-  it('shows Next button only when incorrect', () => {
+  it('shows Next button for both correct and incorrect', () => {
     const { rerender } = render(
       <FeedbackBar isCorrect={false} correctAnswer="あ" onNext={vi.fn()} />
     );
     expect(screen.getByRole('button', { name: 'Next' })).toBeInTheDocument();
 
     rerender(<FeedbackBar isCorrect={true} correctAnswer="あ" onNext={vi.fn()} />);
-    expect(screen.queryByRole('button', { name: 'Next' })).not.toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Next' })).toBeInTheDocument();
   });
 
   it('auto-advances after 1500ms when correct', () => {

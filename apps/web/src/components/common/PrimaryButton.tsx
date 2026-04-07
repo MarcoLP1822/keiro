@@ -14,11 +14,10 @@ export function PrimaryButton({ children, onClick, disabled, loading, type = 'bu
       type={type}
       onClick={onClick}
       disabled={disabled || loading}
-      className="w-full min-h-[50px] rounded-[12px] px-6 py-3 text-[17px] font-semibold text-white
-        transition-all duration-[350ms] ease-[cubic-bezier(0.25,0.1,0.25,1)]
-        active:brightness-90
+      className="w-full h-14 bg-silk-gradient text-white rounded-full font-bold text-lg
+        flex items-center justify-center gap-2
+        active:scale-95 transition-transform shadow-lg
         disabled:cursor-not-allowed disabled:opacity-50"
-      style={{ background: 'var(--ios-blue)' }}
     >
       {loading ? (
         <span className="inline-block h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent" />
