@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router';
 import { getAllModules } from '@keiro/content';
 import { getModuleStatus, getCurrentModule } from '@keiro/engine';
 import type { Module, ModuleProgress } from '@keiro/types';
-import { TopBar } from '../components/layout/TopBar';
 import { BottomNav } from '../components/layout/BottomNav';
+import { PageHeader } from '../components/layout/PageHeader';
 import { Modal } from '../components/common/Modal';
 import { ProgressBar } from '../components/common/ProgressBar';
 import { ModuleCard } from '../components/module/ModuleCard';
@@ -204,26 +204,8 @@ export function PathMap() {
 
   return (
     <>
-      <TopBar title="Keiro" onBack={() => navigate('/')} rightAction={
-        <span className="font-bold text-lg tracking-tight" style={{ color: 'var(--k-primary)' }}>
-          {allProgress.filter((p) => p.status === 'passed').length}/{allModules.length}
-        </span>
-      } />
-
-      <main className="pt-24 pb-32 px-6 max-w-2xl mx-auto min-h-screen overflow-x-hidden">
-        {/* Hero */}
-        <div className="mb-12 relative pl-4">
-          <div className="absolute left-0 top-0 w-1 h-12" style={{ background: 'var(--k-primary)' }} />
-          <h2 className="font-headline text-3xl font-bold" style={{ color: 'var(--k-primary)' }}>
-            学習の道
-          </h2>
-          <p
-            className="uppercase tracking-widest text-xs mt-1"
-            style={{ color: 'var(--k-secondary)' }}
-          >
-            Learning Path — The Scholar's Journey
-          </p>
-        </div>
+      <main className="pt-8 pb-32 px-6 max-w-2xl mx-auto min-h-screen overflow-x-hidden">
+        <PageHeader titleJp="学習の道" subtitle="Learning Path" />
 
         {/* Vertical Timeline */}
         <div className="relative">

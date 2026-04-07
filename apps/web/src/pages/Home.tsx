@@ -3,6 +3,7 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import { getAllModules } from '@keiro/content';
 import { getCurrentModule, getModuleStatus } from '@keiro/engine';
 import { BottomNav } from '../components/layout/BottomNav';
+import { PageHeader } from '../components/layout/PageHeader';
 import { ProgressBar } from '../components/common/ProgressBar';
 import { useProgress } from '../hooks/useProgress';
 import { useDailyPlan } from '../hooks/useDailyPlan';
@@ -109,45 +110,17 @@ export function Home() {
 
   return (
     <>
-      {/* TopAppBar */}
-      <header
-        className="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16"
-        style={{
-          background: 'color-mix(in srgb, var(--k-surface) 90%, transparent)',
-          backdropFilter: 'blur(20px)',
-          WebkitBackdropFilter: 'blur(20px)',
-        }}
-      >
-        <span className="font-headline text-lg font-bold tracking-tight" style={{ color: 'var(--k-primary)' }}>
-          Keiro
-        </span>
-        <button
-          onClick={() => navigate('/settings')}
-          className="flex items-center justify-center w-10 h-10 active:scale-90 transition-transform"
-          style={{ color: 'var(--k-primary)' }}
-          aria-label="Settings"
-        >
-          <span className="material-symbols-outlined">settings</span>
-        </button>
-      </header>
-
-      <main className="pt-24 px-6 max-w-2xl mx-auto space-y-8 pb-32">
-        {/* Welcome Header */}
-        <section className="space-y-1">
-          <h1
-            className="font-headline text-3xl font-black tracking-tighter"
-            style={{ color: 'var(--k-primary)' }}
-          >
-            {quote.jp}
-          </h1>
-          <p className="text-sm" style={{ color: 'var(--k-secondary)' }}>
-            {isComplete
+      <main className="pt-8 px-6 max-w-2xl mx-auto space-y-8 pb-32">
+        <PageHeader
+          titleJp={quote.jp}
+          subtitle={
+            isComplete
               ? 'Well done today. Rest and return.'
               : allModulesComplete
                 ? 'You have completed the path. Keep reviewing.'
-                : 'Welcome back. Continue your mindful ascent.'}
-          </p>
-        </section>
+                : 'Welcome back. Continue your mindful ascent.'
+          }
+        />
 
         {/* Bento Grid: Streak & Level */}
         <div className="grid grid-cols-2 gap-4">

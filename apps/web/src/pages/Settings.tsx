@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
-import { TopBar } from '../components/layout/TopBar';
 import { BottomNav } from '../components/layout/BottomNav';
+import { PageHeader } from '../components/layout/PageHeader';
 import { SegmentedControl } from '../components/common/SegmentedControl';
 import { Modal } from '../components/common/Modal';
 import { useSettings } from '../hooks/useSettings';
@@ -141,17 +141,9 @@ export function Settings() {
 
   return (
     <>
-      <TopBar title="Settings" onBack={() => navigate('/')} rightAction={
-        <span className="font-bold tracking-tight" style={{ color: 'var(--k-primary)' }}>Keiro</span>
-      } />
-
-      <main className="pt-24 px-4 max-w-2xl mx-auto space-y-4 pb-32">
-        {/* Hero */}
-        <div className="mb-8 pl-2">
-          <h2 className="font-headline text-4xl" style={{ color: 'var(--k-primary)' }}>設定</h2>
-          <p className="text-sm mt-1" style={{ color: 'var(--k-secondary)' }}>
-            Configure your path to mastery.
-          </p>
+      <main className="pt-8 px-4 max-w-2xl mx-auto space-y-4 pb-32">
+        <div className="pl-2">
+          <PageHeader titleJp="設定" subtitle="Settings" />
         </div>
 
         {/* Ban message */}

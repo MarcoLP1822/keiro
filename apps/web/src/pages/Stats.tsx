@@ -1,7 +1,6 @@
-import { useNavigate } from 'react-router';
 import { useLiveQuery } from 'dexie-react-hooks';
-import { TopBar } from '../components/layout/TopBar';
 import { BottomNav } from '../components/layout/BottomNav';
+import { PageHeader } from '../components/layout/PageHeader';
 import { ProgressBar } from '../components/common/ProgressBar';
 import { LoadingSpinner } from '../components/common/LoadingSpinner';
 import { useStats } from '../hooks/useStats';
@@ -58,7 +57,6 @@ const TYPE_JP: Record<string, string> = {
 };
 
 export function Stats() {
-  const navigate = useNavigate();
   const stats = useStats();
   const { streak, longestStreak, freezesAvailable, freezesUsed } = useStreak();
   const allPlans = useLiveQuery(() => db.dailyPlan.toArray(), []);
@@ -66,8 +64,8 @@ export function Stats() {
   if (!stats) {
     return (
       <>
-        <TopBar title="Statistics" onBack={() => navigate('/')} />
         <LoadingSpinner className="mt-20" />
+        <BottomNav />
       </>
     );
   }
@@ -102,22 +100,8 @@ export function Stats() {
 
   return (
     <>
-      <TopBar title="Keiro" onBack={() => navigate('/')} rightAction={
-        <span className="font-bold text-lg tracking-tight" style={{ color: 'var(--k-primary)' }}>
-          {modulesCompleted}/{totalModules}
-        </span>
-      } />
-
-      <main className="pt-24 px-6 max-w-2xl mx-auto space-y-6 pb-32">
-        {/* Header */}
-        <header>
-          <h1 className="font-headline text-4xl font-bold tracking-tight" style={{ color: 'var(--k-primary)' }}>
-            分析 <span className="text-lg font-normal ml-2" style={{ color: 'var(--k-secondary)' }}>— Statistics</span>
-          </h1>
-          <p className="text-sm mt-1" style={{ color: 'var(--k-on-surface-variant)' }}>
-            A reflection of your linguistic journey and mindful growth.
-          </p>
-        </header>
+      <main className="pt-8 px-6 max-w-2xl mx-auto space-y-6 pb-32">
+        <PageHeader titleJp="分析" subtitle="Statistics" />
 
         {/* Overall Progress */}
         <section

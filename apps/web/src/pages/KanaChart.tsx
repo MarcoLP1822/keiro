@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router';
-import { TopBar } from '../components/layout/TopBar';
 import { BottomNav } from '../components/layout/BottomNav';
+import { PageHeader } from '../components/layout/PageHeader';
 import { SegmentedControl } from '../components/common/SegmentedControl';
 import { speak, warmUpSpeech } from '../services/audio';
 import { useSettings } from '../hooks/useSettings';
@@ -102,7 +101,6 @@ function KanaGrid({ rows, script, audioEnabled }: KanaGridProps) {
 }
 
 export function KanaChart() {
-  const navigate = useNavigate();
   const [script, setScript] = useState<Script>('hiragana');
   const { audio } = useSettings();
 
@@ -110,28 +108,14 @@ export function KanaChart() {
 
   return (
     <>
-      <TopBar title="Kana Chart" onBack={() => navigate(-1)} />
-
-      <main className="pb-32 animate-fadeIn">
-        {/* Hero header */}
-        <div className="px-6 pt-6 pb-4">
-          <h2
-            className="font-headline text-2xl leading-tight"
-            style={{ color: 'var(--k-on-surface)' }}
-          >
-            五十音図
-          </h2>
-          <p
-            className="text-sm mt-1"
-            style={{ color: 'var(--k-secondary)' }}
-          >
-            Go-jūon Chart — tap any character to hear it
-          </p>
+      <main className="pb-32">
+        <div className="px-6 pt-8">
+          <PageHeader titleJp="五十音図" subtitle="Kana Chart — tap any character to hear it" />
         </div>
 
         {/* Sticky segmented control */}
         <div
-          className="sticky top-16 z-10 px-6 py-3"
+          className="sticky top-0 z-10 px-6 py-3"
           style={{
             background: 'color-mix(in srgb, var(--k-surface) 92%, transparent)',
             backdropFilter: 'blur(12px)',

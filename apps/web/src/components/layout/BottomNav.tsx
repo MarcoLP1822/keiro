@@ -5,6 +5,7 @@ const tabs = [
   { path: '/path', label: 'Path', icon: 'map' },
   { path: '/kana-chart', label: 'Chart', icon: 'auto_graph' },
   { path: '/stats', label: 'Stats', icon: 'query_stats' },
+  { path: '/settings', label: 'Settings', icon: 'settings' },
 ] as const;
 
 export function BottomNav() {
