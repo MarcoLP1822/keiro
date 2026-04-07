@@ -41,73 +41,55 @@ export function Welcome() {
   }
 
   return (
-    <div className="min-h-screen" style={{ background: 'var(--k-surface)' }}>
-      {/* Header */}
-      <header
-        className="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16"
-        style={{
-          background: 'color-mix(in srgb, var(--k-surface) 90%, transparent)',
-          backdropFilter: 'blur(20px)',
-          WebkitBackdropFilter: 'blur(20px)',
-        }}
+    <div
+      className="min-h-screen flex flex-col items-center justify-center px-8 pb-12"
+      style={{ background: 'var(--k-surface)' }}
+    >
+      {/* Decorative kanji */}
+      <span
+        className="font-headline text-[96px] font-black opacity-[0.07] leading-none select-none mb-6"
+        style={{ color: 'var(--k-primary)' }}
+        aria-hidden="true"
       >
-        <span className="font-headline text-lg font-bold tracking-tight" style={{ color: 'var(--k-primary)' }}>
-          Keiro
-        </span>
-      </header>
+        経路
+      </span>
 
-      <main className="pt-24 pb-12 px-6 max-w-lg mx-auto w-full">
-        {/* Decorative kanji */}
-        <div className="mt-16 mb-8 flex justify-center">
-          <span
-            className="font-headline text-[96px] font-black opacity-[0.07] leading-none select-none"
-            style={{ color: 'var(--k-primary)' }}
-            aria-hidden="true"
-          >
-            経路
-          </span>
-        </div>
+      {/* Title */}
+      <h1
+        className="font-headline text-[2.75rem] leading-[1.1] font-black tracking-tight text-center"
+        style={{ color: 'var(--k-primary)' }}
+        data-testid="welcome-title"
+      >
+        Start your<br />Japanese path.
+      </h1>
+      <p className="text-sm text-center leading-relaxed mt-4 max-w-[280px]" style={{ color: 'var(--k-secondary)' }}>
+        A mindful approach to mastering Hiragana, Katakana, and Kanji. Designed for focus, built for retention.
+      </p>
 
-        {/* Typography */}
-        <div className="space-y-6">
-          <h1
-            className="font-headline text-[2.75rem] leading-[1.1] font-black tracking-tight"
-            style={{ color: 'var(--k-primary)' }}
-            data-testid="welcome-title"
-          >
-            Start your <br />Japanese path.
-          </h1>
-          <p className="text-sm max-w-[80%] leading-relaxed" style={{ color: 'var(--k-secondary)' }}>
-            A mindful approach to mastering Hiragana, Katakana, and Kanji. Designed for focus, built for retention.
-          </p>
-        </div>
-
-        {/* Actions */}
-        <div className="space-y-4 mt-8">
-          <button
-            onClick={handleStartFromZero}
-            className="w-full h-14 flex items-center justify-center gap-2 bg-silk-gradient text-white rounded-full font-bold text-lg active:scale-[0.98] transition-all shadow-lg"
-          >
-            <span>Start Learning</span>
-            <span className="material-symbols-outlined text-[20px]">arrow_forward</span>
-          </button>
-          <button
-            onClick={handleKnowSome}
-            className="w-full h-12 flex items-center justify-center font-bold text-sm rounded-full transition-colors active:opacity-80"
-            style={{ color: 'var(--k-primary)' }}
-          >
-            I already know some Japanese
-          </button>
-          <button
-            onClick={() => navigate('/login')}
-            className="w-full h-12 flex items-center justify-center text-sm font-medium active:opacity-60"
-            style={{ color: 'var(--k-secondary)' }}
-          >
-            I already have an account
-          </button>
-        </div>
-
-      </main>
+      {/* Actions */}
+      <div className="w-full max-w-sm space-y-4 mt-10">
+        <button
+          onClick={handleStartFromZero}
+          className="w-full h-14 flex items-center justify-center gap-2 bg-silk-gradient text-white rounded-full font-bold text-lg active:scale-[0.98] transition-all shadow-lg"
+        >
+          <span>Start Learning</span>
+          <span className="material-symbols-outlined text-[20px]">arrow_forward</span>
+        </button>
+        <button
+          onClick={handleKnowSome}
+          className="w-full h-12 flex items-center justify-center font-bold text-sm rounded-full active:opacity-80"
+          style={{ color: 'var(--k-primary)' }}
+        >
+          I already know some Japanese
+        </button>
+        <button
+          onClick={() => navigate('/login')}
+          className="w-full h-12 flex items-center justify-center text-sm font-medium active:opacity-60"
+          style={{ color: 'var(--k-secondary)' }}
+        >
+          I already have an account
+        </button>
+      </div>
     </div>
   );
 }
