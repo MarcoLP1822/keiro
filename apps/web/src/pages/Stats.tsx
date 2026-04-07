@@ -281,18 +281,6 @@ export function Stats() {
           </div>
         </section>
 
-        {/* Zen Quote */}
-        <section
-          className="relative h-48 rounded-xl overflow-hidden p-8 flex items-center"
-          style={{ background: 'var(--k-primary)' }}
-        >
-          <div className="relative z-10 space-y-2">
-            <p className="font-headline text-2xl" style={{ color: 'var(--k-on-primary)' }}>千里の道も一歩から</p>
-            <p className="text-sm italic" style={{ color: 'var(--k-on-primary-container)' }}>
-              "A journey of a thousand miles begins with a single step."
-            </p>
-          </div>
-        </section>
       </main>
 
       <BottomNav />
