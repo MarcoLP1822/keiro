@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { speak } from '../../services/audio';
 
 interface FeedbackBarProps {
@@ -10,12 +9,6 @@ interface FeedbackBarProps {
 }
 
 export function FeedbackBar({ isCorrect, correctAnswer, onNext, correctAnswerAudio, audioEnabled = false }: FeedbackBarProps) {
-  useEffect(() => {
-    if (!isCorrect) return;
-    const timer = setTimeout(onNext, 1500);
-    return () => clearTimeout(timer);
-  }, [isCorrect, onNext]);
-
   return (
     <div
       role="status"

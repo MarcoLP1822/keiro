@@ -32,20 +32,19 @@ describe('FeedbackBar', () => {
     expect(screen.getByRole('button', { name: 'Next' })).toBeInTheDocument();
   });
 
-  it('auto-advances after 1500ms when correct', () => {
+  it('does not auto-advance when correct', () => {
     const onNext = vi.fn();
     render(<FeedbackBar isCorrect={true} correctAnswer="あ" onNext={onNext} />);
 
+    vi.advanceTimersByTime(5000);
     expect(onNext).not.toHaveBeenCalled();
-    vi.advanceTimersByTime(1500);
-    expect(onNext).toHaveBeenCalledOnce();
   });
 
-  it('calls onNext when Next button is clicked for incorrect answer', async () => {
+  it('calls onNext when Next button is clicked', async () => {
     vi.useRealTimers();
     const user = userEvent.setup();
     const onNext = vi.fn();
-    render(<FeedbackBar isCorrect={false} correctAnswer="あ" onNext={onNext} />);
+    render(<FeedbackBar isCorrect={true} correctAnswer="あ" onNext={onNext} />);
 
     await user.click(screen.getByRole('button', { name: 'Next' }));
     expect(onNext).toHaveBeenCalledOnce();
