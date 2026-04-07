@@ -229,7 +229,7 @@ export function PathMap() {
         <div className="relative">
           {/* Dashed line */}
           <div
-            className="absolute left-[23px] top-8 bottom-8 w-[2px] opacity-30"
+            className="absolute left-[23px] top-6 bottom-6 w-[2px] opacity-30"
             style={{
               backgroundImage: 'linear-gradient(to bottom, var(--k-secondary) 33%, transparent 0%)',
               backgroundSize: '2px 12px',
@@ -248,9 +248,9 @@ export function PathMap() {
                 key={group.level}
                 className={`relative mb-8 ${isLocked ? 'opacity-60 grayscale' : ''}`}
               >
-                <div className="flex gap-6">
+                <div className="flex gap-3">
                   {/* Node */}
-                  <div className="relative z-10">
+                  <div className="relative z-10 shrink-0">
                     {status === 'completed' ? (
                       <div
                         className="w-12 h-12 rounded-full flex items-center justify-center shadow-lg"
@@ -285,7 +285,7 @@ export function PathMap() {
 
                   {/* Card */}
                   <div
-                    className="flex-1 rounded-xl p-6 transition-shadow"
+                    className="flex-1 min-w-0 rounded-xl p-4 transition-shadow"
                     style={{
                       background: 'var(--k-surface-container-lowest)',
                       borderLeft: status === 'active' ? '4px solid var(--k-primary)' : undefined,

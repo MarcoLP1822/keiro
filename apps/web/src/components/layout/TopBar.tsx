@@ -8,7 +8,7 @@ interface TopBarProps {
 
 export function TopBar({ title, onBack, rightAction }: TopBarProps) {
   return (
-    <header className="sticky top-0 z-10 flex h-16 items-center justify-between px-6 glass">
+    <header className="sticky top-0 z-40 flex h-16 items-center justify-between px-6 glass">
       <div className="w-20">
         {onBack && (
           <button
