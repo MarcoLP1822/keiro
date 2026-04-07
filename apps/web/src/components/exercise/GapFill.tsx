@@ -24,12 +24,12 @@ export function GapFill({
     <div className="flex flex-col gap-5">
       <p
         className="text-[20px] text-center leading-relaxed font-medium"
-        style={{ color: 'var(--ios-label)' }}
+        style={{ color: 'var(--k-on-surface)' }}
       >
         {parts[0]}
         <span
           className="inline-block min-w-[3em] border-b-2 mx-1 text-center"
-          style={{ borderColor: 'var(--ios-blue)', color: 'var(--ios-blue)' }}
+          style={{ borderColor: 'var(--k-primary)', color: 'var(--k-primary)' }}
         >
           {selectedIndex !== null ? options[selectedIndex] : '\u00A0'}
         </span>

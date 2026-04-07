@@ -54,13 +54,13 @@ export function Onboarding({ onComplete }: OnboardingProps) {
   return (
     <div
       className="fixed inset-0 z-50 flex flex-col items-center justify-center px-8"
-      style={{ background: 'var(--ios-bg-grouped)' }}
+      style={{ background: 'var(--k-surface)' }}
       onClick={handleTap}
     >
       <div className="flex flex-col items-center text-center max-w-sm">
         <span
           className="text-[72px] leading-none mb-8"
-          style={{ color: 'var(--ios-tertiary-label)' }}
+          style={{ color: 'var(--k-outline)' }}
           aria-hidden="true"
         >
           {slide.icon}
@@ -68,21 +68,21 @@ export function Onboarding({ onComplete }: OnboardingProps) {
 
         <h2
           className="text-[22px] font-semibold mb-3"
-          style={{ color: 'var(--ios-label)' }}
+          style={{ color: 'var(--k-on-surface)' }}
         >
           {slide.title}
         </h2>
 
         <p
           className="text-[17px] leading-relaxed"
-          style={{ color: 'var(--ios-secondary-label)' }}
+          style={{ color: 'var(--k-secondary)' }}
         >
           {slide.description}
         </p>
 
         {/* Slide 2: mini path visualization */}
         {currentSlide === 1 && (
-          <div className="mt-6 flex items-center gap-2 text-[15px]" style={{ color: 'var(--ios-tertiary-label)' }}>
+          <div className="mt-6 flex items-center gap-2 text-[15px]" style={{ color: 'var(--k-outline)' }}>
             <span className="text-[18px]">ひ</span>
             <span>→</span>
             <span className="text-[18px]">言葉</span>
@@ -109,7 +109,7 @@ export function Onboarding({ onComplete }: OnboardingProps) {
             key={i}
             className="h-2 w-2 rounded-full transition-colors"
             style={{
-              background: i === currentSlide ? 'var(--ios-blue)' : 'var(--ios-gray4)',
+              background: i === currentSlide ? 'var(--k-primary)' : 'var(--k-outline-variant)',
             }}
           />
         ))}
@@ -118,7 +118,7 @@ export function Onboarding({ onComplete }: OnboardingProps) {
       {!isLast && (
         <p
           className="absolute bottom-6 text-[13px]"
-          style={{ color: 'var(--ios-tertiary-label)' }}
+          style={{ color: 'var(--k-outline)' }}
         >
           Tap to continue
         </p>

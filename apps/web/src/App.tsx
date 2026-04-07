@@ -111,7 +111,7 @@ function AuthHandler({ children }: { children: React.ReactNode }) {
       {!isOnline && (
         <div
           className="sticky top-0 z-50 px-4 py-2 text-center text-[13px] font-medium"
-          style={{ background: 'var(--ios-orange)', color: 'white' }}
+          style={{ background: 'var(--k-incorrect-bg)', color: 'white' }}
         >
           You are offline — studying works, but sync is paused
         </div>

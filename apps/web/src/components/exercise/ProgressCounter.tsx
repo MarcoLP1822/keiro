@@ -7,7 +7,7 @@ export function ProgressCounter({ current, total }: ProgressCounterProps) {
   return (
     <span
       className="text-[13px] font-medium"
-      style={{ color: 'var(--ios-secondary-label)' }}
+      style={{ color: 'var(--k-secondary)' }}
       role="status"
       aria-live="polite"
       aria-label={`Question ${current} of ${total}`}

@@ -119,13 +119,13 @@ export function SrsReview() {
         <div className="flex min-h-[60vh] flex-col items-center justify-center text-center">
           <h1
             className="text-[22px] font-bold"
-            style={{ color: 'var(--ios-label)' }}
+            style={{ color: 'var(--k-on-surface)' }}
           >
             Reviews done!
           </h1>
           <p
             className="mt-2 text-[17px]"
-            style={{ color: 'var(--ios-secondary-label)' }}
+            style={{ color: 'var(--k-secondary)' }}
           >
             You reviewed {totalCount} {totalCount === 1 ? 'item' : 'items'}.
           </p>
@@ -143,7 +143,7 @@ export function SrsReview() {
               <button
                 onClick={() => navigate('/')}
                 className="w-full py-3 text-[17px] font-normal active:opacity-60"
-                style={{ color: 'var(--ios-blue)' }}
+                style={{ color: 'var(--k-primary)' }}
               >
                 Back to Home
               </button>
@@ -174,16 +174,16 @@ export function SrsReview() {
         {showExplainer && (
           <button
             onClick={dismissExplainer}
-            className="w-full mb-4 text-left rounded-[14px] px-4 py-3 active:opacity-70"
-            style={{ background: 'var(--ios-bg-grouped-secondary)', border: '0.5px solid var(--ios-separator)' }}
+            className="w-full mb-4 text-left rounded-xl px-4 py-3 active:opacity-70"
+            style={{ background: 'var(--k-surface-container-lowest)', border: '0.5px solid var(--k-outline-variant)' }}
           >
-            <p className="text-[15px] font-semibold mb-0.5" style={{ color: 'var(--ios-label)' }}>
+            <p className="text-[15px] font-semibold mb-0.5" style={{ color: 'var(--k-on-surface)' }}>
               How reviews work
             </p>
-            <p className="text-[13px] leading-relaxed" style={{ color: 'var(--ios-secondary-label)' }}>
+            <p className="text-[13px] leading-relaxed" style={{ color: 'var(--k-secondary)' }}>
               Rate how well you remembered each item. Keiro uses your rating to schedule the next review at the right time — no cramming needed.
             </p>
-            <p className="text-[13px] mt-1" style={{ color: 'var(--ios-tertiary-label)' }}>
+            <p className="text-[13px] mt-1" style={{ color: 'var(--k-outline)' }}>
               Tap to dismiss
             </p>
           </button>
@@ -232,9 +232,9 @@ export function SrsReview() {
             <div
               role="status"
               aria-live="polite"
-              className="flex items-center px-5 py-4 mt-6 rounded-[14px]"
+              className="flex items-center px-5 py-4 mt-6 rounded-xl"
               style={{
-                background: isCorrectForFeedback ? 'var(--ios-green)' : 'var(--ios-red)',
+                background: isCorrectForFeedback ? 'var(--k-correct-secondary)' : 'var(--k-error)',
               }}
             >
               <p className="font-semibold text-[17px] text-white">

@@ -46,6 +46,6 @@ describe('Modal', () => {
   it('applies danger color to primary button in danger variant', () => {
     render(<Modal {...defaultProps} variant="danger" />);
     const primaryButton = screen.getByRole('button', { name: 'Confirm' });
-    expect(primaryButton.style.color).toBe('var(--ios-red)');
+    expect(primaryButton.style.color).toBe('var(--k-error)');
   });
 });

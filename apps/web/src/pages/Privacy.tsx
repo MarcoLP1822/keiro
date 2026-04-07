@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router';
-import { PageContainer } from '../components/layout/PageContainer';
 import { TopBar } from '../components/layout/TopBar';
 
 const sections = [
@@ -44,66 +43,192 @@ const sections = [
   {
     title: 'Contact',
     content:
-      'For privacy-related questions, please contact us through the app\'s About page.',
+      "For privacy-related questions, please contact us through the app's About page.",
   },
 ];
+
+// Sections to feature in the "Use of Information" highlight grid
+const USE_OF_INFO_TITLES = new Set(['What We Collect', 'How We Store It', 'Your Rights', 'Cookies']);
 
 export function Privacy() {
   const navigate = useNavigate();
 
+  const gridSections = sections.filter((s) => USE_OF_INFO_TITLES.has(s.title));
+  const remainingSections = sections.filter((s) => !USE_OF_INFO_TITLES.has(s.title));
+
   return (
     <>
       <TopBar title="Privacy Policy" onBack={() => navigate(-1)} />
-      <PageContainer>
-        <p
-          className="mb-6 px-1 text-[15px] leading-relaxed"
-          style={{ color: 'var(--ios-secondary-label)' }}
-        >
-          Last updated: April 2026
-        </p>
 
-        {sections.map((section, i) => (
-          <div key={section.title} className={i > 0 ? 'mt-8' : ''}>
-            <p
-              className="mb-2 px-4 text-[13px] font-normal uppercase tracking-wide"
-              style={{ color: 'var(--ios-secondary-label)' }}
+      <main className="pb-12 animate-fadeIn">
+        {/* Editorial header */}
+        <div
+          className="px-6 pt-8 pb-10 relative overflow-hidden"
+          style={{ background: 'var(--k-surface-container-lowest)' }}
+        >
+          {/* Decorative kanji watermark */}
+          <span
+            className="font-headline absolute right-2 top-0 text-[120px] leading-none select-none pointer-events-none"
+            style={{ color: 'var(--k-outline-variant)', opacity: 0.3 }}
+            aria-hidden="true"
+          >
+            秘
+          </span>
+
+          {/* "Privacy Matters" chip */}
+          <span
+            className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1 rounded-full mb-4"
+            style={{
+              background: 'var(--k-surface-container-high)',
+              color: 'var(--k-secondary)',
+            }}
+          >
+            <span
+              className="material-symbols-outlined"
+              style={{ fontSize: '14px', color: 'var(--k-primary)' }}
             >
-              {section.title}
-            </p>
-            <div
-              className="rounded-[10px] px-4 py-[11px]"
-              style={{ background: 'var(--ios-bg-grouped-secondary)' }}
-            >
-              {section.content && (
+              lock
+            </span>
+            Privacy Matters
+          </span>
+
+          <h1
+            className="font-headline text-3xl leading-snug"
+            style={{ color: 'var(--k-on-surface)' }}
+          >
+            Privacy Policy
+          </h1>
+          <p
+            className="mt-2 text-sm"
+            style={{ color: 'var(--k-outline)' }}
+          >
+            Last updated: April 2026
+          </p>
+        </div>
+
+        <div className="px-6 pt-6 space-y-8">
+          {/* Highlight card — no tracking promise */}
+          <div
+            className="rounded-xl p-5 border-l-4"
+            style={{
+              background: 'var(--k-surface-container-lowest)',
+              borderLeftColor: 'var(--k-primary)',
+            }}
+          >
+            <div className="flex items-start gap-3">
+              <span
+                className="material-symbols-outlined shrink-0"
+                style={{ color: 'var(--k-primary)', fontVariationSettings: "'FILL' 1" }}
+              >
+                verified_user
+              </span>
+              <div>
                 <p
-                  className="text-[17px] leading-relaxed"
-                  style={{ color: 'var(--ios-label)' }}
+                  className="font-headline text-base font-semibold"
+                  style={{ color: 'var(--k-on-surface)' }}
                 >
-                  {section.content}
+                  Your data stays yours
                 </p>
-              )}
-              {section.link && (
-                <a
-                  href={section.link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[17px] leading-relaxed active:opacity-60"
-                  style={{ color: 'var(--ios-blue)' }}
+                <p
+                  className="text-sm mt-1 leading-relaxed"
+                  style={{ color: 'var(--k-secondary)' }}
                 >
-                  {section.link.label}
-                </a>
-              )}
+                  We do not sell, rent, or share your personal data with third parties for marketing. Your learning progress is yours alone.
+                </p>
+              </div>
             </div>
           </div>
-        ))}
+
+          {/* Use of Information grid */}
+          <section>
+            <h2
+              className="font-headline text-2xl mb-4"
+              style={{ color: 'var(--k-on-surface)' }}
+            >
+              情報の利用
+              <span
+                className="block text-sm font-body font-normal mt-0.5"
+                style={{ color: 'var(--k-secondary)' }}
+              >
+                Use of Information
+              </span>
+            </h2>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {gridSections.map((section) => (
+                <div
+                  key={section.title}
+                  className="rounded-xl p-5"
+                  style={{ background: 'var(--k-surface-container-lowest)' }}
+                >
+                  <h3
+                    className="font-headline text-base mb-2"
+                    style={{ color: 'var(--k-on-surface)' }}
+                  >
+                    {section.title}
+                  </h3>
+                  {section.content && (
+                    <p
+                      className="text-sm leading-relaxed"
+                      style={{ color: 'var(--k-secondary)' }}
+                    >
+                      {section.content}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Remaining sections — long-form */}
+          {remainingSections.map((section) => (
+            <section key={section.title}>
+              <h2
+                className="font-headline text-2xl mb-3"
+                style={{ color: 'var(--k-on-surface)' }}
+              >
+                {section.title}
+              </h2>
+              <div
+                className="rounded-xl p-5"
+                style={{ background: 'var(--k-surface-container-lowest)' }}
+              >
+                {section.content && (
+                  <p
+                    className="text-sm leading-relaxed"
+                    style={{ color: 'var(--k-secondary)' }}
+                  >
+                    {section.content}
+                  </p>
+                )}
+                {section.link && (
+                  <a
+                    href={section.link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm leading-relaxed active:opacity-60"
+                    style={{ color: 'var(--k-primary)' }}
+                  >
+                    <span
+                      className="material-symbols-outlined text-[16px]"
+                      style={{ fontSize: '16px' }}
+                    >
+                      open_in_new
+                    </span>
+                    {section.link.label}
+                  </a>
+                )}
+              </div>
+            </section>
+          ))}
+        </div>
 
         <p
-          className="mt-8 mb-6 text-center text-[13px]"
-          style={{ color: 'var(--ios-tertiary-label)' }}
+          className="mt-10 mb-4 text-center text-xs"
+          style={{ color: 'var(--k-outline)' }}
         >
           Keiro (経路) — Learn Japanese
         </p>
-      </PageContainer>
+      </main>
     </>
   );
 }

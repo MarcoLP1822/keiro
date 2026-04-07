@@ -12,8 +12,8 @@ export function LoadingSpinner({ className = '' }: LoadingSpinnerProps) {
       <div
         className="h-8 w-8 rounded-full border-[3px] border-solid animate-spin"
         style={{
-          borderColor: 'var(--ios-gray4)',
-          borderTopColor: 'var(--ios-blue)',
+          borderColor: 'var(--k-outline-variant)',
+          borderTopColor: 'var(--k-primary)',
         }}
       />
     </div>

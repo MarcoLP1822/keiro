@@ -32,24 +32,24 @@ export class ErrorBoundary extends Component<Props, State> {
     return (
       <div
         className="flex min-h-screen flex-col items-center justify-center px-6 text-center"
-        style={{ background: 'var(--ios-bg-grouped)' }}
+        style={{ background: 'var(--k-surface)' }}
       >
         <p
           className="text-[28px] font-bold mb-2"
-          style={{ color: 'var(--ios-label)' }}
+          style={{ color: 'var(--k-on-surface)' }}
         >
           Something went wrong
         </p>
         <p
           className="text-[15px] mb-8 max-w-[280px] leading-relaxed"
-          style={{ color: 'var(--ios-secondary-label)' }}
+          style={{ color: 'var(--k-secondary)' }}
         >
           {this.state.error?.message || 'An unexpected error occurred. Your progress is safe.'}
         </p>
         <button
           onClick={() => window.location.replace('/')}
-          className="rounded-[14px] px-8 py-3 text-[17px] font-semibold"
-          style={{ background: 'var(--ios-blue)', color: '#FFFFFF' }}
+          className="rounded-xl px-8 py-3 text-[17px] font-semibold"
+          style={{ background: 'var(--k-primary)', color: '#FFFFFF' }}
         >
           Go Home
         </button>

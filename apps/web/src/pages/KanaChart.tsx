@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import { TopBar } from '../components/layout/TopBar';
-import { PageContainer } from '../components/layout/PageContainer';
+import { BottomNav } from '../components/layout/BottomNav';
 import { SegmentedControl } from '../components/common/SegmentedControl';
 import { speak, warmUpSpeech } from '../services/audio';
 import { useSettings } from '../hooks/useSettings';
@@ -44,76 +44,59 @@ const COMBO_ROWS: { label: string; hiragana: (string | null)[]; katakana: (strin
   { label: 'Py', hiragana: ['ぴゃ',null,'ぴゅ',null,'ぴょ'], katakana: ['ピャ',null,'ピュ',null,'ピョ'], romaji: ['pya','','pyu','','pyo'] },
 ];
 
-const VOWEL_HEADERS = ['a', 'i', 'u', 'e', 'o'];
-
 const scriptOptions = [
   { label: 'Hiragana', value: 'hiragana' },
   { label: 'Katakana', value: 'katakana' },
 ];
 
-interface ChartTableProps {
+interface KanaGridProps {
   rows: typeof ROWS;
   script: Script;
   audioEnabled: boolean;
 }
 
-function ChartTable({ rows, script, audioEnabled }: ChartTableProps) {
+function KanaGrid({ rows, script, audioEnabled }: KanaGridProps) {
+  const chars = rows.flatMap((row) =>
+    (script === 'hiragana' ? row.hiragana : row.katakana).map((char, j) => ({
+      char,
+      romaji: row.romaji[j],
+    }))
+  );
+
   return (
-    <div className="overflow-x-auto">
-      <table className="w-full border-collapse">
-        <thead>
-          <tr>
-            <th className="w-8" />
-            {VOWEL_HEADERS.map((v) => (
-              <th
-                key={v}
-                className="py-1 text-[13px] font-medium text-center"
-                style={{ color: 'var(--ios-secondary-label)' }}
-              >
-                {v}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map((row, i) => (
-            <tr key={i}>
-              <td
-                className="text-[11px] font-medium text-center pr-1"
-                style={{ color: 'var(--ios-tertiary-label)' }}
-              >
-                {row.label}
-              </td>
-              {(script === 'hiragana' ? row.hiragana : row.katakana).map((char, j) => (
-                <td key={j} className="p-0.5">
-                  {char ? (
-                    <button
-                      onClick={() => speak(char, audioEnabled)}
-                      className="w-full rounded-lg py-2 text-center active:opacity-60 transition-colors"
-                      style={{ background: 'var(--ios-bg-grouped-secondary)' }}
-                    >
-                      <span
-                        className="block text-[22px] leading-tight"
-                        style={{ color: 'var(--ios-label)' }}
-                      >
-                        {char}
-                      </span>
-                      <span
-                        className="block text-[10px] mt-0.5"
-                        style={{ color: 'var(--ios-secondary-label)' }}
-                      >
-                        {row.romaji[j]}
-                      </span>
-                    </button>
-                  ) : (
-                    <div className="py-2" />
-                  )}
-                </td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <div className="kana-grid">
+      {chars.map((item, idx) =>
+        item.char ? (
+          <button
+            key={idx}
+            onClick={() => speak(item.char!, audioEnabled)}
+            className="relative rounded-xl py-3 flex flex-col items-center justify-center active:scale-95 transition-transform duration-150"
+            style={{ background: 'var(--k-surface-container-lowest)' }}
+          >
+            <span
+              className="material-symbols-outlined absolute top-1 right-1 text-[14px]"
+              style={{ color: 'var(--k-correct-secondary)', fontSize: '14px', fontVariationSettings: "'FILL' 1" }}
+              aria-hidden="true"
+            >
+              check_circle
+            </span>
+            <span
+              className="font-headline text-3xl leading-tight"
+              style={{ color: 'var(--k-on-surface)' }}
+            >
+              {item.char}
+            </span>
+            <span
+              className="text-[10px] uppercase tracking-widest mt-0.5"
+              style={{ color: 'var(--k-secondary)' }}
+            >
+              {item.romaji}
+            </span>
+          </button>
+        ) : (
+          <div key={idx} />
+        )
+      )}
     </div>
   );
 }
@@ -128,8 +111,33 @@ export function KanaChart() {
   return (
     <>
       <TopBar title="Kana Chart" onBack={() => navigate(-1)} />
-      <PageContainer>
-        <div className="mb-4">
+
+      <main className="pb-32 animate-fadeIn">
+        {/* Hero header */}
+        <div className="px-6 pt-6 pb-4">
+          <h2
+            className="font-headline text-2xl leading-tight"
+            style={{ color: 'var(--k-on-surface)' }}
+          >
+            五十音図
+          </h2>
+          <p
+            className="text-sm mt-1"
+            style={{ color: 'var(--k-secondary)' }}
+          >
+            Go-jūon Chart — tap any character to hear it
+          </p>
+        </div>
+
+        {/* Sticky segmented control */}
+        <div
+          className="sticky top-16 z-10 px-6 py-3"
+          style={{
+            background: 'color-mix(in srgb, var(--k-surface) 92%, transparent)',
+            backdropFilter: 'blur(12px)',
+            WebkitBackdropFilter: 'blur(12px)',
+          }}
+        >
           <SegmentedControl
             options={scriptOptions}
             selected={script}
@@ -137,40 +145,43 @@ export function KanaChart() {
           />
         </div>
 
-        {/* Main chart */}
-        <p
-          className="mb-2 px-1 text-[13px] font-normal uppercase tracking-wide"
-          style={{ color: 'var(--ios-secondary-label)' }}
-        >
-          Basic
-        </p>
-        <ChartTable rows={ROWS} script={script} audioEnabled={audio} />
+        <div className="px-6 space-y-8">
+          {/* Basic */}
+          <section>
+            <h3
+              className="font-headline text-lg mb-3"
+              style={{ color: 'var(--k-on-surface)' }}
+            >
+              基本 <span className="text-sm font-body font-normal" style={{ color: 'var(--k-secondary)' }}>Basic</span>
+            </h3>
+            <KanaGrid rows={ROWS} script={script} audioEnabled={audio} />
+          </section>
 
-        {/* Dakuten */}
-        <p
-          className="mt-6 mb-2 px-1 text-[13px] font-normal uppercase tracking-wide"
-          style={{ color: 'var(--ios-secondary-label)' }}
-        >
-          Dakuten / Handakuten
-        </p>
-        <ChartTable rows={DAKUTEN_ROWS} script={script} audioEnabled={audio} />
+          {/* Dakuten / Handakuten */}
+          <section>
+            <h3
+              className="font-headline text-lg mb-3"
+              style={{ color: 'var(--k-on-surface)' }}
+            >
+              濁点 <span className="text-sm font-body font-normal" style={{ color: 'var(--k-secondary)' }}>Dakuten / Handakuten</span>
+            </h3>
+            <KanaGrid rows={DAKUTEN_ROWS} script={script} audioEnabled={audio} />
+          </section>
 
-        {/* Combo */}
-        <p
-          className="mt-6 mb-2 px-1 text-[13px] font-normal uppercase tracking-wide"
-          style={{ color: 'var(--ios-secondary-label)' }}
-        >
-          Combinations
-        </p>
-        <ChartTable rows={COMBO_ROWS} script={script} audioEnabled={audio} />
+          {/* Combinations */}
+          <section>
+            <h3
+              className="font-headline text-lg mb-3"
+              style={{ color: 'var(--k-on-surface)' }}
+            >
+              拗音 <span className="text-sm font-body font-normal" style={{ color: 'var(--k-secondary)' }}>Combinations</span>
+            </h3>
+            <KanaGrid rows={COMBO_ROWS} script={script} audioEnabled={audio} />
+          </section>
+        </div>
+      </main>
 
-        <p
-          className="mt-6 mb-8 text-center text-[13px]"
-          style={{ color: 'var(--ios-tertiary-label)' }}
-        >
-          Tap any character to hear its pronunciation
-        </p>
-      </PageContainer>
+      <BottomNav />
     </>
   );
 }

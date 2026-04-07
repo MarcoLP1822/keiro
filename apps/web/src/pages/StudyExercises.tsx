@@ -50,13 +50,13 @@ export function StudyExercises() {
         <div className="flex min-h-[60vh] flex-col items-center justify-center text-center">
           <h1
             className="text-[22px] font-bold"
-            style={{ color: 'var(--ios-label)' }}
+            style={{ color: 'var(--k-on-surface)' }}
           >
             Review complete!
           </h1>
           <p
             className="mt-2 text-[17px]"
-            style={{ color: 'var(--ios-secondary-label)' }}
+            style={{ color: 'var(--k-secondary)' }}
           >
             Great job reviewing this module.
           </p>
@@ -67,7 +67,7 @@ export function StudyExercises() {
             <button
               onClick={() => navigate('/')}
               className="w-full py-3 text-[17px] font-normal active:opacity-60"
-              style={{ color: 'var(--ios-blue)' }}
+              style={{ color: 'var(--k-primary)' }}
             >
               Back to Home
             </button>

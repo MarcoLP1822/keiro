@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
-import { PageContainer } from '../components/layout/PageContainer';
 import { TopBar } from '../components/layout/TopBar';
+import { BottomNav } from '../components/layout/BottomNav';
 import { SegmentedControl } from '../components/common/SegmentedControl';
 import { Modal } from '../components/common/Modal';
 import { useSettings } from '../hooks/useSettings';
@@ -23,17 +23,29 @@ const planSizeOptions = [
   { label: 'Large (~30 min)', value: 'large' },
 ];
 
+function Toggle({ checked, onChange, label }: { checked: boolean; onChange: () => void; label: string }) {
+  return (
+    <button
+      role="switch"
+      aria-checked={checked}
+      aria-label={label}
+      onClick={onChange}
+      className="relative w-14 h-8 rounded-full p-1 flex items-center transition-colors"
+      style={{ background: checked ? 'var(--k-primary)' : 'var(--k-secondary-container)' }}
+    >
+      <span
+        className="w-6 h-6 rounded-full bg-white shadow-sm transition-transform"
+        style={{ transform: checked ? 'translateX(24px)' : 'translateX(0)' }}
+      />
+    </button>
+  );
+}
+
 export function Settings() {
   const navigate = useNavigate();
   const {
-    audio,
-    planSize,
-    theme,
-    showFurigana,
-    setAudio,
-    setPlanSize,
-    setTheme,
-    setShowFurigana,
+    audio, planSize, theme, showFurigana,
+    setAudio, setPlanSize, setTheme, setShowFurigana,
   } = useSettings();
   const { user, isLoggedIn, isBanned, banReason, signOut } = useAuth();
   const [showResetModal, setShowResetModal] = useState(false);
@@ -111,11 +123,8 @@ export function Settings() {
     if (!supabase || !user) return;
     setActionError(null);
     try {
-      // Call RPC function that deletes the calling user
       const { error } = await supabase.rpc('delete_own_account');
       if (error) throw error;
-
-      // Clear local data
       await db.delete();
       await signOut();
       navigate('/welcome');
@@ -132,263 +141,218 @@ export function Settings() {
 
   return (
     <>
-      <TopBar title="Settings" onBack={() => navigate('/')} />
-      <PageContainer>
+      <TopBar title="Settings" onBack={() => navigate('/')} rightAction={
+        <span className="font-bold tracking-tight" style={{ color: 'var(--k-primary)' }}>Keiro</span>
+      } />
+
+      <main className="pt-24 px-4 max-w-2xl mx-auto space-y-4 pb-32">
+        {/* Hero */}
+        <div className="mb-8 pl-2">
+          <h2 className="font-headline text-4xl" style={{ color: 'var(--k-primary)' }}>設定</h2>
+          <p className="text-sm mt-1" style={{ color: 'var(--k-secondary)' }}>
+            Configure your path to mastery.
+          </p>
+        </div>
+
         {/* Ban message */}
         {isBanned && (
-          <div
-            className="mb-4 rounded-[10px] p-4"
-            style={{ background: 'var(--ios-red)', color: 'white' }}
-          >
-            <p className="text-[17px] font-semibold">Account Suspended</p>
-            <p className="text-[15px] mt-1 opacity-90">
+          <div className="rounded-xl p-4" style={{ background: 'var(--k-error)', color: 'var(--k-on-error)' }}>
+            <p className="font-semibold">Account Suspended</p>
+            <p className="text-sm mt-1 opacity-90">
               {banReason || 'Your account has been suspended. Contact support for more information.'}
             </p>
           </div>
         )}
 
-        {/* Account section */}
-        <p
-          className="mb-2 px-4 text-[13px] font-normal uppercase tracking-wide"
-          style={{ color: 'var(--ios-secondary-label)' }}
-        >
-          Account
-        </p>
-        <div
-          className="rounded-[10px] overflow-hidden"
-          style={{ background: 'var(--ios-bg-grouped-secondary)' }}
-        >
+        {actionError && (
+          <div className="rounded-xl px-4 py-3" style={{ background: 'var(--k-error-container)', color: 'var(--k-error)' }}>
+            <p className="text-sm">{actionError}</p>
+          </div>
+        )}
+
+        {/* Account Section */}
+        <section className="rounded-xl p-6 shadow-sm" style={{ background: 'var(--k-surface-container-lowest)' }}>
+          <div className="flex items-center gap-3 mb-6">
+            <span className="material-symbols-outlined" style={{ color: 'var(--k-primary)' }}>account_circle</span>
+            <h3 className="font-bold" style={{ color: 'var(--k-primary)' }}>Account</h3>
+          </div>
           {isLoggedIn ? (
-            <>
-              <div className="px-4 py-[11px]">
-                <p className="text-[17px]" style={{ color: 'var(--ios-label)' }}>
-                  {user?.email}
-                </p>
-                <p className="text-[13px] mt-0.5" style={{ color: 'var(--ios-secondary-label)' }}>
+            <div className="space-y-4">
+              <div>
+                <label className="text-xs px-1" style={{ color: 'var(--k-secondary)' }}>Email Address</label>
+                <div
+                  className="px-4 py-3 rounded-xl flex justify-between items-center mt-1"
+                  style={{ background: 'var(--k-surface-container-low)' }}
+                >
+                  <span className="text-sm" style={{ color: 'var(--k-on-surface)' }}>{user?.email}</span>
+                </div>
+                <p className="text-xs mt-1 px-1" style={{ color: 'var(--k-secondary)' }}>
                   Last synced: {formatLastSynced()}
                 </p>
                 {syncService.lastError && (
-                  <p className="text-[13px] mt-0.5" style={{ color: 'var(--ios-red)' }}>
+                  <p className="text-xs mt-1 px-1" style={{ color: 'var(--k-error)' }}>
                     {syncService.lastError}
                   </p>
                 )}
               </div>
-              <div style={{ borderTop: '0.5px solid var(--ios-separator)' }}>
-                <button
-                  onClick={handleSyncNow}
-                  disabled={syncing}
-                  className="w-full min-h-[44px] px-4 py-[11px] text-left text-[17px] active:opacity-60 disabled:opacity-50"
-                  style={{ color: 'var(--ios-blue)' }}
-                >
+              <button
+                onClick={handleSyncNow}
+                disabled={syncing}
+                className="w-full px-4 py-3 rounded-xl flex justify-between items-center transition-colors disabled:opacity-50"
+                style={{ background: 'var(--k-surface-container-low)' }}
+              >
+                <span className="text-sm" style={{ color: 'var(--k-on-surface)' }}>
                   {syncing ? 'Syncing...' : 'Sync Now'}
-                </button>
-              </div>
-              <div style={{ borderTop: '0.5px solid var(--ios-separator)' }}>
-                <button
-                  onClick={handleSignOut}
-                  className="w-full min-h-[44px] px-4 py-[11px] text-left text-[17px] active:opacity-60"
-                  style={{ color: 'var(--ios-red)' }}
-                >
-                  Sign Out
-                </button>
-              </div>
-            </>
+                </span>
+                <span className="material-symbols-outlined text-lg" style={{ color: 'var(--k-secondary)' }}>sync</span>
+              </button>
+              <button
+                onClick={handleSignOut}
+                className="text-sm font-semibold active:opacity-60"
+                style={{ color: 'var(--k-error)' }}
+              >
+                Sign Out
+              </button>
+            </div>
           ) : (
             <button
               onClick={() => navigate('/login')}
-              className="w-full min-h-[44px] px-4 py-[11px] text-left text-[17px] active:opacity-60"
-              style={{ color: 'var(--ios-blue)' }}
+              className="w-full px-4 py-3 rounded-xl flex justify-between items-center"
+              style={{ background: 'var(--k-surface-container-low)' }}
             >
-              Sign In
+              <span className="text-sm font-semibold" style={{ color: 'var(--k-primary)' }}>Sign In</span>
+              <span className="material-symbols-outlined text-lg" style={{ color: 'var(--k-secondary)' }}>chevron_right</span>
             </button>
           )}
-        </div>
+        </section>
 
-        {/* Appearance section */}
-        <p
-          className="mt-8 mb-2 px-4 text-[13px] font-normal uppercase tracking-wide"
-          style={{ color: 'var(--ios-secondary-label)' }}
-        >
-          Appearance
-        </p>
-        <div
-          className="rounded-[10px]"
-          style={{ background: 'var(--ios-bg-grouped-secondary)' }}
-        >
-          <div className="p-4">
+        {/* Appearance Section */}
+        <section className="rounded-xl p-6 shadow-sm" style={{ background: 'var(--k-surface-container-lowest)' }}>
+          <div className="flex items-center gap-3 mb-6">
+            <span className="material-symbols-outlined" style={{ color: 'var(--k-primary)' }}>palette</span>
+            <h3 className="font-bold" style={{ color: 'var(--k-primary)' }}>Appearance</h3>
+          </div>
+          <div className="space-y-6">
             <SegmentedControl
               options={themeOptions}
               selected={theme}
               onChange={(value) => setTheme(value as 'system' | 'light' | 'dark')}
             />
+            <div className="flex items-center justify-between">
+              <div>
+                <span className="text-sm font-medium" style={{ color: 'var(--k-on-surface)' }}>Show Furigana</span>
+                <p className="text-xs mt-0.5" style={{ color: 'var(--k-secondary)' }}>
+                  Show reading above kanji in exercises
+                </p>
+              </div>
+              <Toggle checked={showFurigana} onChange={() => setShowFurigana(!showFurigana)} label="Toggle furigana" />
+            </div>
           </div>
-          <div
-            className="flex items-center justify-between px-4 py-[11px]"
-            style={{ borderTop: '0.5px solid var(--ios-separator)' }}
-          >
+        </section>
+
+        {/* Audio Section */}
+        <section className="rounded-xl p-6 shadow-sm" style={{ background: 'var(--k-surface-container-lowest)' }}>
+          <div className="flex items-center gap-3 mb-6">
+            <span className="material-symbols-outlined" style={{ color: 'var(--k-primary)' }}>volume_up</span>
+            <h3 className="font-bold" style={{ color: 'var(--k-primary)' }}>Audio</h3>
+          </div>
+          <div className="flex items-center justify-between">
             <div>
-              <span className="text-[17px]" style={{ color: 'var(--ios-label)' }}>
-                Show Furigana
-              </span>
-              <p className="text-[13px] mt-0.5" style={{ color: 'var(--ios-secondary-label)' }}>
-                Show reading above kanji in exercises
+              <span className="text-sm font-medium" style={{ color: 'var(--k-on-surface)' }}>Auto-play Audio</span>
+              <p className="text-xs mt-0.5" style={{ color: 'var(--k-secondary)' }}>
+                Pronunciation for each exercise
               </p>
             </div>
-            <button
-              role="switch"
-              aria-checked={showFurigana}
-              aria-label="Toggle furigana"
-              onClick={() => setShowFurigana(!showFurigana)}
-              className="relative h-[31px] w-[51px] shrink-0 rounded-full transition-colors"
-              style={{
-                background: showFurigana ? 'var(--ios-green)' : 'var(--ios-fill)',
-              }}
-            >
-              <span
-                className="absolute top-[2px] left-[2px] h-[27px] w-[27px] rounded-full bg-white shadow-sm transition-transform"
-                style={{
-                  transform: showFurigana ? 'translateX(20px)' : 'translateX(0)',
-                }}
-              />
-            </button>
+            <Toggle checked={audio} onChange={() => setAudio(!audio)} label="Toggle audio" />
           </div>
-        </div>
+        </section>
 
-        {/* Audio section */}
-        <p
-          className="mt-8 mb-2 px-4 text-[13px] font-normal uppercase tracking-wide"
-          style={{ color: 'var(--ios-secondary-label)' }}
-        >
-          Audio
-        </p>
-        <div
-          className="rounded-[10px] px-4"
-          style={{ background: 'var(--ios-bg-grouped-secondary)' }}
-        >
-          <div className="flex items-center justify-between py-[11px]">
-            <span
-              className="text-[17px]"
-              style={{ color: 'var(--ios-label)' }}
-            >
-              Sound Effects
-            </span>
-            <button
-              role="switch"
-              aria-checked={audio}
-              aria-label="Toggle audio"
-              onClick={() => setAudio(!audio)}
-              className="relative h-[31px] w-[51px] rounded-full transition-colors"
-              style={{
-                background: audio ? 'var(--ios-green)' : 'var(--ios-fill)',
-              }}
-            >
-              <span
-                className="absolute top-[2px] left-[2px] h-[27px] w-[27px] rounded-full bg-white shadow-sm transition-transform"
-                style={{
-                  transform: audio ? 'translateX(20px)' : 'translateX(0)',
-                }}
-              />
-            </button>
+        {/* Study Section */}
+        <section className="rounded-xl p-6 shadow-sm" style={{ background: 'var(--k-surface-container-lowest)' }}>
+          <div className="flex items-center gap-3 mb-6">
+            <span className="material-symbols-outlined" style={{ color: 'var(--k-primary)' }}>menu_book</span>
+            <h3 className="font-bold" style={{ color: 'var(--k-primary)' }}>Study</h3>
           </div>
-        </div>
-
-        {/* Daily plan size section */}
-        <p
-          className="mt-8 mb-2 px-4 text-[13px] font-normal uppercase tracking-wide"
-          style={{ color: 'var(--ios-secondary-label)' }}
-        >
-          Daily Plan Size
-        </p>
-        <div
-          className="rounded-[10px] p-4"
-          style={{ background: 'var(--ios-bg-grouped-secondary)' }}
-        >
-          <SegmentedControl
-            options={planSizeOptions}
-            selected={planSize}
-            onChange={(value) => setPlanSize(value as 'small' | 'medium' | 'large')}
-          />
-        </div>
-
-        {/* Data & Privacy section */}
-        <p
-          className="mt-8 mb-2 px-4 text-[13px] font-normal uppercase tracking-wide"
-          style={{ color: 'var(--ios-secondary-label)' }}
-        >
-          Data & Privacy
-        </p>
-        {actionError && (
-          <div className="mt-2 rounded-[10px] px-4 py-3" style={{ background: 'var(--ios-red)', color: 'white' }}>
-            <p className="text-[15px]">{actionError}</p>
+          <div>
+            <span className="text-sm font-medium" style={{ color: 'var(--k-on-surface)' }}>Daily Plan Size</span>
+            <p className="text-xs mt-0.5 mb-4" style={{ color: 'var(--k-secondary)' }}>New items per day</p>
+            <SegmentedControl
+              options={planSizeOptions}
+              selected={planSize}
+              onChange={(value) => setPlanSize(value as 'small' | 'medium' | 'large')}
+            />
           </div>
-        )}
-        <div
-          className="rounded-[10px] overflow-hidden"
-          style={{ background: 'var(--ios-bg-grouped-secondary)' }}
+        </section>
+
+        {/* Data & Privacy Section */}
+        <section
+          className="rounded-xl p-6 shadow-sm"
+          style={{
+            background: 'var(--k-surface-container-lowest)',
+            border: '1px solid color-mix(in srgb, var(--k-outline-variant) 15%, transparent)',
+          }}
         >
-          {isLoggedIn && (
-            <button
-              onClick={handleExportData}
-              disabled={exporting}
-              className="w-full min-h-[44px] px-4 py-[11px] text-left text-[17px] active:opacity-60 disabled:opacity-50"
-              style={{ color: 'var(--ios-blue)' }}
-            >
-              {exporting ? 'Exporting...' : 'Download My Data'}
-            </button>
-          )}
-          <div style={isLoggedIn ? { borderTop: '0.5px solid var(--ios-separator)' } : undefined}>
+          <div className="flex items-center gap-3 mb-6">
+            <span className="material-symbols-outlined" style={{ color: 'var(--k-primary)' }}>shield</span>
+            <h3 className="font-bold" style={{ color: 'var(--k-primary)' }}>Data & Privacy</h3>
+          </div>
+          <div className="space-y-2">
+            {isLoggedIn && (
+              <button
+                onClick={handleExportData}
+                disabled={exporting}
+                className="w-full text-left py-3 flex justify-between items-center disabled:opacity-50"
+                style={{ borderBottom: '1px solid var(--k-surface-container-high)' }}
+              >
+                <span className="text-sm" style={{ color: 'var(--k-on-surface)' }}>
+                  {exporting ? 'Exporting...' : 'Export Study Data'}
+                </span>
+                <span className="material-symbols-outlined" style={{ color: 'var(--k-secondary)' }}>download</span>
+              </button>
+            )}
             <button
               onClick={() => setShowResetModal(true)}
-              className="w-full min-h-[44px] px-4 py-[11px] text-left text-[17px] active:opacity-60"
-              style={{ color: 'var(--ios-red)' }}
+              className="w-full text-left py-3 flex justify-between items-center"
+              style={{ borderBottom: isLoggedIn ? '1px solid var(--k-surface-container-high)' : undefined }}
             >
-              Reset All Progress
+              <span className="text-sm" style={{ color: 'var(--k-on-surface)' }}>Reset All Progress</span>
+              <span className="material-symbols-outlined" style={{ color: 'var(--k-secondary)' }}>restart_alt</span>
             </button>
-          </div>
-          {isLoggedIn && (
-            <div style={{ borderTop: '0.5px solid var(--ios-separator)' }}>
+            {isLoggedIn && (
               <button
                 onClick={() => setShowDeleteModal(true)}
-                className="w-full min-h-[44px] px-4 py-[11px] text-left text-[17px] active:opacity-60"
-                style={{ color: 'var(--ios-red)' }}
+                className="w-full text-left py-3 flex justify-between items-center"
+                style={{ color: 'var(--k-error)' }}
               >
-                Delete My Account
+                <span className="text-sm font-medium">Delete Account</span>
+                <span className="material-symbols-outlined">delete</span>
               </button>
-            </div>
-          )}
-        </div>
+            )}
+          </div>
+        </section>
 
-        {/* About section */}
-        <p
-          className="mt-8 mb-2 px-4 text-[13px] font-normal uppercase tracking-wide"
-          style={{ color: 'var(--ios-secondary-label)' }}
-        >
-          App
-        </p>
-        <div
-          className="rounded-[10px] overflow-hidden"
-          style={{ background: 'var(--ios-bg-grouped-secondary)' }}
-        >
+        {/* About */}
+        <section className="rounded-xl p-6 shadow-sm" style={{ background: 'var(--k-surface-container-lowest)' }}>
           <button
             onClick={() => navigate('/about')}
-            className="w-full min-h-[44px] px-4 py-[11px] text-left flex items-center justify-between active:opacity-60"
+            className="w-full flex justify-between items-center"
           >
-            <span className="text-[17px]" style={{ color: 'var(--ios-label)' }}>
-              About Keiro
-            </span>
-            <span className="text-[17px]" style={{ color: 'var(--ios-tertiary-label)' }}>
-              ›
-            </span>
+            <div className="flex items-center gap-3">
+              <span className="material-symbols-outlined" style={{ color: 'var(--k-primary)' }}>info</span>
+              <span className="text-sm font-medium" style={{ color: 'var(--k-on-surface)' }}>About Keiro</span>
+            </div>
+            <span className="material-symbols-outlined" style={{ color: 'var(--k-secondary)' }}>chevron_right</span>
           </button>
-        </div>
+        </section>
 
-        <p
-          className="mt-8 mb-6 text-center text-[13px]"
-          style={{ color: 'var(--ios-tertiary-label)' }}
-        >
-          Keiro (経路) — Learn Japanese
-        </p>
-      </PageContainer>
+        {/* Signature */}
+        <div className="py-12 flex flex-col items-center opacity-40">
+          <div className="w-12 h-1 mb-4 rounded-full" style={{ background: 'var(--k-primary)' }} />
+          <p className="font-headline text-xs tracking-[0.4em] uppercase">The Mindful Scholar</p>
+        </div>
+      </main>
+
+      <BottomNav />
 
       <Modal
         isOpen={showResetModal}

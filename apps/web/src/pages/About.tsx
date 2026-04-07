@@ -1,5 +1,4 @@
 import { useNavigate, Link } from 'react-router';
-import { PageContainer } from '../components/layout/PageContainer';
 import { TopBar } from '../components/layout/TopBar';
 
 const contentSources = [
@@ -41,118 +40,200 @@ export function About() {
   return (
     <>
       <TopBar title="About" onBack={() => navigate('/settings')} />
-      <PageContainer>
-        {/* App identity card */}
+
+      <main className="pb-12 animate-fadeIn">
+        {/* Editorial hero */}
         <div
-          className="rounded-[14px] px-4 py-8 mb-8 flex flex-col items-center text-center"
-          style={{ background: 'var(--ios-bg-grouped-secondary)' }}
+          className="px-6 pt-8 pb-10 relative overflow-hidden"
+          style={{ background: 'var(--k-surface-container-lowest)' }}
         >
+          {/* Decorative kanji watermark */}
           <span
-            className="text-[72px] leading-none mb-3"
-            style={{ color: 'var(--ios-tertiary-label)' }}
+            className="font-headline absolute right-4 top-2 text-[120px] leading-none select-none pointer-events-none"
+            style={{ color: 'var(--k-outline-variant)', opacity: 0.35 }}
             aria-hidden="true"
           >
             経
           </span>
-          <p className="text-[22px] font-bold" style={{ color: 'var(--ios-label)' }}>
-            Keiro
+          <p
+            className="text-xs uppercase tracking-widest font-medium mb-2"
+            style={{ color: 'var(--k-secondary)' }}
+          >
+            Keiro · 経路
           </p>
-          <p className="text-[15px] mt-1" style={{ color: 'var(--ios-secondary-label)' }}>
-            Learn Japanese
+          <h1
+            className="font-headline text-3xl leading-snug"
+            style={{ color: 'var(--k-on-surface)' }}
+          >
+            The Mindful Scholar
+          </h1>
+          <p
+            className="mt-3 text-sm leading-relaxed max-w-xs"
+            style={{ color: 'var(--k-secondary)' }}
+          >
+            Keiro (経路, "the path") guides you from zero Japanese to reading manga — one mindful step at a time.
           </p>
-          <p className="text-[13px] mt-1" style={{ color: 'var(--ios-tertiary-label)' }}>
+          <p
+            className="mt-2 text-xs"
+            style={{ color: 'var(--k-outline)' }}
+          >
             Version 1.0.0
           </p>
         </div>
 
-        {/* About section */}
-        <p
-          className="mb-2 px-4 text-[13px] font-normal uppercase tracking-wide"
-          style={{ color: 'var(--ios-secondary-label)' }}
-        >
-          About
-        </p>
-        <div
-          className="rounded-[10px] px-4 py-[11px]"
-          style={{ background: 'var(--ios-bg-grouped-secondary)' }}
-        >
-          <p className="text-[17px] leading-relaxed" style={{ color: 'var(--ios-label)' }}>
-            Keiro (経路, "the path") is a structured learning app that guides you from zero Japanese to reading manga.
-          </p>
-        </div>
+        {/* Bento grid */}
+        <div className="px-6 pt-6 grid grid-cols-1 gap-4">
 
-        {/* Content Sources section */}
-        <p
-          className="mt-8 mb-2 px-4 text-[13px] font-normal uppercase tracking-wide"
-          style={{ color: 'var(--ios-secondary-label)' }}
-        >
-          Content Sources
-        </p>
-        <div
-          className="rounded-[10px] overflow-hidden"
-          style={{ background: 'var(--ios-bg-grouped-secondary)' }}
-        >
-          {contentSources.map((item, i, arr) => (
-            <a
-              key={item.name}
-              href={item.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block px-4 py-[11px] min-h-[44px] active:opacity-60"
-              style={{
-                borderBottom: i < arr.length - 1 ? '0.5px solid var(--ios-separator)' : 'none',
-              }}
-            >
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-[17px]" style={{ color: 'var(--ios-label)' }}>
-                    {item.name}
-                  </p>
-                  <p className="text-[13px] mt-0.5" style={{ color: 'var(--ios-secondary-label)' }}>
-                    {item.source} · {item.license}
-                  </p>
-                </div>
-                <span className="text-[17px]" style={{ color: 'var(--ios-tertiary-label)' }}>
-                  ›
-                </span>
-              </div>
-            </a>
-          ))}
-        </div>
-
-        {/* Legal section */}
-        <p
-          className="mt-8 mb-2 px-4 text-[13px] font-normal uppercase tracking-wide"
-          style={{ color: 'var(--ios-secondary-label)' }}
-        >
-          Legal
-        </p>
-        <div
-          className="rounded-[10px] overflow-hidden"
-          style={{ background: 'var(--ios-bg-grouped-secondary)' }}
-        >
-          <Link
-            to="/privacy"
-            className="block px-4 py-[11px] min-h-[44px] active:opacity-60"
+          {/* Sources card */}
+          <div
+            className="rounded-xl p-5"
+            style={{ background: 'var(--k-surface-container-lowest)' }}
           >
-            <div className="flex items-center justify-between">
-              <p className="text-[17px]" style={{ color: 'var(--ios-label)' }}>
-                Privacy Policy
-              </p>
-              <span className="text-[17px]" style={{ color: 'var(--ios-tertiary-label)' }}>
-                ›
-              </span>
+            <h2
+              className="font-headline text-lg mb-4"
+              style={{ color: 'var(--k-on-surface)' }}
+            >
+              出典 <span className="text-sm font-body font-normal" style={{ color: 'var(--k-secondary)' }}>Sources</span>
+            </h2>
+            <ul className="space-y-3">
+              {contentSources.map((item) => (
+                <li key={item.name}>
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start gap-3 active:opacity-60 group"
+                  >
+                    <span
+                      className="material-symbols-outlined text-[18px] mt-0.5 shrink-0"
+                      style={{ color: 'var(--k-primary)', fontSize: '18px' }}
+                    >
+                      link
+                    </span>
+                    <div className="min-w-0">
+                      <p
+                        className="text-sm font-medium group-hover:underline"
+                        style={{ color: 'var(--k-on-surface)' }}
+                      >
+                        {item.name}
+                      </p>
+                      <p
+                        className="text-xs mt-0.5"
+                        style={{ color: 'var(--k-secondary)' }}
+                      >
+                        {item.source} · {item.license}
+                      </p>
+                    </div>
+                    <span
+                      className="material-symbols-outlined text-[16px] shrink-0 ml-auto"
+                      style={{ color: 'var(--k-outline)', fontSize: '16px' }}
+                    >
+                      open_in_new
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Two-column row: Legal + Design Philosophy */}
+          <div className="grid grid-cols-2 gap-4">
+            {/* Legal card */}
+            <div
+              className="rounded-xl p-5"
+              style={{ background: 'var(--k-surface-container-lowest)' }}
+            >
+              <h2
+                className="font-headline text-base mb-3"
+                style={{ color: 'var(--k-on-surface)' }}
+              >
+                法的 <span className="block text-xs font-body font-normal mt-0.5" style={{ color: 'var(--k-secondary)' }}>Legal</span>
+              </h2>
+              <Link
+                to="/privacy"
+                className="flex items-center gap-2 active:opacity-60"
+              >
+                <span
+                  className="material-symbols-outlined text-[18px]"
+                  style={{ color: 'var(--k-primary)', fontSize: '18px' }}
+                >
+                  shield
+                </span>
+                <span
+                  className="text-sm"
+                  style={{ color: 'var(--k-on-surface)' }}
+                >
+                  Privacy Policy
+                </span>
+                <span
+                  className="material-symbols-outlined text-[16px] ml-auto"
+                  style={{ color: 'var(--k-outline)', fontSize: '16px' }}
+                >
+                  chevron_right
+                </span>
+              </Link>
             </div>
-          </Link>
+
+            {/* Design Philosophy card */}
+            <div
+              className="rounded-xl p-5"
+              style={{ background: 'var(--k-tertiary-container)' }}
+            >
+              <h2
+                className="font-headline text-base mb-2"
+                style={{ color: 'var(--k-tertiary-fixed-dim)' }}
+              >
+                哲学
+              </h2>
+              <p
+                className="text-xs leading-relaxed"
+                style={{ color: 'var(--k-tertiary-fixed-dim)' }}
+              >
+                Digital Karesansui — a zen garden of deliberate simplicity.
+              </p>
+            </div>
+          </div>
+
+          {/* Acknowledgements card */}
+          <div
+            className="rounded-xl p-5"
+            style={{ background: 'var(--k-surface-container-lowest)' }}
+          >
+            <h2
+              className="font-headline text-lg mb-3"
+              style={{ color: 'var(--k-on-surface)' }}
+            >
+              謝辞 <span className="text-sm font-body font-normal" style={{ color: 'var(--k-secondary)' }}>Acknowledgements</span>
+            </h2>
+            <p
+              className="text-sm leading-relaxed"
+              style={{ color: 'var(--k-secondary)' }}
+            >
+              Built with gratitude for the open-source community, the scholars who compiled these linguistic datasets, and every learner walking the path.
+            </p>
+          </div>
         </div>
 
-        <p
-          className="mt-8 mb-6 text-center text-[13px]"
-          style={{ color: 'var(--ios-tertiary-label)' }}
-        >
-          Keiro (経路) — Learn Japanese
-        </p>
-      </PageContainer>
+        {/* System status footer */}
+        <div className="px-6 pt-6 pb-4 flex items-center justify-between">
+          <p
+            className="text-xs"
+            style={{ color: 'var(--k-outline)' }}
+          >
+            Keiro (経路) — Learn Japanese
+          </p>
+          <span
+            className="flex items-center gap-1.5 text-xs"
+            style={{ color: 'var(--k-correct-secondary)' }}
+          >
+            <span
+              className="w-1.5 h-1.5 rounded-full"
+              style={{ background: 'var(--k-correct-secondary)' }}
+            />
+            All systems nominal
+          </span>
+        </div>
+      </main>
     </>
   );
 }

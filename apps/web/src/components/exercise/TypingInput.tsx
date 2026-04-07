@@ -51,9 +51,9 @@ export function TypingInput({ correctAnswer, onSubmit }: TypingInputProps) {
 
   const borderColor = submitted
     ? isCorrect
-      ? 'var(--ios-green)'
-      : 'var(--ios-red)'
-    : 'var(--ios-separator)';
+      ? 'var(--k-correct-secondary)'
+      : 'var(--k-error)'
+    : 'var(--k-outline-variant)';
 
   return (
     <div className="flex flex-col gap-4">
@@ -71,23 +71,23 @@ export function TypingInput({ correctAnswer, onSubmit }: TypingInputProps) {
           autoCorrect="off"
           autoCapitalize="off"
           spellCheck={false}
-          className="w-full h-[50px] rounded-[10px] border px-4 text-[17px] outline-none
+          className="w-full h-[50px] rounded-xl border px-4 text-[17px] outline-none
             transition-all duration-[350ms] ease-[cubic-bezier(0.25,0.1,0.25,1)]
             disabled:opacity-70"
           style={{
             borderColor,
-            background: 'var(--ios-bg-grouped-secondary)',
-            color: 'var(--ios-label)',
+            background: 'var(--k-surface-container-lowest)',
+            color: 'var(--k-on-surface)',
           }}
         />
         {submitted && (
           <span className="absolute right-4 top-1/2 -translate-y-1/2">
             {isCorrect ? (
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="var(--ios-green)">
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="var(--k-correct-secondary)">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
               </svg>
             ) : (
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="var(--ios-red)">
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="var(--k-error)">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             )}
@@ -96,8 +96,8 @@ export function TypingInput({ correctAnswer, onSubmit }: TypingInputProps) {
       </div>
 
       {submitted && !isCorrect && (
-        <p className="text-[15px]" style={{ color: 'var(--ios-secondary-label)' }}>
-          Correct answer: <span className="font-semibold" style={{ color: 'var(--ios-label)' }}>{correctAnswer}</span>
+        <p className="text-[15px]" style={{ color: 'var(--k-secondary)' }}>
+          Correct answer: <span className="font-semibold" style={{ color: 'var(--k-on-surface)' }}>{correctAnswer}</span>
         </p>
       )}
 
@@ -105,10 +105,10 @@ export function TypingInput({ correctAnswer, onSubmit }: TypingInputProps) {
         <button
           onClick={handleSubmit}
           disabled={value.trim() === ''}
-          className="w-full min-h-[44px] rounded-[10px] px-5 py-3 text-[17px] font-semibold text-white
+          className="w-full min-h-[44px] rounded-xl px-5 py-3 text-[17px] font-semibold text-white
             transition-all duration-[350ms] ease-[cubic-bezier(0.25,0.1,0.25,1)]
             active:scale-[0.98] disabled:opacity-40"
-          style={{ background: 'var(--ios-blue)' }}
+          style={{ background: 'var(--k-primary)' }}
         >
           Check
         </button>

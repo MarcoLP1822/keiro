@@ -38,8 +38,8 @@ export function Modal({ isOpen, title, body, primaryLabel, secondaryLabel, onPri
   return (
     <dialog
       ref={dialogRef}
-      className="m-auto w-[270px] rounded-[14px] p-0 shadow-xl backdrop:bg-black/40"
-      style={{ background: 'var(--ios-bg-grouped-secondary)' }}
+      className="m-auto w-[270px] rounded-xl p-0 shadow-xl backdrop:bg-black/40"
+      style={{ background: 'var(--k-surface-container-lowest)' }}
       aria-labelledby="modal-title"
       aria-describedby="modal-body"
       onCancel={(e) => {
@@ -51,28 +51,28 @@ export function Modal({ isOpen, title, body, primaryLabel, secondaryLabel, onPri
         <h2
           id="modal-title"
           className="text-[17px] font-semibold"
-          style={{ color: 'var(--ios-label)' }}
+          style={{ color: 'var(--k-on-surface)' }}
         >
           {title}
         </h2>
         <p
           id="modal-body"
           className="mt-1 text-[13px]"
-          style={{ color: 'var(--ios-secondary-label)' }}
+          style={{ color: 'var(--k-secondary)' }}
         >
           {body}
         </p>
       </div>
       <div
         className="flex flex-col"
-        style={{ borderTop: '0.5px solid var(--ios-separator)' }}
+        style={{ borderTop: '0.5px solid var(--k-outline-variant)' }}
       >
         <button
           ref={primaryRef}
           onClick={onPrimary}
           className="min-h-[44px] w-full text-[17px] font-semibold active:bg-black/5"
           style={{
-            color: variant === 'danger' ? 'var(--ios-red)' : 'var(--ios-blue)',
+            color: variant === 'danger' ? 'var(--k-error)' : 'var(--k-primary)',
           }}
         >
           {primaryLabel}
@@ -81,8 +81,8 @@ export function Modal({ isOpen, title, body, primaryLabel, secondaryLabel, onPri
           onClick={onSecondary}
           className="min-h-[44px] w-full text-[17px] active:bg-black/5"
           style={{
-            color: 'var(--ios-blue)',
-            borderTop: '0.5px solid var(--ios-separator)',
+            color: 'var(--k-primary)',
+            borderTop: '0.5px solid var(--k-outline-variant)',
           }}
         >
           {secondaryLabel}

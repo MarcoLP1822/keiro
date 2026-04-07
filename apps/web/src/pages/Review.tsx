@@ -2,7 +2,6 @@ import { useNavigate } from 'react-router';
 import { getAllModules } from '@keiro/content';
 import { getModuleStatus } from '@keiro/engine';
 import { TopBar } from '../components/layout/TopBar';
-import { PageContainer } from '../components/layout/PageContainer';
 import { ModuleCard } from '../components/module/ModuleCard';
 import { useProgress } from '../hooks/useProgress';
 
@@ -20,11 +19,24 @@ export function Review() {
   return (
     <>
       <TopBar title="Review" onBack={() => navigate('/')} />
-      <PageContainer>
+      <main className="pt-24 px-6 max-w-2xl mx-auto pb-32">
+        {/* Page header */}
+        <div className="mb-8">
+          <h1
+            className="font-headline text-3xl font-bold tracking-tight"
+            style={{ color: 'var(--k-on-surface)' }}
+          >
+            復習
+          </h1>
+          <p className="text-sm mt-1" style={{ color: 'var(--k-secondary)' }}>
+            — Review
+          </p>
+        </div>
+
         {passedModules.length === 0 ? (
           <p
             className="mt-12 text-center text-[17px] leading-relaxed"
-            style={{ color: 'var(--ios-secondary-label)' }}
+            style={{ color: 'var(--k-secondary)' }}
           >
             Nothing to review yet. Complete your first module to unlock review.
           </p>
@@ -33,15 +45,15 @@ export function Review() {
             {/* Section header */}
             <p
               className="mb-2 px-4 text-[13px] font-normal uppercase tracking-wide"
-              style={{ color: 'var(--ios-secondary-label)' }}
+              style={{ color: 'var(--k-secondary)' }}
             >
               Completed Modules
             </p>
 
             {/* Grouped list card */}
             <div
-              className="rounded-[10px] overflow-hidden"
-              style={{ background: 'var(--ios-bg-grouped-secondary)' }}
+              className="rounded-xl overflow-hidden"
+              style={{ background: 'var(--k-surface-container-lowest)' }}
             >
               {passedModules.map((module) => {
                 const progress = getProgress(module.id);
@@ -58,7 +70,7 @@ export function Review() {
             </div>
           </>
         )}
-      </PageContainer>
+      </main>
     </>
   );
 }

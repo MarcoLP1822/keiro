@@ -1,23 +1,12 @@
 import { useNavigate } from 'react-router';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { TopBar } from '../components/layout/TopBar';
-import { PageContainer } from '../components/layout/PageContainer';
+import { BottomNav } from '../components/layout/BottomNav';
 import { ProgressBar } from '../components/common/ProgressBar';
 import { LoadingSpinner } from '../components/common/LoadingSpinner';
 import { useStats } from '../hooks/useStats';
 import { useStreak } from '../hooks/useStreak';
 import { db } from '../services/db';
-
-function StatPill({ label, count, color }: { label: string; count: number; color: string }) {
-  return (
-    <span
-      className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[13px] font-medium"
-      style={{ background: `${color}20`, color }}
-    >
-      <span className="font-semibold">{count}</span> {label}
-    </span>
-  );
-}
 
 function CalendarHeatmap({
   studiedDates,
@@ -26,7 +15,6 @@ function CalendarHeatmap({
   studiedDates: Set<string>;
   freezeDates: Set<string>;
 }) {
-  // Build the last 35 days (5 rows x 7 columns), ending today
   const days: { date: string; status: 'studied' | 'freeze' | 'missed' }[] = [];
   const today = new Date();
   for (let i = 34; i >= 0; i--) {
@@ -41,19 +29,19 @@ function CalendarHeatmap({
     days.push({ date: dateStr, status });
   }
 
-  const colorMap = {
-    studied: 'var(--ios-green)',
-    freeze: 'var(--ios-blue)',
-    missed: 'var(--ios-gray5)',
-  };
-
   return (
     <div className="grid grid-cols-7 gap-[6px]">
       {days.map(({ date, status }) => (
         <div
           key={date}
           className="w-full aspect-square rounded-full"
-          style={{ background: colorMap[status] }}
+          style={{
+            background: status === 'studied'
+              ? 'var(--k-correct-secondary)'
+              : status === 'freeze'
+                ? 'var(--k-primary)'
+                : 'var(--k-surface-container-high)',
+          }}
           title={date}
           aria-label={`${date}: ${status}`}
         />
@@ -62,12 +50,17 @@ function CalendarHeatmap({
   );
 }
 
+const TYPE_JP: Record<string, string> = {
+  kana: '仮名',
+  vocabulary: '語彙',
+  kanji: '漢字',
+  grammar: '文法',
+};
+
 export function Stats() {
   const navigate = useNavigate();
   const stats = useStats();
   const { streak, longestStreak, freezesAvailable, freezesUsed } = useStreak();
-
-  // Get all completed daily plans for the calendar heatmap
   const allPlans = useLiveQuery(() => db.dailyPlan.toArray(), []);
 
   if (!stats) {
@@ -92,7 +85,6 @@ export function Stats() {
   );
   const freezeDates = new Set(freezesUsed);
 
-  // Determine level label
   let levelLabel = 'Beginner';
   if (overallProgress >= 80) levelLabel = 'N4';
   else if (overallProgress >= 40) levelLabel = 'N5';
@@ -100,304 +92,226 @@ export function Stats() {
   const totalItemsLearned =
     itemsByType.kana + itemsByType.vocabulary + itemsByType.kanji + itemsByType.grammar;
 
+  // SRS bar chart data
+  const srsMax = Math.max(srsStats.learning, srsStats.reviewing, srsStats.mastered, 1);
+  const srsBars = [
+    { label: 'LEARNING', count: srsStats.learning, opacity: 0.3 },
+    { label: 'REVIEWING', count: srsStats.reviewing, opacity: 0.6 },
+    { label: 'MASTERED', count: srsStats.mastered, opacity: 1 },
+  ];
+
   return (
     <>
-      <TopBar title="Statistics" onBack={() => navigate('/')} />
-      <PageContainer>
-        {/* Section 1: Overall Progress */}
-        <p
-          className="mb-2 px-4 text-[13px] font-normal uppercase tracking-wide"
-          style={{ color: 'var(--ios-secondary-label)' }}
+      <TopBar title="Keiro" onBack={() => navigate('/')} rightAction={
+        <span className="font-bold text-lg tracking-tight" style={{ color: 'var(--k-primary)' }}>
+          {modulesCompleted}/{totalModules}
+        </span>
+      } />
+
+      <main className="pt-24 px-6 max-w-2xl mx-auto space-y-6 pb-32">
+        {/* Header */}
+        <header>
+          <h1 className="font-headline text-4xl font-bold tracking-tight" style={{ color: 'var(--k-primary)' }}>
+            分析 <span className="text-lg font-normal ml-2" style={{ color: 'var(--k-secondary)' }}>— Statistics</span>
+          </h1>
+          <p className="text-sm mt-1" style={{ color: 'var(--k-on-surface-variant)' }}>
+            A reflection of your linguistic journey and mindful growth.
+          </p>
+        </header>
+
+        {/* Overall Progress */}
+        <section
+          className="p-8 rounded-xl space-y-6"
+          style={{ background: 'var(--k-surface-container-lowest)' }}
         >
-          Overall Progress
-        </p>
-        <div
-          className="rounded-[10px] p-4"
-          style={{ background: 'var(--ios-bg-grouped-secondary)' }}
-        >
-          <div className="flex items-center justify-between mb-3">
-            <span
-              className="text-[15px] font-medium"
-              style={{ color: 'var(--ios-secondary-label)' }}
-            >
-              {levelLabel} — {overallProgress}%
-            </span>
-            <span
-              className="text-[13px]"
-              style={{ color: 'var(--ios-secondary-label)' }}
-            >
-              {modulesCompleted} of {totalModules} modules
-            </span>
+          <div className="flex justify-between items-end">
+            <div>
+              <h2 className="font-headline text-2xl" style={{ color: 'var(--k-primary)' }}>全体的な進捗</h2>
+              <p className="text-sm" style={{ color: 'var(--k-secondary)' }}>Overall Progress</p>
+            </div>
+            <div className="text-right">
+              <span className="text-4xl font-extrabold" style={{ color: 'var(--k-primary)' }}>
+                {overallProgress}<span className="text-lg font-medium">%</span>
+              </span>
+            </div>
           </div>
           <ProgressBar value={overallProgress} />
-        </div>
+          <div className="flex justify-between text-xs font-bold uppercase tracking-widest" style={{ color: 'var(--k-secondary)' }}>
+            <span>{levelLabel}</span>
+            <span>{modulesCompleted} of {totalModules} modules</span>
+          </div>
+        </section>
 
-        {/* Section 2: Items Learned */}
-        <p
-          className="mt-8 mb-2 px-4 text-[13px] font-normal uppercase tracking-wide"
-          style={{ color: 'var(--ios-secondary-label)' }}
-        >
-          Items Learned
-        </p>
-        <div
-          className="rounded-[10px] p-4"
-          style={{ background: 'var(--ios-bg-grouped-secondary)' }}
-        >
-          <p
-            className="text-[28px] font-bold mb-3"
-            style={{ color: 'var(--ios-label)' }}
+        {/* Items by Type + SRS */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Items by Type */}
+          <section
+            className="p-8 rounded-xl space-y-6"
+            style={{ background: 'var(--k-surface-container-low)' }}
           >
-            {totalItemsLearned}
-          </p>
-          <div className="flex flex-wrap gap-2">
-            {itemsByType.kana > 0 && (
-              <StatPill label="kana" count={itemsByType.kana} color="var(--ios-blue)" />
-            )}
-            {itemsByType.vocabulary > 0 && (
-              <StatPill label="vocab" count={itemsByType.vocabulary} color="var(--ios-green)" />
-            )}
-            {itemsByType.kanji > 0 && (
-              <StatPill label="kanji" count={itemsByType.kanji} color="var(--ios-orange)" />
-            )}
-            {itemsByType.grammar > 0 && (
-              <StatPill label="grammar" count={itemsByType.grammar} color="var(--ios-red)" />
-            )}
-            {totalItemsLearned === 0 && (
-              <p
-                className="text-[15px]"
-                style={{ color: 'var(--ios-secondary-label)' }}
-              >
+            <div>
+              <h2 className="font-headline text-xl" style={{ color: 'var(--k-primary)' }}>タイプ別</h2>
+              <p className="text-sm" style={{ color: 'var(--k-secondary)' }}>Items by Type</p>
+            </div>
+            {totalItemsLearned === 0 ? (
+              <p className="text-sm" style={{ color: 'var(--k-secondary)' }}>
                 Complete modules to start tracking
               </p>
+            ) : (
+              <div className="space-y-5">
+                {Object.entries(itemsByType).map(([type, count]) => {
+                  if (count === 0) return null;
+                  return (
+                    <div key={type} className="space-y-2">
+                      <div className="flex justify-between text-sm">
+                        <span className="font-bold" style={{ color: 'var(--k-on-surface)' }}>
+                          {TYPE_JP[type] ?? type}{' '}
+                          <span className="font-normal ml-1" style={{ color: 'var(--k-secondary)' }}>
+                            {type.charAt(0).toUpperCase() + type.slice(1)}
+                          </span>
+                        </span>
+                        <span style={{ color: 'var(--k-on-surface)' }}>{count}</span>
+                      </div>
+                      <div className="h-1.5 w-full rounded-full overflow-hidden" style={{ background: 'var(--k-surface-container-high)' }}>
+                        <div
+                          className="h-full rounded-full"
+                          style={{ background: 'var(--k-primary)', width: `${Math.min(100, (count / 50) * 100)}%` }}
+                        />
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             )}
-          </div>
+          </section>
+
+          {/* SRS */}
+          <section
+            className="p-8 rounded-xl flex flex-col justify-between"
+            style={{ background: 'var(--k-surface-container-lowest)' }}
+          >
+            <div>
+              <h2 className="font-headline text-xl" style={{ color: 'var(--k-primary)' }}>記憶の段階</h2>
+              <p className="text-sm" style={{ color: 'var(--k-secondary)' }}>SRS Progression</p>
+            </div>
+            {srsStats.total === 0 ? (
+              <p className="text-sm mt-4" style={{ color: 'var(--k-secondary)' }}>No SRS cards yet</p>
+            ) : (
+              <>
+                <div className="flex items-end justify-between h-48 gap-3 mt-8">
+                  {srsBars.map((bar) => (
+                    <div key={bar.label} className="flex flex-col items-center flex-1 gap-2">
+                      <div
+                        className="w-full rounded-t-lg relative"
+                        style={{
+                          height: `${Math.max(10, (bar.count / srsMax) * 100)}%`,
+                          background: `color-mix(in srgb, var(--k-primary) ${bar.opacity * 100}%, transparent)`,
+                        }}
+                      >
+                        <div
+                          className="absolute -top-6 left-0 right-0 text-center text-xs font-bold"
+                          style={{ color: 'var(--k-primary)' }}
+                        >
+                          {bar.count}
+                        </div>
+                      </div>
+                      <span
+                        className="text-[10px] font-bold text-center leading-tight"
+                        style={{ color: 'var(--k-secondary)' }}
+                      >
+                        {bar.label}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+                {srsStats.leeches > 0 && (
+                  <p className="text-xs mt-4" style={{ color: 'var(--k-error)' }}>
+                    {srsStats.leeches} leech{srsStats.leeches > 1 ? 'es' : ''} — items needing extra attention
+                  </p>
+                )}
+                <p className="text-xs mt-2" style={{ color: 'var(--k-secondary)' }}>
+                  {srsStats.dueToday} due today · {srsStats.total} total cards
+                </p>
+              </>
+            )}
+          </section>
         </div>
 
-        {/* Section 3: Study Streak */}
-        <p
-          className="mt-8 mb-2 px-4 text-[13px] font-normal uppercase tracking-wide"
-          style={{ color: 'var(--ios-secondary-label)' }}
+        {/* Study Streak */}
+        <section
+          className="p-8 rounded-xl space-y-6"
+          style={{ background: 'var(--k-surface-container-lowest)' }}
         >
-          Study Streak
-        </p>
-        <div
-          className="rounded-[10px] p-4"
-          style={{ background: 'var(--ios-bg-grouped-secondary)' }}
-        >
-          <div className="flex items-end justify-between mb-4">
+          <div className="flex justify-between items-end">
             <div>
-              <p
-                className="text-[44px] font-bold leading-none"
-                style={{ color: 'var(--ios-label)' }}
-              >
-                {streak}
-              </p>
-              <p
-                className="text-[15px] mt-1"
-                style={{ color: 'var(--ios-secondary-label)' }}
-              >
+              <h2 className="font-headline text-2xl" style={{ color: 'var(--k-primary)' }}>連続記録</h2>
+              <p className="text-sm" style={{ color: 'var(--k-secondary)' }}>Study Streak</p>
+            </div>
+          </div>
+
+          <div className="flex items-end justify-between">
+            <div>
+              <p className="text-5xl font-bold leading-none" style={{ color: 'var(--k-primary)' }}>{streak}</p>
+              <p className="text-sm mt-1" style={{ color: 'var(--k-secondary)' }}>
                 {streak === 1 ? 'day' : 'days'} current
               </p>
             </div>
             <div className="text-right">
-              <p
-                className="text-[22px] font-semibold leading-none"
-                style={{ color: 'var(--ios-secondary-label)' }}
-              >
-                {longestStreak}
-              </p>
-              <p
-                className="text-[13px] mt-1"
-                style={{ color: 'var(--ios-secondary-label)' }}
-              >
-                best streak
-              </p>
+              <p className="text-2xl font-semibold leading-none" style={{ color: 'var(--k-secondary)' }}>{longestStreak}</p>
+              <p className="text-xs mt-1" style={{ color: 'var(--k-secondary)' }}>best streak</p>
             </div>
           </div>
 
           {/* Freeze indicators */}
-          <div className="flex items-center gap-1 mb-4">
-            <span
-              className="text-[13px] mr-1"
-              style={{ color: 'var(--ios-secondary-label)' }}
-            >
-              Freezes
-            </span>
+          <div className="flex items-center gap-2">
+            <span className="text-xs" style={{ color: 'var(--k-secondary)' }}>Freezes</span>
             {[0, 1, 2].map((i) => (
-              <span
+              <div
                 key={i}
-                className="text-[14px]"
-                style={{ opacity: i < freezesAvailable ? 1 : 0.25 }}
-              >
-                ❄️
-              </span>
+                className="w-3 h-3 rounded-full"
+                style={{
+                  background: i < freezesAvailable ? 'var(--k-primary)' : 'var(--k-surface-container-high)',
+                }}
+              />
             ))}
           </div>
 
-          {/* Calendar heatmap */}
-          <div
-            className="h-px mb-4"
-            style={{ background: 'var(--ios-separator)' }}
-          />
-          <p
-            className="text-[13px] mb-3"
-            style={{ color: 'var(--ios-secondary-label)' }}
-          >
-            Last 35 days
-          </p>
-          <CalendarHeatmap studiedDates={studiedDates} freezeDates={freezeDates} />
-          <div className="flex items-center gap-4 mt-3">
-            <div className="flex items-center gap-1.5">
-              <div
-                className="w-[10px] h-[10px] rounded-full"
-                style={{ background: 'var(--ios-green)' }}
-              />
-              <span className="text-[11px]" style={{ color: 'var(--ios-secondary-label)' }}>Studied</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <div
-                className="w-[10px] h-[10px] rounded-full"
-                style={{ background: 'var(--ios-blue)' }}
-              />
-              <span className="text-[11px]" style={{ color: 'var(--ios-secondary-label)' }}>Freeze</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <div
-                className="w-[10px] h-[10px] rounded-full"
-                style={{ background: 'var(--ios-gray5)' }}
-              />
-              <span className="text-[11px]" style={{ color: 'var(--ios-secondary-label)' }}>Missed</span>
+          {/* Calendar */}
+          <div className="pt-4" style={{ borderTop: '1px solid var(--k-surface-container-high)' }}>
+            <p className="text-xs mb-3" style={{ color: 'var(--k-secondary)' }}>Last 35 days</p>
+            <CalendarHeatmap studiedDates={studiedDates} freezeDates={freezeDates} />
+            <div className="flex items-center gap-4 mt-3">
+              <div className="flex items-center gap-1.5">
+                <div className="w-[10px] h-[10px] rounded-full" style={{ background: 'var(--k-correct-secondary)' }} />
+                <span className="text-[11px]" style={{ color: 'var(--k-secondary)' }}>Studied</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <div className="w-[10px] h-[10px] rounded-full" style={{ background: 'var(--k-primary)' }} />
+                <span className="text-[11px]" style={{ color: 'var(--k-secondary)' }}>Freeze</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <div className="w-[10px] h-[10px] rounded-full" style={{ background: 'var(--k-surface-container-high)' }} />
+                <span className="text-[11px]" style={{ color: 'var(--k-secondary)' }}>Missed</span>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        {/* Section 4: SRS Status */}
-        <p
-          className="mt-8 mb-2 px-4 text-[13px] font-normal uppercase tracking-wide"
-          style={{ color: 'var(--ios-secondary-label)' }}
+        {/* Zen Quote */}
+        <section
+          className="relative h-48 rounded-xl overflow-hidden p-8 flex items-center"
+          style={{ background: 'var(--k-primary)' }}
         >
-          SRS Status
-        </p>
-        <div
-          className="rounded-[10px] p-4"
-          style={{ background: 'var(--ios-bg-grouped-secondary)' }}
-        >
-          {srsStats.total === 0 ? (
-            <p
-              className="text-[15px]"
-              style={{ color: 'var(--ios-secondary-label)' }}
-            >
-              No SRS cards yet
+          <div className="relative z-10 space-y-2">
+            <p className="font-headline text-2xl" style={{ color: 'var(--k-on-primary)' }}>千里の道も一歩から</p>
+            <p className="text-sm italic" style={{ color: 'var(--k-on-primary-container)' }}>
+              "A journey of a thousand miles begins with a single step."
             </p>
-          ) : (
-            <div className="space-y-3">
-              <div className="flex items-center justify-between">
-                <span
-                  className="text-[17px]"
-                  style={{ color: 'var(--ios-label)' }}
-                >
-                  Total cards
-                </span>
-                <span
-                  className="text-[17px] font-semibold"
-                  style={{ color: 'var(--ios-label)' }}
-                >
-                  {srsStats.total}
-                </span>
-              </div>
-              <div
-                className="h-px"
-                style={{ background: 'var(--ios-separator)' }}
-              />
-              <div className="flex items-center justify-between">
-                <span
-                  className="text-[17px]"
-                  style={{ color: 'var(--ios-label)' }}
-                >
-                  Due today
-                </span>
-                <span
-                  className="text-[17px] font-semibold"
-                  style={{ color: 'var(--ios-blue)' }}
-                >
-                  {srsStats.dueToday}
-                </span>
-              </div>
-              <div
-                className="h-px"
-                style={{ background: 'var(--ios-separator)' }}
-              />
-              <div className="flex items-center justify-between">
-                <span
-                  className="text-[15px]"
-                  style={{ color: 'var(--ios-secondary-label)' }}
-                >
-                  Learning (&lt;7d)
-                </span>
-                <span
-                  className="text-[15px]"
-                  style={{ color: 'var(--ios-orange)' }}
-                >
-                  {srsStats.learning}
-                </span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span
-                  className="text-[15px]"
-                  style={{ color: 'var(--ios-secondary-label)' }}
-                >
-                  Reviewing (7-30d)
-                </span>
-                <span
-                  className="text-[15px]"
-                  style={{ color: 'var(--ios-blue)' }}
-                >
-                  {srsStats.reviewing}
-                </span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span
-                  className="text-[15px]"
-                  style={{ color: 'var(--ios-secondary-label)' }}
-                >
-                  Mastered (&gt;30d)
-                </span>
-                <span
-                  className="text-[15px]"
-                  style={{ color: 'var(--ios-green)' }}
-                >
-                  {srsStats.mastered}
-                </span>
-              </div>
-              {srsStats.leeches > 0 && (
-                <>
-                  <div
-                    className="h-px"
-                    style={{ background: 'var(--ios-separator)' }}
-                  />
-                  <div className="flex items-center justify-between">
-                    <span
-                      className="text-[15px]"
-                      style={{ color: 'var(--ios-secondary-label)' }}
-                    >
-                      Leeches
-                    </span>
-                    <span
-                      className="text-[15px]"
-                      style={{ color: 'var(--ios-red)' }}
-                    >
-                      {srsStats.leeches}
-                    </span>
-                  </div>
-                </>
-              )}
-            </div>
-          )}
-        </div>
+          </div>
+        </section>
+      </main>
 
-        {/* Bottom spacer */}
-        <div className="h-8" />
-      </PageContainer>
+      <BottomNav />
     </>
   );
 }

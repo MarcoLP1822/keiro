@@ -13,7 +13,7 @@ export function ReadingPassage({ exercise }: ReadingPassageProps) {
       <div
         className="rounded-[16px] p-5"
         style={{
-          background: 'var(--ios-bg-grouped-secondary)',
+          background: 'var(--k-surface-container-lowest)',
           boxShadow: '0 1px 3px rgba(0,0,0,0.08)',
         }}
       >
@@ -23,7 +23,7 @@ export function ReadingPassage({ exercise }: ReadingPassageProps) {
           style={{
             fontSize: '20px',
             fontFamily: '"Noto Sans JP", sans-serif',
-            color: 'var(--ios-label)',
+            color: 'var(--k-on-surface)',
           }}
         >
           {exercise.question}
@@ -33,7 +33,7 @@ export function ReadingPassage({ exercise }: ReadingPassageProps) {
       {/* Question or instruction */}
       <p
         className="text-center text-[15px] font-medium"
-        style={{ color: 'var(--ios-secondary-label)' }}
+        style={{ color: 'var(--k-secondary)' }}
       >
         {isTranslation
           ? 'Choose the correct translation'

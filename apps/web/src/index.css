@@ -48,19 +48,6 @@
   --k-correct-secondary: #2d6a4f;
   --k-incorrect-bg: #be5a4a;
 
-  /* Legacy compatibility aliases (consumed by existing components) */
-  --ios-blue: var(--k-primary);
-  --ios-green: #2d6a4f;
-  --ios-red: var(--k-error);
-  --ios-orange: #be5a4a;
-  --ios-label: var(--k-on-surface);
-  --ios-secondary-label: var(--k-secondary);
-  --ios-tertiary-label: var(--k-outline);
-  --ios-separator: var(--k-outline-variant);
-  --ios-fill: var(--k-surface-container-high);
-  --ios-bg: var(--k-surface);
-  --ios-bg-grouped: var(--k-surface);
-  --ios-bg-grouped-secondary: var(--k-surface-container-lowest);
 }
 
 .dark {
@@ -102,18 +89,6 @@
   --k-correct-secondary: #a3d9b1;
   --k-incorrect-bg: #93000a;
 
-  --ios-blue: var(--k-primary);
-  --ios-green: #a3d9b1;
-  --ios-red: var(--k-error);
-  --ios-orange: var(--k-incorrect-bg);
-  --ios-label: var(--k-on-surface);
-  --ios-secondary-label: var(--k-secondary);
-  --ios-tertiary-label: var(--k-outline);
-  --ios-separator: var(--k-outline-variant);
-  --ios-fill: var(--k-surface-container-high);
-  --ios-bg: var(--k-surface);
-  --ios-bg-grouped: var(--k-surface);
-  --ios-bg-grouped-secondary: var(--k-surface-container-lowest);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -149,18 +124,6 @@
     --k-correct-text: #e7f3eb;
     --k-correct-secondary: #a3d9b1;
     --k-incorrect-bg: #93000a;
-    --ios-blue: var(--k-primary);
-    --ios-green: #a3d9b1;
-    --ios-red: var(--k-error);
-    --ios-orange: var(--k-incorrect-bg);
-    --ios-label: var(--k-on-surface);
-    --ios-secondary-label: var(--k-secondary);
-    --ios-tertiary-label: var(--k-outline);
-    --ios-separator: var(--k-outline-variant);
-    --ios-fill: var(--k-surface-container-high);
-    --ios-bg: var(--k-surface);
-    --ios-bg-grouped: var(--k-surface);
-    --ios-bg-grouped-secondary: var(--k-surface-container-lowest);
   }
 }
 

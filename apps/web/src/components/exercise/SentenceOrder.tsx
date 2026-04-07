@@ -46,9 +46,9 @@ export function SentenceOrder({ scrambledWords, correctOrder, onSubmit }: Senten
 
   const sentenceBorderColor = submitted
     ? isCorrect
-      ? 'var(--ios-green)'
-      : 'var(--ios-red)'
-    : 'var(--ios-separator)';
+      ? 'var(--k-correct-secondary)'
+      : 'var(--k-error)'
+    : 'var(--k-outline-variant)';
 
   return (
     <div className="flex flex-col gap-5">
@@ -59,7 +59,7 @@ export function SentenceOrder({ scrambledWords, correctOrder, onSubmit }: Senten
         style={{ borderColor: sentenceBorderColor }}
       >
         {selected.length === 0 && (
-          <p className="text-[15px]" style={{ color: 'var(--ios-tertiary-label)' }}>
+          <p className="text-[15px]" style={{ color: 'var(--k-outline)' }}>
             Tap words to build the sentence
           </p>
         )}
@@ -68,13 +68,13 @@ export function SentenceOrder({ scrambledWords, correctOrder, onSubmit }: Senten
             key={`selected-${index}`}
             onClick={() => handleRemoveWord(index)}
             disabled={submitted}
-            className="min-h-[44px] rounded-[10px] border px-4 py-2 text-[17px] font-medium
+            className="min-h-[44px] rounded-xl border px-4 py-2 text-[17px] font-medium
               transition-all duration-[350ms] ease-[cubic-bezier(0.25,0.1,0.25,1)]
               active:scale-[0.98] disabled:cursor-default"
             style={{
-              background: 'var(--ios-bg-grouped-secondary)',
-              borderColor: 'var(--ios-blue)',
-              color: 'var(--ios-label)',
+              background: 'var(--k-surface-container-lowest)',
+              borderColor: 'var(--k-primary)',
+              color: 'var(--k-on-surface)',
               boxShadow: '0 1px 3px rgba(0,0,0,0.08)',
             }}
           >
@@ -90,13 +90,13 @@ export function SentenceOrder({ scrambledWords, correctOrder, onSubmit }: Senten
             key={`available-${index}`}
             onClick={() => handleSelectWord(index)}
             disabled={submitted}
-            className="min-h-[44px] rounded-[10px] border px-4 py-2 text-[17px] font-medium
+            className="min-h-[44px] rounded-xl border px-4 py-2 text-[17px] font-medium
               transition-all duration-[350ms] ease-[cubic-bezier(0.25,0.1,0.25,1)]
               active:scale-[0.98] disabled:cursor-default"
             style={{
-              background: 'var(--ios-bg-grouped-secondary)',
+              background: 'var(--k-surface-container-lowest)',
               borderColor: 'transparent',
-              color: 'var(--ios-label)',
+              color: 'var(--k-on-surface)',
               boxShadow: '0 1px 3px rgba(0,0,0,0.08)',
             }}
           >
@@ -107,8 +107,8 @@ export function SentenceOrder({ scrambledWords, correctOrder, onSubmit }: Senten
 
       {/* Show correct order on wrong answer */}
       {submitted && !isCorrect && (
-        <p className="text-[15px] text-center" style={{ color: 'var(--ios-secondary-label)' }}>
-          Correct order: <span className="font-semibold" style={{ color: 'var(--ios-label)' }}>{correctOrder.join('')}</span>
+        <p className="text-[15px] text-center" style={{ color: 'var(--k-secondary)' }}>
+          Correct order: <span className="font-semibold" style={{ color: 'var(--k-on-surface)' }}>{correctOrder.join('')}</span>
         </p>
       )}
 
@@ -117,10 +117,10 @@ export function SentenceOrder({ scrambledWords, correctOrder, onSubmit }: Senten
         <button
           onClick={handleCheck}
           disabled={selected.length === 0}
-          className="w-full min-h-[44px] rounded-[10px] px-5 py-3 text-[17px] font-semibold text-white
+          className="w-full min-h-[44px] rounded-xl px-5 py-3 text-[17px] font-semibold text-white
             transition-all duration-[350ms] ease-[cubic-bezier(0.25,0.1,0.25,1)]
             active:scale-[0.98] disabled:opacity-40"
-          style={{ background: 'var(--ios-blue)' }}
+          style={{ background: 'var(--k-primary)' }}
         >
           Check
         </button>

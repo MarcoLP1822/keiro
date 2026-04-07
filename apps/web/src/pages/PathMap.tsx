@@ -4,33 +4,34 @@ import { getAllModules } from '@keiro/content';
 import { getModuleStatus, getCurrentModule } from '@keiro/engine';
 import type { Module, ModuleProgress } from '@keiro/types';
 import { TopBar } from '../components/layout/TopBar';
-import { PageContainer } from '../components/layout/PageContainer';
+import { BottomNav } from '../components/layout/BottomNav';
 import { Modal } from '../components/common/Modal';
+import { ProgressBar } from '../components/common/ProgressBar';
 import { ModuleCard } from '../components/module/ModuleCard';
 import { useProgress } from '../hooks/useProgress';
 
-// Ordered level display names
 const LEVEL_ORDER = ['beginner', 'n5', 'n4', 'n3'];
 const LEVEL_LABELS: Record<string, string> = {
-  beginner: 'BEGINNER',
-  n5: 'N5',
-  n4: 'N4',
-  n3: 'N3',
+  beginner: 'The Basics',
+  n5: 'Foundations',
+  n4: 'Building Blocks',
+  n3: 'Intermediate',
+};
+const LEVEL_ICONS: Record<string, string> = {
+  beginner: 'language_japanese_kana',
+  n5: 'auto_stories',
+  n4: 'menu_book',
+  n3: 'school',
 };
 
-// Ordered type display names within a level
 const TYPE_ORDER = ['hiragana', 'katakana', 'vocabulary', 'kanji', 'grammar', 'reading'];
 const TYPE_LABELS: Record<string, string> = {
-  hiragana: 'Hiragana',
-  katakana: 'Katakana',
-  vocabulary: 'Vocabulary',
-  kanji: 'Kanji',
-  grammar: 'Grammar',
-  reading: 'Reading',
+  hiragana: 'Hiragana', katakana: 'Katakana', vocabulary: 'Vocabulary',
+  kanji: 'Kanji', grammar: 'Grammar', reading: 'Reading',
 };
 
 interface TypeSection {
-  sectionId: string; // e.g. "n5-vocabulary"
+  sectionId: string;
   level: string;
   type: string;
   label: string;
@@ -45,14 +46,10 @@ interface LevelGroup {
 
 function buildGroups(modules: Module[]): LevelGroup[] {
   const levelMap = new Map<string, Map<string, Module[]>>();
-
   for (const mod of modules) {
     const level = mod.level ?? 'beginner';
     let type: string = mod.type ?? 'vocabulary';
-    // Split kana into hiragana/katakana based on module id
-    if (type === 'kana') {
-      type = mod.id.startsWith('katakana') ? 'katakana' : 'hiragana';
-    }
+    if (type === 'kana') type = mod.id.startsWith('katakana') ? 'katakana' : 'hiragana';
     if (!levelMap.has(level)) levelMap.set(level, new Map());
     const typeMap = levelMap.get(level)!;
     if (!typeMap.has(type)) typeMap.set(type, []);
@@ -63,44 +60,44 @@ function buildGroups(modules: Module[]): LevelGroup[] {
   for (const level of LEVEL_ORDER) {
     const typeMap = levelMap.get(level);
     if (!typeMap) continue;
-
     const sections: TypeSection[] = [];
     for (const type of TYPE_ORDER) {
       const mods = typeMap.get(type);
       if (!mods || mods.length === 0) continue;
-      sections.push({
-        sectionId: `${level}-${type}`,
-        level,
-        type,
-        label: TYPE_LABELS[type] ?? type,
-        modules: mods,
-      });
+      sections.push({ sectionId: `${level}-${type}`, level, type, label: TYPE_LABELS[type] ?? type, modules: mods });
     }
-
     if (sections.length > 0) {
       groups.push({ level, label: LEVEL_LABELS[level] ?? level.toUpperCase(), sections });
     }
   }
-
   return groups;
 }
 
-function ChevronIcon({ open }: { open: boolean }) {
-  return (
-    <svg
-      className="h-4 w-4 shrink-0 transition-transform duration-[350ms] ease-[cubic-bezier(0.25,0.1,0.25,1)]"
-      style={{
-        transform: open ? 'rotate(90deg)' : 'rotate(0deg)',
-        color: 'var(--ios-gray3)',
-      }}
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={2.5}
-      stroke="currentColor"
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-    </svg>
-  );
+type LevelStatus = 'completed' | 'active' | 'locked';
+
+function getLevelStatus(
+  group: LevelGroup,
+  allModules: Module[],
+  progressMap: Map<string, ModuleProgress>,
+): LevelStatus {
+  const allMods = group.sections.flatMap((s) => s.modules);
+  const allPassed = allMods.every((m) => getModuleStatus(m.id, allModules, progressMap) === 'passed');
+  if (allPassed) return 'completed';
+  const anyStarted = allMods.some((m) => {
+    const s = getModuleStatus(m.id, allModules, progressMap);
+    return s === 'in_progress' || s === 'available' || s === 'passed';
+  });
+  return anyStarted ? 'active' : 'locked';
+}
+
+function getLevelPercent(
+  group: LevelGroup,
+  allModules: Module[],
+  progressMap: Map<string, ModuleProgress>,
+): number {
+  const allMods = group.sections.flatMap((s) => s.modules);
+  const passed = allMods.filter((m) => getModuleStatus(m.id, allModules, progressMap) === 'passed').length;
+  return allMods.length > 0 ? Math.round((passed / allMods.length) * 100) : 0;
 }
 
 interface SectionPanelProps {
@@ -114,97 +111,38 @@ interface SectionPanelProps {
 }
 
 function SectionPanel({
-  section,
-  isOpen,
-  onToggle,
-  allModules,
-  progressMap,
-  onModuleClick,
-  getProgress,
+  section, isOpen, onToggle, allModules, progressMap,
 }: SectionPanelProps) {
   const passedCount = section.modules.filter(
     (m) => getModuleStatus(m.id, allModules, progressMap) === 'passed'
   ).length;
   const totalCount = section.modules.length;
-  const allPassed = passedCount === totalCount;
 
   return (
     <div
-      className="overflow-hidden rounded-[10px]"
-      style={{ background: 'var(--ios-bg-grouped-secondary)' }}
+      className="flex items-center justify-between p-3 rounded-lg active:opacity-80 transition-opacity cursor-pointer"
+      style={{ background: 'var(--k-surface-container-low)' }}
+      onClick={onToggle}
+      role="button"
+      aria-expanded={isOpen}
     >
-      {/* Section header — tap to toggle */}
-      <button
-        onClick={onToggle}
-        className="flex w-full min-h-[44px] items-center px-4 py-3 text-left active:bg-black/5"
-        aria-expanded={isOpen}
-        aria-label={`${section.label}, ${totalCount} modules, ${passedCount} passed`}
-      >
-        <ChevronIcon open={isOpen} />
-
-        <div className="ml-3 flex-1 min-w-0">
-          <span
-            className="text-[17px] font-medium"
-            style={{ color: 'var(--ios-label)' }}
-          >
-            {section.label}
-          </span>
-          <span
-            className="ml-1.5 text-[15px]"
-            style={{ color: 'var(--ios-secondary-label)' }}
-          >
-            ({totalCount})
-          </span>
-        </div>
-
-        <div className="ml-2 shrink-0 flex items-center gap-1.5">
-          {allPassed ? (
-            <span
-              className="text-[17px] font-semibold"
-              style={{ color: 'var(--ios-green)' }}
-              aria-label="All passed"
-            >
-              ✓
-            </span>
-          ) : (
-            <span
-              className="text-[15px]"
-              style={{ color: 'var(--ios-secondary-label)' }}
-            >
-              {passedCount}/{totalCount}
-            </span>
-          )}
-        </div>
-      </button>
-
-      {/* Animated module list */}
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateRows: isOpen ? '1fr' : '0fr',
-          transition: 'grid-template-rows 350ms cubic-bezier(0.25, 0.1, 0.25, 1)',
-        }}
-      >
-        <div className="overflow-hidden">
-          <div
-            className="h-px"
-            style={{ background: 'var(--ios-separator)' }}
-          />
-          {section.modules.map((module) => {
-            const status = getModuleStatus(module.id, allModules, progressMap);
-            const progress = getProgress(module.id);
-            return (
-              <ModuleCard
-                key={module.id}
-                module={module}
-                status={status}
-                score={progress?.score}
-                onClick={() => onModuleClick(module)}
-              />
-            );
-          })}
-        </div>
+      <div className="flex items-center gap-3">
+        <span
+          className="material-symbols-outlined text-xl"
+          style={{ color: passedCount === totalCount ? 'var(--k-correct-secondary)' : 'var(--k-primary)' }}
+        >
+          {passedCount === totalCount ? 'check_circle' : 'radio_button_checked'}
+        </span>
+        <span className="text-sm font-medium" style={{ color: 'var(--k-on-surface)' }}>
+          {section.label}
+        </span>
       </div>
+      <span
+        className="text-[10px] font-bold"
+        style={{ color: 'var(--k-secondary)' }}
+      >
+        {passedCount}/{totalCount}
+      </span>
     </div>
   );
 }
@@ -213,6 +151,7 @@ export function PathMap() {
   const navigate = useNavigate();
   const { allProgress, getProgress } = useProgress();
   const [testOutModule, setTestOutModule] = useState<Module | null>(null);
+  const [expandedLevel, setExpandedLevel] = useState<string | null>(null);
 
   const allModules = useMemo(
     () => getAllModules().sort((a, b) => a.order - b.order),
@@ -222,50 +161,31 @@ export function PathMap() {
     () => new Map(allProgress.map((p) => [p.moduleId, p])),
     [allProgress],
   );
-
   const groups = useMemo(() => buildGroups(allModules), [allModules]);
 
-  // Find which section contains the current (first non-passed available) module
   const currentModule = useMemo(
     () => getCurrentModule(allModules, progressMap),
     [allModules, progressMap],
   );
 
-  const defaultExpandedSectionId = useMemo(() => {
-    if (!currentModule) return null;
-    let type: string = currentModule.type;
-    if (type === 'kana') {
-      type = currentModule.id.startsWith('katakana') ? 'katakana' : 'hiragana';
+  // Auto-expand the active level
+  const activeLevelId = useMemo(() => {
+    for (const g of groups) {
+      if (getLevelStatus(g, allModules, progressMap) === 'active') return g.level;
     }
-    return `${currentModule.level ?? 'beginner'}-${type}`;
-  }, [currentModule]);
+    return groups[0]?.level ?? null;
+  }, [groups, allModules, progressMap]);
 
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
-  const prevExpandedId = useRef<string | null>(null);
-
-  // When current module changes (e.g. progress data loads), expand its section
+  const prevActiveLevel = useRef<string | null>(null);
   useEffect(() => {
-    if (defaultExpandedSectionId && defaultExpandedSectionId !== prevExpandedId.current) {
-      prevExpandedId.current = defaultExpandedSectionId;
-      setExpandedSections(new Set([defaultExpandedSectionId]));
+    if (activeLevelId && activeLevelId !== prevActiveLevel.current) {
+      prevActiveLevel.current = activeLevelId;
+      setExpandedLevel(activeLevelId);
     }
-  }, [defaultExpandedSectionId]);
-
-  function toggleSection(sectionId: string) {
-    setExpandedSections((prev) => {
-      const next = new Set(prev);
-      if (next.has(sectionId)) {
-        next.delete(sectionId);
-      } else {
-        next.add(sectionId);
-      }
-      return next;
-    });
-  }
+  }, [activeLevelId]);
 
   function handleModuleClick(module: Module) {
     const status = getModuleStatus(module.id, allModules, progressMap);
-
     if (status === 'passed') {
       navigate(`/study/${module.id}/exercises?mode=review`);
     } else if (status === 'available' || status === 'in_progress') {
@@ -284,49 +204,239 @@ export function PathMap() {
 
   return (
     <>
-      <TopBar title="Learning Path" onBack={() => navigate('/')} />
-      <PageContainer>
-        {groups.map((group) => (
-          <div key={group.level} className="mb-8">
-            {/* Level header — skip for beginner (Hiragana/Katakana are self-explanatory) */}
-            {group.level !== 'beginner' && (
-              <p
-                className="sticky top-[44px] z-10 mb-2 px-4 py-1 text-[13px] font-normal uppercase tracking-wide"
-                style={{
-                  color: 'var(--ios-secondary-label)',
-                  background: 'var(--ios-bg-grouped)',
-                }}
-              >
-                {group.label}
-              </p>
-            )}
+      <TopBar title="Keiro" onBack={() => navigate('/')} rightAction={
+        <span className="font-bold text-lg tracking-tight" style={{ color: 'var(--k-primary)' }}>
+          {allProgress.filter((p) => p.status === 'passed').length}/{allModules.length}
+        </span>
+      } />
 
-            {/* Type sections */}
-            <div className="space-y-3">
-              {group.sections.map((section) => (
-                <SectionPanel
-                  key={section.sectionId}
-                  section={section}
-                  isOpen={expandedSections.has(section.sectionId)}
-                  onToggle={() => toggleSection(section.sectionId)}
-                  allModules={allModules}
-                  progressMap={progressMap}
-                  onModuleClick={handleModuleClick}
-                  getProgress={getProgress}
-                />
-              ))}
+      <main className="pt-24 pb-32 px-6 max-w-2xl mx-auto min-h-screen">
+        {/* Hero */}
+        <div className="mb-12 relative">
+          <div className="absolute -left-4 top-0 w-1 h-12" style={{ background: 'var(--k-primary)' }} />
+          <h2 className="font-headline text-3xl font-bold" style={{ color: 'var(--k-primary)' }}>
+            学習の道
+          </h2>
+          <p
+            className="uppercase tracking-widest text-xs mt-1"
+            style={{ color: 'var(--k-secondary)' }}
+          >
+            Learning Path — The Scholar's Journey
+          </p>
+        </div>
+
+        {/* Vertical Timeline */}
+        <div className="relative">
+          {/* Dashed line */}
+          <div
+            className="absolute left-[23px] top-8 bottom-8 w-[2px] opacity-30"
+            style={{
+              backgroundImage: 'linear-gradient(to bottom, var(--k-secondary) 33%, transparent 0%)',
+              backgroundSize: '2px 12px',
+              backgroundRepeat: 'repeat-y',
+            }}
+          />
+
+          {groups.map((group) => {
+            const status = getLevelStatus(group, allModules, progressMap);
+            const percent = getLevelPercent(group, allModules, progressMap);
+            const isExpanded = expandedLevel === group.level;
+            const isLocked = status === 'locked';
+
+            return (
+              <section
+                key={group.level}
+                className={`relative mb-8 ${isLocked ? 'opacity-60 grayscale' : ''}`}
+              >
+                <div className="flex gap-6">
+                  {/* Node */}
+                  <div className="relative z-10">
+                    {status === 'completed' ? (
+                      <div
+                        className="w-12 h-12 rounded-full flex items-center justify-center shadow-lg"
+                        style={{ background: 'var(--k-primary)', color: 'var(--k-on-primary)' }}
+                      >
+                        <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
+                          check_circle
+                        </span>
+                      </div>
+                    ) : status === 'active' ? (
+                      <div
+                        className="w-12 h-12 rounded-full flex items-center justify-center shadow-sm"
+                        style={{
+                          background: 'var(--k-surface-container-lowest)',
+                          border: '4px solid var(--k-primary)',
+                          color: 'var(--k-primary)',
+                        }}
+                      >
+                        <span className="material-symbols-outlined">
+                          {LEVEL_ICONS[group.level] ?? 'school'}
+                        </span>
+                      </div>
+                    ) : (
+                      <div
+                        className="w-12 h-12 rounded-full flex items-center justify-center"
+                        style={{ background: 'var(--k-surface-container-high)', color: 'var(--k-secondary)' }}
+                      >
+                        <span className="material-symbols-outlined">lock</span>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Card */}
+                  <div
+                    className="flex-1 rounded-xl p-6 transition-shadow"
+                    style={{
+                      background: 'var(--k-surface-container-lowest)',
+                      borderLeft: status === 'active' ? '4px solid var(--k-primary)' : undefined,
+                      border: status !== 'active'
+                        ? '1px solid color-mix(in srgb, var(--k-outline-variant) 10%, transparent)'
+                        : undefined,
+                      boxShadow: status === 'active'
+                        ? '0 8px 30px rgba(0,0,0,0.04)'
+                        : undefined,
+                    }}
+                  >
+                    <button
+                      className="w-full text-left"
+                      onClick={() => setExpandedLevel(isExpanded ? null : group.level)}
+                      aria-expanded={isExpanded}
+                    >
+                      <div className="flex justify-between items-start mb-2">
+                        <div>
+                          <span
+                            className="text-xs font-bold uppercase tracking-tighter mb-1 block"
+                            style={{ color: status === 'active' ? 'var(--k-primary)' : 'var(--k-secondary)' }}
+                          >
+                            {group.level === 'beginner' ? 'Level 1' : `Level ${LEVEL_ORDER.indexOf(group.level) + 1}`}
+                            {status === 'active' && ' — Active'}
+                          </span>
+                          <h3 className="font-headline text-xl" style={{ color: isLocked ? 'var(--k-secondary)' : 'var(--k-primary)' }}>
+                            {group.label}
+                          </h3>
+                        </div>
+                        <span className="material-symbols-outlined" style={{ color: isLocked ? 'var(--k-secondary)' : 'var(--k-primary)' }}>
+                          {isLocked ? 'lock' : isExpanded ? 'expand_less' : 'expand_more'}
+                        </span>
+                      </div>
+                    </button>
+
+                    {/* Type chips */}
+                    {!isLocked && (
+                      <div className="flex gap-2 flex-wrap mb-4">
+                        {group.sections.map((s) => (
+                          <span
+                            key={s.sectionId}
+                            className="px-3 py-1 text-[11px] font-bold rounded-md"
+                            style={{
+                              background: 'var(--k-secondary-container)',
+                              color: 'var(--k-on-secondary-container)',
+                            }}
+                          >
+                            {s.label.toUpperCase()}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+
+                    {/* Expanded: module list */}
+                    {isExpanded && !isLocked && (
+                      <div className="space-y-3 mb-6">
+                        {group.sections.map((section) => (
+                          <div key={section.sectionId}>
+                            <SectionPanel
+                              section={section}
+                              isOpen={false}
+                              onToggle={() => {}}
+                              allModules={allModules}
+                              progressMap={progressMap}
+                              onModuleClick={handleModuleClick}
+                              getProgress={getProgress}
+                            />
+                            {/* Module cards under each section */}
+                            <div className="mt-1 space-y-1">
+                              {section.modules.map((module) => {
+                                const moduleStatus = getModuleStatus(module.id, allModules, progressMap);
+                                const progress = getProgress(module.id);
+                                return (
+                                  <ModuleCard
+                                    key={module.id}
+                                    module={module}
+                                    status={moduleStatus}
+                                    score={progress?.score}
+                                    onClick={() => handleModuleClick(module)}
+                                  />
+                                );
+                              })}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {/* Progress bar */}
+                    <div className="flex items-center gap-3">
+                      <div className="flex-1">
+                        <ProgressBar value={percent} />
+                      </div>
+                      <span
+                        className="text-[11px] font-bold"
+                        style={{ color: isLocked ? 'var(--k-secondary)' : 'var(--k-primary)' }}
+                      >
+                        {isLocked ? 'Locked' : `${percent}%`}
+                      </span>
+                    </div>
+
+                    {/* Continue button for active level */}
+                    {status === 'active' && currentModule && isExpanded && (
+                      <button
+                        onClick={() => navigate(`/study/${currentModule.id}/intro`)}
+                        className="mt-6 w-full py-3 rounded-full bg-silk-gradient text-white font-bold text-sm tracking-wide active:scale-95 transition-transform"
+                      >
+                        CONTINUE PATH
+                      </button>
+                    )}
+                  </div>
+                </div>
+              </section>
+            );
+          })}
+
+          {/* Zen Quote Card */}
+          <div
+            className="mt-12 rounded-xl p-8 relative overflow-hidden"
+            style={{ background: 'var(--k-tertiary-container)' }}
+          >
+            <div className="relative z-10">
+              <span
+                className="text-[10px] font-bold uppercase tracking-[0.2em] mb-4 block"
+                style={{ color: 'color-mix(in srgb, var(--k-tertiary-fixed-dim) 60%, transparent)' }}
+              >
+                Daily Meditation
+              </span>
+              <h4 className="font-headline text-4xl leading-tight mb-4" style={{ color: 'var(--k-on-primary)' }}>
+                <ruby>静<rt>せい</rt></ruby><ruby>寂<rt>じゃく</rt></ruby>
+              </h4>
+              <p
+                className="text-sm max-w-[200px] italic"
+                style={{ color: 'var(--k-tertiary-fixed-dim)' }}
+              >
+                "Silence is a source of great strength."
+              </p>
+            </div>
+            <div className="absolute right-[-20px] bottom-[-20px] opacity-10">
+              <span
+                className="material-symbols-outlined text-[120px]"
+                style={{ color: 'var(--k-on-primary)' }}
+              >
+                spa
+              </span>
             </div>
           </div>
-        ))}
+        </div>
+      </main>
 
-        {/* Goal indicator */}
-        <p
-          className="mt-4 mb-8 text-center text-[15px]"
-          style={{ color: 'var(--ios-secondary-label)' }}
-        >
-          🎯 Goal: Read Manga
-        </p>
-      </PageContainer>
+      <BottomNav />
 
       <Modal
         isOpen={testOutModule !== null}

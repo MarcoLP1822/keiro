@@ -2,9 +2,6 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { getAllModules } from '@keiro/content';
-import { PageContainer } from '../components/layout/PageContainer';
-import { PrimaryButton } from '../components/common/PrimaryButton';
-import { SecondaryButton } from '../components/common/SecondaryButton';
 import { Onboarding } from '../components/Onboarding';
 import { db } from '../services/db';
 import { storage } from '../services/storage';
@@ -32,8 +29,6 @@ export function Welcome() {
       attempts: 0,
     });
 
-    // Full page reload ensures Dexie picks up the new data on a fresh query.
-    // Client-side navigate('/') can race with the live query subscription.
     window.location.href = '/';
   }
 
@@ -46,40 +41,114 @@ export function Welcome() {
   }
 
   return (
-    <PageContainer>
-      <div className="flex min-h-[80vh] flex-col items-center justify-center text-center px-4">
-        {/* Decorative Japanese character */}
-        <span
-          className="text-[72px] leading-none mb-6"
-          style={{ color: 'var(--ios-tertiary-label)' }}
-          aria-hidden="true"
-        >
-          道
+    <div className="min-h-screen flex flex-col" style={{ background: 'var(--k-surface)' }}>
+      {/* Header */}
+      <header
+        className="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16"
+        style={{
+          background: 'color-mix(in srgb, var(--k-surface) 90%, transparent)',
+          backdropFilter: 'blur(20px)',
+          WebkitBackdropFilter: 'blur(20px)',
+        }}
+      >
+        <span className="font-headline text-lg font-bold tracking-tight" style={{ color: 'var(--k-primary)' }}>
+          Keiro
         </span>
+      </header>
 
-        <h1
-          className="text-[34px] font-normal tracking-tight"
-          style={{ color: 'var(--ios-label)' }}
-          data-testid="welcome-title"
-        >
-          Let's learn Japanese
-        </h1>
-        <p
-          className="mt-2 text-[17px]"
-          style={{ color: 'var(--ios-secondary-label)' }}
-        >
-          From zero to reading manga
-        </p>
+      <main className="flex-1 flex flex-col pt-16 pb-12 px-6 max-w-lg mx-auto w-full">
+        {/* Hero Section */}
+        <div className="relative mt-8 mb-12">
+          {/* Zen circle */}
+          <div
+            className="aspect-[4/5] w-full rounded-full overflow-hidden flex items-center justify-center"
+            style={{
+              background: 'var(--k-surface-container)',
+              border: '12px solid var(--k-surface-container-lowest)',
+            }}
+          >
+            <span
+              className="font-headline text-[120px] font-black opacity-10"
+              style={{ color: 'var(--k-primary)' }}
+            >
+              道
+            </span>
+          </div>
 
-        <div className="mt-12 w-full space-y-4">
-          <PrimaryButton onClick={handleStartFromZero}>
-            I'm starting from zero
-          </PrimaryButton>
-          <SecondaryButton onClick={handleKnowSome}>
-            I already know some Japanese
-          </SecondaryButton>
+          {/* Floating Zen Mark */}
+          <div
+            className="absolute top-8 -right-4 p-6 rounded-xl flex flex-col items-center gap-4 shadow-lg"
+            style={{ background: 'var(--k-primary)', color: 'var(--k-on-primary)' }}
+          >
+            <span className="font-headline text-2xl font-black tracking-[0.2em]" style={{ writingMode: 'vertical-rl' }}>
+              経路
+            </span>
+            <div className="w-px h-12" style={{ background: 'rgba(255,255,255,0.3)' }} />
+            <span className="material-symbols-outlined text-xl">self_improvement</span>
+          </div>
         </div>
-      </div>
-    </PageContainer>
+
+        {/* Typography */}
+        <div className="space-y-6">
+          <h1
+            className="font-headline text-[2.75rem] leading-[1.1] font-black tracking-tight"
+            style={{ color: 'var(--k-primary)' }}
+            data-testid="welcome-title"
+          >
+            Start your <br />Japanese path.
+          </h1>
+          <p className="text-sm max-w-[80%] leading-relaxed" style={{ color: 'var(--k-secondary)' }}>
+            A mindful approach to mastering Hiragana, Katakana, and Kanji. Designed for focus, built for retention.
+          </p>
+        </div>
+
+        {/* Spacer */}
+        <div className="flex-1" />
+
+        {/* Actions */}
+        <div className="space-y-4 mt-12">
+          <button
+            onClick={handleStartFromZero}
+            className="w-full h-14 flex items-center justify-center gap-2 bg-silk-gradient text-white rounded-full font-bold text-lg active:scale-[0.98] transition-all shadow-lg"
+          >
+            <span>Start Learning</span>
+            <span className="material-symbols-outlined text-[20px]">arrow_forward</span>
+          </button>
+          <button
+            onClick={handleKnowSome}
+            className="w-full h-12 flex items-center justify-center font-bold text-sm rounded-full transition-colors active:opacity-80"
+            style={{ color: 'var(--k-primary)' }}
+          >
+            I already know some Japanese
+          </button>
+          <button
+            onClick={() => navigate('/login')}
+            className="w-full h-12 flex items-center justify-center text-sm font-medium active:opacity-60"
+            style={{ color: 'var(--k-secondary)' }}
+          >
+            I already have an account
+          </button>
+        </div>
+
+        {/* Quality Indicators */}
+        <div className="mt-10 flex justify-center items-center gap-8 opacity-40 grayscale">
+          <div className="flex items-center gap-1.5">
+            <span className="material-symbols-outlined text-[18px]">verified</span>
+            <span className="text-[11px] font-bold uppercase tracking-widest">Mastery</span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <span className="material-symbols-outlined text-[18px]">history_edu</span>
+            <span className="text-[11px] font-bold uppercase tracking-widest">Calligraphy</span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <span className="material-symbols-outlined text-[18px]">psychology</span>
+            <span className="text-[11px] font-bold uppercase tracking-widest">Retention</span>
+          </div>
+        </div>
+      </main>
+
+      {/* Bottom bar */}
+      <div className="h-2 w-full" style={{ background: 'var(--k-surface-container-low)' }} />
+    </div>
   );
 }
