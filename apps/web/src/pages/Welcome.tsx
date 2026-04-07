@@ -57,35 +57,15 @@ export function Welcome() {
       </header>
 
       <main className="pt-24 pb-12 px-6 max-w-lg mx-auto w-full">
-        {/* Hero Section */}
-        <div className="relative mt-8 mb-8">
-          {/* Zen circle */}
-          <div
-            className="aspect-square w-3/4 mx-auto rounded-full overflow-hidden flex items-center justify-center"
-            style={{
-              background: 'var(--k-surface-container)',
-              border: '12px solid var(--k-surface-container-lowest)',
-            }}
+        {/* Decorative kanji */}
+        <div className="mt-16 mb-8 flex justify-center">
+          <span
+            className="font-headline text-[96px] font-black opacity-[0.07] leading-none select-none"
+            style={{ color: 'var(--k-primary)' }}
+            aria-hidden="true"
           >
-            <span
-              className="font-headline text-[120px] font-black opacity-10"
-              style={{ color: 'var(--k-primary)' }}
-            >
-              道
-            </span>
-          </div>
-
-          {/* Floating Zen Mark */}
-          <div
-            className="absolute top-8 -right-4 p-6 rounded-xl flex flex-col items-center gap-4 shadow-lg"
-            style={{ background: 'var(--k-primary)', color: 'var(--k-on-primary)' }}
-          >
-            <span className="font-headline text-2xl font-black tracking-[0.2em]" style={{ writingMode: 'vertical-rl' }}>
-              経路
-            </span>
-            <div className="w-px h-12" style={{ background: 'rgba(255,255,255,0.3)' }} />
-            <span className="material-symbols-outlined text-xl">self_improvement</span>
-          </div>
+            経路
+          </span>
         </div>
 
         {/* Typography */}
@@ -127,25 +107,7 @@ export function Welcome() {
           </button>
         </div>
 
-        {/* Quality Indicators */}
-        <div className="mt-10 flex justify-center items-center gap-8 opacity-40 grayscale">
-          <div className="flex items-center gap-1.5">
-            <span className="material-symbols-outlined text-[18px]">verified</span>
-            <span className="text-[11px] font-bold uppercase tracking-widest">Mastery</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <span className="material-symbols-outlined text-[18px]">history_edu</span>
-            <span className="text-[11px] font-bold uppercase tracking-widest">Calligraphy</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <span className="material-symbols-outlined text-[18px]">psychology</span>
-            <span className="text-[11px] font-bold uppercase tracking-widest">Retention</span>
-          </div>
-        </div>
       </main>
-
-      {/* Bottom bar */}
-      <div className="h-2 w-full" style={{ background: 'var(--k-surface-container-low)' }} />
     </div>
   );
 }
