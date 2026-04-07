@@ -108,7 +108,7 @@ export function KanaChart() {
 
   return (
     <>
-      <main className="pb-32">
+      <main className="pb-32 max-w-2xl mx-auto">
         <div className="px-6 pt-8">
           <PageHeader titleJp="五十音図" subtitle="Kana Chart — tap any character to hear it" />
         </div>
