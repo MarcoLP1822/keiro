@@ -77,31 +77,35 @@ function AuthHandler({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (!supabase) return;
 
-    // Supabase recovery/auth links put tokens in the URL hash.
-    // Let Supabase client detect and exchange them before we proceed.
     const hashParams = new URLSearchParams(window.location.hash.replace('#', '?'));
     const hasAuthTokens = hashParams.has('access_token');
 
-    if (hasAuthTokens) {
-      // Supabase auto-detects hash tokens via detectSessionInUrl: true.
-      // Just wait for the session to be established, then clean the URL.
-      supabase.auth.getSession().then(({ data: { session } }) => {
-        if (session) storage.setUserId(session.user.id);
+    // Listen for auth state changes (includes token exchange from URL hash)
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      storage.setUserId(session?.user.id ?? null);
+
+      // Once the recovery/signup token is exchanged, clean the URL and mark ready
+      if (hasAuthTokens && !authReady) {
         window.history.replaceState({}, '', window.location.pathname);
-        setAuthReady(true);
-      }).catch(() => setAuthReady(true));
-    } else {
+      }
+      setAuthReady(true);
+    });
+
+    // If no hash tokens, just check existing session
+    if (!hasAuthTokens) {
       supabase.auth.getSession().then(({ data: { session } }) => {
         if (session) storage.setUserId(session.user.id);
         setAuthReady(true);
       }).catch(() => setAuthReady(true));
     }
 
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      storage.setUserId(session?.user.id ?? null);
-    });
+    // Safety timeout: don't block forever if token exchange fails
+    const timeout = hasAuthTokens ? setTimeout(() => setAuthReady(true), 5000) : undefined;
 
-    return () => subscription.unsubscribe();
+    return () => {
+      subscription.unsubscribe();
+      if (timeout) clearTimeout(timeout);
+    };
   }, []);
 
   if (!authReady) return <LoadingPage />;
