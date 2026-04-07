@@ -337,11 +337,6 @@ export function Settings() {
           </button>
         </section>
 
-        {/* Signature */}
-        <div className="py-12 flex flex-col items-center opacity-40">
-          <div className="w-12 h-1 mb-4 rounded-full" style={{ background: 'var(--k-primary)' }} />
-          <p className="font-headline text-xs tracking-[0.4em] uppercase">The Mindful Scholar</p>
-        </div>
       </main>
 
       <BottomNav />
