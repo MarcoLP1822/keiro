@@ -33,7 +33,7 @@ export function StudyIntro() {
   const icon = TYPE_ICONS[module.type] ?? 'school';
   const estimatedMinutes = Math.max(5, Math.round(module.items.length * 1));
 
-  const previewItems = module.items.slice(0, 3).map((item: unknown) => {
+  const previewItems = module.items.slice(0, 5).map((item: unknown) => {
     const obj = item as Record<string, string>;
     return obj.character ?? obj.kanji ?? obj.word ?? obj.id ?? '';
   });
