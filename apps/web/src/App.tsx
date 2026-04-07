@@ -1,6 +1,7 @@
 import { useState, useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router';
 import { useLiveQuery } from 'dexie-react-hooks';
+import { Analytics } from '@vercel/analytics/react';
 import { db } from './services/db';
 import { supabase } from './services/supabase';
 import { storage } from './services/storage';
@@ -128,6 +129,7 @@ export function App() {
         <BrowserRouter>
           <AppRoutes />
         </BrowserRouter>
+        <Analytics />
       </AuthHandler>
     </ErrorBoundary>
   );
