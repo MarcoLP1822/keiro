@@ -217,73 +217,29 @@ export function ModuleComplete() {
           <div className="absolute bottom-20 right-12 w-4 h-4 rounded-full" style={{ background: 'color-mix(in srgb, var(--k-secondary-container) 60%, transparent)' }} />
         </div>
 
-        {/* Bento Stats */}
-        <div className="grid grid-cols-3 gap-4 w-full mb-12">
-          {/* Score */}
-          <div
-            className="p-6 rounded-xl flex flex-col justify-between min-h-[140px]"
-            style={{
-              background: 'var(--k-surface-container-lowest)',
-              boxShadow: '0 4px 20px rgba(12, 46, 46, 0.04)',
-            }}
-          >
-            <span className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: 'var(--k-secondary)' }}>
-              Score
-            </span>
-            <div className="flex items-baseline gap-1">
-              <span className="text-4xl font-bold" style={{ color: 'var(--k-primary)' }}>
-                {score.correctAnswers}
+        {/* Stats */}
+        <div className="grid grid-cols-3 gap-3 w-full mb-12">
+          {[
+            { label: 'Score', value: `${score.correctAnswers}/${score.totalQuestions}` },
+            { label: 'Items', value: String(score.totalQuestions) },
+            { label: 'Streak', value: `${streak} ${streak === 1 ? 'day' : 'days'}` },
+          ].map((stat) => (
+            <div
+              key={stat.label}
+              className="p-4 rounded-xl flex flex-col items-center justify-center text-center gap-2"
+              style={{
+                background: 'var(--k-surface-container-lowest)',
+                boxShadow: '0 4px 20px rgba(12, 46, 46, 0.04)',
+              }}
+            >
+              <span className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: 'var(--k-secondary)' }}>
+                {stat.label}
               </span>
-              <span className="font-medium" style={{ color: 'var(--k-secondary)' }}>
-                / {score.totalQuestions}
+              <span className="text-2xl font-bold" style={{ color: 'var(--k-primary)' }}>
+                {stat.value}
               </span>
             </div>
-            <div className="w-full h-1 rounded-full mt-4 overflow-hidden" style={{ background: 'var(--k-secondary-container)' }}>
-              <div
-                className="h-full rounded-full"
-                style={{
-                  background: 'var(--k-primary)',
-                  width: `${score.score}%`,
-                }}
-              />
-            </div>
-          </div>
-
-          {/* Items */}
-          <div
-            className="p-6 rounded-xl flex flex-col justify-between min-h-[140px]"
-            style={{
-              background: 'var(--k-surface-container-lowest)',
-              boxShadow: '0 4px 20px rgba(12, 46, 46, 0.04)',
-            }}
-          >
-            <span className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: 'var(--k-secondary)' }}>
-              Items
-            </span>
-            <div className="text-4xl font-bold" style={{ color: 'var(--k-primary)' }}>
-              {score.totalQuestions}
-            </div>
-            <p className="text-xs truncate" style={{ color: 'var(--k-secondary)' }}>
-              {mod.name}
-            </p>
-          </div>
-
-          {/* Streak */}
-          <div
-            className="p-6 rounded-xl flex flex-col justify-between min-h-[140px]"
-            style={{
-              background: 'var(--k-surface-container-lowest)',
-              boxShadow: '0 4px 20px rgba(12, 46, 46, 0.04)',
-            }}
-          >
-            <span className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: 'var(--k-secondary)' }}>
-              Streak
-            </span>
-            <div className="text-4xl font-bold" style={{ color: 'var(--k-primary)' }}>{streak}</div>
-            <p className="text-xs" style={{ color: 'var(--k-secondary)' }}>
-              {streak === 1 ? 'day' : 'days'}
-            </p>
-          </div>
+          ))}
         </div>
 
         {/* Actions */}
