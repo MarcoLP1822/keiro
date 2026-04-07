@@ -384,37 +384,6 @@ export function PathMap() {
             );
           })}
 
-          {/* Zen Quote Card */}
-          <div
-            className="mt-12 rounded-xl p-8 relative overflow-hidden"
-            style={{ background: 'var(--k-tertiary-container)' }}
-          >
-            <div className="relative z-10">
-              <span
-                className="text-[10px] font-bold uppercase tracking-[0.2em] mb-4 block"
-                style={{ color: 'color-mix(in srgb, var(--k-tertiary-fixed-dim) 60%, transparent)' }}
-              >
-                Daily Meditation
-              </span>
-              <h4 className="font-headline text-4xl leading-tight mb-4" style={{ color: 'var(--k-on-primary)' }}>
-                <ruby>静<rt>せい</rt></ruby><ruby>寂<rt>じゃく</rt></ruby>
-              </h4>
-              <p
-                className="text-sm max-w-[200px] italic"
-                style={{ color: 'var(--k-tertiary-fixed-dim)' }}
-              >
-                "Silence is a source of great strength."
-              </p>
-            </div>
-            <div className="absolute right-[-20px] bottom-[-20px] opacity-10">
-              <span
-                className="material-symbols-outlined text-[120px]"
-                style={{ color: 'var(--k-on-primary)' }}
-              >
-                spa
-              </span>
-            </div>
-          </div>
         </div>
       </main>
 
