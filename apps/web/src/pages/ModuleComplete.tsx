@@ -212,9 +212,6 @@ export function ModuleComplete() {
               {passed ? "You've reached a moment of clarity." : 'You need 80% to pass. Try again!'}
             </p>
           </div>
-          {/* Decorative particles */}
-          <div className="absolute top-10 left-10 w-3 h-3 rounded-full" style={{ background: 'color-mix(in srgb, var(--k-primary) 20%, transparent)' }} />
-          <div className="absolute bottom-20 right-12 w-4 h-4 rounded-full" style={{ background: 'color-mix(in srgb, var(--k-secondary-container) 60%, transparent)' }} />
         </div>
 
         {/* Stats */}
