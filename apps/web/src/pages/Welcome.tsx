@@ -41,7 +41,7 @@ export function Welcome() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ background: 'var(--k-surface)' }}>
+    <div className="min-h-screen" style={{ background: 'var(--k-surface)' }}>
       {/* Header */}
       <header
         className="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16"
@@ -56,12 +56,12 @@ export function Welcome() {
         </span>
       </header>
 
-      <main className="flex-1 flex flex-col pt-16 pb-12 px-6 max-w-lg mx-auto w-full">
+      <main className="pt-24 pb-12 px-6 max-w-lg mx-auto w-full">
         {/* Hero Section */}
-        <div className="relative mt-8 mb-12">
+        <div className="relative mt-8 mb-8">
           {/* Zen circle */}
           <div
-            className="aspect-[4/5] w-full rounded-full overflow-hidden flex items-center justify-center"
+            className="aspect-square w-3/4 mx-auto rounded-full overflow-hidden flex items-center justify-center"
             style={{
               background: 'var(--k-surface-container)',
               border: '12px solid var(--k-surface-container-lowest)',
@@ -102,11 +102,8 @@ export function Welcome() {
           </p>
         </div>
 
-        {/* Spacer */}
-        <div className="flex-1" />
-
         {/* Actions */}
-        <div className="space-y-4 mt-12">
+        <div className="space-y-4 mt-8">
           <button
             onClick={handleStartFromZero}
             className="w-full h-14 flex items-center justify-center gap-2 bg-silk-gradient text-white rounded-full font-bold text-lg active:scale-[0.98] transition-all shadow-lg"
