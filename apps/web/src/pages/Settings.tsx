@@ -190,7 +190,7 @@ export function Settings() {
               <button
                 onClick={handleSyncNow}
                 disabled={syncing}
-                className="w-full px-4 py-3 rounded-xl flex justify-between items-center transition-colors disabled:opacity-50"
+                className="w-full px-4 py-3 rounded-xl flex justify-between items-center disabled:opacity-50"
                 style={{ background: 'var(--k-surface-container-low)' }}
               >
                 <span className="text-sm" style={{ color: 'var(--k-on-surface)' }}>
