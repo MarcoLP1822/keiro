@@ -157,6 +157,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100dvh;
+  overscroll-behavior-x: none;
 }
 
 /* Serif display text */
