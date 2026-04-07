@@ -263,18 +263,13 @@ export function ModuleComplete() {
               boxShadow: '0 4px 20px rgba(12, 46, 46, 0.04)',
             }}
           >
-            <div className="flex justify-between items-start">
-              <span className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: 'var(--k-secondary)' }}>
-                Items
-              </span>
-              <span className="material-symbols-outlined opacity-40" style={{ color: 'var(--k-primary)' }}>
-                auto_stories
-              </span>
-            </div>
+            <span className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: 'var(--k-secondary)' }}>
+              Items
+            </span>
             <div className="text-4xl font-bold" style={{ color: 'var(--k-primary)' }}>
               {score.totalQuestions}
             </div>
-            <p className="text-xs" style={{ color: 'var(--k-secondary)' }}>
+            <p className="text-xs truncate" style={{ color: 'var(--k-secondary)' }}>
               {mod.name}
             </p>
           </div>
@@ -290,21 +285,10 @@ export function ModuleComplete() {
             <span className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: 'var(--k-secondary)' }}>
               Streak
             </span>
-            <div className="flex items-center gap-3">
-              <span className="text-4xl font-bold" style={{ color: 'var(--k-primary)' }}>{streak}</span>
-              <span className="font-medium" style={{ color: 'var(--k-secondary)' }}>Days</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <span
-                className="material-symbols-outlined text-xl"
-                style={{ color: 'var(--k-incorrect-bg)', fontVariationSettings: "'FILL' 1" }}
-              >
-                local_fire_department
-              </span>
-              <span className="text-xs font-bold" style={{ color: 'var(--k-incorrect-bg)' }}>
-                Maintaining Focus
-              </span>
-            </div>
+            <div className="text-4xl font-bold" style={{ color: 'var(--k-primary)' }}>{streak}</div>
+            <p className="text-xs" style={{ color: 'var(--k-secondary)' }}>
+              {streak === 1 ? 'day' : 'days'}
+            </p>
           </div>
         </div>
 
