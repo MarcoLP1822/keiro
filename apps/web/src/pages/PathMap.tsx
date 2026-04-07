@@ -210,10 +210,10 @@ export function PathMap() {
         </span>
       } />
 
-      <main className="pt-24 pb-32 px-6 max-w-2xl mx-auto min-h-screen">
+      <main className="pt-24 pb-32 px-6 max-w-2xl mx-auto min-h-screen overflow-x-hidden">
         {/* Hero */}
-        <div className="mb-12 relative">
-          <div className="absolute -left-4 top-0 w-1 h-12" style={{ background: 'var(--k-primary)' }} />
+        <div className="mb-12 relative pl-4">
+          <div className="absolute left-0 top-0 w-1 h-12" style={{ background: 'var(--k-primary)' }} />
           <h2 className="font-headline text-3xl font-bold" style={{ color: 'var(--k-primary)' }}>
             学習の道
           </h2>

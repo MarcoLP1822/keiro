@@ -189,9 +189,9 @@ body {
 
 /* Glassmorphism header/nav */
 .glass {
-  background: rgba(250, 249, 245, 0.9);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: color-mix(in srgb, var(--k-surface) 90%, transparent);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 /* Furigana (ruby) annotations */
