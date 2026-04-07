@@ -400,20 +400,6 @@ export function Home() {
           </>
         )}
 
-        {/* Zen Quote */}
-        <section className="pt-8 pb-4 flex justify-center">
-          <div
-            className="p-12 rounded-full aspect-square flex items-center justify-center"
-            style={{ background: 'var(--k-surface-container)' }}
-          >
-            <p
-              className="font-headline italic leading-relaxed max-w-[200px] text-center"
-              style={{ color: 'var(--k-primary)' }}
-            >
-              "{quote.en}"
-            </p>
-          </div>
-        </section>
       </main>
 
       <BottomNav />
