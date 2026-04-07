@@ -184,13 +184,7 @@ export function ModuleComplete() {
 
   return (
     <>
-      <TopBar onBack={() => navigate('/')} title="Keiro" rightAction={
-        <span className="font-headline font-bold" style={{ color: 'var(--k-primary)' }}>
-          {score.correctAnswers}/{score.totalQuestions}
-        </span>
-      } />
-
-      <main className="w-full max-w-2xl mx-auto px-6 pt-24 pb-32 flex flex-col items-center">
+      <main className="w-full max-w-2xl mx-auto px-6 pt-8 pb-32 flex flex-col items-center">
         {/* Hero */}
         <div
           className="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-8 flex items-center justify-center"
