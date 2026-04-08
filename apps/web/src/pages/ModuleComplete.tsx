@@ -32,6 +32,7 @@ export function ModuleComplete() {
   const { plan, isComplete, markComplete } = useDailyPlan();
   const { streak } = useStreak();
   const [showMistakes, setShowMistakes] = useState(false);
+  const [moveOnError, setMoveOnError] = useState<string | null>(null);
   const hasRedirected = useRef(false);
   const srsCardsCreated = useRef(false);
 
@@ -85,52 +86,58 @@ export function ModuleComplete() {
   const passed = score.passed;
 
   async function handleMoveOn() {
-    const allModules = getAllModules();
-    const sorted = [...allModules].sort((a, b) => a.order - b.order);
-    const completedIndex = sorted.findIndex((m) => m.id === moduleId);
+    setMoveOnError(null);
+    try {
+      const allModules = getAllModules();
+      const sorted = [...allModules].sort((a, b) => a.order - b.order);
+      const completedIndex = sorted.findIndex((m) => m.id === moduleId);
 
-    const progressMap = new Map(allProgress.map((p) => [p.moduleId, p]));
-    const currentModule = getCurrentModule(allModules, progressMap);
-    const currentIndex = currentModule
-      ? sorted.findIndex((m) => m.id === currentModule.id)
-      : sorted.length;
+      const progressMap = new Map(allProgress.map((p) => [p.moduleId, p]));
+      const currentModule = getCurrentModule(allModules, progressMap);
+      const currentIndex = currentModule
+        ? sorted.findIndex((m) => m.id === currentModule.id)
+        : sorted.length;
 
-    if (completedIndex > currentIndex) {
-      for (let i = currentIndex; i < completedIndex; i++) {
+      if (completedIndex > currentIndex) {
+        for (let i = currentIndex; i < completedIndex; i++) {
+          await updateProgress({
+            moduleId: sorted[i].id,
+            status: 'passed',
+            score: null,
+            completedAt: new Date().toISOString(),
+            attempts: 0,
+          });
+        }
+      }
+
+      await updateProgress({
+        moduleId: moduleId!,
+        status: 'passed',
+        score: score!.score,
+        completedAt: new Date().toISOString(),
+        attempts: 1,
+      });
+
+      const nextModule = sorted[completedIndex + 1];
+      if (nextModule) {
         await updateProgress({
-          moduleId: sorted[i].id,
-          status: 'passed',
+          moduleId: nextModule.id,
+          status: 'available',
           score: null,
-          completedAt: new Date().toISOString(),
+          completedAt: null,
           attempts: 0,
         });
       }
+
+      if (plan && !isComplete && plan.modules.includes(moduleId!)) {
+        await markComplete();
+      }
+
+      navigate('/');
+    } catch (err) {
+      console.error('[ModuleComplete] handleMoveOn failed:', err);
+      setMoveOnError('Something went wrong saving your progress. Please try again.');
     }
-
-    await updateProgress({
-      moduleId: moduleId!,
-      status: 'passed',
-      score: score!.score,
-      completedAt: new Date().toISOString(),
-      attempts: 1,
-    });
-
-    const nextModule = sorted[completedIndex + 1];
-    if (nextModule) {
-      await updateProgress({
-        moduleId: nextModule.id,
-        status: 'available',
-        score: null,
-        completedAt: null,
-        attempts: 0,
-      });
-    }
-
-    if (plan && !isComplete && plan.modules.includes(moduleId!)) {
-      await markComplete();
-    }
-
-    navigate('/');
   }
 
   function handleReview() {
@@ -238,6 +245,16 @@ export function ModuleComplete() {
             </div>
           ))}
         </div>
+
+        {/* Error banner */}
+        {moveOnError && (
+          <div
+            className="w-full px-4 py-3 rounded-xl text-sm text-center font-medium"
+            style={{ background: 'var(--k-incorrect-bg)', color: 'white' }}
+          >
+            {moveOnError}
+          </div>
+        )}
 
         {/* Actions */}
         <div className="w-full flex flex-col gap-4">

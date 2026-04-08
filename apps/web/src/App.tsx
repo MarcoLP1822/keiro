@@ -82,7 +82,7 @@ function AuthHandler({ children }: { children: React.ReactNode }) {
 
     // Listen for auth state changes (includes token exchange from URL hash)
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      storage.setUserId(session?.user.id ?? null);
+      storage.setUserId(session?.user?.id ?? null);
 
       // Once the recovery/signup token is exchanged, clean the URL and mark ready
       if (hasAuthTokens && !authReady) {

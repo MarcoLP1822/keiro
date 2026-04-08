@@ -57,8 +57,11 @@ export function generatePlacementQuiz(
 function createVocabWordToMeaning(target: VocabItem, pool: VocabItem[]): Exercise {
   const distractorPool = pool.filter((item) => item.word !== target.word);
   const distractors = shuffle(distractorPool).slice(0, 3).map((d) => d.meaning);
-  const allOptions = shuffle([target.meaning, ...distractors]);
-  const correctIndex = allOptions.indexOf(target.meaning);
+  const shuffledDistractors = shuffle(distractors);
+  const allOptions = [...shuffledDistractors];
+  const insertAt = Math.floor(Math.random() * (allOptions.length + 1));
+  allOptions.splice(insertAt, 0, target.meaning);
+  const correctIndex = insertAt;
   const questionDetail = target.reading !== target.word ? target.reading : undefined;
 
   return {
@@ -80,8 +83,11 @@ function createGrammarPickCorrect(target: GrammarItem, pool: GrammarItem[]): Exe
     .filter((s): s is string => Boolean(s));
 
   const correctOption = correctExample?.japanese ?? '';
-  const allOptions = shuffle([correctOption, ...distractors]);
-  const correctIndex = allOptions.indexOf(correctOption);
+  const shuffledDistractors = shuffle(distractors);
+  const allOptions = [...shuffledDistractors];
+  const insertAt = Math.floor(Math.random() * (allOptions.length + 1));
+  allOptions.splice(insertAt, 0, correctOption);
+  const correctIndex = insertAt;
 
   return {
     type: 'grammar-pick-correct',

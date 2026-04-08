@@ -100,11 +100,11 @@ export function StudyIntro() {
 
         {/* Preview Characters */}
         {previewItems.length > 0 && (
-          <div className="flex gap-3">
+          <div className="flex flex-wrap gap-3">
             {previewItems.map((item, i) => (
               <div
                 key={i}
-                className="w-14 h-14 rounded-xl flex items-center justify-center font-headline text-2xl"
+                className="w-12 h-12 rounded-xl flex items-center justify-center font-headline text-2xl"
                 style={{ background: 'var(--k-surface-container-lowest)', color: 'var(--k-primary)' }}
               >
                 {item}

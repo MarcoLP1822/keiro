@@ -7,6 +7,7 @@ class SyncService {
   private _lastSyncedAt: string | null = null;
   private _isBanned = false;
   private _lastError: string | null = null;
+  private _syncing = false;
 
   get lastSyncedAt(): string | null {
     return this._lastSyncedAt;
@@ -68,9 +69,10 @@ class SyncService {
           attempts: p.attempts,
           updated_at: p.updatedAt ?? new Date().toISOString(),
         }));
-        await supabase.from('module_progress').upsert(rows, {
+        const { error: progressError } = await supabase.from('module_progress').upsert(rows, {
           onConflict: 'user_id,module_id',
         });
+        if (progressError) throw new Error(`Sync push failed (module_progress): ${progressError.message}`);
       }
 
       // Upsert SRS cards
@@ -90,9 +92,10 @@ class SyncService {
           is_leech: c.isLeech ?? false,
           updated_at: c.updatedAt ?? new Date().toISOString(),
         }));
-        await supabase.from('srs_cards').upsert(rows, {
+        const { error: cardsError } = await supabase.from('srs_cards').upsert(rows, {
           onConflict: 'user_id,id',
         });
+        if (cardsError) throw new Error(`Sync push failed (srs_cards): ${cardsError.message}`);
       }
 
       // Upsert daily plans
@@ -104,9 +107,10 @@ class SyncService {
           completed: p.completed,
           updated_at: p.updatedAt ?? new Date().toISOString(),
         }));
-        await supabase.from('daily_plans').upsert(rows, {
+        const { error: plansError } = await supabase.from('daily_plans').upsert(rows, {
           onConflict: 'user_id,date',
         });
+        if (plansError) throw new Error(`Sync push failed (daily_plans): ${plansError.message}`);
       }
 
       // Upsert settings
@@ -117,9 +121,10 @@ class SyncService {
           value: s.value,
           updated_at: s.updatedAt ?? new Date().toISOString(),
         }));
-        await supabase.from('user_settings').upsert(rows, {
+        const { error: settingsError } = await supabase.from('user_settings').upsert(rows, {
           onConflict: 'user_id,key',
         });
+        if (settingsError) throw new Error(`Sync push failed (user_settings): ${settingsError.message}`);
       }
 
       this._lastSyncedAt = new Date().toISOString();
@@ -262,7 +267,13 @@ class SyncService {
   }
 
   async syncNow(): Promise<void> {
-    await this.fullSync();
+    if (this._syncing) return;
+    this._syncing = true;
+    try {
+      await this.fullSync();
+    } finally {
+      this._syncing = false;
+    }
   }
 }
 
