@@ -1,4 +1,5 @@
 import type { ModuleProgress, DailyPlan, Setting, SrsCard, StreakData } from '@keiro/types';
+import { localDateString } from '@keiro/engine';
 import { db } from './db';
 import { syncService } from './sync';
 
@@ -87,7 +88,7 @@ class StorageService {
   }
 
   async getDueCards(date?: string): Promise<SrsCard[]> {
-    const today = date || new Date().toISOString().split('T')[0];
+    const today = date || localDateString();
     return db.srsCards.where('nextReview').belowOrEqual(today).toArray();
   }
 

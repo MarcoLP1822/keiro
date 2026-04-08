@@ -22,6 +22,7 @@ export function SrsGradeButtons({ onGrade }: SrsGradeButtonsProps) {
       {gradeButtons.map(({ grade, label, sublabel, color }) => (
         <div key={grade} className="flex flex-col items-center gap-1">
           <button
+            type="button"
             onClick={() => onGrade(grade)}
             className="w-full rounded-xl py-3.5 text-[17px] font-semibold text-white active:opacity-80"
             style={{ background: color }}

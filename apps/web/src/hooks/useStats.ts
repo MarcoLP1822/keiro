@@ -1,5 +1,6 @@
 import { useLiveQuery } from 'dexie-react-hooks';
 import { getAllModules } from '@keiro/content';
+import { localDateString } from '@keiro/engine';
 import { db } from '../services/db';
 
 interface ItemsByType {
@@ -53,7 +54,7 @@ export function useStats(): Stats | null {
   }
 
   // SRS stats
-  const today = new Date().toISOString().slice(0, 10);
+  const today = localDateString();
   const total = allSrsCards.length;
   const dueToday = allSrsCards.filter((c) => c.nextReview <= today).length;
   const learning = allSrsCards.filter((c) => c.interval < 7).length;

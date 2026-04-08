@@ -22,7 +22,7 @@ export function FeedbackBar({ isCorrect, correctAnswer, onNext, correctAnswerAud
         <div className="flex items-center gap-4">
           <div
             className="w-12 h-12 rounded-full flex items-center justify-center"
-            style={{ background: isCorrect ? 'white' : 'rgba(255,255,255,0.2)' }}
+            style={{ background: isCorrect ? 'var(--k-surface-container-lowest)' : 'rgba(255,255,255,0.2)' }}
           >
             <span
               className="material-symbols-outlined text-3xl"
@@ -43,7 +43,7 @@ export function FeedbackBar({ isCorrect, correctAnswer, onNext, correctAnswerAud
             </h3>
             <p
               className="text-sm font-medium"
-              style={{ color: isCorrect ? 'var(--k-correct-secondary)' : 'rgba(255,255,255,0.8)' }}
+              style={{ color: isCorrect ? 'var(--k-correct-secondary)' : 'var(--k-surface-container-lowest)' }}
             >
               {isCorrect ? `You got it right.` : `Correct answer: ${correctAnswer}`}
             </p>
@@ -61,6 +61,7 @@ export function FeedbackBar({ isCorrect, correctAnswer, onNext, correctAnswerAud
           )}
         </div>
         <button
+          type="button"
           onClick={onNext}
           className={`px-10 py-4 rounded-full font-bold text-lg active:scale-95 transition-transform shadow-md ${
             isCorrect

@@ -121,7 +121,7 @@ export function LeechReview() {
                         className="text-[13px] font-medium px-2 py-0.5 rounded-full"
                         style={{
                           background: 'var(--k-error)',
-                          color: '#FFFFFF',
+                          color: 'var(--k-on-error)',
                           opacity: 0.9,
                         }}
                       >

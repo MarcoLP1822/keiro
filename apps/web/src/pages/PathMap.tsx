@@ -106,8 +106,6 @@ interface SectionPanelProps {
   onToggle: () => void;
   allModules: Module[];
   progressMap: Map<string, ModuleProgress>;
-  onModuleClick: (module: Module) => void;
-  getProgress: (id: string) => ModuleProgress | undefined;
 }
 
 function SectionPanel({
@@ -332,8 +330,6 @@ export function PathMap() {
                               onToggle={() => {}}
                               allModules={allModules}
                               progressMap={progressMap}
-                              onModuleClick={handleModuleClick}
-                              getProgress={getProgress}
                             />
                             {/* Module cards under each section */}
                             <div className="mt-1 space-y-1">

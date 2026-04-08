@@ -71,7 +71,7 @@ function SpeakerButton({ onPress }: { onPress: () => void }) {
       type="button"
       onClick={onPress}
       className="flex items-center justify-center w-8 h-8 rounded-full flex-shrink-0 active:scale-90 transition-transform duration-150"
-      style={{ background: 'rgba(0,122,255,0.1)' }}
+      style={{ background: 'color-mix(in srgb, var(--k-primary) 10%, transparent)' }}
       aria-label="Play pronunciation"
     >
       <svg
@@ -120,7 +120,7 @@ export function QuestionDisplay({ exercise, audioEnabled = true, showFurigana = 
           type="button"
           onClick={handlePlayAudio}
           className="flex items-center justify-center w-20 h-20 rounded-full transition-all duration-[350ms] ease-[cubic-bezier(0.25,0.1,0.25,1)] active:scale-95"
-          style={{ background: 'rgba(0,122,255,0.1)' }}
+          style={{ background: 'color-mix(in srgb, var(--k-primary) 10%, transparent)' }}
           aria-label="Play pronunciation"
         >
           <svg

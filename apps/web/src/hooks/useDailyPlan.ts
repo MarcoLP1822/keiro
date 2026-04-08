@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import type { PlannedSession } from '@keiro/types';
-import { calculateDailyPlan, getDueCards, updateStreak, createDefaultStreakData } from '@keiro/engine';
+import { calculateDailyPlan, getDueCards, updateStreak, createDefaultStreakData, localDateString } from '@keiro/engine';
 import { getAllModules } from '@keiro/content';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db } from '../services/db';
@@ -8,7 +8,7 @@ import { useProgress } from './useProgress';
 import { useSettings } from './useSettings';
 
 function todayString(): string {
-  return new Date().toISOString().slice(0, 10);
+  return localDateString();
 }
 
 export function useDailyPlan() {
@@ -51,32 +51,21 @@ export function useDailyPlan() {
 
   async function markComplete(): Promise<void> {
     const date = todayString();
+    await db.transaction('rw', [db.dailyPlan, db.streakData], async () => {
+      const existing = await db.dailyPlan.get(date);
+      if (existing?.completed) return;
 
-    // Idempotency: if today is already marked complete, skip streak update
-    const existing = await db.dailyPlan.get(date);
-    if (existing?.completed) return;
-
-    try {
       await db.dailyPlan.put({
         date,
         modules: plan?.modules ?? [],
         completed: true,
       });
-    } catch (err) {
-      console.error('[useDailyPlan] Failed to mark daily plan complete:', err);
-      throw err;
-    }
 
-    // Update streak when daily plan is completed
-    try {
       const streakRecord = await db.streakData.get('current');
       const prev = streakRecord ?? createDefaultStreakData();
       const { data } = updateStreak(prev, date);
       await db.streakData.put(data);
-    } catch (err) {
-      console.error('[useDailyPlan] Failed to update streak after plan completion:', err);
-      throw err;
-    }
+    });
   }
 
   return { plan, isComplete, markComplete };

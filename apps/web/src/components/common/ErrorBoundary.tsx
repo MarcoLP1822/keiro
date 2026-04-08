@@ -47,9 +47,10 @@ export class ErrorBoundary extends Component<Props, State> {
           {this.state.error?.message || 'An unexpected error occurred. Your progress is safe.'}
         </p>
         <button
+          type="button"
           onClick={() => window.location.replace('/')}
           className="rounded-xl px-8 py-3 text-[17px] font-semibold"
-          style={{ background: 'var(--k-primary)', color: '#FFFFFF' }}
+          style={{ background: 'var(--k-primary)', color: 'var(--k-on-primary)' }}
         >
           Go Home
         </button>

@@ -63,7 +63,7 @@ export function useStudySession(moduleId: string, mode: 'study' | 'review') {
 
     setExercises(generated);
     setScore(null);
-  }, [moduleId, audio]);
+  }, [moduleId]); // audio intentionally excluded: exercises are generated once per module, not on every audio toggle
 
   const handleComplete = useCallback(
     (answers: Answer[]) => {

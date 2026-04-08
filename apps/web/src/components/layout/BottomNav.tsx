@@ -27,6 +27,7 @@ export function BottomNav() {
         const isActive = pathname === tab.path;
         return (
           <button
+            type="button"
             key={tab.path}
             onClick={() => navigate(tab.path)}
             className="flex flex-col items-center justify-center active:scale-90 transition-transform duration-200"

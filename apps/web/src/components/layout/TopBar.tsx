@@ -12,6 +12,7 @@ export function TopBar({ title, onBack, rightAction }: TopBarProps) {
       <div className="w-20">
         {onBack && (
           <button
+            type="button"
             onClick={onBack}
             className="flex h-11 min-w-[44px] items-center active:scale-95 transition-transform duration-150"
             style={{ color: 'var(--k-primary)' }}

@@ -68,6 +68,7 @@ export function Modal({ isOpen, title, body, primaryLabel, secondaryLabel, onPri
         style={{ borderTop: '0.5px solid var(--k-outline-variant)' }}
       >
         <button
+          type="button"
           ref={primaryRef}
           onClick={onPrimary}
           className="min-h-[44px] w-full text-[17px] font-semibold active:bg-black/5"
@@ -78,6 +79,7 @@ export function Modal({ isOpen, title, body, primaryLabel, secondaryLabel, onPri
           {primaryLabel}
         </button>
         <button
+          type="button"
           onClick={onSecondary}
           className="min-h-[44px] w-full text-[17px] active:bg-black/5"
           style={{

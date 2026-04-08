@@ -38,7 +38,7 @@ export function useAuth(): AuthState {
         setIsBanned(ban.banned);
         setBanReason(ban.reason);
       }
-    });
+    }).catch(() => {});
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange(async (_event, session) => {
       setUser(session?.user ?? null);

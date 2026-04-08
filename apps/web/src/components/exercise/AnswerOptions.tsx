@@ -72,7 +72,7 @@ export function AnswerOptions({
             <div className="flex items-center gap-4">
               <span
                 className="flex items-center justify-center w-8 h-8 rounded-full font-bold text-sm"
-                style={{ background: 'rgba(0,0,0,0.05)', color: 'inherit' }}
+                style={{ background: 'color-mix(in srgb, var(--k-on-surface) 5%, transparent)', color: 'inherit' }}
               >
                 {index + 1}
               </span>

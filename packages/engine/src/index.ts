@@ -1,3 +1,5 @@
+export { localDateString } from './dates.js';
+
 export { calculateDailyPlan, getCurrentModule } from './daily-plan.js';
 export type { PlanSize } from './daily-plan.js';
 

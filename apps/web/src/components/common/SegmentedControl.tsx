@@ -22,6 +22,7 @@ export function SegmentedControl({ options, selected, onChange, ariaLabel }: Seg
         const isSelected = option.value === selected;
         return (
           <button
+            type="button"
             key={option.value}
             role="radio"
             aria-checked={isSelected}

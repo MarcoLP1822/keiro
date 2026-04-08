@@ -14,6 +14,7 @@ export function ModuleCard({ module, status, score, onClick }: ModuleCardProps) 
 
   return (
     <button
+      type="button"
       onClick={onClick}
       className="flex w-full items-center min-h-[44px] px-4 py-3 text-left transition-all duration-[350ms] ease-[cubic-bezier(0.25,0.1,0.25,1)] active:bg-black/5"
       style={{
@@ -27,9 +28,9 @@ export function ModuleCard({ module, status, score, onClick }: ModuleCardProps) 
         className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm"
         style={
           isPassed
-            ? { background: 'rgba(52,199,89,0.12)', color: 'var(--k-correct-secondary)' }
+            ? { background: 'color-mix(in srgb, var(--k-correct-secondary) 12%, transparent)', color: 'var(--k-correct-secondary)' }
             : isAvailable
-              ? { background: 'rgba(0,122,255,0.12)', color: 'var(--k-primary)' }
+              ? { background: 'color-mix(in srgb, var(--k-primary) 12%, transparent)', color: 'var(--k-primary)' }
               : { background: 'var(--k-surface-container-high)', color: 'var(--k-outline)' }
         }
       >

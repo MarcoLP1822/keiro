@@ -1,4 +1,5 @@
 import { useLiveQuery } from 'dexie-react-hooks';
+import { localDateString } from '@keiro/engine';
 import { BottomNav } from '../components/layout/BottomNav';
 import { PageHeader } from '../components/layout/PageHeader';
 import { ProgressBar } from '../components/common/ProgressBar';
@@ -19,7 +20,7 @@ function CalendarHeatmap({
   for (let i = 34; i >= 0; i--) {
     const d = new Date(today);
     d.setDate(d.getDate() - i);
-    const dateStr = d.toISOString().slice(0, 10);
+    const dateStr = localDateString(d);
     const status = studiedDates.has(dateStr)
       ? 'studied'
       : freezeDates.has(dateStr)

@@ -1,4 +1,5 @@
 import type { SrsCard, SrsGrade } from '@keiro/types';
+import { localDateString } from './dates.js';
 
 /** Number of wrong answers before a card is flagged as a leech */
 const LEECH_THRESHOLD = 4;
@@ -40,8 +41,8 @@ export function gradeSrsCard(card: SrsCard, grade: SrsGrade, today?: string): Sr
   easeFactor = easeFactor + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02));
   if (easeFactor < 1.3) easeFactor = 1.3;
 
-  const nowStr = today || new Date().toISOString().split('T')[0];
-  const next = new Date(nowStr);
+  const nowStr = today || localDateString();
+  const next = new Date(nowStr + 'T00:00:00');
   next.setDate(next.getDate() + interval);
 
   return {
@@ -49,7 +50,7 @@ export function gradeSrsCard(card: SrsCard, grade: SrsGrade, today?: string): Sr
     interval,
     repetitions,
     easeFactor: Math.round(easeFactor * 100) / 100,
-    nextReview: next.toISOString().split('T')[0],
+    nextReview: localDateString(next),
     lastReview: nowStr,
     lapseCount,
     isLeech,
@@ -65,7 +66,7 @@ export function createSrsCard(
   contentType: SrsCard['contentType'],
   today?: string,
 ): SrsCard {
-  const todayStr = today || new Date().toISOString().split('T')[0];
+  const todayStr = today || localDateString();
   return {
     id: `${moduleId}-${itemId}`,
     itemId,
@@ -93,7 +94,7 @@ export function getLeechCards(cards: SrsCard[]): SrsCard[] {
  * sorted by most overdue first, then by lowest ease factor.
  */
 export function getDueCards(cards: SrsCard[], date?: string): SrsCard[] {
-  const today = date || new Date().toISOString().split('T')[0];
+  const today = date || localDateString();
   return cards
     .filter((c) => c.nextReview <= today)
     .sort((a, b) => {
