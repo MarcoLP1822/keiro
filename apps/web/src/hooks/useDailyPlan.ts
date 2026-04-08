@@ -51,6 +51,11 @@ export function useDailyPlan() {
 
   async function markComplete(): Promise<void> {
     const date = todayString();
+
+    // Idempotency: if today is already marked complete, skip streak update
+    const existing = await db.dailyPlan.get(date);
+    if (existing?.completed) return;
+
     try {
       await db.dailyPlan.put({
         date,
@@ -64,8 +69,8 @@ export function useDailyPlan() {
 
     // Update streak when daily plan is completed
     try {
-      const existing = await db.streakData.get('current');
-      const prev = existing ?? createDefaultStreakData();
+      const streakRecord = await db.streakData.get('current');
+      const prev = streakRecord ?? createDefaultStreakData();
       const { data } = updateStreak(prev, date);
       await db.streakData.put(data);
     } catch (err) {

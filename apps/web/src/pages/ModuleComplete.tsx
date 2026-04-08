@@ -29,7 +29,7 @@ export function ModuleComplete() {
   const navigate = useNavigate();
   const location = useLocation();
   const { allProgress, updateProgress } = useProgress();
-  const { plan, markComplete } = useDailyPlan();
+  const { plan, isComplete, markComplete } = useDailyPlan();
   const { streak } = useStreak();
   const [showMistakes, setShowMistakes] = useState(false);
   const hasRedirected = useRef(false);
@@ -126,7 +126,7 @@ export function ModuleComplete() {
       });
     }
 
-    if (plan && plan.modules.includes(moduleId!)) {
+    if (plan && !isComplete && plan.modules.includes(moduleId!)) {
       await markComplete();
     }
 
