@@ -5,6 +5,8 @@ import type {
   KanjiItem,
   GrammarItem,
   ReadingItem,
+  SentenceItem,
+  ContentItem,
   Exercise,
   KanaExerciseType,
   VocabExerciseType,
@@ -520,4 +522,84 @@ export function generateReadingExercises(module: Module): Exercise[] {
   }
 
   return shuffle(exercises);
+}
+
+// --- Thematic exercise generators ---
+
+/**
+ * Generates an image-vocab exercise: show an image, pick the correct Japanese word.
+ * Returns null if the vocab item has no associated image.
+ *
+ * The question is the English meaning (e.g. "student") and options are Japanese words,
+ * so the learner must match the visual concept to the correct word.
+ */
+export function generateImageExercise(
+  vocabItem: VocabItem,
+  allVocabItems: VocabItem[],
+): Exercise | null {
+  if (!vocabItem.imageUrl) return null;
+
+  const distractorPool = allVocabItems.filter(
+    (item) => item.word !== vocabItem.word,
+  );
+  const distractorCount = Math.min(3, distractorPool.length);
+  const distractors = shuffle(distractorPool).slice(0, distractorCount);
+
+  const correctOption = vocabItem.word;
+  const distractorOptions = distractors.map((d) => d.word);
+
+  // Insert correct answer at a random position — avoid indexOf collision
+  const shuffledDistractors = shuffle(distractorOptions);
+  const allOptions = [...shuffledDistractors];
+  const insertAt = Math.floor(Math.random() * (allOptions.length + 1));
+  allOptions.splice(insertAt, 0, correctOption);
+  const correctIndex = insertAt;
+
+  return {
+    type: 'image-vocab',
+    question: vocabItem.meaning,
+    imageUrl: vocabItem.imageUrl,
+    options: allOptions,
+    correctIndex,
+    targetItem: vocabItem,
+  };
+}
+
+/**
+ * Generates a sentence-reading exercise: show a Japanese sentence with furigana,
+ * pick the correct English translation from 4 options.
+ */
+export function generateSentenceReadingExercise(
+  sentence: SentenceItem,
+  distractorSentences: SentenceItem[],
+): Exercise {
+  const distractorPool = distractorSentences.filter(
+    (s) => s.japanese !== sentence.japanese,
+  );
+  const distractorCount = Math.min(3, distractorPool.length);
+  const distractors = shuffle(distractorPool).slice(0, distractorCount);
+
+  const correctOption = sentence.english;
+  const distractorOptions = distractors.map((d) => d.english);
+
+  // Insert correct answer at a random position — avoid indexOf collision
+  const shuffledDistractors = shuffle(distractorOptions);
+  const allOptions = [...shuffledDistractors];
+  const insertAt = Math.floor(Math.random() * (allOptions.length + 1));
+  allOptions.splice(insertAt, 0, correctOption);
+  const correctIndex = insertAt;
+
+  // SentenceItem is structurally similar to ContentItem for runtime purposes.
+  // We cast through `unknown` to satisfy the Exercise.targetItem union type.
+  const targetItem = sentence as unknown as ContentItem;
+
+  return {
+    type: 'sentence-reading',
+    question: sentence.japanese,
+    questionDetail: 'What does this sentence mean?',
+    furiganaTokens: sentence.furigana,
+    options: allOptions,
+    correctIndex,
+    targetItem,
+  };
 }

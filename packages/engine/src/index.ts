@@ -12,9 +12,13 @@ export {
   generateKanjiExercises,
   generateGrammarExercises,
   generateReadingExercises,
+  generateImageExercise,
+  generateSentenceReadingExercise,
   createMultipleChoice,
   shuffle,
 } from './exercises.js';
+
+export { selectSentences } from './i-plus-one.js';
 
 export { generatePlacementQuiz, evaluatePlacement } from './placement.js';
 
