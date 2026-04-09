@@ -1,4 +1,4 @@
-export type ExerciseMode = 'multiple-choice' | 'gap-fill' | 'typing' | 'sentence-order' | 'reading';
+export type ExerciseMode = 'multiple-choice' | 'gap-fill' | 'typing' | 'sentence-order' | 'reading' | 'image';
 
 export function getExerciseMode(type: string): ExerciseMode {
   switch (type) {
@@ -12,6 +12,10 @@ export function getExerciseMode(type: string): ExerciseMode {
     case 'reading-comprehension':
     case 'reading-translation':
       return 'reading';
+    case 'sentence-reading':
+      return 'reading';
+    case 'image-vocab':
+      return 'image';
     default:
       return 'multiple-choice';
   }

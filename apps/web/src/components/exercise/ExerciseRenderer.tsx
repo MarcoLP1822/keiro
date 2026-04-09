@@ -8,6 +8,7 @@ import { GapFill } from './GapFill';
 import { TypingInput } from './TypingInput';
 import { SentenceOrder } from './SentenceOrder';
 import { ReadingPassage } from './ReadingPassage';
+import { ImageExercise } from './ImageExercise';
 import { FeedbackBar } from './FeedbackBar';
 import { ProgressCounter } from './ProgressCounter';
 import { getExerciseMode } from './exerciseMode';
@@ -132,7 +133,7 @@ export function ExerciseRenderer({ exercises, onComplete, onExit }: ExerciseRend
       ? exercise.correctOrder?.join('') ?? ''
       : exercise.options[exercise.correctIndex];
 
-  const isCorrectForFeedback = mode === 'multiple-choice' || mode === 'gap-fill' || mode === 'reading'
+  const isCorrectForFeedback = mode === 'multiple-choice' || mode === 'gap-fill' || mode === 'reading' || mode === 'image'
     ? selectedIndex === exercise.correctIndex
     : selectedIndex === 0;
 
@@ -152,8 +153,8 @@ export function ExerciseRenderer({ exercises, onComplete, onExit }: ExerciseRend
         }
       />
       <PageContainer>
-        {/* Question display for all types except sentence-order and reading (which have their own layout) */}
-        {mode !== 'sentence-order' && mode !== 'reading' && (
+        {/* Question display for all types except sentence-order, reading, and image (which have their own layout) */}
+        {mode !== 'sentence-order' && mode !== 'reading' && mode !== 'image' && (
           <QuestionDisplay exercise={exercise} audioEnabled={audio} showFurigana={showFurigana} />
         )}
 
@@ -183,6 +184,13 @@ export function ExerciseRenderer({ exercises, onComplete, onExit }: ExerciseRend
               showFeedback={showFeedback}
             />
           </>
+        ) : mode === 'image' ? (
+          <ImageExercise
+            exercise={exercise}
+            onSelect={handleSelect}
+            selectedIndex={selectedIndex}
+            showFeedback={showFeedback}
+          />
         ) : mode === 'sentence-order' && exercise.scrambledWords && exercise.correctOrder ? (
           <>
             <QuestionDisplay exercise={exercise} audioEnabled={audio} showFurigana={showFurigana} />
@@ -206,7 +214,7 @@ export function ExerciseRenderer({ exercises, onComplete, onExit }: ExerciseRend
           <FeedbackBar
             isCorrect={isCorrectForFeedback}
             correctAnswer={correctAnswer}
-            onNext={mode === 'multiple-choice' || mode === 'gap-fill' || mode === 'reading' ? handleNext : handleNonMCNext}
+            onNext={mode === 'multiple-choice' || mode === 'gap-fill' || mode === 'reading' || mode === 'image' ? handleNext : handleNonMCNext}
             correctAnswerAudio={feedbackAudio}
             audioEnabled={audio}
           />
