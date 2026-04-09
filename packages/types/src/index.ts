@@ -17,6 +17,7 @@ export type {
   KanjiContentFile,
   GrammarContentFile,
   ReadingContentFile,
+  ThematicContentFile,
 } from './module.js';
 
 export type {

@@ -1,0 +1,713 @@
+{
+  "level": "n5",
+  "modules": [
+    {
+      "id": "theme-self-intro",
+      "name": "Self-Introduction",
+      "type": "thematic",
+      "level": "n5",
+      "theme": "self-introduction",
+      "order": 500,
+      "intro": {
+        "title": "自己紹介 — Self-Introduction",
+        "explanation": "Learn to introduce yourself in Japanese. You'll learn essential words for talking about yourself, your job, and your interests — then read real Japanese sentences using these words.",
+        "cultureNote": "In Japan, self-introductions (自己紹介, jikoshoukai) are extremely important. They follow a structured pattern: name → origin/affiliation → interest/hobby → closing phrase."
+      },
+      "items": [],
+      "vocab": [
+        {
+          "word": "私",
+          "reading": "わたし",
+          "meaning": "I, me",
+          "partOfSpeech": "pronoun"
+        },
+        {
+          "word": "名前",
+          "reading": "なまえ",
+          "meaning": "name",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "学生",
+          "reading": "がくせい",
+          "meaning": "student",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "先生",
+          "reading": "せんせい",
+          "meaning": "teacher",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "仕事",
+          "reading": "しごと",
+          "meaning": "job, work",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "会社員",
+          "reading": "かいしゃいん",
+          "meaning": "office worker, company employee",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "趣味",
+          "reading": "しゅみ",
+          "meaning": "hobby, interest",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "好き",
+          "reading": "すき",
+          "meaning": "liked, favourite",
+          "partOfSpeech": "na-adjective"
+        },
+        {
+          "word": "日本語",
+          "reading": "にほんご",
+          "meaning": "Japanese language",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "英語",
+          "reading": "えいご",
+          "meaning": "English language",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "本",
+          "reading": "ほん",
+          "meaning": "book",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "音楽",
+          "reading": "おんがく",
+          "meaning": "music",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "映画",
+          "reading": "えいが",
+          "meaning": "movie, film",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "料理",
+          "reading": "りょうり",
+          "meaning": "cooking, cuisine",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "旅行",
+          "reading": "りょこう",
+          "meaning": "travel, trip",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "友達",
+          "reading": "ともだち",
+          "meaning": "friend",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "大学",
+          "reading": "だいがく",
+          "meaning": "university",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "出身",
+          "reading": "しゅっしん",
+          "meaning": "hometown, origin, where one is from",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "grammar": [
+        {
+          "id": "theme-si-wa-desu",
+          "title": "XはYです (X wa Y desu)",
+          "explanation": "The basic Japanese sentence pattern. は (wa) marks the topic, です (desu) acts as the copula meaning 'is/am/are'. This is the foundation of self-introduction sentences.",
+          "structure": "Topic は + Noun/Adjective + です",
+          "examples": [
+            {
+              "japanese": "私は学生です。",
+              "english": "I am a student.",
+              "furigana": [
+                { "text": "私", "reading": "わたし" },
+                { "text": "は", "reading": null },
+                { "text": "学生", "reading": "がくせい" },
+                { "text": "です", "reading": null },
+                { "text": "。", "reading": null }
+              ]
+            },
+            {
+              "japanese": "私は会社員です。",
+              "english": "I am an office worker.",
+              "furigana": [
+                { "text": "私", "reading": "わたし" },
+                { "text": "は", "reading": null },
+                { "text": "会社員", "reading": "かいしゃいん" },
+                { "text": "です", "reading": null },
+                { "text": "。", "reading": null }
+              ]
+            },
+            {
+              "japanese": "趣味は映画です。",
+              "english": "My hobby is movies.",
+              "furigana": [
+                { "text": "趣味", "reading": "しゅみ" },
+                { "text": "は", "reading": null },
+                { "text": "映画", "reading": "えいが" },
+                { "text": "です", "reading": null },
+                { "text": "。", "reading": null }
+              ]
+            }
+          ],
+          "notes": "です is polite (丁寧語). In casual speech it is often dropped entirely."
+        },
+        {
+          "id": "theme-si-no",
+          "title": "XのY (X no Y)",
+          "explanation": "の (no) connects two nouns, expressing possession, affiliation, or modification. It roughly corresponds to 'X's Y' or 'Y of X' in English.",
+          "structure": "Noun₁ + の + Noun₂",
+          "examples": [
+            {
+              "japanese": "私の名前は田中です。",
+              "english": "My name is Tanaka.",
+              "furigana": [
+                { "text": "私", "reading": "わたし" },
+                { "text": "の", "reading": null },
+                { "text": "名前", "reading": "なまえ" },
+                { "text": "は", "reading": null },
+                { "text": "田中", "reading": "たなか" },
+                { "text": "です", "reading": null },
+                { "text": "。", "reading": null }
+              ]
+            },
+            {
+              "japanese": "日本語の先生です。",
+              "english": "I am a Japanese language teacher.",
+              "furigana": [
+                { "text": "日本語", "reading": "にほんご" },
+                { "text": "の", "reading": null },
+                { "text": "先生", "reading": "せんせい" },
+                { "text": "です", "reading": null },
+                { "text": "。", "reading": null }
+              ]
+            },
+            {
+              "japanese": "大学の学生です。",
+              "english": "I am a university student.",
+              "furigana": [
+                { "text": "大学", "reading": "だいがく" },
+                { "text": "の", "reading": null },
+                { "text": "学生", "reading": "がくせい" },
+                { "text": "です", "reading": null },
+                { "text": "。", "reading": null }
+              ]
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "theme-si-ga-suki",
+          "title": "Xが好きです (X ga suki desu)",
+          "explanation": "が (ga) marks the subject of 好き (suki, 'liked/favourite'). Use this pattern to express what you like. The thing you like comes before が.",
+          "structure": "Noun + が + 好きです",
+          "examples": [
+            {
+              "japanese": "音楽が好きです。",
+              "english": "I like music.",
+              "furigana": [
+                { "text": "音楽", "reading": "おんがく" },
+                { "text": "が", "reading": null },
+                { "text": "好き", "reading": "すき" },
+                { "text": "です", "reading": null },
+                { "text": "。", "reading": null }
+              ]
+            },
+            {
+              "japanese": "日本語が好きです。",
+              "english": "I like Japanese.",
+              "furigana": [
+                { "text": "日本語", "reading": "にほんご" },
+                { "text": "が", "reading": null },
+                { "text": "好き", "reading": "すき" },
+                { "text": "です", "reading": null },
+                { "text": "。", "reading": null }
+              ]
+            },
+            {
+              "japanese": "料理と旅行が好きです。",
+              "english": "I like cooking and travel.",
+              "furigana": [
+                { "text": "料理", "reading": "りょうり" },
+                { "text": "と", "reading": null },
+                { "text": "旅行", "reading": "りょこう" },
+                { "text": "が", "reading": null },
+                { "text": "好き", "reading": "すき" },
+                { "text": "です", "reading": null },
+                { "text": "。", "reading": null }
+              ]
+            }
+          ],
+          "notes": "The opposite is 嫌いです (kirai desu) — 'I dislike X'."
+        },
+        {
+          "id": "theme-si-wo-benkyou",
+          "title": "Xを勉強しています (X wo benkyou shite imasu)",
+          "explanation": "を (wo/o) marks the direct object. 勉強しています (benkyou shite imasu) means 'am studying' — the て-form of a verb + います expresses an ongoing action.",
+          "structure": "Noun + を + 勉強しています",
+          "examples": [
+            {
+              "japanese": "日本語を勉強しています。",
+              "english": "I am studying Japanese.",
+              "furigana": [
+                { "text": "日本語", "reading": "にほんご" },
+                { "text": "を", "reading": null },
+                { "text": "勉強", "reading": "べんきょう" },
+                { "text": "しています", "reading": null },
+                { "text": "。", "reading": null }
+              ]
+            },
+            {
+              "japanese": "英語を勉強しています。",
+              "english": "I am studying English.",
+              "furigana": [
+                { "text": "英語", "reading": "えいご" },
+                { "text": "を", "reading": null },
+                { "text": "勉強", "reading": "べんきょう" },
+                { "text": "しています", "reading": null },
+                { "text": "。", "reading": null }
+              ]
+            }
+          ],
+          "notes": "This pattern works with any noun: 料理を勉強しています (studying cooking), 音楽を勉強しています (studying music)."
+        },
+        {
+          "id": "theme-si-hajimemashite",
+          "title": "はじめまして・よろしくおねがいします",
+          "explanation": "はじめまして (hajimemashite) is the standard first-meeting greeting, equivalent to 'Nice to meet you'. よろしくおねがいします (yoroshiku onegai shimasu) literally means 'I humbly ask for your good favour' — always said at the end of a self-introduction.",
+          "structure": "はじめまして。[自己紹介] よろしくおねがいします。",
+          "examples": [
+            {
+              "japanese": "はじめまして。よろしくおねがいします。",
+              "english": "Nice to meet you. Please treat me well.",
+              "furigana": [
+                { "text": "はじめまして", "reading": null },
+                { "text": "。", "reading": null },
+                { "text": "よろしくおねがいします", "reading": null },
+                { "text": "。", "reading": null }
+              ]
+            },
+            {
+              "japanese": "はじめまして。私は山田です。よろしくおねがいします。",
+              "english": "Nice to meet you. I am Yamada. Please treat me well.",
+              "furigana": [
+                { "text": "はじめまして", "reading": null },
+                { "text": "。", "reading": null },
+                { "text": "私", "reading": "わたし" },
+                { "text": "は", "reading": null },
+                { "text": "山田", "reading": "やまだ" },
+                { "text": "です", "reading": null },
+                { "text": "。", "reading": null },
+                { "text": "よろしくおねがいします", "reading": null },
+                { "text": "。", "reading": null }
+              ]
+            }
+          ],
+          "notes": "どうぞよろしく is a shorter casual variant. In business contexts always use the full よろしくおねがいします."
+        }
+      ],
+      "sentences": [
+        {
+          "japanese": "私は学生です。",
+          "english": "I am a student.",
+          "furigana": [
+            { "text": "私", "reading": "わたし" },
+            { "text": "は", "reading": null },
+            { "text": "学生", "reading": "がくせい" },
+            { "text": "です", "reading": null },
+            { "text": "。", "reading": null }
+          ],
+          "requiredVocab": ["私", "学生"],
+          "requiredGrammar": ["XはYです"]
+        },
+        {
+          "japanese": "私は先生です。",
+          "english": "I am a teacher.",
+          "furigana": [
+            { "text": "私", "reading": "わたし" },
+            { "text": "は", "reading": null },
+            { "text": "先生", "reading": "せんせい" },
+            { "text": "です", "reading": null },
+            { "text": "。", "reading": null }
+          ],
+          "requiredVocab": ["私", "先生"],
+          "requiredGrammar": ["XはYです"]
+        },
+        {
+          "japanese": "私の名前は田中です。",
+          "english": "My name is Tanaka.",
+          "furigana": [
+            { "text": "私", "reading": "わたし" },
+            { "text": "の", "reading": null },
+            { "text": "名前", "reading": "なまえ" },
+            { "text": "は", "reading": null },
+            { "text": "田中", "reading": "たなか" },
+            { "text": "です", "reading": null },
+            { "text": "。", "reading": null }
+          ],
+          "requiredVocab": ["私", "名前"],
+          "requiredGrammar": ["XのY", "XはYです"]
+        },
+        {
+          "japanese": "出身はイタリアです。",
+          "english": "I am from Italy.",
+          "furigana": [
+            { "text": "出身", "reading": "しゅっしん" },
+            { "text": "は", "reading": null },
+            { "text": "イタリア", "reading": null },
+            { "text": "です", "reading": null },
+            { "text": "。", "reading": null }
+          ],
+          "requiredVocab": ["出身"],
+          "requiredGrammar": ["XはYです"]
+        },
+        {
+          "japanese": "趣味は音楽です。",
+          "english": "My hobby is music.",
+          "furigana": [
+            { "text": "趣味", "reading": "しゅみ" },
+            { "text": "は", "reading": null },
+            { "text": "音楽", "reading": "おんがく" },
+            { "text": "です", "reading": null },
+            { "text": "。", "reading": null }
+          ],
+          "requiredVocab": ["趣味", "音楽"],
+          "requiredGrammar": ["XはYです"]
+        },
+        {
+          "japanese": "映画が好きです。",
+          "english": "I like movies.",
+          "furigana": [
+            { "text": "映画", "reading": "えいが" },
+            { "text": "が", "reading": null },
+            { "text": "好き", "reading": "すき" },
+            { "text": "です", "reading": null },
+            { "text": "。", "reading": null }
+          ],
+          "requiredVocab": ["映画", "好き"],
+          "requiredGrammar": ["Xが好きです"]
+        },
+        {
+          "japanese": "料理が好きです。",
+          "english": "I like cooking.",
+          "furigana": [
+            { "text": "料理", "reading": "りょうり" },
+            { "text": "が", "reading": null },
+            { "text": "好き", "reading": "すき" },
+            { "text": "です", "reading": null },
+            { "text": "。", "reading": null }
+          ],
+          "requiredVocab": ["料理", "好き"],
+          "requiredGrammar": ["Xが好きです"]
+        },
+        {
+          "japanese": "日本語を勉強しています。",
+          "english": "I am studying Japanese.",
+          "furigana": [
+            { "text": "日本語", "reading": "にほんご" },
+            { "text": "を", "reading": null },
+            { "text": "勉強", "reading": "べんきょう" },
+            { "text": "しています", "reading": null },
+            { "text": "。", "reading": null }
+          ],
+          "requiredVocab": ["日本語"],
+          "requiredGrammar": ["Xを勉強しています"]
+        },
+        {
+          "japanese": "大学の学生です。",
+          "english": "I am a university student.",
+          "furigana": [
+            { "text": "大学", "reading": "だいがく" },
+            { "text": "の", "reading": null },
+            { "text": "学生", "reading": "がくせい" },
+            { "text": "です", "reading": null },
+            { "text": "。", "reading": null }
+          ],
+          "requiredVocab": ["大学", "学生"],
+          "requiredGrammar": ["XのY", "XはYです"]
+        },
+        {
+          "japanese": "私は会社員です。仕事が好きです。",
+          "english": "I am an office worker. I like my job.",
+          "furigana": [
+            { "text": "私", "reading": "わたし" },
+            { "text": "は", "reading": null },
+            { "text": "会社員", "reading": "かいしゃいん" },
+            { "text": "です", "reading": null },
+            { "text": "。", "reading": null },
+            { "text": "仕事", "reading": "しごと" },
+            { "text": "が", "reading": null },
+            { "text": "好き", "reading": "すき" },
+            { "text": "です", "reading": null },
+            { "text": "。", "reading": null }
+          ],
+          "requiredVocab": ["私", "会社員", "仕事", "好き"],
+          "requiredGrammar": ["XはYです", "Xが好きです"]
+        },
+        {
+          "japanese": "趣味は本を読むことです。",
+          "english": "My hobby is reading books.",
+          "furigana": [
+            { "text": "趣味", "reading": "しゅみ" },
+            { "text": "は", "reading": null },
+            { "text": "本", "reading": "ほん" },
+            { "text": "を", "reading": null },
+            { "text": "読む", "reading": "よむ" },
+            { "text": "こと", "reading": null },
+            { "text": "です", "reading": null },
+            { "text": "。", "reading": null }
+          ],
+          "requiredVocab": ["趣味", "本"],
+          "requiredGrammar": ["XはYです"]
+        },
+        {
+          "japanese": "友達と旅行が好きです。",
+          "english": "I like travelling with friends.",
+          "furigana": [
+            { "text": "友達", "reading": "ともだち" },
+            { "text": "と", "reading": null },
+            { "text": "旅行", "reading": "りょこう" },
+            { "text": "が", "reading": null },
+            { "text": "好き", "reading": "すき" },
+            { "text": "です", "reading": null },
+            { "text": "。", "reading": null }
+          ],
+          "requiredVocab": ["友達", "旅行", "好き"],
+          "requiredGrammar": ["Xが好きです"]
+        },
+        {
+          "japanese": "英語と日本語を勉強しています。",
+          "english": "I am studying English and Japanese.",
+          "furigana": [
+            { "text": "英語", "reading": "えいご" },
+            { "text": "と", "reading": null },
+            { "text": "日本語", "reading": "にほんご" },
+            { "text": "を", "reading": null },
+            { "text": "勉強", "reading": "べんきょう" },
+            { "text": "しています", "reading": null },
+            { "text": "。", "reading": null }
+          ],
+          "requiredVocab": ["英語", "日本語"],
+          "requiredGrammar": ["Xを勉強しています"]
+        },
+        {
+          "japanese": "私は大学で日本語を勉強しています。",
+          "english": "I am studying Japanese at university.",
+          "furigana": [
+            { "text": "私", "reading": "わたし" },
+            { "text": "は", "reading": null },
+            { "text": "大学", "reading": "だいがく" },
+            { "text": "で", "reading": null },
+            { "text": "日本語", "reading": "にほんご" },
+            { "text": "を", "reading": null },
+            { "text": "勉強", "reading": "べんきょう" },
+            { "text": "しています", "reading": null },
+            { "text": "。", "reading": null }
+          ],
+          "requiredVocab": ["私", "大学", "日本語"],
+          "requiredGrammar": ["XはYです", "Xを勉強しています"]
+        },
+        {
+          "japanese": "はじめまして。私の名前は山田です。出身は東京です。趣味は料理と映画です。よろしくおねがいします。",
+          "english": "Nice to meet you. My name is Yamada. I am from Tokyo. My hobbies are cooking and movies. Please treat me well.",
+          "furigana": [
+            { "text": "はじめまして", "reading": null },
+            { "text": "。", "reading": null },
+            { "text": "私", "reading": "わたし" },
+            { "text": "の", "reading": null },
+            { "text": "名前", "reading": "なまえ" },
+            { "text": "は", "reading": null },
+            { "text": "山田", "reading": "やまだ" },
+            { "text": "です", "reading": null },
+            { "text": "。", "reading": null },
+            { "text": "出身", "reading": "しゅっしん" },
+            { "text": "は", "reading": null },
+            { "text": "東京", "reading": "とうきょう" },
+            { "text": "です", "reading": null },
+            { "text": "。", "reading": null },
+            { "text": "趣味", "reading": "しゅみ" },
+            { "text": "は", "reading": null },
+            { "text": "料理", "reading": "りょうり" },
+            { "text": "と", "reading": null },
+            { "text": "映画", "reading": "えいが" },
+            { "text": "です", "reading": null },
+            { "text": "。", "reading": null },
+            { "text": "よろしくおねがいします", "reading": null },
+            { "text": "。", "reading": null }
+          ],
+          "requiredVocab": ["私", "名前", "出身", "趣味", "料理", "映画"],
+          "requiredGrammar": ["XのY", "XはYです", "はじめまして・よろしくおねがいします"]
+        }
+      ],
+      "readings": [
+        {
+          "passage": "はじめまして。私は田中です。学生です。日本語を勉強しています。よろしくおねがいします。",
+          "translation": "Nice to meet you. I am Tanaka. I am a student. I am studying Japanese. Please treat me well.",
+          "furigana": [
+            { "text": "はじめまして", "reading": null },
+            { "text": "。", "reading": null },
+            { "text": "私", "reading": "わたし" },
+            { "text": "は", "reading": null },
+            { "text": "田中", "reading": "たなか" },
+            { "text": "です", "reading": null },
+            { "text": "。", "reading": null },
+            { "text": "学生", "reading": "がくせい" },
+            { "text": "です", "reading": null },
+            { "text": "。", "reading": null },
+            { "text": "日本語", "reading": "にほんご" },
+            { "text": "を", "reading": null },
+            { "text": "勉強", "reading": "べんきょう" },
+            { "text": "しています", "reading": null },
+            { "text": "。", "reading": null },
+            { "text": "よろしくおねがいします", "reading": null },
+            { "text": "。", "reading": null }
+          ],
+          "questions": [
+            {
+              "question": "What is the speaker's name?",
+              "options": ["Yamada", "Tanaka", "Suzuki", "Sato"],
+              "correctIndex": 1
+            },
+            {
+              "question": "What is the speaker studying?",
+              "options": ["English", "Chinese", "Japanese", "Korean"],
+              "correctIndex": 2
+            },
+            {
+              "question": "What is the speaker's occupation?",
+              "options": ["Teacher", "Office worker", "Student", "Doctor"],
+              "correctIndex": 2
+            }
+          ]
+        },
+        {
+          "passage": "私の名前は山田です。出身は大阪です。仕事は英語の先生です。趣味は旅行と映画です。映画が好きです。よろしくおねがいします。",
+          "translation": "My name is Yamada. I am from Osaka. My job is English teacher. My hobbies are travel and movies. I like movies. Please treat me well.",
+          "furigana": [
+            { "text": "私", "reading": "わたし" },
+            { "text": "の", "reading": null },
+            { "text": "名前", "reading": "なまえ" },
+            { "text": "は", "reading": null },
+            { "text": "山田", "reading": "やまだ" },
+            { "text": "です", "reading": null },
+            { "text": "。", "reading": null },
+            { "text": "出身", "reading": "しゅっしん" },
+            { "text": "は", "reading": null },
+            { "text": "大阪", "reading": "おおさか" },
+            { "text": "です", "reading": null },
+            { "text": "。", "reading": null },
+            { "text": "仕事", "reading": "しごと" },
+            { "text": "は", "reading": null },
+            { "text": "英語", "reading": "えいご" },
+            { "text": "の", "reading": null },
+            { "text": "先生", "reading": "せんせい" },
+            { "text": "です", "reading": null },
+            { "text": "。", "reading": null },
+            { "text": "趣味", "reading": "しゅみ" },
+            { "text": "は", "reading": null },
+            { "text": "旅行", "reading": "りょこう" },
+            { "text": "と", "reading": null },
+            { "text": "映画", "reading": "えいが" },
+            { "text": "です", "reading": null },
+            { "text": "。", "reading": null },
+            { "text": "映画", "reading": "えいが" },
+            { "text": "が", "reading": null },
+            { "text": "好き", "reading": "すき" },
+            { "text": "です", "reading": null },
+            { "text": "。", "reading": null },
+            { "text": "よろしくおねがいします", "reading": null },
+            { "text": "。", "reading": null }
+          ],
+          "questions": [
+            {
+              "question": "Where is Yamada from?",
+              "options": ["Tokyo", "Kyoto", "Osaka", "Hiroshima"],
+              "correctIndex": 2
+            },
+            {
+              "question": "What is Yamada's job?",
+              "options": ["Japanese teacher", "Student", "Office worker", "English teacher"],
+              "correctIndex": 3
+            },
+            {
+              "question": "What does Yamada like?",
+              "options": ["Music", "Cooking", "Movies", "Sports"],
+              "correctIndex": 2
+            }
+          ]
+        },
+        {
+          "passage": "はじめまして。私はリンです。大学の学生です。日本語と英語を勉強しています。趣味は音楽と本です。料理も好きです。よろしくおねがいします。",
+          "translation": "Nice to meet you. I am Lin. I am a university student. I am studying Japanese and English. My hobbies are music and books. I also like cooking. Please treat me well.",
+          "furigana": [
+            { "text": "はじめまして", "reading": null },
+            { "text": "。", "reading": null },
+            { "text": "私", "reading": "わたし" },
+            { "text": "は", "reading": null },
+            { "text": "リン", "reading": null },
+            { "text": "です", "reading": null },
+            { "text": "。", "reading": null },
+            { "text": "大学", "reading": "だいがく" },
+            { "text": "の", "reading": null },
+            { "text": "学生", "reading": "がくせい" },
+            { "text": "です", "reading": null },
+            { "text": "。", "reading": null },
+            { "text": "日本語", "reading": "にほんご" },
+            { "text": "と", "reading": null },
+            { "text": "英語", "reading": "えいご" },
+            { "text": "を", "reading": null },
+            { "text": "勉強", "reading": "べんきょう" },
+            { "text": "しています", "reading": null },
+            { "text": "。", "reading": null },
+            { "text": "趣味", "reading": "しゅみ" },
+            { "text": "は", "reading": null },
+            { "text": "音楽", "reading": "おんがく" },
+            { "text": "と", "reading": null },
+            { "text": "本", "reading": "ほん" },
+            { "text": "です", "reading": null },
+            { "text": "。", "reading": null },
+            { "text": "料理", "reading": "りょうり" },
+            { "text": "も", "reading": null },
+            { "text": "好き", "reading": "すき" },
+            { "text": "です", "reading": null },
+            { "text": "。", "reading": null },
+            { "text": "よろしくおねがいします", "reading": null },
+            { "text": "。", "reading": null }
+          ],
+          "questions": [
+            {
+              "question": "What is Lin's occupation?",
+              "options": ["Teacher", "Office worker", "University student", "Doctor"],
+              "correctIndex": 2
+            },
+            {
+              "question": "Which languages is Lin studying?",
+              "options": ["Japanese and Chinese", "English and Korean", "Japanese and English", "Chinese and English"],
+              "correctIndex": 2
+            },
+            {
+              "question": "What is one of Lin's hobbies?",
+              "options": ["Sports", "Travel", "Movies", "Music"],
+              "correctIndex": 3
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

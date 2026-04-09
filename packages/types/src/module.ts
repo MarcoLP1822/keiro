@@ -47,6 +47,7 @@ export interface GrammarItem {
   examples: {
     japanese: string;
     english: string;
+    furigana?: FuriganaToken[];
   }[];
   notes?: string | null;  // Additional notes
 }
@@ -73,12 +74,13 @@ export interface ReadingQuestion {
 export interface ReadingItem {
   passage: string;           // Japanese text
   translation: string;       // English translation of full passage
+  furigana?: FuriganaToken[]; // Pre-computed furigana tokens for the passage
   questions: ReadingQuestion[];
 }
 
 export type ContentItem = KanaItem | VocabItem | GrammarItem | KanjiItem | ReadingItem;
 
-export type ModuleType = 'kana' | 'vocabulary' | 'grammar' | 'kanji' | 'reading';
+export type ModuleType = 'kana' | 'vocabulary' | 'grammar' | 'kanji' | 'reading' | 'thematic';
 export type ModuleLevel = 'beginner' | 'n5' | 'n4' | 'n3';
 
 export interface Module {
@@ -90,6 +92,11 @@ export interface Module {
   intro: ModuleIntro;
   items: ContentItem[];
   theme?: string;
+  // Thematic module content collections (used when type === 'thematic')
+  vocab?: VocabItem[];
+  grammar?: GrammarItem[];
+  sentences?: SentenceItem[];
+  readings?: ReadingItem[];
 }
 
 /** Shape of the kana JSON files (hiragana.json, katakana.json) */
@@ -119,6 +126,12 @@ export interface GrammarContentFile {
 
 /** Shape of reading JSON files (e.g., reading/n5.json) */
 export interface ReadingContentFile {
+  level: string;
+  modules: Module[];
+}
+
+/** Shape of thematic module JSON files (e.g., themes/self-introduction.json) */
+export interface ThematicContentFile {
   level: string;
   modules: Module[];
 }
