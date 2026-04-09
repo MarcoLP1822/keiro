@@ -9,6 +9,7 @@ import type {
   KanjiContentFile,
   GrammarContentFile,
   ReadingContentFile,
+  ThematicContentFile,
 } from '@keiro/types';
 import hiraganaData from '../kana/hiragana.json' with { type: 'json' };
 import katakanaData from '../kana/katakana.json' with { type: 'json' };
@@ -24,6 +25,7 @@ import grammarN3Data from '../grammar/n3.json' with { type: 'json' };
 import readingN5Data from '../reading/n5.json' with { type: 'json' };
 import readingN4Data from '../reading/n4.json' with { type: 'json' };
 import readingN3Data from '../reading/n3.json' with { type: 'json' };
+import selfIntroData from '../themes/self-introduction.json' with { type: 'json' };
 
 const hiragana = hiraganaData as KanaContentFile;
 const katakana = katakanaData as KanaContentFile;
@@ -39,10 +41,12 @@ const grammarN3 = grammarN3Data as GrammarContentFile;
 const readingN5 = readingN5Data as ReadingContentFile;
 const readingN4 = readingN4Data as ReadingContentFile;
 const readingN3 = readingN3Data as ReadingContentFile;
+const selfIntro = selfIntroData as ThematicContentFile;
 
 const allModules: Module[] = [
   ...hiragana.modules,
   ...katakana.modules,
+  ...selfIntro.modules,
   ...vocabN5.modules,
   ...kanjiN5.modules,
   ...grammarN5.modules,
