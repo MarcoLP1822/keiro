@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { getAllModules } from '@keiro/content';
-import { getCurrentModule, getModuleStatus } from '@keiro/engine';
+import { getCurrentModule, getModuleStatus, isThematic } from '@keiro/engine';
 import { BottomNav } from '../components/layout/BottomNav';
 import { PageHeader } from '../components/layout/PageHeader';
 import { ProgressBar } from '../components/common/ProgressBar';
@@ -45,7 +45,7 @@ function getPlanIcon(type: string): string {
 export function Home() {
   const navigate = useNavigate();
   const { allProgress } = useProgress();
-  const { plan, isComplete } = useDailyPlan();
+  const { plan, sessionPlan, isComplete } = useDailyPlan();
   const { streak, freezesAvailable } = useStreak();
   const leechCount = useLiveQuery(
     () => db.srsCards.where('isLeech').equals(1).count(),
@@ -75,6 +75,11 @@ export function Home() {
 
   function handleStart() {
     if (!plan) return;
+    // Thematic modules always go directly to the study intro (session handled there)
+    if (currentModule && isThematic(currentModule)) {
+      navigate(`/study/${currentModule.id}/intro`);
+      return;
+    }
     if (plan.reviewCards.length > 0) {
       navigate('/review/srs', { state: { cardIds: plan.reviewCards } });
     } else if (plan.modules.length > 0) {
@@ -305,8 +310,70 @@ export function Home() {
               </button>
             </div>
           </section>
+        ) : currentModule && isThematic(currentModule) ? (
+          /* Active thematic session */
+          <>
+            <section
+              className="p-6 rounded-xl"
+              style={{
+                background: 'var(--k-surface-container-lowest)',
+                border: '1px solid color-mix(in srgb, var(--k-outline-variant) 15%, transparent)',
+              }}
+            >
+              <div className="flex justify-between items-end mb-4">
+                <div>
+                  <div
+                    className="text-xs uppercase tracking-widest font-bold mb-1"
+                    style={{ color: 'var(--k-secondary)' }}
+                  >
+                    Today&apos;s Theme
+                  </div>
+                  <h2 className="font-headline text-xl font-bold" style={{ color: 'var(--k-primary)' }}>
+                    {currentModule.intro?.title ?? currentModule.name}
+                  </h2>
+                </div>
+                {sessionPlan && (
+                  <div className="text-sm font-bold" style={{ color: 'var(--k-primary)' }}>
+                    ~{sessionPlan.totalEstimatedMinutes} min
+                  </div>
+                )}
+              </div>
+
+              {sessionPlan ? (
+                <div className="flex items-center gap-3 mt-4">
+                  <div
+                    className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
+                    style={{ background: 'var(--k-secondary-container)', color: 'var(--k-primary)' }}
+                  >
+                    <span className="material-symbols-outlined">route</span>
+                  </div>
+                  <div>
+                    <div className="text-sm font-semibold" style={{ color: 'var(--k-primary)' }}>
+                      {sessionPlan.steps.length} steps
+                    </div>
+                    <div className="text-[11px]" style={{ color: 'var(--k-secondary)' }}>
+                      vocab → read → comprehend → cooldown
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <p className="text-sm" style={{ color: 'var(--k-secondary)' }}>
+                  Loading plan...
+                </p>
+              )}
+            </section>
+
+            {/* Primary CTA */}
+            <button
+              onClick={handleStart}
+              disabled={!plan}
+              className="w-full bg-silk-gradient text-white py-5 rounded-full font-bold text-lg active:scale-95 transition-transform shadow-lg disabled:opacity-50"
+            >
+              Start Daily Study
+            </button>
+          </>
         ) : (
-          /* Active daily plan */
+          /* Active daily plan (legacy) */
           <>
             <section
               className="p-6 rounded-xl"

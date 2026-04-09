@@ -24,10 +24,10 @@ const LEVEL_ICONS: Record<string, string> = {
   n3: 'school',
 };
 
-const TYPE_ORDER = ['hiragana', 'katakana', 'vocabulary', 'kanji', 'grammar', 'reading'];
+const TYPE_ORDER = ['thematic', 'hiragana', 'katakana', 'vocabulary', 'kanji', 'grammar', 'reading'];
 const TYPE_LABELS: Record<string, string> = {
   hiragana: 'Hiragana', katakana: 'Katakana', vocabulary: 'Vocabulary',
-  kanji: 'Kanji', grammar: 'Grammar', reading: 'Reading',
+  kanji: 'Kanji', grammar: 'Grammar', reading: 'Reading', thematic: 'Theme',
 };
 
 interface TypeSection {
@@ -304,18 +304,26 @@ export function PathMap() {
                     {/* Type chips */}
                     {!isLocked && (
                       <div className="flex gap-2 flex-wrap mb-4">
-                        {group.sections.map((s) => (
-                          <span
-                            key={s.sectionId}
-                            className="px-3 py-1 text-[11px] font-bold rounded-md"
-                            style={{
-                              background: 'var(--k-secondary-container)',
-                              color: 'var(--k-on-secondary-container)',
-                            }}
-                          >
-                            {s.label.toUpperCase()}
-                          </span>
-                        ))}
+                        {group.sections.map((s) => {
+                          const isThematicSection = s.type === 'thematic';
+                          // Thematic sections show the theme title (e.g., "自己紹介 — Self-Introduction")
+                          // rather than the generic type label
+                          const chipLabel = isThematicSection
+                            ? (s.modules[0]?.intro?.title ?? s.label)
+                            : s.label.toUpperCase();
+                          return (
+                            <span
+                              key={s.sectionId}
+                              className="px-3 py-1 text-[11px] font-bold rounded-md"
+                              style={{
+                                background: 'var(--k-secondary-container)',
+                                color: 'var(--k-on-secondary-container)',
+                              }}
+                            >
+                              {chipLabel}
+                            </span>
+                          );
+                        })}
                       </div>
                     )}
 
