@@ -1,4 +1,6 @@
 export type {
+  FuriganaToken,
+  SentenceItem,
   ModuleIntro,
   KanaItem,
   VocabItem,
@@ -23,10 +25,13 @@ export type {
   GrammarExerciseType,
   KanjiExerciseType,
   ReadingExerciseType,
+  ThematicExerciseType,
   ExerciseType,
   Exercise,
   Answer,
   ModuleScore,
+  SessionStep,
+  SessionPlan,
 } from './exercise.js';
 
 export type {

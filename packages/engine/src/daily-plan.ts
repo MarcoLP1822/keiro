@@ -28,6 +28,14 @@ const REVIEW_CAPS: Record<PlanSize, number> = {
 };
 
 /**
+ * Returns true if the module is organized by theme (thematic curriculum),
+ * as opposed to a legacy JLPT content-type module.
+ */
+export function isThematic(module: Module): boolean {
+  return !!module.theme;
+}
+
+/**
  * Returns the first non-passed module in order, or null if all are complete.
  */
 export function getCurrentModule(

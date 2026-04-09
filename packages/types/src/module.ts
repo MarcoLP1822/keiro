@@ -1,3 +1,16 @@
+export interface FuriganaToken {
+  text: string;
+  reading: string | null;
+}
+
+export interface SentenceItem {
+  japanese: string;
+  english: string;
+  furigana: FuriganaToken[];
+  requiredVocab: string[];
+  requiredGrammar: string[];
+}
+
 export interface ModuleIntro {
   title: string;
   explanation: string;
@@ -18,6 +31,12 @@ export interface VocabItem {
     japanese: string;
     english: string;
   };
+  imageUrl?: string;
+  examples?: {
+    japanese: string;
+    english: string;
+    furigana?: FuriganaToken[];
+  }[];
 }
 
 export interface GrammarItem {
@@ -70,6 +89,7 @@ export interface Module {
   order: number;
   intro: ModuleIntro;
   items: ContentItem[];
+  theme?: string;
 }
 
 /** Shape of the kana JSON files (hiragana.json, katakana.json) */

@@ -1,6 +1,6 @@
 export { localDateString } from './dates.js';
 
-export { calculateDailyPlan, getCurrentModule } from './daily-plan.js';
+export { calculateDailyPlan, getCurrentModule, isThematic } from './daily-plan.js';
 export type { PlanSize } from './daily-plan.js';
 
 export { scoreModule, getModuleStatus } from './scoring.js';
