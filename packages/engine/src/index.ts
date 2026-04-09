@@ -20,6 +20,9 @@ export {
 
 export { selectSentences } from './i-plus-one.js';
 
+export { planDynamicSession } from './session-planner.js';
+export type { SessionConfig } from './session-planner.js';
+
 export { generatePlacementQuiz, evaluatePlacement } from './placement.js';
 
 export { gradeSrsCard, createSrsCard, getDueCards, getLeechCards } from './srs.js';

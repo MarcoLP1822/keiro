@@ -1,6 +1,15 @@
 import { useMemo } from 'react';
-import type { PlannedSession } from '@keiro/types';
-import { calculateDailyPlan, getDueCards, updateStreak, createDefaultStreakData, localDateString } from '@keiro/engine';
+import type { PlannedSession, SessionPlan } from '@keiro/types';
+import {
+  calculateDailyPlan,
+  getCurrentModule,
+  getDueCards,
+  isThematic,
+  planDynamicSession,
+  updateStreak,
+  createDefaultStreakData,
+  localDateString,
+} from '@keiro/engine';
 import { getAllModules } from '@keiro/content';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db } from '../services/db';
@@ -36,6 +45,24 @@ export function useDailyPlan() {
     const allModules = getAllModules();
     const dueCards = allSrsCards ? getDueCards(allSrsCards) : [];
 
+    const currentModule = getCurrentModule(allModules, progressMap);
+
+    // Thematic modules use the dynamic session planner; the legacy PlannedSession
+    // is still returned for backward compatibility (consumers read modules/reviewCards).
+    if (currentModule && isThematic(currentModule)) {
+      // planDynamicSession produces the real plan (exposed via sessionPlan below)
+      // but we still need a valid PlannedSession for backward-compat consumers.
+      // Return a minimal PlannedSession pointing at this module.
+      return {
+        modules: [currentModule.id],
+        estimatedMinutes: 15,
+        newItemCount: currentModule.vocab?.length ?? currentModule.items.length,
+        reviewCount: Math.min(dueCards.length, 3),
+        reviewCards: dueCards.slice(0, 3).map((c) => c.id),
+        isComplete: false,
+      };
+    }
+
     const session = calculateDailyPlan({
       size: planSize,
       progressMap,
@@ -47,6 +74,36 @@ export function useDailyPlan() {
     if (session.modules.length === 0 && session.reviewCount === 0) return null;
 
     return session;
+  }, [allProgress, planSize, allSrsCards]);
+
+  /**
+   * The dynamic session plan for the current thematic module.
+   * Null when the current module is a legacy (non-thematic) module.
+   */
+  const sessionPlan: SessionPlan | null = useMemo(() => {
+    const progressMap = new Map(
+      allProgress.map((p) => [p.moduleId, p]),
+    );
+
+    const allModules = getAllModules();
+    const dueCards = allSrsCards ? getDueCards(allSrsCards) : [];
+    const currentModule = getCurrentModule(allModules, progressMap);
+
+    if (!currentModule || !isThematic(currentModule)) return null;
+
+    // Build the known vocab set from all progress on this module's vocab items.
+    // For now, we treat every vocab item in the module as unknown until the user
+    // explicitly marks them known. In future, this will draw from the learner model.
+    const knownVocab = new Set<string>();
+    const knownGrammar = new Set<string>();
+
+    return planDynamicSession({
+      module: currentModule,
+      knownVocab,
+      knownGrammar,
+      dueCards,
+      size: planSize,
+    });
   }, [allProgress, planSize, allSrsCards]);
 
   async function markComplete(): Promise<void> {
@@ -68,5 +125,5 @@ export function useDailyPlan() {
     });
   }
 
-  return { plan, isComplete, markComplete };
+  return { plan, sessionPlan, isComplete, markComplete };
 }
