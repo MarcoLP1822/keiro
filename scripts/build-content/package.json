@@ -1,0 +1,21 @@
+{
+  "name": "@keiro/build-content",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "filter-tatoeba": "tsx src/tatoeba-filter.ts",
+    "annotate-furigana": "tsx src/furigana.ts",
+    "enrich-vocab": "tsx src/jlpt-data.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.0.0",
+    "typescript": "^5.8.0"
+  },
+  "dependencies": {
+    "@sglkc/kuromoji": "^1.1.0",
+    "kuroshiro": "^1.2.0",
+    "kuroshiro-analyzer-kuromoji": "^1.1.0"
+  }
+}
