@@ -1,5 +1,5 @@
 import type { Module, KanaItem, VocabItem, GrammarItem, Exercise, Answer } from '@keiro/types';
-import { createMultipleChoice, shuffle } from './exercises.js';
+import { createMultipleChoice, shuffle, buildOptionsWithCorrect } from './exercises.js';
 
 export interface PlacementResult {
   passedModuleIds: string[];
@@ -57,18 +57,14 @@ export function generatePlacementQuiz(
 function createVocabWordToMeaning(target: VocabItem, pool: VocabItem[]): Exercise {
   const distractorPool = pool.filter((item) => item.word !== target.word);
   const distractors = shuffle(distractorPool).slice(0, 3).map((d) => d.meaning);
-  const shuffledDistractors = shuffle(distractors);
-  const allOptions = [...shuffledDistractors];
-  const insertAt = Math.floor(Math.random() * (allOptions.length + 1));
-  allOptions.splice(insertAt, 0, target.meaning);
-  const correctIndex = insertAt;
+  const { options, correctIndex } = buildOptionsWithCorrect(distractors, target.meaning);
   const questionDetail = target.reading !== target.word ? target.reading : undefined;
 
   return {
     type: 'word-to-meaning',
     question: target.word,
     ...(questionDetail && { questionDetail }),
-    options: allOptions,
+    options,
     correctIndex,
     targetItem: target,
   };
@@ -83,17 +79,13 @@ function createGrammarPickCorrect(target: GrammarItem, pool: GrammarItem[]): Exe
     .filter((s): s is string => Boolean(s));
 
   const correctOption = correctExample?.japanese ?? '';
-  const shuffledDistractors = shuffle(distractors);
-  const allOptions = [...shuffledDistractors];
-  const insertAt = Math.floor(Math.random() * (allOptions.length + 1));
-  allOptions.splice(insertAt, 0, correctOption);
-  const correctIndex = insertAt;
+  const { options, correctIndex } = buildOptionsWithCorrect(distractors, correctOption);
 
   return {
     type: 'grammar-pick-correct',
     question: target.title,
     questionDetail: target.structure,
-    options: allOptions,
+    options,
     correctIndex,
     targetItem: target,
   };

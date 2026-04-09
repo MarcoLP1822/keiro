@@ -1,9 +1,6 @@
 /**
  * Vocab tokenization for filtered Tatoeba sentences.
  *
- * Reuses the same kuromoji initialisation pattern as furigana.ts so that
- * the tokenizer is only loaded once per process when both modules run together.
- *
  * For each sentence we:
  * 1. Tokenize the Japanese text with kuromoji
  * 2. Extract the base_form (dictionary form) of each token
@@ -12,15 +9,8 @@
  * 4. Store the unique dictionary forms as requiredVocab[] on the sentence.
  */
 
-import kuromoji, { type Tokenizer, type IpadicFeatures } from "@sglkc/kuromoji";
-import { createRequire } from "node:module";
-import path from "node:path";
 import type { FilteredSentence } from "./tatoeba-filter.js";
-
-// Resolve dict path the same way furigana.ts does.
-const _require = createRequire(import.meta.url);
-const kuromojiMain = _require.resolve("@sglkc/kuromoji");
-const DICT_PATH = path.join(path.dirname(kuromojiMain), "../dict");
+import { initTokenizer, getTokenizer } from "./tokenizer.js";
 
 // IPAdic part-of-speech tags to exclude from requiredVocab.
 // These are grammatical function words, not content vocabulary.
@@ -32,27 +22,6 @@ const EXCLUDED_POS = new Set([
   "BOS/EOS",  // boundary markers
   "フィラー", // filler words
 ]);
-
-let _tokenizer: Tokenizer<IpadicFeatures> | null = null;
-
-/**
- * Initialise the kuromoji tokenizer. Idempotent — safe to call multiple times.
- * Mirrors the pattern in furigana.ts so a single process can share the same dict.
- */
-async function initTokenizer(): Promise<void> {
-  if (_tokenizer !== null) return;
-
-  await new Promise<void>((resolve, reject) => {
-    kuromoji.builder({ dicPath: DICT_PATH }).build((err, tokenizer) => {
-      if (err) {
-        reject(new Error(`kuromoji init failed: ${String(err)}`));
-        return;
-      }
-      _tokenizer = tokenizer;
-      resolve();
-    });
-  });
-}
 
 /**
  * Tokenize a batch of filtered sentences and populate the requiredVocab field
@@ -66,9 +35,7 @@ export async function tokenizeSentences(
   sentences: FilteredSentence[]
 ): Promise<FilteredSentence[]> {
   await initTokenizer();
-
-  // _tokenizer is guaranteed non-null here because initTokenizer() resolves only on success.
-  const tokenizer = _tokenizer!;
+  const tokenizer = getTokenizer();
 
   const enriched: FilteredSentence[] = [];
 

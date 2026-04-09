@@ -11,6 +11,7 @@ import {
   generateImageExercise,
   generateSentenceReadingExercise,
   shuffle,
+  buildOptionsWithCorrect,
 } from './exercises.js';
 import { selectSentences } from './i-plus-one.js';
 
@@ -59,21 +60,16 @@ function generateVocabExercise(
   const distractorPool = pool.filter((v) => v.word !== item.word);
   const distractorCount = Math.min(3, distractorPool.length);
   const distractors = shuffle(distractorPool).slice(0, distractorCount);
-
-  const correctOption = item.meaning;
   const distractorOptions = distractors.map((d) => d.meaning);
 
-  const shuffledDistractors = shuffle(distractorOptions);
-  const allOptions = [...shuffledDistractors];
-  const insertAt = Math.floor(Math.random() * (allOptions.length + 1));
-  allOptions.splice(insertAt, 0, correctOption);
+  const { options, correctIndex } = buildOptionsWithCorrect(distractorOptions, item.meaning);
 
   return {
     type: 'word-to-meaning',
     question: item.word,
     questionDetail: item.reading !== item.word ? item.reading : undefined,
-    options: allOptions,
-    correctIndex: insertAt,
+    options,
+    correctIndex,
     targetItem: item,
   };
 }
@@ -98,17 +94,14 @@ function generateGrammarExercise(
 
   if (distractors.length === 0) return null;
 
-  const shuffledDistractors = shuffle(distractors);
-  const allOptions = [...shuffledDistractors];
-  const insertAt = Math.floor(Math.random() * (allOptions.length + 1));
-  allOptions.splice(insertAt, 0, correctOption);
+  const { options, correctIndex } = buildOptionsWithCorrect(distractors, correctOption);
 
   return {
     type: 'grammar-pick-correct',
     question: item.title,
     questionDetail: item.structure,
-    options: allOptions,
-    correctIndex: insertAt,
+    options,
+    correctIndex,
     targetItem: item,
   };
 }

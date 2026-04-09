@@ -71,6 +71,19 @@ export function StudyExercises() {
     setShowExitModal(false);
   }
 
+  // Exit confirmation modal — rendered once, shared across all view states
+  const exitModal = (
+    <Modal
+      isOpen={showExitModal}
+      title="Exit session?"
+      body="Progress for this exercise set will be lost."
+      primaryLabel="Exit"
+      secondaryLabel="Keep studying"
+      onPrimary={confirmExit}
+      onSecondary={cancelExit}
+    />
+  );
+
   // Study mode: waiting for useEffect to navigate
   if (score !== null && mode === 'study') {
     return null;
@@ -106,6 +119,7 @@ export function StudyExercises() {
             </button>
           </div>
         </div>
+        {exitModal}
       </PageContainer>
     );
   }
@@ -116,7 +130,7 @@ export function StudyExercises() {
   if (currentStep?.type === 'cooldown' && exercises.length > 0) {
     const cooldownExercise = exercises[0];
     // The targetItem on a sentence-reading exercise is the SentenceItem
-    const sentence = cooldownExercise.targetItem as unknown as SentenceItem;
+    const sentence = cooldownExercise.targetItem as SentenceItem;
     return (
       <PageContainer>
         <ReadingMoment
@@ -124,15 +138,7 @@ export function StudyExercises() {
           showFurigana={showFurigana}
           onContinue={() => handleComplete([])}
         />
-        <Modal
-          isOpen={showExitModal}
-          title="Exit session?"
-          body="Progress for this exercise set will be lost."
-          primaryLabel="Exit"
-          secondaryLabel="Keep studying"
-          onPrimary={confirmExit}
-          onSecondary={cancelExit}
-        />
+        {exitModal}
       </PageContainer>
     );
   }
@@ -162,15 +168,7 @@ export function StudyExercises() {
             Continue
           </button>
         </div>
-        <Modal
-          isOpen={showExitModal}
-          title="Exit session?"
-          body="Progress for this exercise set will be lost."
-          primaryLabel="Exit"
-          secondaryLabel="Keep studying"
-          onPrimary={confirmExit}
-          onSecondary={cancelExit}
-        />
+        {exitModal}
       </PageContainer>
     );
   }
@@ -185,15 +183,7 @@ export function StudyExercises() {
         onExit={handleExit}
         stepLabel={stepLabel}
       />
-      <Modal
-        isOpen={showExitModal}
-        title="Exit session?"
-        body="Progress for this exercise set will be lost."
-        primaryLabel="Exit"
-        secondaryLabel="Keep studying"
-        onPrimary={confirmExit}
-        onSecondary={cancelExit}
-      />
+      {exitModal}
     </>
   );
 }

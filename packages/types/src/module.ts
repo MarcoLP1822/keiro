@@ -78,7 +78,7 @@ export interface ReadingItem {
   questions: ReadingQuestion[];
 }
 
-export type ContentItem = KanaItem | VocabItem | GrammarItem | KanjiItem | ReadingItem;
+export type ContentItem = KanaItem | VocabItem | GrammarItem | KanjiItem | ReadingItem | SentenceItem;
 
 export type ModuleType = 'kana' | 'vocabulary' | 'grammar' | 'kanji' | 'reading' | 'thematic';
 export type ModuleLevel = 'beginner' | 'n5' | 'n4' | 'n3';

@@ -7,21 +7,12 @@
  * simple per-token reading extraction.
  */
 
-import kuromoji, { type Tokenizer, type IpadicFeatures } from "@sglkc/kuromoji";
-import { createRequire } from "node:module";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import type { FuriganaToken } from "@keiro/types";
+import { initTokenizer, getTokenizer } from "./tokenizer.js";
 
-export interface FuriganaToken {
-  text: string;
-  reading: string | null;
-}
-
-// Resolve the dict path from @sglkc/kuromoji's own installation location so
-// this works regardless of the working directory when the script is invoked.
-const _require = createRequire(import.meta.url);
-const kuromojiMain = _require.resolve("@sglkc/kuromoji");
-const DICT_PATH = path.join(path.dirname(kuromojiMain), "../dict");
+export type { FuriganaToken };
 
 // Kanji Unicode ranges: CJK Unified (4E00–9FFF), Extension A (3400–4DBF),
 // and CJK Compatibility Ideographs (F900–FAFF).
@@ -38,8 +29,6 @@ function katakanaToHiragana(str: string): string {
   );
 }
 
-let _tokenizer: Tokenizer<IpadicFeatures> | null = null;
-
 /**
  * Initialize the kuromoji tokenizer. Idempotent — safe to call multiple times.
  * Must be called once before annotateFurigana().
@@ -47,18 +36,7 @@ let _tokenizer: Tokenizer<IpadicFeatures> | null = null;
  * @throws {Error} If the dictionary fails to load.
  */
 export async function initFurigana(): Promise<void> {
-  if (_tokenizer !== null) return;
-
-  await new Promise<void>((resolve, reject) => {
-    kuromoji.builder({ dicPath: DICT_PATH }).build((err, tokenizer) => {
-      if (err) {
-        reject(new Error(`kuromoji init failed: ${String(err)}`));
-        return;
-      }
-      _tokenizer = tokenizer;
-      resolve();
-    });
-  });
+  await initTokenizer();
 }
 
 /**
@@ -71,13 +49,8 @@ export async function initFurigana(): Promise<void> {
  * @throws {Error} If initFurigana() has not been called yet.
  */
 export async function annotateFurigana(text: string): Promise<FuriganaToken[]> {
-  if (_tokenizer === null) {
-    throw new Error(
-      "Tokenizer not initialized. Call initFurigana() before annotateFurigana()."
-    );
-  }
-
-  const rawTokens = _tokenizer.tokenize(text);
+  const tokenizer = getTokenizer();
+  const rawTokens = tokenizer.tokenize(text);
 
   return rawTokens.map((token) => {
     const surface = token.surface_form;

@@ -16,6 +16,7 @@ export {
   generateSentenceReadingExercise,
   createMultipleChoice,
   shuffle,
+  buildOptionsWithCorrect,
 } from './exercises.js';
 
 export { selectSentences } from './i-plus-one.js';

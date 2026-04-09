@@ -78,7 +78,9 @@ export function ModuleComplete() {
       }
     }
 
-    createCards();
+    createCards().catch((err) => {
+      console.error('[ModuleComplete] Failed to create SRS cards:', err);
+    });
   }, [score, mod]);
 
   if (!score || !mod) return null;

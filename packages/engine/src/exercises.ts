@@ -6,7 +6,6 @@ import type {
   GrammarItem,
   ReadingItem,
   SentenceItem,
-  ContentItem,
   Exercise,
   KanaExerciseType,
   VocabExerciseType,
@@ -23,6 +22,26 @@ export function shuffle<T>(array: T[]): T[] {
     [result[i], result[j]] = [result[j], result[i]];
   }
   return result;
+}
+
+/**
+ * Shuffles distractors, inserts the correct answer at a random position,
+ * and returns the final options array with the correct index.
+ *
+ * Centralises the "insert-correct-at-random-position" pattern used across
+ * all multiple-choice exercise builders to prevent indexOf collisions with
+ * duplicate option strings.
+ */
+export function buildOptionsWithCorrect(
+  distractors: string[],
+  correct: string,
+  maxOptions: number = 4,
+): { options: string[]; correctIndex: number } {
+  const shuffled = shuffle(distractors).slice(0, maxOptions - 1);
+  const options = [...shuffled];
+  const insertAt = Math.floor(Math.random() * (options.length + 1));
+  options.splice(insertAt, 0, correct);
+  return { options, correctIndex: insertAt };
 }
 
 /**
@@ -74,17 +93,12 @@ export function createMultipleChoice(
       break;
   }
 
-  // Insert correct option at a random position to avoid indexOf collision with duplicate strings
-  const shuffledDistractors = shuffle(distractorOptions);
-  const allOptions = [...shuffledDistractors];
-  const insertAt = Math.floor(Math.random() * (allOptions.length + 1));
-  allOptions.splice(insertAt, 0, correctOption);
-  const correctIndex = insertAt;
+  const { options, correctIndex } = buildOptionsWithCorrect(distractorOptions, correctOption);
 
   return {
     type,
     question,
-    options: allOptions,
+    options,
     correctIndex,
     targetItem: target,
   };
@@ -180,17 +194,13 @@ function createVocabExercise(
       distractorOptions = distractors.map((d) => d.meaning);
   }
 
-  const shuffledDistractors = shuffle(distractorOptions);
-  const allOptions = [...shuffledDistractors];
-  const insertAt = Math.floor(Math.random() * (allOptions.length + 1));
-  allOptions.splice(insertAt, 0, correctOption);
-  const correctIndex = insertAt;
+  const { options, correctIndex } = buildOptionsWithCorrect(distractorOptions, correctOption);
 
   return {
     type,
     question,
     ...(questionDetail && { questionDetail }),
-    options: allOptions,
+    options,
     correctIndex,
     targetItem: target,
   };
@@ -217,20 +227,16 @@ function createGapFillExercise(
   );
   const samePOS = distractorPool.filter((item) => item.partOfSpeech === target.partOfSpeech);
   const source = samePOS.length >= 3 ? samePOS : distractorPool;
-  const distractors = shuffle(source).slice(0, 3).map((d) => d.word);
+  const distractorWords = shuffle(source).slice(0, 3).map((d) => d.word);
 
-  const shuffledDistractors = shuffle(distractors);
-  const allOptions = [...shuffledDistractors];
-  const insertAt = Math.floor(Math.random() * (allOptions.length + 1));
-  allOptions.splice(insertAt, 0, target.word);
-  const correctIndex = insertAt;
+  const { options, correctIndex } = buildOptionsWithCorrect(distractorWords, target.word);
 
   return {
     type: 'sentence-gap-fill',
     question: target.meaning,
     questionDetail: target.example.english,
     sentenceWithGap,
-    options: allOptions,
+    options,
     correctIndex,
     targetItem: target,
   };
@@ -319,16 +325,12 @@ function createKanjiExercise(
       distractorOptions = distractors.map((d) => d.meanings[0]);
   }
 
-  const shuffledDistractors = shuffle(distractorOptions);
-  const allOptions = [...shuffledDistractors];
-  const insertAt = Math.floor(Math.random() * (allOptions.length + 1));
-  allOptions.splice(insertAt, 0, correctOption);
-  const correctIndex = insertAt;
+  const { options, correctIndex } = buildOptionsWithCorrect(distractorOptions, correctOption);
 
   return {
     type,
     question,
-    options: allOptions,
+    options,
     correctIndex,
     targetItem: target,
   };
@@ -443,18 +445,16 @@ export function generateGrammarExercises(
         .map((g) => g.examples[0]?.japanese)
         .filter(Boolean) as string[];
 
-      const correctOption = correctExample.japanese;
-      const shuffledDistractors = shuffle(distractorSentences);
-      const allOptions = [...shuffledDistractors];
-      const insertAt = Math.floor(Math.random() * (allOptions.length + 1));
-      allOptions.splice(insertAt, 0, correctOption);
-      const correctIndex = insertAt;
+      const { options, correctIndex } = buildOptionsWithCorrect(
+        distractorSentences,
+        correctExample.japanese,
+      );
 
       exercises.push({
         type: 'grammar-pick-correct',
         question: item.title,
         questionDetail: item.structure,
-        options: allOptions,
+        options,
         correctIndex,
         targetItem: item,
       });
@@ -504,17 +504,16 @@ export function generateReadingExercises(module: Module): Exercise[] {
 
     // Only generate if we have at least 1 distractor
     if (distractorTranslations.length > 0) {
-      const shuffledDistractors = shuffle(distractorTranslations);
-      const allOptions = [...shuffledDistractors];
-      const insertAt = Math.floor(Math.random() * (allOptions.length + 1));
-      allOptions.splice(insertAt, 0, item.translation);
-      const correctIndex = insertAt;
+      const { options, correctIndex } = buildOptionsWithCorrect(
+        distractorTranslations,
+        item.translation,
+      );
 
       exercises.push({
         type: 'reading-translation',
         question: item.passage,
         questionDetail: 'Choose the correct translation',
-        options: allOptions,
+        options,
         correctIndex,
         targetItem: item,
       });
@@ -544,22 +543,15 @@ export function generateImageExercise(
   );
   const distractorCount = Math.min(3, distractorPool.length);
   const distractors = shuffle(distractorPool).slice(0, distractorCount);
-
-  const correctOption = vocabItem.word;
   const distractorOptions = distractors.map((d) => d.word);
 
-  // Insert correct answer at a random position — avoid indexOf collision
-  const shuffledDistractors = shuffle(distractorOptions);
-  const allOptions = [...shuffledDistractors];
-  const insertAt = Math.floor(Math.random() * (allOptions.length + 1));
-  allOptions.splice(insertAt, 0, correctOption);
-  const correctIndex = insertAt;
+  const { options, correctIndex } = buildOptionsWithCorrect(distractorOptions, vocabItem.word);
 
   return {
     type: 'image-vocab',
     question: vocabItem.meaning,
     imageUrl: vocabItem.imageUrl,
-    options: allOptions,
+    options,
     correctIndex,
     targetItem: vocabItem,
   };
@@ -578,28 +570,17 @@ export function generateSentenceReadingExercise(
   );
   const distractorCount = Math.min(3, distractorPool.length);
   const distractors = shuffle(distractorPool).slice(0, distractorCount);
-
-  const correctOption = sentence.english;
   const distractorOptions = distractors.map((d) => d.english);
 
-  // Insert correct answer at a random position — avoid indexOf collision
-  const shuffledDistractors = shuffle(distractorOptions);
-  const allOptions = [...shuffledDistractors];
-  const insertAt = Math.floor(Math.random() * (allOptions.length + 1));
-  allOptions.splice(insertAt, 0, correctOption);
-  const correctIndex = insertAt;
-
-  // SentenceItem is structurally similar to ContentItem for runtime purposes.
-  // We cast through `unknown` to satisfy the Exercise.targetItem union type.
-  const targetItem = sentence as unknown as ContentItem;
+  const { options, correctIndex } = buildOptionsWithCorrect(distractorOptions, sentence.english);
 
   return {
     type: 'sentence-reading',
     question: sentence.japanese,
     questionDetail: 'What does this sentence mean?',
     furiganaTokens: sentence.furigana,
-    options: allOptions,
+    options,
     correctIndex,
-    targetItem,
+    targetItem: sentence,
   };
 }
