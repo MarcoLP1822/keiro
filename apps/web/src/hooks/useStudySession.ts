@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import type { Exercise, Answer, ModuleScore } from '@keiro/types';
+import type { Exercise, Answer, ModuleScore, SessionPlan, SessionStep } from '@keiro/types';
 import {
   generateKanaExercises,
   generateAudioExercises,
@@ -19,12 +19,37 @@ import {
 } from '@keiro/content';
 import { useSettings } from './useSettings';
 
-export function useStudySession(moduleId: string, mode: 'study' | 'review') {
+interface StudySessionResult {
+  exercises: Exercise[];
+  isReady: boolean;
+  score: ModuleScore | null;
+  handleComplete: (answers: Answer[]) => void;
+  // Session plan support
+  currentStep: SessionStep | null;
+  currentStepIndex: number;
+}
+
+export function useStudySession(
+  moduleId: string,
+  mode: 'study' | 'review',
+  sessionPlan?: SessionPlan,
+): StudySessionResult {
   const { audio } = useSettings();
   const [exercises, setExercises] = useState<Exercise[]>([]);
   const [score, setScore] = useState<ModuleScore | null>(null);
+  const [currentStepIndex, setCurrentStepIndex] = useState(0);
 
   useEffect(() => {
+    // Session plan mode: load exercises from the first step
+    if (sessionPlan) {
+      const firstStep = sessionPlan.steps[0];
+      setExercises(firstStep ? firstStep.exercises : []);
+      setCurrentStepIndex(0);
+      setScore(null);
+      return;
+    }
+
+    // Legacy single-module mode
     const mod = getModuleById(moduleId);
     if (!mod) return;
 
@@ -63,10 +88,29 @@ export function useStudySession(moduleId: string, mode: 'study' | 'review') {
 
     setExercises(generated);
     setScore(null);
-  }, [moduleId]); // audio intentionally excluded: exercises are generated once per module, not on every audio toggle
+  }, [moduleId, sessionPlan]); // audio intentionally excluded: exercises are generated once per module, not on every audio toggle
+
+  const currentStep: SessionStep | null = sessionPlan
+    ? (sessionPlan.steps[currentStepIndex] ?? null)
+    : null;
 
   const handleComplete = useCallback(
     (answers: Answer[]) => {
+      if (sessionPlan) {
+        const nextIndex = currentStepIndex + 1;
+        if (nextIndex < sessionPlan.steps.length) {
+          // Advance to next step
+          const nextStep = sessionPlan.steps[nextIndex];
+          setCurrentStepIndex(nextIndex);
+          setExercises(nextStep.exercises);
+        } else {
+          // All steps complete — signal completion
+          setScore({ score: 100, passed: true, totalQuestions: answers.length, correctAnswers: answers.filter((a) => a.isCorrect).length, mistakes: answers.filter((a) => !a.isCorrect) });
+        }
+        return;
+      }
+
+      // Legacy mode
       if (mode === 'study') {
         setScore(scoreModule(answers));
       } else {
@@ -74,7 +118,7 @@ export function useStudySession(moduleId: string, mode: 'study' | 'review') {
         setScore({ score: 0, passed: false, totalQuestions: 0, correctAnswers: 0, mistakes: [] });
       }
     },
-    [mode],
+    [mode, sessionPlan, currentStepIndex],
   );
 
   return {
@@ -82,5 +126,7 @@ export function useStudySession(moduleId: string, mode: 'study' | 'review') {
     isReady: exercises.length > 0,
     score,
     handleComplete,
+    currentStep,
+    currentStepIndex,
   };
 }

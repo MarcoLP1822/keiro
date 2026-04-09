@@ -21,9 +21,10 @@ interface ExerciseRendererProps {
   exercises: Exercise[];
   onComplete: (answers: Answer[]) => void;
   onExit?: () => void;
+  stepLabel?: string;
 }
 
-export function ExerciseRenderer({ exercises, onComplete, onExit }: ExerciseRendererProps) {
+export function ExerciseRenderer({ exercises, onComplete, onExit, stepLabel }: ExerciseRendererProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Answer[]>([]);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -149,7 +150,7 @@ export function ExerciseRenderer({ exercises, onComplete, onExit }: ExerciseRend
       <TopBar
         onBack={onExit}
         rightAction={
-          <ProgressCounter current={currentIndex + 1} total={exercises.length} />
+          <ProgressCounter current={currentIndex + 1} total={exercises.length} stepLabel={stepLabel} />
         }
       />
       <PageContainer>
