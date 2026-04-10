@@ -17,8 +17,6 @@
   },
   "dependencies": {
     "@keiro/types": "workspace:*",
-    "@sglkc/kuromoji": "^1.1.0",
-    "kuroshiro": "^1.2.0",
-    "kuroshiro-analyzer-kuromoji": "^1.1.0"
+    "@sglkc/kuromoji": "^1.1.0"
   }
 }

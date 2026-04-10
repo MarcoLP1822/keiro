@@ -37,14 +37,18 @@ export function useDailyPlan() {
 
   const isComplete = todayPlan?.completed ?? false;
 
-  const plan: PlannedSession | null = useMemo(() => {
+  // Shared derivations consumed by both plan and sessionPlan
+  const sharedData = useMemo(() => {
     const progressMap = new Map(
       allProgress.map((p) => [p.moduleId, p]),
     );
-
     const allModules = getAllModules();
     const dueCards = allSrsCards ? getDueCards(allSrsCards) : [];
+    return { progressMap, allModules, dueCards };
+  }, [allProgress, allSrsCards]);
 
+  const plan: PlannedSession | null = useMemo(() => {
+    const { progressMap, allModules, dueCards } = sharedData;
     const currentModule = getCurrentModule(allModules, progressMap);
 
     // Thematic modules use the dynamic session planner; the legacy PlannedSession
@@ -74,19 +78,14 @@ export function useDailyPlan() {
     if (session.modules.length === 0 && session.reviewCount === 0) return null;
 
     return session;
-  }, [allProgress, planSize, allSrsCards]);
+  }, [sharedData, planSize]);
 
   /**
    * The dynamic session plan for the current thematic module.
    * Null when the current module is a legacy (non-thematic) module.
    */
   const sessionPlan: SessionPlan | null = useMemo(() => {
-    const progressMap = new Map(
-      allProgress.map((p) => [p.moduleId, p]),
-    );
-
-    const allModules = getAllModules();
-    const dueCards = allSrsCards ? getDueCards(allSrsCards) : [];
+    const { progressMap, allModules, dueCards } = sharedData;
     const currentModule = getCurrentModule(allModules, progressMap);
 
     if (!currentModule || !isThematic(currentModule)) return null;
@@ -104,7 +103,7 @@ export function useDailyPlan() {
       dueCards,
       size: planSize,
     });
-  }, [allProgress, planSize, allSrsCards]);
+  }, [sharedData, planSize]);
 
   async function markComplete(): Promise<void> {
     const date = todayString();

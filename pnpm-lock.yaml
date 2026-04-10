@@ -192,12 +192,6 @@ importers:
       '@sglkc/kuromoji':
         specifier: ^1.1.0
         version: 1.1.0
-      kuroshiro:
-        specifier: ^1.2.0
-        version: 1.2.0
-      kuroshiro-analyzer-kuromoji:
-        specifier: ^1.1.0
-        version: 1.1.0
     devDependencies:
       tsx:
         specifier: ^4.0.0
@@ -2619,16 +2613,6 @@ packages:
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
 
-  kuromoji@0.1.2:
-    resolution: {integrity: sha512-V0dUf+C2LpcPEXhoHLMAop/bOht16Dyr+mDiIE39yX3vqau7p80De/koFqpiTcL1zzdZlc3xuHZ8u5gjYRfFaQ==}
-
-  kuroshiro-analyzer-kuromoji@1.1.0:
-    resolution: {integrity: sha512-BSJFhpsQdPwfFLfjKxfLA9iL+/PC6LCR9vgwgb5Jc7jZwk9ilX8SAV6CwhAQZY611tiuhbB52ONYKDO8hgY1bA==}
-
-  kuroshiro@1.2.0:
-    resolution: {integrity: sha512-yBGCK9oDOY3LGZ/KXaN9m7ADcAuSczOR2FoMRYwHLUlis3/o/uxdMVROAjENFO0NQJgALhIdWxI/vIBVrMCk9w==}
-    engines: {node: '>=6.5.0'}
-
   leven@3.1.0:
     resolution: {integrity: sha512-qsda+H8jTaUaN/x5vzW2rzc+8Rw4TAQ/4KjB46IwK5VH+IlVeeeje/EoZRpiXvIqjFgK84QffqPztGI3VBLG1A==}
     engines: {node: '>=6'}
@@ -3495,9 +3479,6 @@ packages:
   yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
-
-  zlibjs@0.3.1:
-    resolution: {integrity: sha512-+J9RrgTKOmlxFSDHo0pI1xM6BLVUv+o0ZT9ANtCxGkjIVCCUdx9alUF8Gm+dGLKbkkkidWIHFDZHDMpfITt4+w==}
 
 snapshots:
 
@@ -5949,20 +5930,6 @@ snapshots:
     dependencies:
       json-buffer: 3.0.1
 
-  kuromoji@0.1.2:
-    dependencies:
-      async: 2.6.4
-      doublearray: 0.0.2
-      zlibjs: 0.3.1
-
-  kuroshiro-analyzer-kuromoji@1.1.0:
-    dependencies:
-      kuromoji: 0.1.2
-
-  kuroshiro@1.2.0:
-    dependencies:
-      '@babel/runtime': 7.29.2
-
   leven@3.1.0: {}
 
   levn@0.4.1:
@@ -6899,5 +6866,3 @@ snapshots:
   yallist@3.1.1: {}
 
   yocto-queue@0.1.0: {}
-
-  zlibjs@0.3.1: {}

@@ -99,7 +99,7 @@ export function ExerciseRenderer({ exercises, onComplete, onExit, stepLabel }: E
   }, [currentIndex, selectedIndex, exercise, answers, exercises.length, onComplete]);
 
   // For typing/sentence-order: show feedback bar after submission
-  const handleTypingSubmit = useCallback((isCorrect: boolean) => {
+  const handleBooleanSubmit = useCallback((isCorrect: boolean) => {
     if (audio) {
       if (isCorrect) playCorrectSound();
       else playIncorrectSound();
@@ -108,17 +108,6 @@ export function ExerciseRenderer({ exercises, onComplete, onExit, stepLabel }: E
     else vibrateError();
     setShowFeedback(true);
     // Store result temporarily to use in handleNext
-    setSelectedIndex(isCorrect ? 0 : -1);
-  }, [audio]);
-
-  const handleSentenceOrderSubmit = useCallback((isCorrect: boolean) => {
-    if (audio) {
-      if (isCorrect) playCorrectSound();
-      else playIncorrectSound();
-    }
-    if (isCorrect) vibrateSuccess();
-    else vibrateError();
-    setShowFeedback(true);
     setSelectedIndex(isCorrect ? 0 : -1);
   }, [audio]);
 
@@ -172,7 +161,7 @@ export function ExerciseRenderer({ exercises, onComplete, onExit, stepLabel }: E
         ) : mode === 'typing' && exercise.correctAnswer ? (
           <TypingInput
             correctAnswer={exercise.correctAnswer}
-            onSubmit={handleTypingSubmit}
+            onSubmit={handleBooleanSubmit}
           />
         ) : mode === 'reading' ? (
           <>
@@ -198,7 +187,7 @@ export function ExerciseRenderer({ exercises, onComplete, onExit, stepLabel }: E
             <SentenceOrder
               scrambledWords={exercise.scrambledWords}
               correctOrder={exercise.correctOrder}
-              onSubmit={handleSentenceOrderSubmit}
+              onSubmit={handleBooleanSubmit}
             />
           </>
         ) : (

@@ -184,6 +184,10 @@ export function planDynamicSession(config: SessionConfig): SessionPlan {
   const grammar: GrammarItem[] = module.grammar ?? [];
   const sentences: SentenceItem[] = module.sentences ?? [];
 
+  if (vocab.length === 0 && grammar.length === 0) {
+    console.warn(`[session-planner] Thematic module "${module.id}" has no vocab or grammar content`);
+  }
+
   const steps: SessionStep[] = [];
 
   // --- Step 1: Review (SRS due cards) ---

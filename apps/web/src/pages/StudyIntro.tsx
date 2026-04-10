@@ -31,9 +31,14 @@ export function StudyIntro() {
   const typeLabel = module.type.charAt(0).toUpperCase() + module.type.slice(1);
   const levelLabel = (module.level ?? 'beginner').toUpperCase();
   const icon = TYPE_ICONS[module.type] ?? 'school';
-  const estimatedMinutes = Math.max(5, Math.round(module.items.length * 1));
 
-  const previewItems = module.items.slice(0, 5).map((item: unknown) => {
+  const itemCount = module.theme
+    ? (module.vocab?.length ?? 0) + (module.grammar?.length ?? 0)
+    : module.items.length;
+  const estimatedMinutes = Math.max(5, Math.round(itemCount * 1));
+
+  const previewSource = module.theme ? (module.vocab ?? []) : module.items;
+  const previewItems = previewSource.slice(0, 5).map((item: unknown) => {
     const obj = item as Record<string, string>;
     return obj.character ?? obj.kanji ?? obj.word ?? obj.id ?? '';
   });
@@ -45,7 +50,7 @@ export function StudyIntro() {
           className="text-sm font-medium px-3 py-1 rounded-full"
           style={{ background: 'var(--k-secondary-container)', color: 'var(--k-on-secondary-container)' }}
         >
-          {module.items.length} items
+          {itemCount} items
         </span>
       } />
 
