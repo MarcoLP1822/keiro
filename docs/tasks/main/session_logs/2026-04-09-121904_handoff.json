@@ -1,0 +1,73 @@
+{
+  "version": "1.1",
+  "timestamp": "2026-04-09-121904",
+  "branch_name": "main",
+  "task_name": "reading-first-keiro",
+  "session_number": 3,
+  "progress_update": {
+    "summary": "Wave 1 of reading-first execution complete. Type definitions (FuriganaToken, SentenceItem, SessionPlan, image/theme fields) added to packages/types and engine. Build-content workspace created with furigana annotator using @sglkc/kuromoji (kuroshiro-analyzer-kuromoji incompatible with the fork — used kuromoji directly). Both committed and pushed. Ready for Wave 2.",
+    "goal": "Transform Keiro from quiz-based to reading-first. Vertical slice: Self-Introduction topic end-to-end. Full task breakdown in docs/tasks/main/specs/tasks.md (5 phases, 17 parent tasks, 30 sub-tasks).",
+    "accomplished": [
+      "Task 2.1.1: Added FuriganaToken and SentenceItem types to packages/types/src/module.ts",
+      "Task 2.1.2: Extended Exercise (imageUrl, furiganaTokens) and VocabItem (imageUrl, examples) types; added SessionStep + SessionPlan types",
+      "Task 2.1.3: Added theme field to Module, isThematic() helper in engine",
+      "Task 1.1.1: Created scripts/build-content/ pnpm workspace with TypeScript + tsx",
+      "Task 1.3.1: Implemented furigana annotator using @sglkc/kuromoji directly — tested and working (東京→とうきょう)"
+    ],
+    "now": "Wave 1 complete. About to start Wave 2: Tatoeba filter implementation (1.1.2, 1.1.3), JLPT vocab enrichment (1.4), filter tests (1.2), FuriganaText UI component (4.1), i+1 selector (3.1), exercise generators (3.3).",
+    "next_steps": [
+      "Wave 2: Implement Tatoeba download + filter pipeline (1.1.2) with vocab tokenization (1.1.3)",
+      "Wave 2: Download and parse JLPT word lists (1.4.1)",
+      "Wave 2: Implement i+1 sentence selector (3.1.1)",
+      "Wave 2: Create FuriganaText React component (4.1.1)",
+      "Wave 2: Implement image-vocab and sentence-reading exercise generators (3.3.1, 3.3.2)",
+      "Wave 3: Assemble Self-Introduction pilot content (2.2.1), session planner (3.2), ReadingCard + ImageExercise UI"
+    ],
+    "confidence": "high",
+    "constraints": [
+      "kuroshiro-analyzer-kuromoji is incompatible with @sglkc/kuromoji fork — use kuromoji tokenizer directly for all downstream tasks",
+      "kuroshiro package installed but unused — can be removed from build-content dependencies",
+      "Tatoeba quality: only 1.6% fully verified — aggressive filtering needed in 1.1.2"
+    ],
+    "decisions": [
+      "Used @sglkc/kuromoji directly instead of kuroshiro wrapper — simpler, works correctly, per-token control",
+      "FuriganaToken defined inline in furigana.ts AND in packages/types — furigana.ts should import from @keiro/types in Wave 2",
+      "ModuleType union still needs 'thematic' added when creating pilot content (2.2)"
+    ],
+    "blockers": [],
+    "open_questions": [],
+    "risks": [
+      "Tatoeba filtering may yield few usable sentences for self-introduction topic specifically"
+    ]
+  },
+  "working_set": {
+    "key_files": [
+      "scripts/build-content/src/furigana.ts",
+      "scripts/build-content/package.json",
+      "packages/types/src/module.ts",
+      "packages/types/src/exercise.ts",
+      "packages/engine/src/daily-plan.ts",
+      "docs/tasks/main/specs/tasks.md",
+      "docs/tasks/main/specs/plan.md",
+      "docs/tasks/main/concepts/scope.md"
+    ],
+    "active_ids": [],
+    "recent_commands": [
+      "npx tsx src/test-furigana.ts",
+      "pnpm --filter @keiro/web exec tsc --noEmit",
+      "git push"
+    ]
+  },
+  "context": {
+    "wip_state": "clean",
+    "last_commit": "aa4000f"
+  },
+  "wave_progress": {
+    "wave_1_complete": ["2.1.1", "2.1.2", "2.1.3", "1.1.1", "1.3.1"],
+    "wave_1_skipped": ["1.5.1 (manual image curation)"],
+    "wave_2_pending": ["1.1.2", "1.1.3", "1.2.1", "1.4.1", "3.1.1", "3.3.1", "3.3.2", "4.1.1"],
+    "wave_3_pending": ["2.2.1", "3.2.1", "3.2.2", "4.2.1", "4.3.1", "4.3.2", "4.5.1"],
+    "wave_4_pending": ["2.3.1", "4.4.1", "4.4.2", "4.4.3"],
+    "wave_5_pending": ["5.1.1", "5.2.1", "5.3.1", "5.4.1"]
+  }
+}

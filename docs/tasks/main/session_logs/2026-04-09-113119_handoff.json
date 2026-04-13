@@ -1,0 +1,77 @@
+{
+  "version": "1.1",
+  "timestamp": "2026-04-09-113119",
+  "branch_name": "main",
+  "task_name": "reading-first-keiro",
+  "session_number": 2,
+  "continuity": {
+    "started": "2026-04-08",
+    "sessions_reviewed": 0,
+    "arc_goal": "Transform Keiro from quiz-based to reading-first Japanese learning app. Users read real Japanese from day one with thematic curriculum, i+1 sentence selection, dynamic sessions, furigana toggle, and image exercises. Success metric: read Yotsuba at 80% comprehension after completing N3 path."
+  },
+  "progress_update": {
+    "summary": "Completed the full Digital Karesansui design system migration (all 17 pages + 13 components), ran a comprehensive debug audit fixing 17 bugs (UTC timezone, race conditions, dark mode, type safety), and then scoped + planned the major 'Reading-First' transformation. The scope doc, implementation plan, and full task breakdown are ready for execution.",
+    "goal": "Transform Keiro from quiz-based to reading-first Japanese learning app. Users read real Japanese from day one with thematic curriculum, i+1 sentence selection, dynamic sessions, furigana toggle, and image exercises. Success metric: read Yotsuba at 80% comprehension after completing N3 path.",
+    "accomplished": [
+      "Design system Phase 2 complete: all 17 pages + 13 components migrated to Digital Karesansui, zero --ios-* references remain, legacy aliases removed from index.css",
+      "Created shared PageHeader + BottomNav (5 tabs) components, removed redundant TopBars from all BottomNav pages",
+      "Comprehensive debug audit: fixed 17 bugs across 21 files — UTC timezone (localDateString helper), markComplete TOCTOU race (Dexie transaction), exercises indexOf duplicate fix (8 occurrences), sync.ts upsert error handling + concurrency guard, dark mode hardcoded colors, type='button' on 11 components",
+      "Fixed UX bugs: FeedbackBar auto-advance removed (user controls Next), iOS back swipe disabled, ModuleComplete overflow/particles cleaned up, Welcome page simplified",
+      "Scoped and planned Reading-First feature: scope.md + task_context.md + plan.md + tasks.md — 5 phases, 17 parent tasks, 30 sub-tasks, vertical slice approach with Self-Introduction pilot topic"
+    ],
+    "now": "Completed task breakdown for Reading-First feature. Ready to start Wave 1 execution (Tatoeba fetcher, furigana annotator, type definitions, image curation).",
+    "next_steps": [
+      "Execute Wave 1: Create scripts/build-content workspace, implement Tatoeba filter, furigana annotator, new types (FuriganaToken, SentenceItem, image fields)",
+      "Execute Wave 2: JLPT enrichment, i+1 selector, exercise generators, FuriganaText component",
+      "Execute Wave 3: Self-Introduction pilot content, session planner, ReadingCard, ImageExercise, ReadingMoment",
+      "Execute Wave 4-5: Dynamic session UI, Home/Path integration, backward compat verification"
+    ],
+    "confidence": "high",
+    "constraints": [
+      "Tatoeba quality: only 1.6% of JP-EN pairs are fully verified — aggressive filtering needed",
+      "EDRDG license: not OSI, commercial use requires contacting EDRDG — mitigate by open-sourcing content package",
+      "Furigana accuracy ~95-98% with kuromoji/kuroshiro — acceptable for MVP",
+      "No official JLPT word lists — using Jonathan Waller/Tanos community standard",
+      "Images: Unsplash ToS prohibits bundling, use Wikimedia Commons CC0 instead"
+    ],
+    "decisions": [
+      "Vertical Slice approach: build Self-Introduction topic end-to-end before scaling",
+      "Tatoeba + EDRDG for sentences, no LLM generation (reliability concern per user)",
+      "Pre-computed furigana at build time with kuroshiro + @sglkc/kuromoji",
+      "Thematic curriculum within JLPT levels — topics like Animals, Family, Food instead of abstract type blocks"
+    ],
+    "blockers": [],
+    "open_questions": [],
+    "risks": [
+      "Tatoeba filtering may yield too few usable sentences for pilot topic",
+      "Thematic reorganization is large — phased to pilot first",
+      "CC BY-SA on EDRDG data needs legal review for commercial"
+    ]
+  },
+  "working_set": {
+    "key_files": [
+      "docs/tasks/main/concepts/scope.md",
+      "docs/tasks/main/specs/plan.md",
+      "docs/tasks/main/specs/tasks.md",
+      "docs/tasks/main/task_context.md",
+      "packages/types/src/module.ts",
+      "packages/types/src/exercise.ts",
+      "packages/engine/src/exercises.ts",
+      "packages/engine/src/daily-plan.ts",
+      "packages/content/src/index.ts",
+      "apps/web/src/hooks/useStudySession.ts",
+      "apps/web/src/components/exercise/ExerciseRenderer.tsx"
+    ],
+    "active_ids": [],
+    "recent_commands": [
+      "pnpm --filter @keiro/web exec tsc --noEmit",
+      "pnpm --filter @keiro/web test",
+      "pnpm --filter @keiro/web build",
+      "git push"
+    ]
+  },
+  "context": {
+    "wip_state": "uncommitted",
+    "last_commit": "5ef4b76"
+  }
+}

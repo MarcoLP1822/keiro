@@ -9,7 +9,7 @@
    - Include: vocab (15-20 items), grammar (3-5 points), sentences (10-15 with furigana), readings (2-3 checkpoints)
 
 3. **Furigana**: For each Japanese sentence, create FuriganaToken[] arrays
-   - Use the furigana annotator: `cd scripts/build-content && npx tsx src/furigana.ts`
+   - Use the furigana annotator: `cd scripts/build-content && npx tsx src/test-furigana.ts`
    - Or manually construct tokens: `{ text: "漢字", reading: "かんじ" }` for kanji, `{ text: "は", reading: null }` for kana
 
 4. **Import in content index**: Add import + spread in `packages/content/src/index.ts`

@@ -7,7 +7,7 @@
     "build": "tsc",
     "test": "vitest run",
     "filter-tatoeba": "tsx src/tatoeba-filter.ts",
-    "annotate-furigana": "tsx src/furigana.ts",
+    "annotate-furigana": "tsx src/test-furigana.ts",
     "enrich-vocab": "tsx src/jlpt-data.ts"
   },
   "devDependencies": {

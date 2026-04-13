@@ -1,0 +1,78 @@
+{
+  "version": "1.1",
+  "timestamp": "2026-04-07-112152",
+  "branch_name": "main",
+  "task_name": "keiro-design-system-migration",
+  "session_number": 1,
+  "progress_update": {
+    "summary": "We implemented the admin dashboard, fixed a pile of bugs, ran a full codebase cleanup, shipped all production readiness items (icons, meta tags, privacy policy, code splitting, fail-loud error handling, security headers, password auth), and started migrating the design system from Apple HIG to a custom 'Digital Karesansui' zen-garden theme from Stitch. Phase 1 (foundation) is merged — Phase 2 (screen-by-screen rewrites) is next.",
+    "goal": "Ship Keiro as a public-facing Japanese learning PWA with a distinctive, production-quality design system. 17 screens need to be rewritten to match the new Stitch design.",
+    "accomplished": [
+      "Admin dashboard: auth guard, user list/detail, ban/unban/delete, analytics, audit trail, GDPR self-service",
+      "Bug fixes: reading feedback, kana script isolation, OTP spacing, scroll-to-top, audio queueing, PathMap expansion",
+      "Codebase cleanup: removed 180 lines of dead code, consolidated duplicates, fixed DRY violations",
+      "Production readiness: PNG icons, meta tags, robots.txt, privacy policy, React.lazy code splitting, Vite manual chunks, fail-loud error handling, offline banner, CSP headers",
+      "Auth: replaced OTP with email+password, added forgot password flow",
+      "Design system Phase 1: new CSS tokens (teal/beige/cream palette), Noto Serif JP + Manrope fonts, Material Symbols icons, silk gradient buttons, glassmorphic headers, updated TopBar/PageContainer/PrimaryButton/SecondaryButton/ProgressBar/SegmentedControl/AnswerOptions/FeedbackBar"
+    ],
+    "now": "Design system migration Phase 2 — need to rewrite all 17 page components to match the Stitch design. The foundation (CSS variables, fonts, layout components, exercise UI) is done. Legacy --ios-* CSS variables are aliased to new --k-* tokens for backward compat during migration.",
+    "next_steps": [
+      "Phase 2: Rewrite Home.tsx with bento grid streak/level cards, daily plan list, silk gradient CTA, bottom nav bar",
+      "Phase 2: Rewrite PathMap.tsx with dashed vertical timeline, node states (completed/active/locked), zen quote cards",
+      "Phase 2: Rewrite Settings.tsx with grouped section cards, toggle switches, material icons per section",
+      "Phase 2: Rewrite Login.tsx, Welcome.tsx, KanaChart.tsx, Stats.tsx, About.tsx, Privacy.tsx, all exercise pages, ModuleComplete.tsx, StudyIntro.tsx, SrsReview.tsx, Review.tsx, LeechReview.tsx",
+      "Add bottom navigation bar component (Home/Path/Chart/Stats tabs with active dot indicator)",
+      "Remove legacy --ios-* CSS variable aliases after all screens are migrated",
+      "Run Supabase migration: ALTER TABLE srs_cards ADD COLUMN lapse_count/is_leech"
+    ],
+    "confidence": "high",
+    "constraints": [
+      "No Sentry (user declined paid plan) — ErrorBoundary logs to console only",
+      "PWA on iOS: service worker cache requires full close+reopen to update",
+      "Supabase free tier: 3 emails/hour rate limit on auth"
+    ],
+    "decisions": [
+      "Replaced Apple HIG design with custom 'Digital Karesansui' zen-garden theme from Stitch",
+      "Email+password auth instead of OTP (less friction for returning users)",
+      "Error handling philosophy: Fail Loud, Never Fake — visible failures over silent fallbacks"
+    ],
+    "blockers": [],
+    "open_questions": [
+      "Admin dashboard RLS fix (recursive policy → USING(false)) needs user to verify it works after Supabase rate limit resets",
+      "Custom domain not yet purchased — og:url points to vercel.app subdomain"
+    ],
+    "risks": [
+      "Design migration is incremental — during Phase 2 some screens will have old iOS style while others have new zen style. Legacy aliases bridge this gap.",
+      "Bottom nav bar doesn't exist yet — must be created as a new component before screen rewrites can fully match Stitch designs"
+    ]
+  },
+  "working_set": {
+    "key_files": [
+      "apps/web/src/index.css",
+      "apps/web/src/components/layout/TopBar.tsx",
+      "apps/web/src/components/layout/PageContainer.tsx",
+      "apps/web/src/components/common/PrimaryButton.tsx",
+      "apps/web/src/components/common/SegmentedControl.tsx",
+      "apps/web/src/components/exercise/AnswerOptions.tsx",
+      "apps/web/src/components/exercise/FeedbackBar.tsx",
+      "apps/web/src/pages/Home.tsx",
+      "apps/web/src/pages/PathMap.tsx",
+      "apps/web/src/pages/Settings.tsx",
+      "apps/web/src/App.tsx",
+      "C:/Users/Youcanprint1/Downloads/stitch/stitch/keiro_zen/DESIGN.md"
+    ],
+    "active_ids": [],
+    "recent_commands": [
+      "pnpm --filter @keiro/web exec tsc --noEmit",
+      "pnpm --filter @keiro/web test",
+      "pnpm --filter @keiro/web build",
+      "pnpm --filter @keiro/engine test"
+    ]
+  },
+  "context": {
+    "wip_state": "clean",
+    "last_commit": "3080522",
+    "stitch_reference": "C:/Users/Youcanprint1/Downloads/stitch/stitch/ — 17 subfolders with code.html + screen.png each, plus keiro_zen/DESIGN.md with full design system spec",
+    "design_system_analysis": "Full extraction of all 17 Stitch screens done by analyst agent — covers color palette, typography, icons list, component patterns (TopBar, BottomNav, cards, buttons, chips, progress bars, toggles, exercise UI, feedback bars, SRS buttons, flashcards, kana grid, word chips, audio button, form inputs), layout constants, shadow scale, animation conventions, and page-by-page structure summary"
+  }
+}

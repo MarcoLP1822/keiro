@@ -1,0 +1,90 @@
+{
+  "version": "1.1",
+  "timestamp": "2026-04-09-133000",
+  "branch_name": "main",
+  "task_name": "reading-first-keiro",
+  "session_number": 4,
+  "progress_update": {
+    "summary": "Wave 2 complete. Tatoeba filter pipeline (14 tests), JLPT data loader, i+1 sentence selector (6 tests), image-vocab + sentence-reading exercise generators, and FuriganaText component (5 tests) all implemented and pushed. Total: 181 tests passing across all packages. Ready for Wave 3.",
+    "goal": "Transform Keiro from quiz-based to reading-first. Vertical slice: Self-Introduction topic end-to-end.",
+    "accomplished": [
+      "Wave 1 (prior session): Types (FuriganaToken, SentenceItem, SessionPlan, image/theme fields), build-content workspace, furigana annotator",
+      "Wave 2 Task 1.1.2: Tatoeba download + quality filter pipeline",
+      "Wave 2 Task 1.1.3: Vocab tokenization (kuromoji content-word extraction)",
+      "Wave 2 Task 1.2.1: 14 unit tests for filter pipeline",
+      "Wave 2 Task 1.4.1: JLPT data loader with 49 curated N5 entries",
+      "Wave 2 Task 3.1.1: i+1 sentence selector with scoring algorithm (6 tests)",
+      "Wave 2 Task 3.3.1: generateImageExercise (photo + 4 text options)",
+      "Wave 2 Task 3.3.2: generateSentenceReadingExercise (Japanese + furigana → English MC)",
+      "Wave 2 Task 3.3.3: All new functions exported from @keiro/engine",
+      "Wave 2 Task 4.1.1: FuriganaText React component with ruby toggle (5 tests)"
+    ],
+    "now": "Wave 2 complete. Ready for Wave 3: pilot content assembly (2.2), session planner (3.2), ReadingCard (4.2), ImageExercise (4.3), ReadingMoment (4.5).",
+    "next_steps": [
+      "Wave 3 Task 2.2.1: Create self-introduction.json thematic module (15-20 vocab + 3-5 grammar + 10-15 Tatoeba sentences + checkpoint passages)",
+      "Wave 3 Task 3.2.1: Implement dynamic session planner (warm-up→learn→read→comprehend→cooldown loop)",
+      "Wave 3 Task 3.2.2: Wire session planner into useDailyPlan for thematic modules",
+      "Wave 3 Task 4.2.1: ReadingCard component (sentence display with FuriganaText + collapsible translation)",
+      "Wave 3 Task 4.3.1: ImageExercise component (photo + AnswerOptions)",
+      "Wave 3 Task 4.3.2: Register image mode in ExerciseRenderer",
+      "Wave 3 Task 4.5.1: ReadingMoment cooldown component",
+      "Wave 4: Content index integration (2.3), dynamic session UI (4.4)",
+      "Wave 5: Home/Path integration (5.1, 5.2), backward compat (5.3), scaling docs (5.4)"
+    ],
+    "confidence": "high",
+    "constraints": [
+      "SentenceItem not in ContentItem union — Exercise.targetItem uses cast for now (architectural debt noted)",
+      "kuromoji basic_form returns '*' when unavailable — tokenizer handles this by falling back to surface_form",
+      "Tatoeba mwhirls/tatoeba-json uses nested translations array — download script normalizes to flat RawPair",
+      "kuroshiro-analyzer-kuromoji broken with @sglkc/kuromoji — use kuromoji directly everywhere"
+    ],
+    "decisions": [
+      "i+1 scoring: i+1=priority 1, i+0=priority 2, i+N=priority N+1 (not raw unknownCount to avoid collision)",
+      "JLPT data: curated inline 49-word N5 dataset for pilot topic, not full external download",
+      "Filter tests: pure logic tests (no kuromoji dependency needed), 14 tests in 395ms",
+      "FuriganaText: stateless component, caller owns showFurigana boolean from useSettings"
+    ],
+    "blockers": [],
+    "open_questions": [],
+    "risks": [
+      "Pilot content (2.2) needs real Tatoeba sentences filtered for self-introduction topic — may yield few results"
+    ]
+  },
+  "working_set": {
+    "key_files": [
+      "scripts/build-content/src/tatoeba-filter.ts",
+      "scripts/build-content/src/tokenize-sentences.ts",
+      "scripts/build-content/src/jlpt-data.ts",
+      "packages/engine/src/i-plus-one.ts",
+      "packages/engine/src/exercises.ts",
+      "apps/web/src/components/reading/FuriganaText.tsx",
+      "docs/tasks/main/specs/tasks.md",
+      "docs/tasks/main/specs/plan.md"
+    ],
+    "active_ids": [],
+    "recent_commands": [
+      "pnpm --filter @keiro/web test (46 passed)",
+      "pnpm --filter @keiro/engine test (121 passed)",
+      "cd scripts/build-content && pnpm test (14 passed)",
+      "git push"
+    ]
+  },
+  "context": {
+    "wip_state": "clean",
+    "last_commit": "d5ccaaa"
+  },
+  "wave_progress": {
+    "wave_1_complete": ["2.1.1", "2.1.2", "2.1.3", "1.1.1", "1.3.1"],
+    "wave_2_complete": ["1.1.2", "1.1.3", "1.2.1", "1.4.1", "3.1.1", "3.1.2", "3.3.1", "3.3.2", "3.3.3", "4.1.1", "4.1.2"],
+    "wave_1_skipped": ["1.5.1 (manual image curation)"],
+    "wave_3_pending": ["2.2.1", "3.2.1", "3.2.2", "3.2.3", "4.2.1", "4.3.1", "4.3.2", "4.5.1"],
+    "wave_4_pending": ["2.3.1", "4.4.1", "4.4.2", "4.4.3"],
+    "wave_5_pending": ["5.1.1", "5.2.1", "5.3.1", "5.4.1"]
+  },
+  "test_totals": {
+    "web": 46,
+    "engine": 121,
+    "build_content": 14,
+    "total": 181
+  }
+}

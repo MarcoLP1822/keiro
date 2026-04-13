@@ -1,21 +1,24 @@
 # Keiro (経路) — Learn Japanese
 
-A structured, mobile-first PWA that takes you from zero Japanese to reading manga. 351 learning modules covering kana, vocabulary, kanji, grammar, and reading comprehension from N5 to N3.
+A structured, mobile-first PWA that takes you from zero Japanese to reading real sentences. 290+ learning modules covering kana, vocabulary, kanji, grammar, and reading comprehension from N5 to N3, plus thematic modules built around the reading-first approach.
 
 **Live app**: [keiro-web-smoky.vercel.app](https://keiro-web-smoky.vercel.app/)
 
 ## Features
 
 - **Structured i+1 curriculum** — Each lesson builds on the previous one. No random flashcards.
-- **Kana → N5 → N4 → N3** — Hiragana, katakana, then progressive JLPT levels
+- **Kana → Thematic → N5 → N4 → N3** — Hiragana, katakana, real-world topics, then progressive JLPT levels
+- **Reading-first sessions** — Thematic modules follow a warm→learn→read→comprehend→cooldown loop. You read real Japanese sentences early, not at the end.
+- **"You can read this!" moments** — Each thematic session ends with a full sentence you have just learned to read
+- **i+1 sentence selection** — The engine scores sentences by unknown vocabulary count and always picks the one with exactly one new word
+- **Furigana toggle** — Ruby annotations above kanji, switchable at any time in settings
 - **SM-2 spaced repetition** — Review cards at optimal intervals with auto-throttle to prevent pile-up
-- **12+ exercise types** — Multiple choice, typing, gap fill, sentence ordering, reading comprehension, audio
-- **Furigana support** — Ruby annotations above kanji, toggleable in settings
+- **12+ exercise types** — Multiple choice, typing, gap fill, sentence ordering, image-vocab, sentence-reading, reading comprehension, audio
 - **Placement quiz** — Skip ahead if you already know the basics
 - **Offline-first** — All data stored locally in IndexedDB. Works without internet.
 - **Cloud sync** — Optional sign-in to sync progress across devices via Supabase
 - **Kana chart** — Interactive reference with tap-to-hear pronunciation
-- **Apple HIG design** — Native iOS look and feel with dark mode support
+- **Digital Karesansui design** — Minimal, ink-on-stone aesthetic with dark mode support
 - **PWA** — Installable on iOS and Android home screens
 
 ## Tech Stack
@@ -39,10 +42,18 @@ keiro/
 │   └── admin/        # Content editor & admin dashboard (local dev tool)
 ├── packages/
 │   ├── types/        # Shared TypeScript types
-│   ├── engine/       # Core logic (SRS, exercises, scoring, streak, placement)
-│   └── content/      # Learning content (kana, vocab, kanji, grammar, reading)
+│   ├── engine/       # Core logic (SRS, exercises, scoring, streak, placement, i+1, session planner)
+│   └── content/      # Learning content
+│       ├── kana/     # Hiragana + katakana modules
+│       ├── vocabulary/
+│       ├── kanji/
+│       ├── grammar/
+│       ├── reading/  # JLPT reading passages
+│       └── themes/   # Thematic modules (self-introduction, …)
+├── scripts/
+│   └── build-content/  # Content pipeline: Tatoeba filter, furigana annotator, JLPT data
 ├── supabase/         # Database schema and migrations
-└── scripts/          # Utilities (icon generation)
+└── docs/             # Architecture, task specs, guides
 ```
 
 ### Clean Architecture
@@ -56,6 +67,19 @@ content (learning data) ← imports only types
   ↑
 web / admin (presentation) ← imports all packages
 ```
+
+## Reading-First Approach
+
+Thematic modules replace the traditional vocabulary-dump-then-quiz flow with a session loop designed around reading:
+
+1. **Review** — SRS cards due from previous sessions
+2. **Learn** — 3–5 new vocab or grammar items
+3. **Read** — One i+1 selected sentence with furigana toggle
+4. **Comprehend** — 2 comprehension questions on the sentence
+5. Repeat learn → read cycle for the remaining items
+6. **"You can read this!"** — Cooldown with a complete sentence you can now read
+
+Content is assembled at build time from filtered Tatoeba sentences, enriched with JLPT vocabulary data and pre-computed furigana tokens. The `scripts/build-content/` pipeline handles download, quality filtering, tokenization, and annotation — all offline-first.
 
 ## Getting Started
 
@@ -89,20 +113,24 @@ Open [http://localhost:5173](http://localhost:5173).
 ### Run Tests
 
 ```bash
-pnpm --filter @keiro/engine test    # 114 engine tests
-pnpm --filter @keiro/web test       # 41 web tests
+pnpm --filter @keiro/engine test    # 143 engine tests
+pnpm --filter @keiro/web test       # 46 web tests
+pnpm --filter build-content test    # 14 build-content tests
 ```
+
+200+ tests across all packages.
 
 ## Content
 
-| Level | Vocab | Kanji | Grammar | Reading | Total Modules |
-|-------|-------|-------|---------|---------|---------------|
-| Kana | — | — | — | — | 20 |
-| N5 | 36 | 8 | 28 | 5 | 77 |
-| N4 | 34 | 17 | 25 | 4 | 80 |
-| N3 | 107 | 54 | 51 | 3 | 215 |
+| Level | Vocab | Kanji | Grammar | Reading | Thematic | Total Modules |
+|-------|-------|-------|---------|---------|----------|---------------|
+| Kana | — | — | — | — | — | 20 |
+| Thematic (N5) | — | — | — | — | 1 | 1 |
+| N5 | 36 | 8 | 28 | 5 | — | 77 |
+| N4 | 34 | 17 | 25 | 4 | — | 80 |
+| N3 | 107 | 54 | 51 | 3 | — | 215 |
 
-Content is sourced from open-licensed datasets (MIT, CC BY-SA 4.0). See the About page in the app for full attribution.
+Content is sourced from open-licensed datasets (MIT, CC BY-SA 4.0, Tatoeba CC BY 2.0 FR). See the About page in the app for full attribution.
 
 ## License
 
