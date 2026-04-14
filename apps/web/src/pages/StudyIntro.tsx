@@ -37,11 +37,7 @@ export function StudyIntro() {
     : module.items.length;
   const estimatedMinutes = Math.max(5, Math.round(itemCount * 1));
 
-  const previewSource = module.theme ? (module.vocab ?? []) : module.items;
-  const previewItems = previewSource.slice(0, 5).map((item: unknown) => {
-    const obj = item as Record<string, string>;
-    return obj.character ?? obj.kanji ?? obj.word ?? obj.id ?? '';
-  });
+
 
   return (
     <>
@@ -102,21 +98,6 @@ export function StudyIntro() {
             </p>
           </div>
         </div>
-
-        {/* Preview Characters */}
-        {previewItems.length > 0 && (
-          <div className="flex flex-wrap gap-3">
-            {previewItems.map((item, i) => (
-              <div
-                key={i}
-                className="w-12 h-12 rounded-xl flex items-center justify-center font-headline text-2xl"
-                style={{ background: 'var(--k-surface-container-lowest)', color: 'var(--k-primary)' }}
-              >
-                {item}
-              </div>
-            ))}
-          </div>
-        )}
 
         {/* Culture Note */}
         {module.intro.cultureNote && (
