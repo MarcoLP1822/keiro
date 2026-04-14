@@ -54,7 +54,7 @@ export function StudyIntro() {
         </span>
       } />
 
-      <main className="pt-24 pb-32 px-6 max-w-2xl mx-auto space-y-6">
+      <main className="pt-20 pb-32 px-6 max-w-2xl mx-auto space-y-4">
         {/* Title */}
         <div>
           <h1
@@ -87,12 +87,12 @@ export function StudyIntro() {
 
         {/* Explanation */}
         <div
-          className="rounded-xl p-6"
+          className="rounded-xl p-4"
           style={{ background: 'var(--k-surface-container-lowest)' }}
         >
-          <div className="flex items-start gap-4">
+          <div className="flex items-start gap-3">
             <div
-              className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
+              className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0"
               style={{ background: 'color-mix(in srgb, var(--k-primary-container) 15%, transparent)' }}
             >
               <span className="material-symbols-outlined" style={{ color: 'var(--k-primary)' }}>{icon}</span>
@@ -121,7 +121,7 @@ export function StudyIntro() {
         {/* Culture Note */}
         {module.intro.cultureNote && (
           <div
-            className="rounded-xl p-5 flex items-start gap-4"
+            className="rounded-xl p-4 flex items-start gap-3"
             style={{ background: 'color-mix(in srgb, var(--k-tertiary-fixed-dim) 30%, transparent)' }}
           >
             <span className="material-symbols-outlined shrink-0" style={{ color: 'var(--k-tertiary)' }}>
