@@ -164,9 +164,6 @@ importers:
 
   packages/engine:
     dependencies:
-      '@keiro/content':
-        specifier: workspace:*
-        version: link:../content
       '@keiro/types':
         specifier: workspace:*
         version: link:../types
