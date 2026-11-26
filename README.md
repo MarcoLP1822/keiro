@@ -1,5 +1,11 @@
 # Keiro (経路) — Learn Japanese
 
+> **In breve.** Un'app per imparare il giapponese partendo da zero: lezioni in ordine dagli alfabeti (hiragana e katakana) fino al livello JLPT N3, frasi vere da leggere fin dall'inizio, ripasso automatico delle parole e funzionamento anche offline. Si installa sul telefono direttamente dal browser.
+>
+> **A che punto è:** completa e online. Ultimo lavoro: aprile 2026.
+>
+> **Online:** <https://keiro-web-smoky.vercel.app>
+
 A structured, mobile-first PWA that takes you from zero Japanese to reading real sentences. 290+ learning modules covering kana, vocabulary, kanji, grammar, and reading comprehension from N5 to N3, plus thematic modules built around the reading-first approach.
 
 **Live app**: [keiro-web-smoky.vercel.app](https://keiro-web-smoky.vercel.app/)
